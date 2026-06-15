@@ -4289,6 +4289,340 @@ const INITIAL_ENTRIES = [
     },
     date_added: new Date().toISOString(),
     source_context: 'IELTS Writing Task 2 & Speaking - discussing future projections, mindset, and human behavior.'
+  },
+  {
+    id: 'entry-territorial',
+    entry_type: 'word',
+    word: 'territorial',
+    ipa_uk: '/ˌter.ɪˈtɔː.ri.əl/',
+    ipa_us: '/ˌter.əˈtɔːr.i.əl/',
+    definition: 'Relating to the ownership of an area of land or sea.',
+    definition_source: 'cambridge',
+    example: 'The two countries have been engaged in a long-standing territorial dispute over the border islands.',
+    definitions: [
+      {
+        definition: 'Relating to the ownership of an area of land or sea.',
+        example: 'The two countries have been engaged in a long-standing territorial dispute over the border islands.',
+        cefr_level: 'C1',
+        grammar_note: 'adjective'
+      },
+      {
+        definition: 'Guarding and defending an area of land that is believed to belong to oneself.',
+        example: 'Male songbirds are highly territorial during the breeding season, defending their nesting areas.',
+        cefr_level: 'C1',
+        grammar_note: 'adjective'
+      }
+    ],
+    extra_examples: [
+      'We must respect the territorial integrity of all sovereign states under international law.',
+      'Some cats can display aggressive, territorial behaviors when a new pet is introduced to the household.'
+    ],
+    grammar_note: 'adjective',
+    base_verb: '',
+    particles: '',
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: 'C1',
+    register: 'formal',
+    formality_score: 4,
+    connotation: 'neutral',
+    word_family: {
+      verb: [],
+      noun: ['territory', 'territoriality'],
+      adjective: ['territorial'],
+      adverb: ['territorially']
+    },
+    semantic_field_id: 'geography-ownership',
+    semantic_field_label: 'Geography & Ownership',
+    semantic_field_words: [
+      { word: 'sovereign', cefr: 'C1', register: 'formal' },
+      { word: 'jurisdiction', cefr: 'C2', register: 'formal' },
+      { word: 'provincial', cefr: 'C1', register: 'neutral' },
+      { word: 'boundary', cefr: 'B2', register: 'neutral' }
+    ],
+    register_synonyms: [
+      { word: 'regional', register: 'neutral', cefr: 'B2' },
+      { word: 'sovereign', register: 'formal', cefr: 'C1' },
+      { word: 'provincial', register: 'neutral', cefr: 'C1' }
+    ],
+    folder_ids: ['folder-1'],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: 'IELTS Writing Task 2 - discussions on national sovereignty, geopolitics, animal behavior, and regional conflicts.'
+  },
+  {
+    id: 'entry-inference',
+    entry_type: 'word',
+    word: 'inference',
+    ipa_uk: '/ˈɪn.fər.əns/',
+    ipa_us: '/ˈɪn.fɚ.əns/',
+    definition: 'A guess or opinion that you form based on the information that you already have.',
+    definition_source: 'cambridge',
+    example: 'The researcher drew the inference that the increase in global temperatures was directly linked to industrial emissions.',
+    definitions: [
+      {
+        definition: 'A guess or opinion that you form based on the information that you already have.',
+        example: 'The researcher drew the inference that the increase in global temperatures was directly linked to industrial emissions.',
+        cefr_level: 'C2',
+        grammar_note: 'noun [C or U]'
+      },
+      {
+        definition: 'The process of reaching a decision or answer by using facts or logic.',
+        example: 'By a process of elimination and logical inference, we can deduce the correct solution.',
+        cefr_level: 'C2',
+        grammar_note: 'noun [U]'
+      }
+    ],
+    extra_examples: [
+      'It is a reasonable inference that the economy will recover once trade restrictions are lifted.',
+      'Statistical inference allows researchers to make generalizations about a population based on sample data.'
+    ],
+    grammar_note: 'noun [C or U]',
+    base_verb: '',
+    particles: '',
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: 'C2',
+    register: 'academic',
+    formality_score: 5,
+    connotation: 'neutral',
+    word_family: {
+      verb: ['infer'],
+      noun: ['inference'],
+      adjective: ['inferential'],
+      adverb: ['inferentially']
+    },
+    semantic_field_id: 'logic-reasoning',
+    semantic_field_label: 'Logic & Reasoning',
+    semantic_field_words: [
+      { word: 'deduction', cefr: 'C1', register: 'formal' },
+      { word: 'assumption', cefr: 'B2', register: 'neutral' },
+      { word: 'hypothesis', cefr: 'C1', register: 'academic' },
+      { word: 'conjecture', cefr: 'C2', register: 'formal' }
+    ],
+    register_synonyms: [
+      { word: 'deduction', register: 'formal', cefr: 'C1' },
+      { word: 'conclusion', register: 'neutral', cefr: 'B2' },
+      { word: 'conjecture', register: 'formal', cefr: 'C2' }
+    ],
+    folder_ids: ['folder-4'],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: 'IELTS Writing Task 2 - academic analyses, research methodology discussions, and logical reasoning exercises.'
+  },
+  {
+    id: 'entry-repulsive',
+    entry_type: 'word',
+    word: 'repulsive',
+    ipa_uk: '/rɪˈpʌl.sɪv/',
+    ipa_us: '/rɪˈpʌl.sɪv/',
+    definition: 'Extremely unpleasant or unacceptable; causing disgust.',
+    definition_source: 'cambridge',
+    example: 'The sight of the industrial waste dumping site was utterly repulsive to the local residents.',
+    definitions: [
+      {
+        definition: 'Extremely unpleasant or unacceptable; causing disgust.',
+        example: 'The sight of the industrial waste dumping site was utterly repulsive to the local residents.',
+        cefr_level: 'C2',
+        grammar_note: 'adjective'
+      },
+      {
+        definition: 'Tending to push away or keep apart (in physics).',
+        example: 'Subatomic particles with the same charge experience a repulsive force, pushing them away from each other.',
+        cefr_level: 'C2',
+        grammar_note: 'adjective'
+      }
+    ],
+    extra_examples: [
+      'He found the politician\'s arrogant behavior and remarks deeply repulsive.',
+      'Magnets can exhibit both attractive and repulsive behaviors depending on their orientation.'
+    ],
+    grammar_note: 'adjective',
+    base_verb: '',
+    particles: '',
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: 'C2',
+    register: 'formal',
+    formality_score: 4,
+    connotation: 'negative',
+    word_family: {
+      verb: ['repel'],
+      noun: ['repulsion', 'repulsiveness'],
+      adjective: ['repulsive'],
+      adverb: ['repulsively']
+    },
+    semantic_field_id: 'emotion-disgust',
+    semantic_field_label: 'Emotion & Disgust',
+    semantic_field_words: [
+      { word: 'loathsome', cefr: 'C2', register: 'formal' },
+      { word: 'disturbing', cefr: 'B2', register: 'neutral' },
+      { word: 'abhorrent', cefr: 'C2', register: 'formal' },
+      { word: 'detestable', cefr: 'C2', register: 'formal' }
+    ],
+    register_synonyms: [
+      { word: 'abhorrent', register: 'formal', cefr: 'C2' },
+      { word: 'loathsome', register: 'formal', cefr: 'C2' },
+      { word: 'disgusting', register: 'neutral', cefr: 'B1' }
+    ],
+    folder_ids: ['folder-4'],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: 'IELTS Writing Task 2 - discussions on environmental degradation, social behavior, and scientific forces.'
+  },
+  {
+    id: 'entry-play-out',
+    entry_type: 'phrasal_verb',
+    word: 'play out',
+    ipa_uk: '/pleɪ aʊt/',
+    ipa_us: '/pleɪ aʊt/',
+    definition: 'When a situation plays out, it happens and develops.',
+    definition_source: 'cambridge',
+    example: 'We will have to see how the geopolitical situation plays out before making any investment decisions.',
+    definitions: [
+      {
+        definition: 'When a situation plays out, it happens and develops.',
+        example: 'We will have to see how the geopolitical situation plays out before making any investment decisions.',
+        cefr_level: 'C1',
+        grammar_note: 'phrasal verb [intransitive]'
+      },
+      {
+        definition: 'To develop or end in a particular way.',
+        example: 'The drama played out in full view of the public, causing widespread controversy.',
+        cefr_level: 'C1',
+        grammar_note: 'phrasal verb [intransitive]'
+      }
+    ],
+    extra_examples: [
+      'It will be interesting to watch how this political rivalry plays out in the upcoming elections.',
+      'No one could have predicted how the trade talks would play out.'
+    ],
+    grammar_note: 'phrasal verb [intransitive]',
+    base_verb: 'play',
+    particles: 'out',
+    conjugations: {
+      present_participle: 'playing',
+      past_tense: 'played',
+      past_participle: 'played'
+    },
+    related_phrasal_verbs: [],
+    cefr_level: 'C1',
+    register: 'neutral',
+    formality_score: 3,
+    connotation: 'neutral',
+    word_family: {
+      verb: ['play out'],
+      noun: [],
+      adjective: ['played-out'],
+      adverb: []
+    },
+    semantic_field_id: 'event-development',
+    semantic_field_label: 'Event Development',
+    semantic_field_words: [
+      { word: 'unfold', cefr: 'C1', register: 'neutral' },
+      { word: 'transpire', cefr: 'C2', register: 'formal' },
+      { word: 'develop', cefr: 'A2', register: 'neutral' },
+      { word: 'materialize', cefr: 'C1', register: 'formal' }
+    ],
+    register_synonyms: [
+      { word: 'unfold', register: 'neutral', cefr: 'C1' },
+      { word: 'transpire', register: 'formal', cefr: 'C2' },
+      { word: 'happen', register: 'neutral', cefr: 'A1' }
+    ],
+    folder_ids: ['folder-5'],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: 'IELTS Speaking & Writing - explaining future trends, political outcomes, and social conflicts.'
+  },
+  {
+    id: 'entry-elasticity',
+    entry_type: 'word',
+    word: 'elasticity',
+    ipa_uk: '/ˌi.læsˈtɪs.ə.ti/',
+    ipa_us: '/ˌi.læsˈtɪs.ə.t̬i/',
+    definition: 'The ability of an object or material to return to its normal shape after being stretched or compressed.',
+    definition_source: 'cambridge',
+    example: 'As people age, their skin loses its natural elasticity and starts to sag.',
+    definitions: [
+      {
+        definition: 'The ability of an object or material to return to its normal shape after being stretched or compressed.',
+        example: 'As people age, their skin loses its natural elasticity and starts to sag.',
+        cefr_level: 'C1',
+        grammar_note: 'noun [U]'
+      },
+      {
+        definition: 'The ability of something to change and adapt; responsiveness of demand or supply to price changes.',
+        example: 'In economics, price elasticity of demand measures how quantity demanded responds to price fluctuations.',
+        cefr_level: 'C2',
+        grammar_note: 'noun [U]'
+      }
+    ],
+    extra_examples: [
+      'Rubber bands are known for their exceptional elasticity and strength.',
+      'The policy possesses a degree of elasticity, allowing for local modifications based on community feedback.'
+    ],
+    grammar_note: 'noun [U]',
+    base_verb: '',
+    particles: '',
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: 'C1',
+    register: 'academic',
+    formality_score: 4,
+    connotation: 'neutral',
+    word_family: {
+      verb: [],
+      noun: ['elasticity', 'elastomer'],
+      adjective: ['elastic', 'elastomeric'],
+      adverb: ['elastically']
+    },
+    semantic_field_id: 'material-property',
+    semantic_field_label: 'Material Property',
+    semantic_field_words: [
+      { word: 'rigidity', cefr: 'C1', register: 'formal' },
+      { word: 'durability', cefr: 'B2', register: 'neutral' },
+      { word: 'adaptability', cefr: 'C1', register: 'neutral' },
+      { word: 'malleability', cefr: 'C2', register: 'academic' }
+    ],
+    register_synonyms: [
+      { word: 'flexibility', register: 'neutral', cefr: 'B2' },
+      { word: 'adaptability', register: 'neutral', cefr: 'C1' },
+      { word: 'resilience', register: 'academic', cefr: 'C1' }
+    ],
+    folder_ids: ['folder-2', 'folder-science'],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: 'IELTS Writing Task 2 & Speaking - discussing material sciences, biology, or economic theories and price models.'
   }
 ];
 
@@ -5928,6 +6262,261 @@ const EXTENDED_DICTIONARY_DB = [
       { word: 'sanguine', register: 'formal', cefr: 'C2' }
     ],
     suggested_folder_name: 'Academic Writing (Task 2)'
+  },
+  {
+    word: 'territorial',
+    entry_type: 'word',
+    ipa_uk: '/ˌter.ɪˈtɔː.ri.əl/',
+    ipa_us: '/ˌter.əˈtɔːr.i.əl/',
+    definition: 'Relating to the ownership of an area of land or sea.',
+    definitions: [
+      {
+        definition: 'Relating to the ownership of an area of land or sea.',
+        example: 'The two countries have been engaged in a long-standing territorial dispute over the border islands.',
+        cefr_level: 'C1',
+        grammar_note: 'adjective'
+      },
+      {
+        definition: 'Guarding and defending an area of land that is believed to belong to oneself.',
+        example: 'Male songbirds are highly territorial during the breeding season, defending their nesting areas.',
+        cefr_level: 'C1',
+        grammar_note: 'adjective'
+      }
+    ],
+    cefr_level: 'C1',
+    register: 'formal',
+    formality_score: 4,
+    connotation: 'neutral',
+    grammar_note: 'adjective',
+    example: 'The two countries have been engaged in a long-standing territorial dispute over the border islands.',
+    extra_examples: [
+      'We must respect the territorial integrity of all sovereign states under international law.',
+      'Some cats can display aggressive, territorial behaviors when a new pet is introduced to the household.'
+    ],
+    word_family: {
+      verb: [],
+      noun: ['territory', 'territoriality'],
+      adjective: ['territorial'],
+      adverb: ['territorially']
+    },
+    semantic_field_id: 'geography-ownership',
+    semantic_field_label: 'Geography & Ownership',
+    semantic_field_words: [
+      { word: 'sovereign', cefr: 'C1', register: 'formal' },
+      { word: 'jurisdiction', cefr: 'C2', register: 'formal' },
+      { word: 'provincial', cefr: 'C1', register: 'neutral' },
+      { word: 'boundary', cefr: 'B2', register: 'neutral' }
+    ],
+    register_synonyms: [
+      { word: 'regional', register: 'neutral', cefr: 'B2' },
+      { word: 'sovereign', register: 'formal', cefr: 'C1' },
+      { word: 'provincial', register: 'neutral', cefr: 'C1' }
+    ],
+    suggested_folder_name: 'Law & Policy'
+  },
+  {
+    word: 'inference',
+    entry_type: 'word',
+    ipa_uk: '/ˈɪn.fər.əns/',
+    ipa_us: '/ˈɪn.fɚ.əns/',
+    definition: 'A guess or opinion that you form based on the information that you already have.',
+    definitions: [
+      {
+        definition: 'A guess or opinion that you form based on the information that you already have.',
+        example: 'The researcher drew the inference that the increase in global temperatures was directly linked to industrial emissions.',
+        cefr_level: 'C2',
+        grammar_note: 'noun [C or U]'
+      },
+      {
+        definition: 'The process of reaching a decision or answer by using facts or logic.',
+        example: 'By a process of elimination and logical inference, we can deduce the correct solution.',
+        cefr_level: 'C2',
+        grammar_note: 'noun [U]'
+      }
+    ],
+    cefr_level: 'C2',
+    register: 'academic',
+    formality_score: 5,
+    connotation: 'neutral',
+    grammar_note: 'noun [C or U]',
+    example: 'The researcher drew the inference that the increase in global temperatures was directly linked to industrial emissions.',
+    extra_examples: [
+      'It is a reasonable inference that the economy will recover once trade restrictions are lifted.',
+      'Statistical inference allows researchers to make generalizations about a population based on sample data.'
+    ],
+    word_family: {
+      verb: ['infer'],
+      noun: ['inference'],
+      adjective: ['inferential'],
+      adverb: ['inferentially']
+    },
+    semantic_field_id: 'logic-reasoning',
+    semantic_field_label: 'Logic & Reasoning',
+    semantic_field_words: [
+      { word: 'deduction', cefr: 'C1', register: 'formal' },
+      { word: 'assumption', cefr: 'B2', register: 'neutral' },
+      { word: 'hypothesis', cefr: 'C1', register: 'academic' },
+      { word: 'conjecture', cefr: 'C2', register: 'formal' }
+    ],
+    register_synonyms: [
+      { word: 'deduction', register: 'formal', cefr: 'C1' },
+      { word: 'conclusion', register: 'neutral', cefr: 'B2' },
+      { word: 'conjecture', register: 'formal', cefr: 'C2' }
+    ],
+    suggested_folder_name: 'Academic Writing (Task 2)'
+  },
+  {
+    word: 'repulsive',
+    entry_type: 'word',
+    ipa_uk: '/rɪˈpʌl.sɪv/',
+    ipa_us: '/rɪˈpʌl.sɪv/',
+    definition: 'Extremely unpleasant or unacceptable; causing disgust.',
+    definitions: [
+      {
+        definition: 'Extremely unpleasant or unacceptable; causing disgust.',
+        example: 'The sight of the industrial waste dumping site was utterly repulsive to the local residents.',
+        cefr_level: 'C2',
+        grammar_note: 'adjective'
+      },
+      {
+        definition: 'Tending to push away or keep apart (in physics).',
+        example: 'Subatomic particles with the same charge experience a repulsive force, pushing them away from each other.',
+        cefr_level: 'C2',
+        grammar_note: 'adjective'
+      }
+    ],
+    cefr_level: 'C2',
+    register: 'formal',
+    formality_score: 4,
+    connotation: 'negative',
+    grammar_note: 'adjective',
+    example: 'The sight of the industrial waste dumping site was utterly repulsive to the local residents.',
+    extra_examples: [
+      'He found the politician\'s arrogant behavior and remarks deeply repulsive.',
+      'Magnets can exhibit both attractive and repulsive behaviors depending on their orientation.'
+    ],
+    word_family: {
+      verb: ['repel'],
+      noun: ['repulsion', 'repulsiveness'],
+      adjective: ['repulsive'],
+      adverb: ['repulsively']
+    },
+    semantic_field_id: 'emotion-disgust',
+    semantic_field_label: 'Emotion & Disgust',
+    semantic_field_words: [
+      { word: 'loathsome', cefr: 'C2', register: 'formal' },
+      { word: 'disturbing', cefr: 'B2', register: 'neutral' },
+      { word: 'abhorrent', cefr: 'C2', register: 'formal' },
+      { word: 'detestable', cefr: 'C2', register: 'formal' }
+    ],
+    register_synonyms: [
+      { word: 'abhorrent', register: 'formal', cefr: 'C2' },
+      { word: 'loathsome', register: 'formal', cefr: 'C2' },
+      { word: 'disgusting', register: 'neutral', cefr: 'B1' }
+    ],
+    suggested_folder_name: 'Academic Writing (Task 2)'
+  },
+  {
+    word: 'play out',
+    entry_type: 'phrasal_verb',
+    ipa_uk: '/pleɪ aʊt/',
+    ipa_us: '/pleɪ aʊt/',
+    definition: 'When a situation plays out, it happens and develops.',
+    definitions: [
+      {
+        definition: 'When a situation plays out, it happens and develops.',
+        example: 'We will have to see how the geopolitical situation plays out before making any investment decisions.',
+        cefr_level: 'C1',
+        grammar_note: 'phrasal verb [intransitive]'
+      },
+      {
+        definition: 'To develop or end in a particular way.',
+        example: 'The drama played out in full view of the public, causing widespread controversy.',
+        cefr_level: 'C1',
+        grammar_note: 'phrasal verb [intransitive]'
+      }
+    ],
+    cefr_level: 'C1',
+    register: 'neutral',
+    formality_score: 3,
+    connotation: 'neutral',
+    grammar_note: 'phrasal verb [intransitive]',
+    example: 'We will have to see how the geopolitical situation plays out before making any investment decisions.',
+    extra_examples: [
+      'It will be interesting to watch how this political rivalry plays out in the upcoming elections.',
+      'No one could have predicted how the trade talks would play out.'
+    ],
+    word_family: {
+      verb: ['play out'],
+      noun: [],
+      adjective: ['played-out'],
+      adverb: []
+    },
+    semantic_field_id: 'event-development',
+    semantic_field_label: 'Event Development',
+    semantic_field_words: [
+      { word: 'unfold', cefr: 'C1', register: 'neutral' },
+      { word: 'transpire', cefr: 'C2', register: 'formal' },
+      { word: 'develop', cefr: 'A2', register: 'neutral' },
+      { word: 'materialize', cefr: 'C1', register: 'formal' }
+    ],
+    register_synonyms: [
+      { word: 'unfold', register: 'neutral', cefr: 'C1' },
+      { word: 'transpire', register: 'formal', cefr: 'C2' },
+      { word: 'happen', register: 'neutral', cefr: 'A1' }
+    ],
+    suggested_folder_name: 'Phrasal Verbs & Idioms'
+  },
+  {
+    word: 'elasticity',
+    entry_type: 'word',
+    ipa_uk: '/ˌi.læsˈtɪs.ə.ti/',
+    ipa_us: '/ˌi.læsˈtɪs.ə.t̬i/',
+    definition: 'The ability of an object or material to return to its normal shape after being stretched or compressed.',
+    definitions: [
+      {
+        definition: 'The ability of an object or material to return to its normal shape after being stretched or compressed.',
+        example: 'As people age, their skin loses its natural elasticity and starts to sag.',
+        cefr_level: 'C1',
+        grammar_note: 'noun [U]'
+      },
+      {
+        definition: 'The ability of something to change and adapt; responsiveness of demand or supply to price changes.',
+        example: 'In economics, price elasticity of demand measures how quantity demanded responds to price fluctuations.',
+        cefr_level: 'C2',
+        grammar_note: 'noun [U]'
+      }
+    ],
+    cefr_level: 'C1',
+    register: 'academic',
+    formality_score: 4,
+    connotation: 'neutral',
+    grammar_note: 'noun [U]',
+    example: 'As people age, their skin loses its natural elasticity and starts to sag.',
+    extra_examples: [
+      'Rubber bands are known for their exceptional elasticity and strength.',
+      'The policy possesses a degree of elasticity, allowing for local modifications based on community feedback.'
+    ],
+    word_family: {
+      verb: [],
+      noun: ['elasticity', 'elastomer'],
+      adjective: ['elastic', 'elastomeric'],
+      adverb: ['elastically']
+    },
+    semantic_field_id: 'material-property',
+    semantic_field_label: 'Material Property',
+    semantic_field_words: [
+      { word: 'rigidity', cefr: 'C1', register: 'formal' },
+      { word: 'durability', cefr: 'B2', register: 'neutral' },
+      { word: 'adaptability', cefr: 'C1', register: 'neutral' },
+      { word: 'malleability', cefr: 'C2', register: 'academic' }
+    ],
+    register_synonyms: [
+      { word: 'flexibility', register: 'neutral', cefr: 'B2' },
+      { word: 'adaptability', register: 'neutral', cefr: 'C1' },
+      { word: 'resilience', register: 'academic', cefr: 'C1' }
+    ],
+    suggested_folder_name: 'Economics & Statistics'
   }
 ];
 
