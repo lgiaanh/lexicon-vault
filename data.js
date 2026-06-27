@@ -16,6 +16,190 @@ const INITIAL_FOLDERS = [
 
 const INITIAL_ENTRIES = [
   {
+    id: 'entry-adversity',
+    entry_type: 'word',
+    word: 'adversity',
+    ipa_uk: '/ədˈvɜː.sə.ti/',
+    ipa_us: '/ədˈvɝː.sə.t̬i/',
+    definition: 'a difficult or unlucky situation or event',
+    definition_source: 'cambridge',
+    example: 'She showed great courage in the face of adversity.',
+    definitions: [
+      {
+        definition: 'a difficult or unlucky situation or event',
+        example: 'She showed great courage in the face of adversity.',
+        cefr_level: 'C1',
+        grammar_note: 'noun'
+      }
+    ],
+    extra_examples: [
+      'The country has overcome many economic adversities in the past decade.',
+      'Road closures and adversities forced the explorers to turn back.'
+    ],
+    grammar_note: 'uncountable/countable noun',
+    base_verb: '',
+    particles: '',
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: 'C1',
+    register: 'neutral',
+    formality_score: 3,
+    connotation: 'negative',
+    word_family: {
+      verb: [],
+      noun: ['adversity', 'adversary'],
+      adjective: ['adverse'],
+      adverb: ['adversely']
+    },
+    collocations: [
+      { collocation: 'face adversity', example: 'It is in how we face adversity that our character is revealed.' },
+      { collocation: 'overcome adversity', example: 'To overcome adversity, one must maintain focus and resilience.' }
+    ],
+    semantic_field_id: 'struggle-resilience',
+    semantic_field_label: 'Struggle & Resilience',
+    semantic_field_words: [
+      { word: 'adversity', cefr: 'C1', register: 'neutral' },
+      { word: 'persevere', cefr: 'C1', register: 'formal' }
+    ],
+    register_synonyms: [
+      { word: 'difficulty', register: 'neutral', cefr: 'B1' },
+      { word: 'hardship', register: 'formal', cefr: 'C1' },
+      { word: 'trouble', register: 'informal', cefr: 'A2' }
+    ],
+    folder_ids: ['folder-4'],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: 'Added default database entry.'
+  },
+  {
+    id: 'entry-persevere',
+    entry_type: 'word',
+    word: 'persevere',
+    ipa_uk: '/ˌpɜː.sɪˈvɪər/',
+    ipa_us: '/ˌpɝː.səˈvɪr/',
+    definition: 'to try to do or continue to do something in a determined way, despite difficulties',
+    definition_source: 'cambridge',
+    example: 'Despite receiving little support, the researchers persevered with their experiment.',
+    definitions: [
+      {
+        definition: 'to try to do or continue to do something in a determined way, despite difficulties',
+        example: 'Despite receiving little support, the researchers persevered with their experiment.',
+        cefr_level: 'C1',
+        grammar_note: 'intransitive verb'
+      }
+    ],
+    extra_examples: [
+      'If you persevere with the training, you will eventually see results.',
+      'We must persevere in our efforts to find a peaceful solution.'
+    ],
+    grammar_note: 'intransitive verb',
+    base_verb: '',
+    particles: '',
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: 'C1',
+    register: 'formal',
+    formality_score: 4,
+    connotation: 'positive',
+    word_family: {
+      verb: ['persevere'],
+      noun: ['perseverance'],
+      adjective: ['persevering'],
+      adverb: []
+    },
+    collocations: [
+      { collocation: 'persevere in', example: 'She persevered in her studies despite facing financial hardship.' },
+      { collocation: 'persevere with', example: 'He persevered with the project despite numerous technical setbacks.' }
+    ],
+    semantic_field_id: 'struggle-resilience',
+    semantic_field_label: 'Struggle & Resilience',
+    semantic_field_words: [
+      { word: 'adversity', cefr: 'C1', register: 'neutral' },
+      { word: 'persevere', cefr: 'C1', register: 'formal' }
+    ],
+    register_synonyms: [
+      { word: 'persist', register: 'formal', cefr: 'C1' },
+      { word: 'keep going', register: 'neutral', cefr: 'B1' },
+      { word: 'hang in there', register: 'informal', cefr: 'C2' }
+    ],
+    folder_ids: ['folder-4', 'folder-speaking-work-study'],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: 'Added default database entry.'
+  },
+  {
+    id: 'entry-revolve-around',
+    entry_type: 'phrasal_verb',
+    word: 'revolve around',
+    ipa_uk: '/rɪˈvɒlv əˈraʊnd/',
+    ipa_us: '/rɪˈvɑːlv əˈraʊnd/',
+    definition: 'to have someone or something as the main or most important interest or subject',
+    definition_source: 'cambridge',
+    example: 'The debate revolves around whether the government should subsidize public transit.',
+    definitions: [
+      {
+        definition: 'to have someone or something as the main or most important interest or subject',
+        example: 'The debate revolves around whether the government should subsidize public transit.',
+        cefr_level: 'C1',
+        grammar_note: 'transitive phrasal verb'
+      }
+    ],
+    extra_examples: [
+      'Her whole life revolves around her career and professional advancement.',
+      'Many discussions in ecology revolve around sustainable development.'
+    ],
+    grammar_note: 'transitive phrasal verb',
+    base_verb: 'revolve',
+    particles: 'around',
+    conjugations: {
+      present_participle: 'revolving around',
+      past_tense: 'revolved around',
+      past_participle: 'revolved around'
+    },
+    related_phrasal_verbs: ['center on', 'focus on'],
+    cefr_level: 'C1',
+    register: 'neutral',
+    formality_score: 3,
+    connotation: 'neutral',
+    word_family: null,
+    collocations: [
+      { collocation: 'revolve entirely around', example: 'The conversation revolved entirely around the new policy changes.' },
+      { collocation: 'revolve around the concept', example: 'Modern marketing strategies revolve around the concept of user personalization.' }
+    ],
+    semantic_field_id: 'focus-attention',
+    semantic_field_label: 'Focus & Attention',
+    semantic_field_words: [
+      { word: 'revolve around', cefr: 'C1', register: 'neutral' },
+      { word: 'center on', cefr: 'C1', register: 'formal' }
+    ],
+    register_synonyms: [
+      { word: 'focus on', register: 'neutral', cefr: 'B1' },
+      { word: 'center on', register: 'formal', cefr: 'C1' }
+    ],
+    folder_ids: ['folder-5'],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: 'Added default database entry.'
+  },
+  {
     id: 'entry-civilize',
     entry_type: 'word',
     word: 'civilize',

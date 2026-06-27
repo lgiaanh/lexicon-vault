@@ -3530,8 +3530,32 @@ IMPORTANT: If the Free Dictionary context contains a valid IPA pronunciation (ip
           </div>
 
           {entry.entry_type === 'phrasal_verb' && entry.conjugations && (
-            <div className="conjugations-line">
-              present participle <strong>{entry.conjugations.present_participle}</strong> | past tense and past participle <strong>{entry.conjugations.past_tense}</strong>
+            <div className="conjugations-block" style={{ marginTop: '10px', marginBottom: '10px' }}>
+              <div style={{ fontWeight: 'bold', fontSize: '11px', color: 'var(--text-muted)', marginBottom: '6px', textTransform: 'uppercase', letterSpacing: '0.5px' }}>Conjugations</div>
+              <div style={{ overflowX: 'auto', border: '1px solid var(--border-muted)', borderRadius: '6px' }}>
+                <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '12px', textAlign: 'left' }}>
+                  <thead>
+                    <tr style={{ backgroundColor: 'var(--bg-app)', borderBottom: '1px solid var(--border-muted)' }}>
+                      <th style={{ padding: '6px 10px', fontWeight: '600', color: 'var(--text-muted)', width: '45%' }}>Form</th>
+                      <th style={{ padding: '6px 10px', fontWeight: '600', color: 'var(--text-main)' }}>Conjugation</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr style={{ borderBottom: '1px solid var(--border-muted)' }}>
+                      <td style={{ padding: '6px 10px', color: 'var(--text-muted)', fontSize: '11.5px' }}>Present Participle</td>
+                      <td style={{ padding: '6px 10px', fontWeight: 'bold', color: 'var(--accent)' }}>{entry.conjugations.present_participle}</td>
+                    </tr>
+                    <tr style={{ borderBottom: '1px solid var(--border-muted)' }}>
+                      <td style={{ padding: '6px 10px', color: 'var(--text-muted)', fontSize: '11.5px' }}>Past Tense</td>
+                      <td style={{ padding: '6px 10px', fontWeight: 'bold', color: 'var(--text-main)' }}>{entry.conjugations.past_tense}</td>
+                    </tr>
+                    <tr>
+                      <td style={{ padding: '6px 10px', color: 'var(--text-muted)', fontSize: '11.5px' }}>Past Participle</td>
+                      <td style={{ padding: '6px 10px', fontWeight: 'bold', color: 'var(--text-main)' }}>{entry.conjugations.past_participle || entry.conjugations.past_tense}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
           )}
 
@@ -4007,8 +4031,32 @@ IMPORTANT: If the Free Dictionary context contains a valid IPA pronunciation (ip
           </div>
 
           {activeEntry.entry_type === 'phrasal_verb' && activeEntry.conjugations && (
-            <div className="conjugations-line">
-              present participle <strong>{activeEntry.conjugations.present_participle}</strong> | past tense and past participle <strong>{activeEntry.conjugations.past_tense}</strong>
+            <div className="conjugations-block" style={{ marginTop: '10px', marginBottom: '10px' }}>
+              <div style={{ fontWeight: 'bold', fontSize: '11px', color: 'var(--text-muted)', marginBottom: '6px', textTransform: 'uppercase', letterSpacing: '0.5px' }}>Conjugations</div>
+              <div style={{ overflowX: 'auto', border: '1px solid var(--border-muted)', borderRadius: '6px' }}>
+                <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '12px', textAlign: 'left' }}>
+                  <thead>
+                    <tr style={{ backgroundColor: 'var(--bg-app)', borderBottom: '1px solid var(--border-muted)' }}>
+                      <th style={{ padding: '6px 10px', fontWeight: '600', color: 'var(--text-muted)', width: '45%' }}>Form</th>
+                      <th style={{ padding: '6px 10px', fontWeight: '600', color: 'var(--text-main)' }}>Conjugation</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr style={{ borderBottom: '1px solid var(--border-muted)' }}>
+                      <td style={{ padding: '6px 10px', color: 'var(--text-muted)', fontSize: '11.5px' }}>Present Participle</td>
+                      <td style={{ padding: '6px 10px', fontWeight: 'bold', color: 'var(--accent)' }}>{activeEntry.conjugations.present_participle}</td>
+                    </tr>
+                    <tr style={{ borderBottom: '1px solid var(--border-muted)' }}>
+                      <td style={{ padding: '6px 10px', color: 'var(--text-muted)', fontSize: '11.5px' }}>Past Tense</td>
+                      <td style={{ padding: '6px 10px', fontWeight: 'bold', color: 'var(--text-main)' }}>{activeEntry.conjugations.past_tense}</td>
+                    </tr>
+                    <tr>
+                      <td style={{ padding: '6px 10px', color: 'var(--text-muted)', fontSize: '11.5px' }}>Past Participle</td>
+                      <td style={{ padding: '6px 10px', fontWeight: 'bold', color: 'var(--text-main)' }}>{activeEntry.conjugations.past_participle || activeEntry.conjugations.past_tense}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
           )}
 
