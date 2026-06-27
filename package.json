@@ -1,6 +1,7 @@
 {
   "name": "lexicon-vault",
-  "version": "1.0.0",
+  "version": "1.0.1",
+  "description": "Trigger fresh build on Vercel",
   "private": true,
   "scripts": {
     "build": "echo 'Static site - no build required'"
