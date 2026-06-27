@@ -2710,6 +2710,7 @@ IMPORTANT: If the Free Dictionary context contains a valid IPA pronunciation (ip
                 folders={folders}
                 navigateToWord={navigateToWord}
                 setActiveTab={setActiveTab}
+                calculateSM2={calculateSM2}
               />
             )}
 
@@ -5271,7 +5272,7 @@ IMPORTANT: If the Free Dictionary context contains a valid IPA pronunciation (ip
     // ----------------------------------------------------
     // PHRASAL VERBS PRACTICE COMPONENT
     // ----------------------------------------------------
-    function PhrasalVerbsPractice({ entries, setEntries, folders, navigateToWord, setActiveTab }) {
+    function PhrasalVerbsPractice({ entries, setEntries, folders, navigateToWord, setActiveTab, calculateSM2 }) {
       const [sessionQueue, setSessionQueue] = useState([]);
       const [currentIndex, setCurrentIndex] = useState(0);
       const [selectedOption, setSelectedOption] = useState(null);
@@ -5303,8 +5304,24 @@ IMPORTANT: If the Free Dictionary context contains a valid IPA pronunciation (ip
           setSessionQueue([]);
           return;
         }
-        const shuffled = [...allPhrasalVerbs].sort(() => 0.5 - Math.random());
-        const selected = shuffled.slice(0, Math.min(10, shuffled.length));
+
+        const todayStr = new Date().toISOString().split('T')[0];
+
+        // Filter and prioritize due cards
+        const duePVs = allPhrasalVerbs.filter(e => {
+          if (e.is_learned) return false;
+          const isDue = e.review && (e.review.due_date <= todayStr || e.review.repetition_count === 0);
+          return isDue;
+        });
+
+        const nonDuePVs = allPhrasalVerbs.filter(e => !duePVs.includes(e) && !e.is_learned);
+
+        // Sort randomly
+        const shuffledDue = [...duePVs].sort(() => 0.5 - Math.random());
+        const shuffledNonDue = [...nonDuePVs].sort(() => 0.5 - Math.random());
+
+        // Fill up to 10 entries prioritizing due ones
+        const selected = [...shuffledDue, ...shuffledNonDue].slice(0, Math.min(10, allPhrasalVerbs.length));
         
         const queue = selected.map(entry => {
           const examples = [entry.example, ...(entry.extra_examples || [])].filter(Boolean);
@@ -5364,18 +5381,34 @@ IMPORTANT: If the Free Dictionary context contains a valid IPA pronunciation (ip
           setIncorrectItems(prev => [...prev, currentQuestion.entry]);
         }
 
-        // Record statistics
+        // Record statistics & spaced repetition schedule
         if (setEntries) {
           setEntries(prev => prev.map(item => {
             if (item.id === currentQuestion.entry.id) {
               const stats = item.stats || { encounters: 0, correct: 0, incorrect: 0 };
+              const updatedStats = {
+                encounters: stats.encounters + 1,
+                correct: stats.correct + (correct ? 1 : 0),
+                incorrect: stats.incorrect + (correct ? 0 : 1)
+              };
+
+              // Calculate spaced repetition SM2 update if calculateSM2 is provided
+              let updatedReview = item.review;
+              if (calculateSM2) {
+                const currentReview = item.review || {
+                  interval_days: 1,
+                  ease_factor: 2.5,
+                  due_date: new Date().toISOString().split('T')[0],
+                  repetition_count: 0,
+                  last_result: null
+                };
+                updatedReview = calculateSM2(correct ? 'good' : 'again', currentReview);
+              }
+
               return {
                 ...item,
-                stats: {
-                  encounters: stats.encounters + 1,
-                  correct: stats.correct + (correct ? 1 : 0),
-                  incorrect: stats.incorrect + (correct ? 0 : 1)
-                }
+                stats: updatedStats,
+                review: updatedReview
               };
             }
             return item;
