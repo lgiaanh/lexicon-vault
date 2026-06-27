@@ -3,15 +3,15 @@
 
 const INITIAL_FOLDERS = [
   { id: 'folder-1', name: 'Law & Policy', color: '#DBCDF0', emoji: '⚖️', description: 'Legislation, judicial processes, constitutional rights, and official regulations.', created_at: new Date().toISOString(), word_count: 8 },
-  { id: 'folder-2', name: 'Economics & Statistics', color: '#FAEDCB', emoji: '📈', description: 'Financial theories, trade data, economic policy, market dynamics, and quantitative metrics.', created_at: new Date().toISOString(), word_count: 11 },
+  { id: 'folder-2', name: 'Economics & Statistics', color: '#FAEDCB', emoji: '📈', description: 'Financial theories, trade data, economic policy, market dynamics, and quantitative metrics.', created_at: new Date().toISOString(), word_count: 12 },
   { id: 'folder-3', name: 'Environment & Ecology', color: '#C9E4DE', emoji: '🌱', description: 'Climate change, biodiversity, environmental preservation, ecosystems, and conservation strategies.', created_at: new Date().toISOString(), word_count: 5 },
-  { id: 'folder-4', name: 'Academic Writing (Task 2)', color: '#C6DEF1', emoji: '✍️', description: 'Sophisticated vocabulary and idioms tailored for high-scoring IELTS Writing Task 2 responses.', created_at: new Date().toISOString(), word_count: 12 },
+  { id: 'folder-4', name: 'Academic Writing (Task 2)', color: '#C6DEF1', emoji: '✍️', description: 'Sophisticated vocabulary and idioms tailored for high-scoring IELTS Writing Task 2 responses.', created_at: new Date().toISOString(), word_count: 15 },
   { id: 'folder-5', name: 'Phrasal Verbs & Idioms', color: '#F7D9C4', emoji: '💬', description: 'Common English phrasal verbs and idiomatic expressions for informal or spoken contexts.', created_at: new Date().toISOString(), word_count: 8 },
   { id: 'folder-6', name: 'Maps & Diagrams', color: '#F2C6DE', emoji: '🗺️', description: 'Spatial descriptions, maps, process flowcharts, and technical diagrams.', created_at: new Date().toISOString(), word_count: 0 },
   { id: 'folder-speaking-work-study', name: 'Speaking: Work & Study', color: '#C6DEF1', emoji: '🏫', description: 'Phrasal verbs and colloquial expressions for describing academic pursuits and careers.', created_at: new Date().toISOString(), word_count: 2 },
   { id: 'folder-speaking-leisure-travel', name: 'Speaking: Leisure & Travel', color: '#C9E4DE', emoji: '✈️', description: 'Speaking phrasal verbs for describing vacationing, sightseeing, and hobbies.', created_at: new Date().toISOString(), word_count: 2 },
   { id: 'folder-speaking-relationships', name: 'Speaking: Relationships & Life', color: '#F2C6DE', emoji: '👥', description: 'Phrasal verbs for describing social connections, relatives, and childhood memories.', created_at: new Date().toISOString(), word_count: 2 },
-  { id: 'folder-science', name: 'Science & Technology', color: '#DBCDF0', emoji: '🔬', description: 'Vocabulary and collocations related to scientific research, breakthroughs, technology, and paradigm shifts.', created_at: new Date().toISOString(), word_count: 5 }
+  { id: 'folder-science', name: 'Science & Technology', color: '#DBCDF0', emoji: '🔬', description: 'Vocabulary and collocations related to scientific research, breakthroughs, technology, and paradigm shifts.', created_at: new Date().toISOString(), word_count: 6 }
 ];
 
 const INITIAL_ENTRIES = [
@@ -4623,6 +4623,200 @@ const INITIAL_ENTRIES = [
     },
     date_added: new Date().toISOString(),
     source_context: 'IELTS Writing Task 2 & Speaking - discussing material sciences, biology, or economic theories and price models.'
+  },
+  {
+    id: 'entry-predispose',
+    entry_type: 'word',
+    word: 'predispose',
+    ipa_uk: '/ˌpriː.dɪˈspəʊz/',
+    ipa_us: '/ˌpriː.dɪˈspoʊz/',
+    definition: 'To make someone more likely to behave in a particular way or to suffer from a particular illness or condition.',
+    definition_source: 'cambridge',
+    example: 'Individual genetics may predispose some people to more severe symptoms.',
+    definitions: [
+      {
+        definition: 'To influence someone in a particular direction or make them likely to behave in a certain way.',
+        example: 'His family background predisposed him to support the liberal party.',
+        cefr_level: 'C2',
+        grammar_note: 'transitive verb'
+      },
+      {
+        definition: 'To make someone susceptible to a disease or condition.',
+        example: 'A genetic mutation can predispose individuals to certain types of cancer.',
+        cefr_level: 'C2',
+        grammar_note: 'transitive verb'
+      }
+    ],
+    extra_examples: [
+      'Lack of exercise may predispose patients to joint stiffness and cardiovascular issues.',
+      'Certain environmental factors can predispose children to developing allergies later in life.'
+    ],
+    grammar_note: 'transitive verb',
+    base_verb: '',
+    particles: '',
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: 'C2',
+    register: 'academic',
+    formality_score: 5,
+    connotation: 'neutral',
+    word_family: {
+      verb: ['predispose'],
+      noun: ['predisposition'],
+      adjective: ['predisposed'],
+      adverb: []
+    },
+    semantic_field_id: 'influence-causation',
+    semantic_field_label: 'Influence & Causation',
+    semantic_field_words: [
+      { word: 'influence', cefr: 'B2', register: 'neutral' },
+      { word: 'incline', cefr: 'C1', register: 'formal' },
+      { word: 'susceptibility', cefr: 'C2', register: 'academic' }
+    ],
+    register_synonyms: [
+      { word: 'incline', register: 'formal', cefr: 'C1' },
+      { word: 'bias', register: 'neutral', cefr: 'B2' }
+    ],
+    folder_ids: ['folder-4', 'folder-science'],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: 'IELTS Writing Task 2 & Science - discussing susceptibility to diseases, behavior patterns, or psychological inclination.'
+  },
+  {
+    id: 'entry-outlook',
+    entry_type: 'word',
+    word: 'outlook',
+    ipa_uk: '/ˈaʊt.lʊk/',
+    ipa_us: '/ˈaʊt.lʊk/',
+    definition: "A person's way of thinking and their general attitude to life, or the likely future situation.",
+    definition_source: 'cambridge',
+    example: 'The economic outlook for the next quarter remains positive despite inflation.',
+    definitions: [
+      {
+        definition: 'A general attitude or perspective towards life or a situation.',
+        example: 'She has a very optimistic outlook on life.',
+        cefr_level: 'C1',
+        grammar_note: 'noun [C usually singular]'
+      },
+      {
+        definition: 'The prospects or future probability of a situation (economic, weather, etc.).',
+        example: "The outlook for the country's manufacturing sector is quite gloomy.",
+        cefr_level: 'C1',
+        grammar_note: 'noun [C usually singular]'
+      }
+    ],
+    extra_examples: [
+      "Travel broaden's a person's cultural outlook and helps reduce prejudice.",
+      'Global financial institutions have downgraded their economic growth outlook for the region.'
+    ],
+    grammar_note: 'noun [C usually singular]',
+    base_verb: '',
+    particles: '',
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: 'C1',
+    register: 'academic',
+    formality_score: 4,
+    connotation: 'neutral',
+    word_family: {
+      verb: [],
+      noun: ['outlook'],
+      adjective: [],
+      adverb: []
+    },
+    semantic_field_id: 'perspective-forecast',
+    semantic_field_label: 'Perspective & Forecast',
+    semantic_field_words: [
+      { word: 'perspective', cefr: 'B2', register: 'neutral' },
+      { word: 'forecast', cefr: 'B2', register: 'neutral' },
+      { word: 'standpoint', cefr: 'C1', register: 'formal' }
+    ],
+    register_synonyms: [
+      { word: 'perspective', register: 'neutral', cefr: 'B2' },
+      { word: 'prospect', register: 'formal', cefr: 'C1' },
+      { word: 'forecast', register: 'neutral', cefr: 'B2' }
+    ],
+    folder_ids: ['folder-2', 'folder-4'],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: 'IELTS Writing Task 2 & Economics - discussing forecasts, general mental attitudes, or cultural perspectives.'
+  },
+  {
+    id: 'entry-assertion',
+    entry_type: 'word',
+    word: 'assertion',
+    ipa_uk: '/əˈsɜː.ʃən/',
+    ipa_us: '/əˈsɝː.ʃən/',
+    definition: 'A statement that you strongly believe is true.',
+    definition_source: 'cambridge',
+    example: "The author's assertion that technology isolates people is open to debate.",
+    definitions: [
+      {
+        definition: 'A statement saying that you strongly believe something is true.',
+        example: "I don't think that assertion can be supported by facts.",
+        cefr_level: 'C1',
+        grammar_note: 'noun [C or U]'
+      },
+      {
+        definition: 'The act of asserting something.',
+        example: 'The assertion of national rights led to diplomatic tensions.',
+        cefr_level: 'C1',
+        grammar_note: 'noun [C or U]'
+      }
+    ],
+    extra_examples: [
+      'We have statistical data that easily refutes their assertions.',
+      'Self-assertion is important for personal boundaries and mental health.'
+    ],
+    grammar_note: 'noun [C or U]',
+    base_verb: '',
+    particles: '',
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: 'C1',
+    register: 'academic',
+    formality_score: 4,
+    connotation: 'neutral',
+    word_family: {
+      verb: ['assert'],
+      noun: ['assertion', 'assertiveness'],
+      adjective: ['assertive'],
+      adverb: ['assertively']
+    },
+    semantic_field_id: 'communication-argument',
+    semantic_field_label: 'Communication & Argument',
+    semantic_field_words: [
+      { word: 'statement', cefr: 'B1', register: 'neutral' },
+      { word: 'claim', cefr: 'B2', register: 'neutral' },
+      { word: 'declaration', cefr: 'C1', register: 'formal' }
+    ],
+    register_synonyms: [
+      { word: 'statement', register: 'neutral', cefr: 'B1' },
+      { word: 'claim', register: 'neutral', cefr: 'B2' },
+      { word: 'declaration', register: 'formal', cefr: 'C1' }
+    ],
+    folder_ids: ['folder-4'],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: 'IELTS Writing Task 2 - presenting arguments, claims, or stating positions in essays.'
   }
 ];
 
@@ -6517,6 +6711,135 @@ const EXTENDED_DICTIONARY_DB = [
       { word: 'resilience', register: 'academic', cefr: 'C1' }
     ],
     suggested_folder_name: 'Economics & Statistics'
+  },
+  {
+    word: 'predispose',
+    entry_type: 'word',
+    ipa_uk: '/ˌpriː.dɪˈspəʊz/',
+    ipa_us: '/ˌpriː.dɪˈspoʊz/',
+    definition: 'To make someone more likely to behave in a particular way or to suffer from a particular illness or condition.',
+    definitions: [
+      {
+        definition: 'To influence someone in a particular direction or make them likely to behave in a certain way.',
+        example: 'His family background predisposed him to support the liberal party.',
+        cefr_level: 'C2',
+        grammar_note: 'transitive verb'
+      },
+      {
+        definition: 'To make someone susceptible to a disease or condition.',
+        example: 'A genetic mutation can predispose individuals to certain types of cancer.',
+        cefr_level: 'C2',
+        grammar_note: 'transitive verb'
+      }
+    ],
+    cefr_level: 'C2',
+    register: 'academic',
+    formality_score: 5,
+    connotation: 'neutral',
+    grammar_note: 'transitive verb',
+    example: 'Individual genetics may predispose some people to more severe symptoms.',
+    extra_examples: [
+      'Lack of exercise may predispose patients to joint stiffness and cardiovascular issues.',
+      'Certain environmental factors can predispose children to developing allergies later in life.'
+    ],
+    word_family: { verb: ['predispose'], noun: ['predisposition'], adjective: ['predisposed'], adverb: [] },
+    semantic_field_id: 'influence-causation',
+    semantic_field_label: 'Influence & Causation',
+    semantic_field_words: [
+      { word: 'influence', cefr: 'B2', register: 'neutral' },
+      { word: 'incline', cefr: 'C1', register: 'formal' }
+    ],
+    register_synonyms: [
+      { word: 'incline', register: 'formal', cefr: 'C1' },
+      { word: 'bias', register: 'neutral', cefr: 'B2' }
+    ],
+    suggested_folder_name: 'Academic Writing (Task 2)'
+  },
+  {
+    word: 'outlook',
+    entry_type: 'word',
+    ipa_uk: '/ˈaʊt.lʊk/',
+    ipa_us: '/ˈaʊt.lʊk/',
+    definition: "A person's way of thinking and their general attitude to life, or the likely future situation.",
+    definitions: [
+      {
+        definition: 'A general attitude or perspective towards life or a situation.',
+        example: 'She has a very optimistic outlook on life.',
+        cefr_level: 'C1',
+        grammar_note: 'noun [C usually singular]'
+      },
+      {
+        definition: 'The prospects or future probability of a situation (economic, weather, etc.).',
+        example: "The outlook for the country's manufacturing sector is quite gloomy.",
+        cefr_level: 'C1',
+        grammar_note: 'noun [C usually singular]'
+      }
+    ],
+    cefr_level: 'C1',
+    register: 'academic',
+    formality_score: 4,
+    connotation: 'neutral',
+    grammar_note: 'noun [C usually singular]',
+    example: 'The economic outlook for the next quarter remains positive despite inflation.',
+    extra_examples: [
+      "Travel broaden's a person's cultural outlook and helps reduce prejudice.",
+      'Global financial institutions have downgraded their economic growth outlook for the region.'
+    ],
+    word_family: { verb: [], noun: ['outlook'], adjective: [], adverb: [] },
+    semantic_field_id: 'perspective-forecast',
+    semantic_field_label: 'Perspective & Forecast',
+    semantic_field_words: [
+      { word: 'perspective', cefr: 'B2', register: 'neutral' },
+      { word: 'forecast', cefr: 'B2', register: 'neutral' }
+    ],
+    register_synonyms: [
+      { word: 'perspective', register: 'neutral', cefr: 'B2' },
+      { word: 'prospect', register: 'formal', cefr: 'C1' }
+    ],
+    suggested_folder_name: 'Economics & Statistics'
+  },
+  {
+    word: 'assertion',
+    entry_type: 'word',
+    ipa_uk: '/əˈsɜː.ʃən/',
+    ipa_us: '/əˈsɝː.ʃən/',
+    definition: 'A statement that you strongly believe is true.',
+    definitions: [
+      {
+        definition: 'A statement saying that you strongly believe something is true.',
+        example: "I don't think that assertion can be supported by facts.",
+        cefr_level: 'C1',
+        grammar_note: 'noun [C or U]'
+      },
+      {
+        definition: 'The act of asserting something.',
+        example: 'The assertion of national rights led to diplomatic tensions.',
+        cefr_level: 'C1',
+        grammar_note: 'noun [C or U]'
+      }
+    ],
+    cefr_level: 'C1',
+    register: 'academic',
+    formality_score: 4,
+    connotation: 'neutral',
+    grammar_note: 'noun [C or U]',
+    example: "The author's assertion that technology isolates people is open to debate.",
+    extra_examples: [
+      'We have statistical data that easily refutes their assertions.',
+      'Self-assertion is important for personal boundaries and mental health.'
+    ],
+    word_family: { verb: ['assert'], noun: ['assertion', 'assertiveness'], adjective: ['assertive'], adverb: ['assertively'] },
+    semantic_field_id: 'communication-argument',
+    semantic_field_label: 'Communication & Argument',
+    semantic_field_words: [
+      { word: 'statement', cefr: 'B1', register: 'neutral' },
+      { word: 'claim', cefr: 'B2', register: 'neutral' }
+    ],
+    register_synonyms: [
+      { word: 'statement', register: 'neutral', cefr: 'B1' },
+      { word: 'claim', register: 'neutral', cefr: 'B2' }
+    ],
+    suggested_folder_name: 'Academic Writing (Task 2)'
   }
 ];
 
