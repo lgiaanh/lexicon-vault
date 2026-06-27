@@ -791,7 +791,7 @@
       const dueCount = useMemo(() => {
         const todayStr = new Date().toISOString().split('T')[0];
         return entries.filter(entry => {
-          return entry.review && entry.review.due_date <= todayStr;
+          return !entry.is_learned && entry.review && entry.review.due_date <= todayStr;
         }).length;
       }, [entries]);
 
@@ -885,7 +885,7 @@
       // Review mode queue preparation
       const startReviewMode = () => {
         const todayStr = new Date().toISOString().split('T')[0];
-        const due = entries.filter(entry => entry.review && entry.review.due_date <= todayStr);
+        const due = entries.filter(entry => !entry.is_learned && entry.review && entry.review.due_date <= todayStr);
         
         if (due.length === 0) {
           showToastGlobal('No vocabulary words are due for review today!');
@@ -901,23 +901,42 @@
 
       const handleRateCard = (quality) => {
         const currentEntry = reviewQueue[currentReviewIndex];
-        const updatedReview = calculateSM2(quality, currentEntry.review);
+        
+        let updatedReview;
+        let isLearned = currentEntry.is_learned || false;
+        
+        if (quality === 'done') {
+          isLearned = true;
+          updatedReview = {
+            ...currentEntry.review,
+            interval_days: 9999,
+            due_date: '2099-12-31',
+            repetition_count: (currentEntry.review?.repetition_count || 0) + 1,
+            last_result: 'done'
+          };
+        } else {
+          updatedReview = calculateSM2(quality, currentEntry.review);
+        }
 
         setEntries(prev => prev.map(item => {
           if (item.id === currentEntry.id) {
             const stats = item.stats || { encounters: 0, correct: 0, incorrect: 0 };
-            const isCorrect = (quality === 'good' || quality === 'easy');
+            const isCorrect = (quality === 'good' || quality === 'easy' || quality === 'done');
             const updatedStats = {
               encounters: stats.encounters + 1,
               correct: stats.correct + (isCorrect ? 1 : 0),
               incorrect: stats.incorrect + (isCorrect ? 0 : 1)
             };
-            return { ...item, review: updatedReview, stats: updatedStats };
+            return { ...item, review: updatedReview, stats: updatedStats, is_learned: isLearned };
           }
           return item;
         }));
 
-        showToastGlobal(`"${currentEntry.word}" updated: review in ${updatedReview.interval_days} day(s).`);
+        if (quality === 'done') {
+          showToastGlobal(`"${currentEntry.word}" marked as Mastered (Done) and archived from reviews!`);
+        } else {
+          showToastGlobal(`"${currentEntry.word}" updated: review in ${updatedReview.interval_days} day(s).`);
+        }
 
         if (currentReviewIndex + 1 < reviewQueue.length) {
           setCurrentReviewIndex(prev => prev + 1);
@@ -2396,6 +2415,7 @@ IMPORTANT: If the Free Dictionary context contains a valid IPA pronunciation (ip
                       const todayStr = new Date().toISOString().split('T')[0];
                       const matched = entries.filter(entry => {
                         if (!entry.review) return false;
+                        if (entry.is_learned) return false;
                         if (reviewFilterFolder !== 'ALL' && (!entry.folder_ids || !entry.folder_ids.includes(reviewFilterFolder))) return false;
                         if (reviewFilterType !== 'ALL' && entry.entry_type !== reviewFilterType) return false;
                         if (reviewFilterCefr !== 'ALL' && entry.cefr_level !== reviewFilterCefr) return false;
@@ -2439,6 +2459,7 @@ IMPORTANT: If the Free Dictionary context contains a valid IPA pronunciation (ip
                           {(() => {
                             const forecastCards = entries.filter(entry => {
                               if (!entry.review) return false;
+                              if (entry.is_learned) return false;
                               if (reviewFilterFolder !== 'ALL' && (!entry.folder_ids || !entry.folder_ids.includes(reviewFilterFolder))) return false;
                               if (reviewFilterType !== 'ALL' && entry.entry_type !== reviewFilterType) return false;
                               if (reviewFilterCefr !== 'ALL' && entry.cefr_level !== reviewFilterCefr) return false;
@@ -2678,6 +2699,10 @@ IMPORTANT: If the Free Dictionary context contains a valid IPA pronunciation (ip
                                 <span className="rating-btn-interval">
                                   {calculateSM2('easy', reviewQueue[currentReviewIndex].review).interval_days}d
                                 </span>
+                              </button>
+                              <button className="rating-btn rating-btn-done" onClick={() => handleRateCard('done')}>
+                                <span className="rating-btn-name">Done</span>
+                                <span className="rating-btn-interval">Archive</span>
                               </button>
                             </div>
                           </div>
@@ -7041,24 +7066,65 @@ IMPORTANT: If the Free Dictionary context contains a valid IPA pronunciation (ip
                   </pre>
                 )}
               </div>
-              <button 
-                onClick={() => {
-                  localStorage.clear();
-                  window.location.reload();
-                }}
-                style={{
-                  backgroundColor: '#EF4444',
-                  color: 'white',
-                  border: 'none',
-                  padding: '10px 20px',
-                  borderRadius: '6px',
-                  cursor: 'pointer',
-                  fontWeight: 'bold',
-                  fontSize: '14px'
-                }}
-              >
-                Clear Local Storage & Reset App
-              </button>
+              <div style={{ display: 'flex', gap: '12px', justifyContent: 'center' }}>
+                <button 
+                  onClick={() => {
+                    try {
+                      const data = {
+                        entries: JSON.parse(localStorage.getItem('lexicon_entries') || '[]'),
+                        folders: JSON.parse(localStorage.getItem('lexicon_folders') || '[]'),
+                        study_time: JSON.parse(localStorage.getItem('lexicon_study_time') || '{}'),
+                        total_study_time: localStorage.getItem('lexicon_total_study_time') || '0',
+                        streak: JSON.parse(localStorage.getItem('lexicon_study_streak') || '{}')
+                      };
+                      const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+                      const url = URL.createObjectURL(blob);
+                      const a = document.createElement('a');
+                      a.href = url;
+                      a.download = `lexicon-vault-backup-${new Date().toISOString().split('T')[0]}.json`;
+                      a.click();
+                      URL.revokeObjectURL(url);
+                    } catch (e) {
+                      alert("Failed to export backup: " + e.toString());
+                    }
+                  }}
+                  style={{
+                    backgroundColor: '#10B981',
+                    color: 'white',
+                    border: 'none',
+                    padding: '10px 20px',
+                    borderRadius: '6px',
+                    cursor: 'pointer',
+                    fontWeight: 'bold',
+                    fontSize: '14px',
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '6px'
+                  }}
+                >
+                  📥 Export & Save Backup
+                </button>
+                <button 
+                  onClick={() => {
+                    if (confirm("Are you sure you want to reset the app? Make sure you have exported your backup first!")) {
+                      localStorage.clear();
+                      window.location.reload();
+                    }
+                  }}
+                  style={{
+                    backgroundColor: '#EF4444',
+                    color: 'white',
+                    border: 'none',
+                    padding: '10px 20px',
+                    borderRadius: '6px',
+                    cursor: 'pointer',
+                    fontWeight: 'bold',
+                    fontSize: '14px'
+                  }}
+                >
+                  ⚠️ Reset App Data
+                </button>
+              </div>
             </div>
           );
         }

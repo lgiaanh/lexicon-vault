@@ -1073,7 +1073,7 @@ body {
 
 .review-ratings-row {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 12px;
   margin-top: 20px;
 }
@@ -1103,6 +1103,8 @@ body {
 .rating-btn-good:hover { background-color: #DBEAFE; }
 .rating-btn-easy { color: #059669; border-color: #10B981; background-color: #ECFDF5; }
 .rating-btn-easy:hover { background-color: #D1FAE5; }
+.rating-btn-done { color: #7C3AED; border-color: #8B5CF6; background-color: #F5F3FF; }
+.rating-btn-done:hover { background-color: #EDE9FE; }
 
 .rating-btn-name {
   font-weight: 700;
