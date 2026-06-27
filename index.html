@@ -341,9 +341,15 @@
             const parsed = JSON.parse(saved);
             let modified = false;
             const updated = parsed.map(entry => {
+              if (!entry || typeof entry !== 'object') return entry;
               if (!entry.collocations) {
-                const match = INITIAL_ENTRIES.find(e => e.word.toLowerCase() === entry.word.toLowerCase()) ||
-                              EXTENDED_DICTIONARY_DB.find(e => e.word.toLowerCase() === entry.word.toLowerCase());
+                const entryWord = (entry.word || '').toLowerCase();
+                if (!entryWord) {
+                  modified = true;
+                  return { ...entry, collocations: [] };
+                }
+                const match = INITIAL_ENTRIES.find(e => e.word.toLowerCase() === entryWord) ||
+                              EXTENDED_DICTIONARY_DB.find(e => e.word.toLowerCase() === entryWord);
                 if (match && match.collocations) {
                   modified = true;
                   return { ...entry, collocations: match.collocations };
@@ -614,9 +620,9 @@
         if (saved) {
           try {
             const parsed = JSON.parse(saved);
-            const existingIds = new Set(parsed.map(e => e.id));
-            const existingWords = new Set(parsed.map(e => e.word.toLowerCase()));
-            const missing = INITIAL_ENTRIES.filter(e => !existingIds.has(e.id) && !existingWords.has(e.word.toLowerCase()));
+            const existingIds = new Set(parsed.map(e => e && e.id ? e.id : ''));
+            const existingWords = new Set(parsed.map(e => e && e.word ? e.word.toLowerCase() : ''));
+            const missing = INITIAL_ENTRIES.filter(e => e && e.word && !existingIds.has(e.id) && !existingWords.has(e.word.toLowerCase()));
             if (missing.length > 0) {
               setPendingImports(missing.map(e => ({
                 ...e,
