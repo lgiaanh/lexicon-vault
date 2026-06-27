@@ -1783,7 +1783,22 @@ IMPORTANT: If the Free Dictionary context contains a valid IPA pronunciation (ip
               transition: 'all 0.3s ease',
               boxShadow: isTimerRunning ? '0 0 10px rgba(16, 185, 129, 0.15)' : 'none'
             }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+              <div 
+                style={{ display: 'flex', alignItems: 'center', gap: '8px', cursor: 'pointer' }}
+                onClick={() => {
+                  const val = prompt("Enter new study time today in minutes:", Math.round(studyTimeToday / 60));
+                  if (val !== null) {
+                    const mins = parseInt(val);
+                    if (!isNaN(mins) && mins >= 0) {
+                      const secs = mins * 60;
+                      setStudyTimeToday(secs);
+                      const todayStr = new Date().toISOString().split('T')[0];
+                      localStorage.setItem('lexicon_study_time', JSON.stringify({ date: todayStr, seconds: secs }));
+                    }
+                  }
+                }}
+                title="Click to adjust study time today"
+              >
                 <span 
                   className={isTimerRunning ? 'timer-pulse' : ''} 
                   style={{ 
