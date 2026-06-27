@@ -3888,6 +3888,12 @@ IMPORTANT: If the Free Dictionary context contains a valid IPA pronunciation (ip
     function WordFamilyCard({ group, folders, speakWord, speechActiveWord, navigateToWord, onEdit, onDelete, vaultEntries }) {
       const [activeWordId, setActiveWordId] = useState(group.entries[0].id);
 
+      useEffect(() => {
+        if (group.entries && group.entries.length > 0) {
+          setActiveWordId(group.entries[0].id);
+        }
+      }, [group.representative]);
+
       const activeEntry = useMemo(() => {
         return group.entries.find(e => e.id === activeWordId) || group.entries[0];
       }, [group.entries, activeWordId]);
