@@ -3582,10 +3582,15 @@ IMPORTANT: If the Free Dictionary context contains a valid IPA pronunciation (ip
                         return (
                           <span 
                             key={wIdx} 
-                            className={`word-family-word ${isSaved ? 'clickable' : ''}`}
-                            style={{ fontWeight: isSaved ? '600' : 'normal' }}
-                            onClick={() => isSaved && navigateToWord(w)}
-                            title={isSaved ? `View "${w}" in vault` : `"${w}" is not in vault`}
+                            className="word-family-word clickable"
+                            style={{ 
+                              fontWeight: isSaved ? '700' : '400',
+                              color: isSaved ? 'var(--accent)' : 'inherit',
+                              textDecoration: isSaved ? 'none' : 'underline',
+                              textDecorationStyle: 'dotted'
+                            }}
+                            onClick={() => navigateToWord(w)}
+                            title={isSaved ? `View "${w}" in vault` : `"${w}" is not in vault. Click to lookup and add it!`}
                           >
                             {w}{wIdx < words.length - 1 ? ', ' : ''}
                           </span>
@@ -4032,13 +4037,19 @@ IMPORTANT: If the Free Dictionary context contains a valid IPA pronunciation (ip
                       <span className="word-family-pos">{posAbbr}:</span>
                       {words.map((w, wIdx) => {
                         const isSaved = checkWordInVault(w);
+                        const isActive = w.toLowerCase() === activeEntry.word.toLowerCase();
                         return (
                           <span 
                             key={wIdx} 
-                            className={`word-family-word ${isSaved ? 'clickable' : ''}`}
-                            style={{ fontWeight: isSaved ? '600' : 'normal', color: w.toLowerCase() === activeEntry.word.toLowerCase() ? 'var(--accent)' : 'inherit' }}
-                            onClick={() => isSaved && navigateToWord(w)}
-                            title={isSaved ? `View "${w}" in vault` : `"${w}" is not in vault`}
+                            className="word-family-word clickable"
+                            style={{ 
+                              fontWeight: isActive || isSaved ? '700' : '400',
+                              color: isActive ? 'var(--accent)' : (isSaved ? 'var(--text-main)' : 'inherit'),
+                              textDecoration: isActive || isSaved ? 'none' : 'underline',
+                              textDecorationStyle: 'dotted'
+                            }}
+                            onClick={() => navigateToWord(w)}
+                            title={isSaved ? `View "${w}" in vault` : `"${w}" is not in vault. Click to lookup and add it!`}
                           >
                             {w}{wIdx < words.length - 1 ? ', ' : ''}
                           </span>
