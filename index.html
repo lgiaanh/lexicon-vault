@@ -439,20 +439,89 @@
 
       const [isAddingNew, setIsAddingNew] = useState(false);
 
-      // Daily study timer state
+      // Get logical study date (starts at 2:00 AM)
+      const getStudyDateString = (dateObj = new Date()) => {
+        const hours = dateObj.getHours();
+        if (hours < 2) {
+          const prev = new Date(dateObj);
+          prev.setDate(prev.getDate() - 1);
+          return prev.toISOString().split('T')[0];
+        }
+        return dateObj.toISOString().split('T')[0];
+      };
+
+      const getYesterdayDateString = (dateStr) => {
+        const d = new Date(dateStr + 'T12:00:00');
+        d.setDate(d.getDate() - 1);
+        return d.toISOString().split('T')[0];
+      };
+
+      // Daily study timer state (resets logical day at 2:00 AM)
       const [studyTimeToday, setStudyTimeToday] = useState(() => {
-        const todayStr = new Date().toISOString().split('T')[0];
+        const studyDateStr = getStudyDateString();
         const saved = localStorage.getItem('lexicon_study_time');
         if (saved) {
           try {
             const parsed = JSON.parse(saved);
-            if (parsed.date === todayStr) {
+            if (parsed.date === studyDateStr) {
               return parsed.seconds || 0;
             }
           } catch (e) {}
         }
         return 0;
       });
+
+      // Total study time accumulated
+      const [totalStudyTime, setTotalStudyTime] = useState(() => {
+        const saved = localStorage.getItem('lexicon_total_study_time');
+        return saved ? parseInt(saved) || 0 : 0;
+      });
+
+      // Streak count calculation
+      const [streakCount, setStreakCount] = useState(() => {
+        const savedStreak = localStorage.getItem('lexicon_study_streak');
+        if (savedStreak) {
+          try {
+            const streakObj = JSON.parse(savedStreak);
+            const studyDateStr = getStudyDateString();
+            if (streakObj.lastStudyDate === studyDateStr) {
+              return streakObj.streak || 0;
+            }
+            const yesterdayStr = getYesterdayDateString(studyDateStr);
+            if (streakObj.lastStudyDate === yesterdayStr) {
+              return streakObj.streak || 0;
+            }
+            return 0; // Broke streak
+          } catch (e) {}
+        }
+        return 0;
+      });
+
+      const checkAndUpdateStreak = (studyDateStr) => {
+        const savedStreak = localStorage.getItem('lexicon_study_streak');
+        let streakObj = { streak: 0, lastStudyDate: '' };
+        if (savedStreak) {
+          try {
+            streakObj = JSON.parse(savedStreak);
+          } catch (e) {}
+        }
+        
+        if (streakObj.lastStudyDate === studyDateStr) {
+          return;
+        }
+        
+        const yesterdayStr = getYesterdayDateString(studyDateStr);
+        if (streakObj.lastStudyDate === yesterdayStr) {
+          const nextStreak = (streakObj.streak || 0) + 1;
+          const newStreakObj = { streak: nextStreak, lastStudyDate: studyDateStr };
+          localStorage.setItem('lexicon_study_streak', JSON.stringify(newStreakObj));
+          setStreakCount(nextStreak);
+        } else {
+          const newStreakObj = { streak: 1, lastStudyDate: studyDateStr };
+          localStorage.setItem('lexicon_study_streak', JSON.stringify(newStreakObj));
+          setStreakCount(1);
+        }
+      };
 
       const [isTimerRunning, setIsTimerRunning] = useState(false);
       const lastActivityTime = useRef(Date.now());
@@ -572,9 +641,15 @@
             if (!isIdle) {
               setStudyTimeToday(prev => {
                 const nextSecs = prev + 1;
-                const todayStr = new Date().toISOString().split('T')[0];
-                localStorage.setItem('lexicon_study_time', JSON.stringify({ date: todayStr, seconds: nextSecs }));
+                const studyDateStr = getStudyDateString();
+                localStorage.setItem('lexicon_study_time', JSON.stringify({ date: studyDateStr, seconds: nextSecs }));
+                checkAndUpdateStreak(studyDateStr);
                 return nextSecs;
+              });
+              setTotalStudyTime(prev => {
+                const nextTotal = prev + 1;
+                localStorage.setItem('lexicon_total_study_time', nextTotal.toString());
+                return nextTotal;
               });
               setIsTimerRunning(true);
             } else {
@@ -1773,60 +1848,106 @@ IMPORTANT: If the Free Dictionary context contains a valid IPA pronunciation (ip
             {/* STUDY TIME TRACKER WIDGET */}
             <div className="study-timer-widget" style={{
               margin: '16px 16px 8px 16px',
-              padding: '12px',
+              padding: '14px',
               borderRadius: '8px',
               border: '2px solid var(--border-strong)',
               backgroundColor: isTimerRunning ? 'rgba(16, 185, 129, 0.08)' : 'var(--bg-app)',
               display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'space-between',
+              flexDirection: 'column',
+              gap: '10px',
               transition: 'all 0.3s ease',
               boxShadow: isTimerRunning ? '0 0 10px rgba(16, 185, 129, 0.15)' : 'none'
             }}>
-              <div 
-                style={{ display: 'flex', alignItems: 'center', gap: '8px', cursor: 'pointer' }}
-                onClick={() => {
-                  const val = prompt("Enter new study time today in minutes:", Math.round(studyTimeToday / 60));
-                  if (val !== null) {
-                    const mins = parseInt(val);
-                    if (!isNaN(mins) && mins >= 0) {
-                      const secs = mins * 60;
-                      setStudyTimeToday(secs);
-                      const todayStr = new Date().toISOString().split('T')[0];
-                      localStorage.setItem('lexicon_study_time', JSON.stringify({ date: todayStr, seconds: secs }));
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%' }}>
+                <div 
+                  style={{ display: 'flex', alignItems: 'center', gap: '8px', cursor: 'pointer' }}
+                  onClick={() => {
+                    const val = prompt("Enter new study time today in minutes:", Math.round(studyTimeToday / 60));
+                    if (val !== null) {
+                      const mins = parseInt(val);
+                      if (!isNaN(mins) && mins >= 0) {
+                        const newSecs = mins * 60;
+                        const diff = newSecs - studyTimeToday;
+                        setStudyTimeToday(newSecs);
+                        setTotalStudyTime(prev => {
+                          const nextTotal = Math.max(0, prev + diff);
+                          localStorage.setItem('lexicon_total_study_time', nextTotal.toString());
+                          return nextTotal;
+                        });
+                        const studyDateStr = getStudyDateString();
+                        localStorage.setItem('lexicon_study_time', JSON.stringify({ date: studyDateStr, seconds: newSecs }));
+                      }
                     }
-                  }
-                }}
-                title="Click to adjust study time today"
-              >
-                <span 
-                  className={isTimerRunning ? 'timer-pulse' : ''} 
-                  style={{ 
-                    fontSize: '18px',
-                    display: 'inline-block'
                   }}
+                  title="Click to adjust study time today"
                 >
-                  ⏱️
-                </span>
-                <div style={{ display: 'flex', flexDirection: 'column', textAlign: 'left' }}>
-                  <span style={{ fontSize: '10px', textTransform: 'uppercase', fontWeight: '700', color: 'var(--text-muted)' }}>
-                    {isTimerRunning ? 'Actively Studying' : 'Study Time Today'}
+                  <span 
+                    className={isTimerRunning ? 'timer-pulse' : ''} 
+                    style={{ 
+                      fontSize: '18px',
+                      display: 'inline-block'
+                    }}
+                  >
+                    ⏱️
                   </span>
-                  <span style={{ fontSize: '15px', fontWeight: '800', color: 'var(--text-main)', fontFamily: 'monospace' }}>
-                    {formatStudyTime(studyTimeToday)}
-                  </span>
+                  <div style={{ display: 'flex', flexDirection: 'column', textAlign: 'left' }}>
+                    <span style={{ fontSize: '10px', textTransform: 'uppercase', fontWeight: '700', color: 'var(--text-muted)' }}>
+                      {isTimerRunning ? 'Actively Studying' : 'Study Time Today'}
+                    </span>
+                    <span style={{ fontSize: '15px', fontWeight: '800', color: 'var(--text-main)', fontFamily: 'monospace' }}>
+                      {formatStudyTime(studyTimeToday)}
+                    </span>
+                  </div>
+                </div>
+                
+                {/* Active Indicator & Streak Count */}
+                <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                  {streakCount > 0 && (
+                    <span 
+                      style={{ 
+                        fontSize: '11px', 
+                        fontWeight: '700', 
+                        color: '#C2410C', 
+                        backgroundColor: '#FFEDD5', 
+                        padding: '2px 6px', 
+                        borderRadius: '12px',
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '2px'
+                      }}
+                      title={`${streakCount} consecutive days of studying!`}
+                    >
+                      🔥 {streakCount}d
+                    </span>
+                  )}
+                  <span 
+                    style={{
+                      width: '8px',
+                      height: '8px',
+                      borderRadius: '50%',
+                      backgroundColor: isTimerRunning ? '#10B981' : '#64748B',
+                      boxShadow: isTimerRunning ? '0 0 8px #10B981' : 'none',
+                      transition: 'background-color 0.3s'
+                    }}
+                  />
                 </div>
               </div>
-              <span 
-                style={{
-                  width: '8px',
-                  height: '8px',
-                  borderRadius: '50%',
-                  backgroundColor: isTimerRunning ? '#10B981' : '#64748B',
-                  boxShadow: isTimerRunning ? '0 0 8px #10B981' : 'none',
-                  transition: 'background-color 0.3s'
-                }}
-              />
+
+              {/* Total study time */}
+              <div style={{ 
+                borderTop: '1px solid var(--border-muted)', 
+                paddingTop: '8px', 
+                display: 'flex', 
+                justifyContent: 'space-between', 
+                alignItems: 'center',
+                fontSize: '11px',
+                color: 'var(--text-muted)'
+              }}>
+                <span>Total Studied:</span>
+                <strong style={{ fontFamily: 'monospace', color: 'var(--text-main)' }}>
+                  {formatStudyTime(totalStudyTime)}
+                </strong>
+              </div>
             </div>
 
             <nav className="sidebar-nav">
