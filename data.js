@@ -80,6 +80,10 @@ const INITIAL_ENTRIES = [
     },
     date_added: new Date().toISOString(),
     source_context: 'IELTS Writing Task 2 - discussions on history, globalization, social development, and community behavior.'
+    collocations: [
+      { collocation: 'civilize the population', example: 'The Romans attempted to civilize the conquered population.' },
+      { collocation: 'help civilize', example: 'Cultural exchange programs help civilize societal interactions.' }
+    ],
   },
   {
     id: 'entry-carry-out',
@@ -150,6 +154,10 @@ const INITIAL_ENTRIES = [
     },
     date_added: new Date().toISOString(),
     source_context: 'IELTS Writing Task 2 - discussions on scientific research and policy execution.'
+    collocations: [
+      { collocation: 'carry out research', example: 'The university will carry out research into renewable energy sources.' },
+      { collocation: 'carry out an order', example: 'Soldiers are expected to carry out orders without hesitation.' }
+    ],
   },
   {
     id: 'entry-look-into',
@@ -220,6 +228,10 @@ const INITIAL_ENTRIES = [
     },
     date_added: new Date().toISOString(),
     source_context: 'IELTS Writing Task 2 - investigating social problems and researching green energy.'
+    collocations: [
+      { collocation: 'attempt to look into', example: 'We must attempt to look into the project issues.' },
+      { collocation: 'carefully look into', example: 'You should carefully look into the instructions before starting.' }
+    ],
   },
   {
     id: 'entry-cope-with',
@@ -290,6 +302,10 @@ const INITIAL_ENTRIES = [
     },
     date_added: new Date().toISOString(),
     source_context: 'IELTS Writing Task 2 - discussions on how societies and systems handle challenges.'
+    collocations: [
+      { collocation: 'cope with stress', example: 'Exercise is a proven method to help cope with academic stress.' },
+      { collocation: 'cope with demands', example: 'The healthcare system struggled to cope with the demands of the pandemic.' }
+    ],
   },
   {
     id: 'entry-contaminate',
@@ -356,6 +372,10 @@ const INITIAL_ENTRIES = [
     },
     date_added: new Date().toISOString(),
     source_context: 'IELTS Writing Task 2 - environmental pollution and industrial waste.'
+    collocations: [
+      { collocation: 'contaminate water', example: 'Industrial waste can contaminate water supplies for local communities.' },
+      { collocation: 'heavily contaminate', example: 'The soil near the old chemical plant was found to be heavily contaminated.' }
+    ],
   },
   {
     id: 'entry-deforestation',
@@ -420,6 +440,10 @@ const INITIAL_ENTRIES = [
     },
     date_added: new Date().toISOString(),
     source_context: 'IELTS Writing Task 2 - discussing climate change, logging, and habitat loss.'
+    collocations: [
+      { collocation: 'combat deforestation', example: 'Global treaties aim to combat deforestation in tropical rainforests.' },
+      { collocation: 'widespread deforestation', example: 'Widespread deforestation has led to severe soil erosion and flooding.' }
+    ],
   },
   {
     id: 'entry-disposable',
@@ -485,6 +509,10 @@ const INITIAL_ENTRIES = [
     },
     date_added: new Date().toISOString(),
     source_context: 'IELTS Writing Task 2 - discussions on consumerism, waste, and packaging pollution.'
+    collocations: [
+      { collocation: 'disposable income', example: 'Families with higher disposable income tend to spend more on leisure activities.' },
+      { collocation: 'disposable packaging', example: 'The government is proposing a ban on single-use disposable packaging.' }
+    ],
   },
   {
     id: 'entry-offset',
@@ -550,6 +578,10 @@ const INITIAL_ENTRIES = [
     },
     date_added: new Date().toISOString(),
     source_context: 'IELTS Writing Task 2 - environmental policy, carbon neutral strategies, and green economy.'
+    collocations: [
+      { collocation: 'offset carbon emissions', example: 'Companies plant trees to offset carbon emissions from their flights.' },
+      { collocation: 'offset the cost', example: 'The savings in fuel consumption will quickly offset the cost of the hybrid car.' }
+    ],
   },
   {
     id: 'entry-emigrate',
@@ -616,6 +648,10 @@ const INITIAL_ENTRIES = [
     },
     date_added: new Date().toISOString(),
     source_context: 'IELTS Writing Task 2 - discussing immigration, brain drain, globalization, and workforce movement.'
+    collocations: [
+      { collocation: 'emigrate to', example: 'Many young professionals decide to emigrate to countries with better job prospects.' },
+      { collocation: 'emigrate in search of', example: 'His grandparents emigrated in search of political stability and safety.' }
+    ],
   },
   {
     id: 'entry-escalate',
@@ -683,6 +719,10 @@ const INITIAL_ENTRIES = [
     },
     date_added: new Date().toISOString(),
     source_context: 'IELTS Writing Task 2 - discussing rising living expenses, costs, and international disputes.'
+    collocations: [
+      { collocation: 'escalate tensions', example: 'The deployment of troops served to escalate tensions along the border.' },
+      { collocation: 'escalate rapidly', example: 'What began as a minor dispute escalated rapidly into a major conflict.' }
+    ],
   },
   {
     id: 'entry-disturbing',
@@ -751,6 +791,10 @@ const INITIAL_ENTRIES = [
     },
     date_added: new Date().toISOString(),
     source_context: 'IELTS Writing Task 2 - discussing social issues and negative developments.'
+    collocations: [
+      { collocation: 'deeply disturbing', example: 'The committee found the reports of child labor deeply disturbing.' },
+      { collocation: 'disturbing trend', example: 'There is a disturbing trend of increasing mental stress among teenagers.' }
+    ],
   },
   // --- LAW & LEGISLATION ---
   {
@@ -821,6 +865,10 @@ const INITIAL_ENTRIES = [
     },
     date_added: new Date().toISOString(),
     source_context: 'IELTS Reading - nature vs nurture debate.'
+    collocations: [
+      { collocation: 'significant innate', example: 'There has been a significant innate observed in recent statistics.' },
+      { collocation: 'underlying innate', example: 'We must identify the underlying innate of this phenomenon.' }
+    ],
   },
 
   {
@@ -891,6 +939,10 @@ const INITIAL_ENTRIES = [
     },
     date_added: new Date().toISOString(),
     source_context: 'IELTS Writing Task 2 - workplace ethics and power dynamics.'
+    collocations: [
+      { collocation: 'strongly humiliate', example: 'The evidence seems to strongly humiliate our initial hypothesis.' },
+      { collocation: 'help humiliate', example: 'Implementing this policy will help humiliate the current situation.' }
+    ],
   },
 
   {
@@ -968,6 +1020,10 @@ const INITIAL_ENTRIES = [
     },
     date_added: new Date().toISOString(),
     source_context: 'IELTS Reading - political and social contexts.'
+    collocations: [
+      { collocation: 'significant affair', example: 'There has been a significant affair observed in recent statistics.' },
+      { collocation: 'underlying affair', example: 'We must identify the underlying affair of this phenomenon.' }
+    ],
   },
 
   {
@@ -1039,6 +1095,10 @@ const INITIAL_ENTRIES = [
     },
     date_added: new Date().toISOString(),
     source_context: 'IELTS Writing Task 2 - social policy and resource allocation.'
+    collocations: [
+      { collocation: 'highly adequate', example: 'This approach is highly adequate for achieving academic success.' },
+      { collocation: 'particularly adequate', example: 'The case study was particularly adequate to our research question.' }
+    ],
   },
 
   // --- LAW & LEGISLATION ---
@@ -1110,6 +1170,10 @@ const INITIAL_ENTRIES = [
     },
     date_added: new Date().toISOString(),
     source_context: 'IELTS Writing Task 2 - Essay on constitutional reforms.'
+    collocations: [
+      { collocation: 'strongly amend', example: 'The evidence seems to strongly amend our initial hypothesis.' },
+      { collocation: 'help amend', example: 'Implementing this policy will help amend the current situation.' }
+    ],
   },
   {
     id: 'entry-repeal',
@@ -1163,6 +1227,10 @@ const INITIAL_ENTRIES = [
     },
     date_added: new Date().toISOString(),
     source_context: 'Reading passage on social reforms in 19th-century England.'
+    collocations: [
+      { collocation: 'strongly repeal', example: 'The evidence seems to strongly repeal our initial hypothesis.' },
+      { collocation: 'help repeal', example: 'Implementing this policy will help repeal the current situation.' }
+    ],
   },
   {
     id: 'entry-legislate',
@@ -1213,6 +1281,10 @@ const INITIAL_ENTRIES = [
     },
     date_added: new Date().toISOString(),
     source_context: 'Academic article on civil governance.'
+    collocations: [
+      { collocation: 'strongly legislate', example: 'The evidence seems to strongly legislate our initial hypothesis.' },
+      { collocation: 'help legislate', example: 'Implementing this policy will help legislate the current situation.' }
+    ],
   },
   {
     id: 'entry-enact',
@@ -1264,6 +1336,10 @@ const INITIAL_ENTRIES = [
     },
     date_added: new Date().toISOString(),
     source_context: 'Law textbook chapter on statutory implementation.'
+    collocations: [
+      { collocation: 'closely associated with enact', example: 'This concept is closely associated with enact in literature.' },
+      { collocation: 'direct impact of enact', example: 'We studied the direct impact of enact on the ecosystem.' }
+    ],
   },
   {
     id: 'entry-ratify',
@@ -1315,6 +1391,10 @@ const INITIAL_ENTRIES = [
     },
     date_added: new Date().toISOString(),
     source_context: 'UN news broadcast regarding climate agreements.'
+    collocations: [
+      { collocation: 'strongly ratify', example: 'The evidence seems to strongly ratify our initial hypothesis.' },
+      { collocation: 'help ratify', example: 'Implementing this policy will help ratify the current situation.' }
+    ],
   },
   {
     id: 'entry-revoke',
@@ -1365,6 +1445,10 @@ const INITIAL_ENTRIES = [
     },
     date_added: new Date().toISOString(),
     source_context: 'News report on corporate permit violations.'
+    collocations: [
+      { collocation: 'strongly revoke', example: 'The evidence seems to strongly revoke our initial hypothesis.' },
+      { collocation: 'help revoke', example: 'Implementing this policy will help revoke the current situation.' }
+    ],
   },
   {
     id: 'entry-clause',
@@ -1415,6 +1499,10 @@ const INITIAL_ENTRIES = [
     },
     date_added: new Date().toISOString(),
     source_context: 'Reading lease documents for a new apartment.'
+    collocations: [
+      { collocation: 'significant clause', example: 'There has been a significant clause observed in recent statistics.' },
+      { collocation: 'underlying clause', example: 'We must identify the underlying clause of this phenomenon.' }
+    ],
   },
   {
     id: 'entry-provision',
@@ -1465,6 +1553,10 @@ const INITIAL_ENTRIES = [
     },
     date_added: new Date().toISOString(),
     source_context: 'Academic essay prep on public policy structures.'
+    collocations: [
+      { collocation: 'significant provision', example: 'There has been a significant provision observed in recent statistics.' },
+      { collocation: 'underlying provision', example: 'We must identify the underlying provision of this phenomenon.' }
+    ],
   },
 
   // --- QUANTITY & ABUNDANCE ---
@@ -1527,6 +1619,10 @@ const INITIAL_ENTRIES = [
     },
     date_added: new Date().toISOString(),
     source_context: 'Reading paragraph about South American agriculture.'
+    collocations: [
+      { collocation: 'significant abundance', example: 'There has been a significant abundance observed in recent statistics.' },
+      { collocation: 'underlying abundance', example: 'We must identify the underlying abundance of this phenomenon.' }
+    ],
   },
   {
     id: 'entry-abundant',
@@ -1577,6 +1673,10 @@ const INITIAL_ENTRIES = [
     },
     date_added: new Date().toISOString(),
     source_context: 'Essay on renewable energy sources.'
+    collocations: [
+      { collocation: 'highly abundant', example: 'This approach is highly abundant for achieving academic success.' },
+      { collocation: 'particularly abundant', example: 'The case study was particularly abundant to our research question.' }
+    ],
   },
   {
     id: 'entry-abound',
@@ -1627,6 +1727,10 @@ const INITIAL_ENTRIES = [
     },
     date_added: new Date().toISOString(),
     source_context: 'Academic reading passage on oceanic biodiversity.'
+    collocations: [
+      { collocation: 'strongly abound', example: 'The evidence seems to strongly abound our initial hypothesis.' },
+      { collocation: 'help abound', example: 'Implementing this policy will help abound the current situation.' }
+    ],
   },
   {
     id: 'entry-abundantly',
@@ -1676,6 +1780,10 @@ const INITIAL_ENTRIES = [
     },
     date_added: new Date().toISOString(),
     source_context: 'Writing Task 2 sample essay on business negotiations.'
+    collocations: [
+      { collocation: 'strongly abundantly', example: 'The evidence seems to strongly abundantly our initial hypothesis.' },
+      { collocation: 'help abundantly', example: 'Implementing this policy will help abundantly the current situation.' }
+    ],
   },
   {
     id: 'entry-dearth',
@@ -1726,6 +1834,10 @@ const INITIAL_ENTRIES = [
     },
     date_added: new Date().toISOString(),
     source_context: 'Academic journal article on labor market trends.'
+    collocations: [
+      { collocation: 'significant dearth', example: 'There has been a significant dearth observed in recent statistics.' },
+      { collocation: 'underlying dearth', example: 'We must identify the underlying dearth of this phenomenon.' }
+    ],
   },
   {
     id: 'entry-scarcity',
@@ -1776,6 +1888,10 @@ const INITIAL_ENTRIES = [
     },
     date_added: new Date().toISOString(),
     source_context: 'IELTS Writing Task 2 - Environmental problems and water availability.'
+    collocations: [
+      { collocation: 'significant scarcity', example: 'There has been a significant scarcity observed in recent statistics.' },
+      { collocation: 'underlying scarcity', example: 'We must identify the underlying scarcity of this phenomenon.' }
+    ],
   },
   {
     id: 'entry-surplus',
@@ -1826,6 +1942,10 @@ const INITIAL_ENTRIES = [
     },
     date_added: new Date().toISOString(),
     source_context: 'Economic news article.'
+    collocations: [
+      { collocation: 'significant surplus', example: 'There has been a significant surplus observed in recent statistics.' },
+      { collocation: 'underlying surplus', example: 'We must identify the underlying surplus of this phenomenon.' }
+    ],
   },
   {
     id: 'entry-deficit',
@@ -1876,6 +1996,10 @@ const INITIAL_ENTRIES = [
     },
     date_added: new Date().toISOString(),
     source_context: 'Lecture notes on macroeconomics.'
+    collocations: [
+      { collocation: 'significant deficit', example: 'There has been a significant deficit observed in recent statistics.' },
+      { collocation: 'underlying deficit', example: 'We must identify the underlying deficit of this phenomenon.' }
+    ],
   },
   {
     id: 'entry-sufficiency',
@@ -1925,6 +2049,10 @@ const INITIAL_ENTRIES = [
     },
     date_added: new Date().toISOString(),
     source_context: 'Review paper on regional crop security.'
+    collocations: [
+      { collocation: 'significant sufficiency', example: 'There has been a significant sufficiency observed in recent statistics.' },
+      { collocation: 'underlying sufficiency', example: 'We must identify the underlying sufficiency of this phenomenon.' }
+    ],
   },
   {
     id: 'entry-excess',
@@ -1974,6 +2102,10 @@ const INITIAL_ENTRIES = [
     },
     date_added: new Date().toISOString(),
     source_context: 'IELTS writing prep: essay on consumerism.'
+    collocations: [
+      { collocation: 'significant excess', example: 'There has been a significant excess observed in recent statistics.' },
+      { collocation: 'underlying excess', example: 'We must identify the underlying excess of this phenomenon.' }
+    ],
   },
   {
     id: 'entry-profusion',
@@ -2023,6 +2155,10 @@ const INITIAL_ENTRIES = [
     },
     date_added: new Date().toISOString(),
     source_context: 'Descriptive writing task practice.'
+    collocations: [
+      { collocation: 'significant profusion', example: 'There has been a significant profusion observed in recent statistics.' },
+      { collocation: 'underlying profusion', example: 'We must identify the underlying profusion of this phenomenon.' }
+    ],
   },
   {
     id: 'entry-plethora',
@@ -2072,6 +2208,10 @@ const INITIAL_ENTRIES = [
     },
     date_added: new Date().toISOString(),
     source_context: 'Academic essay review - sentence complexity.'
+    collocations: [
+      { collocation: 'significant plethora', example: 'There has been a significant plethora observed in recent statistics.' },
+      { collocation: 'underlying plethora', example: 'We must identify the underlying plethora of this phenomenon.' }
+    ],
   },
   {
     id: 'entry-myriad',
@@ -2121,6 +2261,10 @@ const INITIAL_ENTRIES = [
     },
     date_added: new Date().toISOString(),
     source_context: 'Advanced descriptive essay.'
+    collocations: [
+      { collocation: 'significant myriad', example: 'There has been a significant myriad observed in recent statistics.' },
+      { collocation: 'underlying myriad', example: 'We must identify the underlying myriad of this phenomenon.' }
+    ],
   },
 
   // --- ECONOMIC & SYSTEM MODIFICATION ---
@@ -2174,6 +2318,10 @@ const INITIAL_ENTRIES = [
     },
     date_added: new Date().toISOString(),
     source_context: 'IELTS Writing - Essay on climate change consequences.'
+    collocations: [
+      { collocation: 'strongly alter', example: 'The evidence seems to strongly alter our initial hypothesis.' },
+      { collocation: 'help alter', example: 'Implementing this policy will help alter the current situation.' }
+    ],
   },
   {
     id: 'entry-modify',
@@ -2225,6 +2373,10 @@ const INITIAL_ENTRIES = [
     },
     date_added: new Date().toISOString(),
     source_context: 'Computer science reading passage.'
+    collocations: [
+      { collocation: 'strongly modify', example: 'The evidence seems to strongly modify our initial hypothesis.' },
+      { collocation: 'help modify', example: 'Implementing this policy will help modify the current situation.' }
+    ],
   },
   {
     id: 'entry-modulate',
@@ -2275,6 +2427,10 @@ const INITIAL_ENTRIES = [
     },
     date_added: new Date().toISOString(),
     source_context: 'Medical lecture on neurophysiology.'
+    collocations: [
+      { collocation: 'strongly modulate', example: 'The evidence seems to strongly modulate our initial hypothesis.' },
+      { collocation: 'help modulate', example: 'Implementing this policy will help modulate the current situation.' }
+    ],
   },
   {
     id: 'entry-reform',
@@ -2324,6 +2480,10 @@ const INITIAL_ENTRIES = [
     },
     date_added: new Date().toISOString(),
     source_context: 'Politics essay writing.'
+    collocations: [
+      { collocation: 'strongly reform', example: 'The evidence seems to strongly reform our initial hypothesis.' },
+      { collocation: 'help reform', example: 'Implementing this policy will help reform the current situation.' }
+    ],
   },
 
   // --- ENVIRONMENT & ECOLOGY ---
@@ -2377,6 +2537,10 @@ const INITIAL_ENTRIES = [
     },
     date_added: new Date().toISOString(),
     source_context: 'IELTS Writing - Essay topic: Climate change solutions.'
+    collocations: [
+      { collocation: 'strongly mitigate', example: 'The evidence seems to strongly mitigate our initial hypothesis.' },
+      { collocation: 'help mitigate', example: 'Implementing this policy will help mitigate the current situation.' }
+    ],
   },
   {
     id: 'entry-degradation',
@@ -2427,6 +2591,10 @@ const INITIAL_ENTRIES = [
     },
     date_added: new Date().toISOString(),
     source_context: 'Environmental Science textbook chapter.'
+    collocations: [
+      { collocation: 'significant degradation', example: 'There has been a significant degradation observed in recent statistics.' },
+      { collocation: 'underlying degradation', example: 'We must identify the underlying degradation of this phenomenon.' }
+    ],
   },
   {
     id: 'entry-sustainability',
@@ -2476,6 +2644,10 @@ const INITIAL_ENTRIES = [
     },
     date_added: new Date().toISOString(),
     source_context: 'Corporate social responsibility report.'
+    collocations: [
+      { collocation: 'significant sustainability', example: 'There has been a significant sustainability observed in recent statistics.' },
+      { collocation: 'underlying sustainability', example: 'We must identify the underlying sustainability of this phenomenon.' }
+    ],
   },
   {
     id: 'entry-deplete',
@@ -2526,6 +2698,10 @@ const INITIAL_ENTRIES = [
     },
     date_added: new Date().toISOString(),
     source_context: 'Academic essay on natural resource exploitation.'
+    collocations: [
+      { collocation: 'strongly deplete', example: 'The evidence seems to strongly deplete our initial hypothesis.' },
+      { collocation: 'help deplete', example: 'Implementing this policy will help deplete the current situation.' }
+    ],
   },
 
   // --- PHRASAL VERBS (BASE VERB "PUT") ---
@@ -2573,6 +2749,10 @@ const INITIAL_ENTRIES = [
     },
     date_added: new Date().toISOString(),
     source_context: 'Listening passage - student speaking about exam performance.'
+    collocations: [
+      { collocation: 'attempt to put something down to', example: 'We must attempt to put something down to the project issues.' },
+      { collocation: 'carefully put something down to', example: 'You should carefully put something down to the instructions before starting.' }
+    ],
   },
   {
     id: 'entry-put-off',
@@ -2619,6 +2799,10 @@ const INITIAL_ENTRIES = [
     },
     date_added: new Date().toISOString(),
     source_context: 'General speaking practice.'
+    collocations: [
+      { collocation: 'attempt to put off', example: 'We must attempt to put off the project issues.' },
+      { collocation: 'carefully put off', example: 'You should carefully put off the instructions before starting.' }
+    ],
   },
   {
     id: 'entry-put-up',
@@ -2664,6 +2848,10 @@ const INITIAL_ENTRIES = [
     },
     date_added: new Date().toISOString(),
     source_context: 'Housing discussion topic.'
+    collocations: [
+      { collocation: 'attempt to put up', example: 'We must attempt to put up the project issues.' },
+      { collocation: 'carefully put up', example: 'You should carefully put up the instructions before starting.' }
+    ],
   },
   {
     id: 'entry-put-through',
@@ -2708,6 +2896,10 @@ const INITIAL_ENTRIES = [
     },
     date_added: new Date().toISOString(),
     source_context: 'Business telephone conversation.'
+    collocations: [
+      { collocation: 'attempt to put through', example: 'We must attempt to put through the project issues.' },
+      { collocation: 'carefully put through', example: 'You should carefully put through the instructions before starting.' }
+    ],
   },
   {
     id: 'entry-put-away',
@@ -2753,6 +2945,10 @@ const INITIAL_ENTRIES = [
     },
     date_added: new Date().toISOString(),
     source_context: 'Daily speech patterns.'
+    collocations: [
+      { collocation: 'attempt to put away', example: 'We must attempt to put away the project issues.' },
+      { collocation: 'carefully put away', example: 'You should carefully put away the instructions before starting.' }
+    ],
   },
   {
     id: 'entry-put-forward',
@@ -2799,6 +2995,10 @@ const INITIAL_ENTRIES = [
     },
     date_added: new Date().toISOString(),
     source_context: 'IELTS Writing Task 2 - Structuring arguments.'
+    collocations: [
+      { collocation: 'attempt to put forward', example: 'We must attempt to put forward the project issues.' },
+      { collocation: 'carefully put forward', example: 'You should carefully put forward the instructions before starting.' }
+    ],
   },
 
   // --- IDIOMS ---
@@ -2844,6 +3044,10 @@ const INITIAL_ENTRIES = [
     },
     date_added: new Date().toISOString(),
     source_context: 'Speaking test topic: Study habits at university.'
+    collocations: [
+      { collocation: 'attempt to burn the midnight oil', example: 'We must attempt to burn the midnight oil the project issues.' },
+      { collocation: 'carefully burn the midnight oil', example: 'You should carefully burn the midnight oil the instructions before starting.' }
+    ],
   },
   {
     id: 'entry-hit-the-nail-on-the-head',
@@ -2885,6 +3089,10 @@ const INITIAL_ENTRIES = [
     },
     date_added: new Date().toISOString(),
     source_context: 'Speaking Part 3 - Expressing agreement with the interviewer.'
+    collocations: [
+      { collocation: 'attempt to hit the nail on the head', example: 'We must attempt to hit the nail on the head the project issues.' },
+      { collocation: 'carefully hit the nail on the head', example: 'You should carefully hit the nail on the head the instructions before starting.' }
+    ],
   },
 
   // --- COLLOCATIONS ---
@@ -2929,6 +3137,10 @@ const INITIAL_ENTRIES = [
     },
     date_added: new Date().toISOString(),
     source_context: 'Business essay vocabulary.'
+    collocations: [
+      { collocation: 'attempt to make a decision', example: 'We must attempt to make a decision the project issues.' },
+      { collocation: 'carefully make a decision', example: 'You should carefully make a decision the instructions before starting.' }
+    ],
   },
   {
     id: 'entry-strong-argument',
@@ -2971,6 +3183,10 @@ const INITIAL_ENTRIES = [
     },
     date_added: new Date().toISOString(),
     source_context: 'IELTS Writing Task 2 structure templates.'
+    collocations: [
+      { collocation: 'attempt to strong argument', example: 'We must attempt to strong argument the project issues.' },
+      { collocation: 'carefully strong argument', example: 'You should carefully strong argument the instructions before starting.' }
+    ],
   },
   {
     id: 'entry-pay-attention',
@@ -3014,6 +3230,10 @@ const INITIAL_ENTRIES = [
     },
     date_added: new Date().toISOString(),
     source_context: 'IELTS Exam tips.'
+    collocations: [
+      { collocation: 'attempt to pay attention', example: 'We must attempt to pay attention the project issues.' },
+      { collocation: 'carefully pay attention', example: 'You should carefully pay attention the instructions before starting.' }
+    ],
   },
   {
     id: 'entry-draw-a-conclusion',
@@ -3056,6 +3276,10 @@ const INITIAL_ENTRIES = [
     },
     date_added: new Date().toISOString(),
     source_context: 'Academic writing guidance.'
+    collocations: [
+      { collocation: 'attempt to draw a conclusion', example: 'We must attempt to draw a conclusion the project issues.' },
+      { collocation: 'carefully draw a conclusion', example: 'You should carefully draw a conclusion the instructions before starting.' }
+    ],
   },
   {
     id: 'entry-alleviate',
@@ -3105,6 +3329,10 @@ const INITIAL_ENTRIES = [
     },
     date_added: new Date().toISOString(),
     source_context: 'IELTS Essay on urban development challenges.'
+    collocations: [
+      { collocation: 'strongly alleviate', example: 'The evidence seems to strongly alleviate our initial hypothesis.' },
+      { collocation: 'help alleviate', example: 'Implementing this policy will help alleviate the current situation.' }
+    ],
   },
   {
     id: 'entry-conundrum',
@@ -3152,6 +3380,10 @@ const INITIAL_ENTRIES = [
     },
     date_added: new Date().toISOString(),
     source_context: 'Academic essay on social planning problems.'
+    collocations: [
+      { collocation: 'significant conundrum', example: 'There has been a significant conundrum observed in recent statistics.' },
+      { collocation: 'underlying conundrum', example: 'We must identify the underlying conundrum of this phenomenon.' }
+    ],
   },
   {
     id: 'entry-ubiquitous',
@@ -3199,6 +3431,10 @@ const INITIAL_ENTRIES = [
     },
     date_added: new Date().toISOString(),
     source_context: 'Essay on modern technology impact.'
+    collocations: [
+      { collocation: 'highly ubiquitous', example: 'This approach is highly ubiquitous for achieving academic success.' },
+      { collocation: 'particularly ubiquitous', example: 'The case study was particularly ubiquitous to our research question.' }
+    ],
   },
   // --- IELTS SPEAKING PHRASAL VERBS ---
   {
@@ -3262,6 +3498,10 @@ const INITIAL_ENTRIES = [
     },
     date_added: new Date().toISOString(),
     source_context: 'IELTS Speaking Part 1 - learning foreign languages.'
+    collocations: [
+      { collocation: 'attempt to pick up', example: 'We must attempt to pick up the project issues.' },
+      { collocation: 'carefully pick up', example: 'You should carefully pick up the instructions before starting.' }
+    ],
   },
   {
     id: 'entry-look-back-on',
@@ -3319,6 +3559,10 @@ const INITIAL_ENTRIES = [
     },
     date_added: new Date().toISOString(),
     source_context: 'IELTS Speaking Part 2 - describing a happy childhood memory.'
+    collocations: [
+      { collocation: 'attempt to look back on', example: 'We must attempt to look back on the project issues.' },
+      { collocation: 'carefully look back on', example: 'You should carefully look back on the instructions before starting.' }
+    ],
   },
   {
     id: 'entry-wind-down',
@@ -3376,6 +3620,10 @@ const INITIAL_ENTRIES = [
     },
     date_added: new Date().toISOString(),
     source_context: 'IELTS Speaking Part 1 - study habits and free time activities.'
+    collocations: [
+      { collocation: 'attempt to wind down', example: 'We must attempt to wind down the project issues.' },
+      { collocation: 'carefully wind down', example: 'You should carefully wind down the instructions before starting.' }
+    ],
   },
   {
     id: 'entry-get-along-with',
@@ -3432,6 +3680,10 @@ const INITIAL_ENTRIES = [
     },
     date_added: new Date().toISOString(),
     source_context: 'IELTS Speaking Part 1 - family and friends topic.'
+    collocations: [
+      { collocation: 'attempt to get along with', example: 'We must attempt to get along with the project issues.' },
+      { collocation: 'carefully get along with', example: 'You should carefully get along with the instructions before starting.' }
+    ],
   },
   {
     id: 'entry-carry-on',
@@ -3489,6 +3741,10 @@ const INITIAL_ENTRIES = [
     },
     date_added: new Date().toISOString(),
     source_context: 'IELTS Speaking Part 3 - career development and personal growth.'
+    collocations: [
+      { collocation: 'attempt to carry on', example: 'We must attempt to carry on the project issues.' },
+      { collocation: 'carefully carry on', example: 'You should carefully carry on the instructions before starting.' }
+    ],
   },
   {
     id: 'entry-keen-on',
@@ -3546,6 +3802,10 @@ const INITIAL_ENTRIES = [
     },
     date_added: new Date().toISOString(),
     source_context: 'IELTS Speaking Part 1 - Leisure activities and hobbies.'
+    collocations: [
+      { collocation: 'attempt to keen on', example: 'We must attempt to keen on the project issues.' },
+      { collocation: 'carefully keen on', example: 'You should carefully keen on the instructions before starting.' }
+    ],
   },
   {
     id: 'entry-wear-out',
@@ -3608,6 +3868,10 @@ const INITIAL_ENTRIES = [
     },
     date_added: new Date().toISOString(),
     source_context: 'IELTS Speaking Part 2 - Describe a long walk or physical activity.'
+    collocations: [
+      { collocation: 'attempt to wear out', example: 'We must attempt to wear out the project issues.' },
+      { collocation: 'carefully wear out', example: 'You should carefully wear out the instructions before starting.' }
+    ],
   },
   {
     id: 'entry-hypothesis',
@@ -3665,6 +3929,10 @@ const INITIAL_ENTRIES = [
     },
     date_added: new Date().toISOString(),
     source_context: 'Academic scientific writing.'
+    collocations: [
+      { collocation: 'significant hypothesis', example: 'There has been a significant hypothesis observed in recent statistics.' },
+      { collocation: 'underlying hypothesis', example: 'We must identify the underlying hypothesis of this phenomenon.' }
+    ],
   },
   {
     id: 'entry-paradigm',
@@ -3722,6 +3990,10 @@ const INITIAL_ENTRIES = [
     },
     date_added: new Date().toISOString(),
     source_context: 'Academic research methodology.'
+    collocations: [
+      { collocation: 'significant paradigm', example: 'There has been a significant paradigm observed in recent statistics.' },
+      { collocation: 'underlying paradigm', example: 'We must identify the underlying paradigm of this phenomenon.' }
+    ],
   },
   {
     id: 'entry-refute',
@@ -3779,6 +4051,10 @@ const INITIAL_ENTRIES = [
     },
     date_added: new Date().toISOString(),
     source_context: 'Academic debates and peer reviews.'
+    collocations: [
+      { collocation: 'strongly refute', example: 'The evidence seems to strongly refute our initial hypothesis.' },
+      { collocation: 'help refute', example: 'Implementing this policy will help refute the current situation.' }
+    ],
   },
   {
     id: 'entry-corroborate',
@@ -3836,6 +4112,10 @@ const INITIAL_ENTRIES = [
     },
     date_added: new Date().toISOString(),
     source_context: 'Peer review and verification of findings.'
+    collocations: [
+      { collocation: 'strongly corroborate', example: 'The evidence seems to strongly corroborate our initial hypothesis.' },
+      { collocation: 'help corroborate', example: 'Implementing this policy will help corroborate the current situation.' }
+    ],
   },
   {
     id: 'entry-scrutinize',
@@ -3893,6 +4173,10 @@ const INITIAL_ENTRIES = [
     },
     date_added: new Date().toISOString(),
     source_context: 'Academic review and quality assurance.'
+    collocations: [
+      { collocation: 'strongly scrutinize', example: 'The evidence seems to strongly scrutinize our initial hypothesis.' },
+      { collocation: 'help scrutinize', example: 'Implementing this policy will help scrutinize the current situation.' }
+    ],
   },
   {
     id: 'entry-doctrine',
@@ -3959,6 +4243,10 @@ const INITIAL_ENTRIES = [
     },
     date_added: new Date().toISOString(),
     source_context: 'IELTS Writing Task 2 - discussions on political structures, legal philosophy, and international relations.'
+    collocations: [
+      { collocation: 'significant doctrine', example: 'There has been a significant doctrine observed in recent statistics.' },
+      { collocation: 'underlying doctrine', example: 'We must identify the underlying doctrine of this phenomenon.' }
+    ],
   },
   {
     id: 'entry-formidable',
@@ -4025,6 +4313,10 @@ const INITIAL_ENTRIES = [
     },
     date_added: new Date().toISOString(),
     source_context: 'IELTS Writing Task 2 - describing challenges, institutional opposition, and academic requirements.'
+    collocations: [
+      { collocation: 'highly formidable', example: 'This approach is highly formidable for achieving academic success.' },
+      { collocation: 'particularly formidable', example: 'The case study was particularly formidable to our research question.' }
+    ],
   },
   {
     id: 'entry-prominence',
@@ -4091,6 +4383,10 @@ const INITIAL_ENTRIES = [
     },
     date_added: new Date().toISOString(),
     source_context: 'IELTS Writing Task 2 - discussions on media influence, public attention, social trends, and notable figures.'
+    collocations: [
+      { collocation: 'significant prominence', example: 'There has been a significant prominence observed in recent statistics.' },
+      { collocation: 'underlying prominence', example: 'We must identify the underlying prominence of this phenomenon.' }
+    ],
   },
   {
     id: 'entry-leftism',
@@ -4157,6 +4453,10 @@ const INITIAL_ENTRIES = [
     },
     date_added: new Date().toISOString(),
     source_context: 'IELTS Writing Task 2 - discussions on state welfare, government regulations, tax policy, and socio-economic systems.'
+    collocations: [
+      { collocation: 'significant leftism', example: 'There has been a significant leftism observed in recent statistics.' },
+      { collocation: 'underlying leftism', example: 'We must identify the underlying leftism of this phenomenon.' }
+    ],
   },
   {
     id: 'entry-upbeat',
@@ -4223,6 +4523,10 @@ const INITIAL_ENTRIES = [
     },
     date_added: new Date().toISOString(),
     source_context: 'IELTS Writing Task 2 & Speaking - describing outlooks, economic forecasts, and general attitudes.'
+    collocations: [
+      { collocation: 'highly upbeat', example: 'This approach is highly upbeat for achieving academic success.' },
+      { collocation: 'particularly upbeat', example: 'The case study was particularly upbeat to our research question.' }
+    ],
   },
   {
     id: 'entry-optimistic',
@@ -4289,6 +4593,10 @@ const INITIAL_ENTRIES = [
     },
     date_added: new Date().toISOString(),
     source_context: 'IELTS Writing Task 2 & Speaking - discussing future projections, mindset, and human behavior.'
+    collocations: [
+      { collocation: 'highly optimistic', example: 'This approach is highly optimistic for achieving academic success.' },
+      { collocation: 'particularly optimistic', example: 'The case study was particularly optimistic to our research question.' }
+    ],
   },
   {
     id: 'entry-territorial',
@@ -4355,6 +4663,10 @@ const INITIAL_ENTRIES = [
     },
     date_added: new Date().toISOString(),
     source_context: 'IELTS Writing Task 2 - discussions on national sovereignty, geopolitics, animal behavior, and regional conflicts.'
+    collocations: [
+      { collocation: 'highly territorial', example: 'This approach is highly territorial for achieving academic success.' },
+      { collocation: 'particularly territorial', example: 'The case study was particularly territorial to our research question.' }
+    ],
   },
   {
     id: 'entry-inference',
@@ -4421,6 +4733,10 @@ const INITIAL_ENTRIES = [
     },
     date_added: new Date().toISOString(),
     source_context: 'IELTS Writing Task 2 - academic analyses, research methodology discussions, and logical reasoning exercises.'
+    collocations: [
+      { collocation: 'significant inference', example: 'There has been a significant inference observed in recent statistics.' },
+      { collocation: 'underlying inference', example: 'We must identify the underlying inference of this phenomenon.' }
+    ],
   },
   {
     id: 'entry-repulsive',
@@ -4487,6 +4803,10 @@ const INITIAL_ENTRIES = [
     },
     date_added: new Date().toISOString(),
     source_context: 'IELTS Writing Task 2 - discussions on environmental degradation, social behavior, and scientific forces.'
+    collocations: [
+      { collocation: 'highly repulsive', example: 'This approach is highly repulsive for achieving academic success.' },
+      { collocation: 'particularly repulsive', example: 'The case study was particularly repulsive to our research question.' }
+    ],
   },
   {
     id: 'entry-play-out',
@@ -4557,6 +4877,10 @@ const INITIAL_ENTRIES = [
     },
     date_added: new Date().toISOString(),
     source_context: 'IELTS Speaking & Writing - explaining future trends, political outcomes, and social conflicts.'
+    collocations: [
+      { collocation: 'attempt to play out', example: 'We must attempt to play out the project issues.' },
+      { collocation: 'carefully play out', example: 'You should carefully play out the instructions before starting.' }
+    ],
   },
   {
     id: 'entry-elasticity',
@@ -4623,6 +4947,10 @@ const INITIAL_ENTRIES = [
     },
     date_added: new Date().toISOString(),
     source_context: 'IELTS Writing Task 2 & Speaking - discussing material sciences, biology, or economic theories and price models.'
+    collocations: [
+      { collocation: 'significant elasticity', example: 'There has been a significant elasticity observed in recent statistics.' },
+      { collocation: 'underlying elasticity', example: 'We must identify the underlying elasticity of this phenomenon.' }
+    ],
   },
   {
     id: 'entry-predispose',
@@ -4687,6 +5015,10 @@ const INITIAL_ENTRIES = [
     },
     date_added: new Date().toISOString(),
     source_context: 'IELTS Writing Task 2 & Science - discussing susceptibility to diseases, behavior patterns, or psychological inclination.'
+    collocations: [
+      { collocation: 'predispose someone to', example: 'A family history of heart disease can predispose someone to cardiac issues.' },
+      { collocation: 'genetically predispose', example: 'Certain mutations genetically predispose individuals to specific conditions.' }
+    ],
   },
   {
     id: 'entry-outlook',
@@ -4752,6 +5084,10 @@ const INITIAL_ENTRIES = [
     },
     date_added: new Date().toISOString(),
     source_context: 'IELTS Writing Task 2 & Economics - discussing forecasts, general mental attitudes, or cultural perspectives.'
+    collocations: [
+      { collocation: 'optimistic outlook', example: 'Despite the setbacks, he maintained an optimistic outlook on his career.' },
+      { collocation: 'economic outlook', example: 'The country\'s economic outlook has improved due to increased exports.' }
+    ],
   },
   {
     id: 'entry-assertion',
@@ -4817,6 +5153,10 @@ const INITIAL_ENTRIES = [
     },
     date_added: new Date().toISOString(),
     source_context: 'IELTS Writing Task 2 - presenting arguments, claims, or stating positions in essays.'
+    collocations: [
+      { collocation: 'make an assertion', example: 'The scientist made an assertion that the new compound is completely non-toxic.' },
+      { collocation: 'support an assertion', example: 'The researcher gathered substantial statistical data to support his assertion.' }
+    ],
   }
 ];
 
@@ -4861,6 +5201,10 @@ const EXTENDED_DICTIONARY_DB = [
       { word: 'obtain', register: 'formal', cefr: 'B2' }
     ],
     suggested_folder_name: 'Academic Writing (Task 2)'
+    collocations: [
+      { collocation: 'strongly acquire', example: 'The evidence seems to strongly acquire our initial hypothesis.' },
+      { collocation: 'help acquire', example: 'Implementing this policy will help acquire the current situation.' }
+    ],
   },
   {
     word: 'synthesize',
@@ -4901,6 +5245,10 @@ const EXTENDED_DICTIONARY_DB = [
       { word: 'mix', register: 'informal', cefr: 'A2' }
     ],
     suggested_folder_name: 'Academic Writing (Task 2)'
+    collocations: [
+      { collocation: 'strongly synthesize', example: 'The evidence seems to strongly synthesize our initial hypothesis.' },
+      { collocation: 'help synthesize', example: 'Implementing this policy will help synthesize the current situation.' }
+    ],
   },
   {
     word: 'evaluate',
@@ -4942,6 +5290,10 @@ const EXTENDED_DICTIONARY_DB = [
       { word: 'weigh up', register: 'informal', cefr: 'B2' }
     ],
     suggested_folder_name: 'Academic Writing (Task 2)'
+    collocations: [
+      { collocation: 'strongly evaluate', example: 'The evidence seems to strongly evaluate our initial hypothesis.' },
+      { collocation: 'help evaluate', example: 'Implementing this policy will help evaluate the current situation.' }
+    ],
   },
   {
     word: 'give up',
@@ -4982,6 +5334,10 @@ const EXTENDED_DICTIONARY_DB = [
       { word: 'quit', register: 'informal', cefr: 'B2' }
     ],
     suggested_folder_name: 'Phrasal Verbs & Idioms'
+    collocations: [
+      { collocation: 'attempt to give up', example: 'We must attempt to give up the project issues.' },
+      { collocation: 'carefully give up', example: 'You should carefully give up the instructions before starting.' }
+    ],
   },
   {
     word: 'corroborate',
@@ -5024,6 +5380,10 @@ const EXTENDED_DICTIONARY_DB = [
       { word: 'back up', register: 'informal', cefr: 'B2' }
     ],
     suggested_folder_name: 'Law & Policy'
+    collocations: [
+      { collocation: 'strongly corroborate', example: 'The evidence seems to strongly corroborate our initial hypothesis.' },
+      { collocation: 'help corroborate', example: 'Implementing this policy will help corroborate the current situation.' }
+    ],
   },
   {
     word: 'ephemeral',
@@ -5064,6 +5424,10 @@ const EXTENDED_DICTIONARY_DB = [
       { word: 'short-lived', register: 'neutral', cefr: 'B2' }
     ],
     suggested_folder_name: 'Academic Writing (Task 2)'
+    collocations: [
+      { collocation: 'highly ephemeral', example: 'This approach is highly ephemeral for achieving academic success.' },
+      { collocation: 'particularly ephemeral', example: 'The case study was particularly ephemeral to our research question.' }
+    ],
   },
   {
     word: 'ameliorate',
@@ -5106,6 +5470,10 @@ const EXTENDED_DICTIONARY_DB = [
       { word: 'better', register: 'neutral', cefr: 'B2' }
     ],
     suggested_folder_name: 'Academic Writing (Task 2)'
+    collocations: [
+      { collocation: 'strongly ameliorate', example: 'The evidence seems to strongly ameliorate our initial hypothesis.' },
+      { collocation: 'help ameliorate', example: 'Implementing this policy will help ameliorate the current situation.' }
+    ],
   },
   {
     word: 'deteriorate',
@@ -5146,6 +5514,10 @@ const EXTENDED_DICTIONARY_DB = [
       { word: 'go downhill', register: 'informal', cefr: 'B2' }
     ],
     suggested_folder_name: 'Academic Writing (Task 2)'
+    collocations: [
+      { collocation: 'strongly deteriorate', example: 'The evidence seems to strongly deteriorate our initial hypothesis.' },
+      { collocation: 'help deteriorate', example: 'Implementing this policy will help deteriorate the current situation.' }
+    ],
   },
   {
     word: 'exacerbate',
@@ -5186,6 +5558,10 @@ const EXTENDED_DICTIONARY_DB = [
       { word: 'make worse', register: 'neutral', cefr: 'A2' }
     ],
     suggested_folder_name: 'Academic Writing (Task 2)'
+    collocations: [
+      { collocation: 'strongly exacerbate', example: 'The evidence seems to strongly exacerbate our initial hypothesis.' },
+      { collocation: 'help exacerbate', example: 'Implementing this policy will help exacerbate the current situation.' }
+    ],
   },
   {
     word: 'eradicate',
@@ -5226,6 +5602,10 @@ const EXTENDED_DICTIONARY_DB = [
       { word: 'destroy', register: 'neutral', cefr: 'A2' }
     ],
     suggested_folder_name: 'Academic Writing (Task 2)'
+    collocations: [
+      { collocation: 'strongly eradicate', example: 'The evidence seems to strongly eradicate our initial hypothesis.' },
+      { collocation: 'help eradicate', example: 'Implementing this policy will help eradicate the current situation.' }
+    ],
   },
   {
     word: 'feasible',
@@ -5267,6 +5647,10 @@ const EXTENDED_DICTIONARY_DB = [
       { word: 'viable', register: 'business', cefr: 'C1' }
     ],
     suggested_folder_name: 'Academic Writing (Task 2)'
+    collocations: [
+      { collocation: 'highly feasible', example: 'This approach is highly feasible for achieving academic success.' },
+      { collocation: 'particularly feasible', example: 'The case study was particularly feasible to our research question.' }
+    ],
   },
   {
     word: 'facilitate',
@@ -5307,6 +5691,10 @@ const EXTENDED_DICTIONARY_DB = [
       { word: 'make easy', register: 'neutral', cefr: 'A2' }
     ],
     suggested_folder_name: 'Academic Writing (Task 2)'
+    collocations: [
+      { collocation: 'strongly facilitate', example: 'The evidence seems to strongly facilitate our initial hypothesis.' },
+      { collocation: 'help facilitate', example: 'Implementing this policy will help facilitate the current situation.' }
+    ],
   },
   {
     word: 'empirical',
@@ -5348,6 +5736,10 @@ const EXTENDED_DICTIONARY_DB = [
       { word: 'real-world', register: 'neutral', cefr: 'B1' }
     ],
     suggested_folder_name: 'Academic Writing (Task 2)'
+    collocations: [
+      { collocation: 'highly empirical', example: 'This approach is highly empirical for achieving academic success.' },
+      { collocation: 'particularly empirical', example: 'The case study was particularly empirical to our research question.' }
+    ],
   },
   {
     word: 'equivocal',
@@ -5389,6 +5781,10 @@ const EXTENDED_DICTIONARY_DB = [
       { word: 'vague', register: 'neutral', cefr: 'B2' }
     ],
     suggested_folder_name: 'Academic Writing (Task 2)'
+    collocations: [
+      { collocation: 'highly equivocal', example: 'This approach is highly equivocal for achieving academic success.' },
+      { collocation: 'particularly equivocal', example: 'The case study was particularly equivocal to our research question.' }
+    ],
   },
   {
     word: 'autonomous',
@@ -5429,6 +5825,10 @@ const EXTENDED_DICTIONARY_DB = [
       { word: 'self-governing', register: 'formal', cefr: 'C1' }
     ],
     suggested_folder_name: 'Academic Writing (Task 2)'
+    collocations: [
+      { collocation: 'highly autonomous', example: 'This approach is highly autonomous for achieving academic success.' },
+      { collocation: 'particularly autonomous', example: 'The case study was particularly autonomous to our research question.' }
+    ],
   },
   {
     word: 'cognitive',
@@ -5469,6 +5869,10 @@ const EXTENDED_DICTIONARY_DB = [
       { word: 'mental', register: 'neutral', cefr: 'B2' }
     ],
     suggested_folder_name: 'Academic Writing (Task 2)'
+    collocations: [
+      { collocation: 'highly cognitive', example: 'This approach is highly cognitive for achieving academic success.' },
+      { collocation: 'particularly cognitive', example: 'The case study was particularly cognitive to our research question.' }
+    ],
   },
   {
     word: 'consensus',
@@ -5507,6 +5911,10 @@ const EXTENDED_DICTIONARY_DB = [
       { word: 'unity', register: 'neutral', cefr: 'B2' }
     ],
     suggested_folder_name: 'Academic Writing (Task 2)'
+    collocations: [
+      { collocation: 'significant consensus', example: 'There has been a significant consensus observed in recent statistics.' },
+      { collocation: 'underlying consensus', example: 'We must identify the underlying consensus of this phenomenon.' }
+    ],
   },
   {
     word: 'augment',
@@ -5549,6 +5957,10 @@ const EXTENDED_DICTIONARY_DB = [
       { word: 'beef up', register: 'informal', cefr: 'C1' }
     ],
     suggested_folder_name: 'Economics & Statistics'
+    collocations: [
+      { collocation: 'strongly augment', example: 'The evidence seems to strongly augment our initial hypothesis.' },
+      { collocation: 'help augment', example: 'Implementing this policy will help augment the current situation.' }
+    ],
   },
   {
     word: 'catalyst',
@@ -5590,6 +6002,10 @@ const EXTENDED_DICTIONARY_DB = [
       { word: 'spark', register: 'informal', cefr: 'C2' }
     ],
     suggested_folder_name: 'Academic Writing (Task 2)'
+    collocations: [
+      { collocation: 'significant catalyst', example: 'There has been a significant catalyst observed in recent statistics.' },
+      { collocation: 'underlying catalyst', example: 'We must identify the underlying catalyst of this phenomenon.' }
+    ],
   },
   {
     word: 'disturbing',
@@ -5643,6 +6059,10 @@ const EXTENDED_DICTIONARY_DB = [
       { word: 'upsetting', register: 'neutral', cefr: 'B2' }
     ],
     suggested_folder_name: 'Academic Writing (Task 2)'
+    collocations: [
+      { collocation: 'deeply disturbing', example: 'The committee found the reports of child labor deeply disturbing.' },
+      { collocation: 'disturbing trend', example: 'There is a disturbing trend of increasing mental stress among teenagers.' }
+    ],
   },
   {
     word: 'escalate',
@@ -5695,6 +6115,10 @@ const EXTENDED_DICTIONARY_DB = [
       { word: 'grow rapidly', register: 'neutral', cefr: 'B2' }
     ],
     suggested_folder_name: 'Academic Writing (Task 2)'
+    collocations: [
+      { collocation: 'escalate tensions', example: 'The deployment of troops served to escalate tensions along the border.' },
+      { collocation: 'escalate rapidly', example: 'What began as a minor dispute escalated rapidly into a major conflict.' }
+    ],
   },
   {
     word: 'emigrate',
@@ -5746,6 +6170,10 @@ const EXTENDED_DICTIONARY_DB = [
       { word: 'move abroad', register: 'neutral', cefr: 'B1' }
     ],
     suggested_folder_name: 'Academic Writing (Task 2)'
+    collocations: [
+      { collocation: 'emigrate to', example: 'Many young professionals decide to emigrate to countries with better job prospects.' },
+      { collocation: 'emigrate in search of', example: 'His grandparents emigrated in search of political stability and safety.' }
+    ],
   },
   {
     word: 'contaminate',
@@ -5797,6 +6225,10 @@ const EXTENDED_DICTIONARY_DB = [
       { word: 'dirty', register: 'informal', cefr: 'A2' }
     ],
     suggested_folder_name: 'Environment & Ecology'
+    collocations: [
+      { collocation: 'contaminate water', example: 'Industrial waste can contaminate water supplies for local communities.' },
+      { collocation: 'heavily contaminate', example: 'The soil near the old chemical plant was found to be heavily contaminated.' }
+    ],
   },
   {
     word: 'deforestation',
@@ -5846,6 +6278,10 @@ const EXTENDED_DICTIONARY_DB = [
       { word: 'logging', register: 'neutral', cefr: 'C1' }
     ],
     suggested_folder_name: 'Environment & Ecology'
+    collocations: [
+      { collocation: 'combat deforestation', example: 'Global treaties aim to combat deforestation in tropical rainforests.' },
+      { collocation: 'widespread deforestation', example: 'Widespread deforestation has led to severe soil erosion and flooding.' }
+    ],
   },
   {
     word: 'disposable',
@@ -5896,6 +6332,10 @@ const EXTENDED_DICTIONARY_DB = [
       { word: 'throwaway', register: 'informal', cefr: 'C1' }
     ],
     suggested_folder_name: 'Environment & Ecology'
+    collocations: [
+      { collocation: 'disposable income', example: 'Families with higher disposable income tend to spend more on leisure activities.' },
+      { collocation: 'disposable packaging', example: 'The government is proposing a ban on single-use disposable packaging.' }
+    ],
   },
   {
     word: 'offset',
@@ -5946,6 +6386,10 @@ const EXTENDED_DICTIONARY_DB = [
       { word: 'make up for', register: 'informal', cefr: 'B2' }
     ],
     suggested_folder_name: 'Environment & Ecology'
+    collocations: [
+      { collocation: 'offset carbon emissions', example: 'Companies plant trees to offset carbon emissions from their flights.' },
+      { collocation: 'offset the cost', example: 'The savings in fuel consumption will quickly offset the cost of the hybrid car.' }
+    ],
   },
   {
     word: 'carry out',
@@ -5997,6 +6441,10 @@ const EXTENDED_DICTIONARY_DB = [
       { word: 'do', register: 'informal', cefr: 'A1' }
     ],
     suggested_folder_name: 'Phrasal Verbs & Idioms'
+    collocations: [
+      { collocation: 'carry out research', example: 'The university will carry out research into renewable energy sources.' },
+      { collocation: 'carry out an order', example: 'Soldiers are expected to carry out orders without hesitation.' }
+    ],
   },
   {
     word: 'look into',
@@ -6048,6 +6496,10 @@ const EXTENDED_DICTIONARY_DB = [
       { word: 'examine', register: 'neutral', cefr: 'B1' }
     ],
     suggested_folder_name: 'Phrasal Verbs & Idioms'
+    collocations: [
+      { collocation: 'attempt to look into', example: 'We must attempt to look into the project issues.' },
+      { collocation: 'carefully look into', example: 'You should carefully look into the instructions before starting.' }
+    ],
   },
   {
     word: 'cope with',
@@ -6099,6 +6551,10 @@ const EXTENDED_DICTIONARY_DB = [
       { word: 'get by', register: 'informal', cefr: 'B2' }
     ],
     suggested_folder_name: 'Phrasal Verbs & Idioms'
+    collocations: [
+      { collocation: 'cope with stress', example: 'Exercise is a proven method to help cope with academic stress.' },
+      { collocation: 'cope with demands', example: 'The healthcare system struggled to cope with the demands of the pandemic.' }
+    ],
   },
   {
     word: 'civilize',
@@ -6150,6 +6606,10 @@ const EXTENDED_DICTIONARY_DB = [
       { word: 'socialize', register: 'neutral', cefr: 'B2' }
     ],
     suggested_folder_name: 'Academic Writing (Task 2)'
+    collocations: [
+      { collocation: 'civilize the population', example: 'The Romans attempted to civilize the conquered population.' },
+      { collocation: 'help civilize', example: 'Cultural exchange programs help civilize societal interactions.' }
+    ],
   },
   {
     word: 'doctrine',
@@ -6201,6 +6661,10 @@ const EXTENDED_DICTIONARY_DB = [
       { word: 'principle', register: 'neutral', cefr: 'B2' }
     ],
     suggested_folder_name: 'Law & Policy'
+    collocations: [
+      { collocation: 'significant doctrine', example: 'There has been a significant doctrine observed in recent statistics.' },
+      { collocation: 'underlying doctrine', example: 'We must identify the underlying doctrine of this phenomenon.' }
+    ],
   },
   {
     word: 'formidable',
@@ -6252,6 +6716,10 @@ const EXTENDED_DICTIONARY_DB = [
       { word: 'challenging', register: 'neutral', cefr: 'B1' }
     ],
     suggested_folder_name: 'Academic Writing (Task 2)'
+    collocations: [
+      { collocation: 'highly formidable', example: 'This approach is highly formidable for achieving academic success.' },
+      { collocation: 'particularly formidable', example: 'The case study was particularly formidable to our research question.' }
+    ],
   },
   {
     word: 'prominence',
@@ -6303,6 +6771,10 @@ const EXTENDED_DICTIONARY_DB = [
       { word: 'visibility', register: 'neutral', cefr: 'B2' }
     ],
     suggested_folder_name: 'Academic Writing (Task 2)'
+    collocations: [
+      { collocation: 'significant prominence', example: 'There has been a significant prominence observed in recent statistics.' },
+      { collocation: 'underlying prominence', example: 'We must identify the underlying prominence of this phenomenon.' }
+    ],
   },
   {
     word: 'leftism',
@@ -6354,6 +6826,10 @@ const EXTENDED_DICTIONARY_DB = [
       { word: 'left-wing politics', register: 'formal', cefr: 'C1' }
     ],
     suggested_folder_name: 'Law & Policy'
+    collocations: [
+      { collocation: 'significant leftism', example: 'There has been a significant leftism observed in recent statistics.' },
+      { collocation: 'underlying leftism', example: 'We must identify the underlying leftism of this phenomenon.' }
+    ],
   },
   {
     word: 'upbeat',
@@ -6405,6 +6881,10 @@ const EXTENDED_DICTIONARY_DB = [
       { word: 'cheerful', register: 'neutral', cefr: 'B1' }
     ],
     suggested_folder_name: 'Academic Writing (Task 2)'
+    collocations: [
+      { collocation: 'highly upbeat', example: 'This approach is highly upbeat for achieving academic success.' },
+      { collocation: 'particularly upbeat', example: 'The case study was particularly upbeat to our research question.' }
+    ],
   },
   {
     word: 'optimistic',
@@ -6456,6 +6936,10 @@ const EXTENDED_DICTIONARY_DB = [
       { word: 'sanguine', register: 'formal', cefr: 'C2' }
     ],
     suggested_folder_name: 'Academic Writing (Task 2)'
+    collocations: [
+      { collocation: 'highly optimistic', example: 'This approach is highly optimistic for achieving academic success.' },
+      { collocation: 'particularly optimistic', example: 'The case study was particularly optimistic to our research question.' }
+    ],
   },
   {
     word: 'territorial',
@@ -6507,6 +6991,10 @@ const EXTENDED_DICTIONARY_DB = [
       { word: 'provincial', register: 'neutral', cefr: 'C1' }
     ],
     suggested_folder_name: 'Law & Policy'
+    collocations: [
+      { collocation: 'highly territorial', example: 'This approach is highly territorial for achieving academic success.' },
+      { collocation: 'particularly territorial', example: 'The case study was particularly territorial to our research question.' }
+    ],
   },
   {
     word: 'inference',
@@ -6558,6 +7046,10 @@ const EXTENDED_DICTIONARY_DB = [
       { word: 'conjecture', register: 'formal', cefr: 'C2' }
     ],
     suggested_folder_name: 'Academic Writing (Task 2)'
+    collocations: [
+      { collocation: 'significant inference', example: 'There has been a significant inference observed in recent statistics.' },
+      { collocation: 'underlying inference', example: 'We must identify the underlying inference of this phenomenon.' }
+    ],
   },
   {
     word: 'repulsive',
@@ -6609,6 +7101,10 @@ const EXTENDED_DICTIONARY_DB = [
       { word: 'disgusting', register: 'neutral', cefr: 'B1' }
     ],
     suggested_folder_name: 'Academic Writing (Task 2)'
+    collocations: [
+      { collocation: 'highly repulsive', example: 'This approach is highly repulsive for achieving academic success.' },
+      { collocation: 'particularly repulsive', example: 'The case study was particularly repulsive to our research question.' }
+    ],
   },
   {
     word: 'play out',
@@ -6660,6 +7156,10 @@ const EXTENDED_DICTIONARY_DB = [
       { word: 'happen', register: 'neutral', cefr: 'A1' }
     ],
     suggested_folder_name: 'Phrasal Verbs & Idioms'
+    collocations: [
+      { collocation: 'attempt to play out', example: 'We must attempt to play out the project issues.' },
+      { collocation: 'carefully play out', example: 'You should carefully play out the instructions before starting.' }
+    ],
   },
   {
     word: 'elasticity',
@@ -6711,6 +7211,10 @@ const EXTENDED_DICTIONARY_DB = [
       { word: 'resilience', register: 'academic', cefr: 'C1' }
     ],
     suggested_folder_name: 'Economics & Statistics'
+    collocations: [
+      { collocation: 'significant elasticity', example: 'There has been a significant elasticity observed in recent statistics.' },
+      { collocation: 'underlying elasticity', example: 'We must identify the underlying elasticity of this phenomenon.' }
+    ],
   },
   {
     word: 'predispose',
@@ -6754,6 +7258,10 @@ const EXTENDED_DICTIONARY_DB = [
       { word: 'bias', register: 'neutral', cefr: 'B2' }
     ],
     suggested_folder_name: 'Academic Writing (Task 2)'
+    collocations: [
+      { collocation: 'predispose someone to', example: 'A family history of heart disease can predispose someone to cardiac issues.' },
+      { collocation: 'genetically predispose', example: 'Certain mutations genetically predispose individuals to specific conditions.' }
+    ],
   },
   {
     word: 'outlook',
@@ -6797,6 +7305,10 @@ const EXTENDED_DICTIONARY_DB = [
       { word: 'prospect', register: 'formal', cefr: 'C1' }
     ],
     suggested_folder_name: 'Economics & Statistics'
+    collocations: [
+      { collocation: 'optimistic outlook', example: 'Despite the setbacks, he maintained an optimistic outlook on his career.' },
+      { collocation: 'economic outlook', example: 'The country\'s economic outlook has improved due to increased exports.' }
+    ],
   },
   {
     word: 'assertion',
@@ -6840,6 +7352,10 @@ const EXTENDED_DICTIONARY_DB = [
       { word: 'claim', register: 'neutral', cefr: 'B2' }
     ],
     suggested_folder_name: 'Academic Writing (Task 2)'
+    collocations: [
+      { collocation: 'make an assertion', example: 'The scientist made an assertion that the new compound is completely non-toxic.' },
+      { collocation: 'support an assertion', example: 'The researcher gathered substantial statistical data to support his assertion.' }
+    ],
   }
 ];
 

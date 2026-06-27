@@ -338,7 +338,26 @@
         const saved = localStorage.getItem('lexicon_entries');
         if (saved) {
           try {
-            return JSON.parse(saved);
+            const parsed = JSON.parse(saved);
+            let modified = false;
+            const updated = parsed.map(entry => {
+              if (!entry.collocations) {
+                const match = INITIAL_ENTRIES.find(e => e.word.toLowerCase() === entry.word.toLowerCase()) ||
+                              EXTENDED_DICTIONARY_DB.find(e => e.word.toLowerCase() === entry.word.toLowerCase());
+                if (match && match.collocations) {
+                  modified = true;
+                  return { ...entry, collocations: match.collocations };
+                } else {
+                  modified = true;
+                  return { ...entry, collocations: [] };
+                }
+              }
+              return entry;
+            });
+            if (modified) {
+              localStorage.setItem('lexicon_entries', JSON.stringify(updated));
+            }
+            return updated;
           } catch (e) {
             console.error("Failed to parse lexicon_entries", e);
             return INITIAL_ENTRIES;
@@ -484,8 +503,21 @@
       const [customFamilyNoun, setCustomFamilyNoun] = useState('');
       const [customFamilyAdjective, setCustomFamilyAdjective] = useState('');
       const [customFamilyAdverb, setCustomFamilyAdverb] = useState('');
+      const [customCollocations, setCustomCollocations] = useState([]);
       const [assignedFolderIds, setAssignedFolderIds] = useState([]);
       const [suggestedFolder, setSuggestedFolder] = useState('');
+
+      const addCustomCollocation = () => {
+        setCustomCollocations(prev => [...prev, { collocation: '', example: '' }]);
+      };
+
+      const updateCustomCollocation = (index, key, value) => {
+        setCustomCollocations(prev => prev.map((c, idx) => idx === index ? { ...c, [key]: value } : c));
+      };
+
+      const removeCustomCollocation = (index) => {
+        setCustomCollocations(prev => prev.filter((_, idx) => idx !== index));
+      };
 
       // Toast State
       const [toasts, setToasts] = useState([]);
@@ -772,6 +804,7 @@
         setCustomFamilyNoun('');
         setCustomFamilyAdjective('');
         setCustomFamilyAdverb('');
+        setCustomCollocations([]);
 
         setTimeout(async () => {
           const term = lookupWord.toLowerCase().trim();
@@ -807,6 +840,7 @@
             setCustomFamilyNoun((matched.word_family?.noun || []).join(', '));
             setCustomFamilyAdjective((matched.word_family?.adjective || []).join(', '));
             setCustomFamilyAdverb((matched.word_family?.adverb || []).join(', '));
+            setCustomCollocations(matched.collocations || []);
             setSuggestedFolder(folderSuggestion);
 
             const existingFolder = folders.find(f => f.name.toLowerCase() === folderSuggestion.toLowerCase());
@@ -848,6 +882,7 @@
           setCustomFamilyNoun((simulated.word_family?.noun || []).join(', '));
           setCustomFamilyAdjective((simulated.word_family?.adjective || []).join(', '));
           setCustomFamilyAdverb((simulated.word_family?.adverb || []).join(', '));
+          setCustomCollocations(simulated.collocations || []);
           setSuggestedFolder(simulated.suggested_folder_name);
 
           const existingFolder = folders.find(f => f.name.toLowerCase() === simulated.suggested_folder_name.toLowerCase());
@@ -1283,6 +1318,67 @@ IMPORTANT: If the Free Dictionary context contains a valid IPA pronunciation (ip
         const wf = type === 'word' ? generateWordFamily(word, grammar) : null;
         const extraEx = generateExtraExamples(word, grammar);
 
+        const generateOfflineCollocations = (w, g, t) => {
+          const colls = [];
+          if (t === 'phrasal_verb' || w.includes(' ')) {
+            colls.push({
+              collocation: `attempt to ${w}`,
+              example: `We must attempt to ${w} the project issues.`
+            });
+            colls.push({
+              collocation: `carefully ${w}`,
+              example: `You should carefully ${w} the instructions before starting.`
+            });
+          } else if (g.includes('verb') || t === 'verb') {
+            colls.push({
+              collocation: `strongly ${w}`,
+              example: `The evidence seems to strongly ${w} our initial hypothesis.`
+            });
+            colls.push({
+              collocation: `help ${w}`,
+              example: `Implementing this policy will help ${w} the current situation.`
+            });
+          } else if (g.includes('noun') || t === 'noun') {
+            colls.push({
+              collocation: `significant ${w}`,
+              example: `There has been a significant ${w} observed in recent statistics.`
+            });
+            colls.push({
+              collocation: `underlying ${w}`,
+              example: `We must identify the underlying ${w} of this phenomenon.`
+            });
+          } else if (g.includes('adj') || g.includes('adjective') || t === 'adjective') {
+            colls.push({
+              collocation: `highly ${w}`,
+              example: `This approach is highly ${w} for achieving academic success.`
+            });
+            colls.push({
+              collocation: `particularly ${w}`,
+              example: `The case study was particularly ${w} to our research question.`
+            });
+          } else if (g.includes('adv') || g.includes('adverb') || t === 'adverb') {
+            colls.push({
+              collocation: `${w} affect`,
+              example: `Environmental factors can ${w} affect the growth rate.`
+            });
+            colls.push({
+              collocation: `${w} significant`,
+              example: `The differences were ${w} significant across all test groups.`
+            });
+          } else {
+            colls.push({
+              collocation: `closely associated with ${w}`,
+              example: `This concept is closely associated with ${w} in literature.`
+            });
+            colls.push({
+              collocation: `direct impact of ${w}`,
+              example: `We studied the direct impact of ${w} on the ecosystem.`
+            });
+          }
+          return colls;
+        };
+        const colls = generateOfflineCollocations(word, grammar, type);
+
         return {
           word: word,
           entry_type: type,
@@ -1316,6 +1412,7 @@ IMPORTANT: If the Free Dictionary context contains a valid IPA pronunciation (ip
           formality_score: formality,
           connotation: connotation,
           word_family: wf,
+          collocations: colls,
           semantic_field_id: semId,
           semantic_field_label: semLabel,
           semantic_field_words: [],
@@ -1356,6 +1453,7 @@ IMPORTANT: If the Free Dictionary context contains a valid IPA pronunciation (ip
             adjective: customFamilyAdjective.split(',').map(s => s.trim()).filter(Boolean),
             adverb: customFamilyAdverb.split(',').map(s => s.trim()).filter(Boolean)
           } : null,
+          collocations: customCollocations.filter(c => c.collocation.trim() !== ''),
           review: {
             interval_days: 1,
             ease_factor: 2.5,
@@ -2343,6 +2441,20 @@ IMPORTANT: If the Free Dictionary context contains a valid IPA pronunciation (ip
                               })()}
                             </div>
 
+                            {/* COLLOCATIONS */}
+                            {reviewQueue[currentReviewIndex].collocations && reviewQueue[currentReviewIndex].collocations.length > 0 && (
+                              <div style={{ textAlign: 'left', marginBottom: '12px', borderTop: '1px solid var(--border-muted)', paddingTop: '8px' }}>
+                                <strong style={{ fontSize: '12px', color: 'var(--text-main)', display: 'block', marginBottom: '4px' }}>Collocations:</strong>
+                                <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                                  {reviewQueue[currentReviewIndex].collocations.map((c, idx) => (
+                                    <div key={idx} style={{ fontSize: '12.5px', color: 'var(--text-main)' }}>
+                                      • <strong>{c.collocation}</strong> {c.example && <span style={{ color: 'var(--text-muted)', fontStyle: 'italic' }}>— {c.example}</span>}
+                                    </div>
+                                  ))}
+                                </div>
+                              </div>
+                            )}
+
                             {/* RATING OPTIONS */}
                             <div className="review-ratings-row">
                               <button className="rating-btn rating-btn-again" onClick={() => handleRateCard('again')}>
@@ -2628,6 +2740,48 @@ IMPORTANT: If the Free Dictionary context contains a valid IPA pronunciation (ip
                                 }}
                               />
                             </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* COLLOCATIONS SECTION */}
+                    <div className="form-group" style={{ border: '1px dashed var(--border-strong)', padding: '12px', borderRadius: '6px', marginTop: '12px', marginBottom: '12px' }}>
+                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '8px' }}>
+                        <label className="form-label" style={{ fontWeight: 'bold', margin: 0 }}>Collocations</label>
+                        <button type="button" className="btn btn-secondary btn-sm" style={{ padding: '2px 8px', fontSize: '11px' }} onClick={addCustomCollocation}>
+                          + Add Collocation
+                        </button>
+                      </div>
+                      <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                        {customCollocations.map((c, index) => (
+                          <div key={index} style={{ padding: '10px', border: '1px solid var(--border-muted)', borderRadius: '6px', display: 'flex', flexDirection: 'column', gap: '6px', backgroundColor: 'var(--bg-app)' }}>
+                            <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
+                              <input
+                                type="text"
+                                className="form-input"
+                                style={{ flex: 1, padding: '4px 8px', fontSize: '12px' }}
+                                placeholder="Collocation (e.g. strong association)"
+                                value={c.collocation || ''}
+                                onChange={(e) => updateCustomCollocation(index, 'collocation', e.target.value)}
+                              />
+                              <button
+                                type="button"
+                                className="btn btn-danger"
+                                style={{ padding: '4px 8px', fontSize: '11px' }}
+                                onClick={() => removeCustomCollocation(index)}
+                              >
+                                Remove
+                              </button>
+                            </div>
+                            <input
+                              type="text"
+                              className="form-input"
+                              style={{ padding: '4px 8px', fontSize: '12px' }}
+                              placeholder="Example sentence..."
+                              value={c.example || ''}
+                              onChange={(e) => updateCustomCollocation(index, 'example', e.target.value)}
+                            />
                           </div>
                         ))}
                       </div>
@@ -3253,6 +3407,20 @@ IMPORTANT: If the Free Dictionary context contains a valid IPA pronunciation (ip
             )}
           </div>
 
+          {/* COLLOCATIONS SECTION */}
+          {entry.collocations && entry.collocations.length > 0 && (
+            <div className="collocations-section" style={{ marginTop: '8px', marginBottom: '8px', padding: '10px', backgroundColor: 'var(--bg-app)', borderRadius: '6px', borderLeft: '3px solid var(--accent)' }}>
+              <div style={{ fontWeight: 'bold', fontSize: '12px', color: 'var(--text-main)', marginBottom: '6px', textAlign: 'left' }}>Collocations</div>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                {entry.collocations.map((c, i) => (
+                  <div key={i} style={{ fontSize: '13px', lineHeight: '1.4', textAlign: 'left' }}>
+                    • <strong>{c.collocation}</strong> {c.example && <span style={{ color: 'var(--text-muted)', fontStyle: 'italic' }}>— {c.example}</span>}
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
           {/* WORD FAMILY PANEL */}
           {entry.entry_type === 'word' && entry.word_family && (
             <div className="word-family-section">
@@ -3692,6 +3860,20 @@ IMPORTANT: If the Free Dictionary context contains a valid IPA pronunciation (ip
             })()}
           </div>
 
+          {/* COLLOCATIONS SECTION */}
+          {activeEntry.collocations && activeEntry.collocations.length > 0 && (
+            <div className="collocations-section" style={{ marginTop: '8px', marginBottom: '8px', padding: '10px', backgroundColor: 'var(--bg-app)', borderRadius: '6px', borderLeft: '3px solid var(--accent)' }}>
+              <div style={{ fontWeight: 'bold', fontSize: '12px', color: 'var(--text-main)', marginBottom: '6px', textAlign: 'left' }}>Collocations</div>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                {activeEntry.collocations.map((c, i) => (
+                  <div key={i} style={{ fontSize: '13px', lineHeight: '1.4', textAlign: 'left' }}>
+                    • <strong>{c.collocation}</strong> {c.example && <span style={{ color: 'var(--text-muted)', fontStyle: 'italic' }}>— {c.example}</span>}
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
           {/* Word Family chips list inside the active entry */}
           {activeEntry.entry_type === 'word' && activeEntry.word_family && (
             <div className="word-family-section">
@@ -3903,6 +4085,19 @@ IMPORTANT: If the Free Dictionary context contains a valid IPA pronunciation (ip
       const [baseVerb, setBaseVerb] = useState(entry.base_verb || '');
       const [particles, setParticles] = useState(entry.particles || '');
       const [relatedPhrasals, setRelatedPhrasals] = useState((entry.related_phrasal_verbs || []).join(', '));
+      const [collocations, setCollocations] = useState(entry.collocations || []);
+
+      const addCollocation = () => {
+        setCollocations(prev => [...prev, { collocation: '', example: '' }]);
+      };
+
+      const updateCollocation = (index, key, value) => {
+        setCollocations(prev => prev.map((c, idx) => idx === index ? { ...c, [key]: value } : c));
+      };
+
+      const removeCollocation = (index) => {
+        setCollocations(prev => prev.filter((_, idx) => idx !== index));
+      };
 
       const handleUpdate = () => {
         const wordFamilyObj = entryType === 'word' ? {
@@ -3946,7 +4141,8 @@ IMPORTANT: If the Free Dictionary context contains a valid IPA pronunciation (ip
           word_family: wordFamilyObj,
           base_verb: baseVerb,
           particles: particles,
-          related_phrasal_verbs: relatedPv
+          related_phrasal_verbs: relatedPv,
+          collocations: collocations.filter(c => c.collocation.trim() !== '')
         };
 
         onSave(updated);
@@ -4165,6 +4361,47 @@ IMPORTANT: If the Free Dictionary context contains a valid IPA pronunciation (ip
               <div className="form-group">
                 <label className="form-label">Extra Examples (one per line)</label>
                 <textarea className="form-textarea" rows="3" value={rawExtraExamples} onChange={(e) => setRawExtraExamples(e.target.value)}></textarea>
+              </div>
+
+              <div className="form-group" style={{ border: '1px dashed var(--border-strong)', padding: '12px', borderRadius: '6px', marginTop: '12px', marginBottom: '12px' }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '8px' }}>
+                  <label className="form-label" style={{ fontWeight: 'bold', margin: 0 }}>Collocations</label>
+                  <button type="button" className="btn btn-secondary btn-sm" style={{ padding: '2px 8px', fontSize: '11px' }} onClick={addCollocation}>
+                    + Add Collocation
+                  </button>
+                </div>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                  {collocations.map((c, index) => (
+                    <div key={index} style={{ padding: '10px', border: '1px solid var(--border-muted)', borderRadius: '6px', display: 'flex', flexDirection: 'column', gap: '6px', backgroundColor: 'var(--bg-app)' }}>
+                      <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
+                        <input
+                          type="text"
+                          className="form-input"
+                          style={{ flex: 1, padding: '4px 8px', fontSize: '12px' }}
+                          placeholder="Collocation (e.g. strong association)"
+                          value={c.collocation || ''}
+                          onChange={(e) => updateCollocation(index, 'collocation', e.target.value)}
+                        />
+                        <button
+                          type="button"
+                          className="btn btn-danger"
+                          style={{ padding: '4px 8px', fontSize: '11px' }}
+                          onClick={() => removeCollocation(index)}
+                        >
+                          Remove
+                        </button>
+                      </div>
+                      <input
+                        type="text"
+                        className="form-input"
+                        style={{ padding: '4px 8px', fontSize: '12px' }}
+                        placeholder="Example sentence..."
+                        value={c.example || ''}
+                        onChange={(e) => updateCollocation(index, 'example', e.target.value)}
+                      />
+                    </div>
+                  ))}
+                </div>
               </div>
 
               {entryType === 'word' && (
@@ -6311,6 +6548,19 @@ IMPORTANT: If the Free Dictionary context contains a valid IPA pronunciation (ip
                             {selectedWord.word_family.noun?.length > 0 && <div><strong>Nouns:</strong> {selectedWord.word_family.noun.join(', ')}</div>}
                             {selectedWord.word_family.adjective?.length > 0 && <div><strong>Adjectives:</strong> {selectedWord.word_family.adjective.join(', ')}</div>}
                             {selectedWord.word_family.adverb?.length > 0 && <div><strong>Adverbs:</strong> {selectedWord.word_family.adverb.join(', ')}</div>}
+                          </div>
+                        </div>
+                      )}
+
+                      {selectedWord.collocations && selectedWord.collocations.length > 0 && (
+                        <div style={{ fontSize: '11px', borderTop: '1px solid var(--border-muted)', paddingTop: '8px', marginTop: '4px' }}>
+                          <div style={{ fontWeight: '700', color: 'var(--text-muted)', marginBottom: '4px', textTransform: 'uppercase', fontSize: '9px', letterSpacing: '0.5px', textAlign: 'left' }}>Collocations</div>
+                          <div style={{ display: 'flex', flexDirection: 'column', gap: '3px', color: 'var(--text-main)' }}>
+                            {selectedWord.collocations.map((c, i) => (
+                              <div key={i} style={{ textAlign: 'left', lineHeight: '1.2' }}>
+                                • <strong>{c.collocation}</strong> {c.example && <span style={{ color: 'var(--text-muted)', fontStyle: 'italic' }}>— {c.example}</span>}
+                              </div>
+                            ))}
                           </div>
                         </div>
                       )}
