@@ -6797,8 +6797,73 @@ IMPORTANT: If the Free Dictionary context contains a valid IPA pronunciation (ip
       );
     }
 
+    class ErrorBoundary extends React.Component {
+      constructor(props) {
+        super(props);
+        this.state = { hasError: false, error: null };
+      }
+
+      static getDerivedStateFromError(error) {
+        return { hasError: true, error };
+      }
+
+      componentDidCatch(error, errorInfo) {
+        console.error("ErrorBoundary caught an error:", error, errorInfo);
+      }
+
+      render() {
+        if (this.state.hasError) {
+          return (
+            <div style={{ padding: '40px', fontFamily: 'sans-serif', maxWidth: '600px', margin: '80px auto', textAlign: 'center', color: '#EF4444', backgroundColor: 'white', borderRadius: '12px', border: '1px solid #E2E8F0', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)' }}>
+              <span style={{ fontSize: '48px' }}>⚠️</span>
+              <h2 style={{ fontSize: '24px', margin: '16px 0 8px', color: '#0F172A' }}>Application Error</h2>
+              <p style={{ color: '#475569', fontSize: '14.5px', marginBottom: '24px', lineHeight: '1.5' }}>
+                Lexicon Vault failed to initialize. This is usually caused by outdated or malformed data in your browser's local cache.
+              </p>
+              <div style={{ backgroundColor: '#F8FAFC', border: '1px solid #E2E8F0', padding: '16px', borderRadius: '8px', textAlign: 'left', overflowX: 'auto', marginBottom: '24px' }}>
+                <strong style={{ color: '#0F172A', display: 'block', marginBottom: '8px', fontSize: '14px' }}>Error Details:</strong>
+                <pre style={{ margin: 0, fontSize: '12px', color: '#F43F5E', whiteSpace: 'pre-wrap', fontFamily: 'monospace' }}>
+                  {this.state.error && this.state.error.toString()}
+                </pre>
+                {this.state.error && this.state.error.stack && (
+                  <pre style={{ margin: '12px 0 0', fontSize: '11px', color: '#64748B', whiteSpace: 'pre-wrap', maxHeight: '150px', overflowY: 'auto', fontFamily: 'monospace' }}>
+                    {this.state.error.stack}
+                  </pre>
+                )}
+              </div>
+              <button 
+                onClick={() => {
+                  localStorage.clear();
+                  window.location.reload();
+                }}
+                style={{
+                  backgroundColor: '#EF4444',
+                  color: 'white',
+                  border: 'none',
+                  padding: '10px 20px',
+                  borderRadius: '6px',
+                  cursor: 'pointer',
+                  fontWeight: 'bold',
+                  fontSize: '14px'
+                }}
+              >
+                Clear Local Storage & Reset App
+              </button>
+            </div>
+          );
+        }
+
+        return this.props.children;
+      }
+    }
+
     // Bind App to UI root elements
-    ReactDOM.render(<App />, document.getElementById('app-root'));
+    ReactDOM.render(
+      <ErrorBoundary>
+        <App />
+      </ErrorBoundary>,
+      document.getElementById('app-root')
+    );
   </script>
 
 </body>
