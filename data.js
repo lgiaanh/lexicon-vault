@@ -16,6 +16,384 @@ const INITIAL_FOLDERS = [
 
 const INITIAL_ENTRIES = [
   {
+    id: 'entry-breed',
+    entry_type: 'word',
+    word: 'breed',
+    ipa_uk: '/briːd/',
+    ipa_us: '/briːd/',
+    definition: 'to cause something to happen, usually something bad; (as a noun) a particular type of person or thing',
+    definition_source: 'cambridge',
+    example: 'Favouritism breeds resentment in the workplace.',
+    definitions: [
+      {
+        definition: 'to cause something to happen, usually something bad',
+        example: 'Favouritism breeds resentment in the workplace.',
+        cefr_level: 'C1',
+        grammar_note: 'transitive verb'
+      },
+      {
+        definition: 'a particular type of person or thing',
+        example: 'A new breed of entrepreneurs is changing the business landscape.',
+        cefr_level: 'C1',
+        grammar_note: 'countable noun'
+      }
+    ],
+    extra_examples: [
+      'Unemployment breeds crime and social instability.',
+      'Dirt and damp breed disease.'
+    ],
+    grammar_note: 'transitive verb / countable noun',
+    base_verb: '',
+    particles: '',
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: 'C1',
+    register: 'neutral',
+    formality_score: 3,
+    connotation: 'neutral',
+    word_family: {
+      verb: ['breed'],
+      noun: ['breed', 'breeder', 'breeding'],
+      adjective: ['inbred', 'crossbred'],
+      adverb: []
+    },
+    collocations: [
+      { collocation: 'breed resentment', example: 'Unequal distribution of resources often breeds resentment among employees.' },
+      { collocation: 'breed familiarity', example: 'Some managers avoid close friendships with staff, believing it breeds familiarity and loss of respect.' }
+    ],
+    semantic_field_id: 'cause-effect',
+    semantic_field_label: 'Cause & Effect',
+    semantic_field_words: [
+      { word: 'breed', cefr: 'C1', register: 'neutral' },
+      { word: 'precipitate', cefr: 'C2', register: 'formal' }
+    ],
+    register_synonyms: [
+      { word: 'cause', register: 'neutral', cefr: 'A2' },
+      { word: 'generate', register: 'formal', cefr: 'B2' }
+    ],
+    folder_ids: ['folder-4'],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: 'Added default database entry.'
+  },
+  {
+    id: 'entry-susceptible',
+    entry_type: 'word',
+    word: 'susceptible',
+    ipa_uk: '/səˈsep.tə.bəl/',
+    ipa_us: '/səˈsep.tə.bəl/',
+    definition: 'easily influenced or harmed by something',
+    definition_source: 'cambridge',
+    example: 'Adolescents are particularly susceptible to peer pressure.',
+    definitions: [
+      {
+        definition: 'easily influenced or harmed by something',
+        example: 'Adolescents are particularly susceptible to peer pressure.',
+        cefr_level: 'C1',
+        grammar_note: 'adjective'
+      }
+    ],
+    extra_examples: [
+      'These plants are highly susceptible to disease and frost.',
+      'The economy is susceptible to external market shocks.'
+    ],
+    grammar_note: 'adjective',
+    base_verb: '',
+    particles: '',
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: 'C1',
+    register: 'neutral',
+    formality_score: 3,
+    connotation: 'neutral',
+    word_family: {
+      verb: [],
+      noun: ['susceptibility'],
+      adjective: ['susceptible'],
+      adverb: ['susceptibly']
+    },
+    collocations: [
+      { collocation: 'susceptible to', example: 'Older people are more susceptible to infections.' },
+      { collocation: 'highly susceptible', example: 'The coastal regions are highly susceptible to flooding.' }
+    ],
+    semantic_field_id: 'vulnerability',
+    semantic_field_label: 'Vulnerability',
+    semantic_field_words: [
+      { word: 'susceptible', cefr: 'C1', register: 'neutral' },
+      { word: 'vulnerable', cefr: 'B2', register: 'neutral' }
+    ],
+    register_synonyms: [
+      { word: 'vulnerable', register: 'neutral', cefr: 'B2' },
+      { word: 'prone to', register: 'formal', cefr: 'C1' }
+    ],
+    folder_ids: ['folder-4'],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: 'Added default database entry.'
+  },
+  {
+    id: 'entry-adolescent',
+    entry_type: 'word',
+    word: 'adolescent',
+    ipa_uk: '/ˌæd.əˈles.ənt/',
+    ipa_us: '/ˌæd.əˈles.ənt/',
+    definition: 'a young person who is developing into an adult; (as an adjective) relating to adolescents',
+    definition_source: 'cambridge',
+    example: 'The clinic specializes in adolescent psychiatry.',
+    definitions: [
+      {
+        definition: 'a young person who is developing into an adult',
+        example: 'Many adolescents struggle with identity and self-esteem.',
+        cefr_level: 'C1',
+        grammar_note: 'countable noun'
+      },
+      {
+        definition: 'relating to adolescents or the period of adolescence',
+        example: 'The clinic specializes in adolescent psychiatry.',
+        cefr_level: 'C1',
+        grammar_note: 'adjective'
+      }
+    ],
+    extra_examples: [
+      'The book describes the emotional turmoils of adolescent years.',
+      'A large group of adolescents gathered outside the cinema.'
+    ],
+    grammar_note: 'countable noun / adjective',
+    base_verb: '',
+    particles: '',
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: 'C1',
+    register: 'academic',
+    formality_score: 4,
+    connotation: 'neutral',
+    word_family: {
+      verb: [],
+      noun: ['adolescent', 'adolescence'],
+      adjective: ['adolescent'],
+      adverb: []
+    },
+    collocations: [
+      { collocation: 'adolescent development', example: 'Sleep plays a critical role in healthy adolescent development.' },
+      { collocation: 'young adolescents', example: 'The study focused on young adolescents aged between twelve and fifteen.' }
+    ],
+    semantic_field_id: 'youth',
+    semantic_field_label: 'Youth & Age Groups',
+    semantic_field_words: [
+      { word: 'adolescent', cefr: 'C1', register: 'academic' },
+      { word: 'youngster', cefr: 'B2', register: 'neutral' }
+    ],
+    register_synonyms: [
+      { word: 'teenager', register: 'neutral', cefr: 'A2' },
+      { word: 'youth', register: 'formal', cefr: 'B2' }
+    ],
+    folder_ids: ['folder-4'],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: 'Added default database entry.'
+  },
+  {
+    id: 'entry-youngster',
+    entry_type: 'word',
+    word: 'youngster',
+    ipa_uk: '/ˈjʌŋ.stər/',
+    ipa_us: '/ˈjʌŋ.stɚ/',
+    definition: 'a young person, usually an older child or teenager',
+    definition_source: 'cambridge',
+    example: 'The match attracted youngsters from all over the city.',
+    definitions: [
+      {
+        definition: 'a young person, usually an older child or teenager',
+        example: 'The match attracted youngsters from all over the city.',
+        cefr_level: 'B2',
+        grammar_note: 'countable noun'
+      }
+    ],
+    extra_examples: [
+      'The program aims to keep youngsters off the streets and engaged in sports.',
+      'Several talented youngsters have joined the first-team squad.'
+    ],
+    grammar_note: 'countable noun',
+    base_verb: '',
+    particles: '',
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: 'B2',
+    register: 'neutral',
+    formality_score: 3,
+    connotation: 'neutral',
+    word_family: {
+      verb: [],
+      noun: ['youngster'],
+      adjective: ['young'],
+      adverb: []
+    },
+    collocations: [
+      { collocation: 'talented youngsters', example: 'The academy aims to identify and nurture talented youngsters.' },
+      { collocation: 'local youngsters', example: 'We organized a sports camp for local youngsters during the summer holidays.' }
+    ],
+    semantic_field_id: 'youth',
+    semantic_field_label: 'Youth & Age Groups',
+    semantic_field_words: [
+      { word: 'adolescent', cefr: 'C1', register: 'academic' },
+      { word: 'youngster', cefr: 'B2', register: 'neutral' }
+    ],
+    register_synonyms: [
+      { word: 'child', register: 'neutral', cefr: 'A1' },
+      { word: 'youth', register: 'formal', cefr: 'B2' }
+    ],
+    folder_ids: ['folder-4'],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: 'Added default database entry.'
+  },
+  {
+    id: 'entry-worsen',
+    entry_type: 'word',
+    word: 'worsen',
+    ipa_uk: '/ˈwɜː.sən/',
+    ipa_us: '/ˈwɝː.sən/',
+    definition: 'to become worse or to make something worse',
+    definition_source: 'cambridge',
+    example: 'The economic crisis is expected to worsen in the coming months.',
+    definitions: [
+      {
+        definition: 'to become worse or to make something worse',
+        example: 'The economic crisis is expected to worsen in the coming months.',
+        cefr_level: 'C1',
+        grammar_note: 'transitive/intransitive verb'
+      }
+    ],
+    extra_examples: [
+      'A change in the wind direction worsened the forest fire.',
+      'Her health has worsened considerably since last week.'
+    ],
+    grammar_note: 'transitive/intransitive verb',
+    base_verb: '',
+    particles: '',
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: 'C1',
+    register: 'neutral',
+    formality_score: 3,
+    connotation: 'negative',
+    word_family: {
+      verb: ['worsen'],
+      noun: [],
+      adjective: ['worse', 'worst'],
+      adverb: []
+    },
+    collocations: [
+      { collocation: 'worsen the situation', example: 'Adding more fuel to the argument will only worsen the situation.' },
+      { collocation: 'steadily worsen', example: 'The weather conditions steadily worsened throughout the afternoon.' }
+    ],
+    semantic_field_id: 'deterioration',
+    semantic_field_label: 'Deterioration',
+    semantic_field_words: [
+      { word: 'worsen', cefr: 'C1', register: 'neutral' },
+      { word: 'deteriorate', cefr: 'C1', register: 'formal' }
+    ],
+    register_synonyms: [
+      { word: 'get worse', register: 'neutral', cefr: 'A2' },
+      { word: 'deteriorate', register: 'formal', cefr: 'C1' },
+      { word: 'go downhill', register: 'informal', cefr: 'C2' }
+    ],
+    folder_ids: ['folder-4'],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: 'Added default database entry.'
+  },
+  {
+    id: 'entry-obesity',
+    entry_type: 'word',
+    word: 'obesity',
+    ipa_uk: '/əʊˈbiː.sə.ti/',
+    ipa_us: '/oʊˈbiː.sə.t̬i/',
+    definition: 'the fact of being extremely fat, in a way that is dangerous for health',
+    definition_source: 'cambridge',
+    example: 'Childhood obesity has become a major public health concern.',
+    definitions: [
+      {
+        definition: 'the fact of being extremely fat, in a way that is dangerous for health',
+        example: 'Childhood obesity has become a major public health concern.',
+        cefr_level: 'C1',
+        grammar_note: 'uncountable noun'
+      }
+    ],
+    extra_examples: [
+      'The report highlights the link between obesity and heart disease.',
+      'A diet high in processed foods is a key contributor to obesity.'
+    ],
+    grammar_note: 'uncountable noun',
+    base_verb: '',
+    particles: '',
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: 'C1',
+    register: 'academic',
+    formality_score: 4,
+    connotation: 'negative',
+    word_family: {
+      verb: [],
+      noun: ['obesity'],
+      adjective: ['obese'],
+      adverb: []
+    },
+    collocations: [
+      { collocation: 'childhood obesity', example: 'Combating childhood obesity requires a combination of diet and physical activity.' },
+      { collocation: 'combat obesity', example: 'Governments are introducing sugar taxes to help combat obesity.' }
+    ],
+    semantic_field_id: 'health-disease',
+    semantic_field_label: 'Health & Disease',
+    semantic_field_words: [
+      { word: 'obesity', cefr: 'C1', register: 'academic' },
+      { word: 'malnutrition', cefr: 'C1', register: 'academic' }
+    ],
+    register_synonyms: [
+      { word: 'overweightness', register: 'neutral', cefr: 'B2' }
+    ],
+    folder_ids: ['folder-4'],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: 'Added default database entry.'
+  },
+  {
     id: 'entry-adversity',
     entry_type: 'word',
     word: 'adversity',
