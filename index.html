@@ -2588,6 +2588,59 @@ IMPORTANT: If the Free Dictionary context contains a valid IPA pronunciation (ip
                         setIsReviewSessionStarted(true);
                       };
 
+                      const handleStartExtraSession = (mode) => {
+                        let list = [];
+                        if (mode === 'ahead') {
+                          list = entries.filter(e => {
+                            if (!e.review) return false;
+                            if (e.is_learned) return false;
+                            if (reviewFilterFolder !== 'ALL' && (!e.folder_ids || !e.folder_ids.includes(reviewFilterFolder))) return false;
+                            if (reviewFilterType !== 'ALL' && e.entry_type !== reviewFilterType) return false;
+                            if (reviewFilterCefr !== 'ALL' && e.cefr_level !== reviewFilterCefr) return false;
+                            return e.review.due_date > todayStr;
+                          });
+                        } else if (mode === 'difficult') {
+                          list = entries.filter(e => {
+                            if (!e.review) return false;
+                            if (e.is_learned) return false;
+                            if (reviewFilterFolder !== 'ALL' && (!e.folder_ids || !e.folder_ids.includes(reviewFilterFolder))) return false;
+                            if (reviewFilterType !== 'ALL' && e.entry_type !== reviewFilterType) return false;
+                            if (reviewFilterCefr !== 'ALL' && e.cefr_level !== reviewFilterCefr) return false;
+                            return (e.review.ease_factor < 2.2 || e.review.repetition_count > 4);
+                          });
+                        } else if (mode === 'mastered') {
+                          list = entries.filter(e => {
+                            if (reviewFilterFolder !== 'ALL' && (!e.folder_ids || !e.folder_ids.includes(reviewFilterFolder))) return false;
+                            if (reviewFilterType !== 'ALL' && e.entry_type !== reviewFilterType) return false;
+                            if (reviewFilterCefr !== 'ALL' && e.cefr_level !== reviewFilterCefr) return false;
+                            return e.is_learned === true;
+                          });
+                        } else if (mode === 'all') {
+                          list = entries.filter(e => {
+                            if (!e.review) return false;
+                            if (reviewFilterFolder !== 'ALL' && (!e.folder_ids || !e.folder_ids.includes(reviewFilterFolder))) return false;
+                            if (reviewFilterType !== 'ALL' && e.entry_type !== reviewFilterType) return false;
+                            if (reviewFilterCefr !== 'ALL' && e.cefr_level !== reviewFilterCefr) return false;
+                            return true;
+                          });
+                        }
+
+                        if (list.length > 0) {
+                          const shuffled = [...list].sort(() => Math.random() - 0.5);
+                          setReviewQueue(shuffled);
+                          setCurrentReviewIndex(0);
+                          setIsCardRevealed(false);
+                          setIsReviewSessionStarted(true);
+                          if (typeof showToastGlobal === 'function') {
+                            showToastGlobal(`Started ${mode.toUpperCase()} review session with ${list.length} cards!`, 'success');
+                          }
+                        } else {
+                          if (typeof showToastGlobal === 'function') {
+                            showToastGlobal('No matching cards found for this extra study mode!', 'info');
+                          }
+                        }
+                      };
+
                       return (
                         <>
                           <div className="review-stat-summary">
@@ -2600,6 +2653,54 @@ IMPORTANT: If the Free Dictionary context contains a valid IPA pronunciation (ip
                               <span className="review-stat-lbl">Due Today</span>
                             </div>
                           </div>
+
+                          {dueMatched === 0 && reviewFilterDueOnly && (
+                            <div className="extra-study-plans-card" style={{ marginTop: '0px', marginBottom: '16px', padding: '16px', background: 'var(--accent-light)', border: '1px solid var(--accent)', borderRadius: '8px', textAlign: 'left' }}>
+                              <h3 style={{ fontSize: '15px', color: 'var(--accent)', fontWeight: '700', margin: '0 0 8px 0', display: 'flex', alignItems: 'center', gap: '6px' }}>
+                                🎉 All caught up for today!
+                              </h3>
+                              <p style={{ fontSize: '13px', color: 'var(--text-main)', margin: '0 0 12px 0', lineHeight: '1.4' }}>
+                                You have 0 due reviews left. Choose one of our extra training plans to keep sharpening your IELTS vocabulary:
+                              </p>
+                              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px' }}>
+                                <button 
+                                  className="btn btn-secondary btn-sm"
+                                  style={{ padding: '8px 10px', fontSize: '12.5px', display: 'flex', flexDirection: 'column', alignItems: 'flex-start', textAlign: 'left', height: 'auto', gap: '2px' }}
+                                  onClick={() => handleStartExtraSession('ahead')}
+                                >
+                                  <strong>🚀 Study Ahead</strong>
+                                  <span style={{ fontSize: '10px', color: 'var(--text-muted)' }}>Review upcoming words scheduled for next week.</span>
+                                </button>
+                                
+                                <button 
+                                  className="btn btn-secondary btn-sm"
+                                  style={{ padding: '8px 10px', fontSize: '12.5px', display: 'flex', flexDirection: 'column', alignItems: 'flex-start', textAlign: 'left', height: 'auto', gap: '2px' }}
+                                  onClick={() => handleStartExtraSession('difficult')}
+                                >
+                                  <strong>🔥 Hardest Words</strong>
+                                  <span style={{ fontSize: '10px', color: 'var(--text-muted)' }}>Drill high-error rate vocabulary.</span>
+                                </button>
+                                
+                                <button 
+                                  className="btn btn-secondary btn-sm"
+                                  style={{ padding: '8px 10px', fontSize: '12.5px', display: 'flex', flexDirection: 'column', alignItems: 'flex-start', textAlign: 'left', height: 'auto', gap: '2px' }}
+                                  onClick={() => handleStartExtraSession('mastered')}
+                                >
+                                  <strong>🏆 Mastered Drill</strong>
+                                  <span style={{ fontSize: '10px', color: 'var(--text-muted)' }}>Refresh cards marked as completed/done.</span>
+                                </button>
+                                
+                                <button 
+                                  className="btn btn-secondary btn-sm"
+                                  style={{ padding: '8px 10px', fontSize: '12.5px', display: 'flex', flexDirection: 'column', alignItems: 'flex-start', textAlign: 'left', height: 'auto', gap: '2px' }}
+                                  onClick={() => handleStartExtraSession('all')}
+                                >
+                                  <strong>🌍 Free Study Mode</strong>
+                                  <span style={{ fontSize: '10px', color: 'var(--text-muted)' }}>Review all vocabulary in your vault randomly.</span>
+                                </button>
+                              </div>
+                            </div>
+                          )}
 
                           <button 
                             className="btn btn-primary review-start-btn" 
