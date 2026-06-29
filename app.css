@@ -2526,6 +2526,120 @@ body {
   }
 }
 
+/* --- TABLET AND RESPONSIVE STYLING UPGRADES --- */
+@media (max-width: 1024px) {
+  /* Shrink sidebar to leave more space for the grid */
+  .sidebar {
+    width: 220px;
+  }
+  .sidebar-header {
+    padding: 16px 12px;
+  }
+  .sidebar-title {
+    font-size: 20px;
+    gap: 6px;
+  }
+  .sidebar-nav {
+    padding: 12px 8px;
+    gap: 4px;
+  }
+  .nav-item {
+    padding: 8px 10px;
+    font-size: 13px;
+  }
+  .sidebar-section {
+    padding: 12px 8px;
+    gap: 12px;
+  }
+  .folder-item {
+    padding: 6px 8px;
+    font-size: 13px;
+  }
+  
+  /* Top Nav adjustments */
+  .top-nav {
+    height: 60px;
+    padding: 0 16px;
+  }
+  .search-box-container {
+    width: 240px;
+    padding: 6px 10px;
+  }
+  .search-input {
+    font-size: 13px;
+  }
+  
+  /* Grid sizing updates to guarantee 2-column card fits */
+  .cards-grid {
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 16px;
+    padding: 16px 0;
+  }
+  .word-card {
+    padding: 16px;
+  }
+  .word-title {
+    font-size: 20px;
+  }
+  
+  /* Graph Sidebar maximize controls */
+  .graph-side-card {
+    width: 280px;
+    padding: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* On portrait tablets, change layout to horizontal header + full content */
+  #app-root {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+    height: auto;
+    border-right: none;
+    border-bottom: 2px solid var(--border-strong);
+  }
+  .sidebar-header {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--border-muted);
+  }
+  .sidebar-title {
+    font-size: 18px;
+  }
+  .sidebar-nav {
+    flex-direction: row;
+    overflow-x: auto;
+    padding: 8px 16px;
+    border-bottom: none;
+    gap: 12px;
+  }
+  .nav-item {
+    white-space: nowrap;
+    padding: 6px 12px;
+  }
+  .sidebar-section {
+    display: none; /* Hide folders panel to avoid vertical overflow, user uses filter controls */
+  }
+  .main-content {
+    height: calc(100vh - 120px);
+  }
+  .top-nav {
+    height: 50px;
+    padding: 0 12px;
+  }
+  .search-box-container {
+    width: 180px;
+  }
+  .cards-grid {
+    grid-template-columns: 1fr; /* Single column for small viewport */
+    padding: 12px 0;
+  }
+  .panel-container {
+    padding: 12px;
+  }
+}
+
 
 
 
