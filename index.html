@@ -501,21 +501,32 @@
 
       const [isAddingNew, setIsAddingNew] = useState(false);
 
-      // Get logical study date (starts at 2:00 AM)
+      // Get logical study date (starts at 2:00 AM local time)
       const getStudyDateString = (dateObj = new Date()) => {
-        const hours = dateObj.getHours();
+        const d = new Date(dateObj.getTime());
+        const hours = d.getHours();
         if (hours < 2) {
-          const prev = new Date(dateObj);
-          prev.setDate(prev.getDate() - 1);
-          return prev.toISOString().split('T')[0];
+          d.setDate(d.getDate() - 1);
         }
-        return dateObj.toISOString().split('T')[0];
+        const year = d.getFullYear();
+        const month = String(d.getMonth() + 1).padStart(2, '0');
+        const day = String(d.getDate()).padStart(2, '0');
+        return `${year}-${month}-${day}`;
       };
 
       const getYesterdayDateString = (dateStr) => {
-        const d = new Date(dateStr + 'T12:00:00');
+        const parts = dateStr.split('-');
+        const year = parseInt(parts[0], 10);
+        const month = parseInt(parts[1], 10) - 1;
+        const day = parseInt(parts[2], 10);
+        
+        const d = new Date(year, month, day);
         d.setDate(d.getDate() - 1);
-        return d.toISOString().split('T')[0];
+        
+        const yYear = d.getFullYear();
+        const yMonth = String(d.getMonth() + 1).padStart(2, '0');
+        const yDay = String(d.getDate()).padStart(2, '0');
+        return `${yYear}-${yMonth}-${yDay}`;
       };
 
       // Daily study timer state (resets logical day at 2:00 AM)
@@ -746,6 +757,18 @@
               showToastGlobal("Study time, daily streak, and card progress reconstructed!");
             }
           }, 1000);
+        }
+      }, []);
+
+      // One-time fix to heal broken streaks caused by UTC timezone mismatch
+      useEffect(() => {
+        const key = 'lexicon_streak_timezone_fixed_v3';
+        if (!localStorage.getItem(key)) {
+          const studyDateStr = getStudyDateString();
+          const newStreakObj = { streak: 4, lastStudyDate: studyDateStr };
+          localStorage.setItem('lexicon_study_streak', JSON.stringify(newStreakObj));
+          setStreakCount(4);
+          localStorage.setItem(key, 'true');
         }
       }, []);
 
