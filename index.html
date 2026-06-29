@@ -332,6 +332,68 @@
       return { masked: sentence + " (" + word + ")", answer: word, isSeparated: false };
     }
 
+    function clozeMaskSentence(sentence, word) {
+      if (!sentence || !word) return '';
+      const escapedWord = word.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
+      
+      if (word.includes(' ')) {
+        const parts = word.split(/\s+/).map(p => p.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&'));
+        const firstPart = parts[0];
+        const restParts = parts.slice(1).join('\\s+');
+        const pattern = `\\b${firstPart}(ing|ed|s|es|d)?\\s+${restParts}\\b`;
+        const regex = new RegExp(pattern, 'gi');
+        if (regex.test(sentence)) {
+          return sentence.replace(regex, '[________]');
+        }
+      }
+      
+      const regex = new RegExp(`\\b${escapedWord}(ing|ed|s|es|d)?\\b`, 'gi');
+      if (regex.test(sentence)) {
+        return sentence.replace(regex, '[________]');
+      }
+      
+      const simpleRegex = new RegExp(escapedWord, 'gi');
+      if (simpleRegex.test(sentence)) {
+        return sentence.replace(simpleRegex, '[________]');
+      }
+      
+      return sentence;
+    }
+
+    function highlightWordReact(sentence, word) {
+      if (!sentence || !word) return <span>{sentence}</span>;
+      
+      const escaped = word.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
+      let pattern = `\\b${escaped}(ing|ed|s|es|d)?\\b`;
+      if (word.includes(' ')) {
+        const parts = word.split(/\s+/).map(p => p.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&'));
+        const firstPart = parts[0];
+        const restParts = parts.slice(1).join('\\s+');
+        pattern = `\\b${firstPart}(ing|ed|s|es|d)?\\s+${restParts}\\b`;
+      }
+      
+      try {
+        const regex = new RegExp(`(${pattern})`, 'gi');
+        const parts = sentence.split(regex);
+        return (
+          <span>
+            {parts.map((part, i) => {
+              const isMatch = regex.test(part);
+              return isMatch ? (
+                <strong key={i} style={{ color: 'var(--accent)', textDecoration: 'underline', textUnderlineOffset: '3px' }}>
+                  {part}
+                </strong>
+              ) : (
+                part
+              );
+            })}
+          </span>
+        );
+      } catch (e) {
+        return <span>{sentence}</span>;
+      }
+    }
+
     function App() {
       // Load initial states from localStorage if they exist, otherwise use prefilled data
       const [entries, setEntries] = useState(() => {
@@ -539,6 +601,7 @@
       const [reviewFilterDueOnly, setReviewFilterDueOnly] = useState(true);
       const [reviewQueue, setReviewQueue] = useState([]);
       const [currentReviewIndex, setCurrentReviewIndex] = useState(0);
+      const [cardMode, setCardMode] = useState('recall'); // 'recall' or 'cloze'
       const [isCardRevealed, setIsCardRevealed] = useState(false);
       const [forecastDayIdx, setForecastDayIdx] = useState(0);
       const [speechActiveWord, setSpeechActiveWord] = useState(null); // Tracks active pronunciation
@@ -867,18 +930,41 @@
         window.speechSynthesis.speak(utterance);
       };
 
-      // Auto play US voice audio whenever a card comes up in Spaced Repetition (Review) session
+      // Determine card mode dynamically when the active card changes
+      useEffect(() => {
+        if (reviewQueue && reviewQueue.length > 0 && currentReviewIndex < reviewQueue.length) {
+          const currentEntry = reviewQueue[currentReviewIndex];
+          if (currentEntry) {
+            const count = (currentEntry.review && currentEntry.review.repetition_count) || 0;
+            // Rule:
+            // 1. If it's a completely new card (repetition_count === 0), always use Recall Mode.
+            // 2. Otherwise, 50% chance of Cloze Mode.
+            if (count === 0) {
+              setCardMode('recall');
+            } else {
+              setCardMode(Math.random() < 0.5 ? 'cloze' : 'recall');
+            }
+          }
+        }
+      }, [currentReviewIndex, reviewQueue, activeTab, isReviewSessionStarted]);
+
+      // Auto play US voice audio in Spaced Repetition based on card reveal state & mode
       useEffect(() => {
         if (activeTab === 'review' && isReviewSessionStarted && reviewQueue && reviewQueue.length > 0 && currentReviewIndex < reviewQueue.length) {
           const currentEntry = reviewQueue[currentReviewIndex];
           if (currentEntry) {
-            if ('speechSynthesis' in window) {
-              window.speechSynthesis.cancel();
+            // Play immediately in recall mode, or in cloze mode ONLY after reveal
+            const shouldPlay = cardMode === 'recall' || (cardMode === 'cloze' && isCardRevealed);
+            
+            if (shouldPlay) {
+              if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel();
+              }
+              speakWord(currentEntry.word, 'us');
             }
-            speakWord(currentEntry.word, 'us');
           }
         }
-      }, [activeTab, isReviewSessionStarted, currentReviewIndex, reviewQueue]);
+      }, [activeTab, isReviewSessionStarted, currentReviewIndex, reviewQueue, cardMode, isCardRevealed]);
 
       // Spaced Repetition helper to rotate examples after 5 reviews
       const getReviewExample = (entry) => {
@@ -2647,22 +2733,45 @@ IMPORTANT: If the Free Dictionary context contains a valid IPA pronunciation (ip
                     {reviewQueue.length > 0 && currentReviewIndex < reviewQueue.length && (
                       <div className="review-card">
                         {/* WORD FRONT */}
-                        <div className="review-card-question">
-                          <h2 className="review-word-title">{reviewQueue[currentReviewIndex].word}</h2>
-                          <div className="pronunciation-row">
-                            <span className="pron-item">
-                              UK: {reviewQueue[currentReviewIndex].ipa_uk}
-                              <button className="audio-btn" onClick={() => speakWord(reviewQueue[currentReviewIndex].word, 'uk')}>
-                                <Icon name="volume" className={speechActiveWord === `${reviewQueue[currentReviewIndex].word}-uk` ? 'speaking' : ''} />
-                              </button>
-                            </span>
-                            <span className="pron-item">
-                              US: {reviewQueue[currentReviewIndex].ipa_us}
-                              <button className="audio-btn" onClick={() => speakWord(reviewQueue[currentReviewIndex].word, 'us')}>
-                                <Icon name="volume" className={speechActiveWord === `${reviewQueue[currentReviewIndex].word}-us` ? 'speaking' : ''} />
-                              </button>
-                            </span>
-                          </div>
+                        <div className="review-card-question" style={{ display: 'flex', flexDirection: 'column', gap: '10px', alignItems: 'center' }}>
+                          {cardMode === 'cloze' ? (
+                            <>
+                              <div style={{ fontSize: '11px', fontWeight: 'bold', color: 'var(--accent)', textTransform: 'uppercase', letterSpacing: '1px', backgroundColor: 'var(--accent-light)', padding: '4px 10px', borderRadius: '4px', border: '1px solid var(--accent)' }}>
+                                Cloze: Fill in the Blank
+                              </div>
+                              {(() => {
+                                const currentEntry = reviewQueue[currentReviewIndex];
+                                const rawEx = getReviewExample(currentEntry) || currentEntry.example || '';
+                                const masked = clozeMaskSentence(rawEx, currentEntry.word);
+                                return (
+                                  <div style={{ fontSize: '16px', lineHeight: '1.6', color: 'var(--text-main)', fontStyle: 'normal', margin: '14px 0', padding: '16px', backgroundColor: 'var(--bg-app)', borderLeft: '4px solid var(--accent)', borderRadius: '6px', width: '100%', textAlign: 'left', boxSizing: 'border-box' }}>
+                                    {masked}
+                                  </div>
+                                );
+                              })()}
+                              <div style={{ fontSize: '11.5px', color: 'var(--text-muted)' }}>
+                                Recall the correct word/phrase and its spelling.
+                              </div>
+                            </>
+                          ) : (
+                            <>
+                              <h2 className="review-word-title">{reviewQueue[currentReviewIndex].word}</h2>
+                              <div className="pronunciation-row">
+                                <span className="pron-item">
+                                  UK: {reviewQueue[currentReviewIndex].ipa_uk}
+                                  <button className="audio-btn" onClick={() => speakWord(reviewQueue[currentReviewIndex].word, 'uk')}>
+                                    <Icon name="volume" className={speechActiveWord === `${reviewQueue[currentReviewIndex].word}-uk` ? 'speaking' : ''} />
+                                  </button>
+                                </span>
+                                <span className="pron-item">
+                                  US: {reviewQueue[currentReviewIndex].ipa_us}
+                                  <button className="audio-btn" onClick={() => speakWord(reviewQueue[currentReviewIndex].word, 'us')}>
+                                    <Icon name="volume" className={speechActiveWord === `${reviewQueue[currentReviewIndex].word}-us` ? 'speaking' : ''} />
+                                  </button>
+                                </span>
+                              </div>
+                            </>
+                          )}
                         </div>
 
                         {!isCardRevealed ? (
@@ -2673,6 +2782,27 @@ IMPORTANT: If the Free Dictionary context contains a valid IPA pronunciation (ip
                           <div className="review-card-answer">
                             <hr className="review-divider" />
                             
+                            {cardMode === 'cloze' && (
+                              <div style={{ textAlign: 'left', marginBottom: '14px', backgroundColor: 'var(--bg-app)', padding: '12px 16px', borderRadius: '6px', border: '1px dashed var(--accent)' }}>
+                                <span style={{ fontSize: '11px', fontWeight: 'bold', color: 'var(--text-muted)', textTransform: 'uppercase', display: 'block', marginBottom: '2px', letterSpacing: '0.5px' }}>Answer Word:</span>
+                                <h3 style={{ fontSize: '24px', margin: 0, fontWeight: '800', color: 'var(--accent)', fontFamily: 'var(--font-sans)' }}>{reviewQueue[currentReviewIndex].word}</h3>
+                                <div className="pronunciation-row" style={{ marginTop: '6px', justifyContent: 'flex-start', gap: '16px' }}>
+                                  <span className="pron-item" style={{ fontSize: '12px' }}>
+                                    UK: {reviewQueue[currentReviewIndex].ipa_uk}
+                                    <button className="audio-btn" onClick={() => speakWord(reviewQueue[currentReviewIndex].word, 'uk')}>
+                                      <Icon name="volume" className={speechActiveWord === `${reviewQueue[currentReviewIndex].word}-uk` ? 'speaking' : ''} />
+                                    </button>
+                                  </span>
+                                  <span className="pron-item" style={{ fontSize: '12px' }}>
+                                    US: {reviewQueue[currentReviewIndex].ipa_us}
+                                    <button className="audio-btn" onClick={() => speakWord(reviewQueue[currentReviewIndex].word, 'us')}>
+                                      <Icon name="volume" className={speechActiveWord === `${reviewQueue[currentReviewIndex].word}-us` ? 'speaking' : ''} />
+                                    </button>
+                                  </span>
+                                </div>
+                              </div>
+                            )}
+
                             <div style={{ display: 'flex', gap: '8px', marginBottom: '8px' }}>
                               <span className={`badge badge-cefr-${reviewQueue[currentReviewIndex].cefr_level.toLowerCase()}`}>
                                 {reviewQueue[currentReviewIndex].cefr_level}
@@ -2720,9 +2850,16 @@ IMPORTANT: If the Free Dictionary context contains a valid IPA pronunciation (ip
                                     <span className="definition-text" style={{ fontSize: '13px' }}>{d.definition}</span>
                                     {(() => {
                                       const displayedEx = index === 0 ? getReviewExample(activeItem) : d.example;
-                                      return displayedEx && (
-                                        <div className="example-sentence" style={{ fontStyle: 'italic', color: 'var(--text-muted)', fontSize: '12px' }}>
-                                          {displayedEx}
+                                      if (!displayedEx) return null;
+                                      return (
+                                        <div className="example-sentence" style={{ fontStyle: 'normal', color: 'var(--text-muted)', fontSize: '12.5px', marginTop: '2px' }}>
+                                          {cardMode === 'cloze' ? (
+                                            <>
+                                              <strong>Sentence:</strong> {highlightWordReact(displayedEx, activeItem.word)}
+                                            </>
+                                          ) : (
+                                            <span style={{ fontStyle: 'italic' }}>{displayedEx}</span>
+                                          )}
                                         </div>
                                       );
                                     })()}
