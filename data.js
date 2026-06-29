@@ -16,6 +16,622 @@ const INITIAL_FOLDERS = [
 
 const INITIAL_ENTRIES = [
   {
+    id: 'entry-plummet',
+    entry_type: 'word',
+    word: 'plummet',
+    ipa_uk: '/ˈplʌm.ɪt/',
+    ipa_us: '/ˈplʌm.ɪt/',
+    definition: 'to fall very quickly and suddenly',
+    definition_source: 'cambridge',
+    example: 'House prices have plummeted in recent months.',
+    definitions: [
+      {
+        definition: 'to fall very quickly and suddenly',
+        example: 'House prices have plummeted in recent months.',
+        cefr_level: 'C1',
+        grammar_note: 'intransitive verb'
+      }
+    ],
+    extra_examples: [
+      'The plane plummeted to the ground after its engines failed.',
+      'Temperatures plummeted to minus fifteen degrees last night.'
+    ],
+    grammar_note: 'intransitive verb',
+    base_verb: '',
+    particles: '',
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: 'C1',
+    register: 'neutral',
+    formality_score: 3,
+    connotation: 'negative',
+    word_family: {
+      verb: ['plummet'],
+      noun: [],
+      adjective: [],
+      adverb: []
+    },
+    collocations: [
+      { collocation: 'plummet sharply', example: 'Sales plummeted sharply during the winter holidays.' },
+      { collocation: 'plummet to a record low', example: 'The stock value plummeted to a record low yesterday.' }
+    ],
+    semantic_field_id: 'decrease-fall',
+    semantic_field_label: 'Decrease & Fall',
+    semantic_field_words: [
+      { word: 'plummet', cefr: 'C1', register: 'neutral' },
+      { word: 'collapse', cefr: 'B2', register: 'neutral' }
+    ],
+    register_synonyms: [
+      { word: 'drop', register: 'neutral', cefr: 'A2' },
+      { word: 'fall', register: 'neutral', cefr: 'A1' },
+      { word: 'plunge', register: 'formal', cefr: 'C1' }
+    ],
+    folder_ids: ['folder-2', 'folder-4'],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: 'Added default database entry.'
+  },
+  {
+    id: 'entry-inscription',
+    entry_type: 'word',
+    word: 'inscription',
+    ipa_uk: '/ɪnˈskrɪp.ʃən/',
+    ipa_us: '/ɪnˈskrɪp.ʃən/',
+    definition: 'words that are written or cut into something, especially a stone or metal monument',
+    definition_source: 'cambridge',
+    example: 'The inscription on the gravestone was barely legible.',
+    definitions: [
+      {
+        definition: 'words that are written or cut into something, especially a stone or metal monument',
+        example: 'The inscription on the gravestone was barely legible.',
+        cefr_level: 'C2',
+        grammar_note: 'countable noun'
+      }
+    ],
+    extra_examples: [
+      'Archaeologists deciphered the ancient Greek inscription.',
+      'There was a special inscription in the front of the book.'
+    ],
+    grammar_note: 'countable noun',
+    base_verb: '',
+    particles: '',
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: 'C2',
+    register: 'academic',
+    formality_score: 4,
+    connotation: 'neutral',
+    word_family: {
+      verb: ['inscribe'],
+      noun: ['inscription'],
+      adjective: [],
+      adverb: []
+    },
+    collocations: [
+      { collocation: 'ancient inscription', example: 'The team discovered an ancient inscription in the ruins.' },
+      { collocation: 'decipher an inscription', example: 'It took scholars decades to decipher the inscription.' }
+    ],
+    semantic_field_id: 'writing-archeology',
+    semantic_field_label: 'Writing & Archaeology',
+    semantic_field_words: [
+      { word: 'inscription', cefr: 'C2', register: 'academic' },
+      { word: 'cuneiform', cefr: 'C2', register: 'academic' }
+    ],
+    register_synonyms: [
+      { word: 'carving', register: 'neutral', cefr: 'B2' },
+      { word: 'writing', register: 'neutral', cefr: 'A1' }
+    ],
+    folder_ids: ['folder-4'],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: 'Added default database entry.'
+  },
+  {
+    id: 'entry-stamp',
+    entry_type: 'word',
+    word: 'stamp',
+    ipa_uk: '/stæmp/',
+    ipa_us: '/stæmp/',
+    definition: 'to print or mark something with a tool; a tool used for printing or marking',
+    definition_source: 'cambridge',
+    example: 'The passport officer stamped his passport with a red entry visa.',
+    definitions: [
+      {
+        definition: 'to print or mark something with a tool',
+        example: 'The passport officer stamped his passport with a red entry visa.',
+        cefr_level: 'B2',
+        grammar_note: 'transitive verb'
+      },
+      {
+        definition: 'a tool used for printing or marking; the mark made by such a tool',
+        example: 'The seal is printed on using a wooden stamp.',
+        cefr_level: 'B2',
+        grammar_note: 'countable noun'
+      }
+    ],
+    extra_examples: [
+      'She stamped the letter and dropped it in the mailbox.',
+      'He stamped his foot in frustration.'
+    ],
+    grammar_note: 'transitive verb / countable noun',
+    base_verb: '',
+    particles: '',
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: 'B2',
+    register: 'neutral',
+    formality_score: 3,
+    connotation: 'neutral',
+    word_family: {
+      verb: ['stamp'],
+      noun: ['stamp', 'stamping'],
+      adjective: [],
+      adverb: []
+    },
+    collocations: [
+      { collocation: 'stamp a seal', example: 'The scribe would stamp a seal onto the hot wax.' },
+      { collocation: 'stamp of approval', example: 'The project received the final stamp of approval from the board.' }
+    ],
+    semantic_field_id: 'marking-printing',
+    semantic_field_label: 'Marking & Printing',
+    semantic_field_words: [
+      { word: 'stamp', cefr: 'B2', register: 'neutral' },
+      { word: 'emboss', cefr: 'C2', register: 'formal' }
+    ],
+    register_synonyms: [
+      { word: 'mark', register: 'neutral', cefr: 'A2' },
+      { word: 'seal', register: 'formal', cefr: 'B2' }
+    ],
+    folder_ids: ['folder-4'],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: 'Added default database entry.'
+  },
+  {
+    id: 'entry-cuneiform',
+    entry_type: 'word',
+    word: 'cuneiform',
+    ipa_uk: '/ˈkjuː.nɪ.fɔːm/',
+    ipa_us: '/ˈkjuː.ni.fɔːrm/',
+    definition: 'relating to the wedge-shaped characters used in ancient writing systems of Mesopotamia (also misspelled as cueinform)',
+    definition_source: 'cambridge',
+    example: 'The clay tablets were inscribed with cuneiform script.',
+    definitions: [
+      {
+        definition: 'wedge-shaped writing system used in the ancient Middle East',
+        example: 'The clay tablets were inscribed with cuneiform script.',
+        cefr_level: 'C2',
+        grammar_note: 'uncountable noun / adjective'
+      }
+    ],
+    extra_examples: [
+      'Early Mesopotamian laws were written in cuneiform.',
+      'Cuneiform was written by pressing a stylus into damp clay.'
+    ],
+    grammar_note: 'uncountable noun / adjective',
+    base_verb: '',
+    particles: '',
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: 'C2',
+    register: 'academic',
+    formality_score: 4,
+    connotation: 'neutral',
+    word_family: {
+      verb: [],
+      noun: ['cuneiform'],
+      adjective: ['cuneiform'],
+      adverb: []
+    },
+    collocations: [
+      { collocation: 'cuneiform tablets', example: 'A huge collection of cuneiform tablets was found in Nineveh.' },
+      { collocation: 'cuneiform script', example: 'He is one of the few scholars who can translate cuneiform script.' }
+    ],
+    semantic_field_id: 'writing-archeology',
+    semantic_field_label: 'Writing & Archaeology',
+    semantic_field_words: [
+      { word: 'cuneiform', cefr: 'C2', register: 'academic' },
+      { word: 'inscription', cefr: 'C2', register: 'academic' }
+    ],
+    register_synonyms: [
+      { word: 'hieroglyphics', register: 'formal', cefr: 'C2' }
+    ],
+    folder_ids: ['folder-4'],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: 'Added default database entry.'
+  },
+  {
+    id: 'entry-excavate',
+    entry_type: 'word',
+    word: 'excavate',
+    ipa_uk: '/ˈek.skə.veɪt/',
+    ipa_us: '/ˈek.skə.veɪt/',
+    definition: 'to dig a hole or channel in the ground, especially to find ancient remains',
+    definition_source: 'cambridge',
+    example: 'Archaeologists are excavating an ancient Roman villa.',
+    definitions: [
+      {
+        definition: 'to dig a hole or channel in the ground, especially to find ancient remains',
+        example: 'Archaeologists are excavating an ancient Roman villa.',
+        cefr_level: 'C1',
+        grammar_note: 'transitive verb'
+      }
+    ],
+    extra_examples: [
+      'The team plans to excavate the burial mound next spring.',
+      'The canal was excavated using heavy machinery.'
+    ],
+    grammar_note: 'transitive verb',
+    base_verb: '',
+    particles: '',
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: 'C1',
+    register: 'academic',
+    formality_score: 4,
+    connotation: 'neutral',
+    word_family: {
+      verb: ['excavate'],
+      noun: ['excavation', 'excavator'],
+      adjective: [],
+      adverb: []
+    },
+    collocations: [
+      { collocation: 'excavate a site', example: 'They had to obtain a special permit to excavate the historical site.' },
+      { collocation: 'fully excavate', example: 'The tomb was fully excavated by British archaeologists in 1922.' }
+    ],
+    semantic_field_id: 'archeology-digging',
+    semantic_field_label: 'Archaeological Excavation',
+    semantic_field_words: [
+      { word: 'excavate', cefr: 'C1', register: 'academic' },
+      { word: 'unearth', cefr: 'C1', register: 'formal' }
+    ],
+    register_synonyms: [
+      { word: 'dig up', register: 'neutral', cefr: 'B1' },
+      { word: 'unearth', register: 'formal', cefr: 'C1' }
+    ],
+    folder_ids: ['folder-4'],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: 'Added default database entry.'
+  },
+  {
+    id: 'entry-die-out',
+    entry_type: 'phrasal_verb',
+    word: 'die out',
+    ipa_uk: '/daɪ aʊt/',
+    ipa_us: '/daɪ aʊt/',
+    definition: 'to become less common and finally stop existing completely',
+    definition_source: 'cambridge',
+    example: 'Many ancient languages and dialects are dying out due to globalization.',
+    definitions: [
+      {
+        definition: 'to become less common and finally stop existing completely',
+        example: 'Many ancient languages and dialects are dying out due to globalization.',
+        cefr_level: 'B2',
+        grammar_note: 'intransitive phrasal verb'
+      }
+    ],
+    extra_examples: [
+      'Dinosaurs died out millions of years ago.',
+      'This local custom has completely died out now.'
+    ],
+    grammar_note: 'intransitive phrasal verb',
+    base_verb: 'die',
+    particles: 'out',
+    conjugations: {
+      present_participle: 'dying out',
+      past_tense: 'died out',
+      past_participle: 'died out'
+    },
+    related_phrasal_verbs: ['wipe out', 'fade away'],
+    cefr_level: 'B2',
+    register: 'neutral',
+    formality_score: 3,
+    connotation: 'negative',
+    word_family: null,
+    collocations: [
+      { collocation: 'die out completely', example: 'Without preservation efforts, the rare orchid species could die out completely.' },
+      { collocation: 'gradually die out', example: 'Traditional weaving skills are gradually dying out as younger generations move to cities.' }
+    ],
+    semantic_field_id: 'extinction-disappearance',
+    semantic_field_label: 'Extinction & Disappearance',
+    semantic_field_words: [
+      { word: 'die out', cefr: 'B2', register: 'neutral' },
+      { word: 'become extinct', cefr: 'C1', register: 'academic' }
+    ],
+    register_synonyms: [
+      { word: 'disappear', register: 'neutral', cefr: 'A2' },
+      { word: 'become extinct', register: 'formal', cefr: 'C1' },
+      { word: 'go extinct', register: 'neutral', cefr: 'B2' }
+    ],
+    folder_ids: ['folder-5', 'folder-3'],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: 'Added default database entry.'
+  },
+  {
+    id: 'entry-unintelligible',
+    entry_type: 'word',
+    word: 'unintelligible',
+    ipa_uk: '/ˌʌn.ɪnˈtel.ɪ.dʒə.bəl/',
+    ipa_us: '/ˌʌn.inˈtel.ə.dʒə.bəl/',
+    definition: 'not able to be understood',
+    definition_source: 'cambridge',
+    example: 'The faded inscriptions on the stone tablet were completely unintelligible.',
+    definitions: [
+      {
+        definition: 'not able to be understood',
+        example: 'The faded inscriptions on the stone tablet were completely unintelligible.',
+        cefr_level: 'C2',
+        grammar_note: 'adjective'
+      }
+    ],
+    extra_examples: [
+      'He muttered something unintelligible and walked away.',
+      'The recording was noisy and rendered the witness statement unintelligible.'
+    ],
+    grammar_note: 'adjective',
+    base_verb: '',
+    particles: '',
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: 'C2',
+    register: 'formal',
+    formality_score: 4,
+    connotation: 'negative',
+    word_family: {
+      verb: [],
+      noun: ['unintelligibility'],
+      adjective: ['unintelligible', 'intelligible'],
+      adverb: ['unintelligibly']
+    },
+    collocations: [
+      { collocation: 'completely unintelligible', example: 'The dialect was so thick it was completely unintelligible to outsiders.' },
+      { collocation: 'render unintelligible', example: 'Water damage had rendered the letters on the paper unintelligible.' }
+    ],
+    semantic_field_id: 'clarity-comprehension',
+    semantic_field_label: 'Clarity & Comprehension',
+    semantic_field_words: [
+      { word: 'unintelligible', cefr: 'C2', register: 'formal' },
+      { word: 'obscure', cefr: 'C1', register: 'academic' }
+    ],
+    register_synonyms: [
+      { word: 'unclear', register: 'neutral', cefr: 'A2' },
+      { word: 'incomprehensible', register: 'formal', cefr: 'C1' }
+    ],
+    folder_ids: ['folder-4'],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: 'Added default database entry.'
+  },
+  {
+    id: 'entry-inscribe',
+    entry_type: 'word',
+    word: 'inscribe',
+    ipa_uk: '/ɪnˈskraɪb/',
+    ipa_us: '/ɪnˈskraɪb/',
+    definition: 'to write or cut words on something, especially a hard surface',
+    definition_source: 'cambridge',
+    example: 'His name was inscribed on the silver trophy.',
+    definitions: [
+      {
+        definition: 'to write or cut words on something, especially a hard surface',
+        example: 'His name was inscribed on the silver trophy.',
+        cefr_level: 'C2',
+        grammar_note: 'transitive verb'
+      }
+    ],
+    extra_examples: [
+      'The jeweler inscribed their wedding date inside the rings.',
+      'A message of thanks was inscribed on the commemorative plaque.'
+    ],
+    grammar_note: 'transitive verb',
+    base_verb: '',
+    particles: '',
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: 'C2',
+    register: 'academic',
+    formality_score: 4,
+    connotation: 'neutral',
+    word_family: {
+      verb: ['inscribe'],
+      noun: ['inscription'],
+      adjective: [],
+      adverb: []
+    },
+    collocations: [
+      { collocation: 'inscribe with', example: 'The monument was inscribed with the names of fallen soldiers.' },
+      { collocation: 'inscribe a name', example: 'He asked the watchmaker to inscribe his initials on the back.' }
+    ],
+    semantic_field_id: 'writing-archeology',
+    semantic_field_label: 'Writing & Archaeology',
+    semantic_field_words: [
+      { word: 'inscribe', cefr: 'C2', register: 'academic' },
+      { word: 'carve', cefr: 'B2', register: 'neutral' }
+    ],
+    register_synonyms: [
+      { word: 'carve', register: 'neutral', cefr: 'B2' },
+      { word: 'write', register: 'neutral', cefr: 'A1' },
+      { word: 'engrave', register: 'formal', cefr: 'C1' }
+    ],
+    folder_ids: ['folder-4'],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: 'Added default database entry.'
+  },
+  {
+    id: 'entry-cylinder',
+    entry_type: 'word',
+    word: 'cylinder',
+    ipa_uk: '/ˈsɪl.ɪn.dər/',
+    ipa_us: '/ˈsɪl.ɪn.dɚ/',
+    definition: 'a solid or hollow tube-shaped object with circular ends',
+    definition_source: 'cambridge',
+    example: 'The ancient seals were carved on small stone cylinders.',
+    definitions: [
+      {
+        definition: 'a solid or hollow tube-shaped object with circular ends',
+        example: 'The ancient seals were carved on small stone cylinders.',
+        cefr_level: 'B2',
+        grammar_note: 'countable noun'
+      }
+    ],
+    extra_examples: [
+      'The engine has four cylinders.',
+      'The oxygen was stored in a large steel cylinder.'
+    ],
+    grammar_note: 'countable noun',
+    base_verb: '',
+    particles: '',
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: 'B2',
+    register: 'neutral',
+    formality_score: 3,
+    connotation: 'neutral',
+    word_family: {
+      verb: [],
+      noun: ['cylinder'],
+      adjective: ['cylindrical'],
+      adverb: []
+    },
+    collocations: [
+      { collocation: 'cylinder seal', example: 'Mesopotamian merchants used cylinder seals to stamp documents.' },
+      { collocation: 'cylindrical shape', example: 'The monument had a tall cylindrical shape that stood out in the desert.' }
+    ],
+    semantic_field_id: 'geometry-shapes',
+    semantic_field_label: 'Geometry & Shapes',
+    semantic_field_words: [
+      { word: 'cylinder', cefr: 'B2', register: 'neutral' },
+      { word: 'sphere', cefr: 'B2', register: 'neutral' }
+    ],
+    register_synonyms: [
+      { word: 'tube', register: 'neutral', cefr: 'B1' }
+    ],
+    folder_ids: ['folder-4'],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: 'Added default database entry.'
+  },
+  {
+    id: 'entry-prolific',
+    entry_type: 'word',
+    word: 'prolific',
+    ipa_uk: '/prəˈlɪf.ɪk/',
+    ipa_us: '/prəˈlɪf.ɪk/',
+    definition: 'producing a great number or amount of something (also misspelled as profilic)',
+    definition_source: 'cambridge',
+    example: 'He was a prolific writer, producing more than three hundred books in his lifetime.',
+    definitions: [
+      {
+        definition: 'producing a great number or amount of something',
+        example: 'He was a prolific writer, producing more than three hundred books in his lifetime.',
+        cefr_level: 'C1',
+        grammar_note: 'adjective'
+      }
+    ],
+    extra_examples: [
+      'Rabbits are prolific breeders.',
+      'She had a prolific career in the independent music industry.'
+    ],
+    grammar_note: 'adjective',
+    base_verb: '',
+    particles: '',
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: 'C1',
+    register: 'neutral',
+    formality_score: 3,
+    connotation: 'positive',
+    word_family: {
+      verb: [],
+      noun: ['prolificacy'],
+      adjective: ['prolific'],
+      adverb: ['prolifically']
+    },
+    collocations: [
+      { collocation: 'prolific author', example: 'As a prolific author, she published at least two novels every year.' },
+      { collocation: 'highly prolific', example: 'The ecosystem is highly prolific, supporting a diverse array of organisms.' }
+    ],
+    semantic_field_id: 'abundance-productivity',
+    semantic_field_label: 'Abundance & Productivity',
+    semantic_field_words: [
+      { word: 'prolific', cefr: 'C1', register: 'neutral' },
+      { word: 'abundant', cefr: 'B2', register: 'neutral' }
+    ],
+    register_synonyms: [
+      { word: 'productive', register: 'neutral', cefr: 'B1' },
+      { word: 'fruitful', register: 'formal', cefr: 'C1' }
+    ],
+    folder_ids: ['folder-4'],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: 'Added default database entry.'
+  },
+  {
     id: 'entry-breed',
     entry_type: 'word',
     word: 'breed',
