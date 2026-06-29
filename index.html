@@ -880,6 +880,50 @@
         }
       }, [activeTab, isReviewSessionStarted, currentReviewIndex, reviewQueue]);
 
+      // Spaced Repetition helper to rotate examples after 5 reviews
+      const getReviewExample = (entry) => {
+        if (!entry) return '';
+        const repCount = (entry.review && entry.review.repetition_count) || 0;
+        
+        let defaultEx = entry.definitions && entry.definitions[0] ? entry.definitions[0].example : entry.example;
+        
+        if (repCount <= 5) {
+          return defaultEx || '';
+        }
+        
+        const alternatives = [];
+        
+        // Gather other definitions' examples
+        if (entry.definitions && entry.definitions.length > 1) {
+          for (let i = 1; i < entry.definitions.length; i++) {
+            if (entry.definitions[i].example) {
+              alternatives.push(entry.definitions[i].example);
+            }
+          }
+        }
+        
+        // Gather extra examples
+        if (entry.extra_examples && entry.extra_examples.length > 0) {
+          entry.extra_examples.forEach(ex => alternatives.push(ex));
+        }
+        
+        // Gather collocations examples
+        if (entry.collocations && entry.collocations.length > 0) {
+          entry.collocations.forEach(c => {
+            if (c.example) {
+              alternatives.push(`${c.collocation} — e.g. ${c.example}`);
+            }
+          });
+        }
+        
+        if (alternatives.length === 0) {
+          return defaultEx || '';
+        }
+        
+        const rotIdx = Math.floor((repCount - 6) / 5) % alternatives.length;
+        return alternatives[rotIdx] || defaultEx || '';
+      };
+
       // SM-2 Spaced Repetition calculations
       const calculateSM2 = (quality, currentReview) => {
         let count = currentReview.repetition_count || 0;
@@ -2674,15 +2718,30 @@ IMPORTANT: If the Free Dictionary context contains a valid IPA pronunciation (ip
                                       )}
                                     </div>
                                     <span className="definition-text" style={{ fontSize: '13px' }}>{d.definition}</span>
-                                    {d.example && (
-                                      <div className="example-sentence" style={{ fontStyle: 'italic', color: 'var(--text-muted)', fontSize: '12px' }}>
-                                        {d.example}
-                                      </div>
-                                    )}
+                                    {(() => {
+                                      const displayedEx = index === 0 ? getReviewExample(activeItem) : d.example;
+                                      return displayedEx && (
+                                        <div className="example-sentence" style={{ fontStyle: 'italic', color: 'var(--text-muted)', fontSize: '12px' }}>
+                                          {displayedEx}
+                                        </div>
+                                      );
+                                    })()}
                                   </div>
                                 ));
                               })()}
                             </div>
+
+                            {/* EXTRA EXAMPLES */}
+                            {reviewQueue[currentReviewIndex].extra_examples && reviewQueue[currentReviewIndex].extra_examples.length > 0 && (
+                              <div style={{ textAlign: 'left', marginBottom: '12px', borderTop: '1px solid var(--border-muted)', paddingTop: '8px' }}>
+                                <strong style={{ fontSize: '12px', color: 'var(--text-main)', display: 'block', marginBottom: '4px' }}>Extra Examples:</strong>
+                                <ul style={{ margin: 0, paddingLeft: '16px', fontSize: '12.5px', color: 'var(--text-muted)', lineHeight: '1.4' }}>
+                                  {reviewQueue[currentReviewIndex].extra_examples.map((ex, idx) => (
+                                    <li key={idx} style={{ marginBottom: '4px' }}>{ex}</li>
+                                  ))}
+                                </ul>
+                              </div>
+                            )}
 
                             {/* COLLOCATIONS */}
                             {reviewQueue[currentReviewIndex].collocations && reviewQueue[currentReviewIndex].collocations.length > 0 && (
