@@ -2649,7 +2649,12 @@ IMPORTANT: If the Free Dictionary context contains a valid IPA pronunciation (ip
                             if (reviewFilterFolder !== 'ALL' && (!e.folder_ids || !e.folder_ids.includes(reviewFilterFolder))) return false;
                             if (reviewFilterType !== 'ALL' && e.entry_type !== reviewFilterType) return false;
                             if (reviewFilterCefr !== 'ALL' && e.cefr_level !== reviewFilterCefr) return false;
-                            return (e.review.ease_factor < 2.2 || e.review.repetition_count > 4);
+                            
+                            const isAgainOrHard = e.review.last_result === 'again' || e.review.last_result === 'hard';
+                            const hasBeenReset = e.review.repetition_count === 0 && e.review.last_result === 'again';
+                            const lowEase = e.review.ease_factor < 2.5;
+                            const shortInterval = e.review.repetition_count > 1 && e.review.interval_days <= 3;
+                            return isAgainOrHard || hasBeenReset || lowEase || shortInterval;
                           });
                         } else if (mode === 'mastered') {
                           list = entries.filter(e => {
