@@ -5,14 +5,14 @@ const INITIAL_FOLDERS = [
   { id: 'folder-1', name: 'Law & Policy', color: '#DBCDF0', emoji: '⚖️', description: 'Legislation, judicial processes, constitutional rights, and official regulations.', created_at: new Date().toISOString(), word_count: 8 },
   { id: 'folder-2', name: 'Economics & Statistics', color: '#FAEDCB', emoji: '📈', description: 'Financial theories, trade data, economic policy, market dynamics, and quantitative metrics.', created_at: new Date().toISOString(), word_count: 12 },
   { id: 'folder-3', name: 'Environment & Ecology', color: '#C9E4DE', emoji: '🌱', description: 'Climate change, biodiversity, environmental preservation, ecosystems, and conservation strategies.', created_at: new Date().toISOString(), word_count: 5 },
-  { id: 'folder-4', name: 'Academic Writing (Task 2)', color: '#C6DEF1', emoji: '✍️', description: 'Sophisticated vocabulary and idioms tailored for high-scoring IELTS Writing Task 2 responses.', created_at: new Date().toISOString(), word_count: 15 },
+  { id: 'folder-4', name: 'Academic Writing (Task 2)', color: '#C6DEF1', emoji: '✍️', description: 'Sophisticated vocabulary and idioms tailored for high-scoring IELTS Writing Task 2 responses.', created_at: new Date().toISOString(), word_count: 27 },
   { id: 'folder-5', name: 'Phrasal Verbs & Idioms', color: '#F7D9C4', emoji: '💬', description: 'Common English phrasal verbs and idiomatic expressions for informal or spoken contexts.', created_at: new Date().toISOString(), word_count: 8 },
   { id: 'folder-6', name: 'Maps & Diagrams', color: '#F2C6DE', emoji: '🗺️', description: 'Spatial descriptions, maps, process flowcharts, and technical diagrams.', created_at: new Date().toISOString(), word_count: 0 },
   { id: 'folder-speaking-work-study', name: 'Speaking: Work & Study', color: '#C6DEF1', emoji: '🏫', description: 'Phrasal verbs and colloquial expressions for describing academic pursuits and careers.', created_at: new Date().toISOString(), word_count: 2 },
   { id: 'folder-speaking-leisure-travel', name: 'Speaking: Leisure & Travel', color: '#C9E4DE', emoji: '✈️', description: 'Speaking phrasal verbs for describing vacationing, sightseeing, and hobbies.', created_at: new Date().toISOString(), word_count: 2 },
   { id: 'folder-speaking-relationships', name: 'Speaking: Relationships & Life', color: '#F2C6DE', emoji: '👥', description: 'Phrasal verbs for describing social connections, relatives, and childhood memories.', created_at: new Date().toISOString(), word_count: 2 },
   { id: 'folder-science', name: 'Science & Technology', color: '#DBCDF0', emoji: '🔬', description: 'Vocabulary and collocations related to scientific research, breakthroughs, technology, and paradigm shifts.', created_at: new Date().toISOString(), word_count: 6 },
-  { id: 'folder-task2-phrases', name: 'Task 2 Phrases', color: '#F7D9C4', emoji: '📝', description: 'Key academic phrases, collocations, and idioms tailored for Writing Task 2 essays.', created_at: new Date().toISOString(), word_count: 3 }
+  { id: 'folder-task2-phrases', name: 'Task 2 Phrases', color: '#F7D9C4', emoji: '📝', description: 'Key academic phrases, collocations, and idioms tailored for Writing Task 2 essays.', created_at: new Date().toISOString(), word_count: 15 }
 ];
 
 const INITIAL_ENTRIES = [
@@ -6506,6 +6506,705 @@ const INITIAL_ENTRIES = [
       { collocation: 'make an assertion', example: 'The scientist made an assertion that the new compound is completely non-toxic.' },
       { collocation: 'support an assertion', example: 'The researcher gathered substantial statistical data to support his assertion.' }
     ],
+  },
+  {
+    id: 'entry-stringent-rules',
+    entry_type: 'word',
+    word: 'impose stringent rules',
+    ipa_uk: '/ɪmˈpəʊz ˈstrɪn.dʒənt ruːlz/',
+    ipa_us: '/ɪmˈpoʊz ˈstrɪn.dʒənt ruːlz/',
+    definition: 'to introduce or enforce very strict, precise, and rigorous regulations that must be obeyed',
+    definition_source: 'cambridge',
+    example: 'Governments must impose stringent rules on industrial waste disposal to prevent ecological damage.',
+    definitions: [
+      {
+        definition: 'to introduce or enforce very strict, precise, and rigorous regulations that must be obeyed',
+        example: 'Governments must impose stringent rules on industrial waste disposal to prevent ecological damage.',
+        cefr_level: 'C1',
+        grammar_note: 'verb phrase'
+      }
+    ],
+    extra_examples: [
+      'The academic committee decided to impose stringent rules regarding academic integrity and plagiarism.',
+      'Many corporations are forced to impose stringent rules on safety to satisfy insurance guidelines.'
+    ],
+    grammar_note: 'verb phrase',
+    base_verb: '',
+    particles: '',
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: 'C1',
+    register: 'formal',
+    formality_score: 4,
+    connotation: 'neutral',
+    word_family: {
+      verb: ['impose'],
+      noun: ['imposition', 'stringency'],
+      adjective: ['stringent'],
+      adverb: ['stringently']
+    },
+    collocations: [
+      { collocation: 'impose stringent regulations', example: 'Local authorities impose stringent regulations on building heights.' }
+    ],
+    semantic_field_id: 'rules-discipline',
+    semantic_field_label: 'Rules & Discipline',
+    semantic_field_words: [
+      { word: 'impose stringent rules', cefr: 'C1', register: 'formal' }
+    ],
+    register_synonyms: [
+      { word: 'strict rules', register: 'neutral', cefr: 'B1' }
+    ],
+    folder_ids: ['folder-4', 'folder-task2-phrases'],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: 'Suggested by AI for Writing Task 2 rules/discipline topic.'
+  },
+  {
+    id: 'entry-enforce-compliance',
+    entry_type: 'word',
+    word: 'enforce compliance',
+    ipa_uk: '/ɪnˈfɔːs kəmˈplaɪ.əns/',
+    ipa_us: '/ɪnˈfɔːrs kəmˈplaɪ.əns/',
+    definition: 'to compel obedience or adherence to a specific law, rule, standard, or agreement',
+    definition_source: 'cambridge',
+    example: 'School administrations should enforce compliance with code of conduct policies to create a harmonious learning environment.',
+    definitions: [
+      {
+        definition: 'to compel obedience or adherence to a specific law, rule, standard, or agreement',
+        example: 'School administrations should enforce compliance with code of conduct policies to create a harmonious learning environment.',
+        cefr_level: 'C1',
+        grammar_note: 'verb phrase'
+      }
+    ],
+    extra_examples: [
+      'Regulators struggle to enforce compliance when companies operate across multiple national borders.',
+      'The security team was hired specifically to enforce compliance with safety codes during the construction.'
+    ],
+    grammar_note: 'verb phrase',
+    base_verb: '',
+    particles: '',
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: 'C1',
+    register: 'formal',
+    formality_score: 4,
+    connotation: 'neutral',
+    word_family: {
+      verb: ['enforce', 'comply'],
+      noun: ['enforcement', 'compliance'],
+      adjective: ['enforceable', 'compliant'],
+      adverb: []
+    },
+    collocations: [
+      { collocation: 'enforce compliance with regulations', example: 'Inspector duties are to enforce compliance with building regulations.' }
+    ],
+    semantic_field_id: 'rules-discipline',
+    semantic_field_label: 'Rules & Discipline',
+    semantic_field_words: [
+      { word: 'enforce compliance', cefr: 'C1', register: 'formal' }
+    ],
+    register_synonyms: [
+      { word: 'make people obey', register: 'informal', cefr: 'A2' }
+    ],
+    folder_ids: ['folder-4', 'folder-task2-phrases'],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: 'Suggested by AI for Writing Task 2 rules/discipline topic.'
+  },
+  {
+    id: 'entry-restrict-autonomy',
+    entry_type: 'word',
+    word: 'restrict individual autonomy',
+    ipa_uk: '/rɪˈstrɪkt ˌɪn.dɪˈvɪdʒ.u.əl ɔːˈtɒn.ə.mi/',
+    ipa_us: '/rɪˈstrɪkt ˌɪn.dəˈvɪdʒ.u.əl ɑːˈtɑː.nə.mi/',
+    definition: 'to limit a person's freedom or independence to make their own choices and act self-governingly',
+    definition_source: 'cambridge',
+    example: 'Opponents argue that locking teenagers into rigid schedules during school hours restricts individual autonomy.',
+    definitions: [
+      {
+        definition: 'to limit a person's freedom or independence to make their own choices and act self-governingly',
+        example: 'Opponents argue that locking teenagers into rigid schedules during school hours restricts individual autonomy.',
+        cefr_level: 'C2',
+        grammar_note: 'verb phrase'
+      }
+    ],
+    extra_examples: [
+      'Stringent guidelines can sometimes restrict individual autonomy of teachers in the classroom.',
+      'Does monitoring employee emails restrict individual autonomy to an unethical degree?'
+    ],
+    grammar_note: 'verb phrase',
+    base_verb: '',
+    particles: '',
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: 'C2',
+    register: 'formal',
+    formality_score: 5,
+    connotation: 'negative',
+    word_family: {
+      verb: ['restrict'],
+      noun: ['restriction', 'autonomy'],
+      adjective: ['restrictive', 'autonomous'],
+      adverb: ['autonomously']
+    },
+    collocations: [
+      { collocation: 'severely restrict autonomy', example: 'The parental controls severely restrict autonomy of children online.' }
+    ],
+    semantic_field_id: 'rules-discipline',
+    semantic_field_label: 'Rules & Discipline',
+    semantic_field_words: [
+      { word: 'restrict individual autonomy', cefr: 'C2', register: 'formal' }
+    ],
+    register_synonyms: [
+      { word: 'limit freedom', register: 'neutral', cefr: 'B2' }
+    ],
+    folder_ids: ['folder-4', 'folder-task2-phrases'],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: 'Suggested by AI for Writing Task 2 rules/discipline topic.'
+  },
+  {
+    id: 'entry-conform-norms',
+    entry_type: 'word',
+    word: 'conform to societal norms',
+    ipa_uk: '/kənˈfɔːm tuː səˈsaɪ.ə.təl nɔːmz/',
+    ipa_us: '/kənˈfɔːrm tuː səˈsaɪ.ə.t̬əl nɔːrmz/',
+    definition: 'to behave, think, or dress in a way that is expected and accepted by society',
+    definition_source: 'cambridge',
+    example: 'Adhering to community rules helps youngsters learn how to conform to societal norms.',
+    definitions: [
+      {
+        definition: 'to behave, think, or dress in a way that is expected and accepted by society',
+        example: 'Adhering to community rules helps youngsters learn how to conform to societal norms.',
+        cefr_level: 'C2',
+        grammar_note: 'verb phrase'
+      }
+    ],
+    extra_examples: [
+      'Pressure to conform to societal norms often intensifies during adolescence.',
+      'Historically, creative artists have refused to conform to societal norms of their era.'
+    ],
+    grammar_note: 'verb phrase',
+    base_verb: '',
+    particles: '',
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: 'C2',
+    register: 'formal',
+    formality_score: 4,
+    connotation: 'neutral',
+    word_family: {
+      verb: ['conform'],
+      noun: ['conformity', 'norm'],
+      adjective: ['conformist', 'societal'],
+      adverb: []
+    },
+    collocations: [
+      { collocation: 'pressure to conform', example: 'Peer pressure can create intense pressure to conform.' }
+    ],
+    semantic_field_id: 'rules-discipline',
+    semantic_field_label: 'Rules & Discipline',
+    semantic_field_words: [
+      { word: 'conform to societal norms', cefr: 'C2', register: 'formal' }
+    ],
+    register_synonyms: [
+      { word: 'follow society', register: 'informal', cefr: 'A2' }
+    ],
+    folder_ids: ['folder-4', 'folder-task2-phrases'],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: 'Suggested by AI for Writing Task 2 rules/discipline topic.'
+  },
+  {
+    id: 'entry-tertiary-education',
+    entry_type: 'word',
+    word: 'tertiary education',
+    ipa_uk: '/ˈtɜː.ʃər.i ˌed.jʊˈkeɪ.ʃən/',
+    ipa_us: '/ˈtɝː.ʃi.er.i ˌed.jəˈkeɪ.ʃən/',
+    definition: 'education at university, college, or other post-secondary institutions',
+    definition_source: 'cambridge',
+    example: 'Access to tertiary education should be subsidized by the state to promote meritocracy.',
+    definitions: [
+      {
+        definition: 'education at university, college, or other post-secondary institutions',
+        example: 'Access to tertiary education should be subsidized by the state to promote meritocracy.',
+        cefr_level: 'C1',
+        grammar_note: 'noun [U]'
+      }
+    ],
+    extra_examples: [
+      'In many developed countries, more than half of high school graduates proceed to tertiary education.',
+      'The cost of tertiary education has risen dramatically over the last three decades.'
+    ],
+    grammar_note: 'noun [U]',
+    base_verb: '',
+    particles: '',
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: 'C1',
+    register: 'neutral',
+    formality_score: 3,
+    connotation: 'neutral',
+    word_family: {
+      verb: ['educate'],
+      noun: ['education', 'educator'],
+      adjective: ['tertiary', 'educational'],
+      adverb: []
+    },
+    collocations: [
+      { collocation: 'pursue tertiary education', example: 'More students are choosing to pursue tertiary education abroad.' },
+      { collocation: 'funding for tertiary education', example: 'The government announced increased funding for tertiary education.' }
+    ],
+    semantic_field_id: 'higher-education',
+    semantic_field_label: 'Higher Education',
+    semantic_field_words: [
+      { word: 'tertiary education', cefr: 'C1', register: 'neutral' }
+    ],
+    register_synonyms: [
+      { word: 'higher education', register: 'neutral', cefr: 'B2' },
+      { word: 'university education', register: 'neutral', cefr: 'B1' }
+    ],
+    folder_ids: ['folder-4', 'folder-task2-phrases'],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: 'Suggested by AI for Writing Task 2 university topic.'
+  },
+  {
+    id: 'entry-cultivate-critical-thinking',
+    entry_type: 'word',
+    word: 'cultivate critical thinking',
+    ipa_uk: '/ˈkʌl.tɪ.veɪt ˈkrɪt.ɪ.kəl ˈθɪŋ.kɪŋ/',
+    ipa_us: '/ˈkʌl.tə.veɪt ˈkrɪt̬.ɪ.kəl ˈθɪŋ.kɪŋ/',
+    definition: 'to nurture, develop, and encourage the ability to analyze and evaluate arguments objectively',
+    definition_source: 'cambridge',
+    example: 'Universities must cultivate critical thinking through collaborative workshops and seminars.',
+    definitions: [
+      {
+        definition: 'to nurture, develop, and encourage the ability to analyze and evaluate arguments objectively',
+        example: 'Universities must cultivate critical thinking through collaborative workshops and seminars.',
+        cefr_level: 'C1',
+        grammar_note: 'verb phrase'
+      }
+    ],
+    extra_examples: [
+      'Modern curriculum design should place emphasis on exercises that cultivate critical thinking.',
+      'Reading diverse viewpoints is an excellent way to cultivate critical thinking.'
+    ],
+    grammar_note: 'verb phrase',
+    base_verb: '',
+    particles: '',
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: 'C1',
+    register: 'formal',
+    formality_score: 4,
+    connotation: 'positive',
+    word_family: {
+      verb: ['cultivate', 'think'],
+      noun: ['cultivation', 'critic', 'thought'],
+      adjective: ['critical', 'cultivated'],
+      adverb: ['critically']
+    },
+    collocations: [
+      { collocation: 'cultivate critical thinking skills', example: 'Case studies are used to cultivate critical thinking skills.' }
+    ],
+    semantic_field_id: 'higher-education',
+    semantic_field_label: 'Higher Education',
+    semantic_field_words: [
+      { word: 'cultivate critical thinking', cefr: 'C1', register: 'formal' }
+    ],
+    register_synonyms: [
+      { word: 'teach logical thinking', register: 'neutral', cefr: 'B1' }
+    ],
+    folder_ids: ['folder-4', 'folder-task2-phrases'],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: 'Suggested by AI for Writing Task 2 university topic.'
+  },
+  {
+    id: 'entry-specialized-knowledge',
+    entry_type: 'word',
+    word: 'specialized knowledge',
+    ipa_uk: '/ˈspeʃ.əl.aɪzd ˈnɒl.ɪdʒ/',
+    ipa_us: '/ˈspeʃ.əl.aɪzd ˈnɑː.lɪdʒ/',
+    definition: 'deep, intensive, and specific knowledge within a particular academic discipline or industry sector',
+    definition_source: 'cambridge',
+    example: 'A university degree equips graduates with specialized knowledge that is indispensable in fields like surgery.',
+    definitions: [
+      {
+        definition: 'deep, intensive, and specific knowledge within a particular academic discipline or industry sector',
+        example: 'A university degree equips graduates with specialized knowledge that is indispensable in fields like surgery.',
+        cefr_level: 'C1',
+        grammar_note: 'noun [U]'
+      }
+    ],
+    extra_examples: [
+      'To solve complex technical issues, engineers must acquire specialized knowledge.',
+      'The role requires specialized knowledge of local environmental legislation.'
+    ],
+    grammar_note: 'noun [U]',
+    base_verb: '',
+    particles: '',
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: 'C1',
+    register: 'neutral',
+    formality_score: 3,
+    connotation: 'neutral',
+    word_family: {
+      verb: ['specialize', 'know'],
+      noun: ['specialty', 'specialist', 'knowledge'],
+      adjective: ['specialized', 'knowledgeable'],
+      adverb: []
+    },
+    collocations: [
+      { collocation: 'acquire specialized knowledge', example: 'Advanced coursework is necessary to acquire specialized knowledge.' },
+      { collocation: 'highly specialized knowledge', example: 'Nuclear physics demands highly specialized knowledge.' }
+    ],
+    semantic_field_id: 'higher-education',
+    semantic_field_label: 'Higher Education',
+    semantic_field_words: [
+      { word: 'specialized knowledge', cefr: 'C1', register: 'neutral' }
+    ],
+    register_synonyms: [
+      { word: 'specific knowledge', register: 'neutral', cefr: 'B2' }
+    ],
+    folder_ids: ['folder-4', 'folder-task2-phrases'],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: 'Suggested by AI for Writing Task 2 university topic.'
+  },
+  {
+    id: 'entry-academic-curriculum',
+    entry_type: 'word',
+    word: 'academic curriculum',
+    ipa_uk: '/ˌæk.əˈdem.ɪk kəˈrɪk.jə.ləm/',
+    ipa_us: '/ˌæk.əˈdem.ɪk kəˈrɪk.jə.ləm/',
+    definition: 'the subjects and courses that make up a study program at a school, college, or university',
+    definition_source: 'cambridge',
+    example: 'Universities need to align their academic curriculum with the shifting trends of modern industries.',
+    definitions: [
+      {
+        definition: 'the subjects and courses that make up a study program at a school, college, or university',
+        example: 'Universities need to align their academic curriculum with the shifting trends of modern industries.',
+        cefr_level: 'C1',
+        grammar_note: 'noun [C]'
+      }
+    ],
+    extra_examples: [
+      'Art and music should be integrated into the core academic curriculum for balanced development.',
+      'The academic curriculum was heavily revised to include more computer science courses.'
+    ],
+    grammar_note: 'noun [C]',
+    base_verb: '',
+    particles: '',
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: 'C1',
+    register: 'neutral',
+    formality_score: 3,
+    connotation: 'neutral',
+    word_family: {
+      noun: ['curriculum', 'curricula', 'academy'],
+      adjective: ['academic', 'curricular'],
+      adverb: ['academically']
+    },
+    collocations: [
+      { collocation: 'core academic curriculum', example: 'Mathematics remains a part of the core academic curriculum.' },
+      { collocation: 'design academic curriculum', example: 'Educators spend months designing academic curriculum.' }
+    ],
+    semantic_field_id: 'higher-education',
+    semantic_field_label: 'Higher Education',
+    semantic_field_words: [
+      { word: 'academic curriculum', cefr: 'C1', register: 'neutral' }
+    ],
+    register_synonyms: [
+      { word: 'syllabus', register: 'neutral', cefr: 'B2' },
+      { word: 'study program', register: 'neutral', cefr: 'B1' }
+    ],
+    folder_ids: ['folder-4', 'folder-task2-phrases'],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: 'Suggested by AI for Writing Task 2 university topic.'
+  },
+  {
+    id: 'entry-transferable-skills',
+    entry_type: 'word',
+    word: 'transferable skills',
+    ipa_uk: '/trænsˈfɜː.rə.bəl skɪlz/',
+    ipa_us: '/trænsˈfɝː.ə.bəl skɪlz/',
+    definition: 'skills (such as communication, teamworking, problem-solving) that can be applied across different jobs and careers',
+    definition_source: 'cambridge',
+    example: 'While technical qualifications are vital, possessing transferable skills ensures career adaptability.',
+    definitions: [
+      {
+        definition: 'skills (such as communication, teamworking, problem-solving) that can be applied across different jobs and careers',
+        example: 'While technical qualifications are vital, possessing transferable skills ensures career adaptability.',
+        cefr_level: 'C1',
+        grammar_note: 'noun [plural]'
+      }
+    ],
+    extra_examples: [
+      'Voluntary work is an excellent way for young people to acquire key transferable skills.',
+      'Universities are placing greater emphasis on teaching transferable skills to undergraduates.'
+    ],
+    grammar_note: 'noun [plural]',
+    base_verb: '',
+    particles: '',
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: 'C1',
+    register: 'neutral',
+    formality_score: 3,
+    connotation: 'positive',
+    word_family: {
+      verb: ['transfer'],
+      noun: ['transfer', 'skill'],
+      adjective: ['transferable', 'skilled'],
+      adverb: []
+    },
+    collocations: [
+      { collocation: 'valuable transferable skills', example: 'Military experience provides valuable transferable skills to veterans.' }
+    ],
+    semantic_field_id: 'work-skills',
+    semantic_field_label: 'Work Skills & Employability',
+    semantic_field_words: [
+      { word: 'transferable skills', cefr: 'C1', register: 'neutral' }
+    ],
+    register_synonyms: [
+      { word: 'soft skills', register: 'neutral', cefr: 'B2' }
+    ],
+    folder_ids: ['folder-4', 'folder-task2-phrases'],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: 'Suggested by AI for Writing Task 2 work skills topic.'
+  },
+  {
+    id: 'entry-vocational-training',
+    entry_type: 'word',
+    word: 'vocational training',
+    ipa_uk: '/vəʊˈkeɪ.ʃən.əl ˈtreɪ.nɪŋ/',
+    ipa_us: '/voʊˈkeɪ.ʃən.əl ˈtreɪ.nɪŋ/',
+    definition: 'training that prepares a student directly for a specific occupation, trade, or craft, rather than focusing on broad academic study',
+    definition_source: 'cambridge',
+    example: 'Investing in vocational training can be a highly effective solution for lowering youth unemployment.',
+    definitions: [
+      {
+        definition: 'training that prepares a student directly for a specific occupation, trade, or craft, rather than focusing on broad academic study',
+        example: 'Investing in vocational training can be a highly effective solution for lowering youth unemployment.',
+        cefr_level: 'C1',
+        grammar_note: 'noun [U]'
+      }
+    ],
+    extra_examples: [
+      'The local government established centers for vocational training in plumbing and electrical engineering.',
+      'Many young people prefer vocational training over university as it offers a faster path to income.'
+    ],
+    grammar_note: 'noun [U]',
+    base_verb: '',
+    particles: '',
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: 'C1',
+    register: 'neutral',
+    formality_score: 3,
+    connotation: 'neutral',
+    word_family: {
+      noun: ['vocation', 'training', 'trainer'],
+      adjective: ['vocational'],
+      adverb: []
+    },
+    collocations: [
+      { collocation: 'provide vocational training', example: 'Community colleges provide vocational training for local businesses.' }
+    ],
+    semantic_field_id: 'work-skills',
+    semantic_field_label: 'Work Skills & Employability',
+    semantic_field_words: [
+      { word: 'vocational training', cefr: 'C1', register: 'neutral' }
+    ],
+    register_synonyms: [
+      { word: 'practical training', register: 'neutral', cefr: 'B1' },
+      { word: 'job training', register: 'informal', cefr: 'A2' }
+    ],
+    folder_ids: ['folder-4', 'folder-task2-phrases'],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: 'Suggested by AI for Writing Task 2 work skills topic.'
+  },
+  {
+    id: 'entry-competitive-job-market',
+    entry_type: 'word',
+    word: 'adapt to a competitive job market',
+    ipa_uk: '/əˈdæpt tuː ə kəmˈpet.ɪ.tɪv dʒɒb ˈmɑː.kɪt/',
+    ipa_us: '/əˈdæpt tuː ə kəmˈpet̬.ə.t̬ɪv dʒɑːb ˈmɑːr.kɪt/',
+    definition: 'to acquire new skills and upgrade one's capabilities to find and keep work in a tight, fast-changing labor market',
+    definition_source: 'cambridge',
+    example: 'Faced with automation, workers must acquire digital skills to adapt to an increasingly competitive job market.',
+    definitions: [
+      {
+        definition: 'to acquire new skills and upgrade one's capabilities to find and keep work in a tight, fast-changing labor market',
+        example: 'Faced with automation, workers must acquire digital skills to adapt to an increasingly competitive job market.',
+        cefr_level: 'C1',
+        grammar_note: 'verb phrase'
+      }
+    ],
+    extra_examples: [
+      'To adapt to a competitive job market, young professionals must learn to network effectively.',
+      'Acquiring advanced degrees is one way graduates attempt to adapt to a competitive job market.'
+    ],
+    grammar_note: 'verb phrase',
+    base_verb: '',
+    particles: '',
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: 'C1',
+    register: 'neutral',
+    formality_score: 4,
+    connotation: 'neutral',
+    word_family: {
+      verb: ['adapt', 'compete'],
+      noun: ['adaptation', 'competition', 'market'],
+      adjective: ['adaptable', 'competitive'],
+      adverb: []
+    },
+    collocations: [
+      { collocation: 'survive in a competitive job market', example: 'Soft skills are essential to survive in a competitive job market.' }
+    ],
+    semantic_field_id: 'work-skills',
+    semantic_field_label: 'Work Skills & Employability',
+    semantic_field_words: [
+      { word: 'adapt to a competitive job market', cefr: 'C1', register: 'neutral' }
+    ],
+    register_synonyms: [
+      { word: 'find a job', register: 'informal', cefr: 'A1' }
+    ],
+    folder_ids: ['folder-4', 'folder-task2-phrases'],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: 'Suggested by AI for Writing Task 2 work skills topic.'
+  },
+  {
+    id: 'entry-interpersonal-skills',
+    entry_type: 'word',
+    word: 'interpersonal skills',
+    ipa_uk: '/ˌɪn.təˈpɜː.sən.əl skɪlz/',
+    ipa_us: '/ˌɪn.t̬ɚˈpɝː.sən.əl skɪlz/',
+    definition: 'the soft skills used by a person to communicate, collaborate, and interact harmoniously and productively with others',
+    definition_source: 'cambridge',
+    example: 'In collaborative workplaces, strong interpersonal skills are valued just as highly as technical expertise.',
+    definitions: [
+      {
+        definition: 'the soft skills used by a person to communicate, collaborate, and interact harmoniously and productively with others',
+        example: 'In collaborative workplaces, strong interpersonal skills are valued just as highly as technical expertise.',
+        cefr_level: 'C1',
+        grammar_note: 'noun [plural]'
+      }
+    ],
+    extra_examples: [
+      'Job interviews are designed to gauge an applicant's interpersonal skills and emotional quotient.',
+      'Without good interpersonal skills, leading a diverse team can be extremely difficult.'
+    ],
+    grammar_note: 'noun [plural]',
+    base_verb: '',
+    particles: '',
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: 'C1',
+    register: 'neutral',
+    formality_score: 3,
+    connotation: 'positive',
+    word_family: {
+      noun: ['person', 'skills'],
+      adjective: ['interpersonal', 'personal', 'skilled'],
+      adverb: ['personally']
+    },
+    collocations: [
+      { collocation: 'excellent interpersonal skills', example: 'The sales team requires excellent interpersonal skills to convert clients.' }
+    ],
+    semantic_field_id: 'work-skills',
+    semantic_field_label: 'Work Skills & Employability',
+    semantic_field_words: [
+      { word: 'interpersonal skills', cefr: 'C1', register: 'neutral' }
+    ],
+    register_synonyms: [
+      { word: 'communication skills', register: 'neutral', cefr: 'B1' }
+    ],
+    folder_ids: ['folder-4', 'folder-task2-phrases'],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: 'Suggested by AI for Writing Task 2 work skills topic.'
   }
 ];
 
@@ -8705,6 +9404,705 @@ const EXTENDED_DICTIONARY_DB = [
       { collocation: 'make an assertion', example: 'The scientist made an assertion that the new compound is completely non-toxic.' },
       { collocation: 'support an assertion', example: 'The researcher gathered substantial statistical data to support his assertion.' }
     ],
+  },
+  {
+    id: 'entry-stringent-rules',
+    entry_type: 'word',
+    word: 'impose stringent rules',
+    ipa_uk: '/ɪmˈpəʊz ˈstrɪn.dʒənt ruːlz/',
+    ipa_us: '/ɪmˈpoʊz ˈstrɪn.dʒənt ruːlz/',
+    definition: 'to introduce or enforce very strict, precise, and rigorous regulations that must be obeyed',
+    definition_source: 'cambridge',
+    example: 'Governments must impose stringent rules on industrial waste disposal to prevent ecological damage.',
+    definitions: [
+      {
+        definition: 'to introduce or enforce very strict, precise, and rigorous regulations that must be obeyed',
+        example: 'Governments must impose stringent rules on industrial waste disposal to prevent ecological damage.',
+        cefr_level: 'C1',
+        grammar_note: 'verb phrase'
+      }
+    ],
+    extra_examples: [
+      'The academic committee decided to impose stringent rules regarding academic integrity and plagiarism.',
+      'Many corporations are forced to impose stringent rules on safety to satisfy insurance guidelines.'
+    ],
+    grammar_note: 'verb phrase',
+    base_verb: '',
+    particles: '',
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: 'C1',
+    register: 'formal',
+    formality_score: 4,
+    connotation: 'neutral',
+    word_family: {
+      verb: ['impose'],
+      noun: ['imposition', 'stringency'],
+      adjective: ['stringent'],
+      adverb: ['stringently']
+    },
+    collocations: [
+      { collocation: 'impose stringent regulations', example: 'Local authorities impose stringent regulations on building heights.' }
+    ],
+    semantic_field_id: 'rules-discipline',
+    semantic_field_label: 'Rules & Discipline',
+    semantic_field_words: [
+      { word: 'impose stringent rules', cefr: 'C1', register: 'formal' }
+    ],
+    register_synonyms: [
+      { word: 'strict rules', register: 'neutral', cefr: 'B1' }
+    ],
+    folder_ids: ['folder-4', 'folder-task2-phrases'],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: 'Suggested by AI for Writing Task 2 rules/discipline topic.'
+  },
+  {
+    id: 'entry-enforce-compliance',
+    entry_type: 'word',
+    word: 'enforce compliance',
+    ipa_uk: '/ɪnˈfɔːs kəmˈplaɪ.əns/',
+    ipa_us: '/ɪnˈfɔːrs kəmˈplaɪ.əns/',
+    definition: 'to compel obedience or adherence to a specific law, rule, standard, or agreement',
+    definition_source: 'cambridge',
+    example: 'School administrations should enforce compliance with code of conduct policies to create a harmonious learning environment.',
+    definitions: [
+      {
+        definition: 'to compel obedience or adherence to a specific law, rule, standard, or agreement',
+        example: 'School administrations should enforce compliance with code of conduct policies to create a harmonious learning environment.',
+        cefr_level: 'C1',
+        grammar_note: 'verb phrase'
+      }
+    ],
+    extra_examples: [
+      'Regulators struggle to enforce compliance when companies operate across multiple national borders.',
+      'The security team was hired specifically to enforce compliance with safety codes during the construction.'
+    ],
+    grammar_note: 'verb phrase',
+    base_verb: '',
+    particles: '',
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: 'C1',
+    register: 'formal',
+    formality_score: 4,
+    connotation: 'neutral',
+    word_family: {
+      verb: ['enforce', 'comply'],
+      noun: ['enforcement', 'compliance'],
+      adjective: ['enforceable', 'compliant'],
+      adverb: []
+    },
+    collocations: [
+      { collocation: 'enforce compliance with regulations', example: 'Inspector duties are to enforce compliance with building regulations.' }
+    ],
+    semantic_field_id: 'rules-discipline',
+    semantic_field_label: 'Rules & Discipline',
+    semantic_field_words: [
+      { word: 'enforce compliance', cefr: 'C1', register: 'formal' }
+    ],
+    register_synonyms: [
+      { word: 'make people obey', register: 'informal', cefr: 'A2' }
+    ],
+    folder_ids: ['folder-4', 'folder-task2-phrases'],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: 'Suggested by AI for Writing Task 2 rules/discipline topic.'
+  },
+  {
+    id: 'entry-restrict-autonomy',
+    entry_type: 'word',
+    word: 'restrict individual autonomy',
+    ipa_uk: '/rɪˈstrɪkt ˌɪn.dɪˈvɪdʒ.u.əl ɔːˈtɒn.ə.mi/',
+    ipa_us: '/rɪˈstrɪkt ˌɪn.dəˈvɪdʒ.u.əl ɑːˈtɑː.nə.mi/',
+    definition: 'to limit a person's freedom or independence to make their own choices and act self-governingly',
+    definition_source: 'cambridge',
+    example: 'Opponents argue that locking teenagers into rigid schedules during school hours restricts individual autonomy.',
+    definitions: [
+      {
+        definition: 'to limit a person's freedom or independence to make their own choices and act self-governingly',
+        example: 'Opponents argue that locking teenagers into rigid schedules during school hours restricts individual autonomy.',
+        cefr_level: 'C2',
+        grammar_note: 'verb phrase'
+      }
+    ],
+    extra_examples: [
+      'Stringent guidelines can sometimes restrict individual autonomy of teachers in the classroom.',
+      'Does monitoring employee emails restrict individual autonomy to an unethical degree?'
+    ],
+    grammar_note: 'verb phrase',
+    base_verb: '',
+    particles: '',
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: 'C2',
+    register: 'formal',
+    formality_score: 5,
+    connotation: 'negative',
+    word_family: {
+      verb: ['restrict'],
+      noun: ['restriction', 'autonomy'],
+      adjective: ['restrictive', 'autonomous'],
+      adverb: ['autonomously']
+    },
+    collocations: [
+      { collocation: 'severely restrict autonomy', example: 'The parental controls severely restrict autonomy of children online.' }
+    ],
+    semantic_field_id: 'rules-discipline',
+    semantic_field_label: 'Rules & Discipline',
+    semantic_field_words: [
+      { word: 'restrict individual autonomy', cefr: 'C2', register: 'formal' }
+    ],
+    register_synonyms: [
+      { word: 'limit freedom', register: 'neutral', cefr: 'B2' }
+    ],
+    folder_ids: ['folder-4', 'folder-task2-phrases'],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: 'Suggested by AI for Writing Task 2 rules/discipline topic.'
+  },
+  {
+    id: 'entry-conform-norms',
+    entry_type: 'word',
+    word: 'conform to societal norms',
+    ipa_uk: '/kənˈfɔːm tuː səˈsaɪ.ə.təl nɔːmz/',
+    ipa_us: '/kənˈfɔːrm tuː səˈsaɪ.ə.t̬əl nɔːrmz/',
+    definition: 'to behave, think, or dress in a way that is expected and accepted by society',
+    definition_source: 'cambridge',
+    example: 'Adhering to community rules helps youngsters learn how to conform to societal norms.',
+    definitions: [
+      {
+        definition: 'to behave, think, or dress in a way that is expected and accepted by society',
+        example: 'Adhering to community rules helps youngsters learn how to conform to societal norms.',
+        cefr_level: 'C2',
+        grammar_note: 'verb phrase'
+      }
+    ],
+    extra_examples: [
+      'Pressure to conform to societal norms often intensifies during adolescence.',
+      'Historically, creative artists have refused to conform to societal norms of their era.'
+    ],
+    grammar_note: 'verb phrase',
+    base_verb: '',
+    particles: '',
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: 'C2',
+    register: 'formal',
+    formality_score: 4,
+    connotation: 'neutral',
+    word_family: {
+      verb: ['conform'],
+      noun: ['conformity', 'norm'],
+      adjective: ['conformist', 'societal'],
+      adverb: []
+    },
+    collocations: [
+      { collocation: 'pressure to conform', example: 'Peer pressure can create intense pressure to conform.' }
+    ],
+    semantic_field_id: 'rules-discipline',
+    semantic_field_label: 'Rules & Discipline',
+    semantic_field_words: [
+      { word: 'conform to societal norms', cefr: 'C2', register: 'formal' }
+    ],
+    register_synonyms: [
+      { word: 'follow society', register: 'informal', cefr: 'A2' }
+    ],
+    folder_ids: ['folder-4', 'folder-task2-phrases'],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: 'Suggested by AI for Writing Task 2 rules/discipline topic.'
+  },
+  {
+    id: 'entry-tertiary-education',
+    entry_type: 'word',
+    word: 'tertiary education',
+    ipa_uk: '/ˈtɜː.ʃər.i ˌed.jʊˈkeɪ.ʃən/',
+    ipa_us: '/ˈtɝː.ʃi.er.i ˌed.jəˈkeɪ.ʃən/',
+    definition: 'education at university, college, or other post-secondary institutions',
+    definition_source: 'cambridge',
+    example: 'Access to tertiary education should be subsidized by the state to promote meritocracy.',
+    definitions: [
+      {
+        definition: 'education at university, college, or other post-secondary institutions',
+        example: 'Access to tertiary education should be subsidized by the state to promote meritocracy.',
+        cefr_level: 'C1',
+        grammar_note: 'noun [U]'
+      }
+    ],
+    extra_examples: [
+      'In many developed countries, more than half of high school graduates proceed to tertiary education.',
+      'The cost of tertiary education has risen dramatically over the last three decades.'
+    ],
+    grammar_note: 'noun [U]',
+    base_verb: '',
+    particles: '',
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: 'C1',
+    register: 'neutral',
+    formality_score: 3,
+    connotation: 'neutral',
+    word_family: {
+      verb: ['educate'],
+      noun: ['education', 'educator'],
+      adjective: ['tertiary', 'educational'],
+      adverb: []
+    },
+    collocations: [
+      { collocation: 'pursue tertiary education', example: 'More students are choosing to pursue tertiary education abroad.' },
+      { collocation: 'funding for tertiary education', example: 'The government announced increased funding for tertiary education.' }
+    ],
+    semantic_field_id: 'higher-education',
+    semantic_field_label: 'Higher Education',
+    semantic_field_words: [
+      { word: 'tertiary education', cefr: 'C1', register: 'neutral' }
+    ],
+    register_synonyms: [
+      { word: 'higher education', register: 'neutral', cefr: 'B2' },
+      { word: 'university education', register: 'neutral', cefr: 'B1' }
+    ],
+    folder_ids: ['folder-4', 'folder-task2-phrases'],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: 'Suggested by AI for Writing Task 2 university topic.'
+  },
+  {
+    id: 'entry-cultivate-critical-thinking',
+    entry_type: 'word',
+    word: 'cultivate critical thinking',
+    ipa_uk: '/ˈkʌl.tɪ.veɪt ˈkrɪt.ɪ.kəl ˈθɪŋ.kɪŋ/',
+    ipa_us: '/ˈkʌl.tə.veɪt ˈkrɪt̬.ɪ.kəl ˈθɪŋ.kɪŋ/',
+    definition: 'to nurture, develop, and encourage the ability to analyze and evaluate arguments objectively',
+    definition_source: 'cambridge',
+    example: 'Universities must cultivate critical thinking through collaborative workshops and seminars.',
+    definitions: [
+      {
+        definition: 'to nurture, develop, and encourage the ability to analyze and evaluate arguments objectively',
+        example: 'Universities must cultivate critical thinking through collaborative workshops and seminars.',
+        cefr_level: 'C1',
+        grammar_note: 'verb phrase'
+      }
+    ],
+    extra_examples: [
+      'Modern curriculum design should place emphasis on exercises that cultivate critical thinking.',
+      'Reading diverse viewpoints is an excellent way to cultivate critical thinking.'
+    ],
+    grammar_note: 'verb phrase',
+    base_verb: '',
+    particles: '',
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: 'C1',
+    register: 'formal',
+    formality_score: 4,
+    connotation: 'positive',
+    word_family: {
+      verb: ['cultivate', 'think'],
+      noun: ['cultivation', 'critic', 'thought'],
+      adjective: ['critical', 'cultivated'],
+      adverb: ['critically']
+    },
+    collocations: [
+      { collocation: 'cultivate critical thinking skills', example: 'Case studies are used to cultivate critical thinking skills.' }
+    ],
+    semantic_field_id: 'higher-education',
+    semantic_field_label: 'Higher Education',
+    semantic_field_words: [
+      { word: 'cultivate critical thinking', cefr: 'C1', register: 'formal' }
+    ],
+    register_synonyms: [
+      { word: 'teach logical thinking', register: 'neutral', cefr: 'B1' }
+    ],
+    folder_ids: ['folder-4', 'folder-task2-phrases'],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: 'Suggested by AI for Writing Task 2 university topic.'
+  },
+  {
+    id: 'entry-specialized-knowledge',
+    entry_type: 'word',
+    word: 'specialized knowledge',
+    ipa_uk: '/ˈspeʃ.əl.aɪzd ˈnɒl.ɪdʒ/',
+    ipa_us: '/ˈspeʃ.əl.aɪzd ˈnɑː.lɪdʒ/',
+    definition: 'deep, intensive, and specific knowledge within a particular academic discipline or industry sector',
+    definition_source: 'cambridge',
+    example: 'A university degree equips graduates with specialized knowledge that is indispensable in fields like surgery.',
+    definitions: [
+      {
+        definition: 'deep, intensive, and specific knowledge within a particular academic discipline or industry sector',
+        example: 'A university degree equips graduates with specialized knowledge that is indispensable in fields like surgery.',
+        cefr_level: 'C1',
+        grammar_note: 'noun [U]'
+      }
+    ],
+    extra_examples: [
+      'To solve complex technical issues, engineers must acquire specialized knowledge.',
+      'The role requires specialized knowledge of local environmental legislation.'
+    ],
+    grammar_note: 'noun [U]',
+    base_verb: '',
+    particles: '',
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: 'C1',
+    register: 'neutral',
+    formality_score: 3,
+    connotation: 'neutral',
+    word_family: {
+      verb: ['specialize', 'know'],
+      noun: ['specialty', 'specialist', 'knowledge'],
+      adjective: ['specialized', 'knowledgeable'],
+      adverb: []
+    },
+    collocations: [
+      { collocation: 'acquire specialized knowledge', example: 'Advanced coursework is necessary to acquire specialized knowledge.' },
+      { collocation: 'highly specialized knowledge', example: 'Nuclear physics demands highly specialized knowledge.' }
+    ],
+    semantic_field_id: 'higher-education',
+    semantic_field_label: 'Higher Education',
+    semantic_field_words: [
+      { word: 'specialized knowledge', cefr: 'C1', register: 'neutral' }
+    ],
+    register_synonyms: [
+      { word: 'specific knowledge', register: 'neutral', cefr: 'B2' }
+    ],
+    folder_ids: ['folder-4', 'folder-task2-phrases'],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: 'Suggested by AI for Writing Task 2 university topic.'
+  },
+  {
+    id: 'entry-academic-curriculum',
+    entry_type: 'word',
+    word: 'academic curriculum',
+    ipa_uk: '/ˌæk.əˈdem.ɪk kəˈrɪk.jə.ləm/',
+    ipa_us: '/ˌæk.əˈdem.ɪk kəˈrɪk.jə.ləm/',
+    definition: 'the subjects and courses that make up a study program at a school, college, or university',
+    definition_source: 'cambridge',
+    example: 'Universities need to align their academic curriculum with the shifting trends of modern industries.',
+    definitions: [
+      {
+        definition: 'the subjects and courses that make up a study program at a school, college, or university',
+        example: 'Universities need to align their academic curriculum with the shifting trends of modern industries.',
+        cefr_level: 'C1',
+        grammar_note: 'noun [C]'
+      }
+    ],
+    extra_examples: [
+      'Art and music should be integrated into the core academic curriculum for balanced development.',
+      'The academic curriculum was heavily revised to include more computer science courses.'
+    ],
+    grammar_note: 'noun [C]',
+    base_verb: '',
+    particles: '',
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: 'C1',
+    register: 'neutral',
+    formality_score: 3,
+    connotation: 'neutral',
+    word_family: {
+      noun: ['curriculum', 'curricula', 'academy'],
+      adjective: ['academic', 'curricular'],
+      adverb: ['academically']
+    },
+    collocations: [
+      { collocation: 'core academic curriculum', example: 'Mathematics remains a part of the core academic curriculum.' },
+      { collocation: 'design academic curriculum', example: 'Educators spend months designing academic curriculum.' }
+    ],
+    semantic_field_id: 'higher-education',
+    semantic_field_label: 'Higher Education',
+    semantic_field_words: [
+      { word: 'academic curriculum', cefr: 'C1', register: 'neutral' }
+    ],
+    register_synonyms: [
+      { word: 'syllabus', register: 'neutral', cefr: 'B2' },
+      { word: 'study program', register: 'neutral', cefr: 'B1' }
+    ],
+    folder_ids: ['folder-4', 'folder-task2-phrases'],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: 'Suggested by AI for Writing Task 2 university topic.'
+  },
+  {
+    id: 'entry-transferable-skills',
+    entry_type: 'word',
+    word: 'transferable skills',
+    ipa_uk: '/trænsˈfɜː.rə.bəl skɪlz/',
+    ipa_us: '/trænsˈfɝː.ə.bəl skɪlz/',
+    definition: 'skills (such as communication, teamworking, problem-solving) that can be applied across different jobs and careers',
+    definition_source: 'cambridge',
+    example: 'While technical qualifications are vital, possessing transferable skills ensures career adaptability.',
+    definitions: [
+      {
+        definition: 'skills (such as communication, teamworking, problem-solving) that can be applied across different jobs and careers',
+        example: 'While technical qualifications are vital, possessing transferable skills ensures career adaptability.',
+        cefr_level: 'C1',
+        grammar_note: 'noun [plural]'
+      }
+    ],
+    extra_examples: [
+      'Voluntary work is an excellent way for young people to acquire key transferable skills.',
+      'Universities are placing greater emphasis on teaching transferable skills to undergraduates.'
+    ],
+    grammar_note: 'noun [plural]',
+    base_verb: '',
+    particles: '',
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: 'C1',
+    register: 'neutral',
+    formality_score: 3,
+    connotation: 'positive',
+    word_family: {
+      verb: ['transfer'],
+      noun: ['transfer', 'skill'],
+      adjective: ['transferable', 'skilled'],
+      adverb: []
+    },
+    collocations: [
+      { collocation: 'valuable transferable skills', example: 'Military experience provides valuable transferable skills to veterans.' }
+    ],
+    semantic_field_id: 'work-skills',
+    semantic_field_label: 'Work Skills & Employability',
+    semantic_field_words: [
+      { word: 'transferable skills', cefr: 'C1', register: 'neutral' }
+    ],
+    register_synonyms: [
+      { word: 'soft skills', register: 'neutral', cefr: 'B2' }
+    ],
+    folder_ids: ['folder-4', 'folder-task2-phrases'],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: 'Suggested by AI for Writing Task 2 work skills topic.'
+  },
+  {
+    id: 'entry-vocational-training',
+    entry_type: 'word',
+    word: 'vocational training',
+    ipa_uk: '/vəʊˈkeɪ.ʃən.əl ˈtreɪ.nɪŋ/',
+    ipa_us: '/voʊˈkeɪ.ʃən.əl ˈtreɪ.nɪŋ/',
+    definition: 'training that prepares a student directly for a specific occupation, trade, or craft, rather than focusing on broad academic study',
+    definition_source: 'cambridge',
+    example: 'Investing in vocational training can be a highly effective solution for lowering youth unemployment.',
+    definitions: [
+      {
+        definition: 'training that prepares a student directly for a specific occupation, trade, or craft, rather than focusing on broad academic study',
+        example: 'Investing in vocational training can be a highly effective solution for lowering youth unemployment.',
+        cefr_level: 'C1',
+        grammar_note: 'noun [U]'
+      }
+    ],
+    extra_examples: [
+      'The local government established centers for vocational training in plumbing and electrical engineering.',
+      'Many young people prefer vocational training over university as it offers a faster path to income.'
+    ],
+    grammar_note: 'noun [U]',
+    base_verb: '',
+    particles: '',
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: 'C1',
+    register: 'neutral',
+    formality_score: 3,
+    connotation: 'neutral',
+    word_family: {
+      noun: ['vocation', 'training', 'trainer'],
+      adjective: ['vocational'],
+      adverb: []
+    },
+    collocations: [
+      { collocation: 'provide vocational training', example: 'Community colleges provide vocational training for local businesses.' }
+    ],
+    semantic_field_id: 'work-skills',
+    semantic_field_label: 'Work Skills & Employability',
+    semantic_field_words: [
+      { word: 'vocational training', cefr: 'C1', register: 'neutral' }
+    ],
+    register_synonyms: [
+      { word: 'practical training', register: 'neutral', cefr: 'B1' },
+      { word: 'job training', register: 'informal', cefr: 'A2' }
+    ],
+    folder_ids: ['folder-4', 'folder-task2-phrases'],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: 'Suggested by AI for Writing Task 2 work skills topic.'
+  },
+  {
+    id: 'entry-competitive-job-market',
+    entry_type: 'word',
+    word: 'adapt to a competitive job market',
+    ipa_uk: '/əˈdæpt tuː ə kəmˈpet.ɪ.tɪv dʒɒb ˈmɑː.kɪt/',
+    ipa_us: '/əˈdæpt tuː ə kəmˈpet̬.ə.t̬ɪv dʒɑːb ˈmɑːr.kɪt/',
+    definition: 'to acquire new skills and upgrade one's capabilities to find and keep work in a tight, fast-changing labor market',
+    definition_source: 'cambridge',
+    example: 'Faced with automation, workers must acquire digital skills to adapt to an increasingly competitive job market.',
+    definitions: [
+      {
+        definition: 'to acquire new skills and upgrade one's capabilities to find and keep work in a tight, fast-changing labor market',
+        example: 'Faced with automation, workers must acquire digital skills to adapt to an increasingly competitive job market.',
+        cefr_level: 'C1',
+        grammar_note: 'verb phrase'
+      }
+    ],
+    extra_examples: [
+      'To adapt to a competitive job market, young professionals must learn to network effectively.',
+      'Acquiring advanced degrees is one way graduates attempt to adapt to a competitive job market.'
+    ],
+    grammar_note: 'verb phrase',
+    base_verb: '',
+    particles: '',
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: 'C1',
+    register: 'neutral',
+    formality_score: 4,
+    connotation: 'neutral',
+    word_family: {
+      verb: ['adapt', 'compete'],
+      noun: ['adaptation', 'competition', 'market'],
+      adjective: ['adaptable', 'competitive'],
+      adverb: []
+    },
+    collocations: [
+      { collocation: 'survive in a competitive job market', example: 'Soft skills are essential to survive in a competitive job market.' }
+    ],
+    semantic_field_id: 'work-skills',
+    semantic_field_label: 'Work Skills & Employability',
+    semantic_field_words: [
+      { word: 'adapt to a competitive job market', cefr: 'C1', register: 'neutral' }
+    ],
+    register_synonyms: [
+      { word: 'find a job', register: 'informal', cefr: 'A1' }
+    ],
+    folder_ids: ['folder-4', 'folder-task2-phrases'],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: 'Suggested by AI for Writing Task 2 work skills topic.'
+  },
+  {
+    id: 'entry-interpersonal-skills',
+    entry_type: 'word',
+    word: 'interpersonal skills',
+    ipa_uk: '/ˌɪn.təˈpɜː.sən.əl skɪlz/',
+    ipa_us: '/ˌɪn.t̬ɚˈpɝː.sən.əl skɪlz/',
+    definition: 'the soft skills used by a person to communicate, collaborate, and interact harmoniously and productively with others',
+    definition_source: 'cambridge',
+    example: 'In collaborative workplaces, strong interpersonal skills are valued just as highly as technical expertise.',
+    definitions: [
+      {
+        definition: 'the soft skills used by a person to communicate, collaborate, and interact harmoniously and productively with others',
+        example: 'In collaborative workplaces, strong interpersonal skills are valued just as highly as technical expertise.',
+        cefr_level: 'C1',
+        grammar_note: 'noun [plural]'
+      }
+    ],
+    extra_examples: [
+      'Job interviews are designed to gauge an applicant's interpersonal skills and emotional quotient.',
+      'Without good interpersonal skills, leading a diverse team can be extremely difficult.'
+    ],
+    grammar_note: 'noun [plural]',
+    base_verb: '',
+    particles: '',
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: 'C1',
+    register: 'neutral',
+    formality_score: 3,
+    connotation: 'positive',
+    word_family: {
+      noun: ['person', 'skills'],
+      adjective: ['interpersonal', 'personal', 'skilled'],
+      adverb: ['personally']
+    },
+    collocations: [
+      { collocation: 'excellent interpersonal skills', example: 'The sales team requires excellent interpersonal skills to convert clients.' }
+    ],
+    semantic_field_id: 'work-skills',
+    semantic_field_label: 'Work Skills & Employability',
+    semantic_field_words: [
+      { word: 'interpersonal skills', cefr: 'C1', register: 'neutral' }
+    ],
+    register_synonyms: [
+      { word: 'communication skills', register: 'neutral', cefr: 'B1' }
+    ],
+    folder_ids: ['folder-4', 'folder-task2-phrases'],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: 'Suggested by AI for Writing Task 2 work skills topic.'
   }
 ];
 
