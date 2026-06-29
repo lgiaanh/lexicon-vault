@@ -34,8 +34,8 @@ const INITIAL_ENTRIES = [
       }
     ],
     extra_examples: [
-      'What an absurd idea!',
-      'The charges against him are absolutely absurd.'
+      'It is absurd to believe that governments can tackle climate change without cooperation from multinational corporations.',
+      'Personally, I think the expectation that teenagers should decide their entire career path at eighteen is completely absurd.'
     ],
     grammar_note: 'adjective',
     base_verb: '',
@@ -95,7 +95,7 @@ const INITIAL_ENTRIES = [
       }
     ],
     extra_examples: [
-      "Agricultural innovations are needed to accommodate the world's population in the coming decades.",
+      "Vertical farming and high-rise residential complexes are proposed as viable solutions to accommodate the world's population without exhausting horizontal land resources.",
       "How can we accommodate the world's population without destroying natural habitats?"
     ],
     grammar_note: 'verb phrase',
@@ -149,7 +149,7 @@ const INITIAL_ENTRIES = [
       }
     ],
     extra_examples: [
-      'Predators play an essential role to maintain the natural balance of wildlife.',
+      'Strict environmental laws must be enforced to maintain the natural balance of vulnerable ecosystems, preventing irreversible biodiversity loss.',
       'Human activities must be regulated to maintain the natural balance of marine life.'
     ],
     grammar_note: 'verb phrase',

@@ -867,6 +867,19 @@
         window.speechSynthesis.speak(utterance);
       };
 
+      // Auto play US voice audio whenever a card comes up in Spaced Repetition (Review) session
+      useEffect(() => {
+        if (activeTab === 'review' && isReviewSessionStarted && reviewQueue && reviewQueue.length > 0 && currentReviewIndex < reviewQueue.length) {
+          const currentEntry = reviewQueue[currentReviewIndex];
+          if (currentEntry) {
+            if ('speechSynthesis' in window) {
+              window.speechSynthesis.cancel();
+            }
+            speakWord(currentEntry.word, 'us');
+          }
+        }
+      }, [activeTab, isReviewSessionStarted, currentReviewIndex, reviewQueue]);
+
       // SM-2 Spaced Repetition calculations
       const calculateSM2 = (quality, currentReview) => {
         let count = currentReview.repetition_count || 0;
