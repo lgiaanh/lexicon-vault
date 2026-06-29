@@ -6629,12 +6629,12 @@ const INITIAL_ENTRIES = [
     word: 'restrict individual autonomy',
     ipa_uk: '/rɪˈstrɪkt ˌɪn.dɪˈvɪdʒ.u.əl ɔːˈtɒn.ə.mi/',
     ipa_us: '/rɪˈstrɪkt ˌɪn.dəˈvɪdʒ.u.əl ɑːˈtɑː.nə.mi/',
-    definition: 'to limit a person's freedom or independence to make their own choices and act self-governingly',
+    definition: 'to limit a person\'s freedom or independence to make their own choices and act self-governingly',
     definition_source: 'cambridge',
     example: 'Opponents argue that locking teenagers into rigid schedules during school hours restricts individual autonomy.',
     definitions: [
       {
-        definition: 'to limit a person's freedom or independence to make their own choices and act self-governingly',
+        definition: 'to limit a person\'s freedom or independence to make their own choices and act self-governingly',
         example: 'Opponents argue that locking teenagers into rigid schedules during school hours restricts individual autonomy.',
         cefr_level: 'C2',
         grammar_note: 'verb phrase'
@@ -9527,12 +9527,12 @@ const EXTENDED_DICTIONARY_DB = [
     word: 'restrict individual autonomy',
     ipa_uk: '/rɪˈstrɪkt ˌɪn.dɪˈvɪdʒ.u.əl ɔːˈtɒn.ə.mi/',
     ipa_us: '/rɪˈstrɪkt ˌɪn.dəˈvɪdʒ.u.əl ɑːˈtɑː.nə.mi/',
-    definition: 'to limit a person's freedom or independence to make their own choices and act self-governingly',
+    definition: 'to limit a person\'s freedom or independence to make their own choices and act self-governingly',
     definition_source: 'cambridge',
     example: 'Opponents argue that locking teenagers into rigid schedules during school hours restricts individual autonomy.',
     definitions: [
       {
-        definition: 'to limit a person's freedom or independence to make their own choices and act self-governingly',
+        definition: 'to limit a person\'s freedom or independence to make their own choices and act self-governingly',
         example: 'Opponents argue that locking teenagers into rigid schedules during school hours restricts individual autonomy.',
         cefr_level: 'C2',
         grammar_note: 'verb phrase'
