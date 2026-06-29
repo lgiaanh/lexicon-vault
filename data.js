@@ -11,10 +11,181 @@ const INITIAL_FOLDERS = [
   { id: 'folder-speaking-work-study', name: 'Speaking: Work & Study', color: '#C6DEF1', emoji: '🏫', description: 'Phrasal verbs and colloquial expressions for describing academic pursuits and careers.', created_at: new Date().toISOString(), word_count: 2 },
   { id: 'folder-speaking-leisure-travel', name: 'Speaking: Leisure & Travel', color: '#C9E4DE', emoji: '✈️', description: 'Speaking phrasal verbs for describing vacationing, sightseeing, and hobbies.', created_at: new Date().toISOString(), word_count: 2 },
   { id: 'folder-speaking-relationships', name: 'Speaking: Relationships & Life', color: '#F2C6DE', emoji: '👥', description: 'Phrasal verbs for describing social connections, relatives, and childhood memories.', created_at: new Date().toISOString(), word_count: 2 },
-  { id: 'folder-science', name: 'Science & Technology', color: '#DBCDF0', emoji: '🔬', description: 'Vocabulary and collocations related to scientific research, breakthroughs, technology, and paradigm shifts.', created_at: new Date().toISOString(), word_count: 6 }
+  { id: 'folder-science', name: 'Science & Technology', color: '#DBCDF0', emoji: '🔬', description: 'Vocabulary and collocations related to scientific research, breakthroughs, technology, and paradigm shifts.', created_at: new Date().toISOString(), word_count: 6 },
+  { id: 'folder-task2-phrases', name: 'Task 2 Phrases', color: '#F7D9C4', emoji: '📝', description: 'Key academic phrases, collocations, and idioms tailored for Writing Task 2 essays.', created_at: new Date().toISOString(), word_count: 3 }
 ];
 
 const INITIAL_ENTRIES = [
+  {
+    id: 'entry-absurd',
+    entry_type: 'word',
+    word: 'absurd',
+    ipa_uk: '/əbˈsɜːd/',
+    ipa_us: '/əbˈsɝːd/',
+    definition: 'stupid and unreasonable, or silly in a humorous way (often misspelled as absurb)',
+    definition_source: 'cambridge',
+    example: 'It is absurd to suggest that the problem can be solved overnight.',
+    definitions: [
+      {
+        definition: 'stupid and unreasonable, or silly in a humorous way',
+        example: 'It is absurd to suggest that the problem can be solved overnight.',
+        cefr_level: 'C1',
+        grammar_note: 'adjective'
+      }
+    ],
+    extra_examples: [
+      'What an absurd idea!',
+      'The charges against him are absolutely absurd.'
+    ],
+    grammar_note: 'adjective',
+    base_verb: '',
+    particles: '',
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: 'C1',
+    register: 'neutral',
+    formality_score: 3,
+    connotation: 'negative',
+    word_family: {
+      verb: [],
+      noun: ['absurdity'],
+      adjective: ['absurd'],
+      adverb: ['absurdly']
+    },
+    collocations: [
+      { collocation: 'absolutely absurd', example: 'The explanation they provided was absolutely absurd.' },
+      { collocation: 'border on the absurd', example: 'Some of the regulations border on the absurd.' }
+    ],
+    semantic_field_id: 'rationality-irrationality',
+    semantic_field_label: 'Rationality & Irrationality',
+    semantic_field_words: [
+      { word: 'absurd', cefr: 'C1', register: 'neutral' },
+      { word: 'preposterous', cefr: 'C2', register: 'formal' }
+    ],
+    register_synonyms: [
+      { word: 'ridiculous', register: 'neutral', cefr: 'B1' },
+      { word: 'preposterous', register: 'formal', cefr: 'C2' }
+    ],
+    folder_ids: ['folder-4', 'folder-task2-phrases'],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: 'Added default database entry.'
+  },
+  {
+    id: 'entry-accommodate-population',
+    entry_type: 'word',
+    word: "accommodate the world's population",
+    ipa_uk: '/əˈkɒm.ə.deɪt ðə wɜːldz ˌpɒp.jəˈleɪ.ʃən/',
+    ipa_us: '/əˈkɑː.mə.deɪt ðə wɜːrldz ˌpɑː.pjəˈleɪ.ʃən/',
+    definition: 'to provide sufficient housing, food, and resources for the entire population of the earth',
+    definition_source: 'cambridge',
+    example: "We must build sustainable cities to accommodate the world's population.",
+    definitions: [
+      {
+        definition: 'to provide sufficient housing, food, and resources for the entire population of the earth',
+        example: "We must build sustainable cities to accommodate the world's population.",
+        cefr_level: 'C1',
+        grammar_note: 'verb phrase'
+      }
+    ],
+    extra_examples: [
+      "Agricultural innovations are needed to accommodate the world's population in the coming decades.",
+      "How can we accommodate the world's population without destroying natural habitats?"
+    ],
+    grammar_note: 'verb phrase',
+    base_verb: 'accommodate',
+    particles: '',
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: 'C1',
+    register: 'academic',
+    formality_score: 4,
+    connotation: 'neutral',
+    word_family: null,
+    collocations: [
+      { collocation: 'accommodate the growing population', example: 'Urban planning must adapt to accommodate the growing population.' },
+      { collocation: 'adequately accommodate', example: "Current infrastructures are insufficient to adequately accommodate the world's population." }
+    ],
+    semantic_field_id: 'demographics-sustainability',
+    semantic_field_label: 'Demographics & Sustainability',
+    semantic_field_words: [
+      { word: "accommodate the world's population", cefr: 'C1', register: 'academic' }
+    ],
+    register_synonyms: [
+      { word: 'house the population', register: 'neutral', cefr: 'B2' }
+    ],
+    folder_ids: ['folder-4', 'folder-task2-phrases'],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: 'Added default database entry.'
+  },
+  {
+    id: 'entry-maintain-natural-balance',
+    entry_type: 'word',
+    word: 'maintain the natural balance',
+    ipa_uk: '/meɪnˈteɪn ðə ˈnætʃ.ər.əl ˈbæl.əns/',
+    ipa_us: '/meɪnˈteɪn ðə ˈnætʃ.ɚ.əl ˈbæl.əns/',
+    definition: 'to preserve the stable state of ecosystems where organisms live in harmony (also written with typo: mantain)',
+    definition_source: 'cambridge',
+    example: 'Conserving forest areas is vital to maintain the natural balance.',
+    definitions: [
+      {
+        definition: 'to preserve the stable state of ecosystems where organisms live in harmony',
+        example: 'Conserving forest areas is vital to maintain the natural balance.',
+        cefr_level: 'C1',
+        grammar_note: 'verb phrase'
+      }
+    ],
+    extra_examples: [
+      'Predators play an essential role to maintain the natural balance of wildlife.',
+      'Human activities must be regulated to maintain the natural balance of marine life.'
+    ],
+    grammar_note: 'verb phrase',
+    base_verb: 'maintain',
+    particles: '',
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: 'C1',
+    register: 'academic',
+    formality_score: 4,
+    connotation: 'positive',
+    word_family: null,
+    collocations: [
+      { collocation: 'maintain the ecological balance', example: 'Wetlands are protected to maintain the ecological balance.' },
+      { collocation: 'help maintain the natural balance', example: 'Reducing carbon emissions will help maintain the natural balance.' }
+    ],
+    semantic_field_id: 'ecology-conservation',
+    semantic_field_label: 'Ecology & Conservation',
+    semantic_field_words: [
+      { word: 'maintain the natural balance', cefr: 'C1', register: 'academic' },
+      { word: 'preserve the ecosystem', cefr: 'C1', register: 'academic' }
+    ],
+    register_synonyms: [
+      { word: 'keep ecosystems stable', register: 'neutral', cefr: 'B2' }
+    ],
+    folder_ids: ['folder-4', 'folder-task2-phrases', 'folder-3'],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: 'Added default database entry.'
+  },
   {
     id: 'entry-plummet',
     entry_type: 'word',
