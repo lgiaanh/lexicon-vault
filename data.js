@@ -7097,12 +7097,12 @@ const INITIAL_ENTRIES = [
     word: 'adapt to a competitive job market',
     ipa_uk: '/əˈdæpt tuː ə kəmˈpet.ɪ.tɪv dʒɒb ˈmɑː.kɪt/',
     ipa_us: '/əˈdæpt tuː ə kəmˈpet̬.ə.t̬ɪv dʒɑːb ˈmɑːr.kɪt/',
-    definition: 'to acquire new skills and upgrade one's capabilities to find and keep work in a tight, fast-changing labor market',
+    definition: 'to acquire new skills and upgrade one\'s capabilities to find and keep work in a tight, fast-changing labor market',
     definition_source: 'cambridge',
     example: 'Faced with automation, workers must acquire digital skills to adapt to an increasingly competitive job market.',
     definitions: [
       {
-        definition: 'to acquire new skills and upgrade one's capabilities to find and keep work in a tight, fast-changing labor market',
+        definition: 'to acquire new skills and upgrade one\'s capabilities to find and keep work in a tight, fast-changing labor market',
         example: 'Faced with automation, workers must acquire digital skills to adapt to an increasingly competitive job market.',
         cefr_level: 'C1',
         grammar_note: 'verb phrase'
@@ -7167,7 +7167,7 @@ const INITIAL_ENTRIES = [
       }
     ],
     extra_examples: [
-      'Job interviews are designed to gauge an applicant's interpersonal skills and emotional quotient.',
+      'Job interviews are designed to gauge an applicant\'s interpersonal skills and emotional quotient.',
       'Without good interpersonal skills, leading a diverse team can be extremely difficult.'
     ],
     grammar_note: 'noun [plural]',
@@ -9995,12 +9995,12 @@ const EXTENDED_DICTIONARY_DB = [
     word: 'adapt to a competitive job market',
     ipa_uk: '/əˈdæpt tuː ə kəmˈpet.ɪ.tɪv dʒɒb ˈmɑː.kɪt/',
     ipa_us: '/əˈdæpt tuː ə kəmˈpet̬.ə.t̬ɪv dʒɑːb ˈmɑːr.kɪt/',
-    definition: 'to acquire new skills and upgrade one's capabilities to find and keep work in a tight, fast-changing labor market',
+    definition: 'to acquire new skills and upgrade one\'s capabilities to find and keep work in a tight, fast-changing labor market',
     definition_source: 'cambridge',
     example: 'Faced with automation, workers must acquire digital skills to adapt to an increasingly competitive job market.',
     definitions: [
       {
-        definition: 'to acquire new skills and upgrade one's capabilities to find and keep work in a tight, fast-changing labor market',
+        definition: 'to acquire new skills and upgrade one\'s capabilities to find and keep work in a tight, fast-changing labor market',
         example: 'Faced with automation, workers must acquire digital skills to adapt to an increasingly competitive job market.',
         cefr_level: 'C1',
         grammar_note: 'verb phrase'
@@ -10065,7 +10065,7 @@ const EXTENDED_DICTIONARY_DB = [
       }
     ],
     extra_examples: [
-      'Job interviews are designed to gauge an applicant's interpersonal skills and emotional quotient.',
+      'Job interviews are designed to gauge an applicant\'s interpersonal skills and emotional quotient.',
       'Without good interpersonal skills, leading a diverse team can be extremely difficult.'
     ],
     grammar_note: 'noun [plural]',
