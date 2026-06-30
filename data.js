@@ -2,16 +2,16 @@
 // Pre-filled with Cambridge Dictionary-style definitions and IELTS taxonomy classification.
 
 const INITIAL_FOLDERS = [
-  { id: 'folder-1', name: 'Law & Policy', color: '#DBCDF0', emoji: '⚖️', description: 'Legislation, judicial processes, constitutional rights, and official regulations.', created_at: new Date().toISOString(), word_count: 8 },
-  { id: 'folder-2', name: 'Economics & Statistics', color: '#FAEDCB', emoji: '📈', description: 'Financial theories, trade data, economic policy, market dynamics, and quantitative metrics.', created_at: new Date().toISOString(), word_count: 12 },
-  { id: 'folder-3', name: 'Environment & Ecology', color: '#C9E4DE', emoji: '🌱', description: 'Climate change, biodiversity, environmental preservation, ecosystems, and conservation strategies.', created_at: new Date().toISOString(), word_count: 5 },
-  { id: 'folder-4', name: 'Academic Writing (Task 2)', color: '#C6DEF1', emoji: '✍️', description: 'Sophisticated vocabulary and idioms tailored for high-scoring IELTS Writing Task 2 responses.', created_at: new Date().toISOString(), word_count: 27 },
+  { id: 'folder-1', name: 'Law & Policy', color: '#DBCDF0', emoji: '⚖️', description: 'Legislation, judicial processes, constitutional rights, and official regulations.', created_at: new Date().toISOString(), word_count: 9 },
+  { id: 'folder-2', name: 'Economics & Statistics', color: '#FAEDCB', emoji: '📈', description: 'Financial theories, trade data, economic policy, market dynamics, and quantitative metrics.', created_at: new Date().toISOString(), word_count: 14 },
+  { id: 'folder-3', name: 'Environment & Ecology', color: '#C9E4DE', emoji: '🌱', description: 'Climate change, biodiversity, environmental preservation, ecosystems, and conservation strategies.', created_at: new Date().toISOString(), word_count: 7 },
+  { id: 'folder-4', name: 'Academic Writing (Task 2)', color: '#C6DEF1', emoji: '✍️', description: 'Sophisticated vocabulary and idioms tailored for high-scoring IELTS Writing Task 2 responses.', created_at: new Date().toISOString(), word_count: 33 },
   { id: 'folder-5', name: 'Phrasal Verbs & Idioms', color: '#F7D9C4', emoji: '💬', description: 'Common English phrasal verbs and idiomatic expressions for informal or spoken contexts.', created_at: new Date().toISOString(), word_count: 8 },
-  { id: 'folder-6', name: 'Maps & Diagrams', color: '#F2C6DE', emoji: '🗺️', description: 'Spatial descriptions, maps, process flowcharts, and technical diagrams.', created_at: new Date().toISOString(), word_count: 0 },
-  { id: 'folder-speaking-work-study', name: 'Speaking: Work & Study', color: '#C6DEF1', emoji: '🏫', description: 'Phrasal verbs and colloquial expressions for describing academic pursuits and careers.', created_at: new Date().toISOString(), word_count: 2 },
+  { id: 'folder-6', name: 'Maps & Diagrams', color: '#F2C6DE', emoji: '🗺️', description: 'Spatial descriptions, maps, process flowcharts, and technical diagrams.', created_at: new Date().toISOString(), word_count: 3 },
+  { id: 'folder-speaking-work-study', name: 'Speaking: Work & Study', color: '#C6DEF1', emoji: '🏫', description: 'Phrasal verbs and colloquial expressions for describing academic pursuits and careers.', created_at: new Date().toISOString(), word_count: 3 },
   { id: 'folder-speaking-leisure-travel', name: 'Speaking: Leisure & Travel', color: '#C9E4DE', emoji: '✈️', description: 'Speaking phrasal verbs for describing vacationing, sightseeing, and hobbies.', created_at: new Date().toISOString(), word_count: 2 },
   { id: 'folder-speaking-relationships', name: 'Speaking: Relationships & Life', color: '#F2C6DE', emoji: '👥', description: 'Phrasal verbs for describing social connections, relatives, and childhood memories.', created_at: new Date().toISOString(), word_count: 2 },
-  { id: 'folder-science', name: 'Science & Technology', color: '#DBCDF0', emoji: '🔬', description: 'Vocabulary and collocations related to scientific research, breakthroughs, technology, and paradigm shifts.', created_at: new Date().toISOString(), word_count: 6 },
+  { id: 'folder-science', name: 'Science & Technology', color: '#DBCDF0', emoji: '🔬', description: 'Vocabulary and collocations related to scientific research, breakthroughs, technology, and paradigm shifts.', created_at: new Date().toISOString(), word_count: 7 },
   { id: 'folder-task2-phrases', name: 'Task 2 Phrases', color: '#F7D9C4', emoji: '📝', description: 'Key academic phrases, collocations, and idioms tailored for Writing Task 2 essays.', created_at: new Date().toISOString(), word_count: 15 }
 ];
 
@@ -7205,6 +7205,554 @@ const INITIAL_ENTRIES = [
     },
     date_added: new Date().toISOString(),
     source_context: 'Suggested by AI for Writing Task 2 work skills topic.'
+  },
+  {
+    id: "entry-durable",
+    entry_type: "word",
+    word: "durable",
+    ipa_uk: "/ˈdʒʊə.rə.bəl/",
+    ipa_us: "/ˈdʊr.ə.bəl/",
+    definition: "able to last a long time without becoming damaged or wearing out",
+    definition_source: "cambridge",
+    example: "The manufacturer uses highly durable materials to ensure the equipment withstands harsh weather conditions.",
+    definitions: [
+      {
+        definition: "able to last a long time without becoming damaged or wearing out",
+        example: "The manufacturer uses highly durable materials to ensure the equipment withstands harsh weather conditions.",
+        cefr_level: "B2",
+        grammar_note: "adjective"
+      }
+    ],
+    extra_examples: [
+      "Economic analysts point out that the demand for durable goods has risen over the past quarter.",
+      "A durable peace agreement requires mutual trust and compromises from both sides."
+    ],
+    grammar_note: "adjective",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "B2",
+    register: "academic",
+    formality_score: 4,
+    connotation: "positive",
+    word_family: {
+      verb: [],
+      noun: ["durability"],
+      adjective: ["durable"],
+      adverb: ["durably"]
+    },
+    collocations: [
+      { collocation: "durable goods", example: "Household appliances and cars are categorized as durable goods." },
+      { collocation: "highly durable", example: "Wood from cedar trees is highly durable even when exposed to moisture." }
+    ],
+    semantic_field_id: "material-property",
+    semantic_field_label: "Material Property",
+    semantic_field_words: [
+      { word: "resilient", cefr: "C1", register: "academic" },
+      { word: "robust", cefr: "C1", register: "formal" }
+    ],
+    register_synonyms: [
+      { word: "long-lasting", register: "neutral", cefr: "B2" }
+    ],
+    folder_ids: ["folder-4"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Discussing materials, economic goods, or long-lasting agreements."
+  },
+  {
+    id: "entry-sustainable",
+    entry_type: "word",
+    word: "sustainable",
+    ipa_uk: "/səˈsteɪ.nə.bəl/",
+    ipa_us: "/səˈsteɪ.nə.bəl/",
+    definition: "able to continue over a period of time, or causing little or no damage to the environment",
+    definition_source: "cambridge",
+    example: "The government should promote sustainable farming methods to prevent soil degradation.",
+    definitions: [
+      {
+        definition: "able to continue over a period of time, or causing little or no damage to the environment",
+        example: "The government should promote sustainable farming methods to prevent soil degradation.",
+        cefr_level: "B2",
+        grammar_note: "adjective"
+      }
+    ],
+    extra_examples: [
+      "Transitioning to sustainable energy sources like solar and wind is essential for reducing carbon emissions.",
+      "The business model is not sustainable in the long run due to high operating costs."
+    ],
+    grammar_note: "adjective",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "B2",
+    register: "academic",
+    formality_score: 4,
+    connotation: "positive",
+    word_family: {
+      verb: ["sustain"],
+      noun: ["sustainability", "sustenance"],
+      adjective: ["sustainable"],
+      adverb: ["sustainably"]
+    },
+    collocations: [
+      { collocation: "sustainable development", example: "UN sustainable development goals target clean water and sanitation." },
+      { collocation: "sustainable growth", example: "The company aims for sustainable growth without over-leveraging assets." }
+    ],
+    semantic_field_id: "ecology-environment",
+    semantic_field_label: "Ecology & Environment",
+    semantic_field_words: [
+      { word: "renewable", cefr: "B2", register: "neutral" },
+      { word: "eco-friendly", cefr: "B2", register: "neutral" }
+    ],
+    register_synonyms: [
+      { word: "viable", register: "academic", cefr: "C1" }
+    ],
+    folder_ids: ["folder-3", "folder-4"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Discussing ecology, environmental policies, or long-term financial viability."
+  },
+  {
+    id: "entry-concrete",
+    entry_type: "word",
+    word: "concrete",
+    ipa_uk: "/ˈkɒŋ.kriːt/",
+    ipa_us: "/ˈkɑːn.kriːt/",
+    definition: "a very hard building material made of cement, sand, water, and gravel, or clear and certain rather than general",
+    definition_source: "cambridge",
+    example: "The foundations of the apartment block are made of reinforced concrete.",
+    definitions: [
+      {
+        definition: "a very hard building material made of cement, sand, water, and gravel",
+        example: "The foundations of the apartment block are made of reinforced concrete.",
+        cefr_level: "B2",
+        grammar_note: "noun [U]"
+      },
+      {
+        definition: "clear and certain, or based on real things and facts rather than ideas",
+        example: "We need concrete evidence before we can make an official accusation.",
+        cefr_level: "B2",
+        grammar_note: "adjective"
+      }
+    ],
+    extra_examples: [
+      "The architect decided to leave the raw concrete walls exposed for a modern, industrial look.",
+      "Can you give me a concrete example of how this software will improve efficiency?"
+    ],
+    grammar_note: "noun [U] / adjective",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "B2",
+    register: "neutral",
+    formality_score: 3,
+    connotation: "neutral",
+    word_family: {
+      verb: [],
+      noun: ["concrete"],
+      adjective: ["concrete"],
+      adverb: ["concretely"]
+    },
+    collocations: [
+      { collocation: "concrete evidence", example: "Without concrete evidence, the prosecutor had to drop the case." },
+      { collocation: "reinforced concrete", example: "Reinforced concrete was a major technological breakthrough for civil engineering." }
+    ],
+    semantic_field_id: "materials-construction",
+    semantic_field_label: "Materials & Construction",
+    semantic_field_words: [
+      { word: "cement", cefr: "B2", register: "neutral" },
+      { word: "factual", cefr: "C1", register: "formal" }
+    ],
+    register_synonyms: [
+      { word: "tangible", register: "academic", cefr: "C1" },
+      { word: "cement", register: "neutral", cefr: "B2" }
+    ],
+    folder_ids: ["folder-4", "folder-6"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Describing construction components, modern architecture, or logical reasoning."
+  },
+  {
+    id: "entry-breakwater",
+    entry_type: "word",
+    word: "breakwater",
+    ipa_uk: "/ˈbreɪkˌwɔː.tər/",
+    ipa_us: "/ˈbreɪkˌwɑː.t̬ɚ/",
+    definition: "a strong wall or barrier built out into the sea to protect a harbor or beach from the force of waves",
+    definition_source: "cambridge",
+    example: "The port authorities constructed a stone breakwater to safeguard docked vessels from high tides.",
+    definitions: [
+      {
+        definition: "a strong wall or barrier built out into the sea to protect a harbor or beach from the force of waves",
+        example: "The port authorities constructed a stone breakwater to safeguard docked vessels from high tides.",
+        cefr_level: "C2",
+        grammar_note: "noun [C]"
+      }
+    ],
+    extra_examples: [
+      "Stretching out into the bay, the concrete breakwater also served as a popular walkway for tourists.",
+      "Engineers are reinforcing the old breakwater to counter severe coastal erosion."
+    ],
+    grammar_note: "noun [C]",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "C2",
+    register: "technical",
+    formality_score: 4,
+    connotation: "neutral",
+    word_family: {
+      verb: [],
+      noun: ["breakwater"],
+      adjective: [],
+      adverb: []
+    },
+    collocations: [
+      { collocation: "construct a breakwater", example: "It is expensive to construct a breakwater in deep offshore areas." },
+      { collocation: "coastal breakwater", example: "Coastal breakwaters modify wave patterns and protect shorelines." }
+    ],
+    semantic_field_id: "coastal-engineering",
+    semantic_field_label: "Coastal Engineering",
+    semantic_field_words: [
+      { word: "jetty", cefr: "C2", register: "technical" },
+      { word: "barrier", cefr: "B2", register: "neutral" },
+      { word: "sea wall", cefr: "C1", register: "technical" }
+    ],
+    register_synonyms: [
+      { word: "groyne", register: "technical", cefr: "C2" }
+    ],
+    folder_ids: ["folder-6"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "IELTS Writing Task 1 - describing maps, coastal developments, or structural processes."
+  },
+  {
+    id: "entry-binding",
+    entry_type: "word",
+    word: "binding",
+    ipa_uk: "/ˈbaɪn.dɪŋ/",
+    ipa_us: "/ˈbaɪn.dɪŋ/",
+    definition: "especially of an agreement, that cannot be legally avoided, ignored, or broken",
+    definition_source: "cambridge",
+    example: "The treaty signed by both nations is a legally binding contract under international law.",
+    definitions: [
+      {
+        definition: "especially of an agreement, that cannot be legally avoided, ignored, or broken",
+        example: "The treaty signed by both nations is a legally binding contract under international law.",
+        cefr_level: "C1",
+        grammar_note: "adjective"
+      }
+    ],
+    extra_examples: [
+      "The arbitrator's decision is final and binding on all parties involved in the dispute.",
+      "The glue acts as a binding agent to hold the wood particles together securely."
+    ],
+    grammar_note: "adjective",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "C1",
+    register: "formal",
+    formality_score: 4,
+    connotation: "neutral",
+    word_family: {
+      verb: ["bind"],
+      noun: ["binder", "binding"],
+      adjective: ["binding"],
+      adverb: []
+    },
+    collocations: [
+      { collocation: "legally binding", example: "Always read the terms and conditions before signing a legally binding document." },
+      { collocation: "binding agreement", example: "The oral agreement did not constitute a binding agreement in the eyes of the court." }
+    ],
+    semantic_field_id: "law-contracts",
+    semantic_field_label: "Law & Contracts",
+    semantic_field_words: [
+      { word: "obligatory", cefr: "C1", register: "formal" },
+      { word: "compulsory", cefr: "B2", register: "neutral" }
+    ],
+    register_synonyms: [
+      { word: "mandatory", register: "formal", cefr: "C1" }
+    ],
+    folder_ids: ["folder-1", "folder-4"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Describing agreements, laws, administrative rules, or physical cohesion."
+  },
+  {
+    id: "entry-composition",
+    entry_type: "word",
+    word: "composition",
+    ipa_uk: "/ˌkɒm.pəˈzɪʃ.ən/",
+    ipa_us: "/ˌkɑːm.pəˈzɪʃ.ən/",
+    definition: "the parts, elements, or mix of ingredients that make up a whole system or substance",
+    definition_source: "cambridge",
+    example: "Scientists analyzed the chemical composition of the lunar soil samples.",
+    definitions: [
+      {
+        definition: "the parts, elements, or mix of ingredients that make up a whole system or substance",
+        example: "Scientists analyzed the chemical composition of the lunar soil samples.",
+        cefr_level: "C1",
+        grammar_note: "noun [C or U]"
+      },
+      {
+        definition: "a piece of writing, music, or art",
+        example: "The student was asked to write a short musical composition for the class.",
+        cefr_level: "B2",
+        grammar_note: "noun [C]"
+      }
+    ],
+    extra_examples: [
+      "The shifting demographic composition of the workforce presents new challenges for managers.",
+      "The painter paid close attention to the composition and lighting of the landscape."
+    ],
+    grammar_note: "noun",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "C1",
+    register: "academic",
+    formality_score: 4,
+    connotation: "neutral",
+    word_family: {
+      verb: ["compose"],
+      noun: ["composition", "composer"],
+      adjective: ["composite"],
+      adverb: []
+    },
+    collocations: [
+      { collocation: "chemical composition", example: "The chemical composition of water consists of two parts hydrogen to one part oxygen." },
+      { collocation: "composition of the board", example: "Changes in the composition of the board reflect the new corporate strategy." }
+    ],
+    semantic_field_id: "structure-makeup",
+    semantic_field_label: "Structure & Makeup",
+    semantic_field_words: [
+      { word: "constitution", cefr: "C2", register: "formal" },
+      { word: "make-up", cefr: "B2", register: "neutral" }
+    ],
+    register_synonyms: [
+      { word: "makeup", register: "neutral", cefr: "B2" },
+      { word: "structure", register: "neutral", cefr: "B2" }
+    ],
+    folder_ids: ["folder-4", "folder-science"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Describing materials, scientific structures, essays, or artistic layouts."
+  },
+  {
+    id: "entry-punctual",
+    entry_type: "word",
+    word: "punctual",
+    ipa_uk: "/ˈpʌŋk.tʃu.əl/",
+    ipa_us: "/ˈpʌŋk.tʃu.əl/",
+    definition: "arriving, doing something, or happening at the expected, correct time; not late",
+    definition_source: "cambridge",
+    example: "The airline has a reputation for being punctual, with 95% of flights arriving on time.",
+    definitions: [
+      {
+        definition: "arriving, doing something, or happening at the expected, correct time; not late",
+        example: "The airline has a reputation for being punctual, with 95% of flights arriving on time.",
+        cefr_level: "B1",
+        grammar_note: "adjective"
+      }
+    ],
+    extra_examples: [
+      "In some cultures, it is considered highly impolite not to be punctual for social events.",
+      "The punctual payment of taxes is a civic duty enforced by the revenue authorities."
+    ],
+    grammar_note: "adjective",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "B1",
+    register: "neutral",
+    formality_score: 3,
+    connotation: "positive",
+    word_family: {
+      noun: ["punctuality"],
+      adjective: ["punctual"],
+      adverb: ["punctually"]
+    },
+    collocations: [
+      { collocation: "remain punctual", example: "Despite heavy traffic, the delivery driver managed to remain punctual." },
+      { collocation: "punctual service", example: "Customers appreciate the punctual service provided by the local courier." }
+    ],
+    semantic_field_id: "time-discipline",
+    semantic_field_label: "Time & Discipline",
+    semantic_field_words: [
+      { word: "prompt", cefr: "B2", register: "neutral" },
+      { word: "timely", cefr: "C1", register: "formal" }
+    ],
+    register_synonyms: [
+      { word: "on-time", register: "informal", cefr: "A2" }
+    ],
+    folder_ids: ["folder-4", "folder-speaking-work-study"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Describing work habits, transportation schedules, or daily routines."
+  },
+  {
+    id: "entry-livestock",
+    entry_type: "word",
+    word: "livestock",
+    ipa_uk: "/ˈlaɪv.stɒk/",
+    ipa_us: "/ˈlaɪv.stɑːk/",
+    definition: "animals and birds kept on a farm for use or profit, such as cattle, sheep, or pigs",
+    definition_source: "cambridge",
+    example: "Drought and heatwaves have severely affected the health of local livestock.",
+    definitions: [
+      {
+        definition: "animals and birds kept on a farm for use or profit, such as cattle, sheep, or pigs",
+        example: "Drought and heatwaves have severely affected the health of local livestock.",
+        cefr_level: "B2",
+        grammar_note: "noun [U]"
+      }
+    ],
+    extra_examples: [
+      "Livestock farming accounts for a significant portion of agricultural greenhouse gas emissions.",
+      "The farmers moved their livestock to higher ground during the flash floods."
+    ],
+    grammar_note: "noun [U]",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "B2",
+    register: "neutral",
+    formality_score: 3,
+    connotation: "neutral",
+    word_family: {
+      noun: ["livestock", "stock"]
+    },
+    collocations: [
+      { collocation: "raise livestock", example: "Nomadic communities raise livestock for milk, meat, and wool." },
+      { collocation: "livestock sector", example: "The livestock sector is a major driver of the rural economy." }
+    ],
+    semantic_field_id: "agriculture-farming",
+    semantic_field_label: "Agriculture & Farming",
+    semantic_field_words: [
+      { word: "cattle", cefr: "B2", register: "neutral" },
+      { word: "agriculture", cefr: "B2", register: "neutral" }
+    ],
+    register_synonyms: [
+      { word: "farm animals", register: "informal", cefr: "A2" }
+    ],
+    folder_ids: ["folder-2", "folder-3"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Discussing agricultural economics, food production, or ecology."
+  },
+  {
+    id: "entry-tractor",
+    entry_type: "word",
+    word: "tractor",
+    ipa_uk: "/ˈtræk.tər/",
+    ipa_us: "/ˈtræk.tɚ/",
+    definition: "a powerful motor vehicle with large back wheels, used for pulling agricultural machinery on a farm",
+    definition_source: "cambridge",
+    example: "The farmer used the tractor to pull the plow through the muddy fields.",
+    definitions: [
+      {
+        definition: "a powerful motor vehicle with large back wheels, used for pulling agricultural machinery on a farm",
+        example: "The farmer used the tractor to pull the plow through the muddy fields.",
+        cefr_level: "B1",
+        grammar_note: "noun [C]"
+      }
+    ],
+    extra_examples: [
+      "Modern tractors are equipped with GPS systems to automate planting and sowing.",
+      "A long line of tractors blocked the highway during the agricultural strike."
+    ],
+    grammar_note: "noun [C]",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "B1",
+    register: "neutral",
+    formality_score: 3,
+    connotation: "neutral",
+    word_family: {
+      noun: ["tractor", "traction"]
+    },
+    collocations: [
+      { collocation: "drive a tractor", example: "Children growing up on farms often learn to drive a tractor at a young age." },
+      { collocation: "farm tractor", example: "The dealer sells various models of farm tractors and harvesting equipment." }
+    ],
+    semantic_field_id: "agriculture-machinery",
+    semantic_field_label: "Agriculture & Machinery",
+    semantic_field_words: [
+      { word: "machinery", cefr: "B2", register: "neutral" },
+      { word: "harvester", cefr: "C1", register: "technical" }
+    ],
+    register_synonyms: [
+      { word: "farm vehicle", register: "neutral", cefr: "B1" }
+    ],
+    folder_ids: ["folder-2", "folder-6"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Describing farming technology, maps/diagrams of farm environments, or trade machinery."
   }
 ];
 
@@ -10103,6 +10651,554 @@ const EXTENDED_DICTIONARY_DB = [
     },
     date_added: new Date().toISOString(),
     source_context: 'Suggested by AI for Writing Task 2 work skills topic.'
+  },
+  {
+    id: "entry-durable",
+    entry_type: "word",
+    word: "durable",
+    ipa_uk: "/ˈdʒʊə.rə.bəl/",
+    ipa_us: "/ˈdʊr.ə.bəl/",
+    definition: "able to last a long time without becoming damaged or wearing out",
+    definition_source: "cambridge",
+    example: "The manufacturer uses highly durable materials to ensure the equipment withstands harsh weather conditions.",
+    definitions: [
+      {
+        definition: "able to last a long time without becoming damaged or wearing out",
+        example: "The manufacturer uses highly durable materials to ensure the equipment withstands harsh weather conditions.",
+        cefr_level: "B2",
+        grammar_note: "adjective"
+      }
+    ],
+    extra_examples: [
+      "Economic analysts point out that the demand for durable goods has risen over the past quarter.",
+      "A durable peace agreement requires mutual trust and compromises from both sides."
+    ],
+    grammar_note: "adjective",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "B2",
+    register: "academic",
+    formality_score: 4,
+    connotation: "positive",
+    word_family: {
+      verb: [],
+      noun: ["durability"],
+      adjective: ["durable"],
+      adverb: ["durably"]
+    },
+    collocations: [
+      { collocation: "durable goods", example: "Household appliances and cars are categorized as durable goods." },
+      { collocation: "highly durable", example: "Wood from cedar trees is highly durable even when exposed to moisture." }
+    ],
+    semantic_field_id: "material-property",
+    semantic_field_label: "Material Property",
+    semantic_field_words: [
+      { word: "resilient", cefr: "C1", register: "academic" },
+      { word: "robust", cefr: "C1", register: "formal" }
+    ],
+    register_synonyms: [
+      { word: "long-lasting", register: "neutral", cefr: "B2" }
+    ],
+    folder_ids: ["folder-4"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Discussing materials, economic goods, or long-lasting agreements."
+  },
+  {
+    id: "entry-sustainable",
+    entry_type: "word",
+    word: "sustainable",
+    ipa_uk: "/səˈsteɪ.nə.bəl/",
+    ipa_us: "/səˈsteɪ.nə.bəl/",
+    definition: "able to continue over a period of time, or causing little or no damage to the environment",
+    definition_source: "cambridge",
+    example: "The government should promote sustainable farming methods to prevent soil degradation.",
+    definitions: [
+      {
+        definition: "able to continue over a period of time, or causing little or no damage to the environment",
+        example: "The government should promote sustainable farming methods to prevent soil degradation.",
+        cefr_level: "B2",
+        grammar_note: "adjective"
+      }
+    ],
+    extra_examples: [
+      "Transitioning to sustainable energy sources like solar and wind is essential for reducing carbon emissions.",
+      "The business model is not sustainable in the long run due to high operating costs."
+    ],
+    grammar_note: "adjective",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "B2",
+    register: "academic",
+    formality_score: 4,
+    connotation: "positive",
+    word_family: {
+      verb: ["sustain"],
+      noun: ["sustainability", "sustenance"],
+      adjective: ["sustainable"],
+      adverb: ["sustainably"]
+    },
+    collocations: [
+      { collocation: "sustainable development", example: "UN sustainable development goals target clean water and sanitation." },
+      { collocation: "sustainable growth", example: "The company aims for sustainable growth without over-leveraging assets." }
+    ],
+    semantic_field_id: "ecology-environment",
+    semantic_field_label: "Ecology & Environment",
+    semantic_field_words: [
+      { word: "renewable", cefr: "B2", register: "neutral" },
+      { word: "eco-friendly", cefr: "B2", register: "neutral" }
+    ],
+    register_synonyms: [
+      { word: "viable", register: "academic", cefr: "C1" }
+    ],
+    folder_ids: ["folder-3", "folder-4"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Discussing ecology, environmental policies, or long-term financial viability."
+  },
+  {
+    id: "entry-concrete",
+    entry_type: "word",
+    word: "concrete",
+    ipa_uk: "/ˈkɒŋ.kriːt/",
+    ipa_us: "/ˈkɑːn.kriːt/",
+    definition: "a very hard building material made of cement, sand, water, and gravel, or clear and certain rather than general",
+    definition_source: "cambridge",
+    example: "The foundations of the apartment block are made of reinforced concrete.",
+    definitions: [
+      {
+        definition: "a very hard building material made of cement, sand, water, and gravel",
+        example: "The foundations of the apartment block are made of reinforced concrete.",
+        cefr_level: "B2",
+        grammar_note: "noun [U]"
+      },
+      {
+        definition: "clear and certain, or based on real things and facts rather than ideas",
+        example: "We need concrete evidence before we can make an official accusation.",
+        cefr_level: "B2",
+        grammar_note: "adjective"
+      }
+    ],
+    extra_examples: [
+      "The architect decided to leave the raw concrete walls exposed for a modern, industrial look.",
+      "Can you give me a concrete example of how this software will improve efficiency?"
+    ],
+    grammar_note: "noun [U] / adjective",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "B2",
+    register: "neutral",
+    formality_score: 3,
+    connotation: "neutral",
+    word_family: {
+      verb: [],
+      noun: ["concrete"],
+      adjective: ["concrete"],
+      adverb: ["concretely"]
+    },
+    collocations: [
+      { collocation: "concrete evidence", example: "Without concrete evidence, the prosecutor had to drop the case." },
+      { collocation: "reinforced concrete", example: "Reinforced concrete was a major technological breakthrough for civil engineering." }
+    ],
+    semantic_field_id: "materials-construction",
+    semantic_field_label: "Materials & Construction",
+    semantic_field_words: [
+      { word: "cement", cefr: "B2", register: "neutral" },
+      { word: "factual", cefr: "C1", register: "formal" }
+    ],
+    register_synonyms: [
+      { word: "tangible", register: "academic", cefr: "C1" },
+      { word: "cement", register: "neutral", cefr: "B2" }
+    ],
+    folder_ids: ["folder-4", "folder-6"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Describing construction components, modern architecture, or logical reasoning."
+  },
+  {
+    id: "entry-breakwater",
+    entry_type: "word",
+    word: "breakwater",
+    ipa_uk: "/ˈbreɪkˌwɔː.tər/",
+    ipa_us: "/ˈbreɪkˌwɑː.t̬ɚ/",
+    definition: "a strong wall or barrier built out into the sea to protect a harbor or beach from the force of waves",
+    definition_source: "cambridge",
+    example: "The port authorities constructed a stone breakwater to safeguard docked vessels from high tides.",
+    definitions: [
+      {
+        definition: "a strong wall or barrier built out into the sea to protect a harbor or beach from the force of waves",
+        example: "The port authorities constructed a stone breakwater to safeguard docked vessels from high tides.",
+        cefr_level: "C2",
+        grammar_note: "noun [C]"
+      }
+    ],
+    extra_examples: [
+      "Stretching out into the bay, the concrete breakwater also served as a popular walkway for tourists.",
+      "Engineers are reinforcing the old breakwater to counter severe coastal erosion."
+    ],
+    grammar_note: "noun [C]",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "C2",
+    register: "technical",
+    formality_score: 4,
+    connotation: "neutral",
+    word_family: {
+      verb: [],
+      noun: ["breakwater"],
+      adjective: [],
+      adverb: []
+    },
+    collocations: [
+      { collocation: "construct a breakwater", example: "It is expensive to construct a breakwater in deep offshore areas." },
+      { collocation: "coastal breakwater", example: "Coastal breakwaters modify wave patterns and protect shorelines." }
+    ],
+    semantic_field_id: "coastal-engineering",
+    semantic_field_label: "Coastal Engineering",
+    semantic_field_words: [
+      { word: "jetty", cefr: "C2", register: "technical" },
+      { word: "barrier", cefr: "B2", register: "neutral" },
+      { word: "sea wall", cefr: "C1", register: "technical" }
+    ],
+    register_synonyms: [
+      { word: "groyne", register: "technical", cefr: "C2" }
+    ],
+    folder_ids: ["folder-6"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "IELTS Writing Task 1 - describing maps, coastal developments, or structural processes."
+  },
+  {
+    id: "entry-binding",
+    entry_type: "word",
+    word: "binding",
+    ipa_uk: "/ˈbaɪn.dɪŋ/",
+    ipa_us: "/ˈbaɪn.dɪŋ/",
+    definition: "especially of an agreement, that cannot be legally avoided, ignored, or broken",
+    definition_source: "cambridge",
+    example: "The treaty signed by both nations is a legally binding contract under international law.",
+    definitions: [
+      {
+        definition: "especially of an agreement, that cannot be legally avoided, ignored, or broken",
+        example: "The treaty signed by both nations is a legally binding contract under international law.",
+        cefr_level: "C1",
+        grammar_note: "adjective"
+      }
+    ],
+    extra_examples: [
+      "The arbitrator's decision is final and binding on all parties involved in the dispute.",
+      "The glue acts as a binding agent to hold the wood particles together securely."
+    ],
+    grammar_note: "adjective",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "C1",
+    register: "formal",
+    formality_score: 4,
+    connotation: "neutral",
+    word_family: {
+      verb: ["bind"],
+      noun: ["binder", "binding"],
+      adjective: ["binding"],
+      adverb: []
+    },
+    collocations: [
+      { collocation: "legally binding", example: "Always read the terms and conditions before signing a legally binding document." },
+      { collocation: "binding agreement", example: "The oral agreement did not constitute a binding agreement in the eyes of the court." }
+    ],
+    semantic_field_id: "law-contracts",
+    semantic_field_label: "Law & Contracts",
+    semantic_field_words: [
+      { word: "obligatory", cefr: "C1", register: "formal" },
+      { word: "compulsory", cefr: "B2", register: "neutral" }
+    ],
+    register_synonyms: [
+      { word: "mandatory", register: "formal", cefr: "C1" }
+    ],
+    folder_ids: ["folder-1", "folder-4"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Describing agreements, laws, administrative rules, or physical cohesion."
+  },
+  {
+    id: "entry-composition",
+    entry_type: "word",
+    word: "composition",
+    ipa_uk: "/ˌkɒm.pəˈzɪʃ.ən/",
+    ipa_us: "/ˌkɑːm.pəˈzɪʃ.ən/",
+    definition: "the parts, elements, or mix of ingredients that make up a whole system or substance",
+    definition_source: "cambridge",
+    example: "Scientists analyzed the chemical composition of the lunar soil samples.",
+    definitions: [
+      {
+        definition: "the parts, elements, or mix of ingredients that make up a whole system or substance",
+        example: "Scientists analyzed the chemical composition of the lunar soil samples.",
+        cefr_level: "C1",
+        grammar_note: "noun [C or U]"
+      },
+      {
+        definition: "a piece of writing, music, or art",
+        example: "The student was asked to write a short musical composition for the class.",
+        cefr_level: "B2",
+        grammar_note: "noun [C]"
+      }
+    ],
+    extra_examples: [
+      "The shifting demographic composition of the workforce presents new challenges for managers.",
+      "The painter paid close attention to the composition and lighting of the landscape."
+    ],
+    grammar_note: "noun",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "C1",
+    register: "academic",
+    formality_score: 4,
+    connotation: "neutral",
+    word_family: {
+      verb: ["compose"],
+      noun: ["composition", "composer"],
+      adjective: ["composite"],
+      adverb: []
+    },
+    collocations: [
+      { collocation: "chemical composition", example: "The chemical composition of water consists of two parts hydrogen to one part oxygen." },
+      { collocation: "composition of the board", example: "Changes in the composition of the board reflect the new corporate strategy." }
+    ],
+    semantic_field_id: "structure-makeup",
+    semantic_field_label: "Structure & Makeup",
+    semantic_field_words: [
+      { word: "constitution", cefr: "C2", register: "formal" },
+      { word: "make-up", cefr: "B2", register: "neutral" }
+    ],
+    register_synonyms: [
+      { word: "makeup", register: "neutral", cefr: "B2" },
+      { word: "structure", register: "neutral", cefr: "B2" }
+    ],
+    folder_ids: ["folder-4", "folder-science"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Describing materials, scientific structures, essays, or artistic layouts."
+  },
+  {
+    id: "entry-punctual",
+    entry_type: "word",
+    word: "punctual",
+    ipa_uk: "/ˈpʌŋk.tʃu.əl/",
+    ipa_us: "/ˈpʌŋk.tʃu.əl/",
+    definition: "arriving, doing something, or happening at the expected, correct time; not late",
+    definition_source: "cambridge",
+    example: "The airline has a reputation for being punctual, with 95% of flights arriving on time.",
+    definitions: [
+      {
+        definition: "arriving, doing something, or happening at the expected, correct time; not late",
+        example: "The airline has a reputation for being punctual, with 95% of flights arriving on time.",
+        cefr_level: "B1",
+        grammar_note: "adjective"
+      }
+    ],
+    extra_examples: [
+      "In some cultures, it is considered highly impolite not to be punctual for social events.",
+      "The punctual payment of taxes is a civic duty enforced by the revenue authorities."
+    ],
+    grammar_note: "adjective",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "B1",
+    register: "neutral",
+    formality_score: 3,
+    connotation: "positive",
+    word_family: {
+      noun: ["punctuality"],
+      adjective: ["punctual"],
+      adverb: ["punctually"]
+    },
+    collocations: [
+      { collocation: "remain punctual", example: "Despite heavy traffic, the delivery driver managed to remain punctual." },
+      { collocation: "punctual service", example: "Customers appreciate the punctual service provided by the local courier." }
+    ],
+    semantic_field_id: "time-discipline",
+    semantic_field_label: "Time & Discipline",
+    semantic_field_words: [
+      { word: "prompt", cefr: "B2", register: "neutral" },
+      { word: "timely", cefr: "C1", register: "formal" }
+    ],
+    register_synonyms: [
+      { word: "on-time", register: "informal", cefr: "A2" }
+    ],
+    folder_ids: ["folder-4", "folder-speaking-work-study"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Describing work habits, transportation schedules, or daily routines."
+  },
+  {
+    id: "entry-livestock",
+    entry_type: "word",
+    word: "livestock",
+    ipa_uk: "/ˈlaɪv.stɒk/",
+    ipa_us: "/ˈlaɪv.stɑːk/",
+    definition: "animals and birds kept on a farm for use or profit, such as cattle, sheep, or pigs",
+    definition_source: "cambridge",
+    example: "Drought and heatwaves have severely affected the health of local livestock.",
+    definitions: [
+      {
+        definition: "animals and birds kept on a farm for use or profit, such as cattle, sheep, or pigs",
+        example: "Drought and heatwaves have severely affected the health of local livestock.",
+        cefr_level: "B2",
+        grammar_note: "noun [U]"
+      }
+    ],
+    extra_examples: [
+      "Livestock farming accounts for a significant portion of agricultural greenhouse gas emissions.",
+      "The farmers moved their livestock to higher ground during the flash floods."
+    ],
+    grammar_note: "noun [U]",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "B2",
+    register: "neutral",
+    formality_score: 3,
+    connotation: "neutral",
+    word_family: {
+      noun: ["livestock", "stock"]
+    },
+    collocations: [
+      { collocation: "raise livestock", example: "Nomadic communities raise livestock for milk, meat, and wool." },
+      { collocation: "livestock sector", example: "The livestock sector is a major driver of the rural economy." }
+    ],
+    semantic_field_id: "agriculture-farming",
+    semantic_field_label: "Agriculture & Farming",
+    semantic_field_words: [
+      { word: "cattle", cefr: "B2", register: "neutral" },
+      { word: "agriculture", cefr: "B2", register: "neutral" }
+    ],
+    register_synonyms: [
+      { word: "farm animals", register: "informal", cefr: "A2" }
+    ],
+    folder_ids: ["folder-2", "folder-3"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Discussing agricultural economics, food production, or ecology."
+  },
+  {
+    id: "entry-tractor",
+    entry_type: "word",
+    word: "tractor",
+    ipa_uk: "/ˈtræk.tər/",
+    ipa_us: "/ˈtræk.tɚ/",
+    definition: "a powerful motor vehicle with large back wheels, used for pulling agricultural machinery on a farm",
+    definition_source: "cambridge",
+    example: "The farmer used the tractor to pull the plow through the muddy fields.",
+    definitions: [
+      {
+        definition: "a powerful motor vehicle with large back wheels, used for pulling agricultural machinery on a farm",
+        example: "The farmer used the tractor to pull the plow through the muddy fields.",
+        cefr_level: "B1",
+        grammar_note: "noun [C]"
+      }
+    ],
+    extra_examples: [
+      "Modern tractors are equipped with GPS systems to automate planting and sowing.",
+      "A long line of tractors blocked the highway during the agricultural strike."
+    ],
+    grammar_note: "noun [C]",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "B1",
+    register: "neutral",
+    formality_score: 3,
+    connotation: "neutral",
+    word_family: {
+      noun: ["tractor", "traction"]
+    },
+    collocations: [
+      { collocation: "drive a tractor", example: "Children growing up on farms often learn to drive a tractor at a young age." },
+      { collocation: "farm tractor", example: "The dealer sells various models of farm tractors and harvesting equipment." }
+    ],
+    semantic_field_id: "agriculture-machinery",
+    semantic_field_label: "Agriculture & Machinery",
+    semantic_field_words: [
+      { word: "machinery", cefr: "B2", register: "neutral" },
+      { word: "harvester", cefr: "C1", register: "technical" }
+    ],
+    register_synonyms: [
+      { word: "farm vehicle", register: "neutral", cefr: "B1" }
+    ],
+    folder_ids: ["folder-2", "folder-6"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Describing farming technology, maps/diagrams of farm environments, or trade machinery."
   }
 ];
 
