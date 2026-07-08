@@ -3,16 +3,17 @@
 
 const INITIAL_FOLDERS = [
   { id: 'folder-1', name: 'Law & Policy', color: '#DBCDF0', emoji: '⚖️', description: 'Legislation, judicial processes, constitutional rights, and official regulations.', created_at: new Date().toISOString(), word_count: 9 },
-  { id: 'folder-2', name: 'Economics & Statistics', color: '#FAEDCB', emoji: '📈', description: 'Financial theories, trade data, economic policy, market dynamics, and quantitative metrics.', created_at: new Date().toISOString(), word_count: 14 },
-  { id: 'folder-3', name: 'Environment & Ecology', color: '#C9E4DE', emoji: '🌱', description: 'Climate change, biodiversity, environmental preservation, ecosystems, and conservation strategies.', created_at: new Date().toISOString(), word_count: 7 },
-  { id: 'folder-4', name: 'Academic Writing (Task 2)', color: '#C6DEF1', emoji: '✍️', description: 'Sophisticated vocabulary and idioms tailored for high-scoring IELTS Writing Task 2 responses.', created_at: new Date().toISOString(), word_count: 33 },
+  { id: 'folder-2', name: 'Economics & Statistics', color: '#FAEDCB', emoji: '📈', description: 'Financial theories, trade data, economic policy, market dynamics, and quantitative metrics.', created_at: new Date().toISOString(), word_count: 15 },
+  { id: 'folder-3', name: 'Environment & Ecology', color: '#C9E4DE', emoji: '🌱', description: 'Climate change, biodiversity, environmental preservation, ecosystems, and conservation strategies.', created_at: new Date().toISOString(), word_count: 10 },
+  { id: 'folder-4', name: 'Academic Writing (Task 2)', color: '#C6DEF1', emoji: '✍️', description: 'Sophisticated vocabulary and idioms tailored for high-scoring IELTS Writing Task 2 responses.', created_at: new Date().toISOString(), word_count: 39 },
   { id: 'folder-5', name: 'Phrasal Verbs & Idioms', color: '#F7D9C4', emoji: '💬', description: 'Common English phrasal verbs and idiomatic expressions for informal or spoken contexts.', created_at: new Date().toISOString(), word_count: 8 },
-  { id: 'folder-6', name: 'Maps & Diagrams', color: '#F2C6DE', emoji: '🗺️', description: 'Spatial descriptions, maps, process flowcharts, and technical diagrams.', created_at: new Date().toISOString(), word_count: 3 },
+  { id: 'folder-6', name: 'Maps & Diagrams', color: '#F2C6DE', emoji: '🗺️', description: 'Spatial descriptions, maps, process flowcharts, and technical diagrams.', created_at: new Date().toISOString(), word_count: 4 },
   { id: 'folder-speaking-work-study', name: 'Speaking: Work & Study', color: '#C6DEF1', emoji: '🏫', description: 'Phrasal verbs and colloquial expressions for describing academic pursuits and careers.', created_at: new Date().toISOString(), word_count: 3 },
   { id: 'folder-speaking-leisure-travel', name: 'Speaking: Leisure & Travel', color: '#C9E4DE', emoji: '✈️', description: 'Speaking phrasal verbs for describing vacationing, sightseeing, and hobbies.', created_at: new Date().toISOString(), word_count: 2 },
   { id: 'folder-speaking-relationships', name: 'Speaking: Relationships & Life', color: '#F2C6DE', emoji: '👥', description: 'Phrasal verbs for describing social connections, relatives, and childhood memories.', created_at: new Date().toISOString(), word_count: 2 },
-  { id: 'folder-science', name: 'Science & Technology', color: '#DBCDF0', emoji: '🔬', description: 'Vocabulary and collocations related to scientific research, breakthroughs, technology, and paradigm shifts.', created_at: new Date().toISOString(), word_count: 7 },
-  { id: 'folder-task2-phrases', name: 'Task 2 Phrases', color: '#F7D9C4', emoji: '📝', description: 'Key academic phrases, collocations, and idioms tailored for Writing Task 2 essays.', created_at: new Date().toISOString(), word_count: 15 }
+  { id: 'folder-science', name: 'Science & Technology', color: '#DBCDF0', emoji: '🔬', description: 'Vocabulary and collocations related to scientific research, breakthroughs, technology, and paradigm shifts.', created_at: new Date().toISOString(), word_count: 8 },
+  { id: 'folder-task2-phrases', name: 'Task 2 Phrases', color: '#F7D9C4', emoji: '📝', description: 'Key academic phrases, collocations, and idioms tailored for Writing Task 2 essays.', created_at: new Date().toISOString(), word_count: 15 },
+  { id: 'folder-reading', name: 'IELTS Reading', color: '#C9E4DE', emoji: '📖', description: 'High-yield vocabulary and scientific terms gathered from IELTS Reading passages.', created_at: new Date().toISOString(), word_count: 18 }
 ];
 
 const INITIAL_ENTRIES = [
@@ -7753,6 +7754,1097 @@ const INITIAL_ENTRIES = [
     },
     date_added: new Date().toISOString(),
     source_context: "Describing farming technology, maps/diagrams of farm environments, or trade machinery."
+  },
+  {
+    id: "entry-impassive",
+    entry_type: "word",
+    word: "impassive",
+    ipa_uk: "/ɪmˈpæs.ɪv/",
+    ipa_us: "/ɪmˈpæs.ɪv/",
+    definition: "expressing no emotion, or completely flat and featureless",
+    definition_source: "cambridge",
+    example: "Beneath the flat, impassive surface of Australia lie hidden mountains and valleys.",
+    definitions: [
+      {
+        definition: "expressing no emotion, or completely flat and featureless",
+        example: "Beneath the flat, impassive surface of Australia lie hidden mountains and valleys.",
+        cefr_level: "C2",
+        grammar_note: "adjective"
+      }
+    ],
+    extra_examples: [
+      "The defendant remained impassive throughout the trial, showing no signs of remorse.",
+      "An impassive stone facade hid the busy activity inside the monastery."
+    ],
+    grammar_note: "adjective",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "C2",
+    register: "formal",
+    formality_score: 5,
+    connotation: "neutral",
+    word_family: {
+      verb: [],
+      noun: ["impassivity"],
+      adjective: ["impassive"],
+      adverb: ["impassively"]
+    },
+    collocations: [
+      { collocation: "impassive face", example: "He kept an impassive face to avoid revealing his hand in the game." },
+      { collocation: "impassive surface", example: "The impassive surface of the lake reflected the stormy gray clouds." }
+    ],
+    semantic_field_id: "expression-emotion",
+    semantic_field_label: "Expression & Emotion",
+    semantic_field_words: [
+      { word: "expressionless", cefr: "B2", register: "neutral" },
+      { word: "stolid", cefr: "C2", register: "formal" }
+    ],
+    register_synonyms: [
+      { word: "emotionless", register: "neutral", cefr: "B2" }
+    ],
+    folder_ids: ["folder-reading"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Sea Change for Salinity passage - describing the calm Australian terrain."
+  },
+  {
+    id: "entry-stealthily",
+    entry_type: "word",
+    word: "stealthily",
+    ipa_uk: "/ˈstel.θəl.i/",
+    ipa_us: "/ˈstel.θəl.i/",
+    definition: "in a quiet, secret, or cautious manner to avoid being noticed",
+    definition_source: "cambridge",
+    example: "The disease spreads stealthily through the population, often showing no initial symptoms.",
+    definitions: [
+      {
+        definition: "in a quiet, secret, or cautious manner to avoid being noticed",
+        example: "The disease spreads stealthily through the population, often showing no initial symptoms.",
+        cefr_level: "C2",
+        grammar_note: "adverb"
+      }
+    ],
+    extra_examples: [
+      "Deadly salt is stealthily killing much of the agricultural landscape in the basin.",
+      "The predator crawled stealthily through the tall grass toward its prey."
+    ],
+    grammar_note: "adverb",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "C2",
+    register: "academic",
+    formality_score: 4,
+    connotation: "negative",
+    word_family: {
+      verb: [],
+      noun: ["stealth"],
+      adjective: ["stealthy"],
+      adverb: ["stealthily"]
+    },
+    collocations: [
+      { collocation: "move stealthily", example: "The military unit managed to move stealthily behind enemy lines." },
+      { collocation: "spread stealthily", example: "Mold can spread stealthily inside walls before becoming visible." }
+    ],
+    semantic_field_id: "movement-secrecy",
+    semantic_field_label: "Movement & Secrecy",
+    semantic_field_words: [
+      { word: "secretly", cefr: "B1", register: "neutral" },
+      { word: "surreptitiously", cefr: "C2", register: "formal" }
+    ],
+    register_synonyms: [
+      { word: "secretly", register: "neutral", cefr: "B1" }
+    ],
+    folder_ids: ["folder-reading"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Sea Change for Salinity passage - describing the quiet destruction by salt."
+  },
+  {
+    id: "entry-pinpoint",
+    entry_type: "word",
+    word: "pinpoint",
+    ipa_uk: "/ˈpɪn.pɔɪnt/",
+    ipa_us: "/ˈpɪn.pɔɪnt/",
+    definition: "to locate or identify the exact position, fact, or cause of something",
+    definition_source: "cambridge",
+    example: "Geologists are using new electromagnetic tools to pinpoint the presence of salt subterranean reservoirs.",
+    definitions: [
+      {
+        definition: "to locate or identify the exact position, fact, or cause of something",
+        example: "Geologists are using new electromagnetic tools to pinpoint the presence of salt subterranean reservoirs.",
+        cefr_level: "C1",
+        grammar_note: "transitive verb"
+      }
+    ],
+    extra_examples: [
+      "It is difficult to pinpoint the precise moment when the relationship began to deteriorate.",
+      "The technician was able to pinpoint the software bug within a few minutes."
+    ],
+    grammar_note: "transitive verb",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "C1",
+    register: "academic",
+    formality_score: 3,
+    connotation: "neutral",
+    word_family: {
+      verb: ["pinpoint"],
+      noun: ["pinpoint"],
+      adjective: ["pinpoint"]
+    },
+    collocations: [
+      { collocation: "pinpoint the cause", example: "Medical researchers struggle to pinpoint the cause of the disease." },
+      { collocation: "pinpoint the location", example: "GPS signals help rescue teams pinpoint the location of lost hikers." }
+    ],
+    semantic_field_id: "discovery-precision",
+    semantic_field_label: "Discovery & Precision",
+    semantic_field_words: [
+      { word: "identify", cefr: "B2", register: "neutral" },
+      { word: "locate", cefr: "B2", register: "neutral" }
+    ],
+    register_synonyms: [
+      { word: "identify", register: "neutral", cefr: "B2" }
+    ],
+    folder_ids: ["folder-reading", "folder-4"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Sea Change for Salinity passage - prospecting for subterranean salt."
+  },
+  {
+    id: "entry-render",
+    entry_type: "word",
+    word: "render",
+    ipa_uk: "/ˈren.dər/",
+    ipa_us: "/ˈren.dər/",
+    definition: "to cause someone or something to be in a particular state or condition",
+    definition_source: "cambridge",
+    example: "The heavy storm rendered the local roads completely impassable.",
+    definitions: [
+      {
+        definition: "to cause someone or something to be in a particular state or condition",
+        example: "The heavy storm rendered the local roads completely impassable.",
+        cefr_level: "C1",
+        grammar_note: "transitive verb"
+      },
+      {
+        definition: "to give, provide, or present something (e.g. render assistance)",
+        example: "The organization is ready to render aid to the earthquake victims.",
+        cefr_level: "C1",
+        grammar_note: "transitive verb"
+      }
+    ],
+    extra_examples: [
+      "Without clear plans, the tree-planting efforts may be rendered ineffective by underlying salt.",
+      "The artist rendered the landscape with exquisite detail and realism."
+    ],
+    grammar_note: "transitive verb",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "C1",
+    register: "academic",
+    formality_score: 4,
+    connotation: "neutral",
+    word_family: {
+      verb: ["render"],
+      noun: ["rendering", "rendition"]
+    },
+    collocations: [
+      { collocation: "render ineffective", example: "High temperatures can render certain vaccines ineffective." },
+      { collocation: "render assistance", example: "Passersby stopped to render assistance to the stranded motorist." }
+    ],
+    semantic_field_id: "causation-change",
+    semantic_field_label: "Causation & Change",
+    semantic_field_words: [
+      { word: "make", cefr: "A1", register: "neutral" },
+      { word: "transform", cefr: "B2", register: "neutral" }
+    ],
+    register_synonyms: [
+      { word: "make", register: "neutral", cefr: "A1" }
+    ],
+    folder_ids: ["folder-reading", "folder-4"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Sea Change for Salinity passage - tree-planting rendered ineffective."
+  },
+  {
+    id: "entry-ensuing",
+    entry_type: "word",
+    word: "ensuing",
+    ipa_uk: "/ɪnˈsjuː.ɪŋ/",
+    ipa_us: "/ɪnˈsjuː.ɪŋ/",
+    definition: "happening after or following something else as a direct result",
+    definition_source: "cambridge",
+    example: "Over the ensuing decades, the small salty patches consumed hectares of arable land.",
+    definitions: [
+      {
+        definition: "happening after or following something else as a direct result",
+        example: "Over the ensuing decades, the small salty patches consumed hectares of arable land.",
+        cefr_level: "C1",
+        grammar_note: "adjective [always before noun]"
+      }
+    ],
+    extra_examples: [
+      "In the ensuing panic, several people were injured as they tried to exit the building.",
+      "The agreement led to stability and growth during the ensuing years."
+    ],
+    grammar_note: "adjective",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "C1",
+    register: "academic",
+    formality_score: 4,
+    connotation: "neutral",
+    word_family: {
+      verb: ["ensue"],
+      adjective: ["ensuing"]
+    },
+    collocations: [
+      { collocation: "ensuing decades", example: "Technological changes over the ensuing decades reshaped society." },
+      { collocation: "ensuing battle", example: "The ensuing battle resulted in massive losses for both armies." }
+    ],
+    semantic_field_id: "time-sequence",
+    semantic_field_label: "Time & Sequence",
+    semantic_field_words: [
+      { word: "subsequent", cefr: "B2", register: "academic" },
+      { word: "following", cefr: "B1", register: "neutral" }
+    ],
+    register_synonyms: [
+      { word: "following", register: "neutral", cefr: "B1" },
+      { word: "subsequent", register: "academic", cefr: "B2" }
+    ],
+    folder_ids: ["folder-reading", "folder-4"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Sea Change for Salinity passage - patches multiplying over the ensuing decades."
+  },
+  {
+    id: "entry-encroach",
+    entry_type: "word",
+    word: "encroach",
+    ipa_uk: "/ɪnˈkrəʊtʃ/",
+    ipa_us: "/ɪnˈkroʊtʃ/",
+    definition: "to gradually intrude, advance beyond proper limits, or cover more land",
+    definition_source: "cambridge",
+    example: "The rising sea levels continue to encroach upon low-lying coastal villages.",
+    definitions: [
+      {
+        definition: "to gradually cover more and more of an area of land",
+        example: "The desert continues to encroach on once-fertile grazing lands.",
+        cefr_level: "C2",
+        grammar_note: "intransitive verb"
+      },
+      {
+        definition: "to slowly take away someone's rights, time, or freedom",
+        example: "Employees feel that work tasks are beginning to encroach on their personal lives.",
+        cefr_level: "C2",
+        grammar_note: "intransitive verb"
+      }
+    ],
+    extra_examples: [
+      "Despite mounting containment efforts, the white salt crusts continued to encroach.",
+      "The city has laws preventing industrial projects from encroaching on natural reserves."
+    ],
+    grammar_note: "intransitive verb",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "C2",
+    register: "academic",
+    formality_score: 4,
+    connotation: "negative",
+    word_family: {
+      verb: ["encroach"],
+      noun: ["encroachment"]
+    },
+    collocations: [
+      { collocation: "encroach upon", example: "We must not allow commercial activities to encroach upon protected parks." },
+      { collocation: "gradually encroach", example: "Urban sprawl is gradually encroaching on the surrounding agricultural belt." }
+    ],
+    semantic_field_id: "intrusive-movement",
+    semantic_field_label: "Intrusive Movement",
+    semantic_field_words: [
+      { word: "intrude", cefr: "C1", register: "formal" },
+      { word: "trespass", cefr: "C2", register: "formal" }
+    ],
+    register_synonyms: [
+      { word: "intrude", register: "neutral", cefr: "C1" }
+    ],
+    folder_ids: ["folder-reading", "folder-3"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Sea Change for Salinity passage - 'white death' encroaching on farmland."
+  },
+  {
+    id: "entry-eclipse",
+    entry_type: "word",
+    word: "eclipse",
+    ipa_uk: "/ɪˈklɪps/",
+    ipa_us: "/ɪˈklɪps/",
+    definition: "to make another thing seem less important, significant, or successful by comparison",
+    definition_source: "cambridge",
+    example: "The young athlete's performance eclipsed the accomplishments of all previous champions.",
+    definitions: [
+      {
+        definition: "to make another thing seem less important, significant, or successful by comparison",
+        example: "The young athlete's performance eclipsed the accomplishments of all previous champions.",
+        cefr_level: "C1",
+        grammar_note: "transitive verb"
+      },
+      {
+        definition: "an occasion when the sun or moon temporarily disappears from view",
+        example: "Thousands of skywatchers gathered to watch the total solar eclipse.",
+        cefr_level: "B2",
+        grammar_note: "noun [C]"
+      }
+    ],
+    extra_examples: [
+      "Small local successes in halting salinity were eclipsed by massive fresh outbreaks.",
+      "The company's profits this year have completely eclipsed last year's figures."
+    ],
+    grammar_note: "transitive verb / noun",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "C1",
+    register: "academic",
+    formality_score: 4,
+    connotation: "neutral",
+    word_family: {
+      verb: ["eclipse"],
+      noun: ["eclipse"]
+    },
+    collocations: [
+      { collocation: "totally eclipse", example: "The new technology will totally eclipse current standard models." },
+      { collocation: "be eclipsed by", example: "The actor's screen presence was eclipsed by his co-star's vibrant performance." }
+    ],
+    semantic_field_id: "dominance-importance",
+    semantic_field_label: "Dominance & Importance",
+    semantic_field_words: [
+      { word: "overshadow", cefr: "C1", register: "academic" },
+      { word: "outshine", cefr: "C1", register: "literary" }
+    ],
+    register_synonyms: [
+      { word: "overshadow", register: "neutral", cefr: "C1" }
+    ],
+    folder_ids: ["folder-reading", "folder-4"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Sea Change for Salinity passage - successes eclipsed by larger defeats."
+  },
+  {
+    id: "entry-intercept",
+    entry_type: "word",
+    word: "intercept",
+    ipa_uk: "/ˌɪn.təˈsept/",
+    ipa_us: "/ˌɪn.t̬ɚˈsept/",
+    definition: "to stop, catch, or block something before it reaches its destination",
+    definition_source: "cambridge",
+    example: "Police officers managed to intercept the shipment of illegal goods at the harbor.",
+    definitions: [
+      {
+        definition: "to stop, catch, or block something before it reaches its destination",
+        example: "Police officers managed to intercept the shipment of illegal goods at the harbor.",
+        cefr_level: "B2",
+        grammar_note: "transitive verb"
+      }
+    ],
+    extra_examples: [
+      "The unexpected outbreaks of salt were difficult for farmers to intercept.",
+      "Defense systems were deployed to intercept incoming missiles."
+    ],
+    grammar_note: "transitive verb",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "B2",
+    register: "neutral",
+    formality_score: 3,
+    connotation: "neutral",
+    word_family: {
+      verb: ["intercept"],
+      noun: ["interception", "interceptor"]
+    },
+    collocations: [
+      { collocation: "intercept a message", example: "Intelligence agencies managed to intercept a coded message." },
+      { collocation: "intercept communication", example: "The hacker attempted to intercept communication between the servers." }
+    ],
+    semantic_field_id: "prevention-blocking",
+    semantic_field_label: "Prevention & Blocking",
+    semantic_field_words: [
+      { word: "block", cefr: "B1", register: "neutral" },
+      { word: "obstruct", cefr: "C1", register: "formal" }
+    ],
+    register_synonyms: [
+      { word: "block", register: "neutral", cefr: "B1" }
+    ],
+    folder_ids: ["folder-reading"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Sea Change for Salinity passage - salt beating plans to intercept it."
+  },
+  {
+    id: "entry-subterranean",
+    entry_type: "word",
+    word: "subterranean",
+    ipa_uk: "/ˌsʌb.təˈreɪ.ni.ən/",
+    ipa_us: "/ˌsʌb.təˈreɪ.ni.ən/",
+    definition: "existing, occurring, or active under the surface of the earth",
+    definition_source: "cambridge",
+    example: "The geologists explored a vast network of subterranean caverns and tunnels.",
+    definitions: [
+      {
+        definition: "existing, occurring, or active under the surface of the earth",
+        example: "The geologists explored a vast network of subterranean caverns and tunnels.",
+        cefr_level: "C2",
+        grammar_note: "adjective"
+      }
+    ],
+    extra_examples: [
+      "Only recently have scientists started to map the secret subterranean passages of salt.",
+      "The subterranean temperature remains relatively constant throughout the year."
+    ],
+    grammar_note: "adjective",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "C2",
+    register: "formal",
+    formality_score: 5,
+    connotation: "neutral",
+    word_family: {
+      noun: ["terrain"],
+      adjective: ["subterranean"]
+    },
+    collocations: [
+      { collocation: "subterranean passages", example: "Water flows through subterranean passages to form natural springs." },
+      { collocation: "subterranean activity", example: "Seismometers are used to monitor subterranean activity near the volcano." }
+    ],
+    semantic_field_id: "earth-geology",
+    semantic_field_label: "Earth & Geology",
+    semantic_field_words: [
+      { word: "underground", cefr: "B1", register: "neutral" },
+      { word: "geological", cefr: "B2", register: "neutral" }
+    ],
+    register_synonyms: [
+      { word: "underground", register: "neutral", cefr: "B1" }
+    ],
+    folder_ids: ["folder-reading", "folder-3"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Sea Change for Salinity passage - secret subterranean stores and passages."
+  },
+  {
+    id: "entry-delineate",
+    entry_type: "word",
+    word: "delineate",
+    ipa_uk: "/dɪˈlɪn.i.eɪt/",
+    ipa_us: "/dɪˈlɪn.i.eɪt/",
+    definition: "to describe, portray, or outline the boundary of something precisely",
+    definition_source: "cambridge",
+    example: "The contract clearly delineates the roles and responsibilities of each partner.",
+    definitions: [
+      {
+        definition: "to describe, portray, or outline the boundary of something precisely",
+        example: "The contract clearly delineates the roles and responsibilities of each partner.",
+        cefr_level: "C2",
+        grammar_note: "transitive verb"
+      }
+    ],
+    extra_examples: [
+      "Radiometric analysis allows scientists to delineate landforms and track salt movement.",
+      "The map delineates the boundary between the public park and private estate."
+    ],
+    grammar_note: "transitive verb",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "C2",
+    register: "formal",
+    formality_score: 5,
+    connotation: "neutral",
+    word_family: {
+      verb: ["delineate"],
+      noun: ["delineation"]
+    },
+    collocations: [
+      { collocation: "clearly delineate", example: "We must clearly delineate the scope of the project before writing the report." },
+      { collocation: "delineate boundaries", example: "Referees are responsible for delineating boundaries of play during the match." }
+    ],
+    semantic_field_id: "description-accuracy",
+    semantic_field_label: "Description & Accuracy",
+    semantic_field_words: [
+      { word: "outline", cefr: "B2", register: "neutral" },
+      { word: "define", cefr: "B2", register: "neutral" }
+    ],
+    register_synonyms: [
+      { word: "outline", register: "neutral", cefr: "B2" },
+      { word: "define", register: "neutral", cefr: "B2" }
+    ],
+    folder_ids: ["folder-reading"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Sea Change for Salinity passage - delineation of subterranean landforms."
+  },
+  {
+    id: "entry-curb",
+    entry_type: "word",
+    word: "curb",
+    ipa_uk: "/kɜːb/",
+    ipa_us: "/kɝːb/",
+    definition: "to control, limit, or restrain an unwanted force or action",
+    definition_source: "cambridge",
+    example: "The central bank raised interest rates in an effort to curb rising inflation.",
+    definitions: [
+      {
+        definition: "to control, limit, or restrain an unwanted force or action",
+        example: "The central bank raised interest rates in an effort to curb rising inflation.",
+        cefr_level: "C1",
+        grammar_note: "transitive verb"
+      },
+      {
+        definition: "a raised edge along the side of a street next to the sidewalk",
+        example: "He parked his car close to the curb to avoid blocking traffic.",
+        cefr_level: "B2",
+        grammar_note: "noun [C]"
+      }
+    ],
+    extra_examples: [
+      "Environmental groups are modeling various ways of containing or curbing the salinity menace.",
+      "We must take decisive steps to curb carbon emissions before irreversible changes occur."
+    ],
+    grammar_note: "transitive verb / noun",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "C1",
+    register: "academic",
+    formality_score: 3,
+    connotation: "positive",
+    word_family: {
+      verb: ["curb"],
+      noun: ["curb"]
+    },
+    collocations: [
+      { collocation: "curb inflation", example: "Tightening fiscal policy is one way to curb inflation." },
+      { collocation: "curb spending", example: "The council announced measures to curb excessive public spending." }
+    ],
+    semantic_field_id: "prevention-control",
+    semantic_field_label: "Prevention & Control",
+    semantic_field_words: [
+      { word: "limit", cefr: "B1", register: "neutral" },
+      { word: "restrain", cefr: "C1", register: "formal" }
+    ],
+    register_synonyms: [
+      { word: "restrain", register: "formal", cefr: "C1" },
+      { word: "limit", register: "neutral", cefr: "B1" }
+    ],
+    folder_ids: ["folder-reading", "folder-4"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Sea Change for Salinity passage - curbing the salt menace."
+  },
+  {
+    id: "entry-menace",
+    entry_type: "word",
+    word: "menace",
+    ipa_uk: "/ˈmen.ɪs/",
+    ipa_us: "/ˈmen.ɪs/",
+    definition: "a threat or danger; something that is likely to cause harm",
+    definition_source: "cambridge",
+    example: "The build-up of plastic waste in the ocean represents a serious environmental menace.",
+    definitions: [
+      {
+        definition: "a threat or danger; something that is likely to cause harm",
+        example: "The build-up of plastic waste in the ocean represents a serious environmental menace.",
+        cefr_level: "C1",
+        grammar_note: "noun [C usually singular]"
+      },
+      {
+        definition: "to threaten or put someone or something in danger",
+        example: "The island communities are menaced by rising sea levels.",
+        cefr_level: "C1",
+        grammar_note: "transitive verb"
+      }
+    ],
+    extra_examples: [
+      "Farmers are working together on the ground to combat the menace of soil salinity.",
+      "Stray dogs roaming the neighborhood became a public menace."
+    ],
+    grammar_note: "noun / transitive verb",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "C1",
+    register: "neutral",
+    formality_score: 4,
+    connotation: "negative",
+    word_family: {
+      verb: ["menace"],
+      noun: ["menace"],
+      adjective: ["menacing"],
+      adverb: ["menacingly"]
+    },
+    collocations: [
+      { collocation: "environmental menace", example: "Desertification is a growing environmental menace in arid regions." },
+      { collocation: "pose a menace", example: "Drunk drivers pose a deadly menace to pedestrian safety." }
+    ],
+    semantic_field_id: "danger-threat",
+    semantic_field_label: "Danger & Threat",
+    semantic_field_words: [
+      { word: "threat", cefr: "B2", register: "neutral" },
+      { word: "hazard", cefr: "C1", register: "academic" }
+    ],
+    register_synonyms: [
+      { word: "threat", register: "neutral", cefr: "B2" }
+    ],
+    folder_ids: ["folder-reading"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Sea Change for Salinity passage - curbing the salt menace."
+  },
+  {
+    id: "entry-salinity",
+    entry_type: "word",
+    word: "salinity",
+    ipa_uk: "/səˈlɪn.ə.ti/",
+    ipa_us: "/səˈlɪn.ə.t̬i/",
+    definition: "the fact of containing salt, or the amount of salt contained in something",
+    definition_source: "cambridge",
+    example: "The salinity of the water must be carefully monitored in the fish hatchery.",
+    definitions: [
+      {
+        definition: "the fact of containing salt, or the amount of salt contained in something",
+        example: "The salinity of the water must be carefully monitored in the fish hatchery.",
+        cefr_level: "C1",
+        grammar_note: "noun [U]"
+      }
+    ],
+    extra_examples: [
+      "Broadacre salinity has sterilized millions of hectares of agricultural land.",
+      "The Dead Sea is famous for its exceptionally high levels of salinity."
+    ],
+    grammar_note: "noun [U]",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "C1",
+    register: "scientific",
+    formality_score: 4,
+    connotation: "neutral",
+    word_family: {
+      noun: ["salinity", "salt"],
+      adjective: ["saline", "salty"]
+    },
+    collocations: [
+      { collocation: "soil salinity", example: "Soil salinity prevents crops from absorbing essential nutrients." },
+      { collocation: "high salinity", example: "Many marine organisms cannot survive in waters with extremely high salinity." }
+    ],
+    semantic_field_id: "chemical-property",
+    semantic_field_label: "Chemical Property",
+    semantic_field_words: [
+      { word: "acidity", cefr: "C1", register: "academic" },
+      { word: "alkalinity", cefr: "C2", register: "scientific" }
+    ],
+    register_synonyms: [
+      { word: "saltiness", register: "informal", cefr: "B1" }
+    ],
+    folder_ids: ["folder-reading", "folder-3"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Sea Change for Salinity passage - title subject describing salt contents."
+  },
+  {
+    id: "entry-broadacre",
+    entry_type: "word",
+    word: "broadacre",
+    ipa_uk: "/ˈbrɔːdˌeɪ.kər/",
+    ipa_us: "/ˈbrɑːdˌeɪ.kɚ/",
+    definition: "relating to large-scale agricultural production of crops on wide areas of land",
+    definition_source: "cambridge",
+    example: "The plains of Western Australia are dominated by broadacre farming of wheat and barley.",
+    definitions: [
+      {
+        definition: "relating to large-scale agricultural production of crops on wide areas of land",
+        example: "The plains of Western Australia are dominated by broadacre farming of wheat and barley.",
+        cefr_level: "C2",
+        grammar_note: "adjective"
+      }
+    ],
+    extra_examples: [
+      "We do not yet have satisfactory economic solutions for broadacre salinity.",
+      "The transition to broadacre cropping required investment in heavy machinery."
+    ],
+    grammar_note: "adjective",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "C2",
+    register: "technical",
+    formality_score: 4,
+    connotation: "neutral",
+    word_family: {
+      noun: ["acre", "acreage"]
+    },
+    collocations: [
+      { collocation: "broadacre farming", example: "Broadacre farming relies on massive harvesters to cover thousands of hectares." },
+      { collocation: "broadacre cropping", example: "Canola and legumes are commonly grown in broadacre cropping systems." }
+    ],
+    semantic_field_id: "agriculture-farming",
+    semantic_field_label: "Agriculture & Farming",
+    semantic_field_words: [
+      { word: "pastoral", cefr: "C1", register: "academic" },
+      { word: "arable", cefr: "C2", register: "technical" }
+    ],
+    register_synonyms: [
+      { word: "large-scale farming", register: "neutral", cefr: "B2" }
+    ],
+    folder_ids: ["folder-reading", "folder-2"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Sea Change for Salinity passage - discussing broadacre salinity."
+  },
+  {
+    id: "entry-mounting",
+    entry_type: "word",
+    word: "mounting",
+    ipa_uk: "/ˈmaʊn.tɪŋ/",
+    ipa_us: "/ˈmaʊn.t̬ɪŋ/",
+    definition: "gradually increasing in amount, force, or intensity",
+    definition_source: "cambridge",
+    example: "The government faces mounting pressure to address the cost-of-living crisis.",
+    definitions: [
+      {
+        definition: "gradually increasing in amount, force, or intensity",
+        example: "The government faces mounting pressure to address the cost-of-living crisis.",
+        cefr_level: "C1",
+        grammar_note: "adjective [always before noun]"
+      }
+    ],
+    extra_examples: [
+      "Despite a mounting effort by scientists and farmers, the salinity problem continued to spread.",
+      "There is mounting evidence that climate change is intensifying weather patterns."
+    ],
+    grammar_note: "adjective",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "C1",
+    register: "academic",
+    formality_score: 3,
+    connotation: "neutral",
+    word_family: {
+      verb: ["mount"],
+      noun: ["mount"]
+    },
+    collocations: [
+      { collocation: "mounting pressure", example: "The CEO resigned amidst mounting pressure from shareholders." },
+      { collocation: "mounting concern", example: "There is mounting concern over safety standards at the site." }
+    ],
+    semantic_field_id: "growth-intensity",
+    semantic_field_label: "Growth & Intensity",
+    semantic_field_words: [
+      { word: "growing", cefr: "B1", register: "neutral" },
+      { word: "escalating", cefr: "C1", register: "formal" }
+    ],
+    register_synonyms: [
+      { word: "growing", register: "neutral", cefr: "B1" },
+      { word: "escalating", register: "formal", cefr: "C1" }
+    ],
+    folder_ids: ["folder-reading", "folder-4"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Sea Change for Salinity passage - mounting effort by scientists and governments."
+  },
+  {
+    id: "entry-ambush",
+    entry_type: "word",
+    word: "ambush",
+    ipa_uk: "/ˈæm.bʊʃ/",
+    ipa_us: "/ˈæm.bʊʃ/",
+    definition: "a sudden surprise attack from a hidden position, or to attack in this way",
+    definition_source: "cambridge",
+    example: "The enemy forces were caught in a deadly ambush along the narrow forest pass.",
+    definitions: [
+      {
+        definition: "a sudden surprise attack from a hidden position",
+        example: "The enemy forces were caught in a deadly ambush along the narrow forest pass.",
+        cefr_level: "B2",
+        grammar_note: "noun [C or U]"
+      },
+      {
+        definition: "to attack someone or something by surprise from a hidden position",
+        example: "Reporters tried to ambush the politician as he left his office.",
+        cefr_level: "B2",
+        grammar_note: "transitive verb"
+      }
+    ],
+    extra_examples: [
+      "Part of the problem lies in salt's ability to mount ambushes, emerging somewhere new unexpectedly.",
+      "The wolves hid in the bushes, waiting to ambush the deer."
+    ],
+    grammar_note: "noun / transitive verb",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "B2",
+    register: "neutral",
+    formality_score: 3,
+    connotation: "neutral",
+    word_family: {
+      verb: ["ambush"],
+      noun: ["ambush"]
+    },
+    collocations: [
+      { collocation: "mount an ambush", example: "Guerrilla units are trained to mount sudden ambushes." },
+      { collocation: "fear of ambush", example: "The soldiers marched cautiously through the canyon in fear of ambush." }
+    ],
+    semantic_field_id: "surprise-attack",
+    semantic_field_label: "Surprise & Attack",
+    semantic_field_words: [
+      { word: "attack", cefr: "B1", register: "neutral" },
+      { word: "trap", cefr: "B2", register: "neutral" }
+    ],
+    register_synonyms: [
+      { word: "surprise attack", register: "neutral", cefr: "B2" }
+    ],
+    folder_ids: ["folder-reading"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Sea Change for Salinity passage - salt's ability to mount ambushes."
+  },
+  {
+    id: "entry-conductivity",
+    entry_type: "word",
+    word: "conductivity",
+    ipa_uk: "/ˌkɒn.dʌkˈtɪv.ə.ti/",
+    ipa_us: "/ˌkɑːn.dʌkˈtɪv.ə.t̬i/",
+    definition: "the measure of a material's ability to conduct an electric current or heat",
+    definition_source: "cambridge",
+    example: "Copper is widely used in electrical wiring due to its exceptionally high conductivity.",
+    definitions: [
+      {
+        definition: "the measure of a material's ability to conduct an electric current or heat",
+        example: "Copper is widely used in electrical wiring due to its exceptionally high conductivity.",
+        cefr_level: "C2",
+        grammar_note: "noun [U]"
+      }
+    ],
+    extra_examples: [
+      "Electromagnetic surveys measure the electrical conductivity of soil to map salt distribution.",
+      "The thermal conductivity of wood is low, making it a good insulator."
+    ],
+    grammar_note: "noun [U]",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "C2",
+    register: "scientific",
+    formality_score: 4,
+    connotation: "neutral",
+    word_family: {
+      verb: ["conduct"],
+      noun: ["conductivity", "conductor", "conductance"],
+      adjective: ["conductive"]
+    },
+    collocations: [
+      { collocation: "electrical conductivity", example: "Water with high salt levels has higher electrical conductivity." },
+      { collocation: "thermal conductivity", example: "Aluminum offers superior thermal conductivity for cookware." }
+    ],
+    semantic_field_id: "physics-materials",
+    semantic_field_label: "Physics & Materials",
+    semantic_field_words: [
+      { word: "resistance", cefr: "B2", register: "neutral" },
+      { word: "insulation", cefr: "C1", register: "technical" }
+    ],
+    register_synonyms: [
+      { word: "transmission", register: "neutral", cefr: "B2" }
+    ],
+    folder_ids: ["folder-reading", "folder-science"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Sea Change for Salinity passage - measuring electrical conductivity of soil."
+  },
+  {
+    id: "entry-drainage",
+    entry_type: "word",
+    word: "drainage",
+    ipa_uk: "/ˈdreɪ.nɪdʒ/",
+    ipa_us: "/ˈdreɪ.nɪdʒ/",
+    definition: "the system or process of removing water or waste liquids from an area of land or building",
+    definition_source: "cambridge",
+    example: "The city council invested in improving the storm drainage to prevent winter floods.",
+    definitions: [
+      {
+        definition: "the system or process of removing water or waste liquids from an area of land or building",
+        example: "The city council invested in improving the storm drainage to prevent winter floods.",
+        cefr_level: "B2",
+        grammar_note: "noun [U]"
+      }
+    ],
+    extra_examples: [
+      "Scientists revealed a network of ancient drainage channels buried meters beneath the soil.",
+      "The soil profile has poor drainage, leading to waterlogged crop roots."
+    ],
+    grammar_note: "noun [U]",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "B2",
+    register: "neutral",
+    formality_score: 3,
+    connotation: "neutral",
+    word_family: {
+      verb: ["drain"],
+      noun: ["drainage", "drain"]
+    },
+    collocations: [
+      { collocation: "drainage channel", example: "Buried drainage channels carry salt and water in different directions underground." },
+      { collocation: "poor drainage", example: "Clay soil is characterized by poor drainage and slow water absorption." }
+    ],
+    semantic_field_id: "water-management",
+    semantic_field_label: "Water Management",
+    semantic_field_words: [
+      { word: "irrigation", cefr: "C1", register: "technical" },
+      { word: "sewage", cefr: "C1", register: "technical" }
+    ],
+    register_synonyms: [
+      { word: "outflow", register: "neutral", cefr: "B2" }
+    ],
+    folder_ids: ["folder-reading", "folder-6"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Sea Change for Salinity passage - network of ancient drainage channels buried."
   }
 ];
 
@@ -11199,6 +12291,1097 @@ const EXTENDED_DICTIONARY_DB = [
     },
     date_added: new Date().toISOString(),
     source_context: "Describing farming technology, maps/diagrams of farm environments, or trade machinery."
+  },
+  {
+    id: "entry-impassive",
+    entry_type: "word",
+    word: "impassive",
+    ipa_uk: "/ɪmˈpæs.ɪv/",
+    ipa_us: "/ɪmˈpæs.ɪv/",
+    definition: "expressing no emotion, or completely flat and featureless",
+    definition_source: "cambridge",
+    example: "Beneath the flat, impassive surface of Australia lie hidden mountains and valleys.",
+    definitions: [
+      {
+        definition: "expressing no emotion, or completely flat and featureless",
+        example: "Beneath the flat, impassive surface of Australia lie hidden mountains and valleys.",
+        cefr_level: "C2",
+        grammar_note: "adjective"
+      }
+    ],
+    extra_examples: [
+      "The defendant remained impassive throughout the trial, showing no signs of remorse.",
+      "An impassive stone facade hid the busy activity inside the monastery."
+    ],
+    grammar_note: "adjective",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "C2",
+    register: "formal",
+    formality_score: 5,
+    connotation: "neutral",
+    word_family: {
+      verb: [],
+      noun: ["impassivity"],
+      adjective: ["impassive"],
+      adverb: ["impassively"]
+    },
+    collocations: [
+      { collocation: "impassive face", example: "He kept an impassive face to avoid revealing his hand in the game." },
+      { collocation: "impassive surface", example: "The impassive surface of the lake reflected the stormy gray clouds." }
+    ],
+    semantic_field_id: "expression-emotion",
+    semantic_field_label: "Expression & Emotion",
+    semantic_field_words: [
+      { word: "expressionless", cefr: "B2", register: "neutral" },
+      { word: "stolid", cefr: "C2", register: "formal" }
+    ],
+    register_synonyms: [
+      { word: "emotionless", register: "neutral", cefr: "B2" }
+    ],
+    folder_ids: ["folder-reading"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Sea Change for Salinity passage - describing the calm Australian terrain."
+  },
+  {
+    id: "entry-stealthily",
+    entry_type: "word",
+    word: "stealthily",
+    ipa_uk: "/ˈstel.θəl.i/",
+    ipa_us: "/ˈstel.θəl.i/",
+    definition: "in a quiet, secret, or cautious manner to avoid being noticed",
+    definition_source: "cambridge",
+    example: "The disease spreads stealthily through the population, often showing no initial symptoms.",
+    definitions: [
+      {
+        definition: "in a quiet, secret, or cautious manner to avoid being noticed",
+        example: "The disease spreads stealthily through the population, often showing no initial symptoms.",
+        cefr_level: "C2",
+        grammar_note: "adverb"
+      }
+    ],
+    extra_examples: [
+      "Deadly salt is stealthily killing much of the agricultural landscape in the basin.",
+      "The predator crawled stealthily through the tall grass toward its prey."
+    ],
+    grammar_note: "adverb",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "C2",
+    register: "academic",
+    formality_score: 4,
+    connotation: "negative",
+    word_family: {
+      verb: [],
+      noun: ["stealth"],
+      adjective: ["stealthy"],
+      adverb: ["stealthily"]
+    },
+    collocations: [
+      { collocation: "move stealthily", example: "The military unit managed to move stealthily behind enemy lines." },
+      { collocation: "spread stealthily", example: "Mold can spread stealthily inside walls before becoming visible." }
+    ],
+    semantic_field_id: "movement-secrecy",
+    semantic_field_label: "Movement & Secrecy",
+    semantic_field_words: [
+      { word: "secretly", cefr: "B1", register: "neutral" },
+      { word: "surreptitiously", cefr: "C2", register: "formal" }
+    ],
+    register_synonyms: [
+      { word: "secretly", register: "neutral", cefr: "B1" }
+    ],
+    folder_ids: ["folder-reading"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Sea Change for Salinity passage - describing the quiet destruction by salt."
+  },
+  {
+    id: "entry-pinpoint",
+    entry_type: "word",
+    word: "pinpoint",
+    ipa_uk: "/ˈpɪn.pɔɪnt/",
+    ipa_us: "/ˈpɪn.pɔɪnt/",
+    definition: "to locate or identify the exact position, fact, or cause of something",
+    definition_source: "cambridge",
+    example: "Geologists are using new electromagnetic tools to pinpoint the presence of salt subterranean reservoirs.",
+    definitions: [
+      {
+        definition: "to locate or identify the exact position, fact, or cause of something",
+        example: "Geologists are using new electromagnetic tools to pinpoint the presence of salt subterranean reservoirs.",
+        cefr_level: "C1",
+        grammar_note: "transitive verb"
+      }
+    ],
+    extra_examples: [
+      "It is difficult to pinpoint the precise moment when the relationship began to deteriorate.",
+      "The technician was able to pinpoint the software bug within a few minutes."
+    ],
+    grammar_note: "transitive verb",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "C1",
+    register: "academic",
+    formality_score: 3,
+    connotation: "neutral",
+    word_family: {
+      verb: ["pinpoint"],
+      noun: ["pinpoint"],
+      adjective: ["pinpoint"]
+    },
+    collocations: [
+      { collocation: "pinpoint the cause", example: "Medical researchers struggle to pinpoint the cause of the disease." },
+      { collocation: "pinpoint the location", example: "GPS signals help rescue teams pinpoint the location of lost hikers." }
+    ],
+    semantic_field_id: "discovery-precision",
+    semantic_field_label: "Discovery & Precision",
+    semantic_field_words: [
+      { word: "identify", cefr: "B2", register: "neutral" },
+      { word: "locate", cefr: "B2", register: "neutral" }
+    ],
+    register_synonyms: [
+      { word: "identify", register: "neutral", cefr: "B2" }
+    ],
+    folder_ids: ["folder-reading", "folder-4"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Sea Change for Salinity passage - prospecting for subterranean salt."
+  },
+  {
+    id: "entry-render",
+    entry_type: "word",
+    word: "render",
+    ipa_uk: "/ˈren.dər/",
+    ipa_us: "/ˈren.dər/",
+    definition: "to cause someone or something to be in a particular state or condition",
+    definition_source: "cambridge",
+    example: "The heavy storm rendered the local roads completely impassable.",
+    definitions: [
+      {
+        definition: "to cause someone or something to be in a particular state or condition",
+        example: "The heavy storm rendered the local roads completely impassable.",
+        cefr_level: "C1",
+        grammar_note: "transitive verb"
+      },
+      {
+        definition: "to give, provide, or present something (e.g. render assistance)",
+        example: "The organization is ready to render aid to the earthquake victims.",
+        cefr_level: "C1",
+        grammar_note: "transitive verb"
+      }
+    ],
+    extra_examples: [
+      "Without clear plans, the tree-planting efforts may be rendered ineffective by underlying salt.",
+      "The artist rendered the landscape with exquisite detail and realism."
+    ],
+    grammar_note: "transitive verb",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "C1",
+    register: "academic",
+    formality_score: 4,
+    connotation: "neutral",
+    word_family: {
+      verb: ["render"],
+      noun: ["rendering", "rendition"]
+    },
+    collocations: [
+      { collocation: "render ineffective", example: "High temperatures can render certain vaccines ineffective." },
+      { collocation: "render assistance", example: "Passersby stopped to render assistance to the stranded motorist." }
+    ],
+    semantic_field_id: "causation-change",
+    semantic_field_label: "Causation & Change",
+    semantic_field_words: [
+      { word: "make", cefr: "A1", register: "neutral" },
+      { word: "transform", cefr: "B2", register: "neutral" }
+    ],
+    register_synonyms: [
+      { word: "make", register: "neutral", cefr: "A1" }
+    ],
+    folder_ids: ["folder-reading", "folder-4"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Sea Change for Salinity passage - tree-planting rendered ineffective."
+  },
+  {
+    id: "entry-ensuing",
+    entry_type: "word",
+    word: "ensuing",
+    ipa_uk: "/ɪnˈsjuː.ɪŋ/",
+    ipa_us: "/ɪnˈsjuː.ɪŋ/",
+    definition: "happening after or following something else as a direct result",
+    definition_source: "cambridge",
+    example: "Over the ensuing decades, the small salty patches consumed hectares of arable land.",
+    definitions: [
+      {
+        definition: "happening after or following something else as a direct result",
+        example: "Over the ensuing decades, the small salty patches consumed hectares of arable land.",
+        cefr_level: "C1",
+        grammar_note: "adjective [always before noun]"
+      }
+    ],
+    extra_examples: [
+      "In the ensuing panic, several people were injured as they tried to exit the building.",
+      "The agreement led to stability and growth during the ensuing years."
+    ],
+    grammar_note: "adjective",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "C1",
+    register: "academic",
+    formality_score: 4,
+    connotation: "neutral",
+    word_family: {
+      verb: ["ensue"],
+      adjective: ["ensuing"]
+    },
+    collocations: [
+      { collocation: "ensuing decades", example: "Technological changes over the ensuing decades reshaped society." },
+      { collocation: "ensuing battle", example: "The ensuing battle resulted in massive losses for both armies." }
+    ],
+    semantic_field_id: "time-sequence",
+    semantic_field_label: "Time & Sequence",
+    semantic_field_words: [
+      { word: "subsequent", cefr: "B2", register: "academic" },
+      { word: "following", cefr: "B1", register: "neutral" }
+    ],
+    register_synonyms: [
+      { word: "following", register: "neutral", cefr: "B1" },
+      { word: "subsequent", register: "academic", cefr: "B2" }
+    ],
+    folder_ids: ["folder-reading", "folder-4"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Sea Change for Salinity passage - patches multiplying over the ensuing decades."
+  },
+  {
+    id: "entry-encroach",
+    entry_type: "word",
+    word: "encroach",
+    ipa_uk: "/ɪnˈkrəʊtʃ/",
+    ipa_us: "/ɪnˈkroʊtʃ/",
+    definition: "to gradually intrude, advance beyond proper limits, or cover more land",
+    definition_source: "cambridge",
+    example: "The rising sea levels continue to encroach upon low-lying coastal villages.",
+    definitions: [
+      {
+        definition: "to gradually cover more and more of an area of land",
+        example: "The desert continues to encroach on once-fertile grazing lands.",
+        cefr_level: "C2",
+        grammar_note: "intransitive verb"
+      },
+      {
+        definition: "to slowly take away someone's rights, time, or freedom",
+        example: "Employees feel that work tasks are beginning to encroach on their personal lives.",
+        cefr_level: "C2",
+        grammar_note: "intransitive verb"
+      }
+    ],
+    extra_examples: [
+      "Despite mounting containment efforts, the white salt crusts continued to encroach.",
+      "The city has laws preventing industrial projects from encroaching on natural reserves."
+    ],
+    grammar_note: "intransitive verb",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "C2",
+    register: "academic",
+    formality_score: 4,
+    connotation: "negative",
+    word_family: {
+      verb: ["encroach"],
+      noun: ["encroachment"]
+    },
+    collocations: [
+      { collocation: "encroach upon", example: "We must not allow commercial activities to encroach upon protected parks." },
+      { collocation: "gradually encroach", example: "Urban sprawl is gradually encroaching on the surrounding agricultural belt." }
+    ],
+    semantic_field_id: "intrusive-movement",
+    semantic_field_label: "Intrusive Movement",
+    semantic_field_words: [
+      { word: "intrude", cefr: "C1", register: "formal" },
+      { word: "trespass", cefr: "C2", register: "formal" }
+    ],
+    register_synonyms: [
+      { word: "intrude", register: "neutral", cefr: "C1" }
+    ],
+    folder_ids: ["folder-reading", "folder-3"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Sea Change for Salinity passage - 'white death' encroaching on farmland."
+  },
+  {
+    id: "entry-eclipse",
+    entry_type: "word",
+    word: "eclipse",
+    ipa_uk: "/ɪˈklɪps/",
+    ipa_us: "/ɪˈklɪps/",
+    definition: "to make another thing seem less important, significant, or successful by comparison",
+    definition_source: "cambridge",
+    example: "The young athlete's performance eclipsed the accomplishments of all previous champions.",
+    definitions: [
+      {
+        definition: "to make another thing seem less important, significant, or successful by comparison",
+        example: "The young athlete's performance eclipsed the accomplishments of all previous champions.",
+        cefr_level: "C1",
+        grammar_note: "transitive verb"
+      },
+      {
+        definition: "an occasion when the sun or moon temporarily disappears from view",
+        example: "Thousands of skywatchers gathered to watch the total solar eclipse.",
+        cefr_level: "B2",
+        grammar_note: "noun [C]"
+      }
+    ],
+    extra_examples: [
+      "Small local successes in halting salinity were eclipsed by massive fresh outbreaks.",
+      "The company's profits this year have completely eclipsed last year's figures."
+    ],
+    grammar_note: "transitive verb / noun",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "C1",
+    register: "academic",
+    formality_score: 4,
+    connotation: "neutral",
+    word_family: {
+      verb: ["eclipse"],
+      noun: ["eclipse"]
+    },
+    collocations: [
+      { collocation: "totally eclipse", example: "The new technology will totally eclipse current standard models." },
+      { collocation: "be eclipsed by", example: "The actor's screen presence was eclipsed by his co-star's vibrant performance." }
+    ],
+    semantic_field_id: "dominance-importance",
+    semantic_field_label: "Dominance & Importance",
+    semantic_field_words: [
+      { word: "overshadow", cefr: "C1", register: "academic" },
+      { word: "outshine", cefr: "C1", register: "literary" }
+    ],
+    register_synonyms: [
+      { word: "overshadow", register: "neutral", cefr: "C1" }
+    ],
+    folder_ids: ["folder-reading", "folder-4"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Sea Change for Salinity passage - successes eclipsed by larger defeats."
+  },
+  {
+    id: "entry-intercept",
+    entry_type: "word",
+    word: "intercept",
+    ipa_uk: "/ˌɪn.təˈsept/",
+    ipa_us: "/ˌɪn.t̬ɚˈsept/",
+    definition: "to stop, catch, or block something before it reaches its destination",
+    definition_source: "cambridge",
+    example: "Police officers managed to intercept the shipment of illegal goods at the harbor.",
+    definitions: [
+      {
+        definition: "to stop, catch, or block something before it reaches its destination",
+        example: "Police officers managed to intercept the shipment of illegal goods at the harbor.",
+        cefr_level: "B2",
+        grammar_note: "transitive verb"
+      }
+    ],
+    extra_examples: [
+      "The unexpected outbreaks of salt were difficult for farmers to intercept.",
+      "Defense systems were deployed to intercept incoming missiles."
+    ],
+    grammar_note: "transitive verb",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "B2",
+    register: "neutral",
+    formality_score: 3,
+    connotation: "neutral",
+    word_family: {
+      verb: ["intercept"],
+      noun: ["interception", "interceptor"]
+    },
+    collocations: [
+      { collocation: "intercept a message", example: "Intelligence agencies managed to intercept a coded message." },
+      { collocation: "intercept communication", example: "The hacker attempted to intercept communication between the servers." }
+    ],
+    semantic_field_id: "prevention-blocking",
+    semantic_field_label: "Prevention & Blocking",
+    semantic_field_words: [
+      { word: "block", cefr: "B1", register: "neutral" },
+      { word: "obstruct", cefr: "C1", register: "formal" }
+    ],
+    register_synonyms: [
+      { word: "block", register: "neutral", cefr: "B1" }
+    ],
+    folder_ids: ["folder-reading"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Sea Change for Salinity passage - salt beating plans to intercept it."
+  },
+  {
+    id: "entry-subterranean",
+    entry_type: "word",
+    word: "subterranean",
+    ipa_uk: "/ˌsʌb.təˈreɪ.ni.ən/",
+    ipa_us: "/ˌsʌb.təˈreɪ.ni.ən/",
+    definition: "existing, occurring, or active under the surface of the earth",
+    definition_source: "cambridge",
+    example: "The geologists explored a vast network of subterranean caverns and tunnels.",
+    definitions: [
+      {
+        definition: "existing, occurring, or active under the surface of the earth",
+        example: "The geologists explored a vast network of subterranean caverns and tunnels.",
+        cefr_level: "C2",
+        grammar_note: "adjective"
+      }
+    ],
+    extra_examples: [
+      "Only recently have scientists started to map the secret subterranean passages of salt.",
+      "The subterranean temperature remains relatively constant throughout the year."
+    ],
+    grammar_note: "adjective",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "C2",
+    register: "formal",
+    formality_score: 5,
+    connotation: "neutral",
+    word_family: {
+      noun: ["terrain"],
+      adjective: ["subterranean"]
+    },
+    collocations: [
+      { collocation: "subterranean passages", example: "Water flows through subterranean passages to form natural springs." },
+      { collocation: "subterranean activity", example: "Seismometers are used to monitor subterranean activity near the volcano." }
+    ],
+    semantic_field_id: "earth-geology",
+    semantic_field_label: "Earth & Geology",
+    semantic_field_words: [
+      { word: "underground", cefr: "B1", register: "neutral" },
+      { word: "geological", cefr: "B2", register: "neutral" }
+    ],
+    register_synonyms: [
+      { word: "underground", register: "neutral", cefr: "B1" }
+    ],
+    folder_ids: ["folder-reading", "folder-3"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Sea Change for Salinity passage - secret subterranean stores and passages."
+  },
+  {
+    id: "entry-delineate",
+    entry_type: "word",
+    word: "delineate",
+    ipa_uk: "/dɪˈlɪn.i.eɪt/",
+    ipa_us: "/dɪˈlɪn.i.eɪt/",
+    definition: "to describe, portray, or outline the boundary of something precisely",
+    definition_source: "cambridge",
+    example: "The contract clearly delineates the roles and responsibilities of each partner.",
+    definitions: [
+      {
+        definition: "to describe, portray, or outline the boundary of something precisely",
+        example: "The contract clearly delineates the roles and responsibilities of each partner.",
+        cefr_level: "C2",
+        grammar_note: "transitive verb"
+      }
+    ],
+    extra_examples: [
+      "Radiometric analysis allows scientists to delineate landforms and track salt movement.",
+      "The map delineates the boundary between the public park and private estate."
+    ],
+    grammar_note: "transitive verb",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "C2",
+    register: "formal",
+    formality_score: 5,
+    connotation: "neutral",
+    word_family: {
+      verb: ["delineate"],
+      noun: ["delineation"]
+    },
+    collocations: [
+      { collocation: "clearly delineate", example: "We must clearly delineate the scope of the project before writing the report." },
+      { collocation: "delineate boundaries", example: "Referees are responsible for delineating boundaries of play during the match." }
+    ],
+    semantic_field_id: "description-accuracy",
+    semantic_field_label: "Description & Accuracy",
+    semantic_field_words: [
+      { word: "outline", cefr: "B2", register: "neutral" },
+      { word: "define", cefr: "B2", register: "neutral" }
+    ],
+    register_synonyms: [
+      { word: "outline", register: "neutral", cefr: "B2" },
+      { word: "define", register: "neutral", cefr: "B2" }
+    ],
+    folder_ids: ["folder-reading"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Sea Change for Salinity passage - delineation of subterranean landforms."
+  },
+  {
+    id: "entry-curb",
+    entry_type: "word",
+    word: "curb",
+    ipa_uk: "/kɜːb/",
+    ipa_us: "/kɝːb/",
+    definition: "to control, limit, or restrain an unwanted force or action",
+    definition_source: "cambridge",
+    example: "The central bank raised interest rates in an effort to curb rising inflation.",
+    definitions: [
+      {
+        definition: "to control, limit, or restrain an unwanted force or action",
+        example: "The central bank raised interest rates in an effort to curb rising inflation.",
+        cefr_level: "C1",
+        grammar_note: "transitive verb"
+      },
+      {
+        definition: "a raised edge along the side of a street next to the sidewalk",
+        example: "He parked his car close to the curb to avoid blocking traffic.",
+        cefr_level: "B2",
+        grammar_note: "noun [C]"
+      }
+    ],
+    extra_examples: [
+      "Environmental groups are modeling various ways of containing or curbing the salinity menace.",
+      "We must take decisive steps to curb carbon emissions before irreversible changes occur."
+    ],
+    grammar_note: "transitive verb / noun",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "C1",
+    register: "academic",
+    formality_score: 3,
+    connotation: "positive",
+    word_family: {
+      verb: ["curb"],
+      noun: ["curb"]
+    },
+    collocations: [
+      { collocation: "curb inflation", example: "Tightening fiscal policy is one way to curb inflation." },
+      { collocation: "curb spending", example: "The council announced measures to curb excessive public spending." }
+    ],
+    semantic_field_id: "prevention-control",
+    semantic_field_label: "Prevention & Control",
+    semantic_field_words: [
+      { word: "limit", cefr: "B1", register: "neutral" },
+      { word: "restrain", cefr: "C1", register: "formal" }
+    ],
+    register_synonyms: [
+      { word: "restrain", register: "formal", cefr: "C1" },
+      { word: "limit", register: "neutral", cefr: "B1" }
+    ],
+    folder_ids: ["folder-reading", "folder-4"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Sea Change for Salinity passage - curbing the salt menace."
+  },
+  {
+    id: "entry-menace",
+    entry_type: "word",
+    word: "menace",
+    ipa_uk: "/ˈmen.ɪs/",
+    ipa_us: "/ˈmen.ɪs/",
+    definition: "a threat or danger; something that is likely to cause harm",
+    definition_source: "cambridge",
+    example: "The build-up of plastic waste in the ocean represents a serious environmental menace.",
+    definitions: [
+      {
+        definition: "a threat or danger; something that is likely to cause harm",
+        example: "The build-up of plastic waste in the ocean represents a serious environmental menace.",
+        cefr_level: "C1",
+        grammar_note: "noun [C usually singular]"
+      },
+      {
+        definition: "to threaten or put someone or something in danger",
+        example: "The island communities are menaced by rising sea levels.",
+        cefr_level: "C1",
+        grammar_note: "transitive verb"
+      }
+    ],
+    extra_examples: [
+      "Farmers are working together on the ground to combat the menace of soil salinity.",
+      "Stray dogs roaming the neighborhood became a public menace."
+    ],
+    grammar_note: "noun / transitive verb",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "C1",
+    register: "neutral",
+    formality_score: 4,
+    connotation: "negative",
+    word_family: {
+      verb: ["menace"],
+      noun: ["menace"],
+      adjective: ["menacing"],
+      adverb: ["menacingly"]
+    },
+    collocations: [
+      { collocation: "environmental menace", example: "Desertification is a growing environmental menace in arid regions." },
+      { collocation: "pose a menace", example: "Drunk drivers pose a deadly menace to pedestrian safety." }
+    ],
+    semantic_field_id: "danger-threat",
+    semantic_field_label: "Danger & Threat",
+    semantic_field_words: [
+      { word: "threat", cefr: "B2", register: "neutral" },
+      { word: "hazard", cefr: "C1", register: "academic" }
+    ],
+    register_synonyms: [
+      { word: "threat", register: "neutral", cefr: "B2" }
+    ],
+    folder_ids: ["folder-reading"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Sea Change for Salinity passage - curbing the salt menace."
+  },
+  {
+    id: "entry-salinity",
+    entry_type: "word",
+    word: "salinity",
+    ipa_uk: "/səˈlɪn.ə.ti/",
+    ipa_us: "/səˈlɪn.ə.t̬i/",
+    definition: "the fact of containing salt, or the amount of salt contained in something",
+    definition_source: "cambridge",
+    example: "The salinity of the water must be carefully monitored in the fish hatchery.",
+    definitions: [
+      {
+        definition: "the fact of containing salt, or the amount of salt contained in something",
+        example: "The salinity of the water must be carefully monitored in the fish hatchery.",
+        cefr_level: "C1",
+        grammar_note: "noun [U]"
+      }
+    ],
+    extra_examples: [
+      "Broadacre salinity has sterilized millions of hectares of agricultural land.",
+      "The Dead Sea is famous for its exceptionally high levels of salinity."
+    ],
+    grammar_note: "noun [U]",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "C1",
+    register: "scientific",
+    formality_score: 4,
+    connotation: "neutral",
+    word_family: {
+      noun: ["salinity", "salt"],
+      adjective: ["saline", "salty"]
+    },
+    collocations: [
+      { collocation: "soil salinity", example: "Soil salinity prevents crops from absorbing essential nutrients." },
+      { collocation: "high salinity", example: "Many marine organisms cannot survive in waters with extremely high salinity." }
+    ],
+    semantic_field_id: "chemical-property",
+    semantic_field_label: "Chemical Property",
+    semantic_field_words: [
+      { word: "acidity", cefr: "C1", register: "academic" },
+      { word: "alkalinity", cefr: "C2", register: "scientific" }
+    ],
+    register_synonyms: [
+      { word: "saltiness", register: "informal", cefr: "B1" }
+    ],
+    folder_ids: ["folder-reading", "folder-3"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Sea Change for Salinity passage - title subject describing salt contents."
+  },
+  {
+    id: "entry-broadacre",
+    entry_type: "word",
+    word: "broadacre",
+    ipa_uk: "/ˈbrɔːdˌeɪ.kər/",
+    ipa_us: "/ˈbrɑːdˌeɪ.kɚ/",
+    definition: "relating to large-scale agricultural production of crops on wide areas of land",
+    definition_source: "cambridge",
+    example: "The plains of Western Australia are dominated by broadacre farming of wheat and barley.",
+    definitions: [
+      {
+        definition: "relating to large-scale agricultural production of crops on wide areas of land",
+        example: "The plains of Western Australia are dominated by broadacre farming of wheat and barley.",
+        cefr_level: "C2",
+        grammar_note: "adjective"
+      }
+    ],
+    extra_examples: [
+      "We do not yet have satisfactory economic solutions for broadacre salinity.",
+      "The transition to broadacre cropping required investment in heavy machinery."
+    ],
+    grammar_note: "adjective",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "C2",
+    register: "technical",
+    formality_score: 4,
+    connotation: "neutral",
+    word_family: {
+      noun: ["acre", "acreage"]
+    },
+    collocations: [
+      { collocation: "broadacre farming", example: "Broadacre farming relies on massive harvesters to cover thousands of hectares." },
+      { collocation: "broadacre cropping", example: "Canola and legumes are commonly grown in broadacre cropping systems." }
+    ],
+    semantic_field_id: "agriculture-farming",
+    semantic_field_label: "Agriculture & Farming",
+    semantic_field_words: [
+      { word: "pastoral", cefr: "C1", register: "academic" },
+      { word: "arable", cefr: "C2", register: "technical" }
+    ],
+    register_synonyms: [
+      { word: "large-scale farming", register: "neutral", cefr: "B2" }
+    ],
+    folder_ids: ["folder-reading", "folder-2"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Sea Change for Salinity passage - discussing broadacre salinity."
+  },
+  {
+    id: "entry-mounting",
+    entry_type: "word",
+    word: "mounting",
+    ipa_uk: "/ˈmaʊn.tɪŋ/",
+    ipa_us: "/ˈmaʊn.t̬ɪŋ/",
+    definition: "gradually increasing in amount, force, or intensity",
+    definition_source: "cambridge",
+    example: "The government faces mounting pressure to address the cost-of-living crisis.",
+    definitions: [
+      {
+        definition: "gradually increasing in amount, force, or intensity",
+        example: "The government faces mounting pressure to address the cost-of-living crisis.",
+        cefr_level: "C1",
+        grammar_note: "adjective [always before noun]"
+      }
+    ],
+    extra_examples: [
+      "Despite a mounting effort by scientists and farmers, the salinity problem continued to spread.",
+      "There is mounting evidence that climate change is intensifying weather patterns."
+    ],
+    grammar_note: "adjective",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "C1",
+    register: "academic",
+    formality_score: 3,
+    connotation: "neutral",
+    word_family: {
+      verb: ["mount"],
+      noun: ["mount"]
+    },
+    collocations: [
+      { collocation: "mounting pressure", example: "The CEO resigned amidst mounting pressure from shareholders." },
+      { collocation: "mounting concern", example: "There is mounting concern over safety standards at the site." }
+    ],
+    semantic_field_id: "growth-intensity",
+    semantic_field_label: "Growth & Intensity",
+    semantic_field_words: [
+      { word: "growing", cefr: "B1", register: "neutral" },
+      { word: "escalating", cefr: "C1", register: "formal" }
+    ],
+    register_synonyms: [
+      { word: "growing", register: "neutral", cefr: "B1" },
+      { word: "escalating", register: "formal", cefr: "C1" }
+    ],
+    folder_ids: ["folder-reading", "folder-4"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Sea Change for Salinity passage - mounting effort by scientists and governments."
+  },
+  {
+    id: "entry-ambush",
+    entry_type: "word",
+    word: "ambush",
+    ipa_uk: "/ˈæm.bʊʃ/",
+    ipa_us: "/ˈæm.bʊʃ/",
+    definition: "a sudden surprise attack from a hidden position, or to attack in this way",
+    definition_source: "cambridge",
+    example: "The enemy forces were caught in a deadly ambush along the narrow forest pass.",
+    definitions: [
+      {
+        definition: "a sudden surprise attack from a hidden position",
+        example: "The enemy forces were caught in a deadly ambush along the narrow forest pass.",
+        cefr_level: "B2",
+        grammar_note: "noun [C or U]"
+      },
+      {
+        definition: "to attack someone or something by surprise from a hidden position",
+        example: "Reporters tried to ambush the politician as he left his office.",
+        cefr_level: "B2",
+        grammar_note: "transitive verb"
+      }
+    ],
+    extra_examples: [
+      "Part of the problem lies in salt's ability to mount ambushes, emerging somewhere new unexpectedly.",
+      "The wolves hid in the bushes, waiting to ambush the deer."
+    ],
+    grammar_note: "noun / transitive verb",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "B2",
+    register: "neutral",
+    formality_score: 3,
+    connotation: "neutral",
+    word_family: {
+      verb: ["ambush"],
+      noun: ["ambush"]
+    },
+    collocations: [
+      { collocation: "mount an ambush", example: "Guerrilla units are trained to mount sudden ambushes." },
+      { collocation: "fear of ambush", example: "The soldiers marched cautiously through the canyon in fear of ambush." }
+    ],
+    semantic_field_id: "surprise-attack",
+    semantic_field_label: "Surprise & Attack",
+    semantic_field_words: [
+      { word: "attack", cefr: "B1", register: "neutral" },
+      { word: "trap", cefr: "B2", register: "neutral" }
+    ],
+    register_synonyms: [
+      { word: "surprise attack", register: "neutral", cefr: "B2" }
+    ],
+    folder_ids: ["folder-reading"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Sea Change for Salinity passage - salt's ability to mount ambushes."
+  },
+  {
+    id: "entry-conductivity",
+    entry_type: "word",
+    word: "conductivity",
+    ipa_uk: "/ˌkɒn.dʌkˈtɪv.ə.ti/",
+    ipa_us: "/ˌkɑːn.dʌkˈtɪv.ə.t̬i/",
+    definition: "the measure of a material's ability to conduct an electric current or heat",
+    definition_source: "cambridge",
+    example: "Copper is widely used in electrical wiring due to its exceptionally high conductivity.",
+    definitions: [
+      {
+        definition: "the measure of a material's ability to conduct an electric current or heat",
+        example: "Copper is widely used in electrical wiring due to its exceptionally high conductivity.",
+        cefr_level: "C2",
+        grammar_note: "noun [U]"
+      }
+    ],
+    extra_examples: [
+      "Electromagnetic surveys measure the electrical conductivity of soil to map salt distribution.",
+      "The thermal conductivity of wood is low, making it a good insulator."
+    ],
+    grammar_note: "noun [U]",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "C2",
+    register: "scientific",
+    formality_score: 4,
+    connotation: "neutral",
+    word_family: {
+      verb: ["conduct"],
+      noun: ["conductivity", "conductor", "conductance"],
+      adjective: ["conductive"]
+    },
+    collocations: [
+      { collocation: "electrical conductivity", example: "Water with high salt levels has higher electrical conductivity." },
+      { collocation: "thermal conductivity", example: "Aluminum offers superior thermal conductivity for cookware." }
+    ],
+    semantic_field_id: "physics-materials",
+    semantic_field_label: "Physics & Materials",
+    semantic_field_words: [
+      { word: "resistance", cefr: "B2", register: "neutral" },
+      { word: "insulation", cefr: "C1", register: "technical" }
+    ],
+    register_synonyms: [
+      { word: "transmission", register: "neutral", cefr: "B2" }
+    ],
+    folder_ids: ["folder-reading", "folder-science"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Sea Change for Salinity passage - measuring electrical conductivity of soil."
+  },
+  {
+    id: "entry-drainage",
+    entry_type: "word",
+    word: "drainage",
+    ipa_uk: "/ˈdreɪ.nɪdʒ/",
+    ipa_us: "/ˈdreɪ.nɪdʒ/",
+    definition: "the system or process of removing water or waste liquids from an area of land or building",
+    definition_source: "cambridge",
+    example: "The city council invested in improving the storm drainage to prevent winter floods.",
+    definitions: [
+      {
+        definition: "the system or process of removing water or waste liquids from an area of land or building",
+        example: "The city council invested in improving the storm drainage to prevent winter floods.",
+        cefr_level: "B2",
+        grammar_note: "noun [U]"
+      }
+    ],
+    extra_examples: [
+      "Scientists revealed a network of ancient drainage channels buried meters beneath the soil.",
+      "The soil profile has poor drainage, leading to waterlogged crop roots."
+    ],
+    grammar_note: "noun [U]",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "B2",
+    register: "neutral",
+    formality_score: 3,
+    connotation: "neutral",
+    word_family: {
+      verb: ["drain"],
+      noun: ["drainage", "drain"]
+    },
+    collocations: [
+      { collocation: "drainage channel", example: "Buried drainage channels carry salt and water in different directions underground." },
+      { collocation: "poor drainage", example: "Clay soil is characterized by poor drainage and slow water absorption." }
+    ],
+    semantic_field_id: "water-management",
+    semantic_field_label: "Water Management",
+    semantic_field_words: [
+      { word: "irrigation", cefr: "C1", register: "technical" },
+      { word: "sewage", cefr: "C1", register: "technical" }
+    ],
+    register_synonyms: [
+      { word: "outflow", register: "neutral", cefr: "B2" }
+    ],
+    folder_ids: ["folder-reading", "folder-6"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Sea Change for Salinity passage - network of ancient drainage channels buried."
   }
 ];
 
