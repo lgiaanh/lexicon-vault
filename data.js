@@ -5,12 +5,12 @@ const INITIAL_FOLDERS = [
   { id: 'folder-1', name: 'Law & Policy', color: '#DBCDF0', emoji: '⚖️', description: 'Legislation, judicial processes, constitutional rights, and official regulations.', created_at: new Date().toISOString(), word_count: 9 },
   { id: 'folder-2', name: 'Economics & Statistics', color: '#FAEDCB', emoji: '📈', description: 'Financial theories, trade data, economic policy, market dynamics, and quantitative metrics.', created_at: new Date().toISOString(), word_count: 15 },
   { id: 'folder-3', name: 'Environment & Ecology', color: '#C9E4DE', emoji: '🌱', description: 'Climate change, biodiversity, environmental preservation, ecosystems, and conservation strategies.', created_at: new Date().toISOString(), word_count: 10 },
-  { id: 'folder-4', name: 'Academic Writing (Task 2)', color: '#C6DEF1', emoji: '✍️', description: 'Sophisticated vocabulary and idioms tailored for high-scoring IELTS Writing Task 2 responses.', created_at: new Date().toISOString(), word_count: 39 },
+  { id: 'folder-4', name: 'Academic Writing (Task 2)', color: '#C6DEF1', emoji: '✍️', description: 'Sophisticated vocabulary and idioms tailored for high-scoring IELTS Writing Task 2 responses.', created_at: new Date().toISOString(), word_count: 40 },
   { id: 'folder-5', name: 'Phrasal Verbs & Idioms', color: '#F7D9C4', emoji: '💬', description: 'Common English phrasal verbs and idiomatic expressions for informal or spoken contexts.', created_at: new Date().toISOString(), word_count: 8 },
   { id: 'folder-6', name: 'Maps & Diagrams', color: '#F2C6DE', emoji: '🗺️', description: 'Spatial descriptions, maps, process flowcharts, and technical diagrams.', created_at: new Date().toISOString(), word_count: 4 },
   { id: 'folder-speaking-work-study', name: 'Speaking: Work & Study', color: '#C6DEF1', emoji: '🏫', description: 'Phrasal verbs and colloquial expressions for describing academic pursuits and careers.', created_at: new Date().toISOString(), word_count: 3 },
   { id: 'folder-speaking-leisure-travel', name: 'Speaking: Leisure & Travel', color: '#C9E4DE', emoji: '✈️', description: 'Speaking phrasal verbs for describing vacationing, sightseeing, and hobbies.', created_at: new Date().toISOString(), word_count: 2 },
-  { id: 'folder-speaking-relationships', name: 'Speaking: Relationships & Life', color: '#F2C6DE', emoji: '👥', description: 'Phrasal verbs for describing social connections, relatives, and childhood memories.', created_at: new Date().toISOString(), word_count: 2 },
+  { id: 'folder-speaking-relationships', name: 'Speaking: Relationships & Life', color: '#F2C6DE', emoji: '👥', description: 'Phrasal verbs for describing social connections, relatives, and childhood memories.', created_at: new Date().toISOString(), word_count: 3 },
   { id: 'folder-science', name: 'Science & Technology', color: '#DBCDF0', emoji: '🔬', description: 'Vocabulary and collocations related to scientific research, breakthroughs, technology, and paradigm shifts.', created_at: new Date().toISOString(), word_count: 8 },
   { id: 'folder-task2-phrases', name: 'Task 2 Phrases', color: '#F7D9C4', emoji: '📝', description: 'Key academic phrases, collocations, and idioms tailored for Writing Task 2 essays.', created_at: new Date().toISOString(), word_count: 15 },
   { id: 'folder-reading', name: 'IELTS Reading', color: '#C9E4DE', emoji: '📖', description: 'High-yield vocabulary and scientific terms gathered from IELTS Reading passages.', created_at: new Date().toISOString(), word_count: 18 }
@@ -8845,6 +8845,66 @@ const INITIAL_ENTRIES = [
     },
     date_added: new Date().toISOString(),
     source_context: "Sea Change for Salinity passage - network of ancient drainage channels buried."
+  },
+  {
+    id: "entry-irritable",
+    entry_type: "word",
+    word: "irritable",
+    ipa_uk: "/ˈir.ɪ.tə.bəl/",
+    ipa_us: "/ˈir.ə.t̬ə.bəl/",
+    definition: "becoming annoyed or angry very easily",
+    definition_source: "cambridge",
+    example: "The baby became extremely irritable because she was teething and couldn't sleep well.",
+    definitions: [
+      {
+        definition: "becoming annoyed or angry very easily",
+        example: "The baby became extremely irritable because she was teething and couldn't sleep well.",
+        cefr_level: "C1",
+        grammar_note: "adjective"
+      }
+    ],
+    extra_examples: [
+      "Lack of sleep often makes people highly irritable and touchy during the day.",
+      "An irritable mood can negatively impact how you communicate with colleagues and family members."
+    ],
+    grammar_note: "adjective",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "C1",
+    register: "neutral",
+    formality_score: 3,
+    connotation: "negative",
+    word_family: {
+      verb: ["irritate"],
+      noun: ["irritability", "irritation"],
+      adjective: ["irritable", "irritating"],
+      adverb: ["irritably"]
+    },
+    collocations: [
+      { collocation: "grow irritable", example: "He tends to grow irritable when he is under severe work stress." },
+      { collocation: "irritable bowel syndrome", example: "Dietary changes can help manage symptoms of irritable bowel syndrome." }
+    ],
+    semantic_field_id: "mood-temperament",
+    semantic_field_label: "Mood & Temperament",
+    semantic_field_words: [
+      { word: "touchy", cefr: "C2", register: "neutral" },
+      { word: "grumpy", cefr: "B2", register: "informal" }
+    ],
+    register_synonyms: [
+      { word: "bad-tempered", register: "neutral", cefr: "B2" }
+    ],
+    folder_ids: ["folder-4", "folder-speaking-relationships"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Describing personality, mood patterns, and social relationships."
   }
 ];
 
@@ -13382,6 +13442,66 @@ const EXTENDED_DICTIONARY_DB = [
     },
     date_added: new Date().toISOString(),
     source_context: "Sea Change for Salinity passage - network of ancient drainage channels buried."
+  },
+  {
+    id: "entry-irritable",
+    entry_type: "word",
+    word: "irritable",
+    ipa_uk: "/ˈir.ɪ.tə.bəl/",
+    ipa_us: "/ˈir.ə.t̬ə.bəl/",
+    definition: "becoming annoyed or angry very easily",
+    definition_source: "cambridge",
+    example: "The baby became extremely irritable because she was teething and couldn't sleep well.",
+    definitions: [
+      {
+        definition: "becoming annoyed or angry very easily",
+        example: "The baby became extremely irritable because she was teething and couldn't sleep well.",
+        cefr_level: "C1",
+        grammar_note: "adjective"
+      }
+    ],
+    extra_examples: [
+      "Lack of sleep often makes people highly irritable and touchy during the day.",
+      "An irritable mood can negatively impact how you communicate with colleagues and family members."
+    ],
+    grammar_note: "adjective",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "C1",
+    register: "neutral",
+    formality_score: 3,
+    connotation: "negative",
+    word_family: {
+      verb: ["irritate"],
+      noun: ["irritability", "irritation"],
+      adjective: ["irritable", "irritating"],
+      adverb: ["irritably"]
+    },
+    collocations: [
+      { collocation: "grow irritable", example: "He tends to grow irritable when he is under severe work stress." },
+      { collocation: "irritable bowel syndrome", example: "Dietary changes can help manage symptoms of irritable bowel syndrome." }
+    ],
+    semantic_field_id: "mood-temperament",
+    semantic_field_label: "Mood & Temperament",
+    semantic_field_words: [
+      { word: "touchy", cefr: "C2", register: "neutral" },
+      { word: "grumpy", cefr: "B2", register: "informal" }
+    ],
+    register_synonyms: [
+      { word: "bad-tempered", register: "neutral", cefr: "B2" }
+    ],
+    folder_ids: ["folder-4", "folder-speaking-relationships"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Describing personality, mood patterns, and social relationships."
   }
 ];
 
