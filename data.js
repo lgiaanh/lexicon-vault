@@ -71,7 +71,7 @@ const INITIAL_ENTRIES = [
     review: {
       interval_days: 1,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 1).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -123,9 +123,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ['folder-4', 'folder-task2-phrases'],
     review: {
-      interval_days: 1,
+      interval_days: 2,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 2).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -178,9 +178,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ['folder-4', 'folder-task2-phrases', 'folder-3'],
     review: {
-      interval_days: 1,
+      interval_days: 3,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 3).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -240,9 +240,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ['folder-2', 'folder-4'],
     review: {
-      interval_days: 1,
+      interval_days: 4,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 4).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -301,9 +301,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ['folder-4'],
     review: {
-      interval_days: 1,
+      interval_days: 5,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 5).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -370,7 +370,7 @@ const INITIAL_ENTRIES = [
     review: {
       interval_days: 1,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 1).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -428,9 +428,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ['folder-4'],
     review: {
-      interval_days: 1,
+      interval_days: 2,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 2).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -489,9 +489,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ['folder-4'],
     review: {
-      interval_days: 1,
+      interval_days: 3,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 3).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -550,9 +550,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ['folder-5', 'folder-3'],
     review: {
-      interval_days: 1,
+      interval_days: 4,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 4).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -611,9 +611,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ['folder-4'],
     review: {
-      interval_days: 1,
+      interval_days: 5,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 5).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -675,7 +675,7 @@ const INITIAL_ENTRIES = [
     review: {
       interval_days: 1,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 1).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -733,9 +733,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ['folder-4'],
     review: {
-      interval_days: 1,
+      interval_days: 2,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 2).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -794,9 +794,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ['folder-4'],
     review: {
-      interval_days: 1,
+      interval_days: 3,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 3).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -861,9 +861,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ['folder-4'],
     review: {
-      interval_days: 1,
+      interval_days: 4,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 4).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -922,9 +922,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ['folder-4'],
     review: {
-      interval_days: 1,
+      interval_days: 5,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 5).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -991,7 +991,7 @@ const INITIAL_ENTRIES = [
     review: {
       interval_days: 1,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 1).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -1050,9 +1050,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ['folder-4'],
     review: {
-      interval_days: 1,
+      interval_days: 2,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 2).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -1112,9 +1112,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ['folder-4'],
     review: {
-      interval_days: 1,
+      interval_days: 3,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 3).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -1172,9 +1172,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ['folder-4'],
     review: {
-      interval_days: 1,
+      interval_days: 4,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 4).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -1234,9 +1234,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ['folder-4'],
     review: {
-      interval_days: 1,
+      interval_days: 5,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 5).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -1298,7 +1298,7 @@ const INITIAL_ENTRIES = [
     review: {
       interval_days: 1,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 1).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -1356,9 +1356,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ['folder-5'],
     review: {
-      interval_days: 1,
+      interval_days: 2,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 2).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -1422,9 +1422,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ['folder-4'],
     review: {
-      interval_days: 1,
+      interval_days: 3,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 3).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -1496,9 +1496,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ['folder-5', 'folder-4'],
     review: {
-      interval_days: 1,
+      interval_days: 4,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 4).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -1570,9 +1570,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ['folder-5', 'folder-4'],
     review: {
-      interval_days: 1,
+      interval_days: 5,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 5).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -1646,7 +1646,7 @@ const INITIAL_ENTRIES = [
     review: {
       interval_days: 1,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 1).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -1714,9 +1714,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ['folder-3', 'folder-4'],
     review: {
-      interval_days: 1,
+      interval_days: 2,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 2).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -1782,9 +1782,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ['folder-3', 'folder-4'],
     review: {
-      interval_days: 1,
+      interval_days: 3,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 3).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -1851,9 +1851,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ['folder-3', 'folder-4'],
     review: {
-      interval_days: 1,
+      interval_days: 4,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 4).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -1920,9 +1920,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ['folder-3', 'folder-4'],
     review: {
-      interval_days: 1,
+      interval_days: 5,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 5).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -1992,7 +1992,7 @@ const INITIAL_ENTRIES = [
     review: {
       interval_days: 1,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 1).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -2061,9 +2061,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ['folder-4'],
     review: {
-      interval_days: 1,
+      interval_days: 2,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 2).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -2133,9 +2133,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ['folder-4'],
     review: {
-      interval_days: 1,
+      interval_days: 3,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 3).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -2207,9 +2207,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ['folder-1'],
     review: {
-      interval_days: 1,
+      interval_days: 4,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 4).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -2281,9 +2281,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ['folder-1'],
     review: {
-      interval_days: 1,
+      interval_days: 5,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 5).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -2364,7 +2364,7 @@ const INITIAL_ENTRIES = [
     review: {
       interval_days: 1,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 1).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -2437,9 +2437,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ['folder-1'],
     review: {
-      interval_days: 1,
+      interval_days: 2,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 2).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -2512,9 +2512,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ['folder-1', 'folder-4'],
     review: {
-      interval_days: 1,
+      interval_days: 3,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 3).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -2569,9 +2569,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ['folder-1'],
     review: {
-      interval_days: 1,
+      interval_days: 4,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 4).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -2623,11 +2623,11 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ['folder-1', 'folder-4'],
     review: {
-      interval_days: 3,
-      ease_factor: 2.6,
-      due_date: new Date().toISOString().split('T')[0],
-      repetition_count: 1,
-      last_result: 'good'
+      interval_days: 5,
+      ease_factor: 2.5,
+      due_date: new Date(Date.now() + 86400000 * 5).toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
     },
     date_added: new Date().toISOString(),
     source_context: 'Academic article on civil governance.',
@@ -2680,7 +2680,7 @@ const INITIAL_ENTRIES = [
     review: {
       interval_days: 1,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 1).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -2733,11 +2733,11 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ['folder-1'],
     review: {
-      interval_days: 7,
-      ease_factor: 2.8,
-      due_date: new Date(Date.now() + 86400000 * 5).toISOString().split('T')[0], // 5 days out
-      repetition_count: 2,
-      last_result: 'easy'
+      interval_days: 2,
+      ease_factor: 2.5,
+      due_date: new Date(Date.now() + 86400000 * 2).toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
     },
     date_added: new Date().toISOString(),
     source_context: 'UN news broadcast regarding climate agreements.',
@@ -2787,9 +2787,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ['folder-1'],
     review: {
-      interval_days: 1,
+      interval_days: 3,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 3).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -2841,11 +2841,11 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ['folder-1'],
     review: {
-      interval_days: 14,
-      ease_factor: 2.7,
-      due_date: new Date(Date.now() + 86400000 * 12).toISOString().split('T')[0], // 12 days out
-      repetition_count: 3,
-      last_result: 'good'
+      interval_days: 4,
+      ease_factor: 2.5,
+      due_date: new Date(Date.now() + 86400000 * 4).toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
     },
     date_added: new Date().toISOString(),
     source_context: 'Reading lease documents for a new apartment.',
@@ -2895,9 +2895,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ['folder-1', 'folder-4'],
     review: {
-      interval_days: 1,
+      interval_days: 5,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 5).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -2963,7 +2963,7 @@ const INITIAL_ENTRIES = [
     review: {
       interval_days: 1,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 1).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -3015,11 +3015,11 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ['folder-2', 'folder-4'],
     review: {
-      interval_days: 3,
+      interval_days: 2,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
-      repetition_count: 1,
-      last_result: 'good'
+      due_date: new Date(Date.now() + 86400000 * 2).toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
     },
     date_added: new Date().toISOString(),
     source_context: 'Essay on renewable energy sources.',
@@ -3069,9 +3069,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ['folder-2'],
     review: {
-      interval_days: 1,
+      interval_days: 3,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 3).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -3122,11 +3122,11 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ['folder-2'],
     review: {
-      interval_days: 7,
-      ease_factor: 2.7,
-      due_date: new Date(Date.now() + 86400000 * 4).toISOString().split('T')[0], // 4 days out
-      repetition_count: 2,
-      last_result: 'good'
+      interval_days: 4,
+      ease_factor: 2.5,
+      due_date: new Date(Date.now() + 86400000 * 4).toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
     },
     date_added: new Date().toISOString(),
     source_context: 'Writing Task 2 sample essay on business negotiations.',
@@ -3176,9 +3176,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ['folder-2', 'folder-4'],
     review: {
-      interval_days: 1,
+      interval_days: 5,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 5).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -3230,11 +3230,11 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ['folder-2', 'folder-4'],
     review: {
-      interval_days: 3,
-      ease_factor: 2.4,
-      due_date: new Date().toISOString().split('T')[0],
-      repetition_count: 1,
-      last_result: 'good'
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date(Date.now() + 86400000 * 1).toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
     },
     date_added: new Date().toISOString(),
     source_context: 'IELTS Writing Task 2 - Environmental problems and water availability.',
@@ -3284,11 +3284,11 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ['folder-2'],
     review: {
-      interval_days: 14,
-      ease_factor: 2.6,
-      due_date: new Date(Date.now() + 86400000 * 10).toISOString().split('T')[0],
-      repetition_count: 3,
-      last_result: 'good'
+      interval_days: 2,
+      ease_factor: 2.5,
+      due_date: new Date(Date.now() + 86400000 * 2).toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
     },
     date_added: new Date().toISOString(),
     source_context: 'Economic news article.',
@@ -3338,9 +3338,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ['folder-2'],
     review: {
-      interval_days: 1,
+      interval_days: 3,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 3).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -3391,9 +3391,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ['folder-2'],
     review: {
-      interval_days: 1,
+      interval_days: 4,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 4).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -3444,11 +3444,11 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ['folder-2'],
     review: {
-      interval_days: 30,
-      ease_factor: 2.8,
-      due_date: new Date(Date.now() + 86400000 * 28).toISOString().split('T')[0],
-      repetition_count: 4,
-      last_result: 'easy'
+      interval_days: 5,
+      ease_factor: 2.5,
+      due_date: new Date(Date.now() + 86400000 * 5).toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
     },
     date_added: new Date().toISOString(),
     source_context: 'IELTS writing prep: essay on consumerism.',
@@ -3499,7 +3499,7 @@ const INITIAL_ENTRIES = [
     review: {
       interval_days: 1,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 1).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -3550,9 +3550,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ['folder-2', 'folder-4'],
     review: {
-      interval_days: 1,
+      interval_days: 2,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 2).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -3603,11 +3603,11 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ['folder-2', 'folder-4'],
     review: {
-      interval_days: 7,
+      interval_days: 3,
       ease_factor: 2.5,
       due_date: new Date(Date.now() + 86400000 * 3).toISOString().split('T')[0],
-      repetition_count: 2,
-      last_result: 'good'
+      repetition_count: 0,
+      last_result: null
     },
     date_added: new Date().toISOString(),
     source_context: 'Advanced descriptive essay.',
@@ -3660,11 +3660,11 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ['folder-2', 'folder-4'],
     review: {
-      interval_days: 3,
+      interval_days: 4,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
-      repetition_count: 1,
-      last_result: 'good'
+      due_date: new Date(Date.now() + 86400000 * 4).toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
     },
     date_added: new Date().toISOString(),
     source_context: 'IELTS Writing - Essay on climate change consequences.',
@@ -3715,11 +3715,11 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ['folder-2', 'folder-4'],
     review: {
-      interval_days: 14,
-      ease_factor: 2.7,
-      due_date: new Date(Date.now() + 86400000 * 11).toISOString().split('T')[0],
-      repetition_count: 3,
-      last_result: 'good'
+      interval_days: 5,
+      ease_factor: 2.5,
+      due_date: new Date(Date.now() + 86400000 * 5).toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
     },
     date_added: new Date().toISOString(),
     source_context: 'Computer science reading passage.',
@@ -3771,7 +3771,7 @@ const INITIAL_ENTRIES = [
     review: {
       interval_days: 1,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 1).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -3822,11 +3822,11 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ['folder-2', 'folder-4'],
     review: {
-      interval_days: 7,
-      ease_factor: 2.6,
+      interval_days: 2,
+      ease_factor: 2.5,
       due_date: new Date(Date.now() + 86400000 * 2).toISOString().split('T')[0],
-      repetition_count: 2,
-      last_result: 'good'
+      repetition_count: 0,
+      last_result: null
     },
     date_added: new Date().toISOString(),
     source_context: 'Politics essay writing.',
@@ -3879,9 +3879,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ['folder-3', 'folder-4'],
     review: {
-      interval_days: 1,
+      interval_days: 3,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 3).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -3933,11 +3933,11 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ['folder-3', 'folder-4'],
     review: {
-      interval_days: 3,
+      interval_days: 4,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
-      repetition_count: 1,
-      last_result: 'good'
+      due_date: new Date(Date.now() + 86400000 * 4).toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
     },
     date_added: new Date().toISOString(),
     source_context: 'Environmental Science textbook chapter.',
@@ -3986,11 +3986,11 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ['folder-3', 'folder-4'],
     review: {
-      interval_days: 7,
-      ease_factor: 2.6,
-      due_date: new Date(Date.now() + 86400000 * 6).toISOString().split('T')[0],
-      repetition_count: 2,
-      last_result: 'good'
+      interval_days: 5,
+      ease_factor: 2.5,
+      due_date: new Date(Date.now() + 86400000 * 5).toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
     },
     date_added: new Date().toISOString(),
     source_context: 'Corporate social responsibility report.',
@@ -4042,7 +4042,7 @@ const INITIAL_ENTRIES = [
     review: {
       interval_days: 1,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 1).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -4091,9 +4091,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ['folder-5'],
     review: {
-      interval_days: 1,
+      interval_days: 2,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 2).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -4141,11 +4141,11 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ['folder-5'],
     review: {
-      interval_days: 14,
-      ease_factor: 2.8,
-      due_date: new Date(Date.now() + 86400000 * 13).toISOString().split('T')[0],
-      repetition_count: 3,
-      last_result: 'easy'
+      interval_days: 3,
+      ease_factor: 2.5,
+      due_date: new Date(Date.now() + 86400000 * 3).toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
     },
     date_added: new Date().toISOString(),
     source_context: 'General speaking practice.',
@@ -4190,9 +4190,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ['folder-5'],
     review: {
-      interval_days: 1,
+      interval_days: 4,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 4).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -4238,9 +4238,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ['folder-5'],
     review: {
-      interval_days: 1,
+      interval_days: 5,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 5).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -4287,11 +4287,11 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ['folder-5'],
     review: {
-      interval_days: 30,
-      ease_factor: 2.9,
-      due_date: new Date(Date.now() + 86400000 * 29).toISOString().split('T')[0],
-      repetition_count: 4,
-      last_result: 'easy'
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date(Date.now() + 86400000 * 1).toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
     },
     date_added: new Date().toISOString(),
     source_context: 'Daily speech patterns.',
@@ -4337,9 +4337,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ['folder-5', 'folder-4'],
     review: {
-      interval_days: 1,
+      interval_days: 2,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 2).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -4386,9 +4386,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ['folder-5', 'folder-4'],
     review: {
-      interval_days: 1,
+      interval_days: 3,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 3).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -4431,11 +4431,11 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ['folder-5'],
     review: {
-      interval_days: 3,
-      ease_factor: 2.4,
-      due_date: new Date().toISOString().split('T')[0],
-      repetition_count: 1,
-      last_result: 'good'
+      interval_days: 4,
+      ease_factor: 2.5,
+      due_date: new Date(Date.now() + 86400000 * 4).toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
     },
     date_added: new Date().toISOString(),
     source_context: 'Speaking Part 3 - Expressing agreement with the interviewer.',
@@ -4479,11 +4479,11 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ['folder-4'],
     review: {
-      interval_days: 14,
-      ease_factor: 2.6,
-      due_date: new Date(Date.now() + 86400000 * 9).toISOString().split('T')[0],
-      repetition_count: 3,
-      last_result: 'good'
+      interval_days: 5,
+      ease_factor: 2.5,
+      due_date: new Date(Date.now() + 86400000 * 5).toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
     },
     date_added: new Date().toISOString(),
     source_context: 'Business essay vocabulary.',
@@ -4525,11 +4525,11 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ['folder-4'],
     review: {
-      interval_days: 7,
+      interval_days: 1,
       ease_factor: 2.5,
       due_date: new Date(Date.now() + 86400000 * 1).toISOString().split('T')[0],
-      repetition_count: 2,
-      last_result: 'good'
+      repetition_count: 0,
+      last_result: null
     },
     date_added: new Date().toISOString(),
     source_context: 'IELTS Writing Task 2 structure templates.',
@@ -4572,11 +4572,11 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ['folder-4'],
     review: {
-      interval_days: 30,
-      ease_factor: 3.0,
-      due_date: new Date(Date.now() + 86400000 * 25).toISOString().split('T')[0],
-      repetition_count: 4,
-      last_result: 'easy'
+      interval_days: 2,
+      ease_factor: 2.5,
+      due_date: new Date(Date.now() + 86400000 * 2).toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
     },
     date_added: new Date().toISOString(),
     source_context: 'IELTS Exam tips.',
@@ -4618,9 +4618,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ['folder-4'],
     review: {
-      interval_days: 1,
+      interval_days: 3,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 3).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -4671,9 +4671,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ['folder-3', 'folder-4'],
     review: {
-      interval_days: 1,
+      interval_days: 4,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 4).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -4722,11 +4722,11 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ['folder-4'],
     review: {
-      interval_days: 3,
-      ease_factor: 2.4,
-      due_date: new Date().toISOString().split('T')[0],
-      repetition_count: 1,
-      last_result: 'good'
+      interval_days: 5,
+      ease_factor: 2.5,
+      due_date: new Date(Date.now() + 86400000 * 5).toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
     },
     date_added: new Date().toISOString(),
     source_context: 'Academic essay on social planning problems.',
@@ -4773,11 +4773,11 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ['folder-4'],
     review: {
-      interval_days: 7,
-      ease_factor: 2.6,
-      due_date: new Date(Date.now() + 86400000 * 2).toISOString().split('T')[0],
-      repetition_count: 2,
-      last_result: 'good'
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date(Date.now() + 86400000 * 1).toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
     },
     date_added: new Date().toISOString(),
     source_context: 'Essay on modern technology impact.',
@@ -4840,9 +4840,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ['folder-speaking-work-study', 'folder-speaking-leisure-travel'],
     review: {
-      interval_days: 1,
+      interval_days: 2,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 2).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -4901,9 +4901,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ['folder-speaking-relationships'],
     review: {
-      interval_days: 1,
+      interval_days: 3,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 3).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -4962,9 +4962,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ['folder-speaking-leisure-travel'],
     review: {
-      interval_days: 1,
+      interval_days: 4,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 4).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -5022,9 +5022,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ['folder-speaking-relationships'],
     review: {
-      interval_days: 1,
+      interval_days: 5,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 5).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -5085,7 +5085,7 @@ const INITIAL_ENTRIES = [
     review: {
       interval_days: 1,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 1).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -5144,9 +5144,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ['folder-speaking-leisure-travel'],
     review: {
-      interval_days: 1,
+      interval_days: 2,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 2).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -5210,9 +5210,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ['folder-speaking-leisure-travel'],
     review: {
-      interval_days: 1,
+      interval_days: 3,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 3).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -5271,9 +5271,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ['folder-4', 'folder-science'],
     review: {
-      interval_days: 1,
+      interval_days: 4,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 4).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -5332,9 +5332,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ['folder-4', 'folder-science'],
     review: {
-      interval_days: 1,
+      interval_days: 5,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 5).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -5395,7 +5395,7 @@ const INITIAL_ENTRIES = [
     review: {
       interval_days: 1,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 1).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -5454,9 +5454,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ['folder-4', 'folder-science'],
     review: {
-      interval_days: 1,
+      interval_days: 2,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 2).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -5515,9 +5515,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ['folder-4', 'folder-science'],
     review: {
-      interval_days: 1,
+      interval_days: 3,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 3).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -5585,9 +5585,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ['folder-1'],
     review: {
-      interval_days: 1,
+      interval_days: 4,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 4).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -5655,9 +5655,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ['folder-4'],
     review: {
-      interval_days: 1,
+      interval_days: 5,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 5).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -5727,7 +5727,7 @@ const INITIAL_ENTRIES = [
     review: {
       interval_days: 1,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 1).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -5795,9 +5795,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ['folder-1'],
     review: {
-      interval_days: 1,
+      interval_days: 2,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 2).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -5865,9 +5865,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ['folder-4'],
     review: {
-      interval_days: 1,
+      interval_days: 3,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 3).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -5935,9 +5935,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ['folder-4'],
     review: {
-      interval_days: 1,
+      interval_days: 4,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 4).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -6005,9 +6005,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ['folder-1'],
     review: {
-      interval_days: 1,
+      interval_days: 5,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 5).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -6077,7 +6077,7 @@ const INITIAL_ENTRIES = [
     review: {
       interval_days: 1,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 1).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -6145,9 +6145,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ['folder-4'],
     review: {
-      interval_days: 1,
+      interval_days: 2,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 2).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -6219,9 +6219,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ['folder-5'],
     review: {
-      interval_days: 1,
+      interval_days: 3,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 3).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -6289,9 +6289,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ['folder-2', 'folder-science'],
     review: {
-      interval_days: 1,
+      interval_days: 4,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 4).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -6357,9 +6357,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ['folder-4', 'folder-science'],
     review: {
-      interval_days: 1,
+      interval_days: 5,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 5).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -6428,7 +6428,7 @@ const INITIAL_ENTRIES = [
     review: {
       interval_days: 1,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 1).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -6495,9 +6495,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ['folder-4'],
     review: {
-      interval_days: 1,
+      interval_days: 2,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 2).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -6557,9 +6557,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ['folder-4', 'folder-task2-phrases'],
     review: {
-      interval_days: 1,
+      interval_days: 3,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 3).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -6615,9 +6615,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ['folder-4', 'folder-task2-phrases'],
     review: {
-      interval_days: 1,
+      interval_days: 4,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 4).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -6673,9 +6673,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ['folder-4', 'folder-task2-phrases'],
     review: {
-      interval_days: 1,
+      interval_days: 5,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 5).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -6733,7 +6733,7 @@ const INITIAL_ENTRIES = [
     review: {
       interval_days: 1,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 1).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -6791,9 +6791,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ['folder-4', 'folder-task2-phrases'],
     review: {
-      interval_days: 1,
+      interval_days: 2,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 2).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -6849,9 +6849,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ['folder-4', 'folder-task2-phrases'],
     review: {
-      interval_days: 1,
+      interval_days: 3,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 3).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -6908,9 +6908,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ['folder-4', 'folder-task2-phrases'],
     review: {
-      interval_days: 1,
+      interval_days: 4,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 4).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -6967,9 +6967,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ['folder-4', 'folder-task2-phrases'],
     review: {
-      interval_days: 1,
+      interval_days: 5,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 5).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -7027,7 +7027,7 @@ const INITIAL_ENTRIES = [
     review: {
       interval_days: 1,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 1).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -7083,9 +7083,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ['folder-4', 'folder-task2-phrases'],
     review: {
-      interval_days: 1,
+      interval_days: 2,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 2).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -7141,9 +7141,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ['folder-4', 'folder-task2-phrases'],
     review: {
-      interval_days: 1,
+      interval_days: 3,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 3).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -7198,9 +7198,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ['folder-4', 'folder-task2-phrases'],
     review: {
-      interval_days: 1,
+      interval_days: 4,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 4).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -7258,9 +7258,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ["folder-4"],
     review: {
-      interval_days: 1,
+      interval_days: 5,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 5).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -7320,7 +7320,7 @@ const INITIAL_ENTRIES = [
     review: {
       interval_days: 1,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 1).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -7385,9 +7385,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ["folder-4", "folder-6"],
     review: {
-      interval_days: 1,
+      interval_days: 2,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 2).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -7446,9 +7446,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ["folder-6"],
     review: {
-      interval_days: 1,
+      interval_days: 3,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 3).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -7506,9 +7506,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ["folder-1", "folder-4"],
     review: {
-      interval_days: 1,
+      interval_days: 4,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 4).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -7573,9 +7573,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ["folder-4", "folder-science"],
     review: {
-      interval_days: 1,
+      interval_days: 5,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 5).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -7634,7 +7634,7 @@ const INITIAL_ENTRIES = [
     review: {
       interval_days: 1,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 1).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -7689,9 +7689,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ["folder-2", "folder-3"],
     review: {
-      interval_days: 1,
+      interval_days: 2,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 2).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -7746,9 +7746,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ["folder-2", "folder-6"],
     review: {
-      interval_days: 1,
+      interval_days: 3,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 3).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -7806,9 +7806,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ["folder-reading"],
     review: {
-      interval_days: 1,
+      interval_days: 4,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 4).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -7866,9 +7866,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ["folder-reading"],
     review: {
-      interval_days: 1,
+      interval_days: 5,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 5).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -7927,7 +7927,7 @@ const INITIAL_ENTRIES = [
     review: {
       interval_days: 1,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 1).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -7989,9 +7989,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ["folder-reading", "folder-4"],
     review: {
-      interval_days: 1,
+      interval_days: 2,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 2).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -8048,9 +8048,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ["folder-reading", "folder-4"],
     review: {
-      interval_days: 1,
+      interval_days: 3,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 3).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -8112,9 +8112,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ["folder-reading", "folder-3", "folder-1"],
     review: {
-      interval_days: 1,
+      interval_days: 4,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 4).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -8176,9 +8176,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ["folder-reading", "folder-4"],
     review: {
-      interval_days: 1,
+      interval_days: 5,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 5).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -8236,7 +8236,7 @@ const INITIAL_ENTRIES = [
     review: {
       interval_days: 1,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 1).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -8292,9 +8292,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ["folder-reading", "folder-3"],
     review: {
-      interval_days: 1,
+      interval_days: 2,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 2).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -8351,9 +8351,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ["folder-reading"],
     review: {
-      interval_days: 1,
+      interval_days: 3,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 3).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -8416,9 +8416,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ["folder-reading", "folder-4"],
     review: {
-      interval_days: 1,
+      interval_days: 4,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 4).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -8482,9 +8482,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ["folder-reading"],
     review: {
-      interval_days: 1,
+      interval_days: 5,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 5).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -8542,7 +8542,7 @@ const INITIAL_ENTRIES = [
     review: {
       interval_days: 1,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 1).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -8597,9 +8597,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ["folder-reading", "folder-2"],
     review: {
-      interval_days: 1,
+      interval_days: 2,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 2).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -8656,9 +8656,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ["folder-reading", "folder-4"],
     review: {
-      interval_days: 1,
+      interval_days: 3,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 3).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -8720,9 +8720,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ["folder-reading"],
     review: {
-      interval_days: 1,
+      interval_days: 4,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 4).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -8779,9 +8779,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ["folder-reading", "folder-science"],
     review: {
-      interval_days: 1,
+      interval_days: 5,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 5).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -8839,7 +8839,7 @@ const INITIAL_ENTRIES = [
     review: {
       interval_days: 1,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 1).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -8897,9 +8897,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ["folder-4", "folder-speaking-relationships"],
     review: {
-      interval_days: 1,
+      interval_days: 2,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 2).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -8957,9 +8957,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ["folder-1", "folder-4"],
     review: {
-      interval_days: 1,
+      interval_days: 3,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 3).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -9015,9 +9015,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ["folder-1", "folder-2"],
     review: {
-      interval_days: 1,
+      interval_days: 4,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 4).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -9074,9 +9074,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ["folder-1", "folder-science"],
     review: {
-      interval_days: 1,
+      interval_days: 5,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 5).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -9135,7 +9135,7 @@ const INITIAL_ENTRIES = [
     review: {
       interval_days: 1,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 1).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -9199,9 +9199,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ["folder-1", "folder-4"],
     review: {
-      interval_days: 1,
+      interval_days: 2,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 2).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -9259,9 +9259,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ["folder-2", "folder-4"],
     review: {
-      interval_days: 1,
+      interval_days: 3,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 3).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -9323,9 +9323,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ["folder-2", "folder-4"],
     review: {
-      interval_days: 1,
+      interval_days: 4,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 4).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -9383,9 +9383,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ["folder-reading", "folder-speaking-relationships"],
     review: {
-      interval_days: 1,
+      interval_days: 5,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 5).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -9442,7 +9442,7 @@ const INITIAL_ENTRIES = [
     review: {
       interval_days: 1,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 1).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -9499,9 +9499,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ["folder-reading"],
     review: {
-      interval_days: 1,
+      interval_days: 2,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 2).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -9558,9 +9558,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ["folder-reading"],
     review: {
-      interval_days: 1,
+      interval_days: 3,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 3).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -9617,9 +9617,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ["folder-reading"],
     review: {
-      interval_days: 1,
+      interval_days: 4,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 4).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -9677,9 +9677,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ["folder-reading", "folder-4"],
     review: {
-      interval_days: 1,
+      interval_days: 5,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 5).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -9738,7 +9738,7 @@ const INITIAL_ENTRIES = [
     review: {
       interval_days: 1,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 1).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -9795,9 +9795,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ["folder-reading", "folder-3", "folder-4"],
     review: {
-      interval_days: 1,
+      interval_days: 2,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 2).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -9852,9 +9852,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ["folder-reading", "folder-4"],
     review: {
-      interval_days: 1,
+      interval_days: 3,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 3).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -9916,9 +9916,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ["folder-reading", "folder-4"],
     review: {
-      interval_days: 1,
+      interval_days: 4,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 4).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -9976,9 +9976,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ["folder-reading", "folder-4"],
     review: {
-      interval_days: 1,
+      interval_days: 5,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 5).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -10043,7 +10043,7 @@ const INITIAL_ENTRIES = [
     review: {
       interval_days: 1,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 1).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -10099,9 +10099,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ["folder-reading"],
     review: {
-      interval_days: 1,
+      interval_days: 2,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 2).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -10158,9 +10158,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ["folder-reading", "folder-speaking-relationships"],
     review: {
-      interval_days: 1,
+      interval_days: 3,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 3).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -10224,9 +10224,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ["folder-reading", "folder-4"],
     review: {
-      interval_days: 1,
+      interval_days: 4,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 4).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -10283,9 +10283,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ["folder-reading", "folder-4"],
     review: {
-      interval_days: 1,
+      interval_days: 5,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 5).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -10344,7 +10344,7 @@ const INITIAL_ENTRIES = [
     review: {
       interval_days: 1,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 1).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -10401,9 +10401,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ["folder-reading", "folder-3"],
     review: {
-      interval_days: 1,
+      interval_days: 2,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 2).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -10460,9 +10460,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ["folder-reading", "folder-4"],
     review: {
-      interval_days: 1,
+      interval_days: 3,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 3).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -10519,9 +10519,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ["folder-reading", "folder-4"],
     review: {
-      interval_days: 1,
+      interval_days: 4,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 4).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -10584,9 +10584,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ["folder-reading", "folder-4"],
     review: {
-      interval_days: 1,
+      interval_days: 5,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 5).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -10644,7 +10644,7 @@ const INITIAL_ENTRIES = [
     review: {
       interval_days: 1,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 1).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -10699,9 +10699,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ["folder-reading"],
     review: {
-      interval_days: 1,
+      interval_days: 2,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 2).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -10758,9 +10758,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ["folder-reading", "folder-3"],
     review: {
-      interval_days: 1,
+      interval_days: 3,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 3).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -10818,9 +10818,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ["folder-reading", "folder-4"],
     review: {
-      interval_days: 1,
+      interval_days: 4,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 4).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -10873,9 +10873,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ["folder-reading", "folder-3", "folder-4"],
     review: {
-      interval_days: 1,
+      interval_days: 5,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 5).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -10938,7 +10938,7 @@ const INITIAL_ENTRIES = [
     review: {
       interval_days: 1,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 1).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -10996,9 +10996,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ["folder-reading", "folder-4"],
     review: {
-      interval_days: 1,
+      interval_days: 2,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 2).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
@@ -11055,9 +11055,9 @@ const INITIAL_ENTRIES = [
     ],
     folder_ids: ["folder-reading", "folder-speaking-relationships"],
     review: {
-      interval_days: 1,
+      interval_days: 3,
       ease_factor: 2.5,
-      due_date: new Date().toISOString().split('T')[0],
+      due_date: new Date(Date.now() + 86400000 * 3).toISOString().split('T')[0],
       repetition_count: 0,
       last_result: null
     },
