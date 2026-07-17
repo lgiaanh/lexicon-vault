@@ -4,16 +4,16 @@
 const INITIAL_FOLDERS = [
   { id: 'folder-1', name: 'Law & Policy', color: '#DBCDF0', emoji: '⚖️', description: 'Legislation, judicial processes, constitutional rights, and official regulations.', created_at: new Date().toISOString(), word_count: 14 },
   { id: 'folder-2', name: 'Economics & Statistics', color: '#FAEDCB', emoji: '📈', description: 'Financial theories, trade data, economic policy, market dynamics, and quantitative metrics.', created_at: new Date().toISOString(), word_count: 19 },
-  { id: 'folder-3', name: 'Environment & Ecology', color: '#C9E4DE', emoji: '🌱', description: 'Climate change, biodiversity, environmental preservation, ecosystems, and conservation strategies.', created_at: new Date().toISOString(), word_count: 10 },
-  { id: 'folder-4', name: 'Academic Writing (Task 2)', color: '#C6DEF1', emoji: '✍️', description: 'Sophisticated vocabulary and idioms tailored for high-scoring IELTS Writing Task 2 responses.', created_at: new Date().toISOString(), word_count: 45 },
+  { id: 'folder-3', name: 'Environment & Ecology', color: '#C9E4DE', emoji: '🌱', description: 'Climate change, biodiversity, environmental preservation, ecosystems, and conservation strategies.', created_at: new Date().toISOString(), word_count: 11 },
+  { id: 'folder-4', name: 'Academic Writing (Task 2)', color: '#C6DEF1', emoji: '✍️', description: 'Sophisticated vocabulary and idioms tailored for high-scoring IELTS Writing Task 2 responses.', created_at: new Date().toISOString(), word_count: 55 },
   { id: 'folder-5', name: 'Phrasal Verbs & Idioms', color: '#F7D9C4', emoji: '💬', description: 'Common English phrasal verbs and idiomatic expressions for informal or spoken contexts.', created_at: new Date().toISOString(), word_count: 8 },
   { id: 'folder-6', name: 'Maps & Diagrams', color: '#F2C6DE', emoji: '🗺️', description: 'Spatial descriptions, maps, process flowcharts, and technical diagrams.', created_at: new Date().toISOString(), word_count: 4 },
   { id: 'folder-speaking-work-study', name: 'Speaking: Work & Study', color: '#C6DEF1', emoji: '🏫', description: 'Phrasal verbs and colloquial expressions for describing academic pursuits and careers.', created_at: new Date().toISOString(), word_count: 3 },
   { id: 'folder-speaking-leisure-travel', name: 'Speaking: Leisure & Travel', color: '#C9E4DE', emoji: '✈️', description: 'Speaking phrasal verbs for describing vacationing, sightseeing, and hobbies.', created_at: new Date().toISOString(), word_count: 2 },
-  { id: 'folder-speaking-relationships', name: 'Speaking: Relationships & Life', color: '#F2C6DE', emoji: '👥', description: 'Phrasal verbs for describing social connections, relatives, and childhood memories.', created_at: new Date().toISOString(), word_count: 3 },
+  { id: 'folder-speaking-relationships', name: 'Speaking: Relationships & Life', color: '#F2C6DE', emoji: '👥', description: 'Phrasal verbs for describing social connections, relatives, and childhood memories.', created_at: new Date().toISOString(), word_count: 5 },
   { id: 'folder-science', name: 'Science & Technology', color: '#DBCDF0', emoji: '🔬', description: 'Vocabulary and collocations related to scientific research, breakthroughs, technology, and paradigm shifts.', created_at: new Date().toISOString(), word_count: 9 },
   { id: 'folder-task2-phrases', name: 'Task 2 Phrases', color: '#F7D9C4', emoji: '📝', description: 'Key academic phrases, collocations, and idioms tailored for Writing Task 2 essays.', created_at: new Date().toISOString(), word_count: 15 },
-  { id: 'folder-reading', name: 'IELTS Reading', color: '#C9E4DE', emoji: '📖', description: 'High-yield vocabulary and scientific terms gathered from IELTS Reading passages.', created_at: new Date().toISOString(), word_count: 18 }
+  { id: 'folder-reading', name: 'IELTS Reading', color: '#C9E4DE', emoji: '📖', description: 'High-yield vocabulary and scientific terms gathered from IELTS Reading passages.', created_at: new Date().toISOString(), word_count: 35 }
 ];
 
 const INITIAL_ENTRIES = [
@@ -9331,6 +9331,1025 @@ const INITIAL_ENTRIES = [
     },
     date_added: new Date().toISOString(),
     source_context: "Describing monetary injections, herb extraction, or introducing new ideas/talent."
+  },
+  {
+    id: "entry-reverence",
+    entry_type: "word",
+    word: "reverence",
+    ipa_uk: "/ˈrev.ər.əns/",
+    ipa_us: "/ˈrev.ɚ.əns/",
+    definition: "a feeling of deep respect or admiration for someone or something",
+    definition_source: "cambridge",
+    example: "The visitors stood in silent reverence before the remnants of the ancient temple.",
+    definitions: [
+      {
+        definition: "a feeling of deep respect or admiration for someone or something",
+        example: "The visitors stood in silent reverence before the remnants of the ancient temple.",
+        cefr_level: "C2",
+        grammar_note: "noun [U]"
+      }
+    ],
+    extra_examples: [
+      "In many traditional societies, elder members are treated with deep reverence.",
+      "The monument was constructed as a symbol of reverence for the fallen heroes."
+    ],
+    grammar_note: "noun [U]",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "C2",
+    register: "formal",
+    formality_score: 5,
+    connotation: "positive",
+    word_family: {
+      verb: ["revere"],
+      noun: ["reverence"],
+      adjective: ["reverent"],
+      adverb: ["reverently"]
+    },
+    collocations: [
+      { collocation: "deep reverence", example: "The disciples showed deep reverence to their spiritual master." },
+      { collocation: "show reverence", example: "It is customary to show reverence when visiting sacred sites." }
+    ],
+    semantic_field_id: "respect-emotion",
+    semantic_field_label: "Respect & Emotion",
+    semantic_field_words: [
+      { word: "respect", cefr: "A2", register: "neutral" },
+      { word: "veneration", cefr: "C2", register: "formal" }
+    ],
+    register_synonyms: [
+      { word: "respect", register: "neutral", cefr: "A2" }
+    ],
+    folder_ids: ["folder-reading", "folder-speaking-relationships"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Drawing Lessons from History passage - standing in reverence before ancient ruins."
+  },
+  {
+    id: "entry-remnant",
+    entry_type: "word",
+    word: "remnant",
+    ipa_uk: "/ˈrem.nənt/",
+    ipa_us: "/ˈrem.nənt/",
+    definition: "a small piece or amount of something that is left from a larger original",
+    definition_source: "cambridge",
+    example: "The ruins are the last remnants of a grand civilization that once thrived in the valley.",
+    definitions: [
+      {
+        definition: "a small piece or amount of something that is left from a larger original",
+        example: "The ruins are the last remnants of a grand civilization that once thrived in the valley.",
+        cefr_level: "C1",
+        grammar_note: "noun [C usually plural]"
+      }
+    ],
+    extra_examples: [
+      "We found remnants of ancient pottery buried deep in the archaeological site.",
+      "Only a tiny remnant of the original forest remains today due to deforestation."
+    ],
+    grammar_note: "noun",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "C1",
+    register: "academic",
+    formality_score: 4,
+    connotation: "neutral",
+    word_family: {
+      noun: ["remnant", "remnants"]
+    },
+    collocations: [
+      { collocation: "last remnants", example: "Scientists analyzed the last remnants of the organic material." },
+      { collocation: "remnants of the past", example: "The museum displays various remnants of the past." }
+    ],
+    semantic_field_id: "remains-leftovers",
+    semantic_field_label: "Remains & Leftovers",
+    semantic_field_words: [
+      { word: "remains", cefr: "B2", register: "neutral" },
+      { word: "leftover", cefr: "B1", register: "informal" }
+    ],
+    register_synonyms: [
+      { word: "remains", register: "neutral", cefr: "B2" }
+    ],
+    folder_ids: ["folder-reading"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Drawing Lessons from History passage - remnants of a world that once thrived."
+  },
+  {
+    id: "entry-grandeur",
+    entry_type: "word",
+    word: "grandeur",
+    ipa_uk: "/ˈɡræn.dʒər/",
+    ipa_us: "/ˈɡræn.dʒɚ/",
+    definition: "the quality of being very large, special, beautiful, or impressive; magnificence",
+    definition_source: "cambridge",
+    example: "The grandeur of the ancient royal palace attests to the previous wealth of its builders.",
+    definitions: [
+      {
+        definition: "the quality of being very large, special, beautiful, or impressive; magnificence",
+        example: "The grandeur of the ancient royal palace attests to the previous wealth of its builders.",
+        cefr_level: "C1",
+        grammar_note: "noun [U]"
+      }
+    ],
+    extra_examples: [
+      "We were awed by the rugged grandeur of the snow-capped mountain range.",
+      "The composer's music possesses a unique dramatic grandeur."
+    ],
+    grammar_note: "noun [U]",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "C1",
+    register: "academic",
+    formality_score: 4,
+    connotation: "positive",
+    word_family: {
+      noun: ["grandeur", "grandness"],
+      adjective: ["grand"],
+      adverb: ["grandly"]
+    },
+    collocations: [
+      { collocation: "former grandeur", example: "Efforts are underway to restore the historic building to its former grandeur." },
+      { collocation: "sense of grandeur", example: "High ceilings and marble floors gave the hall a sense of grandeur." }
+    ],
+    semantic_field_id: "magnificence-splendor",
+    semantic_field_label: "Magnificence & Splendor",
+    semantic_field_words: [
+      { word: "magnificence", cefr: "B2", register: "neutral" },
+      { word: "splendor", cefr: "C1", register: "literary" }
+    ],
+    register_synonyms: [
+      { word: "magnificence", register: "neutral", cefr: "B2" }
+    ],
+    folder_ids: ["folder-reading"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Drawing Lessons from History passage - grandeur of these ruins attesting to wealth."
+  },
+  {
+    id: "entry-attest",
+    entry_type: "word",
+    word: "attest",
+    ipa_uk: "/əˈtest/",
+    ipa_us: "/əˈtest/",
+    definition: "to show or prove that something is true, or to formally declare it to be true",
+    definition_source: "cambridge",
+    example: "The vast scale of the stone structures attests to the advanced engineering skills of the civilization.",
+    definitions: [
+      {
+        definition: "to show or prove that something is true",
+        example: "The vast scale of the stone structures attests to the advanced engineering skills of the civilization.",
+        cefr_level: "C2",
+        grammar_note: "verb [intransitive/transitive]"
+      }
+    ],
+    extra_examples: [
+      "Thousands of satisfied users can attest to the effectiveness of the new software program.",
+      "The signed document attests that the transfer of property has been completed legally."
+    ],
+    grammar_note: "verb",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "C2",
+    register: "formal",
+    formality_score: 5,
+    connotation: "neutral",
+    word_family: {
+      verb: ["attest"],
+      noun: ["attestation"]
+    },
+    collocations: [
+      { collocation: "attest to the fact", example: "Her rapid promotion attests to the fact that she is a highly capable manager." },
+      { collocation: "can attest to", example: "As an eyewitness, I can attest to the accuracy of her statement." }
+    ],
+    semantic_field_id: "evidence-proof",
+    semantic_field_label: "Evidence & Proof",
+    semantic_field_words: [
+      { word: "verify", cefr: "B2", register: "neutral" },
+      { word: "corroborate", cefr: "C2", register: "formal" }
+    ],
+    register_synonyms: [
+      { word: "prove", register: "neutral", cefr: "B1" },
+      { word: "confirm", register: "neutral", cefr: "B2" }
+    ],
+    folder_ids: ["folder-reading"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Drawing Lessons from History passage - grandeur attesting to wealth and power."
+  },
+  {
+    id: "entry-painstakingly",
+    entry_type: "word",
+    word: "painstakingly",
+    ipa_uk: "/ˈpeɪnzˌteɪ.kɪŋ.li/",
+    ipa_us: "/ˈpeɪnzˌteɪ.kɪŋ.li/",
+    definition: "with extremely great care, effort, and thoroughness; meticulously",
+    definition_source: "cambridge",
+    example: "The ancient text was painstakingly restored by a team of linguistic experts over three years.",
+    definitions: [
+      {
+        definition: "with extremely great care, effort, and thoroughness; meticulously",
+        example: "The ancient text was painstakingly restored by a team of linguistic experts over three years.",
+        cefr_level: "C2",
+        grammar_note: "adverb"
+      }
+    ],
+    extra_examples: [
+      "The massive monuments were painstakingly carved out of solid rock by hand.",
+      "She painstakingly compiled the list of references for her doctoral thesis."
+    ],
+    grammar_note: "adverb",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "C2",
+    register: "academic",
+    formality_score: 4,
+    connotation: "positive",
+    word_family: {
+      noun: ["painstakingness"],
+      adjective: ["painstaking"],
+      adverb: ["painstakingly"]
+    },
+    collocations: [
+      { collocation: "painstakingly detailed", example: "The models are painstakingly detailed and accurate to scale." },
+      { collocation: "painstakingly researched", example: "The historical biography was painstakingly researched." }
+    ],
+    semantic_field_id: "precision-effort",
+    semantic_field_label: "Precision & Effort",
+    semantic_field_words: [
+      { word: "meticulously", cefr: "C2", register: "academic" },
+      { word: "carefully", cefr: "A2", register: "neutral" }
+    ],
+    register_synonyms: [
+      { word: "meticulously", register: "academic", cefr: "C2" }
+    ],
+    folder_ids: ["folder-reading"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Drawing Lessons from History passage - structures they had painstakingly constructed."
+  },
+  {
+    id: "entry-substantiate",
+    entry_type: "word",
+    word: "substantiate",
+    ipa_uk: "/səbˈstæn.ʃi.eɪt/",
+    ipa_us: "/səbˈstæn.ʃi.eɪt/",
+    definition: "to provide evidence to support or prove the truth of a claim or suspicion",
+    definition_source: "cambridge",
+    example: "The suspect's alibi was substantiated by security camera footage from the bank.",
+    definitions: [
+      {
+        definition: "to provide evidence to support or prove the truth of a claim or suspicion",
+        example: "The suspect's alibi was substantiated by security camera footage from the bank.",
+        cefr_level: "C2",
+        grammar_note: "transitive verb"
+      }
+    ],
+    extra_examples: [
+      "Archaeological discoveries in recent decades have substantiated the ecocide hypothesis.",
+      "You must bring concrete facts to substantiate your allegations during the hearing."
+    ],
+    grammar_note: "transitive verb",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "C2",
+    register: "academic",
+    formality_score: 5,
+    connotation: "neutral",
+    word_family: {
+      verb: ["substantiate"],
+      noun: ["substantiation"],
+      adjective: ["substantial", "unsubstantiated"]
+    },
+    collocations: [
+      { collocation: "substantiate a claim", example: "He offered no evidence to substantiate his claim of patent infringement." },
+      { collocation: "substantiate allegations", example: "The audit failed to substantiate allegations of financial misconduct." }
+    ],
+    semantic_field_id: "evidence-proof",
+    semantic_field_label: "Evidence & Proof",
+    semantic_field_words: [
+      { word: "prove", cefr: "B1", register: "neutral" },
+      { word: "confirm", cefr: "B2", register: "neutral" }
+    ],
+    register_synonyms: [
+      { word: "back up", register: "informal", cefr: "B2" },
+      { word: "corroborate", register: "formal", cefr: "C2" }
+    ],
+    folder_ids: ["folder-reading", "folder-4"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Drawing Lessons from History passage - suspicion of ecocide substantiated by discoveries."
+  },
+  {
+    id: "entry-undermine",
+    entry_type: "word",
+    word: "undermine",
+    ipa_uk: "/ˌʌn.dəˈmaɪn/",
+    ipa_us: "/ˌʌn.dɚˈmaɪn/",
+    definition: "to make someone or something weaker or less effective, usually gradually",
+    definition_source: "cambridge",
+    example: "Criticism from senior managers can seriously undermine a young employee's confidence.",
+    definitions: [
+      {
+        definition: "to make someone or something weaker or less effective, usually gradually",
+        example: "Criticism from senior managers can seriously undermine a young employee's confidence.",
+        cefr_level: "C1",
+        grammar_note: "transitive verb"
+      }
+    ],
+    extra_examples: [
+      "Ancient civilisations often undermined themselves by overexploiting soil and water resources.",
+      "The spread of fake news is designed to undermine public trust in democratic institutions."
+    ],
+    grammar_note: "transitive verb",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "C1",
+    register: "academic",
+    formality_score: 4,
+    connotation: "negative",
+    word_family: {
+      verb: ["undermine"],
+      noun: [],
+      adjective: ["undermined"]
+    },
+    collocations: [
+      { collocation: "undermine authority", example: "Disobeying direct orders will undermine the captain's authority." },
+      { collocation: "undermine efforts", example: "Lack of funding continues to undermine efforts to restore the river." }
+    ],
+    semantic_field_id: "weakening-damage",
+    semantic_field_label: "Weakening & Damage",
+    semantic_field_words: [
+      { word: "weaken", cefr: "B2", register: "neutral" },
+      { word: "subvert", cefr: "C2", register: "formal" }
+    ],
+    register_synonyms: [
+      { word: "weaken", register: "neutral", cefr: "B2" }
+    ],
+    folder_ids: ["folder-reading", "folder-4"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Drawing Lessons from History passage - past societies undermined themselves."
+  },
+  {
+    id: "entry-depletion",
+    entry_type: "word",
+    word: "depletion",
+    ipa_uk: "/dɪˈpliː.ʃən/",
+    ipa_us: "/dɪˈpliː.ʃən/",
+    definition: "a reduction in something, especially natural resources or financial assets",
+    definition_source: "cambridge",
+    example: "The depletion of the ozone layer has led to increased ultraviolet radiation reaching Earth.",
+    definitions: [
+      {
+        definition: "a reduction in something, especially natural resources or financial assets",
+        example: "The depletion of the ozone layer has led to increased ultraviolet radiation reaching Earth.",
+        cefr_level: "C1",
+        grammar_note: "noun [U or singular]"
+      }
+    ],
+    extra_examples: [
+      "Industrial scale logging has caused severe soil erosion and forest depletion.",
+      "The rapid depletion of fish stocks in the North Sea is a major concern for marine biologists."
+    ],
+    grammar_note: "noun",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "C1",
+    register: "academic",
+    formality_score: 4,
+    connotation: "negative",
+    word_family: {
+      verb: ["deplete"],
+      noun: ["depletion"],
+      adjective: ["depleted"]
+    },
+    collocations: [
+      { collocation: "resource depletion", example: "Overpopulation is accelerating global resource depletion." },
+      { collocation: "ozone depletion", example: "Chlorofluorocarbons were banned to prevent further ozone depletion." }
+    ],
+    semantic_field_id: "reduction-shortage",
+    semantic_field_label: "Reduction & Shortage",
+    semantic_field_words: [
+      { word: "reduction", cefr: "B2", register: "neutral" },
+      { word: "drain", cefr: "C1", register: "neutral" }
+    ],
+    register_synonyms: [
+      { word: "reduction", register: "neutral", cefr: "B2" }
+    ],
+    folder_ids: ["folder-reading", "folder-3", "folder-4"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Drawing Lessons from History passage - patterns often include resource depletion."
+  },
+  {
+    id: "entry-demise",
+    entry_type: "word",
+    word: "demise",
+    ipa_uk: "/dɪˈmaɪz/",
+    ipa_us: "/dɪˈmaɪz/",
+    definition: "the end, failure, or death of an institution, system, or person",
+    definition_source: "cambridge",
+    example: "The rise of online streaming services led to the demise of traditional video rental stores.",
+    definitions: [
+      {
+        definition: "the end, failure, or death of an institution, system, or person",
+        example: "The rise of online streaming services led to the demise of traditional video rental stores.",
+        cefr_level: "C1",
+        grammar_note: "noun [singular]"
+      }
+    ],
+    extra_examples: [
+      "The empire's demise was brought about by corruption, civil wars, and economic stagnation.",
+      "The sudden demise of the company shocked its employees and shareholders."
+    ],
+    grammar_note: "noun [singular]",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "C1",
+    register: "academic",
+    formality_score: 4,
+    connotation: "negative",
+    word_family: {
+      noun: ["demise"]
+    },
+    collocations: [
+      { collocation: "eventual demise", example: "Internal conflicts accelerated the dynasty's eventual demise." },
+      { collocation: "lead to the demise", example: "High debt levels can easily lead to the demise of small businesses." }
+    ],
+    semantic_field_id: "failure-end",
+    semantic_field_label: "Failure & End",
+    semantic_field_words: [
+      { word: "fall", cefr: "A2", register: "neutral" },
+      { word: "downfall", cefr: "B2", register: "neutral" }
+    ],
+    register_synonyms: [
+      { word: "downfall", register: "neutral", cefr: "B2" }
+    ],
+    folder_ids: ["folder-reading", "folder-4"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Drawing Lessons from History passage - speaking of a society's birth and eventual demise."
+  },
+  {
+    id: "entry-contingent",
+    entry_type: "word",
+    word: "contingent",
+    ipa_uk: "/kənˈtɪn.dʒənt/",
+    ipa_us: "/kənˈtɪn.dʒənt/",
+    definition: "depending on something else in the future in order to happen",
+    definition_source: "cambridge",
+    example: "The outdoor concert is contingent on the weather conditions being favorable.",
+    definitions: [
+      {
+        definition: "depending on something else in the future in order to happen",
+        example: "The outdoor concert is contingent on the weather conditions being favorable.",
+        cefr_level: "C2",
+        grammar_note: "adjective"
+      },
+      {
+        definition: "a group of people representing a country or organization at a meeting or event",
+        example: "A large contingent of French athletes marched in the parade.",
+        cefr_level: "C1",
+        grammar_note: "noun [C]"
+      }
+    ],
+    extra_examples: [
+      "The expansion of our operations is contingent upon securing additional funding.",
+      "The expression of systemic vulnerabilities is deeply contingent on local environmental conditions."
+    ],
+    grammar_note: "adjective / noun",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "C2",
+    register: "formal",
+    formality_score: 5,
+    connotation: "neutral",
+    word_family: {
+      noun: ["contingency", "contingent"],
+      adjective: ["contingent"]
+    },
+    collocations: [
+      { collocation: "contingent on", example: "Our offer of employment is contingent on satisfactory references." },
+      { collocation: "contingent plan", example: "They developed a contingent plan in case the primary system failed." }
+    ],
+    semantic_field_id: "dependence-probability",
+    semantic_field_label: "Dependence & Probability",
+    semantic_field_words: [
+      { word: "dependent", cefr: "B2", register: "neutral" },
+      { word: "conditional", cefr: "C1", register: "formal" }
+    ],
+    register_synonyms: [
+      { word: "dependent", register: "neutral", cefr: "B2" }
+    ],
+    folder_ids: ["folder-reading", "folder-4"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Drawing Lessons from History passage - expression is deeply contingent on local conditions."
+  },
+  {
+    id: "entry-contemplate",
+    entry_type: "word",
+    word: "contemplate",
+    ipa_uk: "/ˈkɒn.təm.pleɪt/",
+    ipa_us: "/ˈkɑːn.t̬əm.pleɪt/",
+    definition: "to spend time considering a possible future action, or to think about something seriously",
+    definition_source: "cambridge",
+    example: "The committee is contemplating major reforms to the existing education system.",
+    definitions: [
+      {
+        definition: "to spend time considering a possible future action, or to think about something seriously",
+        example: "The committee is contemplating major reforms to the existing education system.",
+        cefr_level: "C1",
+        grammar_note: "transitive/intransitive verb"
+      }
+    ],
+    extra_examples: [
+      "We must carefully contemplate the historical lessons to avoid repeating past failures.",
+      "She sat by the window, contemplating the meaning of her recent choices."
+    ],
+    grammar_note: "verb",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "C1",
+    register: "academic",
+    formality_score: 4,
+    connotation: "neutral",
+    word_family: {
+      verb: ["contemplate"],
+      noun: ["contemplation"],
+      adjective: ["contemplative"],
+      adverb: ["contemplatively"]
+    },
+    collocations: [
+      { collocation: "contemplate the future", example: "He walked along the beach to contemplate his future." },
+      { collocation: "seriously contemplate", example: "The company is seriously contemplating expanding into European markets." }
+    ],
+    semantic_field_id: "thinking-reflection",
+    semantic_field_label: "Thinking & Reflection",
+    semantic_field_words: [
+      { word: "consider", cefr: "A2", register: "neutral" },
+      { word: "ponder", cefr: "C2", register: "formal" }
+    ],
+    register_synonyms: [
+      { word: "consider", register: "neutral", cefr: "A2" }
+    ],
+    folder_ids: ["folder-reading", "folder-4"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Drawing Lessons from History passage - only if we carefully contemplate its lessons."
+  },
+  {
+    id: "entry-collapse",
+    entry_type: "word",
+    word: "collapse",
+    ipa_uk: "/kəˈlæps/",
+    ipa_us: "/kəˈlæps/",
+    definition: "a sudden failure of an institution, organization, or system; or to fall down suddenly",
+    definition_source: "cambridge",
+    example: "The unexpected bankruptcy of the investment bank led to the collapse of the stock market.",
+    definitions: [
+      {
+        definition: "to fall down suddenly because of pressure or lack of support",
+        example: "The roof of the ancient warehouse collapsed under the weight of the snow.",
+        cefr_level: "B2",
+        grammar_note: "intransitive verb"
+      },
+      {
+        definition: "a sudden failure of an institution, organization, or system",
+        example: "The economic collapse of the civilization was triggered by severe environmental ecocide.",
+        cefr_level: "B2",
+        grammar_note: "noun [C or U]"
+      }
+    ],
+    extra_examples: [
+      "He collapsed from heat exhaustion after running the marathon.",
+      "The peace talks collapsed after both sides refused to sign the compromise agreement."
+    ],
+    grammar_note: "verb / noun",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "B2",
+    register: "neutral",
+    formality_score: 3,
+    connotation: "negative",
+    word_family: {
+      verb: ["collapse"],
+      noun: ["collapse"],
+      adjective: ["collapsible"]
+    },
+    collocations: [
+      { collocation: "economic collapse", example: "Hyperinflation can cause total economic collapse in a country." },
+      { collocation: "sudden collapse", example: "The sudden collapse of the bridge is being investigated by engineers." }
+    ],
+    semantic_field_id: "failure-ruin",
+    semantic_field_label: "Failure & Ruin",
+    semantic_field_words: [
+      { word: "breakdown", cefr: "B2", register: "neutral" },
+      { word: "implode", cefr: "C2", register: "formal" }
+    ],
+    register_synonyms: [
+      { word: "downfall", register: "neutral", cefr: "B2" }
+    ],
+    folder_ids: ["folder-reading", "folder-4"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Drawing Lessons from History passage - term 'collapse' refers to reduction in complexity."
+  },
+  {
+    id: "entry-awe-inspiring",
+    entry_type: "word",
+    word: "awe-inspiring",
+    ipa_uk: "/ˈɔː.ɪnˌspaɪə.rɪŋ/",
+    ipa_us: "/ˈɑː.ɪnˌspaɪr.ɪŋ/",
+    definition: "causing you to feel great respect, admiration, or wonder",
+    definition_source: "cambridge",
+    example: "The Grand Canyon is one of the most awe-inspiring natural wonders in the world.",
+    definitions: [
+      {
+        definition: "causing you to feel great respect, admiration, or wonder",
+        example: "The Grand Canyon is one of the most awe-inspiring natural wonders in the world.",
+        cefr_level: "B2",
+        grammar_note: "adjective"
+      }
+    ],
+    extra_examples: [
+      "The awe-inspiring ruins left behind by these past societies captivate modern travelers.",
+      "The spacecraft sent back awe-inspiring images of Saturn's rings."
+    ],
+    grammar_note: "adjective",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "B2",
+    register: "neutral",
+    formality_score: 3,
+    connotation: "positive",
+    word_family: {
+      noun: ["awe"],
+      adjective: ["awesome", "awe-inspiring"]
+    },
+    collocations: [
+      { collocation: "awe-inspiring sight", example: "The solar eclipse was an awe-inspiring sight for thousands." },
+      { collocation: "awe-inspiring performance", example: "The orchestra delivered an awe-inspiring performance." }
+    ],
+    semantic_field_id: "wonder-amazement",
+    semantic_field_label: "Wonder & Amazement",
+    semantic_field_words: [
+      { word: "magnificent", cefr: "B1", register: "neutral" },
+      { word: "breathtaking", cefr: "B2", register: "neutral" }
+    ],
+    register_synonyms: [
+      { word: "breathtaking", register: "neutral", cefr: "B2" }
+    ],
+    folder_ids: ["folder-reading"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Drawing Lessons from History passage - awe-inspiring ruins left behind by past societies."
+  },
+  {
+    id: "entry-naive",
+    entry_type: "word",
+    word: "naive",
+    ipa_uk: "/naɪˈiːv/",
+    ipa_us: "/naɪˈiːv/",
+    definition: "too willing to believe that someone is telling the truth or that life is simple",
+    definition_source: "cambridge",
+    example: "It would be naive to assume that studying the past will yield straightforward answers for today's issues.",
+    definitions: [
+      {
+        definition: "too willing to believe that someone is telling the truth or that life is simple",
+        example: "It would be naive to assume that studying the past will yield straightforward answers for today's issues.",
+        cefr_level: "B2",
+        grammar_note: "adjective"
+      }
+    ],
+    extra_examples: [
+      "She was naive to believe that he would keep his promises without a written contract.",
+      "His naive enthusiasm for the political campaign was quickly tempered by reality."
+    ],
+    grammar_note: "adjective",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "B2",
+    register: "neutral",
+    formality_score: 3,
+    connotation: "negative",
+    word_family: {
+      noun: ["naivety"],
+      adjective: ["naive"],
+      adverb: ["naively"]
+    },
+    collocations: [
+      { collocation: "naive belief", example: "Many held the naive belief that the war would be over by Christmas." },
+      { collocation: "somewhat naive", example: "Her explanation of the economic crisis was somewhat naive." }
+    ],
+    semantic_field_id: "character-simplicity",
+    semantic_field_label: "Character & Simplicity",
+    semantic_field_words: [
+      { word: "credulous", cefr: "C2", register: "formal" },
+      { word: "gullible", cefr: "B2", register: "neutral" }
+    ],
+    register_synonyms: [
+      { word: "gullible", register: "neutral", cefr: "B2" }
+    ],
+    folder_ids: ["folder-reading", "folder-speaking-relationships"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Drawing Lessons from History passage - naive to assume past yields straightforward answers."
+  },
+  {
+    id: "entry-remedy",
+    entry_type: "word",
+    word: "remedy",
+    ipa_uk: "/ˈrem.ə.di/",
+    ipa_us: "/ˈrem.ə.di/",
+    definition: "to solve or correct a problem; or a solution or medicine that cures",
+    definition_source: "cambridge",
+    example: "The government is trying to remedy the high rate of youth unemployment with new training programs.",
+    definitions: [
+      {
+        definition: "to do something to correct or improve a bad situation",
+        example: "The government is trying to remedy the high rate of youth unemployment with new training programs.",
+        cefr_level: "C1",
+        grammar_note: "transitive verb"
+      },
+      {
+        definition: "a successful way of curing an illness or solving a problem",
+        example: "Drinking warm ginger tea is a popular home remedy for colds.",
+        cefr_level: "B2",
+        grammar_note: "noun [C]"
+      }
+    ],
+    extra_examples: [
+      "Modern technology sometimes produces new challenges faster than it can remedy old ones.",
+      "The court ordered the company to pay damages to remedy the environmental breach."
+    ],
+    grammar_note: "transitive verb / noun",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "B2",
+    register: "academic",
+    formality_score: 3,
+    connotation: "positive",
+    word_family: {
+      verb: ["remedy"],
+      noun: ["remedy"],
+      adjective: ["remedial"]
+    },
+    collocations: [
+      { collocation: "remedy the situation", example: "Immediate action is needed to remedy the situation." },
+      { collocation: "effective remedy", example: "There is no simple or effective remedy for the global recession." }
+    ],
+    semantic_field_id: "solution-cure",
+    semantic_field_label: "Solution & Cure",
+    semantic_field_words: [
+      { word: "cure", cefr: "B1", register: "neutral" },
+      { word: "rectify", cefr: "C1", register: "formal" }
+    ],
+    register_synonyms: [
+      { word: "rectify", register: "formal", cefr: "C1" },
+      { word: "solve", register: "neutral", cefr: "A2" }
+    ],
+    folder_ids: ["folder-reading", "folder-4"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Drawing Lessons from History passage - producing challenges faster than it can remedy old ones."
+  },
+  {
+    id: "entry-overstate",
+    entry_type: "word",
+    word: "overstate",
+    ipa_uk: "/ˌəʊ.vəˈsteɪt/",
+    ipa_us: "/ˌoʊ.vɚˈsteɪt/",
+    definition: "to describe something in a way that makes it seem more important or serious than it really is",
+    definition_source: "cambridge",
+    example: "It is easy to overstate the impact of social media on teenage behavior.",
+    definitions: [
+      {
+        definition: "to describe something in a way that makes it seem more important or serious than it really is",
+        example: "It is easy to overstate the impact of social media on teenage behavior.",
+        cefr_level: "B2",
+        grammar_note: "transitive verb"
+      }
+    ],
+    extra_examples: [
+      "Critics argue that the dangers of the new trade agreement have been greatly overstated.",
+      "Are the environmental risks of modern resource depletion overstated or undervalued?"
+    ],
+    grammar_note: "transitive verb",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "B2",
+    register: "academic",
+    formality_score: 3,
+    connotation: "negative",
+    word_family: {
+      verb: ["overstate"],
+      noun: ["overstatement"],
+      adjective: ["overstated"]
+    },
+    collocations: [
+      { collocation: "overstate the importance", example: "We cannot overstate the importance of strict compliance checks." },
+      { collocation: "greatly overstate", example: "The media tends to greatly overstate short-term economic fluctuations." }
+    ],
+    semantic_field_id: "exaggeration",
+    semantic_field_label: "Exaggeration & Importance",
+    semantic_field_words: [
+      { word: "exaggerate", cefr: "B2", register: "neutral" },
+      { word: "overemphasize", cefr: "C1", register: "academic" }
+    ],
+    register_synonyms: [
+      { word: "exaggerate", register: "neutral", cefr: "B2" }
+    ],
+    folder_ids: ["folder-reading", "folder-4"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Drawing Lessons from History passage - debate whether environmental risks are overstated."
+  },
+  {
+    id: "entry-undervalue",
+    entry_type: "word",
+    word: "undervalue",
+    ipa_uk: "/ˌʌn.dəˈvæl.juː/",
+    ipa_us: "/ˌʌn.dɚˈvæl.juː/",
+    definition: "to think that someone or something is less important or valuable than they really are",
+    definition_source: "cambridge",
+    example: "Society must not undervalue the contributions of teachers and healthcare workers.",
+    definitions: [
+      {
+        definition: "to think that someone or something is less important or valuable than they really are",
+        example: "Society must not undervalue the contributions of teachers and healthcare workers.",
+        cefr_level: "B2",
+        grammar_note: "transitive verb"
+      }
+    ],
+    extra_examples: [
+      "The housing market has undervalued these properties due to historical zoning restrictions.",
+      "It is vital not to undervalue the risks of human-induced climate change."
+    ],
+    grammar_note: "transitive verb",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "B2",
+    register: "academic",
+    formality_score: 3,
+    connotation: "negative",
+    word_family: {
+      verb: ["undervalue"],
+      noun: ["undervaluation"],
+      adjective: ["undervalued"]
+    },
+    collocations: [
+      { collocation: "undervalue contributions", example: "Managers who undervalue contributions from junior staff face high turnover." },
+      { collocation: "tend to undervalue", example: "Investors tend to undervalue companies with low initial margins." }
+    ],
+    semantic_field_id: "estimation-worth",
+    semantic_field_label: "Estimation & Worth",
+    semantic_field_words: [
+      { word: "underestimate", cefr: "B2", register: "neutral" },
+      { word: "depreciate", cefr: "C2", register: "economics" }
+    ],
+    register_synonyms: [
+      { word: "underestimate", register: "neutral", cefr: "B2" }
+    ],
+    folder_ids: ["folder-reading", "folder-4"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Drawing Lessons from History passage - debate whether environmental risks are undervalued."
   }
 ];
 
@@ -14354,6 +15373,1025 @@ const EXTENDED_DICTIONARY_DB = [
     },
     date_added: new Date().toISOString(),
     source_context: "Describing monetary injections, herb extraction, or introducing new ideas/talent."
+  },
+  {
+    id: "entry-reverence",
+    entry_type: "word",
+    word: "reverence",
+    ipa_uk: "/ˈrev.ər.əns/",
+    ipa_us: "/ˈrev.ɚ.əns/",
+    definition: "a feeling of deep respect or admiration for someone or something",
+    definition_source: "cambridge",
+    example: "The visitors stood in silent reverence before the remnants of the ancient temple.",
+    definitions: [
+      {
+        definition: "a feeling of deep respect or admiration for someone or something",
+        example: "The visitors stood in silent reverence before the remnants of the ancient temple.",
+        cefr_level: "C2",
+        grammar_note: "noun [U]"
+      }
+    ],
+    extra_examples: [
+      "In many traditional societies, elder members are treated with deep reverence.",
+      "The monument was constructed as a symbol of reverence for the fallen heroes."
+    ],
+    grammar_note: "noun [U]",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "C2",
+    register: "formal",
+    formality_score: 5,
+    connotation: "positive",
+    word_family: {
+      verb: ["revere"],
+      noun: ["reverence"],
+      adjective: ["reverent"],
+      adverb: ["reverently"]
+    },
+    collocations: [
+      { collocation: "deep reverence", example: "The disciples showed deep reverence to their spiritual master." },
+      { collocation: "show reverence", example: "It is customary to show reverence when visiting sacred sites." }
+    ],
+    semantic_field_id: "respect-emotion",
+    semantic_field_label: "Respect & Emotion",
+    semantic_field_words: [
+      { word: "respect", cefr: "A2", register: "neutral" },
+      { word: "veneration", cefr: "C2", register: "formal" }
+    ],
+    register_synonyms: [
+      { word: "respect", register: "neutral", cefr: "A2" }
+    ],
+    folder_ids: ["folder-reading", "folder-speaking-relationships"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Drawing Lessons from History passage - standing in reverence before ancient ruins."
+  },
+  {
+    id: "entry-remnant",
+    entry_type: "word",
+    word: "remnant",
+    ipa_uk: "/ˈrem.nənt/",
+    ipa_us: "/ˈrem.nənt/",
+    definition: "a small piece or amount of something that is left from a larger original",
+    definition_source: "cambridge",
+    example: "The ruins are the last remnants of a grand civilization that once thrived in the valley.",
+    definitions: [
+      {
+        definition: "a small piece or amount of something that is left from a larger original",
+        example: "The ruins are the last remnants of a grand civilization that once thrived in the valley.",
+        cefr_level: "C1",
+        grammar_note: "noun [C usually plural]"
+      }
+    ],
+    extra_examples: [
+      "We found remnants of ancient pottery buried deep in the archaeological site.",
+      "Only a tiny remnant of the original forest remains today due to deforestation."
+    ],
+    grammar_note: "noun",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "C1",
+    register: "academic",
+    formality_score: 4,
+    connotation: "neutral",
+    word_family: {
+      noun: ["remnant", "remnants"]
+    },
+    collocations: [
+      { collocation: "last remnants", example: "Scientists analyzed the last remnants of the organic material." },
+      { collocation: "remnants of the past", example: "The museum displays various remnants of the past." }
+    ],
+    semantic_field_id: "remains-leftovers",
+    semantic_field_label: "Remains & Leftovers",
+    semantic_field_words: [
+      { word: "remains", cefr: "B2", register: "neutral" },
+      { word: "leftover", cefr: "B1", register: "informal" }
+    ],
+    register_synonyms: [
+      { word: "remains", register: "neutral", cefr: "B2" }
+    ],
+    folder_ids: ["folder-reading"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Drawing Lessons from History passage - remnants of a world that once thrived."
+  },
+  {
+    id: "entry-grandeur",
+    entry_type: "word",
+    word: "grandeur",
+    ipa_uk: "/ˈɡræn.dʒər/",
+    ipa_us: "/ˈɡræn.dʒɚ/",
+    definition: "the quality of being very large, special, beautiful, or impressive; magnificence",
+    definition_source: "cambridge",
+    example: "The grandeur of the ancient royal palace attests to the previous wealth of its builders.",
+    definitions: [
+      {
+        definition: "the quality of being very large, special, beautiful, or impressive; magnificence",
+        example: "The grandeur of the ancient royal palace attests to the previous wealth of its builders.",
+        cefr_level: "C1",
+        grammar_note: "noun [U]"
+      }
+    ],
+    extra_examples: [
+      "We were awed by the rugged grandeur of the snow-capped mountain range.",
+      "The composer's music possesses a unique dramatic grandeur."
+    ],
+    grammar_note: "noun [U]",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "C1",
+    register: "academic",
+    formality_score: 4,
+    connotation: "positive",
+    word_family: {
+      noun: ["grandeur", "grandness"],
+      adjective: ["grand"],
+      adverb: ["grandly"]
+    },
+    collocations: [
+      { collocation: "former grandeur", example: "Efforts are underway to restore the historic building to its former grandeur." },
+      { collocation: "sense of grandeur", example: "High ceilings and marble floors gave the hall a sense of grandeur." }
+    ],
+    semantic_field_id: "magnificence-splendor",
+    semantic_field_label: "Magnificence & Splendor",
+    semantic_field_words: [
+      { word: "magnificence", cefr: "B2", register: "neutral" },
+      { word: "splendor", cefr: "C1", register: "literary" }
+    ],
+    register_synonyms: [
+      { word: "magnificence", register: "neutral", cefr: "B2" }
+    ],
+    folder_ids: ["folder-reading"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Drawing Lessons from History passage - grandeur of these ruins attesting to wealth."
+  },
+  {
+    id: "entry-attest",
+    entry_type: "word",
+    word: "attest",
+    ipa_uk: "/əˈtest/",
+    ipa_us: "/əˈtest/",
+    definition: "to show or prove that something is true, or to formally declare it to be true",
+    definition_source: "cambridge",
+    example: "The vast scale of the stone structures attests to the advanced engineering skills of the civilization.",
+    definitions: [
+      {
+        definition: "to show or prove that something is true",
+        example: "The vast scale of the stone structures attests to the advanced engineering skills of the civilization.",
+        cefr_level: "C2",
+        grammar_note: "verb [intransitive/transitive]"
+      }
+    ],
+    extra_examples: [
+      "Thousands of satisfied users can attest to the effectiveness of the new software program.",
+      "The signed document attests that the transfer of property has been completed legally."
+    ],
+    grammar_note: "verb",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "C2",
+    register: "formal",
+    formality_score: 5,
+    connotation: "neutral",
+    word_family: {
+      verb: ["attest"],
+      noun: ["attestation"]
+    },
+    collocations: [
+      { collocation: "attest to the fact", example: "Her rapid promotion attests to the fact that she is a highly capable manager." },
+      { collocation: "can attest to", example: "As an eyewitness, I can attest to the accuracy of her statement." }
+    ],
+    semantic_field_id: "evidence-proof",
+    semantic_field_label: "Evidence & Proof",
+    semantic_field_words: [
+      { word: "verify", cefr: "B2", register: "neutral" },
+      { word: "corroborate", cefr: "C2", register: "formal" }
+    ],
+    register_synonyms: [
+      { word: "prove", register: "neutral", cefr: "B1" },
+      { word: "confirm", register: "neutral", cefr: "B2" }
+    ],
+    folder_ids: ["folder-reading"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Drawing Lessons from History passage - grandeur attesting to wealth and power."
+  },
+  {
+    id: "entry-painstakingly",
+    entry_type: "word",
+    word: "painstakingly",
+    ipa_uk: "/ˈpeɪnzˌteɪ.kɪŋ.li/",
+    ipa_us: "/ˈpeɪnzˌteɪ.kɪŋ.li/",
+    definition: "with extremely great care, effort, and thoroughness; meticulously",
+    definition_source: "cambridge",
+    example: "The ancient text was painstakingly restored by a team of linguistic experts over three years.",
+    definitions: [
+      {
+        definition: "with extremely great care, effort, and thoroughness; meticulously",
+        example: "The ancient text was painstakingly restored by a team of linguistic experts over three years.",
+        cefr_level: "C2",
+        grammar_note: "adverb"
+      }
+    ],
+    extra_examples: [
+      "The massive monuments were painstakingly carved out of solid rock by hand.",
+      "She painstakingly compiled the list of references for her doctoral thesis."
+    ],
+    grammar_note: "adverb",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "C2",
+    register: "academic",
+    formality_score: 4,
+    connotation: "positive",
+    word_family: {
+      noun: ["painstakingness"],
+      adjective: ["painstaking"],
+      adverb: ["painstakingly"]
+    },
+    collocations: [
+      { collocation: "painstakingly detailed", example: "The models are painstakingly detailed and accurate to scale." },
+      { collocation: "painstakingly researched", example: "The historical biography was painstakingly researched." }
+    ],
+    semantic_field_id: "precision-effort",
+    semantic_field_label: "Precision & Effort",
+    semantic_field_words: [
+      { word: "meticulously", cefr: "C2", register: "academic" },
+      { word: "carefully", cefr: "A2", register: "neutral" }
+    ],
+    register_synonyms: [
+      { word: "meticulously", register: "academic", cefr: "C2" }
+    ],
+    folder_ids: ["folder-reading"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Drawing Lessons from History passage - structures they had painstakingly constructed."
+  },
+  {
+    id: "entry-substantiate",
+    entry_type: "word",
+    word: "substantiate",
+    ipa_uk: "/səbˈstæn.ʃi.eɪt/",
+    ipa_us: "/səbˈstæn.ʃi.eɪt/",
+    definition: "to provide evidence to support or prove the truth of a claim or suspicion",
+    definition_source: "cambridge",
+    example: "The suspect's alibi was substantiated by security camera footage from the bank.",
+    definitions: [
+      {
+        definition: "to provide evidence to support or prove the truth of a claim or suspicion",
+        example: "The suspect's alibi was substantiated by security camera footage from the bank.",
+        cefr_level: "C2",
+        grammar_note: "transitive verb"
+      }
+    ],
+    extra_examples: [
+      "Archaeological discoveries in recent decades have substantiated the ecocide hypothesis.",
+      "You must bring concrete facts to substantiate your allegations during the hearing."
+    ],
+    grammar_note: "transitive verb",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "C2",
+    register: "academic",
+    formality_score: 5,
+    connotation: "neutral",
+    word_family: {
+      verb: ["substantiate"],
+      noun: ["substantiation"],
+      adjective: ["substantial", "unsubstantiated"]
+    },
+    collocations: [
+      { collocation: "substantiate a claim", example: "He offered no evidence to substantiate his claim of patent infringement." },
+      { collocation: "substantiate allegations", example: "The audit failed to substantiate allegations of financial misconduct." }
+    ],
+    semantic_field_id: "evidence-proof",
+    semantic_field_label: "Evidence & Proof",
+    semantic_field_words: [
+      { word: "prove", cefr: "B1", register: "neutral" },
+      { word: "confirm", cefr: "B2", register: "neutral" }
+    ],
+    register_synonyms: [
+      { word: "back up", register: "informal", cefr: "B2" },
+      { word: "corroborate", register: "formal", cefr: "C2" }
+    ],
+    folder_ids: ["folder-reading", "folder-4"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Drawing Lessons from History passage - suspicion of ecocide substantiated by discoveries."
+  },
+  {
+    id: "entry-undermine",
+    entry_type: "word",
+    word: "undermine",
+    ipa_uk: "/ˌʌn.dəˈmaɪn/",
+    ipa_us: "/ˌʌn.dɚˈmaɪn/",
+    definition: "to make someone or something weaker or less effective, usually gradually",
+    definition_source: "cambridge",
+    example: "Criticism from senior managers can seriously undermine a young employee's confidence.",
+    definitions: [
+      {
+        definition: "to make someone or something weaker or less effective, usually gradually",
+        example: "Criticism from senior managers can seriously undermine a young employee's confidence.",
+        cefr_level: "C1",
+        grammar_note: "transitive verb"
+      }
+    ],
+    extra_examples: [
+      "Ancient civilisations often undermined themselves by overexploiting soil and water resources.",
+      "The spread of fake news is designed to undermine public trust in democratic institutions."
+    ],
+    grammar_note: "transitive verb",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "C1",
+    register: "academic",
+    formality_score: 4,
+    connotation: "negative",
+    word_family: {
+      verb: ["undermine"],
+      noun: [],
+      adjective: ["undermined"]
+    },
+    collocations: [
+      { collocation: "undermine authority", example: "Disobeying direct orders will undermine the captain's authority." },
+      { collocation: "undermine efforts", example: "Lack of funding continues to undermine efforts to restore the river." }
+    ],
+    semantic_field_id: "weakening-damage",
+    semantic_field_label: "Weakening & Damage",
+    semantic_field_words: [
+      { word: "weaken", cefr: "B2", register: "neutral" },
+      { word: "subvert", cefr: "C2", register: "formal" }
+    ],
+    register_synonyms: [
+      { word: "weaken", register: "neutral", cefr: "B2" }
+    ],
+    folder_ids: ["folder-reading", "folder-4"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Drawing Lessons from History passage - past societies undermined themselves."
+  },
+  {
+    id: "entry-depletion",
+    entry_type: "word",
+    word: "depletion",
+    ipa_uk: "/dɪˈpliː.ʃən/",
+    ipa_us: "/dɪˈpliː.ʃən/",
+    definition: "a reduction in something, especially natural resources or financial assets",
+    definition_source: "cambridge",
+    example: "The depletion of the ozone layer has led to increased ultraviolet radiation reaching Earth.",
+    definitions: [
+      {
+        definition: "a reduction in something, especially natural resources or financial assets",
+        example: "The depletion of the ozone layer has led to increased ultraviolet radiation reaching Earth.",
+        cefr_level: "C1",
+        grammar_note: "noun [U or singular]"
+      }
+    ],
+    extra_examples: [
+      "Industrial scale logging has caused severe soil erosion and forest depletion.",
+      "The rapid depletion of fish stocks in the North Sea is a major concern for marine biologists."
+    ],
+    grammar_note: "noun",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "C1",
+    register: "academic",
+    formality_score: 4,
+    connotation: "negative",
+    word_family: {
+      verb: ["deplete"],
+      noun: ["depletion"],
+      adjective: ["depleted"]
+    },
+    collocations: [
+      { collocation: "resource depletion", example: "Overpopulation is accelerating global resource depletion." },
+      { collocation: "ozone depletion", example: "Chlorofluorocarbons were banned to prevent further ozone depletion." }
+    ],
+    semantic_field_id: "reduction-shortage",
+    semantic_field_label: "Reduction & Shortage",
+    semantic_field_words: [
+      { word: "reduction", cefr: "B2", register: "neutral" },
+      { word: "drain", cefr: "C1", register: "neutral" }
+    ],
+    register_synonyms: [
+      { word: "reduction", register: "neutral", cefr: "B2" }
+    ],
+    folder_ids: ["folder-reading", "folder-3", "folder-4"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Drawing Lessons from History passage - patterns often include resource depletion."
+  },
+  {
+    id: "entry-demise",
+    entry_type: "word",
+    word: "demise",
+    ipa_uk: "/dɪˈmaɪz/",
+    ipa_us: "/dɪˈmaɪz/",
+    definition: "the end, failure, or death of an institution, system, or person",
+    definition_source: "cambridge",
+    example: "The rise of online streaming services led to the demise of traditional video rental stores.",
+    definitions: [
+      {
+        definition: "the end, failure, or death of an institution, system, or person",
+        example: "The rise of online streaming services led to the demise of traditional video rental stores.",
+        cefr_level: "C1",
+        grammar_note: "noun [singular]"
+      }
+    ],
+    extra_examples: [
+      "The empire's demise was brought about by corruption, civil wars, and economic stagnation.",
+      "The sudden demise of the company shocked its employees and shareholders."
+    ],
+    grammar_note: "noun [singular]",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "C1",
+    register: "academic",
+    formality_score: 4,
+    connotation: "negative",
+    word_family: {
+      noun: ["demise"]
+    },
+    collocations: [
+      { collocation: "eventual demise", example: "Internal conflicts accelerated the dynasty's eventual demise." },
+      { collocation: "lead to the demise", example: "High debt levels can easily lead to the demise of small businesses." }
+    ],
+    semantic_field_id: "failure-end",
+    semantic_field_label: "Failure & End",
+    semantic_field_words: [
+      { word: "fall", cefr: "A2", register: "neutral" },
+      { word: "downfall", cefr: "B2", register: "neutral" }
+    ],
+    register_synonyms: [
+      { word: "downfall", register: "neutral", cefr: "B2" }
+    ],
+    folder_ids: ["folder-reading", "folder-4"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Drawing Lessons from History passage - speaking of a society's birth and eventual demise."
+  },
+  {
+    id: "entry-contingent",
+    entry_type: "word",
+    word: "contingent",
+    ipa_uk: "/kənˈtɪn.dʒənt/",
+    ipa_us: "/kənˈtɪn.dʒənt/",
+    definition: "depending on something else in the future in order to happen",
+    definition_source: "cambridge",
+    example: "The outdoor concert is contingent on the weather conditions being favorable.",
+    definitions: [
+      {
+        definition: "depending on something else in the future in order to happen",
+        example: "The outdoor concert is contingent on the weather conditions being favorable.",
+        cefr_level: "C2",
+        grammar_note: "adjective"
+      },
+      {
+        definition: "a group of people representing a country or organization at a meeting or event",
+        example: "A large contingent of French athletes marched in the parade.",
+        cefr_level: "C1",
+        grammar_note: "noun [C]"
+      }
+    ],
+    extra_examples: [
+      "The expansion of our operations is contingent upon securing additional funding.",
+      "The expression of systemic vulnerabilities is deeply contingent on local environmental conditions."
+    ],
+    grammar_note: "adjective / noun",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "C2",
+    register: "formal",
+    formality_score: 5,
+    connotation: "neutral",
+    word_family: {
+      noun: ["contingency", "contingent"],
+      adjective: ["contingent"]
+    },
+    collocations: [
+      { collocation: "contingent on", example: "Our offer of employment is contingent on satisfactory references." },
+      { collocation: "contingent plan", example: "They developed a contingent plan in case the primary system failed." }
+    ],
+    semantic_field_id: "dependence-probability",
+    semantic_field_label: "Dependence & Probability",
+    semantic_field_words: [
+      { word: "dependent", cefr: "B2", register: "neutral" },
+      { word: "conditional", cefr: "C1", register: "formal" }
+    ],
+    register_synonyms: [
+      { word: "dependent", register: "neutral", cefr: "B2" }
+    ],
+    folder_ids: ["folder-reading", "folder-4"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Drawing Lessons from History passage - expression is deeply contingent on local conditions."
+  },
+  {
+    id: "entry-contemplate",
+    entry_type: "word",
+    word: "contemplate",
+    ipa_uk: "/ˈkɒn.təm.pleɪt/",
+    ipa_us: "/ˈkɑːn.t̬əm.pleɪt/",
+    definition: "to spend time considering a possible future action, or to think about something seriously",
+    definition_source: "cambridge",
+    example: "The committee is contemplating major reforms to the existing education system.",
+    definitions: [
+      {
+        definition: "to spend time considering a possible future action, or to think about something seriously",
+        example: "The committee is contemplating major reforms to the existing education system.",
+        cefr_level: "C1",
+        grammar_note: "transitive/intransitive verb"
+      }
+    ],
+    extra_examples: [
+      "We must carefully contemplate the historical lessons to avoid repeating past failures.",
+      "She sat by the window, contemplating the meaning of her recent choices."
+    ],
+    grammar_note: "verb",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "C1",
+    register: "academic",
+    formality_score: 4,
+    connotation: "neutral",
+    word_family: {
+      verb: ["contemplate"],
+      noun: ["contemplation"],
+      adjective: ["contemplative"],
+      adverb: ["contemplatively"]
+    },
+    collocations: [
+      { collocation: "contemplate the future", example: "He walked along the beach to contemplate his future." },
+      { collocation: "seriously contemplate", example: "The company is seriously contemplating expanding into European markets." }
+    ],
+    semantic_field_id: "thinking-reflection",
+    semantic_field_label: "Thinking & Reflection",
+    semantic_field_words: [
+      { word: "consider", cefr: "A2", register: "neutral" },
+      { word: "ponder", cefr: "C2", register: "formal" }
+    ],
+    register_synonyms: [
+      { word: "consider", register: "neutral", cefr: "A2" }
+    ],
+    folder_ids: ["folder-reading", "folder-4"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Drawing Lessons from History passage - only if we carefully contemplate its lessons."
+  },
+  {
+    id: "entry-collapse",
+    entry_type: "word",
+    word: "collapse",
+    ipa_uk: "/kəˈlæps/",
+    ipa_us: "/kəˈlæps/",
+    definition: "a sudden failure of an institution, organization, or system; or to fall down suddenly",
+    definition_source: "cambridge",
+    example: "The unexpected bankruptcy of the investment bank led to the collapse of the stock market.",
+    definitions: [
+      {
+        definition: "to fall down suddenly because of pressure or lack of support",
+        example: "The roof of the ancient warehouse collapsed under the weight of the snow.",
+        cefr_level: "B2",
+        grammar_note: "intransitive verb"
+      },
+      {
+        definition: "a sudden failure of an institution, organization, or system",
+        example: "The economic collapse of the civilization was triggered by severe environmental ecocide.",
+        cefr_level: "B2",
+        grammar_note: "noun [C or U]"
+      }
+    ],
+    extra_examples: [
+      "He collapsed from heat exhaustion after running the marathon.",
+      "The peace talks collapsed after both sides refused to sign the compromise agreement."
+    ],
+    grammar_note: "verb / noun",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "B2",
+    register: "neutral",
+    formality_score: 3,
+    connotation: "negative",
+    word_family: {
+      verb: ["collapse"],
+      noun: ["collapse"],
+      adjective: ["collapsible"]
+    },
+    collocations: [
+      { collocation: "economic collapse", example: "Hyperinflation can cause total economic collapse in a country." },
+      { collocation: "sudden collapse", example: "The sudden collapse of the bridge is being investigated by engineers." }
+    ],
+    semantic_field_id: "failure-ruin",
+    semantic_field_label: "Failure & Ruin",
+    semantic_field_words: [
+      { word: "breakdown", cefr: "B2", register: "neutral" },
+      { word: "implode", cefr: "C2", register: "formal" }
+    ],
+    register_synonyms: [
+      { word: "downfall", register: "neutral", cefr: "B2" }
+    ],
+    folder_ids: ["folder-reading", "folder-4"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Drawing Lessons from History passage - term 'collapse' refers to reduction in complexity."
+  },
+  {
+    id: "entry-awe-inspiring",
+    entry_type: "word",
+    word: "awe-inspiring",
+    ipa_uk: "/ˈɔː.ɪnˌspaɪə.rɪŋ/",
+    ipa_us: "/ˈɑː.ɪnˌspaɪr.ɪŋ/",
+    definition: "causing you to feel great respect, admiration, or wonder",
+    definition_source: "cambridge",
+    example: "The Grand Canyon is one of the most awe-inspiring natural wonders in the world.",
+    definitions: [
+      {
+        definition: "causing you to feel great respect, admiration, or wonder",
+        example: "The Grand Canyon is one of the most awe-inspiring natural wonders in the world.",
+        cefr_level: "B2",
+        grammar_note: "adjective"
+      }
+    ],
+    extra_examples: [
+      "The awe-inspiring ruins left behind by these past societies captivate modern travelers.",
+      "The spacecraft sent back awe-inspiring images of Saturn's rings."
+    ],
+    grammar_note: "adjective",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "B2",
+    register: "neutral",
+    formality_score: 3,
+    connotation: "positive",
+    word_family: {
+      noun: ["awe"],
+      adjective: ["awesome", "awe-inspiring"]
+    },
+    collocations: [
+      { collocation: "awe-inspiring sight", example: "The solar eclipse was an awe-inspiring sight for thousands." },
+      { collocation: "awe-inspiring performance", example: "The orchestra delivered an awe-inspiring performance." }
+    ],
+    semantic_field_id: "wonder-amazement",
+    semantic_field_label: "Wonder & Amazement",
+    semantic_field_words: [
+      { word: "magnificent", cefr: "B1", register: "neutral" },
+      { word: "breathtaking", cefr: "B2", register: "neutral" }
+    ],
+    register_synonyms: [
+      { word: "breathtaking", register: "neutral", cefr: "B2" }
+    ],
+    folder_ids: ["folder-reading"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Drawing Lessons from History passage - awe-inspiring ruins left behind by past societies."
+  },
+  {
+    id: "entry-naive",
+    entry_type: "word",
+    word: "naive",
+    ipa_uk: "/naɪˈiːv/",
+    ipa_us: "/naɪˈiːv/",
+    definition: "too willing to believe that someone is telling the truth or that life is simple",
+    definition_source: "cambridge",
+    example: "It would be naive to assume that studying the past will yield straightforward answers for today's issues.",
+    definitions: [
+      {
+        definition: "too willing to believe that someone is telling the truth or that life is simple",
+        example: "It would be naive to assume that studying the past will yield straightforward answers for today's issues.",
+        cefr_level: "B2",
+        grammar_note: "adjective"
+      }
+    ],
+    extra_examples: [
+      "She was naive to believe that he would keep his promises without a written contract.",
+      "His naive enthusiasm for the political campaign was quickly tempered by reality."
+    ],
+    grammar_note: "adjective",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "B2",
+    register: "neutral",
+    formality_score: 3,
+    connotation: "negative",
+    word_family: {
+      noun: ["naivety"],
+      adjective: ["naive"],
+      adverb: ["naively"]
+    },
+    collocations: [
+      { collocation: "naive belief", example: "Many held the naive belief that the war would be over by Christmas." },
+      { collocation: "somewhat naive", example: "Her explanation of the economic crisis was somewhat naive." }
+    ],
+    semantic_field_id: "character-simplicity",
+    semantic_field_label: "Character & Simplicity",
+    semantic_field_words: [
+      { word: "credulous", cefr: "C2", register: "formal" },
+      { word: "gullible", cefr: "B2", register: "neutral" }
+    ],
+    register_synonyms: [
+      { word: "gullible", register: "neutral", cefr: "B2" }
+    ],
+    folder_ids: ["folder-reading", "folder-speaking-relationships"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Drawing Lessons from History passage - naive to assume past yields straightforward answers."
+  },
+  {
+    id: "entry-remedy",
+    entry_type: "word",
+    word: "remedy",
+    ipa_uk: "/ˈrem.ə.di/",
+    ipa_us: "/ˈrem.ə.di/",
+    definition: "to solve or correct a problem; or a solution or medicine that cures",
+    definition_source: "cambridge",
+    example: "The government is trying to remedy the high rate of youth unemployment with new training programs.",
+    definitions: [
+      {
+        definition: "to do something to correct or improve a bad situation",
+        example: "The government is trying to remedy the high rate of youth unemployment with new training programs.",
+        cefr_level: "C1",
+        grammar_note: "transitive verb"
+      },
+      {
+        definition: "a successful way of curing an illness or solving a problem",
+        example: "Drinking warm ginger tea is a popular home remedy for colds.",
+        cefr_level: "B2",
+        grammar_note: "noun [C]"
+      }
+    ],
+    extra_examples: [
+      "Modern technology sometimes produces new challenges faster than it can remedy old ones.",
+      "The court ordered the company to pay damages to remedy the environmental breach."
+    ],
+    grammar_note: "transitive verb / noun",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "B2",
+    register: "academic",
+    formality_score: 3,
+    connotation: "positive",
+    word_family: {
+      verb: ["remedy"],
+      noun: ["remedy"],
+      adjective: ["remedial"]
+    },
+    collocations: [
+      { collocation: "remedy the situation", example: "Immediate action is needed to remedy the situation." },
+      { collocation: "effective remedy", example: "There is no simple or effective remedy for the global recession." }
+    ],
+    semantic_field_id: "solution-cure",
+    semantic_field_label: "Solution & Cure",
+    semantic_field_words: [
+      { word: "cure", cefr: "B1", register: "neutral" },
+      { word: "rectify", cefr: "C1", register: "formal" }
+    ],
+    register_synonyms: [
+      { word: "rectify", register: "formal", cefr: "C1" },
+      { word: "solve", register: "neutral", cefr: "A2" }
+    ],
+    folder_ids: ["folder-reading", "folder-4"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Drawing Lessons from History passage - producing challenges faster than it can remedy old ones."
+  },
+  {
+    id: "entry-overstate",
+    entry_type: "word",
+    word: "overstate",
+    ipa_uk: "/ˌəʊ.vəˈsteɪt/",
+    ipa_us: "/ˌoʊ.vɚˈsteɪt/",
+    definition: "to describe something in a way that makes it seem more important or serious than it really is",
+    definition_source: "cambridge",
+    example: "It is easy to overstate the impact of social media on teenage behavior.",
+    definitions: [
+      {
+        definition: "to describe something in a way that makes it seem more important or serious than it really is",
+        example: "It is easy to overstate the impact of social media on teenage behavior.",
+        cefr_level: "B2",
+        grammar_note: "transitive verb"
+      }
+    ],
+    extra_examples: [
+      "Critics argue that the dangers of the new trade agreement have been greatly overstated.",
+      "Are the environmental risks of modern resource depletion overstated or undervalued?"
+    ],
+    grammar_note: "transitive verb",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "B2",
+    register: "academic",
+    formality_score: 3,
+    connotation: "negative",
+    word_family: {
+      verb: ["overstate"],
+      noun: ["overstatement"],
+      adjective: ["overstated"]
+    },
+    collocations: [
+      { collocation: "overstate the importance", example: "We cannot overstate the importance of strict compliance checks." },
+      { collocation: "greatly overstate", example: "The media tends to greatly overstate short-term economic fluctuations." }
+    ],
+    semantic_field_id: "exaggeration",
+    semantic_field_label: "Exaggeration & Importance",
+    semantic_field_words: [
+      { word: "exaggerate", cefr: "B2", register: "neutral" },
+      { word: "overemphasize", cefr: "C1", register: "academic" }
+    ],
+    register_synonyms: [
+      { word: "exaggerate", register: "neutral", cefr: "B2" }
+    ],
+    folder_ids: ["folder-reading", "folder-4"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Drawing Lessons from History passage - debate whether environmental risks are overstated."
+  },
+  {
+    id: "entry-undervalue",
+    entry_type: "word",
+    word: "undervalue",
+    ipa_uk: "/ˌʌn.dəˈvæl.juː/",
+    ipa_us: "/ˌʌn.dɚˈvæl.juː/",
+    definition: "to think that someone or something is less important or valuable than they really are",
+    definition_source: "cambridge",
+    example: "Society must not undervalue the contributions of teachers and healthcare workers.",
+    definitions: [
+      {
+        definition: "to think that someone or something is less important or valuable than they really are",
+        example: "Society must not undervalue the contributions of teachers and healthcare workers.",
+        cefr_level: "B2",
+        grammar_note: "transitive verb"
+      }
+    ],
+    extra_examples: [
+      "The housing market has undervalued these properties due to historical zoning restrictions.",
+      "It is vital not to undervalue the risks of human-induced climate change."
+    ],
+    grammar_note: "transitive verb",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "B2",
+    register: "academic",
+    formality_score: 3,
+    connotation: "negative",
+    word_family: {
+      verb: ["undervalue"],
+      noun: ["undervaluation"],
+      adjective: ["undervalued"]
+    },
+    collocations: [
+      { collocation: "undervalue contributions", example: "Managers who undervalue contributions from junior staff face high turnover." },
+      { collocation: "tend to undervalue", example: "Investors tend to undervalue companies with low initial margins." }
+    ],
+    semantic_field_id: "estimation-worth",
+    semantic_field_label: "Estimation & Worth",
+    semantic_field_words: [
+      { word: "underestimate", cefr: "B2", register: "neutral" },
+      { word: "depreciate", cefr: "C2", register: "economics" }
+    ],
+    register_synonyms: [
+      { word: "underestimate", register: "neutral", cefr: "B2" }
+    ],
+    folder_ids: ["folder-reading", "folder-4"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Drawing Lessons from History passage - debate whether environmental risks are undervalued."
   }
 ];
 
