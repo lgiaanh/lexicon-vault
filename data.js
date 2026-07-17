@@ -4,16 +4,16 @@
 const INITIAL_FOLDERS = [
   { id: 'folder-1', name: 'Law & Policy', color: '#DBCDF0', emoji: '⚖️', description: 'Legislation, judicial processes, constitutional rights, and official regulations.', created_at: new Date().toISOString(), word_count: 14 },
   { id: 'folder-2', name: 'Economics & Statistics', color: '#FAEDCB', emoji: '📈', description: 'Financial theories, trade data, economic policy, market dynamics, and quantitative metrics.', created_at: new Date().toISOString(), word_count: 19 },
-  { id: 'folder-3', name: 'Environment & Ecology', color: '#C9E4DE', emoji: '🌱', description: 'Climate change, biodiversity, environmental preservation, ecosystems, and conservation strategies.', created_at: new Date().toISOString(), word_count: 11 },
-  { id: 'folder-4', name: 'Academic Writing (Task 2)', color: '#C6DEF1', emoji: '✍️', description: 'Sophisticated vocabulary and idioms tailored for high-scoring IELTS Writing Task 2 responses.', created_at: new Date().toISOString(), word_count: 55 },
+  { id: 'folder-3', name: 'Environment & Ecology', color: '#C9E4DE', emoji: '🌱', description: 'Climate change, biodiversity, environmental preservation, ecosystems, and conservation strategies.', created_at: new Date().toISOString(), word_count: 14 },
+  { id: 'folder-4', name: 'Academic Writing (Task 2)', color: '#C6DEF1', emoji: '✍️', description: 'Sophisticated vocabulary and idioms tailored for high-scoring IELTS Writing Task 2 responses.', created_at: new Date().toISOString(), word_count: 62 },
   { id: 'folder-5', name: 'Phrasal Verbs & Idioms', color: '#F7D9C4', emoji: '💬', description: 'Common English phrasal verbs and idiomatic expressions for informal or spoken contexts.', created_at: new Date().toISOString(), word_count: 8 },
   { id: 'folder-6', name: 'Maps & Diagrams', color: '#F2C6DE', emoji: '🗺️', description: 'Spatial descriptions, maps, process flowcharts, and technical diagrams.', created_at: new Date().toISOString(), word_count: 4 },
   { id: 'folder-speaking-work-study', name: 'Speaking: Work & Study', color: '#C6DEF1', emoji: '🏫', description: 'Phrasal verbs and colloquial expressions for describing academic pursuits and careers.', created_at: new Date().toISOString(), word_count: 3 },
   { id: 'folder-speaking-leisure-travel', name: 'Speaking: Leisure & Travel', color: '#C9E4DE', emoji: '✈️', description: 'Speaking phrasal verbs for describing vacationing, sightseeing, and hobbies.', created_at: new Date().toISOString(), word_count: 2 },
-  { id: 'folder-speaking-relationships', name: 'Speaking: Relationships & Life', color: '#F2C6DE', emoji: '👥', description: 'Phrasal verbs for describing social connections, relatives, and childhood memories.', created_at: new Date().toISOString(), word_count: 5 },
+  { id: 'folder-speaking-relationships', name: 'Speaking: Relationships & Life', color: '#F2C6DE', emoji: '👥', description: 'Phrasal verbs for describing social connections, relatives, and childhood memories.', created_at: new Date().toISOString(), word_count: 7 },
   { id: 'folder-science', name: 'Science & Technology', color: '#DBCDF0', emoji: '🔬', description: 'Vocabulary and collocations related to scientific research, breakthroughs, technology, and paradigm shifts.', created_at: new Date().toISOString(), word_count: 9 },
   { id: 'folder-task2-phrases', name: 'Task 2 Phrases', color: '#F7D9C4', emoji: '📝', description: 'Key academic phrases, collocations, and idioms tailored for Writing Task 2 essays.', created_at: new Date().toISOString(), word_count: 15 },
-  { id: 'folder-reading', name: 'IELTS Reading', color: '#C9E4DE', emoji: '📖', description: 'High-yield vocabulary and scientific terms gathered from IELTS Reading passages.', created_at: new Date().toISOString(), word_count: 35 }
+  { id: 'folder-reading', name: 'IELTS Reading', color: '#C9E4DE', emoji: '📖', description: 'High-yield vocabulary and scientific terms gathered from IELTS Reading passages.', created_at: new Date().toISOString(), word_count: 47 }
 ];
 
 const INITIAL_ENTRIES = [
@@ -10350,6 +10350,719 @@ const INITIAL_ENTRIES = [
     },
     date_added: new Date().toISOString(),
     source_context: "Drawing Lessons from History passage - debate whether environmental risks are undervalued."
+  },
+  {
+    id: "entry-hazard",
+    entry_type: "word",
+    word: "hazard",
+    ipa_uk: "/ˈhæz.əd/",
+    ipa_us: "/ˈhæz.ɚd/",
+    definition: "something that is dangerous and likely to cause damage or tell someone to do something risky",
+    definition_source: "cambridge",
+    example: "Accumulating toxic chemicals represents a serious environmental hazard to local ecosystems.",
+    definitions: [
+      {
+        definition: "something that is dangerous and likely to cause damage",
+        example: "Accumulating toxic chemicals represents a serious environmental hazard to local ecosystems.",
+        cefr_level: "C1",
+        grammar_note: "noun [C]"
+      }
+    ],
+    extra_examples: [
+      "Icy roads are a common winter hazard for drivers in northern regions.",
+      "Health and safety laws are designed to eliminate workplace hazards."
+    ],
+    grammar_note: "noun [C]",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "C1",
+    register: "academic",
+    formality_score: 3,
+    connotation: "negative",
+    word_family: {
+      verb: ["hazard"],
+      noun: ["hazard"],
+      adjective: ["hazardous"]
+    },
+    collocations: [
+      { collocation: "environmental hazard", example: "Oil spills pose a major environmental hazard to marine wildlife." },
+      { collocation: "health hazard", example: "Asbestos inhalation is a well-documented health hazard." }
+    ],
+    semantic_field_id: "danger-threat",
+    semantic_field_label: "Danger & Threat",
+    semantic_field_words: [
+      { word: "danger", cefr: "A2", register: "neutral" },
+      { word: "threat", cefr: "B2", register: "neutral" }
+    ],
+    register_synonyms: [
+      { word: "danger", register: "neutral", cefr: "A2" }
+    ],
+    folder_ids: ["folder-reading", "folder-3"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Drawing Lessons from History passage - environmental hazards and global threats."
+  },
+  {
+    id: "entry-rigour",
+    entry_type: "word",
+    word: "rigour",
+    ipa_uk: "/ˈrɪɡ.ər/",
+    ipa_us: "/ˈrɪɡ.ɚ/",
+    definition: "the quality of being detailed, careful, complete, and strict",
+    definition_source: "cambridge",
+    example: "The research team conducted the field experiments with absolute scientific rigour.",
+    definitions: [
+      {
+        definition: "the quality of being detailed, careful, complete, and strict",
+        example: "The research team conducted the field experiments with absolute scientific rigour.",
+        cefr_level: "C1",
+        grammar_note: "noun [U]"
+      }
+    ],
+    extra_examples: [
+      "Academic programs at the institute are famous for their intellectual rigour.",
+      "The contract was checked with legal rigour to avoid future loopholes."
+    ],
+    grammar_note: "noun [U]",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "C1",
+    register: "academic",
+    formality_score: 4,
+    connotation: "positive",
+    word_family: {
+      noun: ["rigour", "rigidity"],
+      adjective: ["rigorous"],
+      adverb: ["rigorously"]
+    },
+    collocations: [
+      { collocation: "scientific rigour", example: "All articles published in the journal undergo peer review for scientific rigour." },
+      { collocation: "academic rigour", example: "We must maintain high academic rigour to protect our school's reputation." }
+    ],
+    semantic_field_id: "precision-accuracy",
+    semantic_field_label: "Precision & Accuracy",
+    semantic_field_words: [
+      { word: "strictness", cefr: "C1", register: "neutral" },
+      { word: "meticulousness", cefr: "C2", register: "formal" }
+    ],
+    register_synonyms: [
+      { word: "precision", register: "neutral", cefr: "B2" }
+    ],
+    folder_ids: ["folder-reading", "folder-4"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Describing careful scientific experiments, academic analyses, or strict regulations."
+  },
+  {
+    id: "entry-upend",
+    entry_type: "word",
+    word: "upend",
+    ipa_uk: "/ʌpˈend/",
+    ipa_us: "/ʌpˈend/",
+    definition: "to turn something upside down, or to completely change a situation or system",
+    definition_source: "cambridge",
+    example: "The sudden arrival of digital cameras completely upended the film photography industry.",
+    definitions: [
+      {
+        definition: "to turn something upside down, or to completely change a situation or system",
+        example: "The sudden arrival of digital cameras completely upended the film photography industry.",
+        cefr_level: "C2",
+        grammar_note: "transitive verb"
+      }
+    ],
+    extra_examples: [
+      "The political crisis threatened to upend the delicate balance of power in the region.",
+      "He accidentally upended his coffee cup, spilling liquid all over the documents."
+    ],
+    grammar_note: "transitive verb",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "C2",
+    register: "academic",
+    formality_score: 3,
+    connotation: "neutral",
+    word_family: {
+      verb: ["upend"],
+      noun: [],
+      adjective: ["upended"]
+    },
+    collocations: [
+      { collocation: "upend the status quo", example: "Startups often seek to upend the status quo in established markets." },
+      { collocation: "upend lives", example: "The global pandemic managed to upend the daily lives of billions." }
+    ],
+    semantic_field_id: "disruption-change",
+    semantic_field_label: "Disruption & Change",
+    semantic_field_words: [
+      { word: "overturn", cefr: "C1", register: "neutral" },
+      { word: "subvert", cefr: "C2", register: "formal" }
+    ],
+    register_synonyms: [
+      { word: "overturn", register: "neutral", cefr: "C1" }
+    ],
+    folder_ids: ["folder-reading", "folder-4"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Describing severe economic disruptions, major political changes, or turning objects upside down."
+  },
+  {
+    id: "entry-emerge",
+    entry_type: "word",
+    word: "emerge",
+    ipa_uk: "/ɪˈmɜːdʒ/",
+    ipa_us: "/ɪˈmɝːdʒ/",
+    definition: "to appear by coming out of something, or to become known and prominent",
+    definition_source: "cambridge",
+    example: "New alternative energy sources will likely emerge as fossil fuels are depleted.",
+    definitions: [
+      {
+        definition: "to appear by coming out of something or out from behind something",
+        example: "The sun slowly emerged from behind the dark storm clouds.",
+        cefr_level: "B2",
+        grammar_note: "intransitive verb"
+      },
+      {
+        definition: "to become known, or to develop and become prominent",
+        example: "Several facts emerged during the investigation, clarifying the timeline of events.",
+        cefr_level: "B2",
+        grammar_note: "intransitive verb"
+      }
+    ],
+    extra_examples: [
+      "A new leader emerged from the opposition party during the political crisis.",
+      "These patterns emerge when analyzing historical collapses of ancient civilizations."
+    ],
+    grammar_note: "intransitive verb",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "B2",
+    register: "academic",
+    formality_score: 3,
+    connotation: "neutral",
+    word_family: {
+      verb: ["emerge"],
+      noun: ["emergence"],
+      adjective: ["emergent"]
+    },
+    collocations: [
+      { collocation: "emerge from", example: "It takes months for the economy to emerge from a severe recession." },
+      { collocation: "emerge as", example: "She has emerged as a leading authority on climate science." }
+    ],
+    semantic_field_id: "appearance-visibility",
+    semantic_field_label: "Appearance & Visibility",
+    semantic_field_words: [
+      { word: "appear", cefr: "A1", register: "neutral" },
+      { word: "arise", cefr: "B2", register: "academic" }
+    ],
+    register_synonyms: [
+      { word: "appear", register: "neutral", cefr: "A1" }
+    ],
+    folder_ids: ["folder-reading", "folder-4"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Drawing Lessons from History passage - trust that new alternatives will emerge."
+  },
+  {
+    id: "entry-resemblance",
+    entry_type: "word",
+    word: "resemblance",
+    ipa_uk: "/rɪˈzem.bləns/",
+    ipa_us: "/rɪˈzem.bləns/",
+    definition: "the fact of being or looking like someone or something else",
+    definition_source: "cambridge",
+    example: "The twins bear a striking resemblance to each other in both appearance and voice.",
+    definitions: [
+      {
+        definition: "the fact of being or looking like someone or something else",
+        example: "The twins bear a striking resemblance to each other in both appearance and voice.",
+        cefr_level: "B2",
+        grammar_note: "noun [C or U]"
+      }
+    ],
+    extra_examples: [
+      "There is some resemblance between the structure of these two ancient languages.",
+      "The child's face bore no resemblance to that of his father."
+    ],
+    grammar_note: "noun",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "B2",
+    register: "neutral",
+    formality_score: 3,
+    connotation: "neutral",
+    word_family: {
+      verb: ["resemble"],
+      noun: ["resemblance"]
+    },
+    collocations: [
+      { collocation: "bear a resemblance", example: "The new model bears a close resemblance to its predecessor." },
+      { collocation: "striking resemblance", example: "He has a striking resemblance to the famous movie actor." }
+    ],
+    semantic_field_id: "similarity",
+    semantic_field_label: "Similarity & Comparison",
+    semantic_field_words: [
+      { word: "similarity", cefr: "B1", register: "neutral" },
+      { word: "likeness", cefr: "C1", register: "literary" }
+    ],
+    register_synonyms: [
+      { word: "similarity", register: "neutral", cefr: "B1" }
+    ],
+    folder_ids: ["folder-reading", "folder-speaking-relationships"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Describing family similarities, similarities in structures, or architectural patterns."
+  },
+  {
+    id: "entry-relic",
+    entry_type: "word",
+    word: "relic",
+    ipa_uk: "/ˈrel.ɪk/",
+    ipa_us: "/ˈrel.ɪk/",
+    definition: "an object, tradition, or system from the past that continues to exist",
+    definition_source: "cambridge",
+    example: "The antique grandfather clock is a relic of the Victorian era.",
+    definitions: [
+      {
+        definition: "an object, tradition, or system from the past that continues to exist",
+        example: "The antique grandfather clock is a relic of the Victorian era.",
+        cefr_level: "C1",
+        grammar_note: "noun [C]"
+      }
+    ],
+    extra_examples: [
+      "Archaeologists excavated the cave, finding various stone relics from the Neolithic period.",
+      "Some view these strict dress codes as a relic of a bygone age."
+    ],
+    grammar_note: "noun [C]",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "C1",
+    register: "formal",
+    formality_score: 4,
+    connotation: "neutral",
+    word_family: {
+      noun: ["relic", "relics"]
+    },
+    collocations: [
+      { collocation: "relic of the past", example: "The crumbling watchtower is a picturesque relic of the past." },
+      { collocation: "ancient relic", example: "The museum houses ancient relics from the Egyptian pyramids." }
+    ],
+    semantic_field_id: "remains-antiquity",
+    semantic_field_label: "Remains & Antiquity",
+    semantic_field_words: [
+      { word: "remnant", cefr: "C1", register: "academic" },
+      { word: "antique", cefr: "B2", register: "neutral" }
+    ],
+    register_synonyms: [
+      { word: "remnant", register: "academic", cefr: "C1" }
+    ],
+    folder_ids: ["folder-reading"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Describing historical ruins, museums, or old cultural practices."
+  },
+  {
+    id: "entry-ecological",
+    entry_type: "word",
+    word: "ecological",
+    ipa_uk: "/ˌiː.kəˈlɒdʒ.ɪ.kəl/",
+    ipa_us: "/ˌiː.kəˈlɑː.dʒɪ.kəl/",
+    definition: "relating to the relations of organisms to one another and to their physical surroundings",
+    definition_source: "cambridge",
+    example: "The construction of the dam caused severe ecological damage to the local river system.",
+    definitions: [
+      {
+        definition: "relating to the relations of organisms to one another and to their physical surroundings",
+        example: "The construction of the dam caused severe ecological damage to the local river system.",
+        cefr_level: "B2",
+        grammar_note: "adjective"
+      }
+    ],
+    extra_examples: [
+      "Deforestation can trigger an ecological crisis that disrupts food supply chains.",
+      "The organization works to protect areas of high ecological value from industrialization."
+    ],
+    grammar_note: "adjective",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "B2",
+    register: "academic",
+    formality_score: 4,
+    connotation: "neutral",
+    word_family: {
+      noun: ["ecology", "ecologist"],
+      adjective: ["ecological"],
+      adverb: ["ecologically"]
+    },
+    collocations: [
+      { collocation: "ecological balance", example: "It is crucial to maintain the ecological balance of the forest." },
+      { collocation: "ecological impact", example: "Industrial projects must undergo assessment for their ecological impact." }
+    ],
+    semantic_field_id: "environment-ecology",
+    semantic_field_label: "Environment & Ecology",
+    semantic_field_words: [
+      { word: "environmental", cefr: "B1", register: "neutral" },
+      { word: "biological", cefr: "B2", register: "academic" }
+    ],
+    register_synonyms: [
+      { word: "environmental", register: "neutral", cefr: "B1" }
+    ],
+    folder_ids: ["folder-reading", "folder-3"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Drawing Lessons from History passage - mysterious disappearance triggered by ecological issues."
+  },
+  {
+    id: "entry-analogy",
+    entry_type: "word",
+    word: "analogy",
+    ipa_uk: "/əˈnæl.ə.dʒi/",
+    ipa_us: "/əˈnæl.ə.dʒi/",
+    definition: "a comparison between things that have similar features, often used to help explain an idea",
+    definition_source: "cambridge",
+    example: "To explain how electricity flows, the teacher drew an analogy with water moving through pipes.",
+    definitions: [
+      {
+        definition: "a comparison between things that have similar features, often used to help explain an idea",
+        example: "To explain how electricity flows, the teacher drew an analogy with water moving through pipes.",
+        cefr_level: "C1",
+        grammar_note: "noun [C or U]"
+      }
+    ],
+    extra_examples: [
+      "Writers are tempted to draw analogies between human societies and individual lives.",
+      "The lawyer argued that there was no valid analogy between the two legal cases."
+    ],
+    grammar_note: "noun",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "C1",
+    register: "academic",
+    formality_score: 4,
+    connotation: "neutral",
+    word_family: {
+      verb: ["analogize"],
+      noun: ["analogy", "analogue"],
+      adjective: ["analogous"]
+    },
+    collocations: [
+      { collocation: "draw an analogy", example: "Scientists often draw an analogy between the human brain and a computer." },
+      { collocation: "by analogy with", example: "The rules for this structure are derived by analogy with similar patterns." }
+    ],
+    semantic_field_id: "similarity-explanation",
+    semantic_field_label: "Similarity & Explanation",
+    semantic_field_words: [
+      { word: "comparison", cefr: "B1", register: "neutral" },
+      { word: "parallel", cefr: "C1", register: "academic" }
+    ],
+    register_synonyms: [
+      { word: "comparison", register: "neutral", cefr: "B1" },
+      { word: "parallel", register: "academic", cefr: "C1" }
+    ],
+    folder_ids: ["folder-reading", "folder-4"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Drawing Lessons from History passage - writers tempted to draw analogies between society and life."
+  },
+  {
+    id: "entry-human-induced",
+    entry_type: "word",
+    word: "human-induced",
+    ipa_uk: "/ˌhjuː.mən.ɪnˈdjuːst/",
+    ipa_us: "/ˌhjuː.mən.ɪnˈduːst/",
+    definition: "caused by human activity rather than natural processes",
+    definition_source: "cambridge",
+    example: "The report warns of the severe impacts of human-induced climate change on agricultural yields.",
+    definitions: [
+      {
+        definition: "caused by human activity rather than natural processes",
+        example: "The report warns of the severe impacts of human-induced climate change on agricultural yields.",
+        cefr_level: "C1",
+        grammar_note: "adjective"
+      }
+    ],
+    extra_examples: [
+      "The rapid rise in global temperatures is primarily human-induced.",
+      "We must work to mitigate human-induced environmental disasters."
+    ],
+    grammar_note: "adjective",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "C1",
+    register: "academic",
+    formality_score: 4,
+    connotation: "negative",
+    word_family: {},
+    collocations: [
+      { collocation: "human-induced climate change", example: "Global actions are needed to curb human-induced climate change." },
+      { collocation: "human-induced environmental", example: "Plastic pollution is a classic human-induced environmental challenge." }
+    ],
+    semantic_field_id: "causation-human",
+    semantic_field_label: "Causation & Human Influence",
+    semantic_field_words: [
+      { word: "man-made", cefr: "B1", register: "neutral" },
+      { word: "anthropogenic", cefr: "C2", register: "scientific" }
+    ],
+    register_synonyms: [
+      { word: "man-made", register: "neutral", cefr: "B1" }
+    ],
+    folder_ids: ["folder-reading", "folder-3", "folder-4"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Drawing Lessons from History passage - human-induced climate change and downfalls."
+  },
+  {
+    id: "entry-contemporary",
+    entry_type: "word",
+    word: "contemporary",
+    ipa_uk: "/kənˈtem.pər.ər.i/",
+    ipa_us: "/kənˈtem.pə.rer.i/",
+    definition: "existing or happening now, or belonging to the same period of time",
+    definition_source: "cambridge",
+    example: "The museum showcases contemporary art alongside historic masterpieces.",
+    definitions: [
+      {
+        definition: "existing or happening now",
+        example: "Contemporary society faces unique challenges due to rapid digitalization.",
+        cefr_level: "B2",
+        grammar_note: "adjective"
+      },
+      {
+        definition: "someone living or existing at the same time as another",
+        example: "Shakespeare and Marlowe were contemporaries who influenced each other's work.",
+        cefr_level: "C1",
+        grammar_note: "noun [C]"
+      }
+    ],
+    extra_examples: [
+      "We must evaluate whether contemporary technology can resolve our environmental issues.",
+      "The library contains various contemporary accounts of the historic battle."
+    ],
+    grammar_note: "adjective / noun",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "B2",
+    register: "academic",
+    formality_score: 3,
+    connotation: "neutral",
+    word_family: {
+      noun: ["contemporary", "contemporaries"]
+    },
+    collocations: [
+      { collocation: "contemporary society", example: "Stress is a widespread problem in contemporary society." },
+      { collocation: "contemporary issues", example: "The documentary explores contemporary issues like income inequality." }
+    ],
+    semantic_field_id: "time-modern",
+    semantic_field_label: "Time & Modernity",
+    semantic_field_words: [
+      { word: "modern", cefr: "A2", register: "neutral" },
+      { word: "current", cefr: "B1", register: "neutral" }
+    ],
+    register_synonyms: [
+      { word: "modern", register: "neutral", cefr: "A2" }
+    ],
+    folder_ids: ["folder-reading", "folder-4"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Drawing Lessons from History passage - whether contemporary technology will resolve issues."
+  },
+  {
+    id: "entry-reliance",
+    entry_type: "word",
+    word: "reliance",
+    ipa_uk: "/rɪˈlaɪ.əns/",
+    ipa_us: "/rɪˈlaɪ.əns/",
+    definition: "the state of depending on or trusting in something or someone",
+    definition_source: "cambridge",
+    example: "The company is trying to reduce its reliance on imported raw materials.",
+    definitions: [
+      {
+        definition: "the state of depending on or trusting in something or someone",
+        example: "The company is trying to reduce its reliance on imported raw materials.",
+        cefr_level: "B2",
+        grammar_note: "noun [U]"
+      }
+    ],
+    extra_examples: [
+      "The survival of millions depends on modern healthcare and the reliance on technologies.",
+      "His reliance on his parents for financial support has become a source of tension."
+    ],
+    grammar_note: "noun [U]",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "B2",
+    register: "academic",
+    formality_score: 3,
+    connotation: "neutral",
+    word_family: {
+      verb: ["rely"],
+      noun: ["reliance", "reliability"],
+      adjective: ["reliant", "reliable"],
+      adverb: ["reliably"]
+    },
+    collocations: [
+      { collocation: "reliance on technology", example: "Our reliance on technology makes us vulnerable to cyberattacks." },
+      { collocation: "heavy reliance", example: "The country's heavy reliance on oil exports makes its economy unstable." }
+    ],
+    semantic_field_id: "dependence-trust",
+    semantic_field_label: "Dependence & Trust",
+    semantic_field_words: [
+      { word: "dependence", cefr: "B2", register: "academic" },
+      { word: "trust", cefr: "B1", register: "neutral" }
+    ],
+    register_synonyms: [
+      { word: "dependence", register: "neutral", cefr: "B2" }
+    ],
+    folder_ids: ["folder-reading", "folder-4"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Drawing Lessons from History passage - reliance of millions on modern health care."
+  },
+  {
+    id: "entry-reminiscent",
+    entry_type: "word",
+    word: "reminiscent",
+    ipa_uk: "/ˌrem.ɪˈnɪs.ənt/",
+    ipa_us: "/ˌrem.əˈnɪs.ənt/",
+    definition: "making you remember a particular person, event, or thing",
+    definition_source: "cambridge",
+    example: "The style of the building is highly reminiscent of classical Greek architecture.",
+    definitions: [
+      {
+        definition: "making you remember a particular person, event, or thing",
+        example: "The style of the building is highly reminiscent of classical Greek architecture.",
+        cefr_level: "C1",
+        grammar_note: "adjective [always after noun, followed by 'of']"
+      }
+    ],
+    extra_examples: [
+      "The flavor is reminiscent of the homemade pies my grandmother used to bake.",
+      "His political speeches are reminiscent of the rhetoric of the 1960s."
+    ],
+    grammar_note: "adjective",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "C1",
+    register: "formal",
+    formality_score: 4,
+    connotation: "neutral",
+    word_family: {
+      verb: ["reminisce"],
+      noun: ["reminiscence"],
+      adjective: ["reminiscent"]
+    },
+    collocations: [
+      { collocation: "reminiscent of", example: "The melody is reminiscent of a traditional folk song." },
+      { collocation: "highly reminiscent", example: "Her writing style is highly reminiscent of Hemingway's." }
+    ],
+    semantic_field_id: "memory-association",
+    semantic_field_label: "Memory & Association",
+    semantic_field_words: [
+      { word: "evocative", cefr: "C2", register: "formal" },
+      { word: "suggestive", cefr: "C1", register: "neutral" }
+    ],
+    register_synonyms: [
+      { word: "suggestive", register: "neutral", cefr: "C1" }
+    ],
+    folder_ids: ["folder-reading", "folder-speaking-relationships"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Drawing Lessons from History passage - ruins reminiscent of what poet Shelley described."
   }
 ];
 
@@ -16392,6 +17105,719 @@ const EXTENDED_DICTIONARY_DB = [
     },
     date_added: new Date().toISOString(),
     source_context: "Drawing Lessons from History passage - debate whether environmental risks are undervalued."
+  },
+  {
+    id: "entry-hazard",
+    entry_type: "word",
+    word: "hazard",
+    ipa_uk: "/ˈhæz.əd/",
+    ipa_us: "/ˈhæz.ɚd/",
+    definition: "something that is dangerous and likely to cause damage or tell someone to do something risky",
+    definition_source: "cambridge",
+    example: "Accumulating toxic chemicals represents a serious environmental hazard to local ecosystems.",
+    definitions: [
+      {
+        definition: "something that is dangerous and likely to cause damage",
+        example: "Accumulating toxic chemicals represents a serious environmental hazard to local ecosystems.",
+        cefr_level: "C1",
+        grammar_note: "noun [C]"
+      }
+    ],
+    extra_examples: [
+      "Icy roads are a common winter hazard for drivers in northern regions.",
+      "Health and safety laws are designed to eliminate workplace hazards."
+    ],
+    grammar_note: "noun [C]",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "C1",
+    register: "academic",
+    formality_score: 3,
+    connotation: "negative",
+    word_family: {
+      verb: ["hazard"],
+      noun: ["hazard"],
+      adjective: ["hazardous"]
+    },
+    collocations: [
+      { collocation: "environmental hazard", example: "Oil spills pose a major environmental hazard to marine wildlife." },
+      { collocation: "health hazard", example: "Asbestos inhalation is a well-documented health hazard." }
+    ],
+    semantic_field_id: "danger-threat",
+    semantic_field_label: "Danger & Threat",
+    semantic_field_words: [
+      { word: "danger", cefr: "A2", register: "neutral" },
+      { word: "threat", cefr: "B2", register: "neutral" }
+    ],
+    register_synonyms: [
+      { word: "danger", register: "neutral", cefr: "A2" }
+    ],
+    folder_ids: ["folder-reading", "folder-3"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Drawing Lessons from History passage - environmental hazards and global threats."
+  },
+  {
+    id: "entry-rigour",
+    entry_type: "word",
+    word: "rigour",
+    ipa_uk: "/ˈrɪɡ.ər/",
+    ipa_us: "/ˈrɪɡ.ɚ/",
+    definition: "the quality of being detailed, careful, complete, and strict",
+    definition_source: "cambridge",
+    example: "The research team conducted the field experiments with absolute scientific rigour.",
+    definitions: [
+      {
+        definition: "the quality of being detailed, careful, complete, and strict",
+        example: "The research team conducted the field experiments with absolute scientific rigour.",
+        cefr_level: "C1",
+        grammar_note: "noun [U]"
+      }
+    ],
+    extra_examples: [
+      "Academic programs at the institute are famous for their intellectual rigour.",
+      "The contract was checked with legal rigour to avoid future loopholes."
+    ],
+    grammar_note: "noun [U]",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "C1",
+    register: "academic",
+    formality_score: 4,
+    connotation: "positive",
+    word_family: {
+      noun: ["rigour", "rigidity"],
+      adjective: ["rigorous"],
+      adverb: ["rigorously"]
+    },
+    collocations: [
+      { collocation: "scientific rigour", example: "All articles published in the journal undergo peer review for scientific rigour." },
+      { collocation: "academic rigour", example: "We must maintain high academic rigour to protect our school's reputation." }
+    ],
+    semantic_field_id: "precision-accuracy",
+    semantic_field_label: "Precision & Accuracy",
+    semantic_field_words: [
+      { word: "strictness", cefr: "C1", register: "neutral" },
+      { word: "meticulousness", cefr: "C2", register: "formal" }
+    ],
+    register_synonyms: [
+      { word: "precision", register: "neutral", cefr: "B2" }
+    ],
+    folder_ids: ["folder-reading", "folder-4"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Describing careful scientific experiments, academic analyses, or strict regulations."
+  },
+  {
+    id: "entry-upend",
+    entry_type: "word",
+    word: "upend",
+    ipa_uk: "/ʌpˈend/",
+    ipa_us: "/ʌpˈend/",
+    definition: "to turn something upside down, or to completely change a situation or system",
+    definition_source: "cambridge",
+    example: "The sudden arrival of digital cameras completely upended the film photography industry.",
+    definitions: [
+      {
+        definition: "to turn something upside down, or to completely change a situation or system",
+        example: "The sudden arrival of digital cameras completely upended the film photography industry.",
+        cefr_level: "C2",
+        grammar_note: "transitive verb"
+      }
+    ],
+    extra_examples: [
+      "The political crisis threatened to upend the delicate balance of power in the region.",
+      "He accidentally upended his coffee cup, spilling liquid all over the documents."
+    ],
+    grammar_note: "transitive verb",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "C2",
+    register: "academic",
+    formality_score: 3,
+    connotation: "neutral",
+    word_family: {
+      verb: ["upend"],
+      noun: [],
+      adjective: ["upended"]
+    },
+    collocations: [
+      { collocation: "upend the status quo", example: "Startups often seek to upend the status quo in established markets." },
+      { collocation: "upend lives", example: "The global pandemic managed to upend the daily lives of billions." }
+    ],
+    semantic_field_id: "disruption-change",
+    semantic_field_label: "Disruption & Change",
+    semantic_field_words: [
+      { word: "overturn", cefr: "C1", register: "neutral" },
+      { word: "subvert", cefr: "C2", register: "formal" }
+    ],
+    register_synonyms: [
+      { word: "overturn", register: "neutral", cefr: "C1" }
+    ],
+    folder_ids: ["folder-reading", "folder-4"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Describing severe economic disruptions, major political changes, or turning objects upside down."
+  },
+  {
+    id: "entry-emerge",
+    entry_type: "word",
+    word: "emerge",
+    ipa_uk: "/ɪˈmɜːdʒ/",
+    ipa_us: "/ɪˈmɝːdʒ/",
+    definition: "to appear by coming out of something, or to become known and prominent",
+    definition_source: "cambridge",
+    example: "New alternative energy sources will likely emerge as fossil fuels are depleted.",
+    definitions: [
+      {
+        definition: "to appear by coming out of something or out from behind something",
+        example: "The sun slowly emerged from behind the dark storm clouds.",
+        cefr_level: "B2",
+        grammar_note: "intransitive verb"
+      },
+      {
+        definition: "to become known, or to develop and become prominent",
+        example: "Several facts emerged during the investigation, clarifying the timeline of events.",
+        cefr_level: "B2",
+        grammar_note: "intransitive verb"
+      }
+    ],
+    extra_examples: [
+      "A new leader emerged from the opposition party during the political crisis.",
+      "These patterns emerge when analyzing historical collapses of ancient civilizations."
+    ],
+    grammar_note: "intransitive verb",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "B2",
+    register: "academic",
+    formality_score: 3,
+    connotation: "neutral",
+    word_family: {
+      verb: ["emerge"],
+      noun: ["emergence"],
+      adjective: ["emergent"]
+    },
+    collocations: [
+      { collocation: "emerge from", example: "It takes months for the economy to emerge from a severe recession." },
+      { collocation: "emerge as", example: "She has emerged as a leading authority on climate science." }
+    ],
+    semantic_field_id: "appearance-visibility",
+    semantic_field_label: "Appearance & Visibility",
+    semantic_field_words: [
+      { word: "appear", cefr: "A1", register: "neutral" },
+      { word: "arise", cefr: "B2", register: "academic" }
+    ],
+    register_synonyms: [
+      { word: "appear", register: "neutral", cefr: "A1" }
+    ],
+    folder_ids: ["folder-reading", "folder-4"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Drawing Lessons from History passage - trust that new alternatives will emerge."
+  },
+  {
+    id: "entry-resemblance",
+    entry_type: "word",
+    word: "resemblance",
+    ipa_uk: "/rɪˈzem.bləns/",
+    ipa_us: "/rɪˈzem.bləns/",
+    definition: "the fact of being or looking like someone or something else",
+    definition_source: "cambridge",
+    example: "The twins bear a striking resemblance to each other in both appearance and voice.",
+    definitions: [
+      {
+        definition: "the fact of being or looking like someone or something else",
+        example: "The twins bear a striking resemblance to each other in both appearance and voice.",
+        cefr_level: "B2",
+        grammar_note: "noun [C or U]"
+      }
+    ],
+    extra_examples: [
+      "There is some resemblance between the structure of these two ancient languages.",
+      "The child's face bore no resemblance to that of his father."
+    ],
+    grammar_note: "noun",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "B2",
+    register: "neutral",
+    formality_score: 3,
+    connotation: "neutral",
+    word_family: {
+      verb: ["resemble"],
+      noun: ["resemblance"]
+    },
+    collocations: [
+      { collocation: "bear a resemblance", example: "The new model bears a close resemblance to its predecessor." },
+      { collocation: "striking resemblance", example: "He has a striking resemblance to the famous movie actor." }
+    ],
+    semantic_field_id: "similarity",
+    semantic_field_label: "Similarity & Comparison",
+    semantic_field_words: [
+      { word: "similarity", cefr: "B1", register: "neutral" },
+      { word: "likeness", cefr: "C1", register: "literary" }
+    ],
+    register_synonyms: [
+      { word: "similarity", register: "neutral", cefr: "B1" }
+    ],
+    folder_ids: ["folder-reading", "folder-speaking-relationships"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Describing family similarities, similarities in structures, or architectural patterns."
+  },
+  {
+    id: "entry-relic",
+    entry_type: "word",
+    word: "relic",
+    ipa_uk: "/ˈrel.ɪk/",
+    ipa_us: "/ˈrel.ɪk/",
+    definition: "an object, tradition, or system from the past that continues to exist",
+    definition_source: "cambridge",
+    example: "The antique grandfather clock is a relic of the Victorian era.",
+    definitions: [
+      {
+        definition: "an object, tradition, or system from the past that continues to exist",
+        example: "The antique grandfather clock is a relic of the Victorian era.",
+        cefr_level: "C1",
+        grammar_note: "noun [C]"
+      }
+    ],
+    extra_examples: [
+      "Archaeologists excavated the cave, finding various stone relics from the Neolithic period.",
+      "Some view these strict dress codes as a relic of a bygone age."
+    ],
+    grammar_note: "noun [C]",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "C1",
+    register: "formal",
+    formality_score: 4,
+    connotation: "neutral",
+    word_family: {
+      noun: ["relic", "relics"]
+    },
+    collocations: [
+      { collocation: "relic of the past", example: "The crumbling watchtower is a picturesque relic of the past." },
+      { collocation: "ancient relic", example: "The museum houses ancient relics from the Egyptian pyramids." }
+    ],
+    semantic_field_id: "remains-antiquity",
+    semantic_field_label: "Remains & Antiquity",
+    semantic_field_words: [
+      { word: "remnant", cefr: "C1", register: "academic" },
+      { word: "antique", cefr: "B2", register: "neutral" }
+    ],
+    register_synonyms: [
+      { word: "remnant", register: "academic", cefr: "C1" }
+    ],
+    folder_ids: ["folder-reading"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Describing historical ruins, museums, or old cultural practices."
+  },
+  {
+    id: "entry-ecological",
+    entry_type: "word",
+    word: "ecological",
+    ipa_uk: "/ˌiː.kəˈlɒdʒ.ɪ.kəl/",
+    ipa_us: "/ˌiː.kəˈlɑː.dʒɪ.kəl/",
+    definition: "relating to the relations of organisms to one another and to their physical surroundings",
+    definition_source: "cambridge",
+    example: "The construction of the dam caused severe ecological damage to the local river system.",
+    definitions: [
+      {
+        definition: "relating to the relations of organisms to one another and to their physical surroundings",
+        example: "The construction of the dam caused severe ecological damage to the local river system.",
+        cefr_level: "B2",
+        grammar_note: "adjective"
+      }
+    ],
+    extra_examples: [
+      "Deforestation can trigger an ecological crisis that disrupts food supply chains.",
+      "The organization works to protect areas of high ecological value from industrialization."
+    ],
+    grammar_note: "adjective",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "B2",
+    register: "academic",
+    formality_score: 4,
+    connotation: "neutral",
+    word_family: {
+      noun: ["ecology", "ecologist"],
+      adjective: ["ecological"],
+      adverb: ["ecologically"]
+    },
+    collocations: [
+      { collocation: "ecological balance", example: "It is crucial to maintain the ecological balance of the forest." },
+      { collocation: "ecological impact", example: "Industrial projects must undergo assessment for their ecological impact." }
+    ],
+    semantic_field_id: "environment-ecology",
+    semantic_field_label: "Environment & Ecology",
+    semantic_field_words: [
+      { word: "environmental", cefr: "B1", register: "neutral" },
+      { word: "biological", cefr: "B2", register: "academic" }
+    ],
+    register_synonyms: [
+      { word: "environmental", register: "neutral", cefr: "B1" }
+    ],
+    folder_ids: ["folder-reading", "folder-3"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Drawing Lessons from History passage - mysterious disappearance triggered by ecological issues."
+  },
+  {
+    id: "entry-analogy",
+    entry_type: "word",
+    word: "analogy",
+    ipa_uk: "/əˈnæl.ə.dʒi/",
+    ipa_us: "/əˈnæl.ə.dʒi/",
+    definition: "a comparison between things that have similar features, often used to help explain an idea",
+    definition_source: "cambridge",
+    example: "To explain how electricity flows, the teacher drew an analogy with water moving through pipes.",
+    definitions: [
+      {
+        definition: "a comparison between things that have similar features, often used to help explain an idea",
+        example: "To explain how electricity flows, the teacher drew an analogy with water moving through pipes.",
+        cefr_level: "C1",
+        grammar_note: "noun [C or U]"
+      }
+    ],
+    extra_examples: [
+      "Writers are tempted to draw analogies between human societies and individual lives.",
+      "The lawyer argued that there was no valid analogy between the two legal cases."
+    ],
+    grammar_note: "noun",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "C1",
+    register: "academic",
+    formality_score: 4,
+    connotation: "neutral",
+    word_family: {
+      verb: ["analogize"],
+      noun: ["analogy", "analogue"],
+      adjective: ["analogous"]
+    },
+    collocations: [
+      { collocation: "draw an analogy", example: "Scientists often draw an analogy between the human brain and a computer." },
+      { collocation: "by analogy with", example: "The rules for this structure are derived by analogy with similar patterns." }
+    ],
+    semantic_field_id: "similarity-explanation",
+    semantic_field_label: "Similarity & Explanation",
+    semantic_field_words: [
+      { word: "comparison", cefr: "B1", register: "neutral" },
+      { word: "parallel", cefr: "C1", register: "academic" }
+    ],
+    register_synonyms: [
+      { word: "comparison", register: "neutral", cefr: "B1" },
+      { word: "parallel", register: "academic", cefr: "C1" }
+    ],
+    folder_ids: ["folder-reading", "folder-4"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Drawing Lessons from History passage - writers tempted to draw analogies between society and life."
+  },
+  {
+    id: "entry-human-induced",
+    entry_type: "word",
+    word: "human-induced",
+    ipa_uk: "/ˌhjuː.mən.ɪnˈdjuːst/",
+    ipa_us: "/ˌhjuː.mən.ɪnˈduːst/",
+    definition: "caused by human activity rather than natural processes",
+    definition_source: "cambridge",
+    example: "The report warns of the severe impacts of human-induced climate change on agricultural yields.",
+    definitions: [
+      {
+        definition: "caused by human activity rather than natural processes",
+        example: "The report warns of the severe impacts of human-induced climate change on agricultural yields.",
+        cefr_level: "C1",
+        grammar_note: "adjective"
+      }
+    ],
+    extra_examples: [
+      "The rapid rise in global temperatures is primarily human-induced.",
+      "We must work to mitigate human-induced environmental disasters."
+    ],
+    grammar_note: "adjective",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "C1",
+    register: "academic",
+    formality_score: 4,
+    connotation: "negative",
+    word_family: {},
+    collocations: [
+      { collocation: "human-induced climate change", example: "Global actions are needed to curb human-induced climate change." },
+      { collocation: "human-induced environmental", example: "Plastic pollution is a classic human-induced environmental challenge." }
+    ],
+    semantic_field_id: "causation-human",
+    semantic_field_label: "Causation & Human Influence",
+    semantic_field_words: [
+      { word: "man-made", cefr: "B1", register: "neutral" },
+      { word: "anthropogenic", cefr: "C2", register: "scientific" }
+    ],
+    register_synonyms: [
+      { word: "man-made", register: "neutral", cefr: "B1" }
+    ],
+    folder_ids: ["folder-reading", "folder-3", "folder-4"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Drawing Lessons from History passage - human-induced climate change and downfalls."
+  },
+  {
+    id: "entry-contemporary",
+    entry_type: "word",
+    word: "contemporary",
+    ipa_uk: "/kənˈtem.pər.ər.i/",
+    ipa_us: "/kənˈtem.pə.rer.i/",
+    definition: "existing or happening now, or belonging to the same period of time",
+    definition_source: "cambridge",
+    example: "The museum showcases contemporary art alongside historic masterpieces.",
+    definitions: [
+      {
+        definition: "existing or happening now",
+        example: "Contemporary society faces unique challenges due to rapid digitalization.",
+        cefr_level: "B2",
+        grammar_note: "adjective"
+      },
+      {
+        definition: "someone living or existing at the same time as another",
+        example: "Shakespeare and Marlowe were contemporaries who influenced each other's work.",
+        cefr_level: "C1",
+        grammar_note: "noun [C]"
+      }
+    ],
+    extra_examples: [
+      "We must evaluate whether contemporary technology can resolve our environmental issues.",
+      "The library contains various contemporary accounts of the historic battle."
+    ],
+    grammar_note: "adjective / noun",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "B2",
+    register: "academic",
+    formality_score: 3,
+    connotation: "neutral",
+    word_family: {
+      noun: ["contemporary", "contemporaries"]
+    },
+    collocations: [
+      { collocation: "contemporary society", example: "Stress is a widespread problem in contemporary society." },
+      { collocation: "contemporary issues", example: "The documentary explores contemporary issues like income inequality." }
+    ],
+    semantic_field_id: "time-modern",
+    semantic_field_label: "Time & Modernity",
+    semantic_field_words: [
+      { word: "modern", cefr: "A2", register: "neutral" },
+      { word: "current", cefr: "B1", register: "neutral" }
+    ],
+    register_synonyms: [
+      { word: "modern", register: "neutral", cefr: "A2" }
+    ],
+    folder_ids: ["folder-reading", "folder-4"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Drawing Lessons from History passage - whether contemporary technology will resolve issues."
+  },
+  {
+    id: "entry-reliance",
+    entry_type: "word",
+    word: "reliance",
+    ipa_uk: "/rɪˈlaɪ.əns/",
+    ipa_us: "/rɪˈlaɪ.əns/",
+    definition: "the state of depending on or trusting in something or someone",
+    definition_source: "cambridge",
+    example: "The company is trying to reduce its reliance on imported raw materials.",
+    definitions: [
+      {
+        definition: "the state of depending on or trusting in something or someone",
+        example: "The company is trying to reduce its reliance on imported raw materials.",
+        cefr_level: "B2",
+        grammar_note: "noun [U]"
+      }
+    ],
+    extra_examples: [
+      "The survival of millions depends on modern healthcare and the reliance on technologies.",
+      "His reliance on his parents for financial support has become a source of tension."
+    ],
+    grammar_note: "noun [U]",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "B2",
+    register: "academic",
+    formality_score: 3,
+    connotation: "neutral",
+    word_family: {
+      verb: ["rely"],
+      noun: ["reliance", "reliability"],
+      adjective: ["reliant", "reliable"],
+      adverb: ["reliably"]
+    },
+    collocations: [
+      { collocation: "reliance on technology", example: "Our reliance on technology makes us vulnerable to cyberattacks." },
+      { collocation: "heavy reliance", example: "The country's heavy reliance on oil exports makes its economy unstable." }
+    ],
+    semantic_field_id: "dependence-trust",
+    semantic_field_label: "Dependence & Trust",
+    semantic_field_words: [
+      { word: "dependence", cefr: "B2", register: "academic" },
+      { word: "trust", cefr: "B1", register: "neutral" }
+    ],
+    register_synonyms: [
+      { word: "dependence", register: "neutral", cefr: "B2" }
+    ],
+    folder_ids: ["folder-reading", "folder-4"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Drawing Lessons from History passage - reliance of millions on modern health care."
+  },
+  {
+    id: "entry-reminiscent",
+    entry_type: "word",
+    word: "reminiscent",
+    ipa_uk: "/ˌrem.ɪˈnɪs.ənt/",
+    ipa_us: "/ˌrem.əˈnɪs.ənt/",
+    definition: "making you remember a particular person, event, or thing",
+    definition_source: "cambridge",
+    example: "The style of the building is highly reminiscent of classical Greek architecture.",
+    definitions: [
+      {
+        definition: "making you remember a particular person, event, or thing",
+        example: "The style of the building is highly reminiscent of classical Greek architecture.",
+        cefr_level: "C1",
+        grammar_note: "adjective [always after noun, followed by 'of']"
+      }
+    ],
+    extra_examples: [
+      "The flavor is reminiscent of the homemade pies my grandmother used to bake.",
+      "His political speeches are reminiscent of the rhetoric of the 1960s."
+    ],
+    grammar_note: "adjective",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "C1",
+    register: "formal",
+    formality_score: 4,
+    connotation: "neutral",
+    word_family: {
+      verb: ["reminisce"],
+      noun: ["reminiscence"],
+      adjective: ["reminiscent"]
+    },
+    collocations: [
+      { collocation: "reminiscent of", example: "The melody is reminiscent of a traditional folk song." },
+      { collocation: "highly reminiscent", example: "Her writing style is highly reminiscent of Hemingway's." }
+    ],
+    semantic_field_id: "memory-association",
+    semantic_field_label: "Memory & Association",
+    semantic_field_words: [
+      { word: "evocative", cefr: "C2", register: "formal" },
+      { word: "suggestive", cefr: "C1", register: "neutral" }
+    ],
+    register_synonyms: [
+      { word: "suggestive", register: "neutral", cefr: "C1" }
+    ],
+    folder_ids: ["folder-reading", "folder-speaking-relationships"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Drawing Lessons from History passage - ruins reminiscent of what poet Shelley described."
   }
 ];
 
