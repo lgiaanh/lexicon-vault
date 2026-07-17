@@ -2,16 +2,16 @@
 // Pre-filled with Cambridge Dictionary-style definitions and IELTS taxonomy classification.
 
 const INITIAL_FOLDERS = [
-  { id: 'folder-1', name: 'Law & Policy', color: '#DBCDF0', emoji: '⚖️', description: 'Legislation, judicial processes, constitutional rights, and official regulations.', created_at: new Date().toISOString(), word_count: 9 },
-  { id: 'folder-2', name: 'Economics & Statistics', color: '#FAEDCB', emoji: '📈', description: 'Financial theories, trade data, economic policy, market dynamics, and quantitative metrics.', created_at: new Date().toISOString(), word_count: 15 },
+  { id: 'folder-1', name: 'Law & Policy', color: '#DBCDF0', emoji: '⚖️', description: 'Legislation, judicial processes, constitutional rights, and official regulations.', created_at: new Date().toISOString(), word_count: 14 },
+  { id: 'folder-2', name: 'Economics & Statistics', color: '#FAEDCB', emoji: '📈', description: 'Financial theories, trade data, economic policy, market dynamics, and quantitative metrics.', created_at: new Date().toISOString(), word_count: 19 },
   { id: 'folder-3', name: 'Environment & Ecology', color: '#C9E4DE', emoji: '🌱', description: 'Climate change, biodiversity, environmental preservation, ecosystems, and conservation strategies.', created_at: new Date().toISOString(), word_count: 10 },
-  { id: 'folder-4', name: 'Academic Writing (Task 2)', color: '#C6DEF1', emoji: '✍️', description: 'Sophisticated vocabulary and idioms tailored for high-scoring IELTS Writing Task 2 responses.', created_at: new Date().toISOString(), word_count: 40 },
+  { id: 'folder-4', name: 'Academic Writing (Task 2)', color: '#C6DEF1', emoji: '✍️', description: 'Sophisticated vocabulary and idioms tailored for high-scoring IELTS Writing Task 2 responses.', created_at: new Date().toISOString(), word_count: 45 },
   { id: 'folder-5', name: 'Phrasal Verbs & Idioms', color: '#F7D9C4', emoji: '💬', description: 'Common English phrasal verbs and idiomatic expressions for informal or spoken contexts.', created_at: new Date().toISOString(), word_count: 8 },
   { id: 'folder-6', name: 'Maps & Diagrams', color: '#F2C6DE', emoji: '🗺️', description: 'Spatial descriptions, maps, process flowcharts, and technical diagrams.', created_at: new Date().toISOString(), word_count: 4 },
   { id: 'folder-speaking-work-study', name: 'Speaking: Work & Study', color: '#C6DEF1', emoji: '🏫', description: 'Phrasal verbs and colloquial expressions for describing academic pursuits and careers.', created_at: new Date().toISOString(), word_count: 3 },
   { id: 'folder-speaking-leisure-travel', name: 'Speaking: Leisure & Travel', color: '#C9E4DE', emoji: '✈️', description: 'Speaking phrasal verbs for describing vacationing, sightseeing, and hobbies.', created_at: new Date().toISOString(), word_count: 2 },
   { id: 'folder-speaking-relationships', name: 'Speaking: Relationships & Life', color: '#F2C6DE', emoji: '👥', description: 'Phrasal verbs for describing social connections, relatives, and childhood memories.', created_at: new Date().toISOString(), word_count: 3 },
-  { id: 'folder-science', name: 'Science & Technology', color: '#DBCDF0', emoji: '🔬', description: 'Vocabulary and collocations related to scientific research, breakthroughs, technology, and paradigm shifts.', created_at: new Date().toISOString(), word_count: 8 },
+  { id: 'folder-science', name: 'Science & Technology', color: '#DBCDF0', emoji: '🔬', description: 'Vocabulary and collocations related to scientific research, breakthroughs, technology, and paradigm shifts.', created_at: new Date().toISOString(), word_count: 9 },
   { id: 'folder-task2-phrases', name: 'Task 2 Phrases', color: '#F7D9C4', emoji: '📝', description: 'Key academic phrases, collocations, and idioms tailored for Writing Task 2 essays.', created_at: new Date().toISOString(), word_count: 15 },
   { id: 'folder-reading', name: 'IELTS Reading', color: '#C9E4DE', emoji: '📖', description: 'High-yield vocabulary and scientific terms gathered from IELTS Reading passages.', created_at: new Date().toISOString(), word_count: 18 }
 ];
@@ -8110,7 +8110,7 @@ const INITIAL_ENTRIES = [
     register_synonyms: [
       { word: "intrude", register: "neutral", cefr: "C1" }
     ],
-    folder_ids: ["folder-reading", "folder-3"],
+    folder_ids: ["folder-reading", "folder-3", "folder-1"],
     review: {
       interval_days: 1,
       ease_factor: 2.5,
@@ -8905,6 +8905,432 @@ const INITIAL_ENTRIES = [
     },
     date_added: new Date().toISOString(),
     source_context: "Describing personality, mood patterns, and social relationships."
+  },
+  {
+    id: "entry-imperial",
+    entry_type: "word",
+    word: "imperial",
+    ipa_uk: "/ɪmˈpɪə.ri.əl/",
+    ipa_us: "/ɪmˈpɪr.i.əl/",
+    definition: "belonging or relating to an empire or the person who rules it",
+    definition_source: "cambridge",
+    example: "The imperial army was dispatched to secure the borders of the vast empire.",
+    definitions: [
+      {
+        definition: "belonging or relating to an empire or the person who rules it",
+        example: "The imperial army was dispatched to secure the borders of the vast empire.",
+        cefr_level: "C1",
+        grammar_note: "adjective"
+      }
+    ],
+    extra_examples: [
+      "Smuggling of tea and opium severely challenged imperial trade monopolies in the 19th century.",
+      "The city still features grand imperial architecture from its days as the capital of the dynasty."
+    ],
+    grammar_note: "adjective",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "C1",
+    register: "formal",
+    formality_score: 5,
+    connotation: "neutral",
+    word_family: {
+      verb: [],
+      noun: ["empire", "imperialism", "emperor"],
+      adjective: ["imperial", "imperialistic"],
+      adverb: ["imperially"]
+    },
+    collocations: [
+      { collocation: "imperial power", example: "Britain established itself as a dominant imperial power in Asia." },
+      { collocation: "imperial decree", example: "The taxation system was completely reformed by imperial decree." }
+    ],
+    semantic_field_id: "government-power",
+    semantic_field_label: "Government & Power",
+    semantic_field_words: [
+      { word: "royal", cefr: "B1", register: "neutral" },
+      { word: "sovereign", cefr: "C2", register: "formal" }
+    ],
+    register_synonyms: [
+      { word: "royal", register: "neutral", cefr: "B1" }
+    ],
+    folder_ids: ["folder-1", "folder-4"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Describing historical political systems, empires, or authoritative decrees."
+  },
+  {
+    id: "entry-smuggling",
+    entry_type: "word",
+    word: "smuggling",
+    ipa_uk: "/ˈsmʌɡ.lɪŋ/",
+    ipa_us: "/ˈsmʌɡ.lɪŋ/",
+    definition: "the act of importing or exporting goods illegally, especially without paying customs duties",
+    definition_source: "cambridge",
+    example: "The government introduced strict border controls to curb the smuggling of contraband goods.",
+    definitions: [
+      {
+        definition: "the act of importing or exporting goods illegally, especially without paying customs duties",
+        example: "The government introduced strict border controls to curb the smuggling of contraband goods.",
+        cefr_level: "B2",
+        grammar_note: "noun [U]"
+      }
+    ],
+    extra_examples: [
+      "High import tariffs often stimulate smuggling networks as criminals attempt to avoid taxes.",
+      "Maritime patrols were reinforced to combat illegal smuggling along the coastline."
+    ],
+    grammar_note: "noun [U]",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "B2",
+    register: "legal",
+    formality_score: 3,
+    connotation: "negative",
+    word_family: {
+      verb: ["smuggle"],
+      noun: ["smuggling", "smuggler"]
+    },
+    collocations: [
+      { collocation: "combat smuggling", example: "International agencies cooperate to combat smuggling across borders." },
+      { collocation: "contraband smuggling", example: "Contraband smuggling remains a highly lucrative black-market activity." }
+    ],
+    semantic_field_id: "crime-law",
+    semantic_field_label: "Crime & Law",
+    semantic_field_words: [
+      { word: "trafficking", cefr: "C1", register: "legal" },
+      { word: "illicit", cefr: "C2", register: "formal" }
+    ],
+    register_synonyms: [
+      { word: "illegal trade", register: "neutral", cefr: "B1" }
+    ],
+    folder_ids: ["folder-1", "folder-2"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Discussing black markets, legal restrictions, or historical trade disputes."
+  },
+  {
+    id: "entry-adulteration",
+    entry_type: "word",
+    word: "adulteration",
+    ipa_uk: "/əˌdʌl.təˈreɪ.ʃən/",
+    ipa_us: "/əˌdʌl.t̬əˈreɪ.ʃən/",
+    definition: "the act of making food, drink, or other chemical substances poorer in quality by adding another substance",
+    definition_source: "cambridge",
+    example: "The public health department launched an investigation into the suspected adulteration of milk supplies.",
+    definitions: [
+      {
+        definition: "the act of making food, drink, or other chemical substances poorer in quality by adding another substance",
+        example: "The public health department launched an investigation into the suspected adulteration of milk supplies.",
+        cefr_level: "C2",
+        grammar_note: "noun [U]"
+      }
+    ],
+    extra_examples: [
+      "Strict food safety legislation was introduced to protect consumers from product adulteration.",
+      "The chemical analysis revealed the adulteration of the olive oil with cheaper seed oils."
+    ],
+    grammar_note: "noun [U]",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "C2",
+    register: "scientific",
+    formality_score: 5,
+    connotation: "negative",
+    word_family: {
+      verb: ["adulterate"],
+      noun: ["adulteration", "adulterant"],
+      adjective: ["adulterated"]
+    },
+    collocations: [
+      { collocation: "food adulteration", example: "Food adulteration is a serious offense that can lead to severe fines." },
+      { collocation: "detect adulteration", example: "Laboratory tests are necessary to detect adulteration in high-value products." }
+    ],
+    semantic_field_id: "contamination-quality",
+    semantic_field_label: "Contamination & Quality",
+    semantic_field_words: [
+      { word: "contamination", cefr: "B2", register: "neutral" },
+      { word: "dilution", cefr: "C1", register: "scientific" }
+    ],
+    register_synonyms: [
+      { word: "contamination", register: "neutral", cefr: "B2" }
+    ],
+    folder_ids: ["folder-1", "folder-science"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Discussing food safety, chemical quality control, or trade regulations."
+  },
+  {
+    id: "entry-monopoly",
+    entry_type: "word",
+    word: "monopoly",
+    ipa_uk: "/məˈnɒp.əl.i/",
+    ipa_us: "/məˈnɑː.pəl.i/",
+    definition: "complete control of the supply of particular goods or services in a market",
+    definition_source: "cambridge",
+    example: "The tech giant has established a near-complete monopoly over mobile operating systems.",
+    definitions: [
+      {
+        definition: "complete control of the supply of particular goods or services in a market",
+        example: "The tech giant has established a near-complete monopoly over mobile operating systems.",
+        cefr_level: "C1",
+        grammar_note: "noun [C usually singular]"
+      }
+    ],
+    extra_examples: [
+      "Anti-trust laws are designed to prevent corporations from establishing monopolies that limit competition.",
+      "The state holds a monopoly on the supply of water and electricity."
+    ],
+    grammar_note: "noun",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "C1",
+    register: "economics",
+    formality_score: 4,
+    connotation: "neutral",
+    word_family: {
+      verb: ["monopolize"],
+      noun: ["monopoly", "monopolist"],
+      adjective: ["monopolistic"]
+    },
+    collocations: [
+      { collocation: "establish a monopoly", example: "The company aims to establish a monopoly by buying out its competitors." },
+      { collocation: "break up a monopoly", example: "The government intervened to break up the steel monopoly." }
+    ],
+    semantic_field_id: "market-structure",
+    semantic_field_label: "Market Structure",
+    semantic_field_words: [
+      { word: "duopoly", cefr: "C2", register: "economics" },
+      { word: "oligopoly", cefr: "C2", register: "economics" }
+    ],
+    register_synonyms: [
+      { word: "exclusive control", register: "neutral", cefr: "B2" }
+    ],
+    folder_ids: ["folder-2", "folder-4"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Discussing market competition, trade regulations, or economic history."
+  },
+  {
+    id: "entry-punitive",
+    entry_type: "word",
+    word: "punitive",
+    ipa_uk: "/ˈpjuː.nɪ.tɪv/",
+    ipa_us: "/ˈpjuː.n̬ɪ.t̬ɪv/",
+    definition: "intended as a punishment, or (of taxes/duties) extremely high and difficult to pay",
+    definition_source: "cambridge",
+    example: "The court imposed punitive damages on the company to deter future safety violations.",
+    definitions: [
+      {
+        definition: "intended as a punishment",
+        example: "The court imposed punitive damages on the company to deter future safety violations.",
+        cefr_level: "C1",
+        grammar_note: "adjective"
+      },
+      {
+        definition: "(of taxes, duties, or charges) extremely high and difficult to pay",
+        example: "The government introduced punitive tariffs on imported goods to protect domestic industries.",
+        cefr_level: "C1",
+        grammar_note: "adjective"
+      }
+    ],
+    extra_examples: [
+      "The prisoners were subjected to punitive measures after the failed escape attempt.",
+      "Punitive tax rates on high earners can sometimes discourage investment."
+    ],
+    grammar_note: "adjective",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "C1",
+    register: "formal",
+    formality_score: 4,
+    connotation: "negative",
+    word_family: {
+      verb: ["punish"],
+      noun: ["punishment"],
+      adjective: ["punitive"],
+      adverb: ["punitively"]
+    },
+    collocations: [
+      { collocation: "punitive measures", example: "The administration threatened punitive measures if the strike continued." },
+      { collocation: "punitive damages", example: "Jurors awarded millions in punitive damages to the plaintiff." }
+    ],
+    semantic_field_id: "discipline-law",
+    semantic_field_label: "Discipline & Law",
+    semantic_field_words: [
+      { word: "penal", cefr: "C2", register: "legal" },
+      { word: "disciplinary", cefr: "B2", register: "neutral" }
+    ],
+    register_synonyms: [
+      { word: "disciplinary", register: "neutral", cefr: "B2" }
+    ],
+    folder_ids: ["folder-1", "folder-4"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Discussing legal penalties, high taxes, or international sanctions."
+  },
+  {
+    id: "entry-stimulate",
+    entry_type: "word",
+    word: "stimulate",
+    ipa_uk: "/ˈsɪm.jʊ.leɪt/",
+    ipa_us: "/ˈsɪm.jə.leɪt/",
+    definition: "to encourage something to grow, develop, or become more active",
+    definition_source: "cambridge",
+    example: "Lowering interest rates is a classic monetary policy tool used to stimulate the economy.",
+    definitions: [
+      {
+        definition: "to encourage something to grow, develop, or become more active",
+        example: "Lowering interest rates is a classic monetary policy tool used to stimulate the economy.",
+        cefr_level: "B2",
+        grammar_note: "transitive verb"
+      }
+    ],
+    extra_examples: [
+      "The tax incentives were introduced specifically to stimulate investment in renewable energy.",
+      "The teacher used interactive games to stimulate discussion among the students."
+    ],
+    grammar_note: "transitive verb",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "B2",
+    register: "academic",
+    formality_score: 3,
+    connotation: "positive",
+    word_family: {
+      verb: ["stimulate"],
+      noun: ["stimulation", "stimulus", "stimulant"],
+      adjective: ["stimulating"]
+    },
+    collocations: [
+      { collocation: "stimulate growth", example: "Investing in infrastructure can stimulate long-term economic growth." },
+      { collocation: "stimulate demand", example: "Ad campaigns are designed to stimulate consumer demand." }
+    ],
+    semantic_field_id: "encouragement-growth",
+    semantic_field_label: "Encouragement & Growth",
+    semantic_field_words: [
+      { word: "encourage", cefr: "A2", register: "neutral" },
+      { word: "galvanize", cefr: "C2", register: "formal" }
+    ],
+    register_synonyms: [
+      { word: "encourage", register: "neutral", cefr: "A2" },
+      { word: "boost", register: "neutral", cefr: "B2" }
+    ],
+    folder_ids: ["folder-2", "folder-4"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Discussing economic growth policies, scientific activation, or educational motivation."
+  },
+  {
+    id: "entry-infusion",
+    entry_type: "word",
+    word: "infusion",
+    ipa_uk: "/ɪnˈfjuː.ʒən/",
+    ipa_us: "/ɪnˈfjuː.ʒən/",
+    definition: "the introduction of a new element, quality, or cash resource into something to make it stronger",
+    definition_source: "cambridge",
+    example: "The struggling airline requires an immediate cash infusion to avoid bankruptcy.",
+    definitions: [
+      {
+        definition: "the introduction of a new element, quality, or cash resource into something to make it stronger",
+        example: "The struggling airline requires an immediate cash infusion to avoid bankruptcy.",
+        cefr_level: "C2",
+        grammar_note: "noun [C or U]"
+      },
+      {
+        definition: "a drink made by leaving tea leaves or herbs in hot water",
+        example: "Herbal infusions like chamomile are popular for promoting relaxation.",
+        cefr_level: "B2",
+        grammar_note: "noun [C]"
+      }
+    ],
+    extra_examples: [
+      "The company benefited from an infusion of new talent and fresh ideas in its marketing team.",
+      "A steady infusion of capital allowed the startup to expand its operations globally."
+    ],
+    grammar_note: "noun",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "C2",
+    register: "academic",
+    formality_score: 4,
+    connotation: "positive",
+    word_family: {
+      verb: ["infuse"],
+      noun: ["infusion"]
+    },
+    collocations: [
+      { collocation: "cash infusion", example: "The venture capital firm provided a massive cash infusion to the tech startup." },
+      { collocation: "infusion of ideas", example: "The workshop led to a valuable infusion of creative ideas." }
+    ],
+    semantic_field_id: "introduction-addition",
+    semantic_field_label: "Introduction & Addition",
+    semantic_field_words: [
+      { word: "injection", cefr: "C1", register: "academic" },
+      { word: "introduction", cefr: "B2", register: "neutral" }
+    ],
+    register_synonyms: [
+      { word: "injection", register: "neutral", cefr: "C1" }
+    ],
+    folder_ids: ["folder-2", "folder-4"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Describing monetary injections, herb extraction, or introducing new ideas/talent."
   }
 ];
 
@@ -12707,7 +13133,7 @@ const EXTENDED_DICTIONARY_DB = [
     register_synonyms: [
       { word: "intrude", register: "neutral", cefr: "C1" }
     ],
-    folder_ids: ["folder-reading", "folder-3"],
+    folder_ids: ["folder-reading", "folder-3", "folder-1"],
     review: {
       interval_days: 1,
       ease_factor: 2.5,
@@ -13502,6 +13928,432 @@ const EXTENDED_DICTIONARY_DB = [
     },
     date_added: new Date().toISOString(),
     source_context: "Describing personality, mood patterns, and social relationships."
+  },
+  {
+    id: "entry-imperial",
+    entry_type: "word",
+    word: "imperial",
+    ipa_uk: "/ɪmˈpɪə.ri.əl/",
+    ipa_us: "/ɪmˈpɪr.i.əl/",
+    definition: "belonging or relating to an empire or the person who rules it",
+    definition_source: "cambridge",
+    example: "The imperial army was dispatched to secure the borders of the vast empire.",
+    definitions: [
+      {
+        definition: "belonging or relating to an empire or the person who rules it",
+        example: "The imperial army was dispatched to secure the borders of the vast empire.",
+        cefr_level: "C1",
+        grammar_note: "adjective"
+      }
+    ],
+    extra_examples: [
+      "Smuggling of tea and opium severely challenged imperial trade monopolies in the 19th century.",
+      "The city still features grand imperial architecture from its days as the capital of the dynasty."
+    ],
+    grammar_note: "adjective",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "C1",
+    register: "formal",
+    formality_score: 5,
+    connotation: "neutral",
+    word_family: {
+      verb: [],
+      noun: ["empire", "imperialism", "emperor"],
+      adjective: ["imperial", "imperialistic"],
+      adverb: ["imperially"]
+    },
+    collocations: [
+      { collocation: "imperial power", example: "Britain established itself as a dominant imperial power in Asia." },
+      { collocation: "imperial decree", example: "The taxation system was completely reformed by imperial decree." }
+    ],
+    semantic_field_id: "government-power",
+    semantic_field_label: "Government & Power",
+    semantic_field_words: [
+      { word: "royal", cefr: "B1", register: "neutral" },
+      { word: "sovereign", cefr: "C2", register: "formal" }
+    ],
+    register_synonyms: [
+      { word: "royal", register: "neutral", cefr: "B1" }
+    ],
+    folder_ids: ["folder-1", "folder-4"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Describing historical political systems, empires, or authoritative decrees."
+  },
+  {
+    id: "entry-smuggling",
+    entry_type: "word",
+    word: "smuggling",
+    ipa_uk: "/ˈsmʌɡ.lɪŋ/",
+    ipa_us: "/ˈsmʌɡ.lɪŋ/",
+    definition: "the act of importing or exporting goods illegally, especially without paying customs duties",
+    definition_source: "cambridge",
+    example: "The government introduced strict border controls to curb the smuggling of contraband goods.",
+    definitions: [
+      {
+        definition: "the act of importing or exporting goods illegally, especially without paying customs duties",
+        example: "The government introduced strict border controls to curb the smuggling of contraband goods.",
+        cefr_level: "B2",
+        grammar_note: "noun [U]"
+      }
+    ],
+    extra_examples: [
+      "High import tariffs often stimulate smuggling networks as criminals attempt to avoid taxes.",
+      "Maritime patrols were reinforced to combat illegal smuggling along the coastline."
+    ],
+    grammar_note: "noun [U]",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "B2",
+    register: "legal",
+    formality_score: 3,
+    connotation: "negative",
+    word_family: {
+      verb: ["smuggle"],
+      noun: ["smuggling", "smuggler"]
+    },
+    collocations: [
+      { collocation: "combat smuggling", example: "International agencies cooperate to combat smuggling across borders." },
+      { collocation: "contraband smuggling", example: "Contraband smuggling remains a highly lucrative black-market activity." }
+    ],
+    semantic_field_id: "crime-law",
+    semantic_field_label: "Crime & Law",
+    semantic_field_words: [
+      { word: "trafficking", cefr: "C1", register: "legal" },
+      { word: "illicit", cefr: "C2", register: "formal" }
+    ],
+    register_synonyms: [
+      { word: "illegal trade", register: "neutral", cefr: "B1" }
+    ],
+    folder_ids: ["folder-1", "folder-2"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Discussing black markets, legal restrictions, or historical trade disputes."
+  },
+  {
+    id: "entry-adulteration",
+    entry_type: "word",
+    word: "adulteration",
+    ipa_uk: "/əˌdʌl.təˈreɪ.ʃən/",
+    ipa_us: "/əˌdʌl.t̬əˈreɪ.ʃən/",
+    definition: "the act of making food, drink, or other chemical substances poorer in quality by adding another substance",
+    definition_source: "cambridge",
+    example: "The public health department launched an investigation into the suspected adulteration of milk supplies.",
+    definitions: [
+      {
+        definition: "the act of making food, drink, or other chemical substances poorer in quality by adding another substance",
+        example: "The public health department launched an investigation into the suspected adulteration of milk supplies.",
+        cefr_level: "C2",
+        grammar_note: "noun [U]"
+      }
+    ],
+    extra_examples: [
+      "Strict food safety legislation was introduced to protect consumers from product adulteration.",
+      "The chemical analysis revealed the adulteration of the olive oil with cheaper seed oils."
+    ],
+    grammar_note: "noun [U]",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "C2",
+    register: "scientific",
+    formality_score: 5,
+    connotation: "negative",
+    word_family: {
+      verb: ["adulterate"],
+      noun: ["adulteration", "adulterant"],
+      adjective: ["adulterated"]
+    },
+    collocations: [
+      { collocation: "food adulteration", example: "Food adulteration is a serious offense that can lead to severe fines." },
+      { collocation: "detect adulteration", example: "Laboratory tests are necessary to detect adulteration in high-value products." }
+    ],
+    semantic_field_id: "contamination-quality",
+    semantic_field_label: "Contamination & Quality",
+    semantic_field_words: [
+      { word: "contamination", cefr: "B2", register: "neutral" },
+      { word: "dilution", cefr: "C1", register: "scientific" }
+    ],
+    register_synonyms: [
+      { word: "contamination", register: "neutral", cefr: "B2" }
+    ],
+    folder_ids: ["folder-1", "folder-science"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Discussing food safety, chemical quality control, or trade regulations."
+  },
+  {
+    id: "entry-monopoly",
+    entry_type: "word",
+    word: "monopoly",
+    ipa_uk: "/məˈnɒp.əl.i/",
+    ipa_us: "/məˈnɑː.pəl.i/",
+    definition: "complete control of the supply of particular goods or services in a market",
+    definition_source: "cambridge",
+    example: "The tech giant has established a near-complete monopoly over mobile operating systems.",
+    definitions: [
+      {
+        definition: "complete control of the supply of particular goods or services in a market",
+        example: "The tech giant has established a near-complete monopoly over mobile operating systems.",
+        cefr_level: "C1",
+        grammar_note: "noun [C usually singular]"
+      }
+    ],
+    extra_examples: [
+      "Anti-trust laws are designed to prevent corporations from establishing monopolies that limit competition.",
+      "The state holds a monopoly on the supply of water and electricity."
+    ],
+    grammar_note: "noun",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "C1",
+    register: "economics",
+    formality_score: 4,
+    connotation: "neutral",
+    word_family: {
+      verb: ["monopolize"],
+      noun: ["monopoly", "monopolist"],
+      adjective: ["monopolistic"]
+    },
+    collocations: [
+      { collocation: "establish a monopoly", example: "The company aims to establish a monopoly by buying out its competitors." },
+      { collocation: "break up a monopoly", example: "The government intervened to break up the steel monopoly." }
+    ],
+    semantic_field_id: "market-structure",
+    semantic_field_label: "Market Structure",
+    semantic_field_words: [
+      { word: "duopoly", cefr: "C2", register: "economics" },
+      { word: "oligopoly", cefr: "C2", register: "economics" }
+    ],
+    register_synonyms: [
+      { word: "exclusive control", register: "neutral", cefr: "B2" }
+    ],
+    folder_ids: ["folder-2", "folder-4"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Discussing market competition, trade regulations, or economic history."
+  },
+  {
+    id: "entry-punitive",
+    entry_type: "word",
+    word: "punitive",
+    ipa_uk: "/ˈpjuː.nɪ.tɪv/",
+    ipa_us: "/ˈpjuː.n̬ɪ.t̬ɪv/",
+    definition: "intended as a punishment, or (of taxes/duties) extremely high and difficult to pay",
+    definition_source: "cambridge",
+    example: "The court imposed punitive damages on the company to deter future safety violations.",
+    definitions: [
+      {
+        definition: "intended as a punishment",
+        example: "The court imposed punitive damages on the company to deter future safety violations.",
+        cefr_level: "C1",
+        grammar_note: "adjective"
+      },
+      {
+        definition: "(of taxes, duties, or charges) extremely high and difficult to pay",
+        example: "The government introduced punitive tariffs on imported goods to protect domestic industries.",
+        cefr_level: "C1",
+        grammar_note: "adjective"
+      }
+    ],
+    extra_examples: [
+      "The prisoners were subjected to punitive measures after the failed escape attempt.",
+      "Punitive tax rates on high earners can sometimes discourage investment."
+    ],
+    grammar_note: "adjective",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "C1",
+    register: "formal",
+    formality_score: 4,
+    connotation: "negative",
+    word_family: {
+      verb: ["punish"],
+      noun: ["punishment"],
+      adjective: ["punitive"],
+      adverb: ["punitively"]
+    },
+    collocations: [
+      { collocation: "punitive measures", example: "The administration threatened punitive measures if the strike continued." },
+      { collocation: "punitive damages", example: "Jurors awarded millions in punitive damages to the plaintiff." }
+    ],
+    semantic_field_id: "discipline-law",
+    semantic_field_label: "Discipline & Law",
+    semantic_field_words: [
+      { word: "penal", cefr: "C2", register: "legal" },
+      { word: "disciplinary", cefr: "B2", register: "neutral" }
+    ],
+    register_synonyms: [
+      { word: "disciplinary", register: "neutral", cefr: "B2" }
+    ],
+    folder_ids: ["folder-1", "folder-4"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Discussing legal penalties, high taxes, or international sanctions."
+  },
+  {
+    id: "entry-stimulate",
+    entry_type: "word",
+    word: "stimulate",
+    ipa_uk: "/ˈsɪm.jʊ.leɪt/",
+    ipa_us: "/ˈsɪm.jə.leɪt/",
+    definition: "to encourage something to grow, develop, or become more active",
+    definition_source: "cambridge",
+    example: "Lowering interest rates is a classic monetary policy tool used to stimulate the economy.",
+    definitions: [
+      {
+        definition: "to encourage something to grow, develop, or become more active",
+        example: "Lowering interest rates is a classic monetary policy tool used to stimulate the economy.",
+        cefr_level: "B2",
+        grammar_note: "transitive verb"
+      }
+    ],
+    extra_examples: [
+      "The tax incentives were introduced specifically to stimulate investment in renewable energy.",
+      "The teacher used interactive games to stimulate discussion among the students."
+    ],
+    grammar_note: "transitive verb",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "B2",
+    register: "academic",
+    formality_score: 3,
+    connotation: "positive",
+    word_family: {
+      verb: ["stimulate"],
+      noun: ["stimulation", "stimulus", "stimulant"],
+      adjective: ["stimulating"]
+    },
+    collocations: [
+      { collocation: "stimulate growth", example: "Investing in infrastructure can stimulate long-term economic growth." },
+      { collocation: "stimulate demand", example: "Ad campaigns are designed to stimulate consumer demand." }
+    ],
+    semantic_field_id: "encouragement-growth",
+    semantic_field_label: "Encouragement & Growth",
+    semantic_field_words: [
+      { word: "encourage", cefr: "A2", register: "neutral" },
+      { word: "galvanize", cefr: "C2", register: "formal" }
+    ],
+    register_synonyms: [
+      { word: "encourage", register: "neutral", cefr: "A2" },
+      { word: "boost", register: "neutral", cefr: "B2" }
+    ],
+    folder_ids: ["folder-2", "folder-4"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Discussing economic growth policies, scientific activation, or educational motivation."
+  },
+  {
+    id: "entry-infusion",
+    entry_type: "word",
+    word: "infusion",
+    ipa_uk: "/ɪnˈfjuː.ʒən/",
+    ipa_us: "/ɪnˈfjuː.ʒən/",
+    definition: "the introduction of a new element, quality, or cash resource into something to make it stronger",
+    definition_source: "cambridge",
+    example: "The struggling airline requires an immediate cash infusion to avoid bankruptcy.",
+    definitions: [
+      {
+        definition: "the introduction of a new element, quality, or cash resource into something to make it stronger",
+        example: "The struggling airline requires an immediate cash infusion to avoid bankruptcy.",
+        cefr_level: "C2",
+        grammar_note: "noun [C or U]"
+      },
+      {
+        definition: "a drink made by leaving tea leaves or herbs in hot water",
+        example: "Herbal infusions like chamomile are popular for promoting relaxation.",
+        cefr_level: "B2",
+        grammar_note: "noun [C]"
+      }
+    ],
+    extra_examples: [
+      "The company benefited from an infusion of new talent and fresh ideas in its marketing team.",
+      "A steady infusion of capital allowed the startup to expand its operations globally."
+    ],
+    grammar_note: "noun",
+    base_verb: "",
+    particles: "",
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: "C2",
+    register: "academic",
+    formality_score: 4,
+    connotation: "positive",
+    word_family: {
+      verb: ["infuse"],
+      noun: ["infusion"]
+    },
+    collocations: [
+      { collocation: "cash infusion", example: "The venture capital firm provided a massive cash infusion to the tech startup." },
+      { collocation: "infusion of ideas", example: "The workshop led to a valuable infusion of creative ideas." }
+    ],
+    semantic_field_id: "introduction-addition",
+    semantic_field_label: "Introduction & Addition",
+    semantic_field_words: [
+      { word: "injection", cefr: "C1", register: "academic" },
+      { word: "introduction", cefr: "B2", register: "neutral" }
+    ],
+    register_synonyms: [
+      { word: "injection", register: "neutral", cefr: "C1" }
+    ],
+    folder_ids: ["folder-2", "folder-4"],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: "Describing monetary injections, herb extraction, or introducing new ideas/talent."
   }
 ];
 
