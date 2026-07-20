@@ -2640,6 +2640,26 @@ body {
   }
 }
 
+/* Cloud Sync Loading Spinner Animations */
+.sync-spinner {
+  animation: spin 1.5s linear infinite;
+}
+
+.sync-spinner-mini {
+  width: 12px;
+  height: 12px;
+  border: 2px solid #E2E8F0;
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  display: inline-block;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
 
 
 

@@ -22,6 +22,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
   <!-- Tesseract.js CDN Library for client-side OCR on scanned PDFs -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tesseract.js/5.1.0/tesseract.min.js"></script>
+  <!-- Firebase App & Firestore SDKs (Compat version for direct script loading) -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
 </head>
 <body>
 
@@ -172,6 +175,13 @@
           <g>
             <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
             <circle cx="12" cy="12" r="3" />
+          </g>
+        ),
+        sync: (
+          <g>
+            <polyline points="23 4 23 10 17 10" />
+            <polyline points="1 20 1 14 7 14" />
+            <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15" />
           </g>
         )
       };
@@ -465,7 +475,193 @@
       });
 
       // UI State
-      const [activeTab, setActiveTab] = useState('vault'); // 'vault' | 'graph' | 'review'
+      const [activeTab, setActiveTab] = useState('vault'); // 'vault' | 'graph' | 'review' | 'sync'
+
+      // Firebase Cloud Sync State
+      const [firebaseConfig, setFirebaseConfig] = useState(() => {
+        const saved = localStorage.getItem('lexicon_firebase_config');
+        return saved ? JSON.parse(saved) : null;
+      });
+      const [syncStatus, setSyncStatus] = useState('disconnected'); // 'disconnected' | 'connected' | 'syncing' | 'error'
+      const [syncError, setSyncError] = useState(null);
+      const [lastSynced, setLastSynced] = useState(() => {
+        return localStorage.getItem('lexicon_last_synced') || null;
+      });
+      const [autoSyncEnabled, setAutoSyncEnabled] = useState(() => {
+        const saved = localStorage.getItem('lexicon_auto_sync');
+        return saved === null ? true : saved === 'true';
+      });
+
+      const firebaseAppRef = useRef(null);
+      const dbRef = useRef(null);
+      const isSyncingRef = useRef(false);
+      const syncTimeoutRef = useRef(null);
+      const hasInitialSynced = useRef(false);
+
+      const initializeFirebaseApp = (config) => {
+        if (!config || typeof firebase === 'undefined') return false;
+        try {
+          if (firebase.apps.length > 0) {
+            firebaseAppRef.current = firebase.app();
+          } else {
+            firebaseAppRef.current = firebase.initializeApp(config);
+          }
+          dbRef.current = firebaseAppRef.current.firestore();
+          setSyncStatus('connected');
+          setSyncError(null);
+          return true;
+        } catch (e) {
+          console.error("Firebase init error", e);
+          setSyncStatus('error');
+          setSyncError(e.message);
+          return false;
+        }
+      };
+
+      useEffect(() => {
+        if (firebaseConfig) {
+          initializeFirebaseApp(firebaseConfig);
+        }
+      }, [firebaseConfig]);
+
+      const triggerAutoSync = () => {
+        if (!dbRef.current || !autoSyncEnabled) return;
+        if (syncTimeoutRef.current) {
+          clearTimeout(syncTimeoutRef.current);
+        }
+        syncTimeoutRef.current = setTimeout(() => {
+          syncCloud('sync');
+        }, 3000);
+      };
+
+      const applyCloudData = (cloudData) => {
+        if (!cloudData) return;
+        isSyncingRef.current = true;
+        if (cloudData.entries) {
+          setEntries(cloudData.entries);
+          localStorage.setItem('lexicon_entries', JSON.stringify(cloudData.entries));
+        }
+        if (cloudData.folders) {
+          setFolders(cloudData.folders);
+          localStorage.setItem('lexicon_folders', JSON.stringify(cloudData.folders));
+        }
+        if (cloudData.articles) {
+          setArticles(cloudData.articles);
+          localStorage.setItem('lexicon_articles', JSON.stringify(cloudData.articles));
+        }
+        if (cloudData.study_time) {
+          setStudyTime(cloudData.study_time);
+          localStorage.setItem('lexicon_study_time', JSON.stringify(cloudData.study_time));
+        }
+        if (cloudData.total_study_time) {
+          setTotalStudyTime(parseInt(cloudData.total_study_time, 10) || 0);
+          localStorage.setItem('lexicon_total_study_time', cloudData.total_study_time);
+        }
+        if (cloudData.streak) {
+          setStudyStreak(cloudData.streak);
+          localStorage.setItem('lexicon_study_streak', JSON.stringify(cloudData.streak));
+        }
+        if (cloudData.last_updated) {
+          localStorage.setItem('lexicon_last_updated', cloudData.last_updated);
+        }
+        setTimeout(() => {
+          isSyncingRef.current = false;
+        }, 150);
+      };
+
+      const syncCloud = async (direction = 'sync') => {
+        if (!dbRef.current) {
+          setSyncStatus('error');
+          setSyncError('Firebase not connected. Please check configuration.');
+          return;
+        }
+        setSyncStatus('syncing');
+        setSyncError(null);
+
+        try {
+          const docRef = dbRef.current.collection('vaults').doc('user_progress');
+          const docSnap = await docRef.get();
+
+          const localTimestamp = localStorage.getItem('lexicon_last_updated') || new Date(0).toISOString();
+          const localData = {
+            entries: JSON.parse(localStorage.getItem('lexicon_entries') || '[]'),
+            folders: JSON.parse(localStorage.getItem('lexicon_folders') || '[]'),
+            articles: JSON.parse(localStorage.getItem('lexicon_articles') || '[]'),
+            study_time: JSON.parse(localStorage.getItem('lexicon_study_time') || '{}'),
+            total_study_time: localStorage.getItem('lexicon_total_study_time') || '0',
+            streak: JSON.parse(localStorage.getItem('lexicon_study_streak') || '{}'),
+            last_updated: localTimestamp
+          };
+
+          if (direction === 'push') {
+            const nowStr = new Date().toISOString();
+            localData.last_updated = nowStr;
+            await docRef.set(localData);
+            localStorage.setItem('lexicon_last_updated', nowStr);
+            localStorage.setItem('lexicon_last_synced', nowStr);
+            setLastSynced(nowStr);
+            setSyncStatus('connected');
+            showToastGlobal('Successfully pushed local data to Cloud!');
+            return;
+          }
+
+          if (direction === 'pull') {
+            if (!docSnap.exists) {
+              setSyncStatus('connected');
+              showToastGlobal('No cloud data exists to pull.');
+              return;
+            }
+            const cloudData = docSnap.data();
+            applyCloudData(cloudData);
+            setSyncStatus('connected');
+            showToastGlobal('Successfully pulled Cloud data to Local!');
+            return;
+          }
+
+          // Bidirectional sync (LWW)
+          if (!docSnap.exists) {
+            const nowStr = new Date().toISOString();
+            localData.last_updated = nowStr;
+            await docRef.set(localData);
+            localStorage.setItem('lexicon_last_updated', nowStr);
+            localStorage.setItem('lexicon_last_synced', nowStr);
+            setLastSynced(nowStr);
+            setSyncStatus('connected');
+            return;
+          }
+
+          const cloudData = docSnap.data();
+          const cloudTimestamp = cloudData.last_updated || new Date(0).toISOString();
+
+          if (cloudTimestamp > localTimestamp) {
+            applyCloudData(cloudData);
+            localStorage.setItem('lexicon_last_synced', new Date().toISOString());
+            setLastSynced(new Date().toISOString());
+          } else if (localTimestamp > cloudTimestamp) {
+            const nowStr = new Date().toISOString();
+            localData.last_updated = nowStr;
+            await docRef.set(localData);
+            localStorage.setItem('lexicon_last_updated', nowStr);
+            localStorage.setItem('lexicon_last_synced', nowStr);
+            setLastSynced(nowStr);
+          } else {
+            localStorage.setItem('lexicon_last_synced', new Date().toISOString());
+            setLastSynced(new Date().toISOString());
+          }
+          setSyncStatus('connected');
+        } catch (e) {
+          console.error("Sync error:", e);
+          setSyncStatus('error');
+          setSyncError(e.message);
+        }
+      };
+
+      useEffect(() => {
+        if (dbRef.current && autoSyncEnabled && !hasInitialSynced.current) {
+          hasInitialSynced.current = true;
+          syncCloud('sync');
+        }
+      }, [syncStatus, autoSyncEnabled]);
       const [selectedFolderId, setSelectedFolderId] = useState(null); // null means "All Words"
       const [groupByFamily, setGroupByFamily] = useState(true);
        const [searchQuery, setSearchQuery] = useState('');
@@ -722,6 +918,10 @@
           localStorage.setItem('lexicon_study_time', JSON.stringify({ date: studyDateStr, seconds: todaySecs }));
           localStorage.setItem('lexicon_total_study_time', totalSecs.toString());
           localStorage.setItem('lexicon_study_streak', JSON.stringify({ streak: streak, lastStudyDate: studyDateStr }));
+          if (!isSyncingRef.current) {
+            localStorage.setItem('lexicon_last_updated', new Date().toISOString());
+            triggerAutoSync();
+          }
           
           // Reconstruct Card Repetition Progress
           setEntries((prev) => {
@@ -899,14 +1099,23 @@
       // Save state to localStorage whenever it changes
       useEffect(() => {
         localStorage.setItem('lexicon_entries', JSON.stringify(entries));
+        if (isSyncingRef.current) return;
+        localStorage.setItem('lexicon_last_updated', new Date().toISOString());
+        triggerAutoSync();
       }, [entries]);
 
       useEffect(() => {
         localStorage.setItem('lexicon_folders', JSON.stringify(folders));
+        if (isSyncingRef.current) return;
+        localStorage.setItem('lexicon_last_updated', new Date().toISOString());
+        triggerAutoSync();
       }, [folders]);
 
       useEffect(() => {
         localStorage.setItem('lexicon_articles', JSON.stringify(articles));
+        if (isSyncingRef.current) return;
+        localStorage.setItem('lexicon_last_updated', new Date().toISOString());
+        triggerAutoSync();
       }, [articles]);
 
       // Recalculate folder word counts
@@ -2271,6 +2480,18 @@ IMPORTANT: If the Free Dictionary context contains a valid IPA pronunciation (ip
                 </span>
               </button>
 
+              <button 
+                className={`nav-item ${activeTab === 'sync' ? 'active' : ''}`}
+                onClick={() => setActiveTab('sync')}
+              >
+                <span className="nav-icon-text">
+                  <Icon name="sync" style={{ marginRight: '6px' }} /> Cloud Sync
+                </span>
+                {syncStatus === 'syncing' && <span className="sync-spinner-mini"></span>}
+                {syncStatus === 'connected' && <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#10B981', display: 'inline-block' }}></span>}
+                {syncStatus === 'error' && <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#EF4444', display: 'inline-block' }}></span>}
+              </button>
+
 
             </nav>
 
@@ -3144,9 +3365,240 @@ IMPORTANT: If the Free Dictionary context contains a valid IPA pronunciation (ip
               />
             )}
 
+            {/* CLOUD SYNC PANEL */}
+            {activeTab === 'sync' && (
+              <div className="sync-panel-container fade-in" style={{ padding: '30px', maxWidth: '800px', margin: '0 auto' }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '24px', borderBottom: '1px solid var(--border-color)', paddingBottom: '16px' }}>
+                  <h1 style={{ fontFamily: 'var(--font-serif)', fontSize: '28px', color: 'var(--text-main)', margin: 0 }}>
+                    <Icon name="sync" style={{ marginRight: '8px', color: 'var(--accent)', verticalAlign: 'middle' }} /> Cloud Synchronization
+                  </h1>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                    <span 
+                      style={{ 
+                        width: '10px', 
+                        height: '10px', 
+                        borderRadius: '50%', 
+                        backgroundColor: syncStatus === 'connected' ? '#10B981' : syncStatus === 'syncing' ? '#3B82F6' : syncStatus === 'error' ? '#EF4444' : '#94A3B8',
+                        display: 'inline-block',
+                        boxShadow: syncStatus === 'connected' ? '0 0 8px #10B981' : syncStatus === 'syncing' ? '0 0 8px #3B82F6' : 'none'
+                      }}
+                    ></span>
+                    <span style={{ fontSize: '13px', fontWeight: '600', color: 'var(--text-muted)', textTransform: 'uppercase' }}>
+                      {syncStatus === 'connected' ? 'Connected' : syncStatus === 'syncing' ? 'Syncing...' : syncStatus === 'error' ? 'Error' : 'Disconnected'}
+                    </span>
+                  </div>
+                </div>
 
+                {syncError && (
+                  <div style={{ backgroundColor: '#FEF2F2', border: '1px solid #FCA5A5', color: '#B91C1C', padding: '16px', borderRadius: '8px', marginBottom: '20px', fontSize: '14.5px', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                    <Icon name="info" style={{ color: '#B91C1C' }} />
+                    <div><strong>Error:</strong> {syncError}</div>
+                  </div>
+                )}
 
+                <div className="card" style={{ marginBottom: '24px', padding: '24px' }}>
+                  <h3 style={{ fontSize: '18px', margin: '0 0 12px 0', color: 'var(--text-main)' }}>Firebase Configuration</h3>
+                  <p style={{ fontSize: '14px', color: 'var(--text-muted)', marginBottom: '16px', lineHeight: '1.5' }}>
+                    To enable automatic cloud sync between your devices, paste your Firebase Web App configuration object (JSON or Javascript object copy-pasted from the Firebase Console) below.
+                  </p>
 
+                  <textarea
+                    placeholder={`{ \n  apiKey: "AIzaSy...",\n  authDomain: "your-app.firebaseapp.com",\n  projectId: "your-app",\n  storageBucket: "your-app.appspot.com",\n  messagingSenderId: "...",\n  appId: "..."\n}`}
+                    value={typeof firebaseConfig === 'object' ? JSON.stringify(firebaseConfig, null, 2) : firebaseConfig || ''}
+                    onChange={(e) => {
+                      setFirebaseConfig(e.target.value);
+                    }}
+                    style={{
+                      width: '100%',
+                      height: '180px',
+                      fontFamily: 'monospace',
+                      fontSize: '13px',
+                      padding: '12px',
+                      borderRadius: '8px',
+                      border: '1px solid var(--border-color)',
+                      backgroundColor: '#F8FAFC',
+                      color: '#0F172A',
+                      marginBottom: '16px',
+                      resize: 'vertical'
+                    }}
+                  />
+
+                  <div style={{ display: 'flex', gap: '12px' }}>
+                    <button
+                      className="btn btn-primary"
+                      onClick={() => {
+                        try {
+                          let cleanText = firebaseConfig;
+                          if (typeof cleanText === 'string') {
+                            cleanText = cleanText.trim();
+                            const objMatch = cleanText.match(/\{[\s\S]*\}/);
+                            if (objMatch) {
+                              cleanText = objMatch[0];
+                            }
+                            const jsonText = cleanText
+                              .replace(/([a-zA-Z0-9_]+)\s*:/g, '"$1":')
+                              .replace(/'/g, '"')
+                              .replace(/,\s*([\}\]])/g, '$1');
+                            const parsed = JSON.parse(jsonText);
+                            localStorage.setItem('lexicon_firebase_config', JSON.stringify(parsed));
+                            setFirebaseConfig(parsed);
+                            const success = initializeFirebaseApp(parsed);
+                            if (success) {
+                              showToastGlobal('Firebase Config saved and connected successfully!');
+                            }
+                          } else if (firebaseConfig) {
+                            localStorage.setItem('lexicon_firebase_config', JSON.stringify(firebaseConfig));
+                            initializeFirebaseApp(firebaseConfig);
+                          }
+                        } catch (e) {
+                          alert('Failed to parse Firebase configuration: ' + e.message + '\nMake sure it is a valid object format.');
+                        }
+                      }}
+                      style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}
+                    >
+                      Save & Connect
+                    </button>
+                    {firebaseConfig && (
+                      <button
+                        className="btn btn-secondary"
+                        onClick={() => {
+                          if (confirm('Are you sure you want to disconnect Cloud Sync and clear configuration?')) {
+                            localStorage.removeItem('lexicon_firebase_config');
+                            setFirebaseConfig(null);
+                            setSyncStatus('disconnected');
+                            dbRef.current = null;
+                            firebaseAppRef.current = null;
+                            showToastGlobal('Disconnected from Firebase.');
+                          }
+                        }}
+                      >
+                        Disconnect
+                      </button>
+                    )}
+                  </div>
+                </div>
+
+                {syncStatus !== 'disconnected' && (
+                  <div className="card" style={{ padding: '24px' }}>
+                    <h3 style={{ fontSize: '18px', margin: '0 0 16px 0', color: 'var(--text-main)' }}>Sync Operations</h3>
+                    
+                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '12px 16px', backgroundColor: '#F8FAFC', borderRadius: '8px', marginBottom: '20px' }}>
+                      <div>
+                        <strong style={{ fontSize: '14.5px', color: '#0F172A', display: 'block' }}>Auto-Sync on Changes</strong>
+                        <span style={{ fontSize: '13px', color: 'var(--text-muted)' }}>Automatically push/pull updates when studying or adding cards.</span>
+                      </div>
+                      <label style={{ position: 'relative', display: 'inline-block', width: '48px', height: '24px' }}>
+                        <input 
+                          type="checkbox" 
+                          checked={autoSyncEnabled} 
+                          onChange={(e) => {
+                            const val = e.target.checked;
+                            setAutoSyncEnabled(val);
+                            localStorage.setItem('lexicon_auto_sync', val.toString());
+                          }}
+                          style={{ opacity: 0, width: 0, height: 0 }}
+                        />
+                        <span 
+                          style={{
+                            position: 'absolute',
+                            cursor: 'pointer',
+                            top: 0, left: 0, right: 0, bottom: 0,
+                            backgroundColor: autoSyncEnabled ? 'var(--accent)' : '#CBD5E1',
+                            transition: '0.3s',
+                            borderRadius: '24px'
+                          }}
+                        >
+                          <span 
+                            style={{
+                              position: 'absolute',
+                              content: '""',
+                              height: '18px', width: '18px',
+                              left: autoSyncEnabled ? '26px' : '3px',
+                              bottom: '3px',
+                              backgroundColor: 'white',
+                              transition: '0.3s',
+                              borderRadius: '50%'
+                            }}
+                          />
+                        </span>
+                      </label>
+                    </div>
+
+                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px', marginBottom: '20px' }}>
+                      <div style={{ border: '1px solid var(--border-color)', borderRadius: '8px', padding: '16px', textAlign: 'center' }}>
+                        <div style={{ fontSize: '13px', color: 'var(--text-muted)', marginBottom: '8px' }}>Last Synced</div>
+                        <strong style={{ fontSize: '15px', color: 'var(--text-main)' }}>
+                          {lastSynced ? new Date(lastSynced).toLocaleString() : 'Never'}
+                        </strong>
+                      </div>
+                      <div style={{ border: '1px solid var(--border-color)', borderRadius: '8px', padding: '16px', textAlign: 'center' }}>
+                        <div style={{ fontSize: '13px', color: 'var(--text-muted)', marginBottom: '8px' }}>Device Time</div>
+                        <strong style={{ fontSize: '15px', color: 'var(--text-main)' }}>
+                          {new Date().toLocaleTimeString()}
+                        </strong>
+                      </div>
+                    </div>
+
+                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px' }}>
+                      <button
+                        className="btn btn-primary"
+                        onClick={() => syncCloud('sync')}
+                        disabled={syncStatus === 'syncing'}
+                        style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}
+                      >
+                        <Icon name="sync" className={syncStatus === 'syncing' ? 'sync-spinner' : ''} /> Sync Now
+                      </button>
+                      <button
+                        className="btn btn-secondary"
+                        onClick={() => {
+                          if (confirm('WARNING: This will completely OVERWRITE your cloud database with your current local browser data. Proceed?')) {
+                            syncCloud('push');
+                          }
+                        }}
+                        disabled={syncStatus === 'syncing'}
+                      >
+                        Force Push Local to Cloud
+                      </button>
+                      <button
+                        className="btn btn-secondary"
+                        onClick={() => {
+                          if (confirm('WARNING: This will completely OVERWRITE your local browser data with the cloud database. Proceed?')) {
+                            syncCloud('pull');
+                          }
+                        }}
+                        disabled={syncStatus === 'syncing'}
+                      >
+                        Force Pull Cloud to Local
+                      </button>
+                    </div>
+                  </div>
+                )}
+
+                <div className="card" style={{ marginTop: '24px', padding: '24px', backgroundColor: '#F8FAFC', border: '1px solid var(--border-color)' }}>
+                  <h4 style={{ fontSize: '16px', margin: '0 0 10px 0', color: '#0F172A' }}>How to set up Google Firebase (Free):</h4>
+                  <ol style={{ fontSize: '13.5px', color: 'var(--text-muted)', paddingLeft: '20px', lineHeight: '1.6', margin: 0 }}>
+                    <li>Go to <a href="https://console.firebase.google.com/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--accent)', textDecoration: 'underline' }}>Firebase Console</a> and sign in with your Google account.</li>
+                    <li>Click <strong>Add Project</strong>, name it (e.g. <code>lexicon-vault-sync</code>), and create the project.</li>
+                    <li>Click the <strong>Web (&lt;/&gt;)</strong> icon to add a web app to your project, register it, and copy the <code>firebaseConfig</code> object.</li>
+                    <li>In the left sidebar of Firebase Console, click <strong>Build &gt; Firestore Database</strong>, then click <strong>Create Database</strong>. Choose default settings (start in production mode is fine).</li>
+                    <li>In the Firestore Database page, go to the <strong>Rules</strong> tab and edit them to allow read/write:
+                      <pre style={{ margin: '8px 0', padding: '10px', backgroundColor: '#E2E8F0', borderRadius: '4px', overflowX: 'auto', fontSize: '12px', color: '#0F172A' }}>
+{`rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /{document=**} {
+      allow read, write: if true;
+    }
+  }
+}`}
+                      </pre>
+                      *(Since this database contains only your study stats, public rules are safe and easy. Click Publish!)*
+                    </li>
+                    <li>Paste the copied configuration object into the textbox above and click <strong>Save & Connect</strong>!</li>
+                  </ol>
+                </div>
+              </div>
+            )}
           </main>
 
           {/* DIALOG: DICTIONARY LOOKUP & ADD WORD */}
