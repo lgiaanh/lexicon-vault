@@ -2604,7 +2604,7 @@ IMPORTANT: If the Free Dictionary context contains a valid IPA pronunciation (ip
                 onClick={() => setActiveTab('weaver')}
               >
                 <span className="nav-icon-text">
-                  <Icon name="link" style={{ marginRight: '6px' }} /> Speaking Weaver
+                  <Icon name="link" style={{ marginRight: '6px' }} /> IELTS Speaking Topics
                 </span>
               </button>
 
@@ -3767,13 +3767,13 @@ service cloud.firestore {
               };
 
               return (
-                <div className="weaver-panel-container fade-in" style={{ padding: '24px', height: '100%', display: 'flex', flexDirection: 'column' }}>
+                <div className="weaver-panel-container fade-in" style={{ padding: '24px', flex: 1, minHeight: 0, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
                   
                   {/* Top Stats Banner */}
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px', borderBottom: '1px solid var(--border-color)', paddingBottom: '16px' }}>
                     <div>
                       <h1 style={{ fontFamily: 'var(--font-serif)', fontSize: '28px', color: 'var(--text-main)', margin: 0 }}>
-                        <Icon name="link" style={{ marginRight: '8px', color: 'var(--accent)', verticalAlign: 'middle' }} /> IELTS Speaking Story Weaver
+                        <Icon name="link" style={{ marginRight: '8px', color: 'var(--accent)', verticalAlign: 'middle' }} /> IELTS Speaking Topics
                       </h1>
                       <span style={{ fontSize: '13.5px', color: 'var(--text-muted)' }}>Map core modal subjects into a unified storyline matrix to cover speaking forecast topics.</span>
                     </div>
@@ -3804,7 +3804,7 @@ service cloud.firestore {
                   )}
 
                   {/* Main Grid Layout */}
-                  <div className="weaver-grid" style={{ display: 'grid', gridTemplateColumns: '30% 42% 28%', gap: '20px', flex: 1, minHeight: 0 }}>
+                  <div className="weaver-grid" style={{ display: 'grid', gridTemplateColumns: '30fr 42fr 28fr', gap: '20px', flex: 1, minHeight: 0 }}>
                     
                     {/* Col 1: Modal Subjects list */}
                     <div className="weaver-col" style={{ display: 'flex', flexDirection: 'column', height: '100%', minHeight: 0 }}>
@@ -3891,7 +3891,7 @@ service cloud.firestore {
                         Shared Storyline Weaver
                       </h3>
 
-                      <div className="card" style={{ flex: 1, padding: '20px', display: 'flex', flexDirection: 'column', minHeight: 0, border: '1px solid var(--border-color)' }}>
+                      <div className="card" style={{ flex: 1, padding: '20px', display: 'flex', flexDirection: 'column', minHeight: 0, border: '1px solid var(--border-color)', overflowY: 'auto' }}>
                         <p style={{ fontSize: '13px', color: 'var(--text-muted)', margin: '0 0 16px 0', lineHeight: '1.4' }}>
                           Select two subjects (e.g., one People + one Places) to write a logical bridging sentence, weaving them into a single coherent narrative that easily fills the 2-minute Speaking requirement.
                         </p>
