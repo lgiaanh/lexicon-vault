@@ -2661,6 +2661,7 @@ IMPORTANT: If the Free Dictionary context contains a valid IPA pronunciation (ip
           <main className="main-content">
             
             {/* TOP BAR / NAVIGATION ACTION ELEMENTS */}
+            {activeTab !== 'weaver' && activeTab !== 'sync' && (
             <header className="top-nav">
               <div className="search-box-container">
                 <Icon name="search" className="search-icon" />
@@ -2689,6 +2690,7 @@ IMPORTANT: If the Free Dictionary context contains a valid IPA pronunciation (ip
                 </button>
               </div>
             </header>
+            )}
 
             {/* VAULT VIEW TAB */}
             {activeTab === 'vault' && (
@@ -3716,7 +3718,7 @@ service cloud.firestore {
               </div>
             )}
 
-            {/* SPEAKING STORY WEAVER PANEL (MINIMALIST SPLIT TAB VIEW) */}
+            {/* SPEAKING STORY WEAVER PANEL (MINIMALIST SPLIT TAB VIEW - RESPONSIVE FLEX) */}
             {activeTab === 'weaver' && (() => {
               const totalPrompts = speakingPrompts.length;
               const coveredPrompts = speakingPrompts.filter(p => storylineMappings.some(m => m.question_id === p.id)).length;
@@ -3780,33 +3782,33 @@ service cloud.firestore {
               };
 
               return (
-                <div className="weaver-panel-container fade-in" style={{ padding: '20px 24px', flex: 1, minHeight: 0, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
+                <div className="weaver-panel-container fade-in" style={{ padding: '16px 20px', flex: 1, minHeight: 0, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
                   
                   {/* Top Stats Banner */}
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px', borderBottom: '1px solid var(--border-color)', paddingBottom: '12px' }}>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '12px', borderBottom: '1px solid var(--border-color)', paddingBottom: '10px', flexShrink: 0 }}>
                     <div>
-                      <h1 style={{ fontFamily: 'var(--font-serif)', fontSize: '26px', color: 'var(--text-main)', margin: 0 }}>
+                      <h1 style={{ fontFamily: 'var(--font-serif)', fontSize: '24px', color: 'var(--text-main)', margin: 0 }}>
                         <Icon name="link" style={{ marginRight: '8px', color: 'var(--accent)', verticalAlign: 'middle' }} /> IELTS Speaking Topics
                       </h1>
-                      <span style={{ fontSize: '13px', color: 'var(--text-muted)' }}>Map core subjects to speaking forecast prompts and build bridging storylines.</span>
+                      <span style={{ fontSize: '12.5px', color: 'var(--text-muted)' }}>Map core subjects to speaking forecast prompts and build bridging storylines.</span>
                     </div>
 
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
                       {/* Pill toggle bar */}
                       <div style={{ display: 'flex', backgroundColor: '#F1F5F9', padding: '3px', borderRadius: '8px', border: '1px solid var(--border-color)' }}>
                         <button
                           onClick={() => setSubTab('subjects')}
                           style={{
-                            padding: '6px 14px',
-                            fontSize: '12px',
+                            padding: '5px 12px',
+                            fontSize: '11.5px',
                             fontWeight: '600',
                             borderRadius: '6px',
                             border: 'none',
                             cursor: 'pointer',
                             backgroundColor: subTab === 'subjects' ? 'white' : 'transparent',
                             color: subTab === 'subjects' ? 'var(--accent)' : 'var(--text-muted)',
-                            boxShadow: subTab === 'subjects' ? '0 1px 3px rgba(0,0,0,0.08)' : 'none',
-                            transition: 'all 0.15s ease'
+                            boxShadow: subTab === 'subjects' ? '0 1px 2px rgba(0,0,0,0.06)' : 'none',
+                            transition: 'all 0.1s ease'
                           }}
                         >
                           👤 Subjects & Stories
@@ -3814,16 +3816,16 @@ service cloud.firestore {
                         <button
                           onClick={() => setSubTab('matrix')}
                           style={{
-                            padding: '6px 14px',
-                            fontSize: '12px',
+                            padding: '5px 12px',
+                            fontSize: '11.5px',
                             fontWeight: '600',
                             borderRadius: '6px',
                             border: 'none',
                             cursor: 'pointer',
                             backgroundColor: subTab === 'matrix' ? 'white' : 'transparent',
                             color: subTab === 'matrix' ? 'var(--accent)' : 'var(--text-muted)',
-                            boxShadow: subTab === 'matrix' ? '0 1px 3px rgba(0,0,0,0.08)' : 'none',
-                            transition: 'all 0.15s ease'
+                            boxShadow: subTab === 'matrix' ? '0 1px 2px rgba(0,0,0,0.06)' : 'none',
+                            transition: 'all 0.1s ease'
                           }}
                         >
                           📋 Topic Coverage Matrix ({coveragePct}%)
@@ -3834,7 +3836,7 @@ service cloud.firestore {
 
                   {/* Warning banner */}
                   {!hasMinCapital && subTab === 'subjects' && (
-                    <div style={{ backgroundColor: '#FFFBEB', border: '1px solid #FCD34D', color: '#B45309', padding: '10px 14px', borderRadius: '8px', marginBottom: '14px', fontSize: '13px', display: 'flex', alignItems: 'center', gap: '8px', flexShrink: 0 }}>
+                    <div style={{ backgroundColor: '#FFFBEB', border: '1px solid #FCD34D', color: '#B45309', padding: '8px 12px', borderRadius: '8px', marginBottom: '10px', fontSize: '12px', display: 'flex', alignItems: 'center', gap: '8px', flexShrink: 0 }}>
                       <Icon name="info" style={{ color: '#B45309' }} />
                       <div>
                         <strong>Study Suggestion:</strong> You should prepare at least <strong>1 People</strong>, <strong>1 Places</strong>, and <strong>1 Objects</strong> subject in your core capital to unlock flexible, cross-topic story weaving.
@@ -3844,12 +3846,12 @@ service cloud.firestore {
 
                   {/* SUBTAB 1: SUBJECTS & STORIES */}
                   {subTab === 'subjects' && (
-                    <div style={{ display: 'grid', gridTemplateColumns: '38fr 62fr', gap: '20px', flex: 1, minHeight: 0 }}>
+                    <div style={{ display: 'flex', flex: 1, minHeight: 0, gap: '20px' }}>
                       
                       {/* Left: Subjects List */}
-                      <div style={{ display: 'flex', flexDirection: 'column', height: '100%', minHeight: 0 }}>
-                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '10px', flexShrink: 0 }}>
-                          <span style={{ fontSize: '12px', fontWeight: 'bold', color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                      <div style={{ width: '38%', display: 'flex', flexDirection: 'column', minHeight: 0 }}>
+                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '8px', flexShrink: 0 }}>
+                          <span style={{ fontSize: '11px', fontWeight: 'bold', color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
                             Your Modal Subjects ({modalSubjects.length})
                           </span>
                           <button 
@@ -3863,7 +3865,7 @@ service cloud.firestore {
                               setSubjectDetail3('');
                               setIsSubjectModalOpen(true);
                             }}
-                            style={{ padding: '3px 8px', fontSize: '11px', backgroundColor: 'var(--accent-light)', color: 'var(--accent)', border: '1px solid var(--accent)', borderRadius: '4px' }}
+                            style={{ padding: '2px 8px', fontSize: '10.5px', backgroundColor: 'var(--accent-light)', color: 'var(--accent)', border: '1px solid var(--accent)', borderRadius: '4px' }}
                           >
                             + Add Subject
                           </button>
@@ -3874,20 +3876,20 @@ service cloud.firestore {
                             const linksCount = storylineMappings.filter(m => m.subject_id === sub.id).length;
                             const cfg = categoryColors[sub.category_id] || { text: '#475569', bg: '#F1F5F9', label: 'Other' };
                             return (
-                              <div key={sub.id} style={{ padding: '12px 14px', borderRadius: '8px', border: '1px solid var(--border-color)', backgroundColor: 'white', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                                <div style={{ display: 'flex', flexDirection: 'column', gap: '4px', overflow: 'hidden' }}>
+                              <div key={sub.id} style={{ padding: '10px 12px', borderRadius: '8px', border: '1px solid var(--border-color)', backgroundColor: 'white', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                                <div style={{ display: 'flex', flexDirection: 'column', gap: '3px', overflow: 'hidden' }}>
                                   <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-                                    <span style={{ fontSize: '9px', fontWeight: 'bold', color: cfg.text, backgroundColor: cfg.bg, padding: '1px 6px', borderRadius: '10px', textTransform: 'uppercase' }}>
+                                    <span style={{ fontSize: '8.5px', fontWeight: 'bold', color: cfg.text, backgroundColor: cfg.bg, padding: '1px 5px', borderRadius: '10px', textTransform: 'uppercase' }}>
                                       {cfg.label}
                                     </span>
-                                    <span style={{ fontSize: '11px', color: 'var(--text-muted)' }}>({linksCount} linked topics)</span>
+                                    <span style={{ fontSize: '10px', color: 'var(--text-muted)' }}>({linksCount} linked topics)</span>
                                   </div>
-                                  <strong style={{ fontSize: '13.5px', color: 'var(--text-main)', textOverflow: 'ellipsis', overflow: 'hidden', whiteSpace: 'nowrap' }}>{sub.subject_name}</strong>
-                                  <div style={{ fontSize: '11.5px', color: 'var(--text-muted)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                                  <strong style={{ fontSize: '13px', color: 'var(--text-main)', textOverflow: 'ellipsis', overflow: 'hidden', whiteSpace: 'nowrap' }}>{sub.subject_name}</strong>
+                                  <div style={{ fontSize: '11px', color: 'var(--text-muted)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
                                     {sub.key_details.join(' • ')}
                                   </div>
                                 </div>
-                                <div style={{ display: 'flex', gap: '10px', flexShrink: 0 }}>
+                                <div style={{ display: 'flex', gap: '8px', flexShrink: 0 }}>
                                   <button 
                                     onClick={() => {
                                       setEditingSubject(sub);
@@ -3900,7 +3902,7 @@ service cloud.firestore {
                                     }}
                                     style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'var(--text-muted)', padding: 0 }}
                                   >
-                                    <Icon name="edit" style={{ width: '0.85em', height: '0.85em' }} />
+                                    <Icon name="edit" style={{ width: '0.8em', height: '0.8em' }} />
                                   </button>
                                   <button 
                                     onClick={() => {
@@ -3912,7 +3914,7 @@ service cloud.firestore {
                                     }}
                                     style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#EF4444', padding: 0 }}
                                   >
-                                    <Icon name="trash" style={{ width: '0.85em', height: '0.85em' }} />
+                                    <Icon name="trash" style={{ width: '0.8em', height: '0.8em' }} />
                                   </button>
                                 </div>
                               </div>
@@ -3922,58 +3924,58 @@ service cloud.firestore {
                       </div>
 
                       {/* Right: Story Connection Builder */}
-                      <div style={{ display: 'flex', flexDirection: 'column', height: '100%', minHeight: 0 }}>
-                        <span style={{ fontSize: '12px', fontWeight: 'bold', color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '10px', display: 'block', flexShrink: 0 }}>
+                      <div style={{ width: '62%', display: 'flex', flexDirection: 'column', minHeight: 0 }}>
+                        <span style={{ fontSize: '11px', fontWeight: 'bold', color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '8px', display: 'block', flexShrink: 0 }}>
                           Storyline Connector
                         </span>
 
-                        <div className="card" style={{ flex: 1, padding: '16px', display: 'flex', flexDirection: 'column', minHeight: 0, border: '1px solid var(--border-color)', overflowY: 'auto' }}>
-                          <p style={{ fontSize: '12.5px', color: 'var(--text-muted)', margin: '0 0 12px 0', lineHeight: '1.4' }}>
+                        <div className="card" style={{ flex: 1, padding: '14px', display: 'flex', flexDirection: 'column', minHeight: 0, border: '1px solid var(--border-color)', overflowY: 'auto' }}>
+                          <p style={{ fontSize: '12px', color: 'var(--text-muted)', margin: '0 0 10px 0', lineHeight: '1.4', flexShrink: 0 }}>
                             Select two modal subjects to write a bridging narrative connecting them.
                           </p>
 
-                          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px', marginBottom: '14px' }}>
+                          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px', marginBottom: '10px', flexShrink: 0 }}>
                             <div>
-                              <label className="form-label" style={{ fontSize: '10px', textTransform: 'uppercase', color: 'var(--text-muted)' }}>Modal Subject A</label>
+                              <label className="form-label" style={{ fontSize: '9.5px', textTransform: 'uppercase', color: 'var(--text-muted)' }}>Modal Subject A</label>
                               <select 
                                 value={weaverActiveSubjectA}
                                 onChange={(e) => setWeaverActiveSubjectA(e.target.value)}
-                                style={{ width: '100%', padding: '6px', borderRadius: '6px', border: '1px solid var(--border-color)', fontSize: '12.5px' }}
+                                style={{ width: '100%', padding: '5px', borderRadius: '6px', border: '1px solid var(--border-color)', fontSize: '12px' }}
                               >
                                 {modalSubjects.map(s => <option key={s.id} value={s.id}>{s.subject_name}</option>)}
                               </select>
                             </div>
                             <div>
-                              <label className="form-label" style={{ fontSize: '10px', textTransform: 'uppercase', color: 'var(--text-muted)' }}>Modal Subject B</label>
+                              <label className="form-label" style={{ fontSize: '9.5px', textTransform: 'uppercase', color: 'var(--text-muted)' }}>Modal Subject B</label>
                               <select 
                                 value={weaverActiveSubjectB}
                                 onChange={(e) => setWeaverActiveSubjectB(e.target.value)}
-                                style={{ width: '100%', padding: '6px', borderRadius: '6px', border: '1px solid var(--border-color)', fontSize: '12.5px' }}
+                                style={{ width: '100%', padding: '5px', borderRadius: '6px', border: '1px solid var(--border-color)', fontSize: '12px' }}
                               >
                                 {modalSubjects.map(s => <option key={s.id} value={s.id}>{s.subject_name}</option>)}
                               </select>
                             </div>
                           </div>
 
-                          {/* Subject details side-by-side */}
+                          {/* Subject details side-by-side (Max Height limits vertical growth) */}
                           {(() => {
                             const subA = modalSubjects.find(s => s.id === weaverActiveSubjectA);
                             const subB = modalSubjects.find(s => s.id === weaverActiveSubjectB);
                             if (!subA || !subB) return null;
 
                             return (
-                              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px', marginBottom: '14px', flexShrink: 0 }}>
-                                <div style={{ backgroundColor: '#F8FAFC', padding: '10px', borderRadius: '6px', border: '1px solid var(--border-color)' }}>
-                                  <span style={{ fontSize: '9px', fontWeight: 'bold', color: 'var(--accent)', textTransform: 'uppercase' }}>{subA.category_id}</span>
-                                  <strong style={{ display: 'block', fontSize: '12.5px', marginBottom: '4px' }}>{subA.subject_name}</strong>
-                                  <ul style={{ paddingLeft: '12px', fontSize: '11px', color: 'var(--text-muted)', margin: 0 }}>
+                              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px', marginBottom: '10px', flexShrink: 0 }}>
+                                <div style={{ backgroundColor: '#F8FAFC', padding: '8px 10px', borderRadius: '6px', border: '1px solid var(--border-color)', maxHeight: '90px', overflowY: 'auto' }}>
+                                  <span style={{ fontSize: '8.5px', fontWeight: 'bold', color: 'var(--accent)', textTransform: 'uppercase' }}>{subA.category_id}</span>
+                                  <strong style={{ display: 'block', fontSize: '12px', marginBottom: '3px' }}>{subA.subject_name}</strong>
+                                  <ul style={{ paddingLeft: '12px', fontSize: '10.5px', color: 'var(--text-muted)', margin: 0 }}>
                                     {subA.key_details.map((d, i) => d.trim() && <li key={i}>{d}</li>)}
                                   </ul>
                                 </div>
-                                <div style={{ backgroundColor: '#F8FAFC', padding: '10px', borderRadius: '6px', border: '1px solid var(--border-color)' }}>
-                                  <span style={{ fontSize: '9px', fontWeight: 'bold', color: 'var(--accent)', textTransform: 'uppercase' }}>{subB.category_id}</span>
-                                  <strong style={{ display: 'block', fontSize: '12.5px', marginBottom: '4px' }}>{subB.subject_name}</strong>
-                                  <ul style={{ paddingLeft: '12px', fontSize: '11px', color: 'var(--text-muted)', margin: 0 }}>
+                                <div style={{ backgroundColor: '#F8FAFC', padding: '8px 10px', borderRadius: '6px', border: '1px solid var(--border-color)', maxHeight: '90px', overflowY: 'auto' }}>
+                                  <span style={{ fontSize: '8.5px', fontWeight: 'bold', color: 'var(--accent)', textTransform: 'uppercase' }}>{subB.category_id}</span>
+                                  <strong style={{ display: 'block', fontSize: '12px', marginBottom: '3px' }}>{subB.subject_name}</strong>
+                                  <ul style={{ paddingLeft: '12px', fontSize: '10.5px', color: 'var(--text-muted)', margin: 0 }}>
                                     {subB.key_details.map((d, i) => d.trim() && <li key={i}>{d}</li>)}
                                   </ul>
                                 </div>
@@ -3982,12 +3984,12 @@ service cloud.firestore {
                           })()}
 
                           {weaverActiveSubjectA === weaverActiveSubjectB ? (
-                            <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', border: '1px dashed var(--border-color)', borderRadius: '8px', padding: '20px', color: 'var(--text-muted)', fontSize: '12.5px' }}>
+                            <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', border: '1px dashed var(--border-color)', borderRadius: '8px', padding: '16px', color: 'var(--text-muted)', fontSize: '12px' }}>
                               Please select two different subjects to write a story link.
                             </div>
                           ) : (
                             <div style={{ flex: 1, display: 'flex', flexDirection: 'column', minHeight: 0 }}>
-                              <label className="form-label" style={{ fontSize: '12px', fontWeight: '600', marginBottom: '6px' }}>
+                              <label className="form-label" style={{ fontSize: '11px', fontWeight: '600', marginBottom: '4px', flexShrink: 0 }}>
                                 Bridging Story Line / Connection Link
                               </label>
                               <textarea
@@ -3995,19 +3997,19 @@ service cloud.firestore {
                                 value={activeWeave ? activeWeave.bridging_sentence : ''}
                                 onChange={(e) => handleWeaveTextChange(e.target.value)}
                                 style={{
-                                  flex: 1,
                                   width: '100%',
-                                  padding: '10px',
+                                  height: '85px',
+                                  padding: '8px 10px',
                                   borderRadius: '6px',
                                   border: '1px solid var(--border-color)',
-                                  fontSize: '13px',
-                                  lineHeight: '1.45',
+                                  fontSize: '12.5px',
+                                  lineHeight: '1.4',
                                   resize: 'none',
-                                  marginBottom: '6px',
-                                  minHeight: '80px'
+                                  marginBottom: '4px',
+                                  flexShrink: 0
                                 }}
                               />
-                              <span style={{ fontSize: '10.5px', color: 'var(--text-muted)' }}>
+                              <span style={{ fontSize: '10px', color: 'var(--text-muted)', flexShrink: 0 }}>
                                 * Use <code>*Subject Name*</code> to highlight core subjects within your bridging text.
                               </span>
                             </div>
@@ -4019,10 +4021,10 @@ service cloud.firestore {
 
                   {/* SUBTAB 2: TOPIC COVERAGE MATRIX */}
                   {subTab === 'matrix' && (
-                    <div style={{ display: 'grid', gridTemplateColumns: '45fr 55fr', gap: '20px', flex: 1, minHeight: 0 }}>
+                    <div style={{ display: 'flex', flex: 1, minHeight: 0, gap: '20px' }}>
                       
                       {/* Left: Prompts list */}
-                      <div style={{ display: 'flex', flexDirection: 'column', height: '100%', minHeight: 0 }}>
+                      <div style={{ width: '45%', display: 'flex', flexDirection: 'column', minHeight: 0 }}>
                         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '8px', flexShrink: 0 }}>
                           {/* Matrix category filter bar */}
                           <div style={{ display: 'flex', gap: '3px' }}>
@@ -4057,7 +4059,7 @@ service cloud.firestore {
                                 key={p.id}
                                 onClick={() => setSelectedActivePrompt(p)}
                                 style={{
-                                  padding: '10px 12px',
+                                  padding: '8px 10px',
                                   borderRadius: '6px',
                                   border: isSelected ? '1px solid var(--accent)' : '1px solid var(--border-color)',
                                   backgroundColor: isSelected ? '#F4F1FC' : mapping ? '#F0FDF4' : 'white',
@@ -4065,17 +4067,17 @@ service cloud.firestore {
                                   display: 'flex',
                                   justifyContent: 'space-between',
                                   alignItems: 'center',
-                                  transition: 'all 0.15s ease'
+                                  transition: 'all 0.1s ease'
                                 }}
                               >
-                                <span style={{ fontSize: '12.5px', color: '#0F172A', fontWeight: '500', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', marginRight: '8px' }} title={p.prompt_text}>
+                                <span style={{ fontSize: '12px', color: '#0F172A', fontWeight: '500', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', marginRight: '8px' }} title={p.prompt_text}>
                                   {p.prompt_text}
                                 </span>
                                 <div style={{ display: 'flex', alignItems: 'center', gap: '6px', flexShrink: 0 }}>
                                   {mapping ? (
-                                    <span style={{ fontSize: '11px', color: '#10B981', fontWeight: '600' }}>✓ Covered</span>
+                                    <span style={{ fontSize: '10.5px', color: '#10B981', fontWeight: '600' }}>✓ Covered</span>
                                   ) : (
-                                    <span style={{ fontSize: '11px', color: 'var(--text-muted)' }}>Pending</span>
+                                    <span style={{ fontSize: '10.5px', color: 'var(--text-muted)' }}>Pending</span>
                                   )}
                                 </div>
                               </div>
@@ -4085,17 +4087,17 @@ service cloud.firestore {
                       </div>
 
                       {/* Right: Selected prompt linker detail */}
-                      <div style={{ display: 'flex', flexDirection: 'column', height: '100%', minHeight: 0 }}>
-                        <span style={{ fontSize: '12px', fontWeight: 'bold', color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '8px', display: 'block', flexShrink: 0 }}>
+                      <div style={{ width: '55%', display: 'flex', flexDirection: 'column', minHeight: 0 }}>
+                        <span style={{ fontSize: '11px', fontWeight: 'bold', color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '8px', display: 'block', flexShrink: 0 }}>
                           Topic Linker Details
                         </span>
 
-                        <div className="card" style={{ flex: 1, padding: '16px', display: 'flex', flexDirection: 'column', minHeight: 0, border: '1px solid var(--border-color)', overflowY: 'auto' }}>
+                        <div className="card" style={{ flex: 1, padding: '14px', display: 'flex', flexDirection: 'column', minHeight: 0, border: '1px solid var(--border-color)', overflowY: 'auto' }}>
                           {!selectedActivePrompt ? (
                             <div style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', color: 'var(--text-muted)', textAlign: 'center', padding: '20px' }}>
-                              <Icon name="info" style={{ fontSize: '32px', marginBottom: '8px', color: 'var(--border-muted)' }} />
-                              <strong style={{ display: 'block', fontSize: '14px', color: 'var(--text-main)' }}>No Speaking Topic Selected</strong>
-                              <span style={{ fontSize: '12px' }}>Select an IELTS prompt on the left to link a subject and write your speaking approach note.</span>
+                              <Icon name="info" style={{ fontSize: '28px', marginBottom: '6px', color: 'var(--border-muted)' }} />
+                              <strong style={{ display: 'block', fontSize: '13.5px', color: 'var(--text-main)' }}>No Speaking Topic Selected</strong>
+                              <span style={{ fontSize: '11.5px' }}>Select an IELTS prompt on the left to link a subject and write your speaking approach note.</span>
                             </div>
                           ) : (() => {
                             const mapping = storylineMappings.find(m => m.question_id === selectedActivePrompt.id);
@@ -4103,36 +4105,36 @@ service cloud.firestore {
 
                             return (
                               <div style={{ flex: 1, display: 'flex', flexDirection: 'column', minHeight: 0 }}>
-                                <div style={{ backgroundColor: '#F8FAFC', padding: '10px 14px', borderRadius: '6px', border: '1px solid var(--border-color)', marginBottom: '14px', flexShrink: 0 }}>
-                                  <span style={{ fontSize: '9px', fontWeight: 'bold', color: 'var(--text-muted)', textTransform: 'uppercase' }}>Selected IELTS speaking Part 2 Prompt</span>
-                                  <strong style={{ display: 'block', fontSize: '13.5px', color: 'var(--text-main)', marginTop: '4px', lineHeight: '1.4' }}>{selectedActivePrompt.prompt_text}</strong>
+                                <div style={{ backgroundColor: '#F8FAFC', padding: '8px 10px', borderRadius: '6px', border: '1px solid var(--border-color)', marginBottom: '10px', flexShrink: 0 }}>
+                                  <span style={{ fontSize: '8.5px', fontWeight: 'bold', color: 'var(--text-muted)', textTransform: 'uppercase' }}>Selected IELTS speaking Part 2 Prompt</span>
+                                  <strong style={{ display: 'block', fontSize: '12.5px', color: 'var(--text-main)', marginTop: '2px', lineHeight: '1.45' }}>{selectedActivePrompt.prompt_text}</strong>
                                 </div>
 
                                 {mapping && linkedSubject ? (
-                                  <div style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: '12px' }}>
-                                    <div style={{ padding: '12px', border: '1px solid #E2E8F0', borderRadius: '8px', backgroundColor: 'white' }}>
-                                      <span style={{ fontSize: '10px', color: 'var(--text-muted)', display: 'block' }}>LINKED SUBJECT</span>
-                                      <strong style={{ fontSize: '14px', color: 'var(--accent)' }}>{linkedSubject.subject_name}</strong>
-                                      <ul style={{ paddingLeft: '16px', fontSize: '11.5px', color: 'var(--text-muted)', margin: '4px 0 0 0' }}>
+                                  <div style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: '10px', minHeight: 0 }}>
+                                    <div style={{ padding: '10px', border: '1px solid #E2E8F0', borderRadius: '8px', backgroundColor: 'white', flexShrink: 0 }}>
+                                      <span style={{ fontSize: '9px', color: 'var(--text-muted)', display: 'block' }}>LINKED SUBJECT</span>
+                                      <strong style={{ fontSize: '13px', color: 'var(--accent)' }}>{linkedSubject.subject_name}</strong>
+                                      <ul style={{ paddingLeft: '14px', fontSize: '11px', color: 'var(--text-muted)', margin: '2px 0 0 0' }}>
                                         {linkedSubject.key_details.map((d, i) => <li key={i}>{d}</li>)}
                                       </ul>
                                     </div>
 
-                                    <div style={{ flex: 1, minHeight: 0 }}>
-                                      <span style={{ fontSize: '11px', color: 'var(--text-muted)', display: 'block', marginBottom: '4px' }}>ADAPTATION ANGLE & STRATEGY</span>
-                                      <div style={{ padding: '10px 12px', backgroundColor: '#F0FDF4', color: '#047857', border: '1px solid #BBF7D0', borderRadius: '6px', fontSize: '13px', lineHeight: '1.45', fontStyle: 'italic' }}>
+                                    <div style={{ flex: 1, minHeight: 0, overflowY: 'auto' }}>
+                                      <span style={{ fontSize: '10px', color: 'var(--text-muted)', display: 'block', marginBottom: '2px' }}>ADAPTATION ANGLE & STRATEGY</span>
+                                      <div style={{ padding: '8px 10px', backgroundColor: '#F0FDF4', color: '#047857', border: '1px solid #BBF7D0', borderRadius: '6px', fontSize: '12.5px', lineHeight: '1.4', fontStyle: 'italic' }}>
                                         💡 {mapping.adaptation_note}
                                       </div>
                                     </div>
 
-                                    <div style={{ display: 'flex', justifyContent: 'flex-end', flexShrink: 0 }}>
+                                    <div style={{ display: 'flex', justifyContent: 'flex-end', flexShrink: 0, paddingTop: '6px' }}>
                                       <button
                                         onClick={() => {
                                           if (confirm(`Are you sure you want to unlink this topic?`)) {
                                             setStorylineMappings(storylineMappings.filter(m => m.id !== mapping.id));
                                           }
                                         }}
-                                        style={{ backgroundColor: 'transparent', color: '#EF4444', border: 'none', fontSize: '12px', cursor: 'pointer', fontWeight: '600' }}
+                                        style={{ backgroundColor: 'transparent', color: '#EF4444', border: 'none', fontSize: '11px', cursor: 'pointer', fontWeight: '600' }}
                                       >
                                         Unlink Topic
                                       </button>
@@ -4140,28 +4142,28 @@ service cloud.firestore {
                                   </div>
                                 ) : (
                                   <div style={{ flex: 1, display: 'flex', flexDirection: 'column', minHeight: 0 }}>
-                                    <div className="form-group" style={{ marginBottom: '12px', flexShrink: 0 }}>
-                                      <label className="form-label" style={{ fontSize: '11px' }}>Link a Modal Subject</label>
+                                    <div className="form-group" style={{ marginBottom: '8px', flexShrink: 0 }}>
+                                      <label className="form-label" style={{ fontSize: '10px' }}>Link a Modal Subject</label>
                                       <select
                                         value={selectedSubjectIdToLink}
                                         onChange={(e) => setSelectedSubjectIdToLink(e.target.value)}
-                                        style={{ width: '100%', padding: '6px', borderRadius: '6px', border: '1px solid var(--border-color)', fontSize: '12.5px' }}
+                                        style={{ width: '100%', padding: '5px', borderRadius: '6px', border: '1px solid var(--border-color)', fontSize: '12px' }}
                                       >
                                         {modalSubjects.map(s => <option key={s.id} value={s.id}>{s.subject_name} ({s.category_id})</option>)}
                                       </select>
                                     </div>
 
                                     <div className="form-group" style={{ flex: 1, display: 'flex', flexDirection: 'column', minHeight: 0 }}>
-                                      <label className="form-label" style={{ fontSize: '11px' }}>Adaptation Angle (How does this subject answer the prompt?)</label>
+                                      <label className="form-label" style={{ fontSize: '10px' }}>Adaptation Angle (How does this subject answer the prompt?)</label>
                                       <textarea
                                         placeholder="E.g. Ainil speaks fluent English, Malay, and Chinese, representing an exceptional language learner..."
                                         value={adaptationNoteText}
                                         onChange={(e) => setAdaptationNoteText(e.target.value)}
-                                        style={{ width: '100%', flex: 1, padding: '10px', borderRadius: '6px', border: '1px solid var(--border-color)', resize: 'none', fontSize: '13px', lineHeight: '1.45', minHeight: '80px' }}
+                                        style={{ width: '100%', flex: 1, padding: '8px 10px', borderRadius: '6px', border: '1px solid var(--border-color)', resize: 'none', fontSize: '12.5px', lineHeight: '1.4', minHeight: '60px' }}
                                       />
                                     </div>
 
-                                    <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '10px', flexShrink: 0 }}>
+                                    <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '8px', flexShrink: 0 }}>
                                       <button
                                         onClick={() => {
                                           if (!selectedSubjectIdToLink) {
@@ -4185,7 +4187,7 @@ service cloud.firestore {
                                           setAdaptationNoteText('');
                                         }}
                                         className="btn btn-primary"
-                                        style={{ padding: '6px 14px', fontSize: '12px' }}
+                                        style={{ padding: '5px 12px', fontSize: '11px' }}
                                       >
                                         Link Topic
                                       </button>
@@ -4203,8 +4205,6 @@ service cloud.firestore {
                 </div>
               );
             })()}
-          </main>
-
           {/* DIALOG: DICTIONARY LOOKUP & ADD WORD */}
           {isAddModalOpen && (
             <div className="modal-overlay">
