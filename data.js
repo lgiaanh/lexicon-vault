@@ -18148,8 +18148,105 @@ const INITIAL_ARTICLES = [
     date: new Date().toISOString().split('T')[0]
   }
 ];
+// IELTS Speaking Forecast Q2/2026 Prompts Database
+const INITIAL_SPEAKING_PROMPTS = [
+  { id: "prompt-1", category_id: "people", prompt_text: "Describe a famous person who you would like to meet" },
+  { id: "prompt-2", category_id: "people", prompt_text: "Describe a person you know who enjoys helping other people" },
+  { id: "prompt-3", category_id: "people", prompt_text: "Describe a person who is good at learning languages" },
+  { id: "prompt-4", category_id: "people", prompt_text: "Describe a friend from childhood who you remember very well" },
+  { id: "prompt-5", category_id: "people", prompt_text: "Describe a person who has chosen a career in the medical field (e.g. doctor, nurse, vet)" },
+  { id: "prompt-6", category_id: "people", prompt_text: "Describe a person you know about who runs a successful business" },
+  { id: "prompt-7", category_id: "people", prompt_text: "Describe a person who you think is good at planning things" },
+  { id: "prompt-8", category_id: "places", prompt_text: "Describe a place you enjoyed visiting that was very quiet" },
+  { id: "prompt-9", category_id: "places", prompt_text: "Describe a city that you have been to and enjoy visiting" },
+  { id: "prompt-10", category_id: "places", prompt_text: "Describe a home that you like to visit but did not want to live in" },
+  { id: "prompt-11", category_id: "places", prompt_text: "Describe a place in another country where you would like to work for a short time" },
+  { id: "prompt-12", category_id: "places", prompt_text: "Describe a place which is far away that you would like to visit in the future" },
+  { id: "prompt-13", category_id: "places", prompt_text: "Describe a place you went to on holiday that you would recommend" },
+  { id: "prompt-14", category_id: "experiences", prompt_text: "Describe a time you felt proud of something a family member did" },
+  { id: "prompt-15", category_id: "experiences", prompt_text: "Describe a time when you were not allowed to use your phone" },
+  { id: "prompt-16", category_id: "experiences", prompt_text: "Describe a time you gave advice to someone" },
+  { id: "prompt-17", category_id: "experiences", prompt_text: "Describe a time when someone you know found a clever solution to a problem" },
+  { id: "prompt-18", category_id: "experiences", prompt_text: "Describe a difficult decision you made that had a good result" },
+  { id: "prompt-19", category_id: "experiences", prompt_text: "Describe a time when you had to get up very early" },
+  { id: "prompt-20", category_id: "experiences", prompt_text: "Describe an ambition you have had for a long time" },
+  { id: "prompt-21", category_id: "experiences", prompt_text: "Describe a time you changed your opinion" },
+  { id: "prompt-22", category_id: "experiences", prompt_text: "Describe a time that you had to change your plan/you changed your mind" },
+  { id: "prompt-23", category_id: "objects", prompt_text: "Describe a piece of technology you would like to own in the future" },
+  { id: "prompt-24", category_id: "objects", prompt_text: "Describe an app or software you often use on your phone or computer" },
+  { id: "prompt-25", category_id: "objects", prompt_text: "Describe a problem of technology you have encountered, like a computer or a cell phone" },
+  { id: "prompt-26", category_id: "objects", prompt_text: "Describe a traditional product made in your country which you like" },
+  { id: "prompt-27", category_id: "objects", prompt_text: "Describe a tall building in your city you like or dislike" },
+  { id: "prompt-28", category_id: "activities", prompt_text: "Describe a perfect job you would like to have in the future" },
+  { id: "prompt-29", category_id: "activities", prompt_text: "Describe a movie you enjoyed watching" },
+  { id: "prompt-30", category_id: "activities", prompt_text: "Describe an occasion when you felt excited about trying an activity for the first time" },
+  { id: "prompt-31", category_id: "activities", prompt_text: "Describe a live sport match you have ever watched" },
+  { id: "prompt-32", category_id: "activities", prompt_text: "Describe an interesting video you watched in social media" },
+  { id: "prompt-33", category_id: "activities", prompt_text: "Describe a story you knew that involves an animal (like in a movie or a book)" }
+];
+
+// Initial pre-seeded Modal Subjects (User's starting "vốn")
+const INITIAL_MODAL_SUBJECTS = [
+  {
+    id: "subject-ainil",
+    category_id: "people",
+    subject_name: "Ainil (Malaysian friend)",
+    key_details: [
+      "Met in person at a 2025 fan meeting in Vietnam (shared fandom)",
+      "Exceptional language skills (fluent in Malay, English, and Chinese)",
+      "Gives great advice on language learning and self-study habits"
+    ]
+  },
+  {
+    id: "subject-quiet-cafe",
+    category_id: "places",
+    subject_name: "Quiet River Cafe",
+    key_details: [
+      "Located near a peaceful river with glassmorphism design",
+      "Filled with books and plays soft acoustic instrumental music",
+      "Perfect environment for studying and reflection without distractions"
+    ]
+  }
+];
+
+// Initial Storyline topic mapping links
+const INITIAL_STORYLINE_MAPPINGS = [
+  {
+    id: "map-ainil-languages",
+    subject_id: "subject-ainil",
+    question_id: "prompt-3", // is good at learning languages
+    adaptation_note: "Ainil self-studied and successfully mastered English, Malay, and Chinese fluently."
+  },
+  {
+    id: "map-ainil-solution",
+    subject_id: "subject-ainil",
+    question_id: "prompt-17", // clever solution to a problem
+    adaptation_note: "She bridged a communication gap by translating between Chinese and English at a fan meeting."
+  },
+  {
+    id: "map-ainil-visit",
+    subject_id: "subject-ainil",
+    question_id: "prompt-11", // place to work for short time
+    adaptation_note: "I would love to work in Malaysia to visit Ainil and experience local Malay cultures."
+  },
+  {
+    id: "map-ainil-famous",
+    subject_id: "subject-ainil",
+    question_id: "prompt-1", // famous person to meet
+    adaptation_note: "Ainil is a popular language polyglot influencer on YouTube whom I wanted to meet."
+  }
+];
+
+// Initial Weaved Stories (Visual Narrative connections)
+const INITIAL_WEAVED_STORIES = [
+  {
+    id: "weave-ainil-cafe",
+    subject_ids: ["subject-ainil", "subject-quiet-cafe"],
+    bridging_sentence: "We met at the *Quiet River Cafe* (our favorite study spot) and *Ainil* translated a complex Chinese text for me."
+  }
+];
 
 if (typeof module !== 'undefined') {
-  module.exports = { INITIAL_FOLDERS, INITIAL_ENTRIES, EXTENDED_DICTIONARY_DB, LISTENING_MAPS_DB, INITIAL_ARTICLES };
+  module.exports = { INITIAL_FOLDERS, INITIAL_ENTRIES, EXTENDED_DICTIONARY_DB, LISTENING_MAPS_DB, INITIAL_ARTICLES, INITIAL_SPEAKING_PROMPTS, INITIAL_MODAL_SUBJECTS, INITIAL_STORYLINE_MAPPINGS, INITIAL_WEAVED_STORIES };
 }
 

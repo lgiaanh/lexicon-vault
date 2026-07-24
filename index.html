@@ -183,6 +183,28 @@
             <polyline points="1 20 1 14 7 14" />
             <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15" />
           </g>
+        ),
+        people: (
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2 M12 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8z" />
+        ),
+        places: (
+          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z M12 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+        ),
+        experiences: (
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+        ),
+        objects: (
+          <g>
+            <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+            <line x1="8" y1="21" x2="16" y2="21" />
+            <line x1="12" y1="17" x2="12" y2="21" />
+          </g>
+        ),
+        activities: (
+          <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+        ),
+        link: (
+          <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71 M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
         )
       };
 
@@ -477,6 +499,43 @@
       // UI State
       const [activeTab, setActiveTab] = useState('vault'); // 'vault' | 'graph' | 'review' | 'sync'
 
+      // IELTS Story Weaver State
+      const [modalSubjects, setModalSubjects] = useState(() => {
+        const saved = localStorage.getItem('lexicon_modal_subjects');
+        return saved ? JSON.parse(saved) : INITIAL_MODAL_SUBJECTS;
+      });
+      const [storylineMappings, setStorylineMappings] = useState(() => {
+        const saved = localStorage.getItem('lexicon_storyline_mappings');
+        return saved ? JSON.parse(saved) : INITIAL_STORYLINE_MAPPINGS;
+      });
+      const [weavedStories, setWeavedStories] = useState(() => {
+        const saved = localStorage.getItem('lexicon_weaved_stories');
+        return saved ? JSON.parse(saved) : INITIAL_WEAVED_STORIES;
+      });
+      const [speakingPrompts, setSpeakingPrompts] = useState(() => {
+        const saved = localStorage.getItem('lexicon_speaking_prompts');
+        return saved ? JSON.parse(saved) : INITIAL_SPEAKING_PROMPTS;
+      });
+
+      // Weaver UI State
+      const [isSubjectModalOpen, setIsSubjectModalOpen] = useState(false);
+      const [editingSubject, setEditingSubject] = useState(null);
+      const [subjectName, setSubjectName] = useState('');
+      const [subjectCategoryId, setSubjectCategoryId] = useState('people');
+      const [subjectDetail1, setSubjectDetail1] = useState('');
+      const [subjectDetail2, setSubjectDetail2] = useState('');
+      const [subjectDetail3, setSubjectDetail3] = useState('');
+
+      const [isLinkModalOpen, setIsLinkModalOpen] = useState(false);
+      const [activePromptToLink, setActivePromptToLink] = useState(null);
+      const [selectedSubjectIdToLink, setSelectedSubjectIdToLink] = useState('');
+      const [adaptationNoteText, setAdaptationNoteText] = useState('');
+
+      const [weaverActiveSubjectA, setWeaverActiveSubjectA] = useState('subject-ainil');
+      const [weaverActiveSubjectB, setWeaverActiveSubjectB] = useState('subject-quiet-cafe');
+      const [weaverBridgingText, setWeaverBridgingText] = useState('');
+      const [speakingFilterCategory, setSpeakingFilterCategory] = useState('all');
+
       // Firebase Cloud Sync State
       const [firebaseConfig, setFirebaseConfig] = useState(() => {
         const saved = localStorage.getItem('lexicon_firebase_config');
@@ -561,6 +620,22 @@
           setStudyStreak(cloudData.streak);
           localStorage.setItem('lexicon_study_streak', JSON.stringify(cloudData.streak));
         }
+        if (cloudData.modalSubjects) {
+          setModalSubjects(cloudData.modalSubjects);
+          localStorage.setItem('lexicon_modal_subjects', JSON.stringify(cloudData.modalSubjects));
+        }
+        if (cloudData.storylineMappings) {
+          setStorylineMappings(cloudData.storylineMappings);
+          localStorage.setItem('lexicon_storyline_mappings', JSON.stringify(cloudData.storylineMappings));
+        }
+        if (cloudData.weavedStories) {
+          setWeavedStories(cloudData.weavedStories);
+          localStorage.setItem('lexicon_weaved_stories', JSON.stringify(cloudData.weavedStories));
+        }
+        if (cloudData.speakingPrompts) {
+          setSpeakingPrompts(cloudData.speakingPrompts);
+          localStorage.setItem('lexicon_speaking_prompts', JSON.stringify(cloudData.speakingPrompts));
+        }
         if (cloudData.last_updated) {
           localStorage.setItem('lexicon_last_updated', cloudData.last_updated);
         }
@@ -590,6 +665,10 @@
             study_time: JSON.parse(localStorage.getItem('lexicon_study_time') || '{}'),
             total_study_time: localStorage.getItem('lexicon_total_study_time') || '0',
             streak: JSON.parse(localStorage.getItem('lexicon_study_streak') || '{}'),
+            modalSubjects: JSON.parse(localStorage.getItem('lexicon_modal_subjects') || '[]'),
+            storylineMappings: JSON.parse(localStorage.getItem('lexicon_storyline_mappings') || '[]'),
+            weavedStories: JSON.parse(localStorage.getItem('lexicon_weaved_stories') || '[]'),
+            speakingPrompts: JSON.parse(localStorage.getItem('lexicon_speaking_prompts') || '[]'),
             last_updated: localTimestamp
           };
 
@@ -1117,6 +1196,34 @@
         localStorage.setItem('lexicon_last_updated', new Date().toISOString());
         triggerAutoSync();
       }, [articles]);
+
+      useEffect(() => {
+        localStorage.setItem('lexicon_modal_subjects', JSON.stringify(modalSubjects));
+        if (isSyncingRef.current) return;
+        localStorage.setItem('lexicon_last_updated', new Date().toISOString());
+        triggerAutoSync();
+      }, [modalSubjects]);
+
+      useEffect(() => {
+        localStorage.setItem('lexicon_storyline_mappings', JSON.stringify(storylineMappings));
+        if (isSyncingRef.current) return;
+        localStorage.setItem('lexicon_last_updated', new Date().toISOString());
+        triggerAutoSync();
+      }, [storylineMappings]);
+
+      useEffect(() => {
+        localStorage.setItem('lexicon_weaved_stories', JSON.stringify(weavedStories));
+        if (isSyncingRef.current) return;
+        localStorage.setItem('lexicon_last_updated', new Date().toISOString());
+        triggerAutoSync();
+      }, [weavedStories]);
+
+      useEffect(() => {
+        localStorage.setItem('lexicon_speaking_prompts', JSON.stringify(speakingPrompts));
+        if (isSyncingRef.current) return;
+        localStorage.setItem('lexicon_last_updated', new Date().toISOString());
+        triggerAutoSync();
+      }, [speakingPrompts]);
 
       // Recalculate folder word counts
       const updatedFolders = useMemo(() => {
@@ -2492,6 +2599,15 @@ IMPORTANT: If the Free Dictionary context contains a valid IPA pronunciation (ip
                 {syncStatus === 'error' && <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#EF4444', display: 'inline-block' }}></span>}
               </button>
 
+              <button 
+                className={`nav-item ${activeTab === 'weaver' ? 'active' : ''}`}
+                onClick={() => setActiveTab('weaver')}
+              >
+                <span className="nav-icon-text">
+                  <Icon name="link" style={{ marginRight: '6px' }} /> Speaking Weaver
+                </span>
+              </button>
+
 
             </nav>
 
@@ -3599,6 +3715,373 @@ service cloud.firestore {
                 </div>
               </div>
             )}
+
+            {/* SPEAKING STORY WEAVER PANEL */}
+            {activeTab === 'weaver' && (() => {
+              const totalPrompts = speakingPrompts.length;
+              const coveredPrompts = speakingPrompts.filter(p => storylineMappings.some(m => m.question_id === p.id)).length;
+              const coveragePct = totalPrompts > 0 ? Math.round((coveredPrompts / totalPrompts) * 100) : 0;
+
+              const peopleCount = modalSubjects.filter(s => s.category_id === 'people').length;
+              const placesCount = modalSubjects.filter(s => s.category_id === 'places').length;
+              const objectsCount = modalSubjects.filter(s => s.category_id === 'objects').length;
+              const hasMinCapital = peopleCount >= 1 && placesCount >= 1 && objectsCount >= 1;
+
+              const filteredPrompts = speakingPrompts.filter(p => {
+                if (speakingFilterCategory === 'all') return true;
+                return p.category_id === speakingFilterCategory;
+              });
+
+              // Lookup active weaved narrative
+              const activeWeave = weavedStories.find(w => 
+                w.subject_ids.includes(weaverActiveSubjectA) && 
+                w.subject_ids.includes(weaverActiveSubjectB)
+              ) || null;
+
+              const handleWeaveTextChange = (txt) => {
+                const subjectIds = [weaverActiveSubjectA, weaverActiveSubjectB].sort();
+                const existingIdx = weavedStories.findIndex(w => 
+                  w.subject_ids[0] === subjectIds[0] && w.subject_ids[1] === subjectIds[1]
+                );
+
+                if (existingIdx !== -1) {
+                  const updated = [...weavedStories];
+                  updated[existingIdx].bridging_sentence = txt;
+                  setWeavedStories(updated);
+                } else {
+                  const newWeave = {
+                    id: 'weave-' + Date.now(),
+                    subject_ids: subjectIds,
+                    bridging_sentence: txt
+                  };
+                  setWeavedStories([...weavedStories, newWeave]);
+                }
+              };
+
+              const categoryColors = {
+                people: { text: '#4A2E99', bg: '#F4F1FC', label: 'People' },
+                places: { text: '#0D9488', bg: '#F0FDFA', label: 'Places' },
+                experiences: { text: '#D97706', bg: '#FEF3C7', label: 'Experiences' },
+                objects: { text: '#2563EB', bg: '#EFF6FF', label: 'Objects' },
+                activities: { text: '#7C3AED', bg: '#F5F3FF', label: 'Activities' }
+              };
+
+              return (
+                <div className="weaver-panel-container fade-in" style={{ padding: '24px', height: '100%', display: 'flex', flexDirection: 'column' }}>
+                  
+                  {/* Top Stats Banner */}
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px', borderBottom: '1px solid var(--border-color)', paddingBottom: '16px' }}>
+                    <div>
+                      <h1 style={{ fontFamily: 'var(--font-serif)', fontSize: '28px', color: 'var(--text-main)', margin: 0 }}>
+                        <Icon name="link" style={{ marginRight: '8px', color: 'var(--accent)', verticalAlign: 'middle' }} /> IELTS Speaking Story Weaver
+                      </h1>
+                      <span style={{ fontSize: '13.5px', color: 'var(--text-muted)' }}>Map core modal subjects into a unified storyline matrix to cover speaking forecast topics.</span>
+                    </div>
+
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '16px', backgroundColor: 'white', padding: '10px 18px', borderRadius: '12px', border: '1px solid var(--border-color)' }}>
+                      <div style={{ textAlign: 'right' }}>
+                        <span style={{ fontSize: '12px', color: 'var(--text-muted)', display: 'block', fontWeight: '600', textTransform: 'uppercase' }}>Topic Coverage</span>
+                        <strong style={{ fontSize: '18px', color: 'var(--accent)' }}>{coveredPrompts} / {totalPrompts} Prompts Covered</strong>
+                      </div>
+                      
+                      {/* Gp Progress Ring */}
+                      <svg width="44" height="44" viewBox="0 0 36 36" style={{ transform: 'rotate(-90deg)' }}>
+                        <path className="ring-bg" stroke="#E2E8F0" strokeWidth="3" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                        <path className="ring-fill" stroke="var(--accent)" strokeDasharray={`${coveragePct}, 100`} strokeWidth="3.5" strokeLinecap="round" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                        <text x="18" y="21.5" fill="var(--text-main)" fontSize="9" fontWeight="700" textAnchor="middle" transform="rotate(90 18 18)" style={{ fontFamily: 'var(--font-sans)' }}>{coveragePct}%</text>
+                      </svg>
+                    </div>
+                  </div>
+
+                  {/* Warning message if minimum capital is not established */}
+                  {!hasMinCapital && (
+                    <div style={{ backgroundColor: '#FFFBEB', border: '1px solid #FCD34D', color: '#B45309', padding: '12px 16px', borderRadius: '8px', marginBottom: '20px', fontSize: '13.5px', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                      <Icon name="info" style={{ color: '#B45309' }} />
+                      <div>
+                        <strong>💡 Gợi ý học tập:</strong> Bạn nên chuẩn bị ít nhất <strong>1 People</strong> (Người), <strong>1 Places</strong> (Nơi chốn), và <strong>1 Objects</strong> (Đồ vật/Công nghệ) trong Vốn chủ thể cốt lõi để bắt đầu "dệt" cốt truyện chéo linh hoạt nhất.
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Main Grid Layout */}
+                  <div className="weaver-grid" style={{ display: 'grid', gridTemplateColumns: '30% 42% 28%', gap: '20px', flex: 1, minHeight: 0 }}>
+                    
+                    {/* Col 1: Modal Subjects list */}
+                    <div className="weaver-col" style={{ display: 'flex', flexDirection: 'column', height: '100%', minHeight: 0 }}>
+                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '12px' }}>
+                        <h3 style={{ fontSize: '15px', color: 'var(--text-main)', margin: 0, fontWeight: '700', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                          Vốn Chủ Thể ({modalSubjects.length})
+                        </h3>
+                        <button 
+                          className="btn" 
+                          onClick={() => {
+                            setEditingSubject(null);
+                            setSubjectName('');
+                            setSubjectCategoryId('people');
+                            setSubjectDetail1('');
+                            setSubjectDetail2('');
+                            setSubjectDetail3('');
+                            setIsSubjectModalOpen(true);
+                          }}
+                          style={{ padding: '4px 10px', fontSize: '12.5px', backgroundColor: 'var(--accent-light)', color: 'var(--accent)', border: '1px solid var(--accent)', borderRadius: '6px' }}
+                        >
+                          <Icon name="plus" style={{ width: '0.9em', height: '0.9em', marginRight: '4px' }} /> Thêm
+                        </button>
+                      </div>
+
+                      <div className="weaver-scrollable" style={{ flex: 1, overflowY: 'auto', display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                        {modalSubjects.map(sub => {
+                          const linksCount = storylineMappings.filter(m => m.subject_id === sub.id).length;
+                          const cfg = categoryColors[sub.category_id] || { text: '#475569', bg: '#F1F5F9', label: 'Other' };
+                          return (
+                            <div className="card" key={sub.id} style={{ padding: '16px', position: 'relative', border: '1px solid var(--border-color)' }}>
+                              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '10px' }}>
+                                <span style={{ fontSize: '11px', fontWeight: '700', color: cfg.text, backgroundColor: cfg.bg, padding: '2px 8px', borderRadius: '12px', textTransform: 'uppercase' }}>
+                                  {cfg.label}
+                                </span>
+                                <div style={{ display: 'flex', gap: '6px' }}>
+                                  <button 
+                                    onClick={() => {
+                                      setEditingSubject(sub);
+                                      setSubjectName(sub.subject_name);
+                                      setSubjectCategoryId(sub.category_id);
+                                      setSubjectDetail1(sub.key_details[0] || '');
+                                      setSubjectDetail2(sub.key_details[1] || '');
+                                      setSubjectDetail3(sub.key_details[2] || '');
+                                      setIsSubjectModalOpen(true);
+                                    }}
+                                    style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'var(--text-muted)' }}
+                                  >
+                                    <Icon name="edit" style={{ width: '0.85em', height: '0.85em' }} />
+                                  </button>
+                                  <button 
+                                    onClick={() => {
+                                      if (confirm(`Bạn có chắc chắn muốn xóa chủ thể "${sub.subject_name}"? Mọi liên kết và câu chuyện liên quan cũng sẽ bị xóa.`)) {
+                                        setModalSubjects(modalSubjects.filter(s => s.id !== sub.id));
+                                        setStorylineMappings(storylineMappings.filter(m => m.subject_id !== sub.id));
+                                        setWeavedStories(weavedStories.filter(w => !w.subject_ids.includes(sub.id)));
+                                      }
+                                    }}
+                                    style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#EF4444' }}
+                                  >
+                                    <Icon name="trash" style={{ width: '0.85em', height: '0.85em' }} />
+                                  </button>
+                                </div>
+                              </div>
+
+                              <strong style={{ fontSize: '15px', color: 'var(--text-main)', display: 'block', marginBottom: '8px' }}>{sub.subject_name}</strong>
+                              
+                              <ul style={{ paddingLeft: '16px', fontSize: '13px', color: 'var(--text-muted)', margin: '0 0 12px 0', lineHeight: '1.4' }}>
+                                {sub.key_details.map((detail, idx) => detail.trim() && <li key={idx}>{detail}</li>)}
+                              </ul>
+
+                              <div style={{ borderTop: '1px dashed var(--border-color)', paddingTop: '8px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontSize: '12px' }}>
+                                <span style={{ color: 'var(--text-muted)' }}>Linked Topics</span>
+                                <strong style={{ color: linksCount > 0 ? 'var(--accent)' : 'var(--text-muted)' }}>{linksCount} Covered</strong>
+                              </div>
+                            </div>
+                          );
+                        })}
+                      </div>
+                    </div>
+
+                    {/* Col 2: Shared Storyline Weaver (Ghép đề) */}
+                    <div className="weaver-col" style={{ display: 'flex', flexDirection: 'column', height: '100%', minHeight: 0 }}>
+                      <h3 style={{ fontSize: '15px', color: 'var(--text-main)', marginBottom: '12px', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                        Trình Dệt Cốt Truyện (Weaver)
+                      </h3>
+
+                      <div className="card" style={{ flex: 1, padding: '20px', display: 'flex', flexDirection: 'column', minHeight: 0, border: '1px solid var(--border-color)' }}>
+                        <p style={{ fontSize: '13px', color: 'var(--text-muted)', margin: '0 0 16px 0', lineHeight: '1.4' }}>
+                          Chọn hai chủ thể (ví dụ: một Con người + một Địa điểm) để xây dựng câu cầu nối logic, biến chúng thành một cốt truyện chung dễ dàng kéo dài 2 phút Speaking.
+                        </p>
+
+                        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px', marginBottom: '16px' }}>
+                          <div>
+                            <label className="form-label" style={{ fontSize: '11px', textTransform: 'uppercase', color: 'var(--text-muted)' }}>Chủ thể A</label>
+                            <select 
+                              value={weaverActiveSubjectA}
+                              onChange={(e) => setWeaverActiveSubjectA(e.target.value)}
+                              style={{ width: '100%', padding: '8px', borderRadius: '6px', border: '1px solid var(--border-color)' }}
+                            >
+                              {modalSubjects.map(s => <option key={s.id} value={s.id}>{s.subject_name}</option>)}
+                            </select>
+                          </div>
+                          <div>
+                            <label className="form-label" style={{ fontSize: '11px', textTransform: 'uppercase', color: 'var(--text-muted)' }}>Chủ thể B</label>
+                            <select 
+                              value={weaverActiveSubjectB}
+                              onChange={(e) => setWeaverActiveSubjectB(e.target.value)}
+                              style={{ width: '100%', padding: '8px', borderRadius: '6px', border: '1px solid var(--border-color)' }}
+                            >
+                              {modalSubjects.map(s => <option key={s.id} value={s.id}>{s.subject_name}</option>)}
+                            </select>
+                          </div>
+                        </div>
+
+                        {/* Subject detail comparison cards */}
+                        {(() => {
+                          const subA = modalSubjects.find(s => s.id === weaverActiveSubjectA);
+                          const subB = modalSubjects.find(s => s.id === weaverActiveSubjectB);
+                          if (!subA || !subB) return null;
+
+                          return (
+                            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px', marginBottom: '16px' }}>
+                              <div style={{ backgroundColor: '#F8FAFC', padding: '12px', borderRadius: '8px', border: '1px solid var(--border-color)' }}>
+                                <span style={{ fontSize: '10px', fontWeight: 'bold', color: 'var(--accent)', textTransform: 'uppercase' }}>{subA.category_id}</span>
+                                <strong style={{ display: 'block', fontSize: '13.5px', marginBottom: '6px' }}>{subA.subject_name}</strong>
+                                <ul style={{ paddingLeft: '14px', fontSize: '11.5px', color: 'var(--text-muted)', margin: 0 }}>
+                                  {subA.key_details.map((d, i) => d.trim() && <li key={i}>{d}</li>)}
+                                </ul>
+                              </div>
+                              <div style={{ backgroundColor: '#F8FAFC', padding: '12px', borderRadius: '8px', border: '1px solid var(--border-color)' }}>
+                                <span style={{ fontSize: '10px', fontWeight: 'bold', color: 'var(--accent)', textTransform: 'uppercase' }}>{subB.category_id}</span>
+                                <strong style={{ display: 'block', fontSize: '13.5px', marginBottom: '6px' }}>{subB.subject_name}</strong>
+                                <ul style={{ paddingLeft: '14px', fontSize: '11.5px', color: 'var(--text-muted)', margin: 0 }}>
+                                  {subB.key_details.map((d, i) => d.trim() && <li key={i}>{d}</li>)}
+                                </ul>
+                              </div>
+                            </div>
+                          );
+                        })()}
+
+                        {/* Bridging Sentence input */}
+                        {weaverActiveSubjectA === weaverActiveSubjectB ? (
+                          <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', border: '1px dashed var(--border-color)', borderRadius: '8px', padding: '20px', color: 'var(--text-muted)', fontSize: '13px' }}>
+                            Vui lòng chọn 2 chủ thể khác nhau để dệt liên kết câu chuyện.
+                          </div>
+                        ) : (
+                          <div style={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
+                            <label className="form-label" style={{ fontSize: '12px', fontWeight: '600' }}>
+                              Bridging Storyline (Câu chuyện kết nối)
+                            </label>
+                            <textarea
+                              placeholder="Ví dụ: Chúng tôi thường gặp nhau tại *Quiet River Cafe* (Quán cà phê yên tĩnh) và *Ainil* đã dịch cuốn sách tiếng Anh của mình tại đây..."
+                              value={activeWeave ? activeWeave.bridging_sentence : ''}
+                              onChange={(e) => handleWeaveTextChange(e.target.value)}
+                              style={{
+                                flex: 1,
+                                width: '100%',
+                                padding: '12px',
+                                borderRadius: '8px',
+                                border: '1px solid var(--border-color)',
+                                fontSize: '13.5px',
+                                lineHeight: '1.5',
+                                resize: 'none',
+                                marginBottom: '10px'
+                              }}
+                            />
+                            <span style={{ fontSize: '11px', color: 'var(--text-muted)', display: 'block' }}>
+                              💡 Sử dụng dấu hoa thị <code>*Tên chủ thể*</code> để làm nổi bật từ khóa trong câu chuyện của bạn.
+                            </span>
+                          </div>
+                        )}
+                      </div>
+                    </div>
+
+                    {/* Col 3: Forecast Topic Matrix */}
+                    <div className="weaver-col" style={{ display: 'flex', flexDirection: 'column', height: '100%', minHeight: 0 }}>
+                      <h3 style={{ fontSize: '15px', color: 'var(--text-main)', marginBottom: '12px', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                        Ma Trận Phủ Đề ({filteredPrompts.length})
+                      </h3>
+
+                      {/* Matrix category filter bar */}
+                      <div style={{ display: 'flex', gap: '4px', flexWrap: 'wrap', marginBottom: '10px' }}>
+                        {['all', 'people', 'places', 'experiences', 'objects', 'activities'].map(cat => (
+                          <button
+                            key={cat}
+                            onClick={() => setSpeakingFilterCategory(cat)}
+                            style={{
+                              padding: '3px 8px',
+                              fontSize: '11px',
+                              borderRadius: '4px',
+                              border: '1px solid var(--border-color)',
+                              cursor: 'pointer',
+                              fontWeight: '600',
+                              backgroundColor: speakingFilterCategory === cat ? 'var(--accent)' : 'white',
+                              color: speakingFilterCategory === cat ? 'white' : 'var(--text-main)',
+                              textTransform: 'capitalize'
+                            }}
+                          >
+                            {cat === 'all' ? 'All' : cat}
+                          </button>
+                        ))}
+                      </div>
+
+                      <div className="weaver-scrollable" style={{ flex: 1, overflowY: 'auto', display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                        {filteredPrompts.map(p => {
+                          const mapping = storylineMappings.find(m => m.question_id === p.id);
+                          const linkedSubject = mapping ? modalSubjects.find(s => s.id === mapping.subject_id) : null;
+
+                          return (
+                            <div 
+                              className="card" 
+                              key={p.id}
+                              style={{ 
+                                padding: '12px 14px', 
+                                borderLeft: mapping ? '4px solid #10B981' : '1px solid var(--border-color)',
+                                backgroundColor: mapping ? '#F0FDF4' : 'white',
+                                display: 'flex',
+                                flexDirection: 'column',
+                                gap: '6px'
+                              }}
+                            >
+                              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '8px' }}>
+                                <span style={{ fontSize: '13px', color: '#0F172A', fontWeight: '500', lineHeight: '1.4' }}>{p.prompt_text}</span>
+                                {mapping ? (
+                                  <button 
+                                    onClick={() => {
+                                      if (confirm(`Bạn có chắc chắn muốn hủy liên kết đề này?`)) {
+                                        setStorylineMappings(storylineMappings.filter(m => m.id !== mapping.id));
+                                      }
+                                    }}
+                                    style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#EF4444', fontSize: '11px', padding: 0 }}
+                                  >
+                                    Hủy
+                                  </button>
+                                ) : (
+                                  <button 
+                                    onClick={() => {
+                                      setActivePromptToLink(p);
+                                      setSelectedSubjectIdToLink(modalSubjects[0] ? modalSubjects[0].id : '');
+                                      setAdaptationNoteText('');
+                                      setIsLinkModalOpen(true);
+                                    }}
+                                    style={{ 
+                                      backgroundColor: 'var(--accent-light)', 
+                                      color: 'var(--accent)', 
+                                      border: 'none', 
+                                      borderRadius: '4px',
+                                      padding: '2px 8px',
+                                      fontSize: '11px',
+                                      fontWeight: '600',
+                                      cursor: 'pointer'
+                                    }}
+                                  >
+                                    Ghép
+                                  </button>
+                                )}
+                              </div>
+
+                              {mapping && linkedSubject && (
+                                <div style={{ backgroundColor: 'white', border: '1px solid #E2E8F0', padding: '6px 10px', borderRadius: '6px', fontSize: '11.5px' }}>
+                                  <span style={{ color: 'var(--text-muted)' }}>Sử dụng: </span>
+                                  <strong style={{ color: 'var(--accent)' }}>{linkedSubject.subject_name}</strong>
+                                  <div style={{ color: '#047857', marginTop: '3px', fontStyle: 'italic' }}>
+                                    💡 {mapping.adaptation_note}
+                                  </div>
+                                </div>
+                              )}
+                            </div>
+                          );
+                        })}
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              );
+            })()}
           </main>
 
           {/* DIALOG: DICTIONARY LOOKUP & ADD WORD */}
@@ -4196,6 +4679,185 @@ service cloud.firestore {
                   }}>Cancel</button>
                   <button className="btn btn-primary" onClick={handleCreateFolder}>
                     {editingFolder ? 'Save Changes' : 'Create Folder'}
+                  </button>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* DIALOG: SPEAKING STORY WEAVER SUBJECT CREATOR */}
+          {isSubjectModalOpen && (
+            <div className="modal-overlay" style={{ zIndex: 1100 }}>
+              <div className="modal-content" style={{ maxWidth: '500px' }}>
+                <div className="modal-header">
+                  <h3 className="modal-title">{editingSubject ? 'Sửa Chủ Thể Cốt Lõi' : 'Thêm Chủ Thể Cốt Lõi'}</h3>
+                  <button className="modal-close-btn" onClick={() => setIsSubjectModalOpen(false)}>
+                    <Icon name="times" />
+                  </button>
+                </div>
+
+                <div className="form-group" style={{ marginBottom: '14px' }}>
+                  <label className="form-label">Tên Chủ Thể (Subject Name)</label>
+                  <input
+                    type="text"
+                    className="form-input"
+                    placeholder="Ví dụ: Ainil (Malaysian friend), Quiet Cafe, smart translator app..."
+                    value={subjectName}
+                    onChange={(e) => setSubjectName(e.target.value)}
+                    style={{ width: '100%', padding: '8px', borderRadius: '6px', border: '1px solid var(--border-color)' }}
+                  />
+                </div>
+
+                <div className="form-group" style={{ marginBottom: '14px' }}>
+                  <label className="form-label">Nhóm chủ đề (Category)</label>
+                  <select
+                    value={subjectCategoryId}
+                    onChange={(e) => setSubjectCategoryId(e.target.value)}
+                    style={{ width: '100%', padding: '8px', borderRadius: '6px', border: '1px solid var(--border-color)' }}
+                  >
+                    <option value="people">People (Con người)</option>
+                    <option value="places">Places (Nơi chốn)</option>
+                    <option value="experiences">Experiences / Events (Trải nghiệm / Sự kiện)</option>
+                    <option value="objects">Objects / Technology (Đồ vật / Công nghệ)</option>
+                    <option value="activities">Activities / Public Places (Hoạt động / Địa điểm công cộng)</option>
+                  </select>
+                </div>
+
+                <div className="form-group" style={{ marginBottom: '14px' }}>
+                  <label className="form-label">Chi tiết cốt lõi (Gợi ý tối đa 3 ý ngắn để dệt linh hoạt)</label>
+                  <input
+                    type="text"
+                    className="form-input"
+                    placeholder="Chi tiết 1 (ví dụ: Met at a 2025 fan meeting)"
+                    value={subjectDetail1}
+                    onChange={(e) => setSubjectDetail1(e.target.value.substring(0, 150))}
+                    style={{ width: '100%', padding: '8px', borderRadius: '6px', border: '1px solid var(--border-color)', marginBottom: '8px' }}
+                  />
+                  <input
+                    type="text"
+                    className="form-input"
+                    placeholder="Chi tiết 2 (ví dụ: Exceptionally fluent in Malay, English, Chinese)"
+                    value={subjectDetail2}
+                    onChange={(e) => setSubjectDetail2(e.target.value.substring(0, 150))}
+                    style={{ width: '100%', padding: '8px', borderRadius: '6px', border: '1px solid var(--border-color)', marginBottom: '8px' }}
+                  />
+                  <input
+                    type="text"
+                    className="form-input"
+                    placeholder="Chi tiết 3 (ví dụ: Gives great language advice)"
+                    value={subjectDetail3}
+                    onChange={(e) => setSubjectDetail3(e.target.value.substring(0, 150))}
+                    style={{ width: '100%', padding: '8px', borderRadius: '6px', border: '1px solid var(--border-color)' }}
+                  />
+                  <span style={{ fontSize: '11px', color: 'var(--text-muted)', display: 'block', marginTop: '4px' }}>
+                    * Giới hạn 150 ký tự mỗi ý để tránh bị cứng nhắc khi phòng thi đổi đề.
+                  </span>
+                </div>
+
+                <div className="form-actions" style={{ marginTop: '20px' }}>
+                  <button className="btn btn-secondary" onClick={() => setIsSubjectModalOpen(false)}>Hủy</button>
+                  <button
+                    className="btn btn-primary"
+                    onClick={() => {
+                      if (!subjectName.trim()) {
+                        alert('Vui lòng nhập tên chủ thể!');
+                        return;
+                      }
+
+                      const details = [subjectDetail1, subjectDetail2, subjectDetail3].filter(d => d.trim() !== '');
+
+                      if (editingSubject) {
+                        const updated = modalSubjects.map(s => 
+                          s.id === editingSubject.id 
+                            ? { ...s, subject_name: subjectName, category_id: subjectCategoryId, key_details: details }
+                            : s
+                        );
+                        setModalSubjects(updated);
+                        showToastGlobal('Cập nhật chủ thể thành công!');
+                      } else {
+                        const newSub = {
+                          id: 'subject-' + Date.now(),
+                          category_id: subjectCategoryId,
+                          subject_name: subjectName,
+                          key_details: details
+                        };
+                        setModalSubjects([...modalSubjects, newSub]);
+                        showToastGlobal('Thêm chủ thể cốt lõi thành công!');
+                      }
+                      setIsSubjectModalOpen(false);
+                    }}
+                  >
+                    Lưu Chủ Thể
+                  </button>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* DIALOG: SPEAKING STORY WEAVER LINK TOPIC */}
+          {isLinkModalOpen && activePromptToLink && (
+            <div className="modal-overlay" style={{ zIndex: 1100 }}>
+              <div className="modal-content" style={{ maxWidth: '480px' }}>
+                <div className="modal-header">
+                  <h3 className="modal-title">Liên Kết Chủ Thể Với Đề Bài</h3>
+                  <button className="modal-close-btn" onClick={() => setIsLinkModalOpen(false)}>
+                    <Icon name="times" />
+                  </button>
+                </div>
+
+                <div style={{ backgroundColor: '#F8FAFC', padding: '12px', borderRadius: '8px', marginBottom: '14px', fontSize: '13.5px', border: '1px solid var(--border-color)' }}>
+                  <span style={{ fontSize: '11px', fontWeight: 'bold', color: 'var(--text-muted)', textTransform: 'uppercase', display: 'block', marginBottom: '4px' }}>Đề bài Speaking Part 2</span>
+                  <strong>{activePromptToLink.prompt_text}</strong>
+                </div>
+
+                <div className="form-group" style={{ marginBottom: '14px' }}>
+                  <label className="form-label">Chọn Vốn Chủ Thể sử dụng</label>
+                  <select
+                    value={selectedSubjectIdToLink}
+                    onChange={(e) => setSelectedSubjectIdToLink(e.target.value)}
+                    style={{ width: '100%', padding: '8px', borderRadius: '6px', border: '1px solid var(--border-color)' }}
+                  >
+                    {modalSubjects.map(s => <option key={s.id} value={s.id}>{s.subject_name} ({s.category_id})</option>)}
+                  </select>
+                </div>
+
+                <div className="form-group" style={{ marginBottom: '14px' }}>
+                  <label className="form-label">Góc tiếp cận câu chuyện (Adaptation Angle)</label>
+                  <textarea
+                    placeholder="Ví dụ: Ainil là người bạn học giỏi 3 thứ tiếng nên cô ấy là nguồn cảm hứng học ngoại ngữ của tôi..."
+                    value={adaptationNoteText}
+                    onChange={(e) => setAdaptationNoteText(e.target.value)}
+                    style={{ width: '100%', height: '80px', padding: '8px', borderRadius: '6px', border: '1px solid var(--border-color)', resize: 'none' }}
+                  />
+                </div>
+
+                <div className="form-actions" style={{ marginTop: '20px' }}>
+                  <button className="btn btn-secondary" onClick={() => setIsLinkModalOpen(false)}>Hủy</button>
+                  <button
+                    className="btn btn-primary"
+                    onClick={() => {
+                      if (!selectedSubjectIdToLink) {
+                        alert('Vui lòng chọn hoặc tạo vốn chủ thể trước!');
+                        return;
+                      }
+                      if (!adaptationNoteText.trim()) {
+                        alert('Vui lòng nhập góc tiếp cận để gợi nhớ bài nói!');
+                        return;
+                      }
+
+                      const newMap = {
+                        id: 'map-' + Date.now(),
+                        subject_id: selectedSubjectIdToLink,
+                        question_id: activePromptToLink.id,
+                        adaptation_note: adaptationNoteText
+                      };
+
+                      setStorylineMappings([...storylineMappings, newMap]);
+                      showToastGlobal('Đã ghép đề bài thành công!');
+                      setIsLinkModalOpen(false);
+                    }}
+                  >
+                    Ghép Đề Bài
                   </button>
                 </div>
               </div>
