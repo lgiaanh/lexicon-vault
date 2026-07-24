@@ -3798,7 +3798,7 @@ service cloud.firestore {
                     <div style={{ backgroundColor: '#FFFBEB', border: '1px solid #FCD34D', color: '#B45309', padding: '12px 16px', borderRadius: '8px', marginBottom: '20px', fontSize: '13.5px', display: 'flex', alignItems: 'center', gap: '8px' }}>
                       <Icon name="info" style={{ color: '#B45309' }} />
                       <div>
-                        <strong>💡 Gợi ý học tập:</strong> Bạn nên chuẩn bị ít nhất <strong>1 People</strong> (Người), <strong>1 Places</strong> (Nơi chốn), và <strong>1 Objects</strong> (Đồ vật/Công nghệ) trong Vốn chủ thể cốt lõi để bắt đầu "dệt" cốt truyện chéo linh hoạt nhất.
+                        <strong>💡 Study Suggestion:</strong> You should prepare at least <strong>1 People</strong>, <strong>1 Places</strong>, and <strong>1 Objects</strong> subject in your core capital to unlock flexible, cross-topic story weaving.
                       </div>
                     </div>
                   )}
@@ -3810,7 +3810,7 @@ service cloud.firestore {
                     <div className="weaver-col" style={{ display: 'flex', flexDirection: 'column', height: '100%', minHeight: 0 }}>
                       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '12px' }}>
                         <h3 style={{ fontSize: '15px', color: 'var(--text-main)', margin: 0, fontWeight: '700', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
-                          Vốn Chủ Thể ({modalSubjects.length})
+                          Modal Subjects Capital ({modalSubjects.length})
                         </h3>
                         <button 
                           className="btn" 
@@ -3825,7 +3825,7 @@ service cloud.firestore {
                           }}
                           style={{ padding: '4px 10px', fontSize: '12.5px', backgroundColor: 'var(--accent-light)', color: 'var(--accent)', border: '1px solid var(--accent)', borderRadius: '6px' }}
                         >
-                          <Icon name="plus" style={{ width: '0.9em', height: '0.9em', marginRight: '4px' }} /> Thêm
+                          <Icon name="plus" style={{ width: '0.9em', height: '0.9em', marginRight: '4px' }} /> Add New
                         </button>
                       </div>
 
@@ -3885,20 +3885,20 @@ service cloud.firestore {
                       </div>
                     </div>
 
-                    {/* Col 2: Shared Storyline Weaver (Ghép đề) */}
+                    {/* Col 2: Shared Storyline Weaver (Link đề) */}
                     <div className="weaver-col" style={{ display: 'flex', flexDirection: 'column', height: '100%', minHeight: 0 }}>
                       <h3 style={{ fontSize: '15px', color: 'var(--text-main)', marginBottom: '12px', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
-                        Trình Dệt Cốt Truyện (Weaver)
+                        Shared Storyline Weaver
                       </h3>
 
                       <div className="card" style={{ flex: 1, padding: '20px', display: 'flex', flexDirection: 'column', minHeight: 0, border: '1px solid var(--border-color)' }}>
                         <p style={{ fontSize: '13px', color: 'var(--text-muted)', margin: '0 0 16px 0', lineHeight: '1.4' }}>
-                          Chọn hai chủ thể (ví dụ: một Con người + một Địa điểm) để xây dựng câu cầu nối logic, biến chúng thành một cốt truyện chung dễ dàng kéo dài 2 phút Speaking.
+                          Select two subjects (e.g., one People + one Places) to write a logical bridging sentence, weaving them into a single coherent narrative that easily fills the 2-minute Speaking requirement.
                         </p>
 
                         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px', marginBottom: '16px' }}>
                           <div>
-                            <label className="form-label" style={{ fontSize: '11px', textTransform: 'uppercase', color: 'var(--text-muted)' }}>Chủ thể A</label>
+                            <label className="form-label" style={{ fontSize: '11px', textTransform: 'uppercase', color: 'var(--text-muted)' }}>Modal Subject A</label>
                             <select 
                               value={weaverActiveSubjectA}
                               onChange={(e) => setWeaverActiveSubjectA(e.target.value)}
@@ -3908,7 +3908,7 @@ service cloud.firestore {
                             </select>
                           </div>
                           <div>
-                            <label className="form-label" style={{ fontSize: '11px', textTransform: 'uppercase', color: 'var(--text-muted)' }}>Chủ thể B</label>
+                            <label className="form-label" style={{ fontSize: '11px', textTransform: 'uppercase', color: 'var(--text-muted)' }}>Modal Subject B</label>
                             <select 
                               value={weaverActiveSubjectB}
                               onChange={(e) => setWeaverActiveSubjectB(e.target.value)}
@@ -3948,12 +3948,12 @@ service cloud.firestore {
                         {/* Bridging Sentence input */}
                         {weaverActiveSubjectA === weaverActiveSubjectB ? (
                           <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', border: '1px dashed var(--border-color)', borderRadius: '8px', padding: '20px', color: 'var(--text-muted)', fontSize: '13px' }}>
-                            Vui lòng chọn 2 chủ thể khác nhau để dệt liên kết câu chuyện.
+                            Please select two different subjects to weave a storyline connection.
                           </div>
                         ) : (
                           <div style={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
                             <label className="form-label" style={{ fontSize: '12px', fontWeight: '600' }}>
-                              Bridging Storyline (Câu chuyện kết nối)
+                              Bridging Storyline Bridge
                             </label>
                             <textarea
                               placeholder="Ví dụ: Chúng tôi thường gặp nhau tại *Quiet River Cafe* (Quán cà phê yên tĩnh) và *Ainil* đã dịch cuốn sách tiếng Anh của mình tại đây..."
@@ -3972,7 +3972,7 @@ service cloud.firestore {
                               }}
                             />
                             <span style={{ fontSize: '11px', color: 'var(--text-muted)', display: 'block' }}>
-                              💡 Sử dụng dấu hoa thị <code>*Tên chủ thể*</code> để làm nổi bật từ khóa trong câu chuyện của bạn.
+                              💡 Use asterisks <code>*Subject Name*</code> to highlight core subjects within your bridging text.
                             </span>
                           </div>
                         )}
@@ -3982,7 +3982,7 @@ service cloud.firestore {
                     {/* Col 3: Forecast Topic Matrix */}
                     <div className="weaver-col" style={{ display: 'flex', flexDirection: 'column', height: '100%', minHeight: 0 }}>
                       <h3 style={{ fontSize: '15px', color: 'var(--text-main)', marginBottom: '12px', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
-                        Ma Trận Phủ Đề ({filteredPrompts.length})
+                        Topic Coverage Matrix ({filteredPrompts.length})
                       </h3>
 
                       {/* Matrix category filter bar */}
@@ -4031,13 +4031,13 @@ service cloud.firestore {
                                 {mapping ? (
                                   <button 
                                     onClick={() => {
-                                      if (confirm(`Bạn có chắc chắn muốn hủy liên kết đề này?`)) {
+                                      if (confirm(`Are you sure you want to unlink this topic?`)) {
                                         setStorylineMappings(storylineMappings.filter(m => m.id !== mapping.id));
                                       }
                                     }}
                                     style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#EF4444', fontSize: '11px', padding: 0 }}
                                   >
-                                    Hủy
+                                    Unlink
                                   </button>
                                 ) : (
                                   <button 
@@ -4058,14 +4058,14 @@ service cloud.firestore {
                                       cursor: 'pointer'
                                     }}
                                   >
-                                    Ghép
+                                    Link
                                   </button>
                                 )}
                               </div>
 
                               {mapping && linkedSubject && (
                                 <div style={{ backgroundColor: 'white', border: '1px solid #E2E8F0', padding: '6px 10px', borderRadius: '6px', fontSize: '11.5px' }}>
-                                  <span style={{ color: 'var(--text-muted)' }}>Sử dụng: </span>
+                                  <span style={{ color: 'var(--text-muted)' }}>Using: </span>
                                   <strong style={{ color: 'var(--accent)' }}>{linkedSubject.subject_name}</strong>
                                   <div style={{ color: '#047857', marginTop: '3px', fontStyle: 'italic' }}>
                                     💡 {mapping.adaptation_note}
@@ -4690,14 +4690,14 @@ service cloud.firestore {
             <div className="modal-overlay" style={{ zIndex: 1100 }}>
               <div className="modal-content" style={{ maxWidth: '500px' }}>
                 <div className="modal-header">
-                  <h3 className="modal-title">{editingSubject ? 'Sửa Chủ Thể Cốt Lõi' : 'Thêm Chủ Thể Cốt Lõi'}</h3>
+                  <h3 className="modal-title">{editingSubject ? 'Edit Modal Subject' : 'Add New Chủ Thể Cốt Lõi'}</h3>
                   <button className="modal-close-btn" onClick={() => setIsSubjectModalOpen(false)}>
                     <Icon name="times" />
                   </button>
                 </div>
 
                 <div className="form-group" style={{ marginBottom: '14px' }}>
-                  <label className="form-label">Tên Chủ Thể (Subject Name)</label>
+                  <label className="form-label">Subject Name</label>
                   <input
                     type="text"
                     className="form-input"
@@ -4709,7 +4709,7 @@ service cloud.firestore {
                 </div>
 
                 <div className="form-group" style={{ marginBottom: '14px' }}>
-                  <label className="form-label">Nhóm chủ đề (Category)</label>
+                  <label className="form-label">Subject Category</label>
                   <select
                     value={subjectCategoryId}
                     onChange={(e) => setSubjectCategoryId(e.target.value)}
@@ -4724,7 +4724,7 @@ service cloud.firestore {
                 </div>
 
                 <div className="form-group" style={{ marginBottom: '14px' }}>
-                  <label className="form-label">Chi tiết cốt lõi (Gợi ý tối đa 3 ý ngắn để dệt linh hoạt)</label>
+                  <label className="form-label">Core Details (Add up to 3 brief bullet points)</label>
                   <input
                     type="text"
                     className="form-input"
@@ -4750,17 +4750,17 @@ service cloud.firestore {
                     style={{ width: '100%', padding: '8px', borderRadius: '6px', border: '1px solid var(--border-color)' }}
                   />
                   <span style={{ fontSize: '11px', color: 'var(--text-muted)', display: 'block', marginTop: '4px' }}>
-                    * Giới hạn 150 ký tự mỗi ý để tránh bị cứng nhắc khi phòng thi đổi đề.
+                    * Max 150 characters per detail to ensure flexibility when prompts vary.
                   </span>
                 </div>
 
                 <div className="form-actions" style={{ marginTop: '20px' }}>
-                  <button className="btn btn-secondary" onClick={() => setIsSubjectModalOpen(false)}>Hủy</button>
+                  <button className="btn btn-secondary" onClick={() => setIsSubjectModalOpen(false)}>Unlink</button>
                   <button
                     className="btn btn-primary"
                     onClick={() => {
                       if (!subjectName.trim()) {
-                        alert('Vui lòng nhập tên chủ thể!');
+                        alert('Please enter a subject name!');
                         return;
                       }
 
@@ -4773,7 +4773,7 @@ service cloud.firestore {
                             : s
                         );
                         setModalSubjects(updated);
-                        showToastGlobal('Cập nhật chủ thể thành công!');
+                        showToastGlobal('Updated modal subject successfully!');
                       } else {
                         const newSub = {
                           id: 'subject-' + Date.now(),
@@ -4782,12 +4782,12 @@ service cloud.firestore {
                           key_details: details
                         };
                         setModalSubjects([...modalSubjects, newSub]);
-                        showToastGlobal('Thêm chủ thể cốt lõi thành công!');
+                        showToastGlobal('Add New chủ thể cốt lõi thành công!');
                       }
                       setIsSubjectModalOpen(false);
                     }}
                   >
-                    Lưu Chủ Thể
+                    Save Subject
                   </button>
                 </div>
               </div>
@@ -4799,19 +4799,19 @@ service cloud.firestore {
             <div className="modal-overlay" style={{ zIndex: 1100 }}>
               <div className="modal-content" style={{ maxWidth: '480px' }}>
                 <div className="modal-header">
-                  <h3 className="modal-title">Liên Kết Chủ Thể Với Đề Bài</h3>
+                  <h3 className="modal-title">Link Subject to Speaking Prompt</h3>
                   <button className="modal-close-btn" onClick={() => setIsLinkModalOpen(false)}>
                     <Icon name="times" />
                   </button>
                 </div>
 
                 <div style={{ backgroundColor: '#F8FAFC', padding: '12px', borderRadius: '8px', marginBottom: '14px', fontSize: '13.5px', border: '1px solid var(--border-color)' }}>
-                  <span style={{ fontSize: '11px', fontWeight: 'bold', color: 'var(--text-muted)', textTransform: 'uppercase', display: 'block', marginBottom: '4px' }}>Đề bài Speaking Part 2</span>
+                  <span style={{ fontSize: '11px', fontWeight: 'bold', color: 'var(--text-muted)', textTransform: 'uppercase', display: 'block', marginBottom: '4px' }}>IELTS Speaking Part 2 Prompt</span>
                   <strong>{activePromptToLink.prompt_text}</strong>
                 </div>
 
                 <div className="form-group" style={{ marginBottom: '14px' }}>
-                  <label className="form-label">Chọn Vốn Chủ Thể sử dụng</label>
+                  <label className="form-label">Select Modal Subject to use</label>
                   <select
                     value={selectedSubjectIdToLink}
                     onChange={(e) => setSelectedSubjectIdToLink(e.target.value)}
@@ -4822,7 +4822,7 @@ service cloud.firestore {
                 </div>
 
                 <div className="form-group" style={{ marginBottom: '14px' }}>
-                  <label className="form-label">Góc tiếp cận câu chuyện (Adaptation Angle)</label>
+                  <label className="form-label">Adaptation Angle / Strategy</label>
                   <textarea
                     placeholder="Ví dụ: Ainil là người bạn học giỏi 3 thứ tiếng nên cô ấy là nguồn cảm hứng học ngoại ngữ của tôi..."
                     value={adaptationNoteText}
@@ -4832,16 +4832,16 @@ service cloud.firestore {
                 </div>
 
                 <div className="form-actions" style={{ marginTop: '20px' }}>
-                  <button className="btn btn-secondary" onClick={() => setIsLinkModalOpen(false)}>Hủy</button>
+                  <button className="btn btn-secondary" onClick={() => setIsLinkModalOpen(false)}>Unlink</button>
                   <button
                     className="btn btn-primary"
                     onClick={() => {
                       if (!selectedSubjectIdToLink) {
-                        alert('Vui lòng chọn hoặc tạo vốn chủ thể trước!');
+                        alert('Please create or select a modal subject first!');
                         return;
                       }
                       if (!adaptationNoteText.trim()) {
-                        alert('Vui lòng nhập góc tiếp cận để gợi nhớ bài nói!');
+                        alert('Please enter an adaptation angle to link this topic!');
                         return;
                       }
 
@@ -4853,11 +4853,11 @@ service cloud.firestore {
                       };
 
                       setStorylineMappings([...storylineMappings, newMap]);
-                      showToastGlobal('Đã ghép đề bài thành công!');
+                      showToastGlobal('Linked prompt successfully!');
                       setIsLinkModalOpen(false);
                     }}
                   >
-                    Ghép Đề Bài
+                    Link Đề Bài
                   </button>
                 </div>
               </div>
