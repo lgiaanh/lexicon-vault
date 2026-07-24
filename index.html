@@ -3716,7 +3716,7 @@ service cloud.firestore {
               </div>
             )}
 
-            {/* SPEAKING STORY WEAVER PANEL */}
+            {/* SPEAKING STORY WEAVER PANEL (MINIMALIST SPLIT TAB VIEW) */}
             {activeTab === 'weaver' && (() => {
               const totalPrompts = speakingPrompts.length;
               const coveredPrompts = speakingPrompts.filter(p => storylineMappings.some(m => m.question_id === p.id)).length;
@@ -3766,80 +3766,128 @@ service cloud.firestore {
                 activities: { text: '#7C3AED', bg: '#F5F3FF', label: 'Activities' }
               };
 
+              // Local sub-tab state hosted directly
+              const subTab = window.weaverSubTab || 'subjects';
+              const setSubTab = (val) => {
+                window.weaverSubTab = val;
+                setActiveTab('weaver'); // Force re-render tick
+              };
+
+              const selectedActivePrompt = window.weaverActivePrompt || null;
+              const setSelectedActivePrompt = (p) => {
+                window.weaverActivePrompt = p;
+                setActiveTab('weaver');
+              };
+
               return (
-                <div className="weaver-panel-container fade-in" style={{ padding: '24px', flex: 1, minHeight: 0, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
+                <div className="weaver-panel-container fade-in" style={{ padding: '20px 24px', flex: 1, minHeight: 0, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
                   
                   {/* Top Stats Banner */}
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px', borderBottom: '1px solid var(--border-color)', paddingBottom: '16px' }}>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px', borderBottom: '1px solid var(--border-color)', paddingBottom: '12px' }}>
                     <div>
-                      <h1 style={{ fontFamily: 'var(--font-serif)', fontSize: '28px', color: 'var(--text-main)', margin: 0 }}>
+                      <h1 style={{ fontFamily: 'var(--font-serif)', fontSize: '26px', color: 'var(--text-main)', margin: 0 }}>
                         <Icon name="link" style={{ marginRight: '8px', color: 'var(--accent)', verticalAlign: 'middle' }} /> IELTS Speaking Topics
                       </h1>
-                      <span style={{ fontSize: '13.5px', color: 'var(--text-muted)' }}>Map core modal subjects into a unified storyline matrix to cover speaking forecast topics.</span>
+                      <span style={{ fontSize: '13px', color: 'var(--text-muted)' }}>Map core subjects to speaking forecast prompts and build bridging storylines.</span>
                     </div>
 
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '16px', backgroundColor: 'white', padding: '10px 18px', borderRadius: '12px', border: '1px solid var(--border-color)' }}>
-                      <div style={{ textAlign: 'right' }}>
-                        <span style={{ fontSize: '12px', color: 'var(--text-muted)', display: 'block', fontWeight: '600', textTransform: 'uppercase' }}>Topic Coverage</span>
-                        <strong style={{ fontSize: '18px', color: 'var(--accent)' }}>{coveredPrompts} / {totalPrompts} Prompts Covered</strong>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
+                      {/* Pill toggle bar */}
+                      <div style={{ display: 'flex', backgroundColor: '#F1F5F9', padding: '3px', borderRadius: '8px', border: '1px solid var(--border-color)' }}>
+                        <button
+                          onClick={() => setSubTab('subjects')}
+                          style={{
+                            padding: '6px 14px',
+                            fontSize: '12px',
+                            fontWeight: '600',
+                            borderRadius: '6px',
+                            border: 'none',
+                            cursor: 'pointer',
+                            backgroundColor: subTab === 'subjects' ? 'white' : 'transparent',
+                            color: subTab === 'subjects' ? 'var(--accent)' : 'var(--text-muted)',
+                            boxShadow: subTab === 'subjects' ? '0 1px 3px rgba(0,0,0,0.08)' : 'none',
+                            transition: 'all 0.15s ease'
+                          }}
+                        >
+                          👤 Subjects & Stories
+                        </button>
+                        <button
+                          onClick={() => setSubTab('matrix')}
+                          style={{
+                            padding: '6px 14px',
+                            fontSize: '12px',
+                            fontWeight: '600',
+                            borderRadius: '6px',
+                            border: 'none',
+                            cursor: 'pointer',
+                            backgroundColor: subTab === 'matrix' ? 'white' : 'transparent',
+                            color: subTab === 'matrix' ? 'var(--accent)' : 'var(--text-muted)',
+                            boxShadow: subTab === 'matrix' ? '0 1px 3px rgba(0,0,0,0.08)' : 'none',
+                            transition: 'all 0.15s ease'
+                          }}
+                        >
+                          📋 Topic Coverage Matrix ({coveragePct}%)
+                        </button>
                       </div>
-                      
-                      {/* Gp Progress Ring */}
-                      <svg width="44" height="44" viewBox="0 0 36 36" style={{ transform: 'rotate(-90deg)' }}>
-                        <path className="ring-bg" stroke="#E2E8F0" strokeWidth="3" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
-                        <path className="ring-fill" stroke="var(--accent)" strokeDasharray={`${coveragePct}, 100`} strokeWidth="3.5" strokeLinecap="round" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
-                        <text x="18" y="21.5" fill="var(--text-main)" fontSize="9" fontWeight="700" textAnchor="middle" transform="rotate(90 18 18)" style={{ fontFamily: 'var(--font-sans)' }}>{coveragePct}%</text>
-                      </svg>
                     </div>
                   </div>
 
-                  {/* Warning message if minimum capital is not established */}
-                  {!hasMinCapital && (
-                    <div style={{ backgroundColor: '#FFFBEB', border: '1px solid #FCD34D', color: '#B45309', padding: '12px 16px', borderRadius: '8px', marginBottom: '20px', fontSize: '13.5px', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                  {/* Warning banner */}
+                  {!hasMinCapital && subTab === 'subjects' && (
+                    <div style={{ backgroundColor: '#FFFBEB', border: '1px solid #FCD34D', color: '#B45309', padding: '10px 14px', borderRadius: '8px', marginBottom: '14px', fontSize: '13px', display: 'flex', alignItems: 'center', gap: '8px', flexShrink: 0 }}>
                       <Icon name="info" style={{ color: '#B45309' }} />
                       <div>
-                        <strong>💡 Study Suggestion:</strong> You should prepare at least <strong>1 People</strong>, <strong>1 Places</strong>, and <strong>1 Objects</strong> subject in your core capital to unlock flexible, cross-topic story weaving.
+                        <strong>Study Suggestion:</strong> You should prepare at least <strong>1 People</strong>, <strong>1 Places</strong>, and <strong>1 Objects</strong> subject in your core capital to unlock flexible, cross-topic story weaving.
                       </div>
                     </div>
                   )}
 
-                  {/* Main Grid Layout */}
-                  <div className="weaver-grid" style={{ display: 'grid', gridTemplateColumns: '30fr 42fr 28fr', gap: '20px', flex: 1, minHeight: 0 }}>
-                    
-                    {/* Col 1: Modal Subjects list */}
-                    <div className="weaver-col" style={{ display: 'flex', flexDirection: 'column', height: '100%', minHeight: 0 }}>
-                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '12px' }}>
-                        <h3 style={{ fontSize: '15px', color: 'var(--text-main)', margin: 0, fontWeight: '700', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
-                          Modal Subjects Capital ({modalSubjects.length})
-                        </h3>
-                        <button 
-                          className="btn" 
-                          onClick={() => {
-                            setEditingSubject(null);
-                            setSubjectName('');
-                            setSubjectCategoryId('people');
-                            setSubjectDetail1('');
-                            setSubjectDetail2('');
-                            setSubjectDetail3('');
-                            setIsSubjectModalOpen(true);
-                          }}
-                          style={{ padding: '4px 10px', fontSize: '12.5px', backgroundColor: 'var(--accent-light)', color: 'var(--accent)', border: '1px solid var(--accent)', borderRadius: '6px' }}
-                        >
-                          <Icon name="plus" style={{ width: '0.9em', height: '0.9em', marginRight: '4px' }} /> Add New
-                        </button>
-                      </div>
+                  {/* SUBTAB 1: SUBJECTS & STORIES */}
+                  {subTab === 'subjects' && (
+                    <div style={{ display: 'grid', gridTemplateColumns: '38fr 62fr', gap: '20px', flex: 1, minHeight: 0 }}>
+                      
+                      {/* Left: Subjects List */}
+                      <div style={{ display: 'flex', flexDirection: 'column', height: '100%', minHeight: 0 }}>
+                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '10px', flexShrink: 0 }}>
+                          <span style={{ fontSize: '12px', fontWeight: 'bold', color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                            Your Modal Subjects ({modalSubjects.length})
+                          </span>
+                          <button 
+                            className="btn"
+                            onClick={() => {
+                              setEditingSubject(null);
+                              setSubjectName('');
+                              setSubjectCategoryId('people');
+                              setSubjectDetail1('');
+                              setSubjectDetail2('');
+                              setSubjectDetail3('');
+                              setIsSubjectModalOpen(true);
+                            }}
+                            style={{ padding: '3px 8px', fontSize: '11px', backgroundColor: 'var(--accent-light)', color: 'var(--accent)', border: '1px solid var(--accent)', borderRadius: '4px' }}
+                          >
+                            + Add Subject
+                          </button>
+                        </div>
 
-                      <div className="weaver-scrollable" style={{ flex: 1, overflowY: 'auto', display: 'flex', flexDirection: 'column', gap: '12px' }}>
-                        {modalSubjects.map(sub => {
-                          const linksCount = storylineMappings.filter(m => m.subject_id === sub.id).length;
-                          const cfg = categoryColors[sub.category_id] || { text: '#475569', bg: '#F1F5F9', label: 'Other' };
-                          return (
-                            <div className="card" key={sub.id} style={{ padding: '16px', position: 'relative', border: '1px solid var(--border-color)' }}>
-                              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '10px' }}>
-                                <span style={{ fontSize: '11px', fontWeight: '700', color: cfg.text, backgroundColor: cfg.bg, padding: '2px 8px', borderRadius: '12px', textTransform: 'uppercase' }}>
-                                  {cfg.label}
-                                </span>
-                                <div style={{ display: 'flex', gap: '6px' }}>
+                        <div className="weaver-scrollable" style={{ flex: 1, overflowY: 'auto', display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                          {modalSubjects.map(sub => {
+                            const linksCount = storylineMappings.filter(m => m.subject_id === sub.id).length;
+                            const cfg = categoryColors[sub.category_id] || { text: '#475569', bg: '#F1F5F9', label: 'Other' };
+                            return (
+                              <div key={sub.id} style={{ padding: '12px 14px', borderRadius: '8px', border: '1px solid var(--border-color)', backgroundColor: 'white', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                                <div style={{ display: 'flex', flexDirection: 'column', gap: '4px', overflow: 'hidden' }}>
+                                  <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                                    <span style={{ fontSize: '9px', fontWeight: 'bold', color: cfg.text, backgroundColor: cfg.bg, padding: '1px 6px', borderRadius: '10px', textTransform: 'uppercase' }}>
+                                      {cfg.label}
+                                    </span>
+                                    <span style={{ fontSize: '11px', color: 'var(--text-muted)' }}>({linksCount} linked topics)</span>
+                                  </div>
+                                  <strong style={{ fontSize: '13.5px', color: 'var(--text-main)', textOverflow: 'ellipsis', overflow: 'hidden', whiteSpace: 'nowrap' }}>{sub.subject_name}</strong>
+                                  <div style={{ fontSize: '11.5px', color: 'var(--text-muted)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                                    {sub.key_details.join(' • ')}
+                                  </div>
+                                </div>
+                                <div style={{ display: 'flex', gap: '10px', flexShrink: 0 }}>
                                   <button 
                                     onClick={() => {
                                       setEditingSubject(sub);
@@ -3850,235 +3898,308 @@ service cloud.firestore {
                                       setSubjectDetail3(sub.key_details[2] || '');
                                       setIsSubjectModalOpen(true);
                                     }}
-                                    style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'var(--text-muted)' }}
+                                    style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'var(--text-muted)', padding: 0 }}
                                   >
                                     <Icon name="edit" style={{ width: '0.85em', height: '0.85em' }} />
                                   </button>
                                   <button 
                                     onClick={() => {
-                                      if (confirm(`Bạn có chắc chắn muốn xóa chủ thể "${sub.subject_name}"? Mọi liên kết và câu chuyện liên quan cũng sẽ bị xóa.`)) {
+                                      if (confirm(`Are you sure you want to delete "${sub.subject_name}"? All linked topics and weaved stories will also be removed.`)) {
                                         setModalSubjects(modalSubjects.filter(s => s.id !== sub.id));
                                         setStorylineMappings(storylineMappings.filter(m => m.subject_id !== sub.id));
                                         setWeavedStories(weavedStories.filter(w => !w.subject_ids.includes(sub.id)));
                                       }
                                     }}
-                                    style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#EF4444' }}
+                                    style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#EF4444', padding: 0 }}
                                   >
                                     <Icon name="trash" style={{ width: '0.85em', height: '0.85em' }} />
                                   </button>
                                 </div>
                               </div>
+                            );
+                          })}
+                        </div>
+                      </div>
 
-                              <strong style={{ fontSize: '15px', color: 'var(--text-main)', display: 'block', marginBottom: '8px' }}>{sub.subject_name}</strong>
-                              
-                              <ul style={{ paddingLeft: '16px', fontSize: '13px', color: 'var(--text-muted)', margin: '0 0 12px 0', lineHeight: '1.4' }}>
-                                {sub.key_details.map((detail, idx) => detail.trim() && <li key={idx}>{detail}</li>)}
-                              </ul>
+                      {/* Right: Story Connection Builder */}
+                      <div style={{ display: 'flex', flexDirection: 'column', height: '100%', minHeight: 0 }}>
+                        <span style={{ fontSize: '12px', fontWeight: 'bold', color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '10px', display: 'block', flexShrink: 0 }}>
+                          Storyline Connector
+                        </span>
 
-                              <div style={{ borderTop: '1px dashed var(--border-color)', paddingTop: '8px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontSize: '12px' }}>
-                                <span style={{ color: 'var(--text-muted)' }}>Linked Topics</span>
-                                <strong style={{ color: linksCount > 0 ? 'var(--accent)' : 'var(--text-muted)' }}>{linksCount} Covered</strong>
-                              </div>
+                        <div className="card" style={{ flex: 1, padding: '16px', display: 'flex', flexDirection: 'column', minHeight: 0, border: '1px solid var(--border-color)', overflowY: 'auto' }}>
+                          <p style={{ fontSize: '12.5px', color: 'var(--text-muted)', margin: '0 0 12px 0', lineHeight: '1.4' }}>
+                            Select two modal subjects to write a bridging narrative connecting them.
+                          </p>
+
+                          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px', marginBottom: '14px' }}>
+                            <div>
+                              <label className="form-label" style={{ fontSize: '10px', textTransform: 'uppercase', color: 'var(--text-muted)' }}>Modal Subject A</label>
+                              <select 
+                                value={weaverActiveSubjectA}
+                                onChange={(e) => setWeaverActiveSubjectA(e.target.value)}
+                                style={{ width: '100%', padding: '6px', borderRadius: '6px', border: '1px solid var(--border-color)', fontSize: '12.5px' }}
+                              >
+                                {modalSubjects.map(s => <option key={s.id} value={s.id}>{s.subject_name}</option>)}
+                              </select>
                             </div>
-                          );
-                        })}
+                            <div>
+                              <label className="form-label" style={{ fontSize: '10px', textTransform: 'uppercase', color: 'var(--text-muted)' }}>Modal Subject B</label>
+                              <select 
+                                value={weaverActiveSubjectB}
+                                onChange={(e) => setWeaverActiveSubjectB(e.target.value)}
+                                style={{ width: '100%', padding: '6px', borderRadius: '6px', border: '1px solid var(--border-color)', fontSize: '12.5px' }}
+                              >
+                                {modalSubjects.map(s => <option key={s.id} value={s.id}>{s.subject_name}</option>)}
+                              </select>
+                            </div>
+                          </div>
+
+                          {/* Subject details side-by-side */}
+                          {(() => {
+                            const subA = modalSubjects.find(s => s.id === weaverActiveSubjectA);
+                            const subB = modalSubjects.find(s => s.id === weaverActiveSubjectB);
+                            if (!subA || !subB) return null;
+
+                            return (
+                              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px', marginBottom: '14px', flexShrink: 0 }}>
+                                <div style={{ backgroundColor: '#F8FAFC', padding: '10px', borderRadius: '6px', border: '1px solid var(--border-color)' }}>
+                                  <span style={{ fontSize: '9px', fontWeight: 'bold', color: 'var(--accent)', textTransform: 'uppercase' }}>{subA.category_id}</span>
+                                  <strong style={{ display: 'block', fontSize: '12.5px', marginBottom: '4px' }}>{subA.subject_name}</strong>
+                                  <ul style={{ paddingLeft: '12px', fontSize: '11px', color: 'var(--text-muted)', margin: 0 }}>
+                                    {subA.key_details.map((d, i) => d.trim() && <li key={i}>{d}</li>)}
+                                  </ul>
+                                </div>
+                                <div style={{ backgroundColor: '#F8FAFC', padding: '10px', borderRadius: '6px', border: '1px solid var(--border-color)' }}>
+                                  <span style={{ fontSize: '9px', fontWeight: 'bold', color: 'var(--accent)', textTransform: 'uppercase' }}>{subB.category_id}</span>
+                                  <strong style={{ display: 'block', fontSize: '12.5px', marginBottom: '4px' }}>{subB.subject_name}</strong>
+                                  <ul style={{ paddingLeft: '12px', fontSize: '11px', color: 'var(--text-muted)', margin: 0 }}>
+                                    {subB.key_details.map((d, i) => d.trim() && <li key={i}>{d}</li>)}
+                                  </ul>
+                                </div>
+                              </div>
+                            );
+                          })()}
+
+                          {weaverActiveSubjectA === weaverActiveSubjectB ? (
+                            <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', border: '1px dashed var(--border-color)', borderRadius: '8px', padding: '20px', color: 'var(--text-muted)', fontSize: '12.5px' }}>
+                              Please select two different subjects to write a story link.
+                            </div>
+                          ) : (
+                            <div style={{ flex: 1, display: 'flex', flexDirection: 'column', minHeight: 0 }}>
+                              <label className="form-label" style={{ fontSize: '12px', fontWeight: '600', marginBottom: '6px' }}>
+                                Bridging Story Line / Connection Link
+                              </label>
+                              <textarea
+                                placeholder="E.g. We met at the *Quiet River Cafe* and *Ainil* translated a complex Chinese text for me..."
+                                value={activeWeave ? activeWeave.bridging_sentence : ''}
+                                onChange={(e) => handleWeaveTextChange(e.target.value)}
+                                style={{
+                                  flex: 1,
+                                  width: '100%',
+                                  padding: '10px',
+                                  borderRadius: '6px',
+                                  border: '1px solid var(--border-color)',
+                                  fontSize: '13px',
+                                  lineHeight: '1.45',
+                                  resize: 'none',
+                                  marginBottom: '6px',
+                                  minHeight: '80px'
+                                }}
+                              />
+                              <span style={{ fontSize: '10.5px', color: 'var(--text-muted)' }}>
+                                * Use <code>*Subject Name*</code> to highlight core subjects within your bridging text.
+                              </span>
+                            </div>
+                          )}
+                        </div>
                       </div>
                     </div>
+                  )}
 
-                    {/* Col 2: Shared Storyline Weaver (Link đề) */}
-                    <div className="weaver-col" style={{ display: 'flex', flexDirection: 'column', height: '100%', minHeight: 0 }}>
-                      <h3 style={{ fontSize: '15px', color: 'var(--text-main)', marginBottom: '12px', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
-                        Shared Storyline Weaver
-                      </h3>
-
-                      <div className="card" style={{ flex: 1, padding: '20px', display: 'flex', flexDirection: 'column', minHeight: 0, border: '1px solid var(--border-color)', overflowY: 'auto' }}>
-                        <p style={{ fontSize: '13px', color: 'var(--text-muted)', margin: '0 0 16px 0', lineHeight: '1.4' }}>
-                          Select two subjects (e.g., one People + one Places) to write a logical bridging sentence, weaving them into a single coherent narrative that easily fills the 2-minute Speaking requirement.
-                        </p>
-
-                        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px', marginBottom: '16px' }}>
-                          <div>
-                            <label className="form-label" style={{ fontSize: '11px', textTransform: 'uppercase', color: 'var(--text-muted)' }}>Modal Subject A</label>
-                            <select 
-                              value={weaverActiveSubjectA}
-                              onChange={(e) => setWeaverActiveSubjectA(e.target.value)}
-                              style={{ width: '100%', padding: '8px', borderRadius: '6px', border: '1px solid var(--border-color)' }}
-                            >
-                              {modalSubjects.map(s => <option key={s.id} value={s.id}>{s.subject_name}</option>)}
-                            </select>
-                          </div>
-                          <div>
-                            <label className="form-label" style={{ fontSize: '11px', textTransform: 'uppercase', color: 'var(--text-muted)' }}>Modal Subject B</label>
-                            <select 
-                              value={weaverActiveSubjectB}
-                              onChange={(e) => setWeaverActiveSubjectB(e.target.value)}
-                              style={{ width: '100%', padding: '8px', borderRadius: '6px', border: '1px solid var(--border-color)' }}
-                            >
-                              {modalSubjects.map(s => <option key={s.id} value={s.id}>{s.subject_name}</option>)}
-                            </select>
+                  {/* SUBTAB 2: TOPIC COVERAGE MATRIX */}
+                  {subTab === 'matrix' && (
+                    <div style={{ display: 'grid', gridTemplateColumns: '45fr 55fr', gap: '20px', flex: 1, minHeight: 0 }}>
+                      
+                      {/* Left: Prompts list */}
+                      <div style={{ display: 'flex', flexDirection: 'column', height: '100%', minHeight: 0 }}>
+                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '8px', flexShrink: 0 }}>
+                          {/* Matrix category filter bar */}
+                          <div style={{ display: 'flex', gap: '3px' }}>
+                            {['all', 'people', 'places', 'experiences', 'objects', 'activities'].map(cat => (
+                              <button
+                                key={cat}
+                                onClick={() => setSpeakingFilterCategory(cat)}
+                                style={{
+                                  padding: '2px 6px',
+                                  fontSize: '10.5px',
+                                  borderRadius: '4px',
+                                  border: '1px solid var(--border-color)',
+                                  cursor: 'pointer',
+                                  fontWeight: '600',
+                                  backgroundColor: speakingFilterCategory === cat ? 'var(--accent)' : 'white',
+                                  color: speakingFilterCategory === cat ? 'white' : 'var(--text-main)',
+                                  textTransform: 'capitalize'
+                                }}
+                              >
+                                {cat === 'all' ? 'All' : cat}
+                              </button>
+                            ))}
                           </div>
                         </div>
 
-                        {/* Subject detail comparison cards */}
-                        {(() => {
-                          const subA = modalSubjects.find(s => s.id === weaverActiveSubjectA);
-                          const subB = modalSubjects.find(s => s.id === weaverActiveSubjectB);
-                          if (!subA || !subB) return null;
+                        <div className="weaver-scrollable" style={{ flex: 1, overflowY: 'auto', display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                          {filteredPrompts.map(p => {
+                            const mapping = storylineMappings.find(m => m.question_id === p.id);
+                            const isSelected = selectedActivePrompt && selectedActivePrompt.id === p.id;
+                            return (
+                              <div
+                                key={p.id}
+                                onClick={() => setSelectedActivePrompt(p)}
+                                style={{
+                                  padding: '10px 12px',
+                                  borderRadius: '6px',
+                                  border: isSelected ? '1px solid var(--accent)' : '1px solid var(--border-color)',
+                                  backgroundColor: isSelected ? '#F4F1FC' : mapping ? '#F0FDF4' : 'white',
+                                  cursor: 'pointer',
+                                  display: 'flex',
+                                  justifyContent: 'space-between',
+                                  alignItems: 'center',
+                                  transition: 'all 0.15s ease'
+                                }}
+                              >
+                                <span style={{ fontSize: '12.5px', color: '#0F172A', fontWeight: '500', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', marginRight: '8px' }} title={p.prompt_text}>
+                                  {p.prompt_text}
+                                </span>
+                                <div style={{ display: 'flex', alignItems: 'center', gap: '6px', flexShrink: 0 }}>
+                                  {mapping ? (
+                                    <span style={{ fontSize: '11px', color: '#10B981', fontWeight: '600' }}>✓ Covered</span>
+                                  ) : (
+                                    <span style={{ fontSize: '11px', color: 'var(--text-muted)' }}>Pending</span>
+                                  )}
+                                </div>
+                              </div>
+                            );
+                          })}
+                        </div>
+                      </div>
 
-                          return (
-                            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px', marginBottom: '16px' }}>
-                              <div style={{ backgroundColor: '#F8FAFC', padding: '12px', borderRadius: '8px', border: '1px solid var(--border-color)' }}>
-                                <span style={{ fontSize: '10px', fontWeight: 'bold', color: 'var(--accent)', textTransform: 'uppercase' }}>{subA.category_id}</span>
-                                <strong style={{ display: 'block', fontSize: '13.5px', marginBottom: '6px' }}>{subA.subject_name}</strong>
-                                <ul style={{ paddingLeft: '14px', fontSize: '11.5px', color: 'var(--text-muted)', margin: 0 }}>
-                                  {subA.key_details.map((d, i) => d.trim() && <li key={i}>{d}</li>)}
-                                </ul>
-                              </div>
-                              <div style={{ backgroundColor: '#F8FAFC', padding: '12px', borderRadius: '8px', border: '1px solid var(--border-color)' }}>
-                                <span style={{ fontSize: '10px', fontWeight: 'bold', color: 'var(--accent)', textTransform: 'uppercase' }}>{subB.category_id}</span>
-                                <strong style={{ display: 'block', fontSize: '13.5px', marginBottom: '6px' }}>{subB.subject_name}</strong>
-                                <ul style={{ paddingLeft: '14px', fontSize: '11.5px', color: 'var(--text-muted)', margin: 0 }}>
-                                  {subB.key_details.map((d, i) => d.trim() && <li key={i}>{d}</li>)}
-                                </ul>
-                              </div>
+                      {/* Right: Selected prompt linker detail */}
+                      <div style={{ display: 'flex', flexDirection: 'column', height: '100%', minHeight: 0 }}>
+                        <span style={{ fontSize: '12px', fontWeight: 'bold', color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '8px', display: 'block', flexShrink: 0 }}>
+                          Topic Linker Details
+                        </span>
+
+                        <div className="card" style={{ flex: 1, padding: '16px', display: 'flex', flexDirection: 'column', minHeight: 0, border: '1px solid var(--border-color)', overflowY: 'auto' }}>
+                          {!selectedActivePrompt ? (
+                            <div style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', color: 'var(--text-muted)', textAlign: 'center', padding: '20px' }}>
+                              <Icon name="info" style={{ fontSize: '32px', marginBottom: '8px', color: 'var(--border-muted)' }} />
+                              <strong style={{ display: 'block', fontSize: '14px', color: 'var(--text-main)' }}>No Speaking Topic Selected</strong>
+                              <span style={{ fontSize: '12px' }}>Select an IELTS prompt on the left to link a subject and write your speaking approach note.</span>
                             </div>
-                          );
-                        })()}
+                          ) : (() => {
+                            const mapping = storylineMappings.find(m => m.question_id === selectedActivePrompt.id);
+                            const linkedSubject = mapping ? modalSubjects.find(s => s.id === mapping.subject_id) : null;
 
-                        {/* Bridging Sentence input */}
-                        {weaverActiveSubjectA === weaverActiveSubjectB ? (
-                          <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', border: '1px dashed var(--border-color)', borderRadius: '8px', padding: '20px', color: 'var(--text-muted)', fontSize: '13px' }}>
-                            Please select two different subjects to weave a storyline connection.
-                          </div>
-                        ) : (
-                          <div style={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
-                            <label className="form-label" style={{ fontSize: '12px', fontWeight: '600' }}>
-                              Bridging Storyline Bridge
-                            </label>
-                            <textarea
-                              placeholder="Ví dụ: Chúng tôi thường gặp nhau tại *Quiet River Cafe* (Quán cà phê yên tĩnh) và *Ainil* đã dịch cuốn sách tiếng Anh của mình tại đây..."
-                              value={activeWeave ? activeWeave.bridging_sentence : ''}
-                              onChange={(e) => handleWeaveTextChange(e.target.value)}
-                              style={{
-                                flex: 1,
-                                width: '100%',
-                                padding: '12px',
-                                borderRadius: '8px',
-                                border: '1px solid var(--border-color)',
-                                fontSize: '13.5px',
-                                lineHeight: '1.5',
-                                resize: 'none',
-                                marginBottom: '10px'
-                              }}
-                            />
-                            <span style={{ fontSize: '11px', color: 'var(--text-muted)', display: 'block' }}>
-                              💡 Use asterisks <code>*Subject Name*</code> to highlight core subjects within your bridging text.
-                            </span>
-                          </div>
-                        )}
-                      </div>
-                    </div>
+                            return (
+                              <div style={{ flex: 1, display: 'flex', flexDirection: 'column', minHeight: 0 }}>
+                                <div style={{ backgroundColor: '#F8FAFC', padding: '10px 14px', borderRadius: '6px', border: '1px solid var(--border-color)', marginBottom: '14px', flexShrink: 0 }}>
+                                  <span style={{ fontSize: '9px', fontWeight: 'bold', color: 'var(--text-muted)', textTransform: 'uppercase' }}>Selected IELTS speaking Part 2 Prompt</span>
+                                  <strong style={{ display: 'block', fontSize: '13.5px', color: 'var(--text-main)', marginTop: '4px', lineHeight: '1.4' }}>{selectedActivePrompt.prompt_text}</strong>
+                                </div>
 
-                    {/* Col 3: Forecast Topic Matrix */}
-                    <div className="weaver-col" style={{ display: 'flex', flexDirection: 'column', height: '100%', minHeight: 0 }}>
-                      <h3 style={{ fontSize: '15px', color: 'var(--text-main)', marginBottom: '12px', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
-                        Topic Coverage Matrix ({filteredPrompts.length})
-                      </h3>
+                                {mapping && linkedSubject ? (
+                                  <div style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                                    <div style={{ padding: '12px', border: '1px solid #E2E8F0', borderRadius: '8px', backgroundColor: 'white' }}>
+                                      <span style={{ fontSize: '10px', color: 'var(--text-muted)', display: 'block' }}>LINKED SUBJECT</span>
+                                      <strong style={{ fontSize: '14px', color: 'var(--accent)' }}>{linkedSubject.subject_name}</strong>
+                                      <ul style={{ paddingLeft: '16px', fontSize: '11.5px', color: 'var(--text-muted)', margin: '4px 0 0 0' }}>
+                                        {linkedSubject.key_details.map((d, i) => <li key={i}>{d}</li>)}
+                                      </ul>
+                                    </div>
 
-                      {/* Matrix category filter bar */}
-                      <div style={{ display: 'flex', gap: '4px', flexWrap: 'wrap', marginBottom: '10px' }}>
-                        {['all', 'people', 'places', 'experiences', 'objects', 'activities'].map(cat => (
-                          <button
-                            key={cat}
-                            onClick={() => setSpeakingFilterCategory(cat)}
-                            style={{
-                              padding: '3px 8px',
-                              fontSize: '11px',
-                              borderRadius: '4px',
-                              border: '1px solid var(--border-color)',
-                              cursor: 'pointer',
-                              fontWeight: '600',
-                              backgroundColor: speakingFilterCategory === cat ? 'var(--accent)' : 'white',
-                              color: speakingFilterCategory === cat ? 'white' : 'var(--text-main)',
-                              textTransform: 'capitalize'
-                            }}
-                          >
-                            {cat === 'all' ? 'All' : cat}
-                          </button>
-                        ))}
-                      </div>
+                                    <div style={{ flex: 1, minHeight: 0 }}>
+                                      <span style={{ fontSize: '11px', color: 'var(--text-muted)', display: 'block', marginBottom: '4px' }}>ADAPTATION ANGLE & STRATEGY</span>
+                                      <div style={{ padding: '10px 12px', backgroundColor: '#F0FDF4', color: '#047857', border: '1px solid #BBF7D0', borderRadius: '6px', fontSize: '13px', lineHeight: '1.45', fontStyle: 'italic' }}>
+                                        💡 {mapping.adaptation_note}
+                                      </div>
+                                    </div>
 
-                      <div className="weaver-scrollable" style={{ flex: 1, overflowY: 'auto', display: 'flex', flexDirection: 'column', gap: '8px' }}>
-                        {filteredPrompts.map(p => {
-                          const mapping = storylineMappings.find(m => m.question_id === p.id);
-                          const linkedSubject = mapping ? modalSubjects.find(s => s.id === mapping.subject_id) : null;
-
-                          return (
-                            <div 
-                              className="card" 
-                              key={p.id}
-                              style={{ 
-                                padding: '12px 14px', 
-                                borderLeft: mapping ? '4px solid #10B981' : '1px solid var(--border-color)',
-                                backgroundColor: mapping ? '#F0FDF4' : 'white',
-                                display: 'flex',
-                                flexDirection: 'column',
-                                gap: '6px'
-                              }}
-                            >
-                              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '8px' }}>
-                                <span style={{ fontSize: '13px', color: '#0F172A', fontWeight: '500', lineHeight: '1.4' }}>{p.prompt_text}</span>
-                                {mapping ? (
-                                  <button 
-                                    onClick={() => {
-                                      if (confirm(`Are you sure you want to unlink this topic?`)) {
-                                        setStorylineMappings(storylineMappings.filter(m => m.id !== mapping.id));
-                                      }
-                                    }}
-                                    style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#EF4444', fontSize: '11px', padding: 0 }}
-                                  >
-                                    Unlink
-                                  </button>
+                                    <div style={{ display: 'flex', justifyContent: 'flex-end', flexShrink: 0 }}>
+                                      <button
+                                        onClick={() => {
+                                          if (confirm(`Are you sure you want to unlink this topic?`)) {
+                                            setStorylineMappings(storylineMappings.filter(m => m.id !== mapping.id));
+                                          }
+                                        }}
+                                        style={{ backgroundColor: 'transparent', color: '#EF4444', border: 'none', fontSize: '12px', cursor: 'pointer', fontWeight: '600' }}
+                                      >
+                                        Unlink Topic
+                                      </button>
+                                    </div>
+                                  </div>
                                 ) : (
-                                  <button 
-                                    onClick={() => {
-                                      setActivePromptToLink(p);
-                                      setSelectedSubjectIdToLink(modalSubjects[0] ? modalSubjects[0].id : '');
-                                      setAdaptationNoteText('');
-                                      setIsLinkModalOpen(true);
-                                    }}
-                                    style={{ 
-                                      backgroundColor: 'var(--accent-light)', 
-                                      color: 'var(--accent)', 
-                                      border: 'none', 
-                                      borderRadius: '4px',
-                                      padding: '2px 8px',
-                                      fontSize: '11px',
-                                      fontWeight: '600',
-                                      cursor: 'pointer'
-                                    }}
-                                  >
-                                    Link
-                                  </button>
+                                  <div style={{ flex: 1, display: 'flex', flexDirection: 'column', minHeight: 0 }}>
+                                    <div className="form-group" style={{ marginBottom: '12px', flexShrink: 0 }}>
+                                      <label className="form-label" style={{ fontSize: '11px' }}>Link a Modal Subject</label>
+                                      <select
+                                        value={selectedSubjectIdToLink}
+                                        onChange={(e) => setSelectedSubjectIdToLink(e.target.value)}
+                                        style={{ width: '100%', padding: '6px', borderRadius: '6px', border: '1px solid var(--border-color)', fontSize: '12.5px' }}
+                                      >
+                                        {modalSubjects.map(s => <option key={s.id} value={s.id}>{s.subject_name} ({s.category_id})</option>)}
+                                      </select>
+                                    </div>
+
+                                    <div className="form-group" style={{ flex: 1, display: 'flex', flexDirection: 'column', minHeight: 0 }}>
+                                      <label className="form-label" style={{ fontSize: '11px' }}>Adaptation Angle (How does this subject answer the prompt?)</label>
+                                      <textarea
+                                        placeholder="E.g. Ainil speaks fluent English, Malay, and Chinese, representing an exceptional language learner..."
+                                        value={adaptationNoteText}
+                                        onChange={(e) => setAdaptationNoteText(e.target.value)}
+                                        style={{ width: '100%', flex: 1, padding: '10px', borderRadius: '6px', border: '1px solid var(--border-color)', resize: 'none', fontSize: '13px', lineHeight: '1.45', minHeight: '80px' }}
+                                      />
+                                    </div>
+
+                                    <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '10px', flexShrink: 0 }}>
+                                      <button
+                                        onClick={() => {
+                                          if (!selectedSubjectIdToLink) {
+                                            alert('Please create or select a modal subject first!');
+                                            return;
+                                          }
+                                          if (!adaptationNoteText.trim()) {
+                                            alert('Please enter an adaptation angle to link this topic!');
+                                            return;
+                                          }
+
+                                          const newMap = {
+                                            id: 'map-' + Date.now(),
+                                            subject_id: selectedSubjectIdToLink,
+                                            question_id: selectedActivePrompt.id,
+                                            adaptation_note: adaptationNoteText
+                                          };
+
+                                          setStorylineMappings([...storylineMappings, newMap]);
+                                          showToastGlobal('Linked prompt successfully!');
+                                          setAdaptationNoteText('');
+                                        }}
+                                        className="btn btn-primary"
+                                        style={{ padding: '6px 14px', fontSize: '12px' }}
+                                      >
+                                        Link Topic
+                                      </button>
+                                    </div>
+                                  </div>
                                 )}
                               </div>
-
-                              {mapping && linkedSubject && (
-                                <div style={{ backgroundColor: 'white', border: '1px solid #E2E8F0', padding: '6px 10px', borderRadius: '6px', fontSize: '11.5px' }}>
-                                  <span style={{ color: 'var(--text-muted)' }}>Using: </span>
-                                  <strong style={{ color: 'var(--accent)' }}>{linkedSubject.subject_name}</strong>
-                                  <div style={{ color: '#047857', marginTop: '3px', fontStyle: 'italic' }}>
-                                    💡 {mapping.adaptation_note}
-                                  </div>
-                                </div>
-                              )}
-                            </div>
-                          );
-                        })}
+                            );
+                          })()}
+                        </div>
                       </div>
                     </div>
+                  )}
 
-                  </div>
                 </div>
               );
             })()}
