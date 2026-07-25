@@ -501,20 +501,40 @@
 
       // IELTS Story Weaver State
       const [modalSubjects, setModalSubjects] = useState(() => {
-        const saved = localStorage.getItem('lexicon_modal_subjects');
-        return saved ? JSON.parse(saved) : INITIAL_MODAL_SUBJECTS;
+        try {
+          const saved = localStorage.getItem('lexicon_modal_subjects');
+          const parsed = saved ? JSON.parse(saved) : null;
+          return Array.isArray(parsed) ? parsed : INITIAL_MODAL_SUBJECTS;
+        } catch (e) {
+          return INITIAL_MODAL_SUBJECTS;
+        }
       });
       const [storylineMappings, setStorylineMappings] = useState(() => {
-        const saved = localStorage.getItem('lexicon_storyline_mappings');
-        return saved ? JSON.parse(saved) : INITIAL_STORYLINE_MAPPINGS;
+        try {
+          const saved = localStorage.getItem('lexicon_storyline_mappings');
+          const parsed = saved ? JSON.parse(saved) : null;
+          return Array.isArray(parsed) ? parsed : INITIAL_STORYLINE_MAPPINGS;
+        } catch (e) {
+          return INITIAL_STORYLINE_MAPPINGS;
+        }
       });
       const [weavedStories, setWeavedStories] = useState(() => {
-        const saved = localStorage.getItem('lexicon_weaved_stories');
-        return saved ? JSON.parse(saved) : INITIAL_WEAVED_STORIES;
+        try {
+          const saved = localStorage.getItem('lexicon_weaved_stories');
+          const parsed = saved ? JSON.parse(saved) : null;
+          return Array.isArray(parsed) ? parsed : INITIAL_WEAVED_STORIES;
+        } catch (e) {
+          return INITIAL_WEAVED_STORIES;
+        }
       });
       const [speakingPrompts, setSpeakingPrompts] = useState(() => {
-        const saved = localStorage.getItem('lexicon_speaking_prompts');
-        return saved ? JSON.parse(saved) : INITIAL_SPEAKING_PROMPTS;
+        try {
+          const saved = localStorage.getItem('lexicon_speaking_prompts');
+          const parsed = saved ? JSON.parse(saved) : null;
+          return Array.isArray(parsed) ? parsed : INITIAL_SPEAKING_PROMPTS;
+        } catch (e) {
+          return INITIAL_SPEAKING_PROMPTS;
+        }
       });
 
       // Weaver UI State
@@ -556,6 +576,11 @@
       const isSyncingRef = useRef(false);
       const syncTimeoutRef = useRef(null);
       const hasInitialSynced = useRef(false);
+      const isMountedRef = useRef(false);
+
+      useEffect(() => {
+        isMountedRef.current = true;
+      }, []);
 
       const initializeFirebaseApp = (config) => {
         if (!config || typeof firebase === 'undefined') return false;
@@ -1178,6 +1203,7 @@
       // Save state to localStorage whenever it changes
       useEffect(() => {
         localStorage.setItem('lexicon_entries', JSON.stringify(entries));
+        if (!isMountedRef.current) return;
         if (isSyncingRef.current) return;
         localStorage.setItem('lexicon_last_updated', new Date().toISOString());
         triggerAutoSync();
@@ -1185,6 +1211,7 @@
 
       useEffect(() => {
         localStorage.setItem('lexicon_folders', JSON.stringify(folders));
+        if (!isMountedRef.current) return;
         if (isSyncingRef.current) return;
         localStorage.setItem('lexicon_last_updated', new Date().toISOString());
         triggerAutoSync();
@@ -1192,6 +1219,7 @@
 
       useEffect(() => {
         localStorage.setItem('lexicon_articles', JSON.stringify(articles));
+        if (!isMountedRef.current) return;
         if (isSyncingRef.current) return;
         localStorage.setItem('lexicon_last_updated', new Date().toISOString());
         triggerAutoSync();
@@ -1199,6 +1227,7 @@
 
       useEffect(() => {
         localStorage.setItem('lexicon_modal_subjects', JSON.stringify(modalSubjects));
+        if (!isMountedRef.current) return;
         if (isSyncingRef.current) return;
         localStorage.setItem('lexicon_last_updated', new Date().toISOString());
         triggerAutoSync();
@@ -1206,6 +1235,7 @@
 
       useEffect(() => {
         localStorage.setItem('lexicon_storyline_mappings', JSON.stringify(storylineMappings));
+        if (!isMountedRef.current) return;
         if (isSyncingRef.current) return;
         localStorage.setItem('lexicon_last_updated', new Date().toISOString());
         triggerAutoSync();
@@ -1213,6 +1243,7 @@
 
       useEffect(() => {
         localStorage.setItem('lexicon_weaved_stories', JSON.stringify(weavedStories));
+        if (!isMountedRef.current) return;
         if (isSyncingRef.current) return;
         localStorage.setItem('lexicon_last_updated', new Date().toISOString());
         triggerAutoSync();
@@ -1220,6 +1251,7 @@
 
       useEffect(() => {
         localStorage.setItem('lexicon_speaking_prompts', JSON.stringify(speakingPrompts));
+        if (!isMountedRef.current) return;
         if (isSyncingRef.current) return;
         localStorage.setItem('lexicon_last_updated', new Date().toISOString());
         triggerAutoSync();
