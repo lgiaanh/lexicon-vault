@@ -1163,11 +1163,25 @@
         }
       }, [entries]);
 
+      const [manualTimerRunning, setManualTimerRunning] = useState(false);
+
+      const toggleTimer = () => {
+        setManualTimerRunning(prev => !prev);
+      };
+
+      const resetTimer = () => {
+        if (confirm("Are you sure you want to reset today's study time to 0?")) {
+          setStudyTimeToday(0);
+          const studyDateStr = getStudyDateString();
+          localStorage.setItem('lexicon_study_time', JSON.stringify({ date: studyDateStr, seconds: 0 }));
+        }
+      };
+
       // Timer effect
       useEffect(() => {
         let interval = null;
         
-        if (isActivelyStudying) {
+        if (isActivelyStudying || manualTimerRunning) {
           setIsTimerRunning(true);
           interval = setInterval(() => {
             const isIdle = Date.now() - lastActivityTime.current > 60000;
@@ -1196,7 +1210,7 @@
         return () => {
           if (interval) clearInterval(interval);
         };
-      }, [isActivelyStudying]);
+      }, [isActivelyStudying, manualTimerRunning]);
 
       // Format study timer display (e.g. 1h 12m 4s or 12m 4s or 4s)
       const formatStudyTime = (totalSeconds) => {
