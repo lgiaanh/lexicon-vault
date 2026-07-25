@@ -2835,3 +2835,81 @@ body {
     overflow-y: auto !important;
   }
 }
+
+/* ==========================================================================
+   FOLDER ROW AND BADGE COUNT STANDARDIZATION
+   ========================================================================== */
+
+.folder-item {
+  display: flex !important;
+  align-items: center !important;
+  height: 44px !important;
+  padding: 0 16px !important;
+  border-radius: 8px !important;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  color: var(--text-main);
+  transition: all 0.15s ease;
+  margin: 2px 0;
+  box-sizing: border-box;
+  justify-content: space-between !important;
+}
+
+.folder-item:hover {
+  background-color: #F1F5F9;
+}
+
+.folder-item.active {
+  background-color: var(--accent-light);
+  color: var(--accent);
+}
+
+.folder-name-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.folder-name {
+  font-size: 13.5px;
+  font-weight: 500;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/* Standardized Component Count Badge */
+.folder-badge-count {
+  min-width: 24px;
+  height: 20px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background-color: #E2E8F0;
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  margin-left: 8px;
+}
+
+/* Collapsed Folder State */
+.sidebar.collapsed .folder-item {
+  width: 44px !important;
+  height: 44px !important;
+  padding: 0 !important;
+  margin: 4px auto !important;
+  justify-content: center !important;
+}
+
+.sidebar.collapsed .folder-badge-count {
+  display: none !important;
+}
