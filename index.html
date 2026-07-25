@@ -46,6 +46,15 @@
 
   <!-- Inline Babel-compiled React Script (Bypasses local CORS restrictions) -->
   <script type="text/babel">
+    // Global Safe JSON LocalStorage Parser Helper
+    function safeParseJSON(key, fallback) {
+      try {
+        const val = localStorage.getItem(key);
+        return val ? JSON.parse(val) : fallback;
+      } catch (e) {
+        return fallback;
+      }
+    }
     const { useState, useEffect, useRef, useMemo } = React;
 
     // Set up PDF.js worker source globally
@@ -716,14 +725,7 @@
           const docSnap = await docRef.get();
 
           const localTimestamp = localStorage.getItem('lexicon_last_updated') || new Date(0).toISOString();
-          const safeParseJSON = (key, fallback) => {
-            try {
-              const val = localStorage.getItem(key);
-              return val ? JSON.parse(val) : fallback;
-            } catch (e) {
-              return fallback;
-            }
-          };
+
           const localData = {
             entries: safeParseJSON('lexicon_entries', []),
             folders: safeParseJSON('lexicon_folders', []),
@@ -2545,7 +2547,7 @@ IMPORTANT: If the Free Dictionary context contains a valid IPA pronunciation (ip
             {isSidebarCollapsed ? (
               <div 
                 onClick={toggleTimer}
-                title={isTimerRunning ? `Timer Running: ${formatStudyTime(studyTimeToday)} (Click to Pause)` : `Streak: 🔥 ${studyStreak.streak || 0} Days (Click to Start Timer)`}
+                title={isTimerRunning ? `Timer Running: ${formatStudyTime(studyTimeToday)} (Click to Pause)` : `Streak: 🔥 ${streakCount} Days (Click to Start Timer)`}
                 style={{
                   margin: '16px auto 8px auto',
                   width: '42px',
@@ -2636,7 +2638,7 @@ IMPORTANT: If the Free Dictionary context contains a valid IPA pronunciation (ip
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '2px', padding: '0 16px', margin: '4px 0 10px 0' }}>
                   <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '11.5px' }}>
                     <span style={{ color: 'var(--text-muted)' }}>Daily Streak:</span>
-                    <strong style={{ color: 'var(--accent)' }}>🔥 {studyStreak.streak || 0} Days</strong>
+                    <strong style={{ color: 'var(--accent)' }}>🔥 {streakCount} Days</strong>
                   </div>
                   <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '11.5px' }}>
                     <span style={{ color: 'var(--text-muted)' }}>Total Study Time:</span>
@@ -7516,14 +7518,7 @@ service cloud.firestore {
                 <button 
                   onClick={() => {
                     try {
-                      const safeParseJSON = (key, fallback) => {
-                        try {
-                          const val = localStorage.getItem(key);
-                          return val ? JSON.parse(val) : fallback;
-                        } catch (e) {
-                          return fallback;
-                        }
-                      };
+
                       const data = {
                         entries: safeParseJSON('lexicon_entries', []),
                         folders: safeParseJSON('lexicon_folders', []),
