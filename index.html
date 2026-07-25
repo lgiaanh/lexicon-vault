@@ -205,6 +205,12 @@
         ),
         link: (
           <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71 M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
+        ),
+        chevronLeft: (
+          <polyline points="15 18 9 12 15 6" />
+        ),
+        chevronRight: (
+          <polyline points="9 18 15 12 9 6" />
         )
       };
 
@@ -498,6 +504,29 @@
 
       // UI State
       const [activeTab, setActiveTab] = useState('vault'); // 'vault' | 'graph' | 'review' | 'sync'
+
+      // Sidebar Collapse State
+      const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(() => {
+        const saved = localStorage.getItem('lexicon_sidebar_collapsed');
+        return saved === 'true';
+      });
+
+      useEffect(() => {
+        localStorage.setItem('lexicon_sidebar_collapsed', isSidebarCollapsed.toString());
+      }, [isSidebarCollapsed]);
+
+      useEffect(() => {
+        const handleResize = () => {
+          if (window.innerWidth < 1024) {
+            setIsSidebarCollapsed(true);
+          }
+        };
+        window.addEventListener('resize', handleResize);
+        handleResize();
+        return () => window.removeEventListener('resize', handleResize);
+      }, []);
+
+      const [expandedCardId, setExpandedCardId] = useState(null);
 
       // IELTS Story Weaver State
       const [modalSubjects, setModalSubjects] = useState(() => {
@@ -2468,222 +2497,267 @@ IMPORTANT: If the Free Dictionary context contains a valid IPA pronunciation (ip
           </div>
 
           {/* LEFT SIDEBAR NAVIGATION */}
-          <aside className="sidebar">
-            <div className="sidebar-header">
-              <h1 className="sidebar-title">
-                <Icon name="bookOpen" style={{ marginRight: '6px' }} /> Lexicon Vault
-              </h1>
+          <aside className={`sidebar ${isSidebarCollapsed ? 'collapsed' : ''}`}>
+            <div className="sidebar-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+              {!isSidebarCollapsed && (
+                <h1 className="sidebar-title" style={{ margin: 0 }}>
+                  <Icon name="bookOpen" style={{ marginRight: '6px' }} /> Lexicon Vault
+                </h1>
+              )}
+              <button 
+                onClick={() => setIsSidebarCollapsed(!isSidebarCollapsed)}
+                className="sidebar-toggle-btn"
+                aria-expanded={!isSidebarCollapsed}
+                title={isSidebarCollapsed ? "Expand Sidebar" : "Collapse Sidebar"}
+                style={{
+                  background: 'none',
+                  border: 'none',
+                  cursor: 'pointer',
+                  color: 'var(--text-muted)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  padding: '6px',
+                  borderRadius: '6px',
+                  width: '32px',
+                  height: '32px',
+                  backgroundColor: '#F1F5F9',
+                  margin: isSidebarCollapsed ? '0 auto' : '0'
+                }}
+              >
+                <Icon name={isSidebarCollapsed ? 'chevronRight' : 'chevronLeft'} />
+              </button>
             </div>
 
             {/* STUDY TIME TRACKER WIDGET */}
-            <div className="study-timer-widget" style={{
-              margin: '16px 16px 8px 16px',
-              padding: '14px',
-              borderRadius: '8px',
-              border: '2px solid var(--border-strong)',
-              backgroundColor: isTimerRunning ? 'rgba(16, 185, 129, 0.08)' : 'var(--bg-app)',
-              display: 'flex',
-              flexDirection: 'column',
-              gap: '10px',
-              transition: 'all 0.3s ease',
-              boxShadow: isTimerRunning ? '0 0 10px rgba(16, 185, 129, 0.15)' : 'none'
-            }}>
-              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%' }}>
-                <div 
-                  style={{ display: 'flex', alignItems: 'center', gap: '8px', cursor: 'pointer' }}
-                  onClick={() => {
-                    const val = prompt("Enter new study time today in minutes:", Math.round(studyTimeToday / 60));
-                    if (val !== null) {
-                      const mins = parseInt(val);
-                      if (!isNaN(mins) && mins >= 0) {
-                        const newSecs = mins * 60;
-                        const diff = newSecs - studyTimeToday;
-                        setStudyTimeToday(newSecs);
-                        setTotalStudyTime(prev => {
-                          const nextTotal = Math.max(0, prev + diff);
-                          localStorage.setItem('lexicon_total_study_time', nextTotal.toString());
-                          return nextTotal;
-                        });
-                        const studyDateStr = getStudyDateString();
-                        localStorage.setItem('lexicon_study_time', JSON.stringify({ date: studyDateStr, seconds: newSecs }));
-                      }
-                    }
-                  }}
-                  title="Click to adjust study time today"
-                >
-                  <span 
-                    className={isTimerRunning ? 'timer-pulse' : ''} 
-                    style={{ 
-                      fontSize: '18px',
-                      display: 'inline-block'
-                    }}
-                  >
-                    ⏱️
-                  </span>
-                  <div style={{ display: 'flex', flexDirection: 'column', textAlign: 'left' }}>
-                    <span style={{ fontSize: '10px', textTransform: 'uppercase', fontWeight: '700', color: 'var(--text-muted)' }}>
-                      {isTimerRunning ? 'Actively Studying' : 'Study Time Today'}
-                    </span>
-                    <span style={{ fontSize: '15px', fontWeight: '800', color: 'var(--text-main)', fontFamily: 'monospace' }}>
-                      {formatStudyTime(studyTimeToday)}
-                    </span>
+            {isSidebarCollapsed ? (
+              <div 
+                onClick={toggleTimer}
+                title={isTimerRunning ? `Timer Running: ${formatStudyTime(studyTimeToday)} (Click to Pause)` : `Streak: 🔥 ${studyStreak.streak || 0} Days (Click to Start Timer)`}
+                style={{
+                  margin: '16px auto 8px auto',
+                  width: '42px',
+                  height: '42px',
+                  borderRadius: '8px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  backgroundColor: isTimerRunning ? 'rgba(16, 185, 129, 0.15)' : '#F1F5F9',
+                  color: isTimerRunning ? '#10B981' : 'var(--text-muted)',
+                  cursor: 'pointer',
+                  border: '2px solid var(--border-strong)',
+                  boxShadow: isTimerRunning ? '0 0 10px rgba(16, 185, 129, 0.2)' : 'none'
+                }}
+              >
+                <Icon name="brain" className={isTimerRunning ? 'timer-pulse' : ''} style={{ width: '1.25em', height: '1.25em' }} />
+              </div>
+            ) : (
+              <React.Fragment>
+                <div className="study-timer-widget" style={{
+                  margin: '16px 16px 8px 16px',
+                  padding: '14px',
+                  borderRadius: '8px',
+                  border: '2px solid var(--border-strong)',
+                  backgroundColor: isTimerRunning ? 'rgba(16, 185, 129, 0.08)' : 'var(--bg-app)',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: '10px',
+                  transition: 'all 0.3s ease',
+                  boxShadow: isTimerRunning ? '0 0 10px rgba(16, 185, 129, 0.15)' : 'none'
+                }}>
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%' }}>
+                    <div 
+                      style={{ display: 'flex', alignItems: 'center', gap: '8px', cursor: 'pointer' }}
+                      onClick={() => {
+                        const val = prompt("Enter new study time today in minutes:", Math.round(studyTimeToday / 60));
+                        if (val !== null) {
+                          const mins = parseInt(val);
+                          if (!isNaN(mins) && mins >= 0) {
+                            const newSecs = mins * 60;
+                            const diff = newSecs - studyTimeToday;
+                            setStudyTimeToday(newSecs);
+                            setTotalStudyTime(prev => {
+                              const nextTotal = Math.max(0, prev + diff);
+                              localStorage.setItem('lexicon_total_study_time', nextTotal.toString());
+                              return nextTotal;
+                            });
+                            const studyDateStr = getStudyDateString();
+                            localStorage.setItem('lexicon_study_time', JSON.stringify({ date: studyDateStr, seconds: newSecs }));
+                          }
+                        }
+                      }}
+                      title="Click to adjust study time today"
+                    >
+                      <span 
+                        className={isTimerRunning ? 'timer-pulse' : ''} 
+                        style={{
+                          width: '8px',
+                          height: '8px',
+                          borderRadius: '50%',
+                          backgroundColor: '#10B981',
+                          display: 'inline-block'
+                        }}
+                      />
+                      <span style={{ fontSize: '11px', fontWeight: 'bold', color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Daily Focus</span>
+                    </div>
+                    <strong style={{ fontSize: '12.5px', color: 'var(--text-main)' }}>{Math.round(studyTimeToday / 60)}m</strong>
+                  </div>
+                  <div style={{ display: 'flex', gap: '8px', width: '100%' }}>
+                    <button
+                      className="btn btn-secondary btn-sm"
+                      onClick={toggleTimer}
+                      style={{ flex: 1, padding: '5px', fontSize: '11.5px', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '4px' }}
+                    >
+                      <Icon name="brain" style={{ width: '0.9em', height: '0.9em' }} /> {isTimerRunning ? 'Pause' : 'Start'}
+                    </button>
+                    <button
+                      className="btn btn-secondary btn-sm"
+                      onClick={resetTimer}
+                      style={{ padding: '5px 8px', fontSize: '11.5px' }}
+                      title="Reset daily study time to 0"
+                    >
+                      Reset
+                    </button>
                   </div>
                 </div>
-                
-                {/* Active Indicator & Streak Count */}
-                <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-                  {streakCount > 0 && (
-                    <span 
-                      style={{ 
-                        fontSize: '11px', 
-                        fontWeight: '700', 
-                        color: '#C2410C', 
-                        backgroundColor: '#FFEDD5', 
-                        padding: '2px 6px', 
-                        borderRadius: '12px',
-                        display: 'flex',
-                        alignItems: 'center',
-                        gap: '2px'
-                      }}
-                      title={`${streakCount} consecutive days of studying!`}
-                    >
-                      🔥 {streakCount}d
-                    </span>
-                  )}
-                  <span 
-                    style={{
-                      width: '8px',
-                      height: '8px',
-                      borderRadius: '50%',
-                      backgroundColor: isTimerRunning ? '#10B981' : '#64748B',
-                      boxShadow: isTimerRunning ? '0 0 8px #10B981' : 'none',
-                      transition: 'background-color 0.3s'
-                    }}
-                  />
+
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '2px', padding: '0 16px', margin: '4px 0 10px 0' }}>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '11.5px' }}>
+                    <span style={{ color: 'var(--text-muted)' }}>Daily Streak:</span>
+                    <strong style={{ color: 'var(--accent)' }}>🔥 {studyStreak.streak || 0} Days</strong>
+                  </div>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '11.5px' }}>
+                    <span style={{ color: 'var(--text-muted)' }}>Total Study Time:</span>
+                    <strong style={{ color: 'var(--text-main)' }}>
+                      {formatStudyTime(totalStudyTime)}
+                    </strong>
+                  </div>
                 </div>
-              </div>
+              </React.Fragment>
+            )}
 
-              {/* Total study time */}
-              <div style={{ 
-                borderTop: '1px solid var(--border-muted)', 
-                paddingTop: '8px', 
-                display: 'flex', 
-                justifyContent: 'space-between', 
-                alignItems: 'center',
-                fontSize: '11px',
-                color: 'var(--text-muted)'
-              }}>
-                <span>Total Studied:</span>
-                <strong style={{ fontFamily: 'monospace', color: 'var(--text-main)' }}>
-                  {formatStudyTime(totalStudyTime)}
-                </strong>
-              </div>
-            </div>
-
-            <nav className="sidebar-nav">
+            <nav className="sidebar-nav" style={{ padding: isSidebarCollapsed ? '10px 6px' : '20px 12px' }}>
               <button 
                 className={`nav-item ${activeTab === 'vault' ? 'active' : ''}`}
                 onClick={() => { setActiveTab('vault'); setSelectedFolderId(null); }}
+                title={isSidebarCollapsed ? "All Vocabulary" : ""}
+                style={{ justifyContent: isSidebarCollapsed ? 'center' : 'space-between', padding: isSidebarCollapsed ? '10px 0' : '10px 12px' }}
               >
-                <span className="nav-icon-text">
-                  <Icon name="archive" style={{ marginRight: '6px' }} /> All Vocabulary
+                <span className="nav-icon-text" style={{ display: 'flex', justifyContent: 'center', width: isSidebarCollapsed ? '100%' : 'auto' }}>
+                  <Icon name="archive" style={{ marginRight: isSidebarCollapsed ? '0' : '6px' }} /> 
+                  {!isSidebarCollapsed && "All Vocabulary"}
                 </span>
-                <span style={{ fontSize: '11px', color: 'var(--text-muted)' }}>{entries.length}</span>
+                {!isSidebarCollapsed && <span style={{ fontSize: '11px', color: 'var(--text-muted)' }}>{entries.length}</span>}
               </button>
 
               <button 
                 className={`nav-item ${activeTab === 'review' ? 'active' : ''}`}
                 onClick={() => { setActiveTab('review'); setIsReviewSessionStarted(false); }}
+                title={isSidebarCollapsed ? `Spaced Repetition (${dueCount} due)` : ""}
+                style={{ justifyContent: isSidebarCollapsed ? 'center' : 'space-between', padding: isSidebarCollapsed ? '10px 0' : '10px 12px' }}
               >
-                <span className="nav-icon-text">
-                  <Icon name="brain" style={{ marginRight: '6px' }} /> Spaced Repetition
+                <span className="nav-icon-text" style={{ display: 'flex', justifyContent: 'center', width: isSidebarCollapsed ? '100%' : 'auto' }}>
+                  <Icon name="brain" style={{ marginRight: isSidebarCollapsed ? '0' : '6px' }} /> 
+                  {!isSidebarCollapsed && "Spaced Repetition"}
                 </span>
-                {dueCount > 0 && <span className="due-badge">{dueCount}</span>}
+                {dueCount > 0 && (isSidebarCollapsed ? (
+                  <span style={{ position: 'absolute', top: '2px', right: '12px', width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#EF4444' }}></span>
+                ) : (
+                  <span className="due-badge">{dueCount}</span>
+                ))}
               </button>
 
               <button 
                 className={`nav-item ${activeTab === 'graph' ? 'active' : ''}`}
                 onClick={() => setActiveTab('graph')}
+                title={isSidebarCollapsed ? "Semantic Network" : ""}
+                style={{ justifyContent: isSidebarCollapsed ? 'center' : 'space-between', padding: isSidebarCollapsed ? '10px 0' : '10px 12px' }}
               >
-                <span className="nav-icon-text">
-                  <Icon name="network" style={{ marginRight: '6px' }} /> Semantic Network
+                <span className="nav-icon-text" style={{ display: 'flex', justifyContent: 'center', width: isSidebarCollapsed ? '100%' : 'auto' }}>
+                  <Icon name="network" style={{ marginRight: isSidebarCollapsed ? '0' : '6px' }} /> 
+                  {!isSidebarCollapsed && "Semantic Network"}
                 </span>
               </button>
 
               <button 
                 className={`nav-item ${activeTab === 'practice' ? 'active' : ''}`}
                 onClick={() => setActiveTab('practice')}
+                title={isSidebarCollapsed ? "Practice Phrasal Verbs" : ""}
+                style={{ justifyContent: isSidebarCollapsed ? 'center' : 'space-between', padding: isSidebarCollapsed ? '10px 0' : '10px 12px' }}
               >
-                <span className="nav-icon-text">
-                  <Icon name="puzzle" style={{ marginRight: '6px' }} /> Practice Phrasal Verbs
+                <span className="nav-icon-text" style={{ display: 'flex', justifyContent: 'center', width: isSidebarCollapsed ? '100%' : 'auto' }}>
+                  <Icon name="puzzle" style={{ marginRight: isSidebarCollapsed ? '0' : '6px' }} /> 
+                  {!isSidebarCollapsed && "Practice Phrasal Verbs"}
                 </span>
               </button>
 
               <button 
                 className={`nav-item ${activeTab === 'sync' ? 'active' : ''}`}
                 onClick={() => setActiveTab('sync')}
+                title={isSidebarCollapsed ? "Cloud Sync" : ""}
+                style={{ justifyContent: isSidebarCollapsed ? 'center' : 'space-between', padding: isSidebarCollapsed ? '10px 0' : '10px 12px' }}
               >
-                <span className="nav-icon-text">
-                  <Icon name="sync" style={{ marginRight: '6px' }} /> Cloud Sync
+                <span className="nav-icon-text" style={{ display: 'flex', justifyContent: 'center', width: isSidebarCollapsed ? '100%' : 'auto' }}>
+                  <Icon name="sync" style={{ marginRight: isSidebarCollapsed ? '0' : '6px' }} /> 
+                  {!isSidebarCollapsed && "Cloud Sync"}
                 </span>
-                {syncStatus === 'syncing' && <span className="sync-spinner-mini"></span>}
-                {syncStatus === 'connected' && <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#10B981', display: 'inline-block' }}></span>}
-                {syncStatus === 'error' && <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#EF4444', display: 'inline-block' }}></span>}
+                {syncStatus === 'syncing' && <span className="sync-spinner-mini" style={{ marginLeft: isSidebarCollapsed ? '0' : '4px' }}></span>}
+                {syncStatus === 'connected' && !isSidebarCollapsed && <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#10B981', display: 'inline-block' }}></span>}
+                {syncStatus === 'error' && !isSidebarCollapsed && <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#EF4444', display: 'inline-block' }}></span>}
               </button>
 
               <button 
                 className={`nav-item ${activeTab === 'weaver' ? 'active' : ''}`}
                 onClick={() => setActiveTab('weaver')}
+                title={isSidebarCollapsed ? "IELTS Speaking Topics" : ""}
+                style={{ justifyContent: isSidebarCollapsed ? 'center' : 'space-between', padding: isSidebarCollapsed ? '10px 0' : '10px 12px' }}
               >
-                <span className="nav-icon-text">
-                  <Icon name="link" style={{ marginRight: '6px' }} /> IELTS Speaking Topics
+                <span className="nav-icon-text" style={{ display: 'flex', justifyContent: 'center', width: isSidebarCollapsed ? '100%' : 'auto' }}>
+                  <Icon name="link" style={{ marginRight: isSidebarCollapsed ? '0' : '6px' }} /> 
+                  {!isSidebarCollapsed && "IELTS Speaking Topics"}
                 </span>
               </button>
-
-
             </nav>
 
-            <div className="sidebar-section">
-              <h2 className="section-title">
-                Folders
-                <button className="add-folder-btn" onClick={() => setIsFolderModalOpen(true)}>
-                  <Icon name="plus" />
-                </button>
-              </h2>
+            <div className="sidebar-section" style={{ padding: isSidebarCollapsed ? '0 6px' : '0 16px' }}>
+              {!isSidebarCollapsed ? (
+                <h2 className="section-title">
+                  Folders
+                  <button className="add-folder-btn" onClick={() => setIsFolderModalOpen(true)}>
+                    <Icon name="plus" />
+                  </button>
+                </h2>
+              ) : (
+                <div style={{ textAlign: 'center', margin: '12px 0 8px 0', borderTop: '1px solid var(--border-color)', paddingTop: '8px' }}>
+                  <button 
+                    onClick={() => setIsFolderModalOpen(true)}
+                    style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'var(--text-muted)' }}
+                    title="Add New Folder"
+                  >
+                    <Icon name="plus" />
+                  </button>
+                </div>
+              )}
 
               <div className="folder-list">
                 {updatedFolders.map(folder => (
-                  <div 
-                    key={folder.id} 
+                  <button
+                    key={folder.id}
                     className={`folder-item ${selectedFolderId === folder.id && activeTab === 'vault' ? 'active' : ''}`}
-                    onClick={() => { setSelectedFolderId(folder.id); setActiveTab('vault'); }}
+                    onClick={() => { setActiveTab('vault'); setSelectedFolderId(folder.id); }}
+                    title={isSidebarCollapsed ? `${folder.emoji} ${folder.name}` : ""}
+                    style={{ justifyContent: isSidebarCollapsed ? 'center' : 'space-between', padding: isSidebarCollapsed ? '8px 0' : '8px 10px' }}
                   >
-                    <div style={{ display: 'flex', alignItems: 'center' }}>
-                      <span className="folder-color-dot" style={{ backgroundColor: folder.color }}></span>
-                      <span style={{ textDecoration: selectedFolderId === folder.id ? 'underline' : 'none' }}>
-                        {folder.emoji ? `${folder.emoji} ` : ''}{folder.name}
+                    <span className="folder-name-container" style={{ display: 'flex', alignItems: 'center', width: isSidebarCollapsed ? '100%' : 'auto', justifyContent: isSidebarCollapsed ? 'center' : 'flex-start' }}>
+                      <span className="folder-emoji" style={{ marginRight: isSidebarCollapsed ? '0' : '8px' }}>{folder.emoji}</span>
+                      {!isSidebarCollapsed && <span className="folder-name">{folder.name}</span>}
+                    </span>
+                    {!isSidebarCollapsed && (
+                      <span className="folder-badge" style={{ backgroundColor: folder.color || '#CBD5E1' }}>
+                        {folder.word_count}
                       </span>
-                    </div>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                      <span style={{ fontSize: '11px', color: 'var(--text-muted)' }}>({folder.word_count})</span>
-                      <div className="folder-actions">
-                        <button 
-                          className="folder-action-btn"
-                          onClick={(e) => { e.stopPropagation(); openEditFolderModal(folder); }}
-                          title="Edit Folder"
-                        >
-                          <Icon name="edit" style={{ width: '0.9em', height: '0.9em' }} />
-                        </button>
-                        <button 
-                          className="folder-action-btn"
-                          onClick={(e) => { e.stopPropagation(); handleDeleteFolder(folder.id, folder.name); }}
-                          title="Delete Folder"
-                        >
-                          <Icon name="trash" style={{ width: '0.9em', height: '0.9em' }} />
-                        </button>
-                      </div>
-                    </div>
-                  </div>
+                    )}
+                  </button>
                 ))}
               </div>
             </div>
@@ -3750,7 +3824,7 @@ service cloud.firestore {
               </div>
             )}
 
-            {/* SPEAKING STORY WEAVER PANEL (MINIMALIST SPLIT TAB VIEW - RESPONSIVE FLEX) */}
+            {/* SPEAKING STORY WEAVER PANEL (OPTIMIZED GRID LAYOUT - P0-P4) */}
             {activeTab === 'weaver' && (() => {
               const totalPrompts = speakingPrompts.length;
               const coveredPrompts = speakingPrompts.filter(p => storylineMappings.some(m => m.question_id === p.id)).length;
@@ -3793,11 +3867,11 @@ service cloud.firestore {
               };
 
               const categoryColors = {
-                people: { text: '#4A2E99', bg: '#F4F1FC', label: 'People' },
-                places: { text: '#0D9488', bg: '#F0FDFA', label: 'Places' },
-                experiences: { text: '#D97706', bg: '#FEF3C7', label: 'Experiences' },
-                objects: { text: '#2563EB', bg: '#EFF6FF', label: 'Objects' },
-                activities: { text: '#7C3AED', bg: '#F5F3FF', label: 'Activities' }
+                people: { label: 'People' },
+                places: { label: 'Places' },
+                experiences: { label: 'Experiences' },
+                objects: { label: 'Objects' },
+                activities: { label: 'Activities' }
               };
 
               // Local sub-tab state hosted directly
@@ -3814,10 +3888,10 @@ service cloud.firestore {
               };
 
               return (
-                <div className="weaver-panel-container fade-in" style={{ padding: '16px 20px', flex: 1, minHeight: 0, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
+                <div className="weaver-panel-container fade-in" style={{ padding: '18px 24px', flex: 1, minHeight: 0, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
                   
                   {/* Top Stats Banner */}
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '12px', borderBottom: '1px solid var(--border-color)', paddingBottom: '10px', flexShrink: 0 }}>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '14px', borderBottom: '1px solid var(--border-color)', paddingBottom: '10px', flexShrink: 0 }}>
                     <div>
                       <h1 style={{ fontFamily: 'var(--font-serif)', fontSize: '24px', color: 'var(--text-main)', margin: 0 }}>
                         <Icon name="link" style={{ marginRight: '8px', color: 'var(--accent)', verticalAlign: 'middle' }} /> IELTS Speaking Topics
@@ -3868,7 +3942,7 @@ service cloud.firestore {
 
                   {/* Warning banner */}
                   {!hasMinCapital && subTab === 'subjects' && (
-                    <div style={{ backgroundColor: '#FFFBEB', border: '1px solid #FCD34D', color: '#B45309', padding: '8px 12px', borderRadius: '8px', marginBottom: '10px', fontSize: '12px', display: 'flex', alignItems: 'center', gap: '8px', flexShrink: 0 }}>
+                    <div style={{ backgroundColor: '#FFFBEB', border: '1px solid #FCD34D', color: '#B45309', padding: '8px 12px', borderRadius: '8px', marginBottom: '12px', fontSize: '12px', display: 'flex', alignItems: 'center', gap: '8px', flexShrink: 0 }}>
                       <Icon name="info" style={{ color: '#B45309' }} />
                       <div>
                         <strong>Study Suggestion:</strong> You should prepare at least <strong>1 People</strong>, <strong>1 Places</strong>, and <strong>1 Objects</strong> subject in your core capital to unlock flexible, cross-topic story weaving.
@@ -3878,10 +3952,10 @@ service cloud.firestore {
 
                   {/* SUBTAB 1: SUBJECTS & STORIES */}
                   {subTab === 'subjects' && (
-                    <div style={{ display: 'flex', flex: 1, minHeight: 0, gap: '20px' }}>
+                    <div className="weaver-grid-container">
                       
                       {/* Left: Subjects List */}
-                      <div style={{ width: '38%', display: 'flex', flexDirection: 'column', minHeight: 0 }}>
+                      <div style={{ display: 'flex', flexDirection: 'column', minHeight: 0 }}>
                         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '8px', flexShrink: 0 }}>
                           <span style={{ fontSize: '11px', fontWeight: 'bold', color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
                             Your Modal Subjects ({modalSubjects.length})
@@ -3903,26 +3977,51 @@ service cloud.firestore {
                           </button>
                         </div>
 
-                        <div className="weaver-scrollable" style={{ flex: 1, overflowY: 'auto', display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                        <div className="weaver-scrollable subject-cards-grid" style={{ flex: 1, overflowY: 'auto' }}>
                           {modalSubjects.map(sub => {
                             const linksCount = storylineMappings.filter(m => m.subject_id === sub.id).length;
-                            const cfg = categoryColors[sub.category_id] || { text: '#475569', bg: '#F1F5F9', label: 'Other' };
+                            const cfg = categoryColors[sub.category_id] || { label: 'Other' };
+                            const isExpanded = expandedCardId === sub.id;
                             return (
-                              <div key={sub.id} style={{ padding: '10px 12px', borderRadius: '8px', border: '1px solid var(--border-color)', backgroundColor: 'white', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                                <div style={{ display: 'flex', flexDirection: 'column', gap: '3px', overflow: 'hidden' }}>
+                              <div key={sub.id} className="subject-card">
+                                <div className="subject-card-details">
                                   <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-                                    <span style={{ fontSize: '8.5px', fontWeight: 'bold', color: cfg.text, backgroundColor: cfg.bg, padding: '1px 5px', borderRadius: '10px', textTransform: 'uppercase' }}>
+                                    <span className={`badge-category ${sub.category_id}`}>
                                       {cfg.label}
                                     </span>
                                     <span style={{ fontSize: '10px', color: 'var(--text-muted)' }}>({linksCount} linked topics)</span>
                                   </div>
-                                  <strong style={{ fontSize: '13px', color: 'var(--text-main)', textOverflow: 'ellipsis', overflow: 'hidden', whiteSpace: 'nowrap' }}>{sub.subject_name}</strong>
-                                  <div style={{ fontSize: '11px', color: 'var(--text-muted)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
-                                    {sub.key_details.join(' • ')}
-                                  </div>
+                                  <strong style={{ fontSize: '14px', color: 'var(--text-main)', marginTop: '4px' }}>{sub.subject_name}</strong>
+                                  
+                                  {/* Expandable details list with CSS line clamp */}
+                                  <ul style={{ 
+                                    paddingLeft: '14px', 
+                                    fontSize: '11px', 
+                                    color: 'var(--text-muted)', 
+                                    margin: '4px 0 0 0', 
+                                    lineHeight: '1.45',
+                                    display: isExpanded ? 'block' : '-webkit-box',
+                                    WebkitLineClamp: isExpanded ? 'none' : 2,
+                                    WebkitBoxOrient: 'vertical',
+                                    overflow: 'hidden'
+                                  }}>
+                                    {sub.key_details.map((d, i) => d.trim() && <li key={i}>{d}</li>)}
+                                  </ul>
+
+                                  {sub.key_details.some(d => d.trim().length > 30) && (
+                                    <span 
+                                      onClick={() => setExpandedCardId(isExpanded ? null : sub.id)}
+                                      style={{ fontSize: '10px', color: 'var(--accent)', cursor: 'pointer', fontWeight: '600', marginTop: '4px', display: 'inline-block' }}
+                                    >
+                                      {isExpanded ? "Show Less" : "Show More"}
+                                    </span>
+                                  )}
                                 </div>
-                                <div style={{ display: 'flex', gap: '8px', flexShrink: 0 }}>
+
+                                <div className="subject-card-actions">
                                   <button 
+                                    className="subject-action-btn edit"
+                                    title="Edit Subject"
                                     onClick={() => {
                                       setEditingSubject(sub);
                                       setSubjectName(sub.subject_name);
@@ -3932,11 +4031,12 @@ service cloud.firestore {
                                       setSubjectDetail3(sub.key_details[2] || '');
                                       setIsSubjectModalOpen(true);
                                     }}
-                                    style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'var(--text-muted)', padding: 0 }}
                                   >
-                                    <Icon name="edit" style={{ width: '0.8em', height: '0.8em' }} />
+                                    <Icon name="edit" style={{ width: '1.05em', height: '1.05em' }} />
                                   </button>
                                   <button 
+                                    className="subject-action-btn delete"
+                                    title="Delete Subject"
                                     onClick={() => {
                                       if (confirm(`Are you sure you want to delete "${sub.subject_name}"? All linked topics and weaved stories will also be removed.`)) {
                                         setModalSubjects(modalSubjects.filter(s => s.id !== sub.id));
@@ -3944,9 +4044,8 @@ service cloud.firestore {
                                         setWeavedStories(weavedStories.filter(w => !w.subject_ids.includes(sub.id)));
                                       }
                                     }}
-                                    style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#EF4444', padding: 0 }}
                                   >
-                                    <Icon name="trash" style={{ width: '0.8em', height: '0.8em' }} />
+                                    <Icon name="trash" style={{ width: '1.05em', height: '1.05em' }} />
                                   </button>
                                 </div>
                               </div>
@@ -3956,23 +4055,23 @@ service cloud.firestore {
                       </div>
 
                       {/* Right: Story Connection Builder */}
-                      <div style={{ width: '62%', display: 'flex', flexDirection: 'column', minHeight: 0 }}>
+                      <div style={{ display: 'flex', flexDirection: 'column', minHeight: 0 }}>
                         <span style={{ fontSize: '11px', fontWeight: 'bold', color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '8px', display: 'block', flexShrink: 0 }}>
                           Storyline Connector
                         </span>
 
-                        <div className="card" style={{ flex: 1, padding: '14px', display: 'flex', flexDirection: 'column', minHeight: 0, border: '1px solid var(--border-color)', overflowY: 'auto' }}>
-                          <p style={{ fontSize: '12px', color: 'var(--text-muted)', margin: '0 0 10px 0', lineHeight: '1.4', flexShrink: 0 }}>
+                        <div className="card" style={{ flex: 1, padding: '16px', display: 'flex', flexDirection: 'column', minHeight: 0, border: '1px solid var(--border-color)', overflowY: 'auto' }}>
+                          <p style={{ fontSize: '12px', color: 'var(--text-muted)', margin: '0 0 12px 0', lineHeight: '1.45', flexShrink: 0 }}>
                             Select two modal subjects to write a bridging narrative connecting them.
                           </p>
 
-                          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px', marginBottom: '10px', flexShrink: 0 }}>
+                          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px', marginBottom: '12px', flexShrink: 0 }}>
                             <div>
                               <label className="form-label" style={{ fontSize: '9.5px', textTransform: 'uppercase', color: 'var(--text-muted)' }}>Modal Subject A</label>
                               <select 
                                 value={weaverActiveSubjectA}
                                 onChange={(e) => setWeaverActiveSubjectA(e.target.value)}
-                                style={{ width: '100%', padding: '5px', borderRadius: '6px', border: '1px solid var(--border-color)', fontSize: '12px' }}
+                                style={{ width: '100%', padding: '6px', borderRadius: '6px', border: '1px solid var(--border-color)', fontSize: '12px' }}
                               >
                                 {modalSubjects.map(s => <option key={s.id} value={s.id}>{s.subject_name}</option>)}
                               </select>
@@ -3982,32 +4081,32 @@ service cloud.firestore {
                               <select 
                                 value={weaverActiveSubjectB}
                                 onChange={(e) => setWeaverActiveSubjectB(e.target.value)}
-                                style={{ width: '100%', padding: '5px', borderRadius: '6px', border: '1px solid var(--border-color)', fontSize: '12px' }}
+                                style={{ width: '100%', padding: '6px', borderRadius: '6px', border: '1px solid var(--border-color)', fontSize: '12px' }}
                               >
                                 {modalSubjects.map(s => <option key={s.id} value={s.id}>{s.subject_name}</option>)}
                               </select>
                             </div>
                           </div>
 
-                          {/* Subject details side-by-side (Max Height limits vertical growth) */}
+                          {/* Subject details side-by-side */}
                           {(() => {
                             const subA = modalSubjects.find(s => s.id === weaverActiveSubjectA);
                             const subB = modalSubjects.find(s => s.id === weaverActiveSubjectB);
                             if (!subA || !subB) return null;
 
                             return (
-                              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px', marginBottom: '10px', flexShrink: 0 }}>
-                                <div style={{ backgroundColor: '#F8FAFC', padding: '8px 10px', borderRadius: '6px', border: '1px solid var(--border-color)', maxHeight: '90px', overflowY: 'auto' }}>
-                                  <span style={{ fontSize: '8.5px', fontWeight: 'bold', color: 'var(--accent)', textTransform: 'uppercase' }}>{subA.category_id}</span>
-                                  <strong style={{ display: 'block', fontSize: '12px', marginBottom: '3px' }}>{subA.subject_name}</strong>
-                                  <ul style={{ paddingLeft: '12px', fontSize: '10.5px', color: 'var(--text-muted)', margin: 0 }}>
+                              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px', marginBottom: '12px', flexShrink: 0 }}>
+                                <div style={{ backgroundColor: '#F8FAFC', padding: '10px', borderRadius: '6px', border: '1px solid var(--border-color)', maxHeight: '110px', overflowY: 'auto' }}>
+                                  <span className={`badge-category ${subA.category_id}`} style={{ marginBottom: '4px' }}>{subA.category_id}</span>
+                                  <strong style={{ display: 'block', fontSize: '12.5px', marginBottom: '4px' }}>{subA.subject_name}</strong>
+                                  <ul style={{ paddingLeft: '12px', fontSize: '11px', color: 'var(--text-muted)', margin: 0 }}>
                                     {subA.key_details.map((d, i) => d.trim() && <li key={i}>{d}</li>)}
                                   </ul>
                                 </div>
-                                <div style={{ backgroundColor: '#F8FAFC', padding: '8px 10px', borderRadius: '6px', border: '1px solid var(--border-color)', maxHeight: '90px', overflowY: 'auto' }}>
-                                  <span style={{ fontSize: '8.5px', fontWeight: 'bold', color: 'var(--accent)', textTransform: 'uppercase' }}>{subB.category_id}</span>
-                                  <strong style={{ display: 'block', fontSize: '12px', marginBottom: '3px' }}>{subB.subject_name}</strong>
-                                  <ul style={{ paddingLeft: '12px', fontSize: '10.5px', color: 'var(--text-muted)', margin: 0 }}>
+                                <div style={{ backgroundColor: '#F8FAFC', padding: '10px', borderRadius: '6px', border: '1px solid var(--border-color)', maxHeight: '110px', overflowY: 'auto' }}>
+                                  <span className={`badge-category ${subB.category_id}`} style={{ marginBottom: '4px' }}>{subB.category_id}</span>
+                                  <strong style={{ display: 'block', fontSize: '12.5px', marginBottom: '4px' }}>{subB.subject_name}</strong>
+                                  <ul style={{ paddingLeft: '12px', fontSize: '11px', color: 'var(--text-muted)', margin: 0 }}>
                                     {subB.key_details.map((d, i) => d.trim() && <li key={i}>{d}</li>)}
                                   </ul>
                                 </div>
@@ -4021,7 +4120,7 @@ service cloud.firestore {
                             </div>
                           ) : (
                             <div style={{ flex: 1, display: 'flex', flexDirection: 'column', minHeight: 0 }}>
-                              <label className="form-label" style={{ fontSize: '11px', fontWeight: '600', marginBottom: '4px', flexShrink: 0 }}>
+                              <label className="form-label" style={{ fontSize: '11.5px', fontWeight: '600', marginBottom: '4px' }}>
                                 Bridging Story Line / Connection Link
                               </label>
                               <textarea
@@ -4029,19 +4128,19 @@ service cloud.firestore {
                                 value={activeWeave ? activeWeave.bridging_sentence : ''}
                                 onChange={(e) => handleWeaveTextChange(e.target.value)}
                                 style={{
+                                  flex: 1,
                                   width: '100%',
-                                  height: '85px',
-                                  padding: '8px 10px',
+                                  padding: '10px',
                                   borderRadius: '6px',
                                   border: '1px solid var(--border-color)',
                                   fontSize: '12.5px',
-                                  lineHeight: '1.4',
+                                  lineHeight: '1.45',
                                   resize: 'none',
                                   marginBottom: '4px',
-                                  flexShrink: 0
+                                  minHeight: '70px'
                                 }}
                               />
-                              <span style={{ fontSize: '10px', color: 'var(--text-muted)', flexShrink: 0 }}>
+                              <span style={{ fontSize: '10.5px', color: 'var(--text-muted)' }}>
                                 * Use <code>*Subject Name*</code> to highlight core subjects within your bridging text.
                               </span>
                             </div>
@@ -4053,10 +4152,10 @@ service cloud.firestore {
 
                   {/* SUBTAB 2: TOPIC COVERAGE MATRIX */}
                   {subTab === 'matrix' && (
-                    <div style={{ display: 'flex', flex: 1, minHeight: 0, gap: '20px' }}>
+                    <div className="weaver-grid-container">
                       
                       {/* Left: Prompts list */}
-                      <div style={{ width: '45%', display: 'flex', flexDirection: 'column', minHeight: 0 }}>
+                      <div style={{ display: 'flex', flexDirection: 'column', minHeight: 0 }}>
                         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '8px', flexShrink: 0 }}>
                           {/* Matrix category filter bar */}
                           <div style={{ display: 'flex', gap: '3px' }}>
@@ -4065,7 +4164,7 @@ service cloud.firestore {
                                 key={cat}
                                 onClick={() => setSpeakingFilterCategory(cat)}
                                 style={{
-                                  padding: '2px 6px',
+                                  padding: '3px 8px',
                                   fontSize: '10.5px',
                                   borderRadius: '4px',
                                   border: '1px solid var(--border-color)',
@@ -4091,7 +4190,7 @@ service cloud.firestore {
                                 key={p.id}
                                 onClick={() => setSelectedActivePrompt(p)}
                                 style={{
-                                  padding: '8px 10px',
+                                  padding: '10px 12px',
                                   borderRadius: '6px',
                                   border: isSelected ? '1px solid var(--accent)' : '1px solid var(--border-color)',
                                   backgroundColor: isSelected ? '#F4F1FC' : mapping ? '#F0FDF4' : 'white',
@@ -4099,7 +4198,7 @@ service cloud.firestore {
                                   display: 'flex',
                                   justifyContent: 'space-between',
                                   alignItems: 'center',
-                                  transition: 'all 0.1s ease'
+                                  transition: 'all 0.15s ease'
                                 }}
                               >
                                 <span style={{ fontSize: '12px', color: '#0F172A', fontWeight: '500', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', marginRight: '8px' }} title={p.prompt_text}>
@@ -4119,17 +4218,17 @@ service cloud.firestore {
                       </div>
 
                       {/* Right: Selected prompt linker detail */}
-                      <div style={{ width: '55%', display: 'flex', flexDirection: 'column', minHeight: 0 }}>
+                      <div style={{ display: 'flex', flexDirection: 'column', minHeight: 0 }}>
                         <span style={{ fontSize: '11px', fontWeight: 'bold', color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '8px', display: 'block', flexShrink: 0 }}>
                           Topic Linker Details
                         </span>
 
-                        <div className="card" style={{ flex: 1, padding: '14px', display: 'flex', flexDirection: 'column', minHeight: 0, border: '1px solid var(--border-color)', overflowY: 'auto' }}>
+                        <div className="card" style={{ flex: 1, padding: '16px', display: 'flex', flexDirection: 'column', minHeight: 0, border: '1px solid var(--border-color)', overflowY: 'auto' }}>
                           {!selectedActivePrompt ? (
                             <div style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', color: 'var(--text-muted)', textAlign: 'center', padding: '20px' }}>
                               <Icon name="info" style={{ fontSize: '28px', marginBottom: '6px', color: 'var(--border-muted)' }} />
                               <strong style={{ display: 'block', fontSize: '13.5px', color: 'var(--text-main)' }}>No Speaking Topic Selected</strong>
-                              <span style={{ fontSize: '11.5px' }}>Select an IELTS prompt on the left to link a subject and write your speaking approach note.</span>
+                              <span style={{ fontSize: '12.5px' }}>Select an IELTS prompt on the left to link a subject and write your speaking approach note.</span>
                             </div>
                           ) : (() => {
                             const mapping = storylineMappings.find(m => m.question_id === selectedActivePrompt.id);
@@ -4137,36 +4236,36 @@ service cloud.firestore {
 
                             return (
                               <div style={{ flex: 1, display: 'flex', flexDirection: 'column', minHeight: 0 }}>
-                                <div style={{ backgroundColor: '#F8FAFC', padding: '8px 10px', borderRadius: '6px', border: '1px solid var(--border-color)', marginBottom: '10px', flexShrink: 0 }}>
-                                  <span style={{ fontSize: '8.5px', fontWeight: 'bold', color: 'var(--text-muted)', textTransform: 'uppercase' }}>Selected IELTS speaking Part 2 Prompt</span>
-                                  <strong style={{ display: 'block', fontSize: '12.5px', color: 'var(--text-main)', marginTop: '2px', lineHeight: '1.45' }}>{selectedActivePrompt.prompt_text}</strong>
+                                <div style={{ backgroundColor: '#F8FAFC', padding: '10px 14px', borderRadius: '6px', border: '1px solid var(--border-color)', marginBottom: '12px', flexShrink: 0 }}>
+                                  <span style={{ fontSize: '9px', fontWeight: 'bold', color: 'var(--text-muted)', textTransform: 'uppercase' }}>Selected IELTS speaking Part 2 Prompt</span>
+                                  <strong style={{ display: 'block', fontSize: '13px', color: 'var(--text-main)', marginTop: '4px', lineHeight: '1.45' }}>{selectedActivePrompt.prompt_text}</strong>
                                 </div>
 
                                 {mapping && linkedSubject ? (
-                                  <div style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: '10px', minHeight: 0 }}>
-                                    <div style={{ padding: '10px', border: '1px solid #E2E8F0', borderRadius: '8px', backgroundColor: 'white', flexShrink: 0 }}>
-                                      <span style={{ fontSize: '9px', color: 'var(--text-muted)', display: 'block' }}>LINKED SUBJECT</span>
-                                      <strong style={{ fontSize: '13px', color: 'var(--accent)' }}>{linkedSubject.subject_name}</strong>
-                                      <ul style={{ paddingLeft: '14px', fontSize: '11px', color: 'var(--text-muted)', margin: '2px 0 0 0' }}>
+                                  <div style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: '12px', minHeight: 0 }}>
+                                    <div style={{ padding: '12px', border: '1px solid #E2E8F0', borderRadius: '8px', backgroundColor: 'white', flexShrink: 0 }}>
+                                      <span style={{ fontSize: '9.5px', color: 'var(--text-muted)', display: 'block' }}>LINKED SUBJECT</span>
+                                      <strong style={{ fontSize: '13.5px', color: 'var(--accent)' }}>{linkedSubject.subject_name}</strong>
+                                      <ul style={{ paddingLeft: '14px', fontSize: '11px', color: 'var(--text-muted)', margin: '4px 0 0 0' }}>
                                         {linkedSubject.key_details.map((d, i) => <li key={i}>{d}</li>)}
                                       </ul>
                                     </div>
 
                                     <div style={{ flex: 1, minHeight: 0, overflowY: 'auto' }}>
-                                      <span style={{ fontSize: '10px', color: 'var(--text-muted)', display: 'block', marginBottom: '2px' }}>ADAPTATION ANGLE & STRATEGY</span>
-                                      <div style={{ padding: '8px 10px', backgroundColor: '#F0FDF4', color: '#047857', border: '1px solid #BBF7D0', borderRadius: '6px', fontSize: '12.5px', lineHeight: '1.4', fontStyle: 'italic' }}>
+                                      <span style={{ fontSize: '10px', color: 'var(--text-muted)', display: 'block', marginBottom: '4px' }}>ADAPTATION ANGLE & STRATEGY</span>
+                                      <div style={{ padding: '10px 12px', backgroundColor: '#F0FDF4', color: '#047857', border: '1px solid #BBF7D0', borderRadius: '6px', fontSize: '12.5px', lineHeight: '1.45', fontStyle: 'italic' }}>
                                         💡 {mapping.adaptation_note}
                                       </div>
                                     </div>
 
-                                    <div style={{ display: 'flex', justifyContent: 'flex-end', flexShrink: 0, paddingTop: '6px' }}>
+                                    <div style={{ display: 'flex', justifyContent: 'flex-end', flexShrink: 0, paddingTop: '8px' }}>
                                       <button
                                         onClick={() => {
                                           if (confirm(`Are you sure you want to unlink this topic?`)) {
                                             setStorylineMappings(storylineMappings.filter(m => m.id !== mapping.id));
                                           }
                                         }}
-                                        style={{ backgroundColor: 'transparent', color: '#EF4444', border: 'none', fontSize: '11px', cursor: 'pointer', fontWeight: '600' }}
+                                        style={{ backgroundColor: 'transparent', color: '#EF4444', border: 'none', fontSize: '11.5px', cursor: 'pointer', fontWeight: '600' }}
                                       >
                                         Unlink Topic
                                       </button>
@@ -4174,28 +4273,28 @@ service cloud.firestore {
                                   </div>
                                 ) : (
                                   <div style={{ flex: 1, display: 'flex', flexDirection: 'column', minHeight: 0 }}>
-                                    <div className="form-group" style={{ marginBottom: '8px', flexShrink: 0 }}>
-                                      <label className="form-label" style={{ fontSize: '10px' }}>Link a Modal Subject</label>
+                                    <div className="form-group" style={{ marginBottom: '10px', flexShrink: 0 }}>
+                                      <label className="form-label" style={{ fontSize: '10.5px' }}>Link a Modal Subject</label>
                                       <select
                                         value={selectedSubjectIdToLink}
                                         onChange={(e) => setSelectedSubjectIdToLink(e.target.value)}
-                                        style={{ width: '100%', padding: '5px', borderRadius: '6px', border: '1px solid var(--border-color)', fontSize: '12px' }}
+                                        style={{ width: '100%', padding: '6px', borderRadius: '6px', border: '1px solid var(--border-color)', fontSize: '12px' }}
                                       >
                                         {modalSubjects.map(s => <option key={s.id} value={s.id}>{s.subject_name} ({s.category_id})</option>)}
                                       </select>
                                     </div>
 
                                     <div className="form-group" style={{ flex: 1, display: 'flex', flexDirection: 'column', minHeight: 0 }}>
-                                      <label className="form-label" style={{ fontSize: '10px' }}>Adaptation Angle (How does this subject answer the prompt?)</label>
+                                      <label className="form-label" style={{ fontSize: '10.5px' }}>Adaptation Angle (How does this subject answer the prompt?)</label>
                                       <textarea
                                         placeholder="E.g. Ainil speaks fluent English, Malay, and Chinese, representing an exceptional language learner..."
                                         value={adaptationNoteText}
                                         onChange={(e) => setAdaptationNoteText(e.target.value)}
-                                        style={{ width: '100%', flex: 1, padding: '8px 10px', borderRadius: '6px', border: '1px solid var(--border-color)', resize: 'none', fontSize: '12.5px', lineHeight: '1.4', minHeight: '60px' }}
+                                        style={{ width: '100%', flex: 1, padding: '10px', borderRadius: '6px', border: '1px solid var(--border-color)', resize: 'none', fontSize: '12.5px', lineHeight: '1.45', minHeight: '60px' }}
                                       />
                                     </div>
 
-                                    <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '8px', flexShrink: 0 }}>
+                                    <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '10px', flexShrink: 0 }}>
                                       <button
                                         onClick={() => {
                                           if (!selectedSubjectIdToLink) {
@@ -4219,7 +4318,7 @@ service cloud.firestore {
                                           setAdaptationNoteText('');
                                         }}
                                         className="btn btn-primary"
-                                        style={{ padding: '5px 12px', fontSize: '11px' }}
+                                        style={{ padding: '6px 12px', fontSize: '11.5px' }}
                                       >
                                         Link Topic
                                       </button>
@@ -4237,7 +4336,6 @@ service cloud.firestore {
                 </div>
               );
             })()}
-          </main>
           {/* DIALOG: DICTIONARY LOOKUP & ADD WORD */}
           {isAddModalOpen && (
             <div className="modal-overlay">

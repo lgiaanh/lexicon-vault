@@ -2664,3 +2664,174 @@ body {
 
 
 
+
+/* ==========================================================================
+   UI OPTIMIZATION DESIGN TOKENS (P0-P4 SIDEBAR, CARDS & GRID LAYOUTS)
+   ========================================================================== */
+
+:root {
+  --sidebar-width: 280px;
+  --transition-sidebar: width 220ms cubic-bezier(0.4, 0, 0.2, 1);
+  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-card-hover: 0 4px 10px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -1px rgba(0, 0, 0, 0.04);
+}
+
+/* Collapsible Sidebar Rail */
+.sidebar {
+  width: var(--sidebar-width) !important;
+  transition: var(--transition-sidebar) !important;
+  overflow-x: hidden !important;
+}
+
+.sidebar.collapsed {
+  --sidebar-width: 72px !important;
+}
+
+/* Collapsed Sub-items adjustments */
+.sidebar.collapsed .sidebar-header {
+  padding: 16px 0;
+  justify-content: center;
+}
+
+.sidebar.collapsed .nav-item {
+  width: 44px;
+  height: 44px;
+  margin: 4px auto;
+  border-radius: 8px;
+  padding: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  position: relative;
+}
+
+.sidebar.collapsed .folder-item {
+  width: 40px;
+  height: 40px;
+  margin: 4px auto;
+  border-radius: 8px;
+  padding: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* Standardized Speaking Modal Subject Card */
+.subject-card {
+  padding: 16px 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: var(--shadow-card);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+
+.subject-card:hover {
+  box-shadow: var(--shadow-card-hover);
+  border-color: rgba(203, 213, 225, 0.9);
+}
+
+.subject-card-details {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  overflow: hidden;
+  flex: 1;
+}
+
+.subject-card-actions {
+  display: flex;
+  gap: 4px;
+  flex-shrink: 0;
+  margin-left: 12px;
+}
+
+.subject-action-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+  color: var(--text-muted);
+}
+
+.subject-action-btn.edit:hover {
+  background-color: #F1F5F9;
+  color: var(--accent);
+}
+
+.subject-action-btn.delete:hover {
+  background-color: #FEF2F2;
+  color: #EF4444;
+}
+
+/* Category Badge Color Tokens */
+.badge-category {
+  font-size: 8.5px;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: inline-block;
+  width: fit-content;
+}
+
+.badge-category.people {
+  color: #5B21B6;
+  background-color: #F3E8FF;
+}
+
+.badge-category.places {
+  color: #065F46;
+  background-color: #D1FAE5;
+}
+
+.badge-category.objects {
+  color: #1E40AF;
+  background-color: #DBEAFE;
+}
+
+.badge-category.activities {
+  color: #3730A3;
+  background-color: #E0E7FF;
+}
+
+.badge-category.experiences {
+  color: #92400E;
+  background-color: #FEF3C7;
+}
+
+/* Grid Layout for Cards list */
+.subject-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+  align-content: start;
+}
+
+/* Responsive Split-Grid layout for Speaking Topics Tab */
+.weaver-grid-container {
+  display: grid;
+  grid-template-columns: minmax(320px, 1fr) minmax(400px, 1.3fr);
+  gap: 20px;
+  align-items: stretch;
+  flex: 1;
+  min-height: 0;
+}
+
+@media (max-width: 768px) {
+  .weaver-grid-container {
+    grid-template-columns: 1fr !important;
+    align-items: start !important;
+    overflow-y: auto !important;
+  }
+}
