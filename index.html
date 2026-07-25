@@ -631,6 +631,8 @@
       const [weaverActiveSubjectB, setWeaverActiveSubjectB] = useState('subject-quiet-cafe');
       const [weaverBridgingText, setWeaverBridgingText] = useState('');
       const [speakingFilterCategory, setSpeakingFilterCategory] = useState('all');
+      const [subTab, setSubTab] = useState('subjects');
+      const [selectedActivePrompt, setSelectedActivePrompt] = useState(null);
 
       // Firebase Cloud Sync State
       const [firebaseConfig, setFirebaseConfig] = useState(() => {
@@ -3954,18 +3956,7 @@ service cloud.firestore {
                 activities: { label: 'Activities' }
               };
 
-              // Local sub-tab state hosted directly
-              const subTab = window.weaverSubTab || 'subjects';
-              const setSubTab = (val) => {
-                window.weaverSubTab = val;
-                setActiveTab('weaver'); // Force re-render tick
-              };
 
-              const selectedActivePrompt = window.weaverActivePrompt || null;
-              const setSelectedActivePrompt = (p) => {
-                window.weaverActivePrompt = p;
-                setActiveTab('weaver');
-              };
 
               return (
                 <div className="weaver-panel-container fade-in" style={{ padding: '18px 24px', flex: 1, minHeight: 0, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
