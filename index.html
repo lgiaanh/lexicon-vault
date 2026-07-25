@@ -587,8 +587,12 @@
 
       // Firebase Cloud Sync State
       const [firebaseConfig, setFirebaseConfig] = useState(() => {
-        const saved = localStorage.getItem('lexicon_firebase_config');
-        return saved ? JSON.parse(saved) : null;
+        try {
+          const saved = localStorage.getItem('lexicon_firebase_config');
+          return saved ? JSON.parse(saved) : null;
+        } catch (e) {
+          return null;
+        }
       });
       const [syncStatus, setSyncStatus] = useState('disconnected'); // 'disconnected' | 'connected' | 'syncing' | 'error'
       const [syncError, setSyncError] = useState(null);
@@ -712,17 +716,25 @@
           const docSnap = await docRef.get();
 
           const localTimestamp = localStorage.getItem('lexicon_last_updated') || new Date(0).toISOString();
+          const safeParseJSON = (key, fallback) => {
+            try {
+              const val = localStorage.getItem(key);
+              return val ? JSON.parse(val) : fallback;
+            } catch (e) {
+              return fallback;
+            }
+          };
           const localData = {
-            entries: JSON.parse(localStorage.getItem('lexicon_entries') || '[]'),
-            folders: JSON.parse(localStorage.getItem('lexicon_folders') || '[]'),
-            articles: JSON.parse(localStorage.getItem('lexicon_articles') || '[]'),
-            study_time: JSON.parse(localStorage.getItem('lexicon_study_time') || '{}'),
+            entries: safeParseJSON('lexicon_entries', []),
+            folders: safeParseJSON('lexicon_folders', []),
+            articles: safeParseJSON('lexicon_articles', []),
+            study_time: safeParseJSON('lexicon_study_time', {}),
             total_study_time: localStorage.getItem('lexicon_total_study_time') || '0',
-            streak: JSON.parse(localStorage.getItem('lexicon_study_streak') || '{}'),
-            modalSubjects: JSON.parse(localStorage.getItem('lexicon_modal_subjects') || '[]'),
-            storylineMappings: JSON.parse(localStorage.getItem('lexicon_storyline_mappings') || '[]'),
-            weavedStories: JSON.parse(localStorage.getItem('lexicon_weaved_stories') || '[]'),
-            speakingPrompts: JSON.parse(localStorage.getItem('lexicon_speaking_prompts') || '[]'),
+            streak: safeParseJSON('lexicon_study_streak', {}),
+            modalSubjects: safeParseJSON('lexicon_modal_subjects', []),
+            storylineMappings: safeParseJSON('lexicon_storyline_mappings', []),
+            weavedStories: safeParseJSON('lexicon_weaved_stories', []),
+            speakingPrompts: safeParseJSON('lexicon_speaking_prompts', []),
             last_updated: localTimestamp
           };
 
@@ -4005,10 +4017,10 @@ service cloud.firestore {
                                     WebkitBoxOrient: 'vertical',
                                     overflow: 'hidden'
                                   }}>
-                                    {sub.key_details.map((d, i) => d.trim() && <li key={i}>{d}</li>)}
+                                    {(sub.key_details || []).map((d, i) => d && d.trim() && <li key={i}>{d}</li>)}
                                   </ul>
 
-                                  {sub.key_details.some(d => d.trim().length > 30) && (
+                                  {(sub.key_details || []).some(d => d && d.trim().length > 30) && (
                                     <span 
                                       onClick={() => setExpandedCardId(isExpanded ? null : sub.id)}
                                       style={{ fontSize: '10px', color: 'var(--accent)', cursor: 'pointer', fontWeight: '600', marginTop: '4px', display: 'inline-block' }}
@@ -7504,12 +7516,20 @@ service cloud.firestore {
                 <button 
                   onClick={() => {
                     try {
+                      const safeParseJSON = (key, fallback) => {
+                        try {
+                          const val = localStorage.getItem(key);
+                          return val ? JSON.parse(val) : fallback;
+                        } catch (e) {
+                          return fallback;
+                        }
+                      };
                       const data = {
-                        entries: JSON.parse(localStorage.getItem('lexicon_entries') || '[]'),
-                        folders: JSON.parse(localStorage.getItem('lexicon_folders') || '[]'),
-                        study_time: JSON.parse(localStorage.getItem('lexicon_study_time') || '{}'),
+                        entries: safeParseJSON('lexicon_entries', []),
+                        folders: safeParseJSON('lexicon_folders', []),
+                        study_time: safeParseJSON('lexicon_study_time', {}),
                         total_study_time: localStorage.getItem('lexicon_total_study_time') || '0',
-                        streak: JSON.parse(localStorage.getItem('lexicon_study_streak') || '{}')
+                        streak: safeParseJSON('lexicon_study_streak', {})
                       };
                       const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
                       const url = URL.createObjectURL(blob);
