@@ -2808,39 +2808,35 @@ IMPORTANT: If the Free Dictionary context contains a valid IPA pronunciation (ip
               )}
 
               <div className="folder-list">
-                {(() => {
-                  const folderIconMap = {
-                    'folder-1': 'scale',       // Law & Policy
-                    'folder-2': 'trendingUp',  // Economics & Business
-                    'folder-3': 'leaf',        // Environment & Nature
-                    'folder-4': 'cpu',         // Science & Technology
-                    'folder-5': 'book',        // Education & Learning
-                    'folder-6': 'activity',    // Health & Medicine
-                    'folder-7': 'messageSquare', // Media & Communication
-                    'folder-science': 'cpu'
-                  };
-                  return updatedFolders.map(folder => {
-                    const iconName = folderIconMap[folder.id] || 'folder';
-                    return (
-                      <button
-                        key={folder.id}
-                        className={`folder-item ${selectedFolderId === folder.id && activeTab === 'vault' ? 'active' : ''}`}
-                        onClick={() => { setActiveTab('vault'); setSelectedFolderId(folder.id); }}
-                        title={isSidebarCollapsed ? folder.name : ""}
-                      >
-                        <span className="folder-name-container" style={{ justifyContent: isSidebarCollapsed ? 'center' : 'flex-start' }}>
-                          <Icon name={iconName} style={{ width: '18px', height: '18px', color: 'var(--text-muted)', flexShrink: 0 }} />
-                          {!isSidebarCollapsed && <span className="folder-name">{folder.name}</span>}
+                {updatedFolders.map(folder => {
+                  return (
+                    <button
+                      key={folder.id}
+                      className={`folder-item ${selectedFolderId === folder.id && activeTab === 'vault' ? 'active' : ''}`}
+                      onClick={() => { setActiveTab('vault'); setSelectedFolderId(folder.id); }}
+                      title={isSidebarCollapsed ? folder.name : ""}
+                    >
+                      <span className="folder-name-container" style={{ justifyContent: isSidebarCollapsed ? 'center' : 'flex-start' }}>
+                        <span 
+                          className="folder-dot" 
+                          style={{ 
+                            width: '10px', 
+                            height: '10px', 
+                            borderRadius: '50%', 
+                            backgroundColor: folder.color || '#CBD5E1', 
+                            flexShrink: 0 
+                          }} 
+                        />
+                        {!isSidebarCollapsed && <span className="folder-name">{folder.name}</span>}
+                      </span>
+                      {!isSidebarCollapsed && (
+                        <span className="folder-badge-count">
+                          {folder.word_count}
                         </span>
-                        {!isSidebarCollapsed && (
-                          <span className="folder-badge-count">
-                            {folder.word_count}
-                          </span>
-                        )}
-                      </button>
-                    );
-                  });
-                })()}
+                      )}
+                    </button>
+                  );
+                })}
               </div>
             </div>
           </aside>
