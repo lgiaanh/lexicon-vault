@@ -11,9 +11,9 @@ const INITIAL_FOLDERS = [
   { id: 'folder-speaking-work-study', name: 'Speaking: Work & Study', color: '#C6DEF1', emoji: '🏫', description: 'Phrasal verbs and colloquial expressions for describing academic pursuits and careers.', created_at: new Date().toISOString(), word_count: 3 },
   { id: 'folder-speaking-leisure-travel', name: 'Speaking: Leisure & Travel', color: '#C9E4DE', emoji: '✈️', description: 'Speaking phrasal verbs for describing vacationing, sightseeing, and hobbies.', created_at: new Date().toISOString(), word_count: 2 },
   { id: 'folder-speaking-relationships', name: 'Speaking: Relationships & Life', color: '#F2C6DE', emoji: '👥', description: 'Phrasal verbs for describing social connections, relatives, and childhood memories.', created_at: new Date().toISOString(), word_count: 7 },
-  { id: 'folder-science', name: 'Science & Technology', color: '#DBCDF0', emoji: '🔬', description: 'Vocabulary and collocations related to scientific research, breakthroughs, technology, and paradigm shifts.', created_at: new Date().toISOString(), word_count: 14 },
+  { id: 'folder-science', name: 'Science & Technology', color: '#DBCDF0', emoji: '🔬', description: 'Vocabulary and collocations related to scientific research, breakthroughs, technology, and paradigm shifts.', created_at: new Date().toISOString(), word_count: 19 },
   { id: 'folder-task2-phrases', name: 'Task 2 Phrases', color: '#F7D9C4', emoji: '📝', description: 'Key academic phrases, collocations, and idioms tailored for Writing Task 2 essays.', created_at: new Date().toISOString(), word_count: 15 },
-  { id: 'folder-reading', name: 'IELTS Reading', color: '#C9E4DE', emoji: '📖', description: 'High-yield vocabulary and scientific terms gathered from IELTS Reading passages.', created_at: new Date().toISOString(), word_count: 56 }
+  { id: 'folder-reading', name: 'IELTS Reading', color: '#C9E4DE', emoji: '📖', description: 'High-yield vocabulary and scientific terms gathered from IELTS Reading passages.', created_at: new Date().toISOString(), word_count: 61 }
 ];
 
 const INITIAL_ENTRIES = [
@@ -11532,6 +11532,289 @@ const INITIAL_ENTRIES = [
     },
     date_added: new Date().toISOString(),
     source_context: 'Vitamins – To supplement or not? reading passage - disturbing evidence to steer clear of multivitamins.'
+  },
+  {
+    id: 'entry-mortality',
+    entry_type: 'word',
+    word: 'mortality',
+    ipa_uk: '/mɔːˈtæl.ə.ti/',
+    ipa_us: '/mɔːrˈtæl.ə.t̬i/',
+    definition: 'The state of being subject to death, or the number of deaths in a given time or place.',
+    definition_source: 'cambridge',
+    example: 'Improved healthcare and cleaner sanitation lowered infant mortality rates substantially.',
+    definitions: [
+      {
+        definition: 'The state of being subject to death.',
+        example: 'Her illness forced her to confront her own mortality.',
+        cefr_level: 'C2',
+        grammar_note: 'noun [U]'
+      },
+      {
+        definition: 'The rate of deaths in a given population or time period.',
+        example: 'Infant mortality has fallen drastically in the last decade.',
+        cefr_level: 'C2',
+        grammar_note: 'noun [U]'
+      }
+    ],
+    extra_examples: [
+      'The disease carries a high mortality rate if left untreated.',
+      'Philosophers have debated the nature of human mortality for centuries.'
+    ],
+    grammar_note: 'noun [U]',
+    base_verb: '',
+    particles: '',
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: 'C2',
+    register: 'academic',
+    formality_score: 5,
+    connotation: 'neutral',
+    word_family: { verb: [], noun: ['mortality', 'mortal'], adjective: ['mortal', 'immortal'], adverb: ['mortally'] },
+    semantic_field_id: 'death-life',
+    semantic_field_label: 'Death & Life',
+    semantic_field_words: [
+      { word: 'death', cefr: 'A2', register: 'neutral' },
+      { word: 'fatality', cefr: 'C1', register: 'formal' }
+    ],
+    register_synonyms: [
+      { word: 'death', register: 'neutral', cefr: 'A2' },
+      { word: 'fatality', register: 'formal', cefr: 'C1' }
+    ],
+    folder_ids: ['folder-reading', 'folder-science'],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: 'Vitamins – To supplement or not? reading passage - negligible impact on mortality or other major indicators.'
+  },
+  {
+    id: 'entry-prenatal',
+    entry_type: 'word',
+    word: 'prenatal',
+    ipa_uk: '/ˌpriːˈneɪ.təl/',
+    ipa_us: '/ˌpriːˈneɪ.t̬əl/',
+    definition: 'Relating to the medical care of women during pregnancy, before their babies are born.',
+    definition_source: 'cambridge',
+    example: 'Expectant mothers are advised to seek regular prenatal checkups and take folic acid.',
+    definitions: [
+      {
+        definition: 'Relating to the period before birth; during pregnancy.',
+        example: 'The clinic offers free prenatal classes for new parents.',
+        cefr_level: 'C2',
+        grammar_note: 'adjective [always before noun]'
+      }
+    ],
+    extra_examples: [
+      'Prenatal diagnosis can detect many congenital disorders.',
+      'Proper nutrition is critical for healthy prenatal development.'
+    ],
+    grammar_note: 'adjective [always before noun]',
+    base_verb: '',
+    particles: '',
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: 'C2',
+    register: 'academic',
+    formality_score: 4,
+    connotation: 'neutral',
+    word_family: { verb: [], noun: [], adjective: ['prenatal', 'postnatal', 'neonatal'], adverb: ['prenatally'] },
+    semantic_field_id: 'pregnancy-birth',
+    semantic_field_label: 'Pregnancy & Birth',
+    semantic_field_words: [
+      { word: 'pregnancy', cefr: 'B2', register: 'neutral' },
+      { word: 'maternity', cefr: 'C1', register: 'neutral' }
+    ],
+    register_synonyms: [
+      { word: 'pregnancy', register: 'neutral', cefr: 'B2' }
+    ],
+    folder_ids: ['folder-reading', 'folder-science'],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: 'Vitamins – To supplement or not? reading passage - folic acid has long been indicated as a prenatal supplement.'
+  },
+  {
+    id: 'entry-defect',
+    entry_type: 'word',
+    word: 'defect',
+    ipa_uk: '/ˈdiː.fekt/',
+    ipa_us: '/ˈdiː.fekt/',
+    definition: 'A physical or functional fault, flaw, or imperfection in a person or thing.',
+    definition_source: 'cambridge',
+    example: 'Folic acid supplementation is proven to reduce neural tube birth defects in infants.',
+    definitions: [
+      {
+        definition: 'A fault, flaw, or imperfection in something.',
+        example: 'The company recalled the cars due to a major engine defect.',
+        cefr_level: 'B2',
+        grammar_note: 'noun [C]'
+      },
+      {
+        definition: 'To leave one\'s country or political group to join an opposing one.',
+        example: 'The soldier decided to defect to the allied forces.',
+        cefr_level: 'C2',
+        grammar_note: 'intransitive verb'
+      }
+    ],
+    extra_examples: [
+      'The manufacturing defect was caught early by quality control.',
+      'A birth defect can impact a child\'s physical capabilities.'
+    ],
+    grammar_note: 'noun [C]',
+    base_verb: '',
+    particles: '',
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: 'B2',
+    register: 'general',
+    formality_score: 3,
+    connotation: 'negative',
+    word_family: { verb: ['defect'], noun: ['defect', 'defection', 'defector'], adjective: ['defective', 'defectless'], adverb: ['defectively'] },
+    semantic_field_id: 'flaw-imperfection',
+    semantic_field_label: 'Flaw & Imperfection',
+    semantic_field_words: [
+      { word: 'flaw', cefr: 'B2', register: 'neutral' },
+      { word: 'imperfection', cefr: 'C1', register: 'formal' }
+    ],
+    register_synonyms: [
+      { word: 'flaw', register: 'neutral', cefr: 'B2' },
+      { word: 'imperfection', register: 'formal', cefr: 'C1' }
+    ],
+    folder_ids: ['folder-reading', 'folder-science'],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: 'Vitamins – To supplement or not? reading passage - prevent neural tube birth defects.'
+  },
+  {
+    id: 'entry-deflect',
+    entry_type: 'word',
+    word: 'deflect',
+    ipa_uk: '/dɪˈflekt/',
+    ipa_us: '/dɪˈflekt/',
+    definition: 'To cause something to change direction, or to turn aside from a course.',
+    definition_source: 'cambridge',
+    example: 'Antioxidants deflect macular degeneration by counteracting damage in retina cells.',
+    definitions: [
+      {
+        definition: 'To cause something to change direction; turn aside.',
+        example: 'The shield is designed to deflect incoming debris.',
+        cefr_level: 'C1',
+        grammar_note: 'transitive or intransitive verb'
+      },
+      {
+        definition: 'To draw attention away from something.',
+        example: 'She tried to deflect the criticism by blaming external factors.',
+        cefr_level: 'C1',
+        grammar_note: 'transitive or intransitive verb'
+      }
+    ],
+    extra_examples: [
+      'The ball deflected off the defender into the net.',
+      'He used humor to deflect personal questions about his career.'
+    ],
+    grammar_note: 'transitive or intransitive verb',
+    base_verb: '',
+    particles: '',
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: 'C1',
+    register: 'academic',
+    formality_score: 4,
+    connotation: 'neutral',
+    word_family: { verb: ['deflect'], noun: ['deflection', 'deflector'], adjective: ['deflective', 'deflected'], adverb: [] },
+    semantic_field_id: 'divert-direction',
+    semantic_field_label: 'Divert & Direction',
+    semantic_field_words: [
+      { word: 'divert', cefr: 'C1', register: 'neutral' },
+      { word: 'distract', cefr: 'B2', register: 'neutral' }
+    ],
+    register_synonyms: [
+      { word: 'divert', register: 'neutral', cefr: 'C1' },
+      { word: 'distract', register: 'neutral', cefr: 'B2' }
+    ],
+    folder_ids: ['folder-reading', 'folder-science'],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: 'Vitamins – To supplement or not? reading passage - zinc and antioxidants can maintain vision while deflecting macular degeneration.'
+  },
+  {
+    id: 'entry-fortification',
+    entry_type: 'word',
+    word: 'fortification',
+    ipa_uk: '/ˌfɔː.tɪ.fɪˈkeɪ.ʃən/',
+    ipa_us: '/ˌfɔːr.t̬ə.fəˈkeɪ.ʃən/',
+    definition: 'The action of reinforcing or strengthening a food or drink with vitamins and minerals.',
+    definition_source: 'cambridge',
+    example: 'National white flour fortification programs led to a massive drop in neural tube birth defects.',
+    definitions: [
+      {
+        definition: 'The process of adding vitamins or minerals to food to make it healthier.',
+        example: 'The fortification of salt with iodine has prevented goiters globally.',
+        cefr_level: 'C1',
+        grammar_note: 'noun [U or C]'
+      },
+      {
+        definition: 'A defensive wall or reinforcement built to protect a place.',
+        example: 'The soldiers built concrete fortifications along the border.',
+        cefr_level: 'C2',
+        grammar_note: 'noun [C usually plural]'
+      }
+    ],
+    extra_examples: [
+      'Food fortification is a cost-effective public health strategy.',
+      'The ancient fortress had stone fortifications that survived many sieges.'
+    ],
+    grammar_note: 'noun [U or C]',
+    base_verb: '',
+    particles: '',
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: 'C1',
+    register: 'academic',
+    formality_score: 4,
+    connotation: 'positive',
+    word_family: { verb: ['fortify'], noun: ['fortification', 'fortress'], adjective: ['fortified'], adverb: [] },
+    semantic_field_id: 'strengthen-enhance',
+    semantic_field_label: 'Strengthen & Enhance',
+    semantic_field_words: [
+      { word: 'enrichment', cefr: 'C1', register: 'formal' },
+      { word: 'reinforcement', cefr: 'C1', register: 'formal' }
+    ],
+    register_synonyms: [
+      { word: 'enrichment', register: 'formal', cefr: 'C1' },
+      { word: 'reinforcement', register: 'formal', cefr: 'C1' }
+    ],
+    folder_ids: ['folder-reading', 'folder-science'],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: 'Vitamins – To supplement or not? reading passage - In countries without such fortification.'
   }
 ];
 
@@ -19086,6 +19369,214 @@ const EXTENDED_DICTIONARY_DB = [
       { word: 'avoid', register: 'neutral', cefr: 'B1' }
     ],
     suggested_folder_name: 'Phrasal Verbs & Idioms'
+  },
+  {
+    word: 'mortality',
+    entry_type: 'word',
+    ipa_uk: '/mɔːˈtæl.ə.ti/',
+    ipa_us: '/mɔːrˈtæl.ə.t̬i/',
+    definition: 'The state of being subject to death, or the number of deaths in a given time or place.',
+    definitions: [
+      {
+        definition: 'The state of being subject to death.',
+        example: 'Her illness forced her to confront her own mortality.',
+        cefr_level: 'C2',
+        grammar_note: 'noun [U]'
+      },
+      {
+        definition: 'The rate of deaths in a given population or time period.',
+        example: 'Infant mortality has fallen drastically in the last decade.',
+        cefr_level: 'C2',
+        grammar_note: 'noun [U]'
+      }
+    ],
+    cefr_level: 'C2',
+    register: 'academic',
+    formality_score: 5,
+    connotation: 'neutral',
+    grammar_note: 'noun [U]',
+    example: 'Improved healthcare and cleaner sanitation lowered infant mortality rates substantially.',
+    extra_examples: [
+      'The disease carries a high mortality rate if left untreated.',
+      'Philosophers have debated the nature of human mortality for centuries.'
+    ],
+    word_family: { verb: [], noun: ['mortality', 'mortal'], adjective: ['mortal', 'immortal'], adverb: ['mortally'] },
+    semantic_field_id: 'death-life',
+    semantic_field_label: 'Death & Life',
+    semantic_field_words: [
+      { word: 'death', cefr: 'A2', register: 'neutral' },
+      { word: 'fatality', cefr: 'C1', register: 'formal' }
+    ],
+    register_synonyms: [
+      { word: 'death', register: 'neutral', cefr: 'A2' },
+      { word: 'fatality', register: 'formal', cefr: 'C1' }
+    ],
+    suggested_folder_name: 'IELTS Reading'
+  },
+  {
+    word: 'prenatal',
+    entry_type: 'word',
+    ipa_uk: '/ˌpriːˈneɪ.təl/',
+    ipa_us: '/ˌpriːˈneɪ.t̬əl/',
+    definition: 'Relating to the medical care of women during pregnancy, before their babies are born.',
+    definitions: [
+      {
+        definition: 'Relating to the period before birth; during pregnancy.',
+        example: 'The clinic offers free prenatal classes for new parents.',
+        cefr_level: 'C2',
+        grammar_note: 'adjective [always before noun]'
+      }
+    ],
+    cefr_level: 'C2',
+    register: 'academic',
+    formality_score: 4,
+    connotation: 'neutral',
+    grammar_note: 'adjective [always before noun]',
+    example: 'Expectant mothers are advised to seek regular prenatal checkups and take folic acid.',
+    extra_examples: [
+      'Prenatal diagnosis can detect many congenital disorders.',
+      'Proper nutrition is critical for healthy prenatal development.'
+    ],
+    word_family: { verb: [], noun: [], adjective: ['prenatal', 'postnatal', 'neonatal'], adverb: ['prenatally'] },
+    semantic_field_id: 'pregnancy-birth',
+    semantic_field_label: 'Pregnancy & Birth',
+    semantic_field_words: [
+      { word: 'pregnancy', cefr: 'B2', register: 'neutral' },
+      { word: 'maternity', cefr: 'C1', register: 'neutral' }
+    ],
+    register_synonyms: [
+      { word: 'pregnancy', register: 'neutral', cefr: 'B2' }
+    ],
+    suggested_folder_name: 'IELTS Reading'
+  },
+  {
+    word: 'defect',
+    entry_type: 'word',
+    ipa_uk: '/ˈdiː.fekt/',
+    ipa_us: '/ˈdiː.fekt/',
+    definition: 'A physical or functional fault, flaw, or imperfection in a person or thing.',
+    definitions: [
+      {
+        definition: 'A fault, flaw, or imperfection in something.',
+        example: 'The company recalled the cars due to a major engine defect.',
+        cefr_level: 'B2',
+        grammar_note: 'noun [C]'
+      },
+      {
+        definition: 'To leave one\'s country or political group to join an opposing one.',
+        example: 'The soldier decided to defect to the allied forces.',
+        cefr_level: 'C2',
+        grammar_note: 'intransitive verb'
+      }
+    ],
+    cefr_level: 'B2',
+    register: 'general',
+    formality_score: 3,
+    connotation: 'negative',
+    grammar_note: 'noun [C]',
+    example: 'Folic acid supplementation is proven to reduce neural tube birth defects in infants.',
+    extra_examples: [
+      'The manufacturing defect was caught early by quality control.',
+      'A birth defect can impact a child\'s physical capabilities.'
+    ],
+    word_family: { verb: ['defect'], noun: ['defect', 'defection', 'defector'], adjective: ['defective', 'defectless'], adverb: ['defectively'] },
+    semantic_field_id: 'flaw-imperfection',
+    semantic_field_label: 'Flaw & Imperfection',
+    semantic_field_words: [
+      { word: 'flaw', cefr: 'B2', register: 'neutral' },
+      { word: 'imperfection', cefr: 'C1', register: 'formal' }
+    ],
+    register_synonyms: [
+      { word: 'flaw', register: 'neutral', cefr: 'B2' },
+      { word: 'imperfection', register: 'formal', cefr: 'C1' }
+    ],
+    suggested_folder_name: 'IELTS Reading'
+  },
+  {
+    word: 'deflect',
+    entry_type: 'word',
+    ipa_uk: '/dɪˈflekt/',
+    ipa_us: '/dɪˈflekt/',
+    definition: 'To cause something to change direction, or to turn aside from a course.',
+    definitions: [
+      {
+        definition: 'To cause something to change direction; turn aside.',
+        example: 'The shield is designed to deflect incoming debris.',
+        cefr_level: 'C1',
+        grammar_note: 'transitive or intransitive verb'
+      },
+      {
+        definition: 'To draw attention away from something.',
+        example: 'She tried to deflect the criticism by blaming external factors.',
+        cefr_level: 'C1',
+        grammar_note: 'transitive or intransitive verb'
+      }
+    ],
+    cefr_level: 'C1',
+    register: 'academic',
+    formality_score: 4,
+    connotation: 'neutral',
+    grammar_note: 'transitive or intransitive verb',
+    example: 'Antioxidants deflect macular degeneration by counteracting damage in retina cells.',
+    extra_examples: [
+      'The ball deflected off the defender into the net.',
+      'He used humor to deflect personal questions about his career.'
+    ],
+    word_family: { verb: ['deflect'], noun: ['deflection', 'deflector'], adjective: ['deflective', 'deflected'], adverb: [] },
+    semantic_field_id: 'divert-direction',
+    semantic_field_label: 'Divert & Direction',
+    semantic_field_words: [
+      { word: 'divert', cefr: 'C1', register: 'neutral' },
+      { word: 'distract', cefr: 'B2', register: 'neutral' }
+    ],
+    register_synonyms: [
+      { word: 'divert', register: 'neutral', cefr: 'C1' },
+      { word: 'distract', register: 'neutral', cefr: 'B2' }
+    ],
+    suggested_folder_name: 'IELTS Reading'
+  },
+  {
+    word: 'fortification',
+    entry_type: 'word',
+    ipa_uk: '/ˌfɔː.tɪ.fɪˈkeɪ.ʃən/',
+    ipa_us: '/ˌfɔːr.t̬ə.fəˈkeɪ.ʃən/',
+    definition: 'The action of reinforcing or strengthening a food or drink with vitamins and minerals.',
+    definitions: [
+      {
+        definition: 'The process of adding vitamins or minerals to food to make it healthier.',
+        example: 'The fortification of salt with iodine has prevented goiters globally.',
+        cefr_level: 'C1',
+        grammar_note: 'noun [U or C]'
+      },
+      {
+        definition: 'A defensive wall or reinforcement built to protect a place.',
+        example: 'The soldiers built concrete fortifications along the border.',
+        cefr_level: 'C2',
+        grammar_note: 'noun [C usually plural]'
+      }
+    ],
+    cefr_level: 'C1',
+    register: 'academic',
+    formality_score: 4,
+    connotation: 'positive',
+    grammar_note: 'noun [U or C]',
+    example: 'National white flour fortification programs led to a massive drop in neural tube birth defects.',
+    extra_examples: [
+      'Food fortification is a cost-effective public health strategy.',
+      'The ancient fortress had stone fortifications that survived many sieges.'
+    ],
+    word_family: { verb: ['fortify'], noun: ['fortification', 'fortress'], adjective: ['fortified'], adverb: [] },
+    semantic_field_id: 'strengthen-enhance',
+    semantic_field_label: 'Strengthen & Enhance',
+    semantic_field_words: [
+      { word: 'enrichment', cefr: 'C1', register: 'formal' },
+      { word: 'reinforcement', cefr: 'C1', register: 'formal' }
+    ],
+    register_synonyms: [
+      { word: 'enrichment', register: 'formal', cefr: 'C1' },
+      { word: 'reinforcement', register: 'formal', cefr: 'C1' }
+    ],
+    suggested_folder_name: 'IELTS Reading'
   }
 ];
 
