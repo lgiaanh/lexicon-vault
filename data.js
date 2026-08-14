@@ -5,15 +5,15 @@ const INITIAL_FOLDERS = [
   { id: 'folder-1', name: 'Law & Policy', color: '#DBCDF0', emoji: '⚖️', description: 'Legislation, judicial processes, constitutional rights, and official regulations.', created_at: new Date().toISOString(), word_count: 14 },
   { id: 'folder-2', name: 'Economics & Statistics', color: '#FAEDCB', emoji: '📈', description: 'Financial theories, trade data, economic policy, market dynamics, and quantitative metrics.', created_at: new Date().toISOString(), word_count: 19 },
   { id: 'folder-3', name: 'Environment & Ecology', color: '#C9E4DE', emoji: '🌱', description: 'Climate change, biodiversity, environmental preservation, ecosystems, and conservation strategies.', created_at: new Date().toISOString(), word_count: 14 },
-  { id: 'folder-4', name: 'Academic Writing (Task 2)', color: '#C6DEF1', emoji: '✍️', description: 'Sophisticated vocabulary and idioms tailored for high-scoring IELTS Writing Task 2 responses.', created_at: new Date().toISOString(), word_count: 62 },
-  { id: 'folder-5', name: 'Phrasal Verbs & Idioms', color: '#F7D9C4', emoji: '💬', description: 'Common English phrasal verbs and idiomatic expressions for informal or spoken contexts.', created_at: new Date().toISOString(), word_count: 8 },
+  { id: 'folder-4', name: 'Academic Writing (Task 2)', color: '#C6DEF1', emoji: '✍️', description: 'Sophisticated vocabulary and idioms tailored for high-scoring IELTS Writing Task 2 responses.', created_at: new Date().toISOString(), word_count: 65 },
+  { id: 'folder-5', name: 'Phrasal Verbs & Idioms', color: '#F7D9C4', emoji: '💬', description: 'Common English phrasal verbs and idiomatic expressions for informal or spoken contexts.', created_at: new Date().toISOString(), word_count: 9 },
   { id: 'folder-6', name: 'Maps & Diagrams', color: '#F2C6DE', emoji: '🗺️', description: 'Spatial descriptions, maps, process flowcharts, and technical diagrams.', created_at: new Date().toISOString(), word_count: 4 },
   { id: 'folder-speaking-work-study', name: 'Speaking: Work & Study', color: '#C6DEF1', emoji: '🏫', description: 'Phrasal verbs and colloquial expressions for describing academic pursuits and careers.', created_at: new Date().toISOString(), word_count: 3 },
   { id: 'folder-speaking-leisure-travel', name: 'Speaking: Leisure & Travel', color: '#C9E4DE', emoji: '✈️', description: 'Speaking phrasal verbs for describing vacationing, sightseeing, and hobbies.', created_at: new Date().toISOString(), word_count: 2 },
   { id: 'folder-speaking-relationships', name: 'Speaking: Relationships & Life', color: '#F2C6DE', emoji: '👥', description: 'Phrasal verbs for describing social connections, relatives, and childhood memories.', created_at: new Date().toISOString(), word_count: 7 },
-  { id: 'folder-science', name: 'Science & Technology', color: '#DBCDF0', emoji: '🔬', description: 'Vocabulary and collocations related to scientific research, breakthroughs, technology, and paradigm shifts.', created_at: new Date().toISOString(), word_count: 9 },
+  { id: 'folder-science', name: 'Science & Technology', color: '#DBCDF0', emoji: '🔬', description: 'Vocabulary and collocations related to scientific research, breakthroughs, technology, and paradigm shifts.', created_at: new Date().toISOString(), word_count: 14 },
   { id: 'folder-task2-phrases', name: 'Task 2 Phrases', color: '#F7D9C4', emoji: '📝', description: 'Key academic phrases, collocations, and idioms tailored for Writing Task 2 essays.', created_at: new Date().toISOString(), word_count: 15 },
-  { id: 'folder-reading', name: 'IELTS Reading', color: '#C9E4DE', emoji: '📖', description: 'High-yield vocabulary and scientific terms gathered from IELTS Reading passages.', created_at: new Date().toISOString(), word_count: 47 }
+  { id: 'folder-reading', name: 'IELTS Reading', color: '#C9E4DE', emoji: '📖', description: 'High-yield vocabulary and scientific terms gathered from IELTS Reading passages.', created_at: new Date().toISOString(), word_count: 56 }
 ];
 
 const INITIAL_ENTRIES = [
@@ -11063,6 +11063,475 @@ const INITIAL_ENTRIES = [
     },
     date_added: new Date().toISOString(),
     source_context: "Drawing Lessons from History passage - ruins reminiscent of what poet Shelley described."
+  },
+  {
+    id: 'entry-negligible',
+    entry_type: 'word',
+    word: 'negligible',
+    ipa_uk: '/ˈneɡ.lɪ.dʒə.bəl/',
+    ipa_us: '/ˈneɡ.lə.dʒə.bəl/',
+    definition: 'Too small or unimportant to have any influence or value; insignificant.',
+    definition_source: 'cambridge',
+    example: 'For the general population, supplements have negligible impact on preventing common cancers.',
+    definitions: [
+      {
+        definition: 'Too small or unimportant to be worth considering; insignificant.',
+        example: 'The difference between the two products was negligible.',
+        cefr_level: 'C1',
+        grammar_note: 'adjective'
+      }
+    ],
+    extra_examples: [
+      'The cost of the repair was negligible compared to buying a new device.',
+      'A negligible amount of damage was reported after the minor tremor.'
+    ],
+    grammar_note: 'adjective',
+    base_verb: '',
+    particles: '',
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: 'C1',
+    register: 'academic',
+    formality_score: 4,
+    connotation: 'neutral',
+    word_family: { verb: [], noun: ['negligibility'], adjective: ['negligible'], adverb: ['negligibly'] },
+    semantic_field_id: 'size-amount',
+    semantic_field_label: 'Size & Amount',
+    semantic_field_words: [
+      { word: 'insignificant', cefr: 'B2', register: 'neutral' },
+      { word: 'trivial', cefr: 'C1', register: 'formal' }
+    ],
+    register_synonyms: [
+      { word: 'insignificant', register: 'neutral', cefr: 'B2' },
+      { word: 'trivial', register: 'formal', cefr: 'C1' }
+    ],
+    folder_ids: ['folder-reading', 'folder-science'],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: 'Vitamins – To supplement or not? reading passage - negligible impact on major indicators of health.'
+  },
+  {
+    id: 'entry-fortify',
+    entry_type: 'word',
+    word: 'fortify',
+    ipa_uk: '/ˈfɔː.tɪ.faɪ/',
+    ipa_us: '/ˈfɔːr.t̬ə.faɪ/',
+    definition: 'To make food or drink stronger or healthier by adding vitamins or minerals to it.',
+    definition_source: 'cambridge',
+    example: 'Many countries choose to require white flour to be fortified with folic acid to prevent birth defects.',
+    definitions: [
+      {
+        definition: 'To make food or drink stronger or healthier by adding vitamins or minerals to it.',
+        example: 'Cereals are often fortified with extra vitamins.',
+        cefr_level: 'C1',
+        grammar_note: 'transitive verb'
+      }
+    ],
+    extra_examples: [
+      'The milk is fortified with vitamin D to support bone strength.',
+      'Some juices are fortified with calcium to benefit lactose-intolerant consumers.'
+    ],
+    grammar_note: 'transitive verb',
+    base_verb: '',
+    particles: '',
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: 'C1',
+    register: 'academic',
+    formality_score: 4,
+    connotation: 'positive',
+    word_family: { verb: ['fortify'], noun: ['fortification'], adjective: ['fortified'], adverb: [] },
+    semantic_field_id: 'strengthen-enhance',
+    semantic_field_label: 'Strengthen & Enhance',
+    semantic_field_words: [
+      { word: 'strengthen', cefr: 'B2', register: 'neutral' },
+      { word: 'enrich', cefr: 'C1', register: 'formal' }
+    ],
+    register_synonyms: [
+      { word: 'strengthen', register: 'neutral', cefr: 'B2' },
+      { word: 'enrich', register: 'formal', cefr: 'C1' }
+    ],
+    folder_ids: ['folder-reading', 'folder-science'],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: 'Vitamins – To supplement or not? reading passage - decision to require white flour to be fortified.'
+  },
+  {
+    id: 'entry-plummet',
+    entry_type: 'word',
+    word: 'plummet',
+    ipa_uk: '/ˈplʌm.ɪt/',
+    ipa_us: '/ˈplʌm.ɪt/',
+    definition: 'To fall or drop straight down at a very high speed or by a large amount.',
+    definition_source: 'cambridge',
+    example: 'Spinal birth defects plummeted by 75% after the white flour fortification policy was implemented.',
+    definitions: [
+      {
+        definition: 'To fall or drop straight down at a very high speed or by a large amount.',
+        example: 'Share prices plummeted on the stock exchange today.',
+        cefr_level: 'C1',
+        grammar_note: 'intransitive verb'
+      }
+    ],
+    extra_examples: [
+      'The temperature plummeted below zero overnight.',
+      'Global sales plummeted due to the economic downturn.'
+    ],
+    grammar_note: 'intransitive verb',
+    base_verb: '',
+    particles: '',
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: 'C1',
+    register: 'academic',
+    formality_score: 4,
+    connotation: 'negative',
+    word_family: { verb: ['plummet'], noun: [], adjective: [], adverb: [] },
+    semantic_field_id: 'decrease-decline',
+    semantic_field_label: 'Decrease & Decline',
+    semantic_field_words: [
+      { word: 'fall', cefr: 'A1', register: 'neutral' },
+      { word: 'plunge', cefr: 'C1', register: 'neutral' }
+    ],
+    register_synonyms: [
+      { word: 'plunge', register: 'neutral', cefr: 'C1' },
+      { word: 'fall', register: 'neutral', cefr: 'A1' }
+    ],
+    folder_ids: ['folder-reading', 'folder-4'],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: 'Vitamins – To supplement or not? reading passage - spinal birth defects plummeted by 75%.'
+  },
+  {
+    id: 'entry-affliction',
+    entry_type: 'word',
+    word: 'affliction',
+    ipa_uk: '/əˈflɪk.ʃən/',
+    ipa_us: '/əˈflɪk.ʃən/',
+    definition: 'Something that causes pain, suffering, or distress.',
+    definition_source: 'cambridge',
+    example: 'Macular degeneration is a common age-related affliction that severely impairs vision.',
+    definitions: [
+      {
+        definition: 'Something that causes pain, suffering, or distress (such as a medical condition or disease).',
+        example: 'Malnutrition is one of the common afflictions in impoverished regions.',
+        cefr_level: 'C1',
+        grammar_note: 'noun [C or U]'
+      }
+    ],
+    extra_examples: [
+      'They showed great strength and dignity throughout their afflictions.',
+      'Arthritis is a painful affliction that affects millions of elderly people.'
+    ],
+    grammar_note: 'noun [C or U]',
+    base_verb: '',
+    particles: '',
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: 'C1',
+    register: 'academic',
+    formality_score: 4,
+    connotation: 'negative',
+    word_family: { verb: ['afflict'], noun: ['affliction'], adjective: ['afflicted'], adverb: [] },
+    semantic_field_id: 'disease-suffering',
+    semantic_field_label: 'Disease & Suffering',
+    semantic_field_words: [
+      { word: 'disease', cefr: 'B1', register: 'neutral' },
+      { word: 'ailment', cefr: 'C1', register: 'formal' }
+    ],
+    register_synonyms: [
+      { word: 'disease', register: 'neutral', cefr: 'B1' },
+      { word: 'ailment', register: 'formal', cefr: 'C1' }
+    ],
+    folder_ids: ['folder-reading', 'folder-science'],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: 'Vitamins – To supplement or not? reading passage - macular degeneration in people likely to develop this affliction.'
+  },
+  {
+    id: 'entry-undermine',
+    entry_type: 'word',
+    word: 'undermine',
+    ipa_uk: '/ˌʌn.dəˈmaɪn/',
+    ipa_us: '/ˌʌn.dɚˈmaɪn/',
+    definition: 'To make someone or something weaker or less effective, usually gradually.',
+    definition_source: 'cambridge',
+    example: 'Taking excessive supplements risks undermining the body\'s natural immune alerts.',
+    definitions: [
+      {
+        definition: 'To make someone or something weaker or less effective, usually gradually.',
+        example: 'Criticism can seriously undermine a student\'s confidence.',
+        cefr_level: 'C1',
+        grammar_note: 'transitive verb'
+      }
+    ],
+    extra_examples: [
+      'The constant leaks undermine the credibility of the committee.',
+      'Uncontrolled inflation will undermine the country\'s economic growth.'
+    ],
+    grammar_note: 'transitive verb',
+    base_verb: '',
+    particles: '',
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: 'C1',
+    register: 'academic',
+    formality_score: 4,
+    connotation: 'negative',
+    word_family: { verb: ['undermine'], noun: [], adjective: [], adverb: [] },
+    semantic_field_id: 'weaken-damage',
+    semantic_field_label: 'Weaken & Damage',
+    semantic_field_words: [
+      { word: 'weaken', cefr: 'B2', register: 'neutral' },
+      { word: 'compromise', cefr: 'B2', register: 'neutral' }
+    ],
+    register_synonyms: [
+      { word: 'weaken', register: 'neutral', cefr: 'B2' },
+      { word: 'compromise', register: 'neutral', cefr: 'B2' }
+    ],
+    folder_ids: ['folder-reading', 'folder-4'],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: 'Vitamins – To supplement or not? reading passage - we risk undermining that message and upsetting the balance.'
+  },
+  {
+    id: 'entry-counteract',
+    entry_type: 'word',
+    word: 'counteract',
+    ipa_uk: '/ˌkaʊn.tərˈækt/',
+    ipa_us: '/ˌkaʊn.t̬ɚˈækt/',
+    definition: 'To act in opposition to something in order to reduce its force or neutralize it.',
+    definition_source: 'cambridge',
+    example: 'The new medication is designed to counteract the negative side effects of chemotherapy.',
+    definitions: [
+      {
+        definition: 'To act in opposition to something in order to reduce its force or neutralize it.',
+        example: 'We must take measures to counteract the effects of climate change.',
+        cefr_level: 'C1',
+        grammar_note: 'transitive verb'
+      }
+    ],
+    extra_examples: [
+      'These chemicals are used to counteract acidic soil in farming.',
+      'Exercise can help counteract the physical decline associated with aging.'
+    ],
+    grammar_note: 'transitive verb',
+    base_verb: '',
+    particles: '',
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: 'C1',
+    register: 'academic',
+    formality_score: 4,
+    connotation: 'neutral',
+    word_family: { verb: ['counteract'], noun: ['counteraction'], adjective: ['counteractive'], adverb: [] },
+    semantic_field_id: 'neutralize-resist',
+    semantic_field_label: 'Neutralize & Resist',
+    semantic_field_words: [
+      { word: 'neutralize', cefr: 'C1', register: 'formal' },
+      { word: 'offset', cefr: 'C1', register: 'formal' }
+    ],
+    register_synonyms: [
+      { word: 'neutralize', register: 'formal', cefr: 'C1' },
+      { word: 'offset', register: 'formal', cefr: 'C1' }
+    ],
+    folder_ids: ['folder-reading', 'folder-science'],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: 'Vitamins – To supplement or not? reading passage - counteracting the destructive effect of free radicals.'
+  },
+  {
+    id: 'entry-retrieve',
+    entry_type: 'word',
+    word: 'retrieve',
+    ipa_uk: '/rɪˈtriːv/',
+    ipa_us: '/rɪˈtriːv/',
+    definition: 'To find and bring back something.',
+    definition_source: 'cambridge',
+    example: 'Tons of undigested vitamin and mineral pills are retrieved from the sewers every month.',
+    definitions: [
+      {
+        definition: 'To find and bring back something, or to recover information from a computer.',
+        example: 'Computers can retrieve millions of records in a fraction of a second.',
+        cefr_level: 'C1',
+        grammar_note: 'transitive verb'
+      }
+    ],
+    extra_examples: [
+      'The dog was trained to retrieve sticks thrown into the lake.',
+      'Divers were sent to retrieve the black box recorder from the wreckage.'
+    ],
+    grammar_note: 'transitive verb',
+    base_verb: '',
+    particles: '',
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: 'C1',
+    register: 'academic',
+    formality_score: 4,
+    connotation: 'neutral',
+    word_family: { verb: ['retrieve'], noun: ['retrieval'], adjective: ['retrievable'], adverb: [] },
+    semantic_field_id: 'recover-get',
+    semantic_field_label: 'Recover & Get',
+    semantic_field_words: [
+      { word: 'recover', cefr: 'B2', register: 'neutral' }
+    ],
+    register_synonyms: [
+      { word: 'recover', register: 'neutral', cefr: 'B2' }
+    ],
+    folder_ids: ['folder-reading', 'folder-science'],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: 'Vitamins – To supplement or not? reading passage - mineral pills are retrieved from the sewer filters.'
+  },
+  {
+    id: 'entry-notion',
+    entry_type: 'word',
+    word: 'notion',
+    ipa_uk: '/ˈnəʊ.ʃən/',
+    ipa_us: '/ˈnoʊ.ʃən/',
+    definition: 'A belief, idea, or conception of something.',
+    definition_source: 'cambridge',
+    example: 'She dismissed the popular notion that eating carrots gives you perfect night vision.',
+    definitions: [
+      {
+        definition: 'A belief, idea, or conception of something.',
+        example: 'The notion that gender determines intelligence is completely outdated.',
+        cefr_level: 'C1',
+        grammar_note: 'noun [C]'
+      }
+    ],
+    extra_examples: [
+      'I have only a vague notion of what they are planning to do.',
+      'He challenges the traditional notion that work must be done in an office.'
+    ],
+    grammar_note: 'noun [C]',
+    base_verb: '',
+    particles: '',
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: 'C1',
+    register: 'academic',
+    formality_score: 4,
+    connotation: 'neutral',
+    word_family: { verb: [], noun: ['notion'], adjective: ['notional'], adverb: ['notionally'] },
+    semantic_field_id: 'belief-idea',
+    semantic_field_label: 'Belief & Idea',
+    semantic_field_words: [
+      { word: 'concept', cefr: 'B2', register: 'neutral' },
+      { word: 'idea', cefr: 'A1', register: 'neutral' }
+    ],
+    register_synonyms: [
+      { word: 'concept', register: 'neutral', cefr: 'B2' },
+      { word: 'idea', register: 'neutral', cefr: 'A1' }
+    ],
+    folder_ids: ['folder-reading', 'folder-4'],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: 'Vitamins – To supplement or not? reading passage - the notion that they can lead people to fill in gaps.'
+  },
+  {
+    id: 'entry-steerclear',
+    entry_type: 'phrasal_verb',
+    word: 'steer clear of',
+    ipa_uk: '/stɪər klɪər ɒv/',
+    ipa_us: '/stɪr klɪr ʌv/',
+    definition: 'To avoid someone or something because they might cause problems or be dangerous.',
+    definition_source: 'cambridge',
+    example: 'Health experts advise heavy smokers to steer clear of beta-carotene supplements.',
+    definitions: [
+      {
+        definition: 'To avoid someone or something because they might cause problems or be dangerous.',
+        example: 'You should steer clear of that neighborhood after dark.',
+        cefr_level: 'B2',
+        grammar_note: 'idiomatic phrasal verb'
+      }
+    ],
+    extra_examples: [
+      'Investors are steering clear of volatile stock options in the current climate.',
+      'I tried to steer clear of controversial political topics during dinner.'
+    ],
+    grammar_note: 'idiomatic phrasal verb',
+    base_verb: 'steer',
+    particles: 'clear of',
+    conjugations: {
+      present_simple_3rd_singular: 'steers clear of',
+      past_simple: 'steered clear of',
+      present_participle: 'steering clear of',
+      past_participle: 'steered clear of'
+    },
+    related_phrasal_verbs: [],
+    cefr_level: 'B2',
+    register: 'general',
+    formality_score: 3,
+    connotation: 'neutral',
+    word_family: { verb: [], noun: [], adjective: [], adverb: [] },
+    semantic_field_id: 'avoid-escape',
+    semantic_field_label: 'Avoid & Escape',
+    semantic_field_words: [
+      { word: 'avoid', cefr: 'B1', register: 'neutral' }
+    ],
+    register_synonyms: [
+      { word: 'avoid', register: 'neutral', cefr: 'B1' }
+    ],
+    folder_ids: ['folder-reading', 'folder-5'],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: 'Vitamins – To supplement or not? reading passage - disturbing evidence to steer clear of multivitamins.'
   }
 ];
 
@@ -17818,6 +18287,805 @@ const EXTENDED_DICTIONARY_DB = [
     },
     date_added: new Date().toISOString(),
     source_context: "Drawing Lessons from History passage - ruins reminiscent of what poet Shelley described."
+  },
+  {
+    id: 'entry-negligible',
+    entry_type: 'word',
+    word: 'negligible',
+    ipa_uk: '/ˈneɡ.lɪ.dʒə.bəl/',
+    ipa_us: '/ˈneɡ.lə.dʒə.bəl/',
+    definition: 'Too small or unimportant to have any influence or value; insignificant.',
+    definition_source: 'cambridge',
+    example: 'For the general population, supplements have negligible impact on preventing common cancers.',
+    definitions: [
+      {
+        definition: 'Too small or unimportant to be worth considering; insignificant.',
+        example: 'The difference between the two products was negligible.',
+        cefr_level: 'C1',
+        grammar_note: 'adjective'
+      }
+    ],
+    extra_examples: [
+      'The cost of the repair was negligible compared to buying a new device.',
+      'A negligible amount of damage was reported after the minor tremor.'
+    ],
+    grammar_note: 'adjective',
+    base_verb: '',
+    particles: '',
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: 'C1',
+    register: 'academic',
+    formality_score: 4,
+    connotation: 'neutral',
+    word_family: { verb: [], noun: ['negligibility'], adjective: ['negligible'], adverb: ['negligibly'] },
+    semantic_field_id: 'size-amount',
+    semantic_field_label: 'Size & Amount',
+    semantic_field_words: [
+      { word: 'insignificant', cefr: 'B2', register: 'neutral' },
+      { word: 'trivial', cefr: 'C1', register: 'formal' }
+    ],
+    register_synonyms: [
+      { word: 'insignificant', register: 'neutral', cefr: 'B2' },
+      { word: 'trivial', register: 'formal', cefr: 'C1' }
+    ],
+    folder_ids: ['folder-reading', 'folder-science'],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: 'Vitamins – To supplement or not? reading passage - negligible impact on major indicators of health.'
+  },
+  {
+    id: 'entry-fortify',
+    entry_type: 'word',
+    word: 'fortify',
+    ipa_uk: '/ˈfɔː.tɪ.faɪ/',
+    ipa_us: '/ˈfɔːr.t̬ə.faɪ/',
+    definition: 'To make food or drink stronger or healthier by adding vitamins or minerals to it.',
+    definition_source: 'cambridge',
+    example: 'Many countries choose to require white flour to be fortified with folic acid to prevent birth defects.',
+    definitions: [
+      {
+        definition: 'To make food or drink stronger or healthier by adding vitamins or minerals to it.',
+        example: 'Cereals are often fortified with extra vitamins.',
+        cefr_level: 'C1',
+        grammar_note: 'transitive verb'
+      }
+    ],
+    extra_examples: [
+      'The milk is fortified with vitamin D to support bone strength.',
+      'Some juices are fortified with calcium to benefit lactose-intolerant consumers.'
+    ],
+    grammar_note: 'transitive verb',
+    base_verb: '',
+    particles: '',
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: 'C1',
+    register: 'academic',
+    formality_score: 4,
+    connotation: 'positive',
+    word_family: { verb: ['fortify'], noun: ['fortification'], adjective: ['fortified'], adverb: [] },
+    semantic_field_id: 'strengthen-enhance',
+    semantic_field_label: 'Strengthen & Enhance',
+    semantic_field_words: [
+      { word: 'strengthen', cefr: 'B2', register: 'neutral' },
+      { word: 'enrich', cefr: 'C1', register: 'formal' }
+    ],
+    register_synonyms: [
+      { word: 'strengthen', register: 'neutral', cefr: 'B2' },
+      { word: 'enrich', register: 'formal', cefr: 'C1' }
+    ],
+    folder_ids: ['folder-reading', 'folder-science'],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: 'Vitamins – To supplement or not? reading passage - decision to require white flour to be fortified.'
+  },
+  {
+    id: 'entry-plummet',
+    entry_type: 'word',
+    word: 'plummet',
+    ipa_uk: '/ˈplʌm.ɪt/',
+    ipa_us: '/ˈplʌm.ɪt/',
+    definition: 'To fall or drop straight down at a very high speed or by a large amount.',
+    definition_source: 'cambridge',
+    example: 'Spinal birth defects plummeted by 75% after the white flour fortification policy was implemented.',
+    definitions: [
+      {
+        definition: 'To fall or drop straight down at a very high speed or by a large amount.',
+        example: 'Share prices plummeted on the stock exchange today.',
+        cefr_level: 'C1',
+        grammar_note: 'intransitive verb'
+      }
+    ],
+    extra_examples: [
+      'The temperature plummeted below zero overnight.',
+      'Global sales plummeted due to the economic downturn.'
+    ],
+    grammar_note: 'intransitive verb',
+    base_verb: '',
+    particles: '',
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: 'C1',
+    register: 'academic',
+    formality_score: 4,
+    connotation: 'negative',
+    word_family: { verb: ['plummet'], noun: [], adjective: [], adverb: [] },
+    semantic_field_id: 'decrease-decline',
+    semantic_field_label: 'Decrease & Decline',
+    semantic_field_words: [
+      { word: 'fall', cefr: 'A1', register: 'neutral' },
+      { word: 'plunge', cefr: 'C1', register: 'neutral' }
+    ],
+    register_synonyms: [
+      { word: 'plunge', register: 'neutral', cefr: 'C1' },
+      { word: 'fall', register: 'neutral', cefr: 'A1' }
+    ],
+    folder_ids: ['folder-reading', 'folder-4'],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: 'Vitamins – To supplement or not? reading passage - spinal birth defects plummeted by 75%.'
+  },
+  {
+    id: 'entry-affliction',
+    entry_type: 'word',
+    word: 'affliction',
+    ipa_uk: '/əˈflɪk.ʃən/',
+    ipa_us: '/əˈflɪk.ʃən/',
+    definition: 'Something that causes pain, suffering, or distress.',
+    definition_source: 'cambridge',
+    example: 'Macular degeneration is a common age-related affliction that severely impairs vision.',
+    definitions: [
+      {
+        definition: 'Something that causes pain, suffering, or distress (such as a medical condition or disease).',
+        example: 'Malnutrition is one of the common afflictions in impoverished regions.',
+        cefr_level: 'C1',
+        grammar_note: 'noun [C or U]'
+      }
+    ],
+    extra_examples: [
+      'They showed great strength and dignity throughout their afflictions.',
+      'Arthritis is a painful affliction that affects millions of elderly people.'
+    ],
+    grammar_note: 'noun [C or U]',
+    base_verb: '',
+    particles: '',
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: 'C1',
+    register: 'academic',
+    formality_score: 4,
+    connotation: 'negative',
+    word_family: { verb: ['afflict'], noun: ['affliction'], adjective: ['afflicted'], adverb: [] },
+    semantic_field_id: 'disease-suffering',
+    semantic_field_label: 'Disease & Suffering',
+    semantic_field_words: [
+      { word: 'disease', cefr: 'B1', register: 'neutral' },
+      { word: 'ailment', cefr: 'C1', register: 'formal' }
+    ],
+    register_synonyms: [
+      { word: 'disease', register: 'neutral', cefr: 'B1' },
+      { word: 'ailment', register: 'formal', cefr: 'C1' }
+    ],
+    folder_ids: ['folder-reading', 'folder-science'],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: 'Vitamins – To supplement or not? reading passage - macular degeneration in people likely to develop this affliction.'
+  },
+  {
+    id: 'entry-undermine',
+    entry_type: 'word',
+    word: 'undermine',
+    ipa_uk: '/ˌʌn.dəˈmaɪn/',
+    ipa_us: '/ˌʌn.dɚˈmaɪn/',
+    definition: 'To make someone or something weaker or less effective, usually gradually.',
+    definition_source: 'cambridge',
+    example: 'Taking excessive supplements risks undermining the body\'s natural immune alerts.',
+    definitions: [
+      {
+        definition: 'To make someone or something weaker or less effective, usually gradually.',
+        example: 'Criticism can seriously undermine a student\'s confidence.',
+        cefr_level: 'C1',
+        grammar_note: 'transitive verb'
+      }
+    ],
+    extra_examples: [
+      'The constant leaks undermine the credibility of the committee.',
+      'Uncontrolled inflation will undermine the country\'s economic growth.'
+    ],
+    grammar_note: 'transitive verb',
+    base_verb: '',
+    particles: '',
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: 'C1',
+    register: 'academic',
+    formality_score: 4,
+    connotation: 'negative',
+    word_family: { verb: ['undermine'], noun: [], adjective: [], adverb: [] },
+    semantic_field_id: 'weaken-damage',
+    semantic_field_label: 'Weaken & Damage',
+    semantic_field_words: [
+      { word: 'weaken', cefr: 'B2', register: 'neutral' },
+      { word: 'compromise', cefr: 'B2', register: 'neutral' }
+    ],
+    register_synonyms: [
+      { word: 'weaken', register: 'neutral', cefr: 'B2' },
+      { word: 'compromise', register: 'neutral', cefr: 'B2' }
+    ],
+    folder_ids: ['folder-reading', 'folder-4'],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: 'Vitamins – To supplement or not? reading passage - we risk undermining that message and upsetting the balance.'
+  },
+  {
+    id: 'entry-counteract',
+    entry_type: 'word',
+    word: 'counteract',
+    ipa_uk: '/ˌkaʊn.tərˈækt/',
+    ipa_us: '/ˌkaʊn.t̬ɚˈækt/',
+    definition: 'To act in opposition to something in order to reduce its force or neutralize it.',
+    definition_source: 'cambridge',
+    example: 'The new medication is designed to counteract the negative side effects of chemotherapy.',
+    definitions: [
+      {
+        definition: 'To act in opposition to something in order to reduce its force or neutralize it.',
+        example: 'We must take measures to counteract the effects of climate change.',
+        cefr_level: 'C1',
+        grammar_note: 'transitive verb'
+      }
+    ],
+    extra_examples: [
+      'These chemicals are used to counteract acidic soil in farming.',
+      'Exercise can help counteract the physical decline associated with aging.'
+    ],
+    grammar_note: 'transitive verb',
+    base_verb: '',
+    particles: '',
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: 'C1',
+    register: 'academic',
+    formality_score: 4,
+    connotation: 'neutral',
+    word_family: { verb: ['counteract'], noun: ['counteraction'], adjective: ['counteractive'], adverb: [] },
+    semantic_field_id: 'neutralize-resist',
+    semantic_field_label: 'Neutralize & Resist',
+    semantic_field_words: [
+      { word: 'neutralize', cefr: 'C1', register: 'formal' },
+      { word: 'offset', cefr: 'C1', register: 'formal' }
+    ],
+    register_synonyms: [
+      { word: 'neutralize', register: 'formal', cefr: 'C1' },
+      { word: 'offset', register: 'formal', cefr: 'C1' }
+    ],
+    folder_ids: ['folder-reading', 'folder-science'],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: 'Vitamins – To supplement or not? reading passage - counteracting the destructive effect of free radicals.'
+  },
+  {
+    id: 'entry-retrieve',
+    entry_type: 'word',
+    word: 'retrieve',
+    ipa_uk: '/rɪˈtriːv/',
+    ipa_us: '/rɪˈtriːv/',
+    definition: 'To find and bring back something.',
+    definition_source: 'cambridge',
+    example: 'Tons of undigested vitamin and mineral pills are retrieved from the sewers every month.',
+    definitions: [
+      {
+        definition: 'To find and bring back something, or to recover information from a computer.',
+        example: 'Computers can retrieve millions of records in a fraction of a second.',
+        cefr_level: 'C1',
+        grammar_note: 'transitive verb'
+      }
+    ],
+    extra_examples: [
+      'The dog was trained to retrieve sticks thrown into the lake.',
+      'Divers were sent to retrieve the black box recorder from the wreckage.'
+    ],
+    grammar_note: 'transitive verb',
+    base_verb: '',
+    particles: '',
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: 'C1',
+    register: 'academic',
+    formality_score: 4,
+    connotation: 'neutral',
+    word_family: { verb: ['retrieve'], noun: ['retrieval'], adjective: ['retrievable'], adverb: [] },
+    semantic_field_id: 'recover-get',
+    semantic_field_label: 'Recover & Get',
+    semantic_field_words: [
+      { word: 'recover', cefr: 'B2', register: 'neutral' }
+    ],
+    register_synonyms: [
+      { word: 'recover', register: 'neutral', cefr: 'B2' }
+    ],
+    folder_ids: ['folder-reading', 'folder-science'],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: 'Vitamins – To supplement or not? reading passage - mineral pills are retrieved from the sewer filters.'
+  },
+  {
+    id: 'entry-notion',
+    entry_type: 'word',
+    word: 'notion',
+    ipa_uk: '/ˈnəʊ.ʃən/',
+    ipa_us: '/ˈnoʊ.ʃən/',
+    definition: 'A belief, idea, or conception of something.',
+    definition_source: 'cambridge',
+    example: 'She dismissed the popular notion that eating carrots gives you perfect night vision.',
+    definitions: [
+      {
+        definition: 'A belief, idea, or conception of something.',
+        example: 'The notion that gender determines intelligence is completely outdated.',
+        cefr_level: 'C1',
+        grammar_note: 'noun [C]'
+      }
+    ],
+    extra_examples: [
+      'I have only a vague notion of what they are planning to do.',
+      'He challenges the traditional notion that work must be done in an office.'
+    ],
+    grammar_note: 'noun [C]',
+    base_verb: '',
+    particles: '',
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: 'C1',
+    register: 'academic',
+    formality_score: 4,
+    connotation: 'neutral',
+    word_family: { verb: [], noun: ['notion'], adjective: ['notional'], adverb: ['notionally'] },
+    semantic_field_id: 'belief-idea',
+    semantic_field_label: 'Belief & Idea',
+    semantic_field_words: [
+      { word: 'concept', cefr: 'B2', register: 'neutral' },
+      { word: 'idea', cefr: 'A1', register: 'neutral' }
+    ],
+    register_synonyms: [
+      { word: 'concept', register: 'neutral', cefr: 'B2' },
+      { word: 'idea', register: 'neutral', cefr: 'A1' }
+    ],
+    folder_ids: ['folder-reading', 'folder-4'],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: 'Vitamins – To supplement or not? reading passage - the notion that they can lead people to fill in gaps.'
+  },
+  {
+    id: 'entry-steerclear',
+    entry_type: 'phrasal_verb',
+    word: 'steer clear of',
+    ipa_uk: '/stɪər klɪər ɒv/',
+    ipa_us: '/stɪr klɪr ʌv/',
+    definition: 'To avoid someone or something because they might cause problems or be dangerous.',
+    definition_source: 'cambridge',
+    example: 'Health experts advise heavy smokers to steer clear of beta-carotene supplements.',
+    definitions: [
+      {
+        definition: 'To avoid someone or something because they might cause problems or be dangerous.',
+        example: 'You should steer clear of that neighborhood after dark.',
+        cefr_level: 'B2',
+        grammar_note: 'idiomatic phrasal verb'
+      }
+    ],
+    extra_examples: [
+      'Investors are steering clear of volatile stock options in the current climate.',
+      'I tried to steer clear of controversial political topics during dinner.'
+    ],
+    grammar_note: 'idiomatic phrasal verb',
+    base_verb: 'steer',
+    particles: 'clear of',
+    conjugations: {
+      present_simple_3rd_singular: 'steers clear of',
+      past_simple: 'steered clear of',
+      present_participle: 'steering clear of',
+      past_participle: 'steered clear of'
+    },
+    related_phrasal_verbs: [],
+    cefr_level: 'B2',
+    register: 'general',
+    formality_score: 3,
+    connotation: 'neutral',
+    word_family: { verb: [], noun: [], adjective: [], adverb: [] },
+    semantic_field_id: 'avoid-escape',
+    semantic_field_label: 'Avoid & Escape',
+    semantic_field_words: [
+      { word: 'avoid', cefr: 'B1', register: 'neutral' }
+    ],
+    register_synonyms: [
+      { word: 'avoid', register: 'neutral', cefr: 'B1' }
+    ],
+    folder_ids: ['folder-reading', 'folder-5'],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: 'Vitamins – To supplement or not? reading passage - disturbing evidence to steer clear of multivitamins.'
+  }
+,
+  {
+    word: 'negligible',
+    entry_type: 'word',
+    ipa_uk: '/ˈneɡ.lɪ.dʒə.bəl/',
+    ipa_us: '/ˈneɡ.lə.dʒə.bəl/',
+    definition: 'Too small or unimportant to have any effect or be influence; insignificant.',
+    definitions: [
+      {
+        definition: 'Too small or unimportant to be worth considering; insignificant.',
+        example: 'The difference between the two products was negligible.',
+        cefr_level: 'C1',
+        grammar_note: 'adjective'
+      }
+    ],
+    cefr_level: 'C1',
+    register: 'academic',
+    formality_score: 4,
+    connotation: 'neutral',
+    grammar_note: 'adjective',
+    example: 'For the general population, supplements have negligible impact on preventing common cancers.',
+    extra_examples: [
+      'The cost of the repair was negligible compared to buying a new device.',
+      'A negligible amount of damage was reported after the minor tremor.'
+    ],
+    word_family: { verb: [], noun: ['negligibility'], adjective: ['negligible'], adverb: ['negligibly'] },
+    semantic_field_id: 'size-amount',
+    semantic_field_label: 'Size & Amount',
+    semantic_field_words: [
+      { word: 'insignificant', cefr: 'B2', register: 'neutral' },
+      { word: 'trivial', cefr: 'C1', register: 'formal' }
+    ],
+    register_synonyms: [
+      { word: 'insignificant', register: 'neutral', cefr: 'B2' },
+      { word: 'trivial', register: 'formal', cefr: 'C1' }
+    ],
+    suggested_folder_name: 'IELTS Reading'
+  },
+  {
+    word: 'fortify',
+    entry_type: 'word',
+    ipa_uk: '/ˈfɔː.tɪ.faɪ/',
+    ipa_us: '/ˈfɔːr.t̬ə.faɪ/',
+    definition: 'To make food or drink stronger or healthier by adding vitamins or minerals to it.',
+    definitions: [
+      {
+        definition: 'To make food or drink stronger or healthier by adding vitamins or minerals to it.',
+        example: 'Cereals are often fortified with extra vitamins.',
+        cefr_level: 'C1',
+        grammar_note: 'transitive verb'
+      }
+    ],
+    cefr_level: 'C1',
+    register: 'academic',
+    formality_score: 4,
+    connotation: 'positive',
+    grammar_note: 'transitive verb',
+    example: 'Many countries choose to require white flour to be fortified with folic acid to prevent birth defects.',
+    extra_examples: [
+      'The milk is fortified with vitamin D to support bone strength.',
+      'Some juices are fortified with calcium to benefit lactose-intolerant consumers.'
+    ],
+    word_family: { verb: ['fortify'], noun: ['fortification'], adjective: ['fortified'], adverb: [] },
+    semantic_field_id: 'strengthen-enhance',
+    semantic_field_label: 'Strengthen & Enhance',
+    semantic_field_words: [
+      { word: 'strengthen', cefr: 'B2', register: 'neutral' },
+      { word: 'enrich', cefr: 'C1', register: 'formal' }
+    ],
+    register_synonyms: [
+      { word: 'strengthen', register: 'neutral', cefr: 'B2' },
+      { word: 'enrich', register: 'formal', cefr: 'C1' }
+    ],
+    suggested_folder_name: 'IELTS Reading'
+  },
+  {
+    word: 'plummet',
+    entry_type: 'word',
+    ipa_uk: '/ˈplʌm.ɪt/',
+    ipa_us: '/ˈplʌm.ɪt/',
+    definition: 'To fall or drop straight down at a very high speed or by a large amount.',
+    definitions: [
+      {
+        definition: 'To fall or drop straight down at a very high speed or by a large amount.',
+        example: 'Share prices plummeted on the stock exchange today.',
+        cefr_level: 'C1',
+        grammar_note: 'intransitive verb'
+      }
+    ],
+    cefr_level: 'C1',
+    register: 'academic',
+    formality_score: 4,
+    connotation: 'negative',
+    grammar_note: 'intransitive verb',
+    example: 'Spinal birth defects plummeted by 75% after the white flour fortification policy was implemented.',
+    extra_examples: [
+      'The temperature plummeted below zero overnight.',
+      'Global sales plummeted due to the economic downturn.'
+    ],
+    word_family: { verb: ['plummet'], noun: [], adjective: [], adverb: [] },
+    semantic_field_id: 'decrease-decline',
+    semantic_field_label: 'Decrease & Decline',
+    semantic_field_words: [
+      { word: 'fall', cefr: 'A1', register: 'neutral' },
+      { word: 'plunge', cefr: 'C1', register: 'neutral' }
+    ],
+    register_synonyms: [
+      { word: 'plunge', register: 'neutral', cefr: 'C1' },
+      { word: 'fall', register: 'neutral', cefr: 'A1' }
+    ],
+    suggested_folder_name: 'IELTS Reading'
+  },
+  {
+    word: 'affliction',
+    entry_type: 'word',
+    ipa_uk: '/əˈflɪk.ʃən/',
+    ipa_us: '/əˈflɪk.ʃən/',
+    definition: 'Something that causes pain, suffering, or distress.',
+    definitions: [
+      {
+        definition: 'Something that causes pain, suffering, or distress (such as a medical condition or disease).',
+        example: 'Malnutrition is one of the common afflictions in impoverished regions.',
+        cefr_level: 'C1',
+        grammar_note: 'noun [C or U]'
+      }
+    ],
+    cefr_level: 'C1',
+    register: 'academic',
+    formality_score: 4,
+    connotation: 'negative',
+    grammar_note: 'noun [C or U]',
+    example: 'Macular degeneration is a common age-related affliction that severely impairs vision.',
+    extra_examples: [
+      'They showed great strength and dignity throughout their afflictions.',
+      'Arthritis is a painful affliction that affects millions of elderly people.'
+    ],
+    word_family: { verb: ['afflict'], noun: ['affliction'], adjective: ['afflicted'], adverb: [] },
+    semantic_field_id: 'disease-suffering',
+    semantic_field_label: 'Disease & Suffering',
+    semantic_field_words: [
+      { word: 'disease', cefr: 'B1', register: 'neutral' },
+      { word: 'ailment', cefr: 'C1', register: 'formal' }
+    ],
+    register_synonyms: [
+      { word: 'disease', register: 'neutral', cefr: 'B1' },
+      { word: 'ailment', register: 'formal', cefr: 'C1' }
+    ],
+    suggested_folder_name: 'IELTS Reading'
+  },
+  {
+    word: 'undermine',
+    entry_type: 'word',
+    ipa_uk: '/ˌʌn.dəˈmaɪn/',
+    ipa_us: '/ˌʌn.dɚˈmaɪn/',
+    definition: 'To make someone or something weaker or less effective, usually gradually.',
+    definitions: [
+      {
+        definition: 'To make someone or something weaker or less effective, usually gradually.',
+        example: 'Criticism can seriously undermine a student\'s confidence.',
+        cefr_level: 'C1',
+        grammar_note: 'transitive verb'
+      }
+    ],
+    cefr_level: 'C1',
+    register: 'academic',
+    formality_score: 4,
+    connotation: 'negative',
+    grammar_note: 'transitive verb',
+    example: 'Taking excessive supplements risks undermining the body\'s natural immune alerts.',
+    extra_examples: [
+      'The constant leaks undermine the credibility of the committee.',
+      'Uncontrolled inflation will undermine the country\'s economic growth.'
+    ],
+    word_family: { verb: ['undermine'], noun: [], adjective: [], adverb: [] },
+    semantic_field_id: 'weaken-damage',
+    semantic_field_label: 'Weaken & Damage',
+    semantic_field_words: [
+      { word: 'weaken', cefr: 'B2', register: 'neutral' },
+      { word: 'compromise', cefr: 'B2', register: 'neutral' }
+    ],
+    register_synonyms: [
+      { word: 'weaken', register: 'neutral', cefr: 'B2' },
+      { word: 'compromise', register: 'neutral', cefr: 'B2' }
+    ],
+    suggested_folder_name: 'IELTS Reading'
+  },
+  {
+    word: 'counteract',
+    entry_type: 'word',
+    ipa_uk: '/ˌkaʊn.tərˈækt/',
+    ipa_us: '/ˌkaʊn.t̬ɚˈækt/',
+    definition: 'To act in opposition to something in order to reduce its force or neutralize it.',
+    definitions: [
+      {
+        definition: 'To act in opposition to something in order to reduce its force or neutralize it.',
+        example: 'We must take measures to counteract the effects of climate change.',
+        cefr_level: 'C1',
+        grammar_note: 'transitive verb'
+      }
+    ],
+    cefr_level: 'C1',
+    register: 'academic',
+    formality_score: 4,
+    connotation: 'neutral',
+    grammar_note: 'transitive verb',
+    example: 'The new medication is designed to counteract the negative side effects of chemotherapy.',
+    extra_examples: [
+      'These chemicals are used to counteract acidic soil in farming.',
+      'Exercise can help counteract the physical decline associated with aging.'
+    ],
+    word_family: { verb: ['counteract'], noun: ['counteraction'], adjective: ['counteractive'], adverb: [] },
+    semantic_field_id: 'neutralize-resist',
+    semantic_field_label: 'Neutralize & Resist',
+    semantic_field_words: [
+      { word: 'neutralize', cefr: 'C1', register: 'formal' },
+      { word: 'offset', cefr: 'C1', register: 'formal' }
+    ],
+    register_synonyms: [
+      { word: 'neutralize', register: 'formal', cefr: 'C1' },
+      { word: 'offset', register: 'formal', cefr: 'C1' }
+    ],
+    suggested_folder_name: 'IELTS Reading'
+  },
+  {
+    word: 'retrieve',
+    entry_type: 'word',
+    ipa_uk: '/rɪˈtriːv/',
+    ipa_us: '/rɪˈtriːv/',
+    definition: 'To find and bring back something.',
+    definitions: [
+      {
+        definition: 'To find and bring back something, or to recover information from a computer.',
+        example: 'Computers can retrieve millions of records in a fraction of a second.',
+        cefr_level: 'C1',
+        grammar_note: 'transitive verb'
+      }
+    ],
+    cefr_level: 'C1',
+    register: 'academic',
+    formality_score: 4,
+    connotation: 'neutral',
+    grammar_note: 'transitive verb',
+    example: 'Tons of undigested vitamin and mineral pills are retrieved from the sewers every month.',
+    extra_examples: [
+      'The dog was trained to retrieve sticks thrown into the lake.',
+      'Divers were sent to retrieve the black box recorder from the wreckage.'
+    ],
+    word_family: { verb: ['retrieve'], noun: ['retrieval'], adjective: ['retrievable'], adverb: [] },
+    semantic_field_id: 'recover-get',
+    semantic_field_label: 'Recover & Get',
+    semantic_field_words: [
+      { word: 'recover', cefr: 'B2', register: 'neutral' }
+    ],
+    register_synonyms: [
+      { word: 'recover', register: 'neutral', cefr: 'B2' }
+    ],
+    suggested_folder_name: 'IELTS Reading'
+  },
+  {
+    word: 'notion',
+    entry_type: 'word',
+    ipa_uk: '/ˈnəʊ.ʃən/',
+    ipa_us: '/ˈnoʊ.ʃən/',
+    definition: 'A belief, idea, or conception of something.',
+    definitions: [
+      {
+        definition: 'A belief, idea, or conception of something.',
+        example: 'The notion that gender determines intelligence is completely outdated.',
+        cefr_level: 'C1',
+        grammar_note: 'noun [C]'
+      }
+    ],
+    cefr_level: 'C1',
+    register: 'academic',
+    formality_score: 4,
+    connotation: 'neutral',
+    grammar_note: 'noun [C]',
+    example: 'She dismissed the popular notion that eating carrots gives you perfect night vision.',
+    extra_examples: [
+      'I have only a vague notion of what they are planning to do.',
+      'He challenges the traditional notion that work must be done in an office.'
+    ],
+    word_family: { verb: [], noun: ['notion'], adjective: ['notional'], adverb: ['notionally'] },
+    semantic_field_id: 'belief-idea',
+    semantic_field_label: 'Belief & Idea',
+    semantic_field_words: [
+      { word: 'concept', cefr: 'B2', register: 'neutral' },
+      { word: 'idea', cefr: 'A1', register: 'neutral' }
+    ],
+    register_synonyms: [
+      { word: 'concept', register: 'neutral', cefr: 'B2' },
+      { word: 'idea', register: 'neutral', cefr: 'A1' }
+    ],
+    suggested_folder_name: 'IELTS Reading'
+  },
+  {
+    word: 'steer clear of',
+    entry_type: 'phrasal_verb',
+    ipa_uk: '/stɪər klɪər ɒv/',
+    ipa_us: '/stɪr klɪr ʌv/',
+    definition: 'To avoid someone or something because they might cause problems or be dangerous.',
+    definitions: [
+      {
+        definition: 'To avoid someone or something because they might cause problems or be dangerous.',
+        example: 'You should steer clear of that neighborhood after dark.',
+        cefr_level: 'B2',
+        grammar_note: 'idiomatic phrasal verb'
+      }
+    ],
+    cefr_level: 'B2',
+    register: 'general',
+    formality_score: 3,
+    connotation: 'neutral',
+    grammar_note: 'idiomatic phrasal verb',
+    example: 'Health experts advise heavy smokers to steer clear of beta-carotene supplements.',
+    extra_examples: [
+      'Investors are steering clear of volatile stock options in the current climate.',
+      'I tried to steer clear of controversial political topics during dinner.'
+    ],
+    word_family: { verb: [], noun: [], adjective: [], adverb: [] },
+    semantic_field_id: 'avoid-escape',
+    semantic_field_label: 'Avoid & Escape',
+    semantic_field_words: [
+      { word: 'avoid', cefr: 'B1', register: 'neutral' }
+    ],
+    register_synonyms: [
+      { word: 'avoid', register: 'neutral', cefr: 'B1' }
+    ],
+    suggested_folder_name: 'Phrasal Verbs & Idioms'
   }
 ];
 
