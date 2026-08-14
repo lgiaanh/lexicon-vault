@@ -998,6 +998,7 @@
       const [cardMode, setCardMode] = useState('recall'); // 'recall' or 'cloze'
       const [clozeInput, setClozeInput] = useState('');
       const [clozeFeedback, setClozeFeedback] = useState(null); // null, 'correct', or 'incorrect'
+      const [showClozeHint, setShowClozeHint] = useState(false);
       const [isCardRevealed, setIsCardRevealed] = useState(false);
       const [forecastDayIdx, setForecastDayIdx] = useState(0);
       const [speechActiveWord, setSpeechActiveWord] = useState(null); // Tracks active pronunciation
@@ -1404,6 +1405,7 @@
       useEffect(() => {
         setClozeInput('');
         setClozeFeedback(null);
+        setShowClozeHint(false);
         if (reviewQueue && reviewQueue.length > 0 && currentReviewIndex < reviewQueue.length) {
           const currentEntry = reviewQueue[currentReviewIndex];
           if (currentEntry) {
@@ -3464,6 +3466,50 @@ IMPORTANT: If the Free Dictionary context contains a valid IPA pronunciation (ip
                                   }}>
                                     {clozeFeedback === 'correct' ? '✨ Correct!' : `❌ Incorrect! Answer: "${reviewQueue[currentReviewIndex].word}"`}
                                   </div>
+                                )}
+
+                                {!isCardRevealed && (
+                                  showClozeHint ? (
+                                    <div style={{
+                                      width: '100%',
+                                      maxWidth: '360px',
+                                      padding: '12px',
+                                      backgroundColor: '#FFFBEB',
+                                      border: '1px dashed #F59E0B',
+                                      borderRadius: '6px',
+                                      fontSize: '12.5px',
+                                      color: '#B45309',
+                                      textAlign: 'left',
+                                      boxSizing: 'border-box',
+                                      marginTop: '8px',
+                                      lineHeight: '1.45'
+                                    }}>
+                                      <div style={{ marginBottom: '4px', fontWeight: 'bold', display: 'flex', justifyContent: 'space-between' }}>
+                                        <span>💡 Hint:</span>
+                                        <span style={{ fontSize: '10.5px', textTransform: 'uppercase', backgroundColor: '#FEF3C7', padding: '2px 5px', borderRadius: '3px', fontWeight: 'bold' }}>
+                                          {currentEntry.cefr_level} • {currentEntry.grammar_note}
+                                        </span>
+                                      </div>
+                                      <div>{currentEntry.definition}</div>
+                                    </div>
+                                  ) : (
+                                    <button 
+                                      onClick={() => setShowClozeHint(true)}
+                                      style={{
+                                        background: 'none',
+                                        border: 'none',
+                                        color: 'var(--accent)',
+                                        fontSize: '12px',
+                                        fontWeight: '600',
+                                        cursor: 'pointer',
+                                        textDecoration: 'underline',
+                                        padding: '4px',
+                                        marginTop: '4px'
+                                      }}
+                                    >
+                                      Need a hint? (Show definition & grammar note)
+                                    </button>
+                                  )
                                 )}
                               </div>
 
