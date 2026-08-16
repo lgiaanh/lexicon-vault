@@ -5,15 +5,15 @@ const INITIAL_FOLDERS = [
   { id: 'folder-1', name: 'Law & Policy', color: '#DBCDF0', emoji: '⚖️', description: 'Legislation, judicial processes, constitutional rights, and official regulations.', created_at: new Date().toISOString(), word_count: 14 },
   { id: 'folder-2', name: 'Economics & Statistics', color: '#FAEDCB', emoji: '📈', description: 'Financial theories, trade data, economic policy, market dynamics, and quantitative metrics.', created_at: new Date().toISOString(), word_count: 19 },
   { id: 'folder-3', name: 'Environment & Ecology', color: '#C9E4DE', emoji: '🌱', description: 'Climate change, biodiversity, environmental preservation, ecosystems, and conservation strategies.', created_at: new Date().toISOString(), word_count: 14 },
-  { id: 'folder-4', name: 'Academic Writing (Task 2)', color: '#C6DEF1', emoji: '✍️', description: 'Sophisticated vocabulary and idioms tailored for high-scoring IELTS Writing Task 2 responses.', created_at: new Date().toISOString(), word_count: 66 },
+  { id: 'folder-4', name: 'Academic Writing (Task 2)', color: '#C6DEF1', emoji: '✍️', description: 'Sophisticated vocabulary and idioms tailored for high-scoring IELTS Writing Task 2 responses.', created_at: new Date().toISOString(), word_count: 71 },
   { id: 'folder-5', name: 'Phrasal Verbs & Idioms', color: '#F7D9C4', emoji: '💬', description: 'Common English phrasal verbs and idiomatic expressions for informal or spoken contexts.', created_at: new Date().toISOString(), word_count: 9 },
   { id: 'folder-6', name: 'Maps & Diagrams', color: '#F2C6DE', emoji: '🗺️', description: 'Spatial descriptions, maps, process flowcharts, and technical diagrams.', created_at: new Date().toISOString(), word_count: 4 },
   { id: 'folder-speaking-work-study', name: 'Speaking: Work & Study', color: '#C6DEF1', emoji: '🏫', description: 'Phrasal verbs and colloquial expressions for describing academic pursuits and careers.', created_at: new Date().toISOString(), word_count: 3 },
   { id: 'folder-speaking-leisure-travel', name: 'Speaking: Leisure & Travel', color: '#C9E4DE', emoji: '✈️', description: 'Speaking phrasal verbs for describing vacationing, sightseeing, and hobbies.', created_at: new Date().toISOString(), word_count: 2 },
   { id: 'folder-speaking-relationships', name: 'Speaking: Relationships & Life', color: '#F2C6DE', emoji: '👥', description: 'Phrasal verbs for describing social connections, relatives, and childhood memories.', created_at: new Date().toISOString(), word_count: 7 },
-  { id: 'folder-science', name: 'Science & Technology', color: '#DBCDF0', emoji: '🔬', description: 'Vocabulary and collocations related to scientific research, breakthroughs, technology, and paradigm shifts.', created_at: new Date().toISOString(), word_count: 20 },
+  { id: 'folder-science', name: 'Science & Technology', color: '#DBCDF0', emoji: '🔬', description: 'Vocabulary and collocations related to scientific research, breakthroughs, technology, and paradigm shifts.', created_at: new Date().toISOString(), word_count: 22 },
   { id: 'folder-task2-phrases', name: 'Task 2 Phrases', color: '#F7D9C4', emoji: '📝', description: 'Key academic phrases, collocations, and idioms tailored for Writing Task 2 essays.', created_at: new Date().toISOString(), word_count: 15 },
-  { id: 'folder-reading', name: 'IELTS Reading', color: '#C9E4DE', emoji: '📖', description: 'High-yield vocabulary and scientific terms gathered from IELTS Reading passages.', created_at: new Date().toISOString(), word_count: 63 }
+  { id: 'folder-reading', name: 'IELTS Reading', color: '#C9E4DE', emoji: '📖', description: 'High-yield vocabulary and scientific terms gathered from IELTS Reading passages.', created_at: new Date().toISOString(), word_count: 70 }
 ];
 
 const INITIAL_ENTRIES = [
@@ -11923,6 +11923,374 @@ const INITIAL_ENTRIES = [
     },
     date_added: new Date().toISOString(),
     source_context: 'Vitamins – To supplement or not? reading passage - risk undermining that message and upsetting the balance.'
+  },
+  {
+    id: 'entry-empirical',
+    entry_type: 'word',
+    word: 'empirical',
+    ipa_uk: '/ɪmˈpɪr.ɪ.kəl/',
+    ipa_us: '/ɪmˈpɪr.ɪ.kəl/',
+    definition: 'Based on what is experienced or seen rather than on theory.',
+    definition_source: 'cambridge',
+    example: 'There is no empirical evidence to support the claim that antioxidant pills prevent major illnesses.',
+    definitions: [
+      {
+        definition: 'Based on, concerned with, or verifiable by observation or experience rather than theory or pure logic.',
+        example: 'They provided empirical data to back up their hypothesis.',
+        cefr_level: 'C1',
+        grammar_note: 'adjective'
+      }
+    ],
+    extra_examples: [
+      'The theory is fully supported by empirical observations.',
+      'Scientific research depends on empirical facts rather than personal beliefs.'
+    ],
+    grammar_note: 'adjective',
+    base_verb: '',
+    particles: '',
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: 'C1',
+    register: 'academic',
+    formality_score: 5,
+    connotation: 'neutral',
+    word_family: { verb: [], noun: ['empiricism', 'empiricist'], adjective: ['empirical'], adverb: ['empirically'] },
+    semantic_field_id: 'evidence-fact',
+    semantic_field_label: 'Evidence & Fact',
+    semantic_field_words: [
+      { word: 'observational', cefr: 'C1', register: 'formal' },
+      { word: 'factual', cefr: 'C1', register: 'neutral' }
+    ],
+    register_synonyms: [
+      { word: 'observational', register: 'formal', cefr: 'C1' },
+      { word: 'factual', register: 'neutral', cefr: 'C1' }
+    ],
+    folder_ids: ['folder-reading', 'folder-4'],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: 'IELTS Reading & Writing - discussing research evidence, observation models, and scientific logic.'
+  },
+  {
+    id: 'entry-takeaccountof',
+    entry_type: 'word',
+    word: 'take account of',
+    ipa_uk: '/teɪk əˈkaʊnt ɒv/',
+    ipa_us: '/teɪk əˈkaʊnt ʌv/',
+    definition: 'To consider or include something when making a plan or calculation.',
+    definition_source: 'cambridge',
+    example: 'When evaluating health indicators, researchers must take account of genetic pre-dispositions.',
+    definitions: [
+      {
+        definition: 'To consider or include something when making a plan, judgment, or calculation.',
+        example: 'These calculations do not take account of inflation.',
+        cefr_level: 'C1',
+        grammar_note: 'verb phrase'
+      }
+    ],
+    extra_examples: [
+      'A good manager will take account of the team\'s feedback before making decisions.',
+      'We must take account of regional climate differences when planning agriculture.'
+    ],
+    grammar_note: 'verb phrase',
+    base_verb: 'take',
+    particles: 'account of',
+    conjugations: {
+      present_simple_3rd_singular: 'takes account of',
+      past_simple: 'took account of',
+      present_participle: 'taking account of',
+      past_participle: 'taken account of'
+    },
+    related_phrasal_verbs: [],
+    cefr_level: 'C1',
+    register: 'academic',
+    formality_score: 4,
+    connotation: 'neutral',
+    word_family: { verb: [], noun: [], adjective: [], adverb: [] },
+    semantic_field_id: 'consideration-plan',
+    semantic_field_label: 'Consideration & Planning',
+    semantic_field_words: [
+      { word: 'consider', cefr: 'B1', register: 'neutral' },
+      { word: 'allow for', cefr: 'B2', register: 'neutral' }
+    ],
+    register_synonyms: [
+      { word: 'consider', register: 'neutral', cefr: 'B1' },
+      { word: 'allow for', register: 'neutral', cefr: 'B2' }
+    ],
+    folder_ids: ['folder-reading', 'folder-4'],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: 'IELTS Writing Task 2 - presenting balanced opinions, considering facts, and addressing arguments.'
+  },
+  {
+    id: 'entry-stealth',
+    entry_type: 'word',
+    word: 'stealth',
+    ipa_uk: '/stelθ/',
+    ipa_us: '/stelθ/',
+    definition: 'Movement or behavior that is quiet or hidden so that no one notices.',
+    definition_source: 'cambridge',
+    example: 'The virus behaves with stealth, counteracting the immune system before symptoms appear.',
+    definitions: [
+      {
+        definition: 'Movement or behavior that is quiet or hidden so that no one notices.',
+        example: 'The operations were conducted with great stealth.',
+        cefr_level: 'C1',
+        grammar_note: 'noun [U]'
+      }
+    ],
+    extra_examples: [
+      'The cat approached its prey with silent stealth.',
+      'Some cancers develop with stealth, displaying no symptoms until advanced stages.'
+    ],
+    grammar_note: 'noun [U]',
+    base_verb: '',
+    particles: '',
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: 'C1',
+    register: 'general',
+    formality_score: 3,
+    connotation: 'neutral',
+    word_family: { verb: [], noun: ['stealth'], adjective: ['stealthy'], adverb: ['stealthily'] },
+    semantic_field_id: 'secrecy-hiding',
+    semantic_field_label: 'Secrecy & Hiding',
+    semantic_field_words: [
+      { word: 'secrecy', cefr: 'B2', register: 'neutral' }
+    ],
+    register_synonyms: [
+      { word: 'secrecy', register: 'neutral', cefr: 'B2' }
+    ],
+    folder_ids: ['folder-reading', 'folder-science'],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: 'IELTS Reading - discussing stealth transmission of viruses, medical anomalies, or tactical technology.'
+  },
+  {
+    id: 'entry-covertly',
+    entry_type: 'word',
+    word: 'covertly',
+    ipa_uk: '/ˈkəʊ.vɜːt.li/',
+    ipa_us: '/ˈkoʊ.vɚt.li/',
+    definition: 'Secretly, or in a way that is hidden or not openly displayed.',
+    definition_source: 'cambridge',
+    example: 'Antioxidant tablets may covertly interfere with cancer therapy by neutralizing protective free radicals.',
+    definitions: [
+      {
+        definition: 'In a secret or hidden way; not openly.',
+        example: 'The intelligence agency covertly monitored the suspect\'s communications.',
+        cefr_level: 'C2',
+        grammar_note: 'adverb'
+      }
+    ],
+    extra_examples: [
+      'The company covertly gathered user data without proper consent.',
+      'He covertly slipped the document into his briefcase.'
+    ],
+    grammar_note: 'adverb',
+    base_verb: '',
+    particles: '',
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: 'C2',
+    register: 'academic',
+    formality_score: 5,
+    connotation: 'neutral',
+    word_family: { verb: [], noun: ['covertness'], adjective: ['covert'], adverb: ['covertly'] },
+    semantic_field_id: 'secrecy-hiding',
+    semantic_field_label: 'Secrecy & Hiding',
+    semantic_field_words: [
+      { word: 'secretly', cefr: 'B1', register: 'neutral' },
+      { word: 'surreptitiously', cefr: 'C2', register: 'formal' }
+    ],
+    register_synonyms: [
+      { word: 'secretly', register: 'neutral', cefr: 'B1' },
+      { word: 'surreptitiously', register: 'formal', cefr: 'C2' }
+    ],
+    folder_ids: ['folder-reading', 'folder-science'],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: 'IELTS Reading - discussing covert operations, stealth biological processes, or tracking mechanisms.'
+  },
+  {
+    id: 'entry-anecdotal',
+    entry_type: 'word',
+    word: 'anecdotal',
+    ipa_uk: '/ˌæn.ɪkˈdəʊ.təl/',
+    ipa_us: '/ˌæn.ɪkˈdoʊ.t̬əl/',
+    definition: 'Based on personal accounts or stories rather than facts or research.',
+    definition_source: 'cambridge',
+    example: 'While there is strong anecdotal evidence for vitamin efficacy, clinical trials show no benefits.',
+    definitions: [
+      {
+        definition: 'Based on personal observation, case studies, or reports rather than systematic scientific evaluation.',
+        example: 'His conclusions were based on anecdotal evidence rather than scientific proof.',
+        cefr_level: 'C1',
+        grammar_note: 'adjective'
+      }
+    ],
+    extra_examples: [
+      'We cannot rely solely on anecdotal reports when developing public policies.',
+      'There is plenty of anecdotal proof that the product helps reduce stress.'
+    ],
+    grammar_note: 'adjective',
+    base_verb: '',
+    particles: '',
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: 'C1',
+    register: 'academic',
+    formality_score: 4,
+    connotation: 'neutral',
+    word_family: { verb: [], noun: ['anecdote'], adjective: ['anecdotal'], adverb: ['anecdotally'] },
+    semantic_field_id: 'evidence-fact',
+    semantic_field_label: 'Evidence & Fact',
+    semantic_field_words: [
+      { word: 'unscientific', cefr: 'B2', register: 'neutral' },
+      { word: 'informal', cefr: 'B2', register: 'neutral' }
+    ],
+    register_synonyms: [
+      { word: 'unscientific', register: 'neutral', cefr: 'B2' }
+    ],
+    folder_ids: ['folder-reading', 'folder-4'],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: 'IELTS Reading & Writing - contrasting subjective personal stories with objective scientific data.'
+  },
+  {
+    id: 'entry-propensity',
+    entry_type: 'word',
+    word: 'propensity',
+    ipa_uk: '/prəˈpen.sə.ti/',
+    ipa_us: '/prəˈpen.sə.t̬i/',
+    definition: 'A natural tendency to behave in a particular way or suffer from a condition.',
+    definition_source: 'cambridge',
+    example: 'Some populations exhibit a genetic propensity toward cardiovascular diseases.',
+    definitions: [
+      {
+        definition: 'An established natural tendency, inclination, or preference to behave in a particular way.',
+        example: 'He has a propensity to exaggerate his achievements.',
+        cefr_level: 'C2',
+        grammar_note: 'noun [C usually singular]'
+      }
+    ],
+    extra_examples: [
+      'The consumer\'s propensity to spend decreases during economic recessions.',
+      'A genetic propensity to gain weight can be mitigated by active lifestyle habits.'
+    ],
+    grammar_note: 'noun [C usually singular]',
+    base_verb: '',
+    particles: '',
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: 'C2',
+    register: 'academic',
+    formality_score: 5,
+    connotation: 'neutral',
+    word_family: { verb: [], noun: ['propensity'], adjective: [], adverb: [] },
+    semantic_field_id: 'tendency-habit',
+    semantic_field_label: 'Tendency & Habit',
+    semantic_field_words: [
+      { word: 'tendency', cefr: 'B2', register: 'neutral' },
+      { word: 'inclination', cefr: 'C1', register: 'formal' },
+      { word: 'predisposition', cefr: 'C2', register: 'academic' }
+    ],
+    register_synonyms: [
+      { word: 'tendency', register: 'neutral', cefr: 'B2' },
+      { word: 'inclination', register: 'formal', cefr: 'C1' },
+      { word: 'predisposition', register: 'academic', cefr: 'C2' }
+    ],
+    folder_ids: ['folder-reading', 'folder-4'],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: 'IELTS Writing Task 2 - presenting trends, inclinations, behavioral habits, or biological traits.'
+  },
+  {
+    id: 'entry-dissemination',
+    entry_type: 'word',
+    word: 'dissemination',
+    ipa_uk: '/dɪˌsem.ɪˈneɪ.ʃən/',
+    ipa_us: '/dɪˌsem.əˈneɪ.ʃən/',
+    definition: 'The act of spreading news, information, or ideas to a lot of people.',
+    definition_source: 'cambridge',
+    example: 'The internet facilitates the rapid dissemination of medical research findings.',
+    definitions: [
+      {
+        definition: 'The action or fact of spreading something, especially information or ideas, widely.',
+        example: 'The dissemination of public health advice is critical during outbreaks.',
+        cefr_level: 'C1',
+        grammar_note: 'noun [U]'
+      }
+    ],
+    extra_examples: [
+      'Our primary goal is the dissemination of scientific knowledge.',
+      'The government controlled the dissemination of news during the crisis.'
+    ],
+    grammar_note: 'noun [U]',
+    base_verb: '',
+    particles: '',
+    conjugations: null,
+    related_phrasal_verbs: [],
+    cefr_level: 'C1',
+    register: 'academic',
+    formality_score: 5,
+    connotation: 'neutral',
+    word_family: { verb: ['disseminate'], noun: ['dissemination'], adjective: ['disseminative'], adverb: [] },
+    semantic_field_id: 'spread-communication',
+    semantic_field_label: 'Spread & Communication',
+    semantic_field_words: [
+      { word: 'distribution', cefr: 'B2', register: 'neutral' },
+      { word: 'circulation', cefr: 'C1', register: 'formal' }
+    ],
+    register_synonyms: [
+      { word: 'distribution', register: 'neutral', cefr: 'B2' },
+      { word: 'circulation', register: 'formal', cefr: 'C1' }
+    ],
+    folder_ids: ['folder-reading', 'folder-4'],
+    review: {
+      interval_days: 1,
+      ease_factor: 2.5,
+      due_date: new Date().toISOString().split('T')[0],
+      repetition_count: 0,
+      last_result: null
+    },
+    date_added: new Date().toISOString(),
+    source_context: 'IELTS Writing Task 2 - spreading information, ideas, public policies, and communication networks.'
   }
 ];
 
@@ -19761,6 +20129,263 @@ const EXTENDED_DICTIONARY_DB = [
     ],
     register_synonyms: [
       { word: 'disrupt', register: 'neutral', cefr: 'B2' }
+    ],
+    suggested_folder_name: 'IELTS Reading'
+  },
+  {
+    word: 'empirical',
+    entry_type: 'word',
+    ipa_uk: '/ɪmˈpɪr.ɪ.kəl/',
+    ipa_us: '/ɪmˈpɪr.ɪ.kəl/',
+    definition: 'Based on what is experienced or seen rather than on theory.',
+    definitions: [
+      {
+        definition: 'Based on, concerned with, or verifiable by observation or experience rather than theory or pure logic.',
+        example: 'They provided empirical data to back up their hypothesis.',
+        cefr_level: 'C1',
+        grammar_note: 'adjective'
+      }
+    ],
+    cefr_level: 'C1',
+    register: 'academic',
+    formality_score: 5,
+    connotation: 'neutral',
+    grammar_note: 'adjective',
+    example: 'There is no empirical evidence to support the claim that antioxidant pills prevent major illnesses.',
+    extra_examples: [
+      'The theory is fully supported by empirical observations.',
+      'Scientific research depends on empirical facts rather than personal beliefs.'
+    ],
+    word_family: { verb: [], noun: ['empiricism', 'empiricist'], adjective: ['empirical'], adverb: ['empirically'] },
+    semantic_field_id: 'evidence-fact',
+    semantic_field_label: 'Evidence & Fact',
+    semantic_field_words: [
+      { word: 'observational', cefr: 'C1', register: 'formal' },
+      { word: 'factual', cefr: 'C1', register: 'neutral' }
+    ],
+    register_synonyms: [
+      { word: 'observational', register: 'formal', cefr: 'C1' },
+      { word: 'factual', register: 'neutral', cefr: 'C1' }
+    ],
+    suggested_folder_name: 'IELTS Reading'
+  },
+  {
+    word: 'take account of',
+    entry_type: 'word',
+    ipa_uk: '/teɪk əˈkaʊnt ɒv/',
+    ipa_us: '/teɪk əˈkaʊnt ʌv/',
+    definition: 'To consider or include something when making a plan or calculation.',
+    definitions: [
+      {
+        definition: 'To consider or include something when making a plan, judgment, or calculation.',
+        example: 'These calculations do not take account of inflation.',
+        cefr_level: 'C1',
+        grammar_note: 'verb phrase'
+      }
+    ],
+    cefr_level: 'C1',
+    register: 'academic',
+    formality_score: 4,
+    connotation: 'neutral',
+    grammar_note: 'verb phrase',
+    example: 'When evaluating health indicators, researchers must take account of genetic pre-dispositions.',
+    extra_examples: [
+      'A good manager will take account of the team\'s feedback before making decisions.',
+      'We must take account of regional climate differences when planning agriculture.'
+    ],
+    word_family: { verb: [], noun: [], adjective: [], adverb: [] },
+    semantic_field_id: 'consideration-plan',
+    semantic_field_label: 'Consideration & Planning',
+    semantic_field_words: [
+      { word: 'consider', cefr: 'B1', register: 'neutral' },
+      { word: 'allow for', cefr: 'B2', register: 'neutral' }
+    ],
+    register_synonyms: [
+      { word: 'consider', register: 'neutral', cefr: 'B1' },
+      { word: 'allow for', register: 'neutral', cefr: 'B2' }
+    ],
+    suggested_folder_name: 'IELTS Reading'
+  },
+  {
+    word: 'stealth',
+    entry_type: 'word',
+    ipa_uk: '/stelθ/',
+    ipa_us: '/stelθ/',
+    definition: 'Movement or behavior that is quiet or hidden so that no one notices.',
+    definitions: [
+      {
+        definition: 'Movement or behavior that is quiet or hidden so that no one notices.',
+        example: 'The operations were conducted with great stealth.',
+        cefr_level: 'C1',
+        grammar_note: 'noun [U]'
+      }
+    ],
+    cefr_level: 'C1',
+    register: 'general',
+    formality_score: 3,
+    connotation: 'neutral',
+    grammar_note: 'noun [U]',
+    example: 'The virus behaves with stealth, counteracting the immune system before symptoms appear.',
+    extra_examples: [
+      'The cat approached its prey with silent stealth.',
+      'Some cancers develop with stealth, displaying no symptoms until advanced stages.'
+    ],
+    word_family: { verb: [], noun: ['stealth'], adjective: ['stealthy'], adverb: ['stealthily'] },
+    semantic_field_id: 'secrecy-hiding',
+    semantic_field_label: 'Secrecy & Hiding',
+    semantic_field_words: [
+      { word: 'secrecy', cefr: 'B2', register: 'neutral' }
+    ],
+    register_synonyms: [
+      { word: 'secrecy', register: 'neutral', cefr: 'B2' }
+    ],
+    suggested_folder_name: 'IELTS Reading'
+  },
+  {
+    word: 'covertly',
+    entry_type: 'word',
+    ipa_uk: '/ˈkəʊ.vɜːt.li/',
+    ipa_us: '/ˈkoʊ.vɚt.li/',
+    definition: 'Secretly, or in a way that is hidden or not openly displayed.',
+    definitions: [
+      {
+        definition: 'In a secret or hidden way; not openly.',
+        example: 'The intelligence agency covertly monitored the suspect\'s communications.',
+        cefr_level: 'C2',
+        grammar_note: 'adverb'
+      }
+    ],
+    cefr_level: 'C2',
+    register: 'academic',
+    formality_score: 5,
+    connotation: 'neutral',
+    grammar_note: 'adverb',
+    example: 'Antioxidant tablets may covertly interfere with cancer therapy by neutralizing protective free radicals.',
+    extra_examples: [
+      'The company covertly gathered user data without proper consent.',
+      'He covertly slipped the document into his briefcase.'
+    ],
+    word_family: { verb: [], noun: ['covertness'], adjective: ['covert'], adverb: ['covertly'] },
+    semantic_field_id: 'secrecy-hiding',
+    semantic_field_label: 'Secrecy & Hiding',
+    semantic_field_words: [
+      { word: 'secretly', cefr: 'B1', register: 'neutral' },
+      { word: 'surreptitiously', cefr: 'C2', register: 'formal' }
+    ],
+    register_synonyms: [
+      { word: 'secretly', register: 'neutral', cefr: 'B1' },
+      { word: 'surreptitiously', register: 'formal', cefr: 'C2' }
+    ],
+    suggested_folder_name: 'IELTS Reading'
+  },
+  {
+    word: 'anecdotal',
+    entry_type: 'word',
+    ipa_uk: '/ˌæn.ɪkˈdəʊ.təl/',
+    ipa_us: '/ˌæn.ɪkˈdoʊ.t̬əl/',
+    definition: 'Based on personal accounts or stories rather than facts or research.',
+    definitions: [
+      {
+        definition: 'Based on personal observation, case studies, or reports rather than systematic scientific evaluation.',
+        example: 'His conclusions were based on anecdotal evidence rather than scientific proof.',
+        cefr_level: 'C1',
+        grammar_note: 'adjective'
+      }
+    ],
+    cefr_level: 'C1',
+    register: 'academic',
+    formality_score: 4,
+    connotation: 'neutral',
+    grammar_note: 'adjective',
+    example: 'While there is strong anecdotal evidence for vitamin efficacy, clinical trials show no benefits.',
+    extra_examples: [
+      'We cannot rely solely on anecdotal reports when developing public policies.',
+      'There is plenty of anecdotal proof that the product helps reduce stress.'
+    ],
+    word_family: { verb: [], noun: ['anecdote'], adjective: ['anecdotal'], adverb: ['anecdotally'] },
+    semantic_field_id: 'evidence-fact',
+    semantic_field_label: 'Evidence & Fact',
+    semantic_field_words: [
+      { word: 'unscientific', cefr: 'B2', register: 'neutral' }
+    ],
+    register_synonyms: [
+      { word: 'unscientific', register: 'neutral', cefr: 'B2' }
+    ],
+    suggested_folder_name: 'IELTS Reading'
+  },
+  {
+    word: 'propensity',
+    entry_type: 'word',
+    ipa_uk: '/prəˈpen.sə.ti/',
+    ipa_us: '/prəˈpen.sə.t̬i/',
+    definition: 'A natural tendency to behave in a particular way or suffer from a condition.',
+    definitions: [
+      {
+        definition: 'An established natural tendency, inclination, or preference to behave in a particular way.',
+        example: 'He has a propensity to exaggerate his achievements.',
+        cefr_level: 'C2',
+        grammar_note: 'noun [C usually singular]'
+      }
+    ],
+    cefr_level: 'C2',
+    register: 'academic',
+    formality_score: 5,
+    connotation: 'neutral',
+    grammar_note: 'noun [C usually singular]',
+    example: 'Some populations exhibit a genetic propensity toward cardiovascular diseases.',
+    extra_examples: [
+      'The consumer\'s propensity to spend decreases during economic recessions.',
+      'A genetic propensity to gain weight can be mitigated by active lifestyle habits.'
+    ],
+    word_family: { verb: [], noun: ['propensity'], adjective: [], adverb: [] },
+    semantic_field_id: 'tendency-habit',
+    semantic_field_label: 'Tendency & Habit',
+    semantic_field_words: [
+      { word: 'tendency', cefr: 'B2', register: 'neutral' },
+      { word: 'inclination', cefr: 'C1', register: 'formal' },
+      { word: 'predisposition', cefr: 'C2', register: 'academic' }
+    ],
+    register_synonyms: [
+      { word: 'tendency', register: 'neutral', cefr: 'B2' },
+      { word: 'inclination', register: 'formal', cefr: 'C1' },
+      { word: 'predisposition', register: 'academic', cefr: 'C2' }
+    ],
+    suggested_folder_name: 'IELTS Reading'
+  },
+  {
+    word: 'dissemination',
+    entry_type: 'word',
+    ipa_uk: '/dɪˌsem.ɪˈneɪ.ʃən/',
+    ipa_us: '/dɪˌsem.əˈneɪ.ʃən/',
+    definition: 'The act of spreading news, information, or ideas to a lot of people.',
+    definitions: [
+      {
+        definition: 'The action or fact of spreading something, especially information or ideas, widely.',
+        example: 'The dissemination of public health advice is critical during outbreaks.',
+        cefr_level: 'C1',
+        grammar_note: 'noun [U]'
+      }
+    ],
+    cefr_level: 'C1',
+    register: 'academic',
+    formality_score: 5,
+    connotation: 'neutral',
+    grammar_note: 'noun [U]',
+    example: 'The internet facilitates the rapid dissemination of medical research findings.',
+    extra_examples: [
+      'Our primary goal is the dissemination of scientific knowledge.',
+      'The government controlled the dissemination of news during the crisis.'
+    ],
+    word_family: { verb: ['disseminate'], noun: ['dissemination'], adjective: ['disseminative'], adverb: [] },
+    semantic_field_id: 'spread-communication',
+    semantic_field_label: 'Spread & Communication',
+    semantic_field_words: [
+      { word: 'distribution', cefr: 'B2', register: 'neutral' },
+      { word: 'circulation', cefr: 'C1', register: 'formal' }
+    ],
+    register_synonyms: [
+      { word: 'distribution', register: 'neutral', cefr: 'B2' },
+      { word: 'circulation', register: 'formal', cefr: 'C1' }
     ],
     suggested_folder_name: 'IELTS Reading'
   }
