@@ -1543,7 +1543,7 @@
 
         return {
           type: quizType,
-          questionText: quizType === 'synonym' ? `Chọn từ đồng nghĩa (synonym) với "${entry.word}":` : `Chọn từ trái nghĩa (antonym) với "${entry.word}":`,
+          questionText: quizType === 'synonym' ? `Select the synonym for "${entry.word}":` : `Select the antonym for "${entry.word}":`,
           correctWord: correctWord,
           options: options
         };
@@ -3659,7 +3659,7 @@ IMPORTANT: If the Free Dictionary context contains a valid IPA pronunciation (ip
                               </div>
                             )}
 
-                            <div style={{ display: 'flex', gap: '8px', marginBottom: '8px' }}>
+                            <div style={{ display: 'flex', gap: '8px', marginBottom: '12px' }}>
                               <span className={`badge badge-cefr-${reviewQueue[currentReviewIndex].cefr_level.toLowerCase()}`}>
                                 {reviewQueue[currentReviewIndex].cefr_level}
                               </span>
@@ -3673,25 +3673,6 @@ IMPORTANT: If the Free Dictionary context contains a valid IPA pronunciation (ip
                                 F{reviewQueue[currentReviewIndex].formality_score}/5
                               </span>
                             </div>
-
-                            {reviewQueue[currentReviewIndex].vietnamese_meaning && (
-                              <div style={{
-                                fontSize: '14px',
-                                fontWeight: '600',
-                                color: 'var(--accent)',
-                                backgroundColor: 'var(--accent-light)',
-                                padding: '8px 12px',
-                                borderRadius: '6px',
-                                marginBottom: '10px',
-                                textAlign: 'left',
-                                display: 'flex',
-                                alignItems: 'center',
-                                gap: '6px'
-                              }}>
-                                <span>🇻🇳</span>
-                                <span>{reviewQueue[currentReviewIndex].vietnamese_meaning}</span>
-                              </div>
-                            )}
 
                             <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginBottom: '12px', textAlign: 'left' }}>
                               {(() => {
@@ -3848,7 +3829,7 @@ IMPORTANT: If the Free Dictionary context contains a valid IPA pronunciation (ip
                                     <span>🎯</span> Quick Quiz: {reviewQuizQuestion.questionText}
                                   </strong>
                                   <span style={{ fontSize: '10.5px', fontWeight: 'bold', textTransform: 'uppercase', backgroundColor: '#FEF3C7', color: '#92400E', padding: '2px 6px', borderRadius: '4px' }}>
-                                    {reviewQuizQuestion.type === 'synonym' ? 'Từ đồng nghĩa' : 'Từ trái nghĩa'}
+                                    {reviewQuizQuestion.type === 'synonym' ? 'Synonym' : 'Antonym'}
                                   </span>
                                 </div>
 
@@ -3923,44 +3904,66 @@ IMPORTANT: If the Free Dictionary context contains a valid IPA pronunciation (ip
                                     gap: '6px'
                                   }}>
                                     {reviewQuizFeedback ? (
-                                      <span>✨ Chính xác! Bạn đã chọn đúng đáp án.</span>
+                                      <span>✨ Correct! You selected the right answer.</span>
                                     ) : (
-                                      <span>❌ Chưa chính xác! Đáp án đúng là: <strong>{reviewQuizQuestion.correctWord}</strong></span>
+                                      <span>❌ Incorrect. The correct answer is: <strong>{reviewQuizQuestion.correctWord}</strong></span>
                                     )}
                                   </div>
                                 )}
                               </div>
                             )}
 
+                            {/* VIETNAMESE MEANING (AT VERY BOTTOM) */}
+                            {reviewQueue[currentReviewIndex].vietnamese_meaning && (
+                              <div className="review-bottom-vietnamese" style={{
+                                fontSize: '13.5px',
+                                fontWeight: '600',
+                                color: 'var(--text-main)',
+                                backgroundColor: 'var(--bg-app)',
+                                border: '1px solid var(--border-muted)',
+                                padding: '8px 12px',
+                                borderRadius: '6px',
+                                marginBottom: '14px',
+                                textAlign: 'left',
+                                display: 'flex',
+                                alignItems: 'center',
+                                gap: '6px'
+                              }}>
+                                <span>🇻🇳</span>
+                                <span style={{ color: 'var(--text-muted)', fontSize: '12px' }}>Nghĩa tiếng Việt:</span>
+                                <span style={{ color: 'var(--accent)', fontWeight: '700' }}>{reviewQueue[currentReviewIndex].vietnamese_meaning}</span>
+                              </div>
+                            )}
+
                             {/* RATING OPTIONS */}
                             <div className="review-ratings-row">
-                              <button className="rating-btn rating-btn-again" onClick={() => handleRateCard('again')} title="Ôn lại sau 1 ngày">
-                                <span className="rating-btn-name">Again (Học lại)</span>
+                              <button className="rating-btn rating-btn-again" onClick={() => handleRateCard('again')} title="Review again tomorrow">
+                                <span className="rating-btn-name">Again</span>
                                 <span className="rating-btn-interval">
-                                  {calculateSM2('again', reviewQueue[currentReviewIndex].review).interval_days} ngày
+                                  {calculateSM2('again', reviewQueue[currentReviewIndex].review).interval_days}d
                                 </span>
                               </button>
-                              <button className="rating-btn rating-btn-hard" onClick={() => handleRateCard('hard')} title="Ôn lại sau 1-2 ngày">
-                                <span className="rating-btn-name">Hard (Khó)</span>
+                              <button className="rating-btn rating-btn-hard" onClick={() => handleRateCard('hard')} title="Hard - short interval">
+                                <span className="rating-btn-name">Hard</span>
                                 <span className="rating-btn-interval">
-                                  {calculateSM2('hard', reviewQueue[currentReviewIndex].review).interval_days} ngày
+                                  {calculateSM2('hard', reviewQueue[currentReviewIndex].review).interval_days}d
                                 </span>
                               </button>
-                              <button className="rating-btn rating-btn-good" onClick={() => handleRateCard('good')} title="Ôn lại sau 2-3 ngày">
-                                <span className="rating-btn-name">Good (Tốt)</span>
+                              <button className="rating-btn rating-btn-good" onClick={() => handleRateCard('good')} title="Good - standard interval">
+                                <span className="rating-btn-name">Good</span>
                                 <span className="rating-btn-interval">
-                                  {calculateSM2('good', reviewQueue[currentReviewIndex].review).interval_days} ngày
+                                  {calculateSM2('good', reviewQueue[currentReviewIndex].review).interval_days}d
                                 </span>
                               </button>
-                              <button className="rating-btn rating-btn-easy" onClick={() => handleRateCard('easy')} title="Ôn lại sau 4-7 ngày">
-                                <span className="rating-btn-name">Easy (Dễ)</span>
+                              <button className="rating-btn rating-btn-easy" onClick={() => handleRateCard('easy')} title="Easy - long interval">
+                                <span className="rating-btn-name">Easy</span>
                                 <span className="rating-btn-interval">
-                                  {calculateSM2('easy', reviewQueue[currentReviewIndex].review).interval_days} ngày
+                                  {calculateSM2('easy', reviewQueue[currentReviewIndex].review).interval_days}d
                                 </span>
                               </button>
-                              <button className="rating-btn rating-btn-done" onClick={() => handleRateCard('done')} title="Đã thuộc hoàn toàn">
-                                <span className="rating-btn-name">Done (Thuộc)</span>
-                                <span className="rating-btn-interval">Hoàn thành</span>
+                              <button className="rating-btn rating-btn-done" onClick={() => handleRateCard('done')} title="Mastered - Archive from reviews">
+                                <span className="rating-btn-name">Done</span>
+                                <span className="rating-btn-interval">Archive</span>
                               </button>
                             </div>
                           </div>
@@ -5737,25 +5740,6 @@ service cloud.firestore {
             </span>
           </div>
 
-          {entry.vietnamese_meaning && (
-            <div className="card-vietnamese-meaning" style={{
-              fontSize: '13.5px',
-              fontWeight: '600',
-              color: 'var(--accent)',
-              backgroundColor: 'var(--accent-light)',
-              padding: '6px 10px',
-              borderRadius: '6px',
-              margin: '6px 0 8px 0',
-              display: 'flex',
-              alignItems: 'center',
-              gap: '6px',
-              textAlign: 'left'
-            }}>
-              <span style={{ fontSize: '13px' }}>🇻🇳</span>
-              <span>{entry.vietnamese_meaning}</span>
-            </div>
-          )}
-
           {entry.entry_type === 'phrasal_verb' && entry.conjugations && (
             <div className="conjugations-block" style={{ marginTop: '10px', marginBottom: '10px' }}>
               <div style={{ fontWeight: 'bold', fontSize: '11px', color: 'var(--text-muted)', marginBottom: '6px', textTransform: 'uppercase', letterSpacing: '0.5px' }}>Conjugations</div>
@@ -6006,6 +5990,28 @@ service cloud.firestore {
                   </span>
                 );
               })}
+            </div>
+          )}
+
+          {/* VIETNAMESE MEANING (AT VERY BOTTOM) */}
+          {entry.vietnamese_meaning && (
+            <div className="card-vietnamese-meaning" style={{
+              fontSize: '13px',
+              fontWeight: '600',
+              color: 'var(--text-main)',
+              backgroundColor: 'var(--bg-app)',
+              border: '1px solid var(--border-muted)',
+              padding: '8px 12px',
+              borderRadius: '6px',
+              marginTop: '12px',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '6px',
+              textAlign: 'left'
+            }}>
+              <span style={{ fontSize: '13px' }}>🇻🇳</span>
+              <span style={{ color: 'var(--text-muted)', fontSize: '12px' }}>Nghĩa:</span>
+              <span style={{ color: 'var(--accent)', fontWeight: '700' }}>{entry.vietnamese_meaning}</span>
             </div>
           )}
 
@@ -6263,25 +6269,6 @@ service cloud.firestore {
             </span>
           </div>
 
-          {activeEntry.vietnamese_meaning && (
-            <div className="detail-vietnamese-meaning" style={{
-              fontSize: '14.5px',
-              fontWeight: '600',
-              color: 'var(--accent)',
-              backgroundColor: 'var(--accent-light)',
-              padding: '8px 12px',
-              borderRadius: '8px',
-              margin: '8px 0 12px 0',
-              display: 'flex',
-              alignItems: 'center',
-              gap: '8px',
-              textAlign: 'left'
-            }}>
-              <span style={{ fontSize: '15px' }}>🇻🇳</span>
-              <span>{activeEntry.vietnamese_meaning}</span>
-            </div>
-          )}
-
           {activeEntry.entry_type === 'phrasal_verb' && activeEntry.conjugations && (
             <div className="conjugations-block" style={{ marginTop: '10px', marginBottom: '10px' }}>
               <div style={{ fontWeight: 'bold', fontSize: '11px', color: 'var(--text-muted)', marginBottom: '6px', textTransform: 'uppercase', letterSpacing: '0.5px' }}>Conjugations</div>
@@ -6517,6 +6504,28 @@ service cloud.firestore {
                   </span>
                 );
               })}
+            </div>
+          )}
+
+          {/* VIETNAMESE MEANING (AT VERY BOTTOM) */}
+          {activeEntry.vietnamese_meaning && (
+            <div className="card-vietnamese-meaning" style={{
+              fontSize: '13px',
+              fontWeight: '600',
+              color: 'var(--text-main)',
+              backgroundColor: 'var(--bg-app)',
+              border: '1px solid var(--border-muted)',
+              padding: '8px 12px',
+              borderRadius: '6px',
+              marginTop: '12px',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '6px',
+              textAlign: 'left'
+            }}>
+              <span style={{ fontSize: '13px' }}>🇻🇳</span>
+              <span style={{ color: 'var(--text-muted)', fontSize: '12px' }}>Nghĩa:</span>
+              <span style={{ color: 'var(--accent)', fontWeight: '700' }}>{activeEntry.vietnamese_meaning}</span>
             </div>
           )}
 
