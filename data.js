@@ -36,7 +36,7 @@ const INITIAL_FOLDERS = [
     "emoji": "✍️",
     "description": "Sophisticated vocabulary and idioms tailored for high-scoring IELTS Writing Task 2 responses.",
     "created_at": "2026-09-02T12:37:38.878Z",
-    "word_count": 128
+    "word_count": 132
   },
   {
     "id": "folder-5",
@@ -108,7 +108,7 @@ const INITIAL_FOLDERS = [
     "emoji": "📖",
     "description": "High-yield vocabulary and scientific terms gathered from IELTS Reading passages.",
     "created_at": "2026-09-02T12:37:38.878Z",
-    "word_count": 75
+    "word_count": 79
   }
 ];
 
@@ -20776,6 +20776,573 @@ const INITIAL_ENTRIES = [
       "incorrect": 0
     },
     "is_learned": false
+  },
+  {
+    "id": "entry-sensational",
+    "word": "sensational",
+    "vietnamese_meaning": "gây chấn động, giật gân (báo chí), tuyệt vời ngoạn mục",
+    "ipa_uk": "/senˈseɪ.ʃən.əl/",
+    "ipa_us": "/senˈseɪ.ʃən.əl/",
+    "grammar_note": "adjective",
+    "cefr_level": "C1",
+    "register": "journalism",
+    "connotation": "neutral",
+    "formality_score": 3,
+    "entry_type": "word",
+    "definition": "causing great public excitement, interest, or shock (often through exaggerated reporting).",
+    "example": "The tabloid newspaper ran sensational headlines about the celebrity's private life.",
+    "definitions": [
+      {
+        "definition": "causing great public excitement, interest, or shock (often through exaggerated reporting).",
+        "vietnamese_meaning": "giật gân, gây chấn động dư luận (báo chí)",
+        "example": "The tabloid newspaper ran sensational headlines about the celebrity's private life.",
+        "cefr_level": "C1",
+        "grammar_note": "adjective"
+      },
+      {
+        "definition": "extraordinarily good, wonderful, or attractive.",
+        "vietnamese_meaning": "tuyệt vời, ngoạn mục, xuất sắc lạ thường",
+        "example": "She gave a sensational performance that earned a standing ovation from the entire audience.",
+        "cefr_level": "B2",
+        "grammar_note": "adjective"
+      }
+    ],
+    "collocations": [
+      {
+        "collocation": "sensational headline / story",
+        "example": "Sensational news headlines often distort scientific facts to attract clicks."
+      },
+      {
+        "collocation": "sensational claims / allegations",
+        "example": "The author made sensational claims without providing any verifiable evidence."
+      },
+      {
+        "collocation": "sensational success / victory",
+        "example": "The startup scored a sensational success in its first year of launch."
+      }
+    ],
+    "word_family": {
+      "verb": [
+        "sensationalize"
+      ],
+      "noun": [
+        "sensation",
+        "sensationalism",
+        "sensationalist"
+      ],
+      "adjective": [
+        "sensational",
+        "sensationalistic",
+        "sensory",
+        "sensible"
+      ],
+      "adverb": [
+        "sensationally"
+      ]
+    },
+    "semantic_field_id": "media-and-journalism",
+    "semantic_field_label": "Media & Journalism",
+    "semantic_field_words": [
+      {
+        "word": "sensational",
+        "cefr": "C1",
+        "register": "journalism"
+      },
+      {
+        "word": "spectacular",
+        "cefr": "B2",
+        "register": "formal"
+      },
+      {
+        "word": "shocking",
+        "cefr": "B2",
+        "register": "neutral"
+      }
+    ],
+    "register_synonyms": [
+      {
+        "word": "shocking",
+        "vietnamese_meaning": "gây sốc",
+        "register": "neutral",
+        "cefr": "B2"
+      },
+      {
+        "word": "spectacular",
+        "vietnamese_meaning": "ngoạn mục hoành tráng",
+        "register": "formal",
+        "cefr": "B2"
+      },
+      {
+        "word": "lurid",
+        "vietnamese_meaning": "ghê rợn, giật gân quá đà",
+        "register": "journalism",
+        "cefr": "C2"
+      },
+      {
+        "word": "sensationalized",
+        "vietnamese_meaning": "bị giật gân hóa",
+        "register": "academic",
+        "cefr": "C1"
+      }
+    ],
+    "antonyms": [
+      {
+        "word": "understated",
+        "vietnamese_meaning": "khiêm tốn, nhẹ nhàng"
+      },
+      {
+        "word": "ordinary",
+        "vietnamese_meaning": "bình thường"
+      },
+      {
+        "word": "unremarkable",
+        "vietnamese_meaning": "không có gì nổi bật"
+      }
+    ],
+    "extra_examples": [
+      "Critics argued that the documentary favored sensational speculation over rigorous scientific facts.",
+      "The young pianist scored a sensational triumph at the international music competition."
+    ],
+    "folder_ids": [
+      "folder-4",
+      "folder-reading"
+    ],
+    "suggested_folder_name": "Academic Writing (Task 2)",
+    "review": {
+      "interval_days": 1,
+      "ease_factor": 2.5,
+      "due_date": "2026-09-02",
+      "repetition_count": 0,
+      "last_result": null
+    },
+    "stats": {
+      "encounters": 0,
+      "correct": 0,
+      "incorrect": 0
+    },
+    "is_learned": false
+  },
+  {
+    "id": "entry-skeptic",
+    "word": "skeptic",
+    "vietnamese_meaning": "người hoài nghi, người hay ngờ vực các quan điểm/tuyên bố",
+    "ipa_uk": "/ˈskep.tɪk/",
+    "ipa_us": "/ˈskep.tɪk/",
+    "grammar_note": "noun [C]",
+    "cefr_level": "C1",
+    "register": "academic",
+    "connotation": "neutral",
+    "formality_score": 4,
+    "entry_type": "word",
+    "definition": "a person who doubts the truth or value of an idea, claim, or widely accepted belief.",
+    "example": "Climate skeptics continue to dispute the consensus of the international scientific community.",
+    "definitions": [
+      {
+        "definition": "a person who doubts the truth or value of an idea, claim, or widely accepted belief.",
+        "vietnamese_meaning": "người hoài nghi, người luôn đặt dấu hỏi về tính xác thực",
+        "example": "Climate skeptics continue to dispute the consensus of the international scientific community.",
+        "cefr_level": "C1",
+        "grammar_note": "noun [C]"
+      },
+      {
+        "definition": "a philosopher or thinker who maintains that certain knowledge is impossible.",
+        "vietnamese_meaning": "nhà triết học theo chủ nghĩa hoài nghi",
+        "example": "Ancient skeptics argued that human perception is too flawed to attain absolute certainty.",
+        "cefr_level": "C2",
+        "grammar_note": "noun [C]"
+      }
+    ],
+    "collocations": [
+      {
+        "collocation": "skeptic about / regarding",
+        "example": "Economists remain skeptic about the government's overly ambitious growth projections."
+      },
+      {
+        "collocation": "vocal / confirmed skeptic",
+        "example": "He has long been a confirmed skeptic regarding unproven alternative therapies."
+      },
+      {
+        "collocation": "confound / silence the skeptics",
+        "example": "The breakthrough clinical trial results managed to silence the skeptics."
+      }
+    ],
+    "word_family": {
+      "verb": [],
+      "noun": [
+        "skeptic",
+        "skepticism",
+        "sceptic",
+        "scepticism"
+      ],
+      "adjective": [
+        "skeptical",
+        "sceptical"
+      ],
+      "adverb": [
+        "skeptically",
+        "sceptically"
+      ]
+    },
+    "semantic_field_id": "scientific-method",
+    "semantic_field_label": "Scientific Method & Inquiry",
+    "semantic_field_words": [
+      {
+        "word": "skeptic",
+        "cefr": "C1",
+        "register": "academic"
+      },
+      {
+        "word": "empirical",
+        "cefr": "C1",
+        "register": "academic"
+      },
+      {
+        "word": "scrutinize",
+        "cefr": "C1",
+        "register": "formal"
+      }
+    ],
+    "register_synonyms": [
+      {
+        "word": "doubter",
+        "vietnamese_meaning": "người nghi ngờ",
+        "register": "neutral",
+        "cefr": "B2"
+      },
+      {
+        "word": "cynic",
+        "vietnamese_meaning": "người yếm thế bất tín",
+        "register": "academic",
+        "cefr": "C1"
+      },
+      {
+        "word": "disbeliever",
+        "vietnamese_meaning": "người không tin",
+        "register": "formal",
+        "cefr": "C1"
+      }
+    ],
+    "antonyms": [
+      {
+        "word": "believer",
+        "vietnamese_meaning": "người có lòng tin"
+      },
+      {
+        "word": "supporter",
+        "vietnamese_meaning": "người ủng hộ"
+      },
+      {
+        "word": "advocate",
+        "vietnamese_meaning": "người bênh vực tán thành"
+      }
+    ],
+    "extra_examples": [
+      "Initially regarded as a skeptic, the professor changed her stance after reviewing the empirical data.",
+      "Tech skeptics warned that mass automation could lead to structural unemployment."
+    ],
+    "folder_ids": [
+      "folder-4",
+      "folder-reading"
+    ],
+    "suggested_folder_name": "Academic Writing (Task 2)",
+    "review": {
+      "interval_days": 1,
+      "ease_factor": 2.5,
+      "due_date": "2026-09-02",
+      "repetition_count": 0,
+      "last_result": null
+    },
+    "stats": {
+      "encounters": 0,
+      "correct": 0,
+      "incorrect": 0
+    },
+    "is_learned": false
+  },
+  {
+    "id": "entry-implication",
+    "word": "implication",
+    "vietnamese_meaning": "hệ quả tiềm tàng, tác động gián tiếp, hàm ý ngụ ý, sự dính líu can dự",
+    "ipa_uk": "/ˌɪm.plɪˈkeɪ.ʃən/",
+    "ipa_us": "/ˌɪm.pləˈkeɪ.ʃən/",
+    "grammar_note": "noun [C/U]",
+    "cefr_level": "C1",
+    "register": "academic",
+    "connotation": "neutral",
+    "formality_score": 4,
+    "entry_type": "word",
+    "definition": "an effect, consequence, or result that an action, decision, or event will have on something in the future.",
+    "example": "The rapid development of artificial intelligence carries profound ethical and economic implications.",
+    "definitions": [
+      {
+        "definition": "an effect, consequence, or result that an action, decision, or event will have on something in the future.",
+        "vietnamese_meaning": "hệ quả tiềm tàng, tác động sâu xa trong tương lai",
+        "example": "The rapid development of artificial intelligence carries profound ethical and economic implications.",
+        "cefr_level": "C1",
+        "grammar_note": "noun [C]"
+      },
+      {
+        "definition": "an occasion when something is suggested, hinted at, or indirect rather than stated directly.",
+        "vietnamese_meaning": "hàm ý, ý tứ gián tiếp, lời nói bóng gió",
+        "example": "The clear implication of the report was that management had failed to enforce safety protocols.",
+        "cefr_level": "C1",
+        "grammar_note": "noun [C/U]"
+      },
+      {
+        "definition": "the fact of being involved in or connected to a crime or wrongdoing.",
+        "vietnamese_meaning": "sự dính líu, dính chấp vào hành vi sai trái",
+        "example": "The executive vigorously denied any implication in the bribery scandal.",
+        "cefr_level": "C2",
+        "grammar_note": "noun [U]"
+      }
+    ],
+    "collocations": [
+      {
+        "collocation": "profound / far-reaching implications",
+        "example": "The discovery of room-temperature superconductors would have far-reaching implications for global technology."
+      },
+      {
+        "collocation": "policy / financial implications",
+        "example": "Researchers evaluated the environmental and financial implications of offshore wind farms."
+      },
+      {
+        "collocation": "by implication",
+        "example": "By praising the successor, the chairman by implication criticized the former director."
+      }
+    ],
+    "word_family": {
+      "verb": [
+        "imply",
+        "implicate"
+      ],
+      "noun": [
+        "implication"
+      ],
+      "adjective": [
+        "implicit",
+        "implicated"
+      ],
+      "adverb": [
+        "implicitly"
+      ]
+    },
+    "semantic_field_id": "academic-discourse",
+    "semantic_field_label": "Academic Discourse & Analysis",
+    "semantic_field_words": [
+      {
+        "word": "implication",
+        "cefr": "C1",
+        "register": "academic"
+      },
+      {
+        "word": "consequence",
+        "cefr": "B2",
+        "register": "neutral"
+      },
+      {
+        "word": "significance",
+        "cefr": "B2",
+        "register": "formal"
+      }
+    ],
+    "register_synonyms": [
+      {
+        "word": "consequence",
+        "vietnamese_meaning": "hệ quả, hậu quả",
+        "register": "neutral",
+        "cefr": "B2"
+      },
+      {
+        "word": "ramification",
+        "vietnamese_meaning": "hệ quả phức tạp lan rộng",
+        "register": "academic",
+        "cefr": "C2"
+      },
+      {
+        "word": "connotation",
+        "vietnamese_meaning": "nghĩa bóng, hàm ý",
+        "register": "academic",
+        "cefr": "C1"
+      },
+      {
+        "word": "significance",
+        "vietnamese_meaning": "tầm quan trọng, ý nghĩa sâu xa",
+        "register": "formal",
+        "cefr": "B2"
+      }
+    ],
+    "antonyms": [
+      {
+        "word": "explicitness",
+        "vietnamese_meaning": "sự rõ ràng tường minh"
+      },
+      {
+        "word": "directness",
+        "vietnamese_meaning": "tính trực tiếp không vòng vo"
+      }
+    ],
+    "extra_examples": [
+      "Policymakers must carefully weigh the long-term implications of increasing national debt.",
+      "The implication that low test scores stem solely from poor teaching is overly simplistic."
+    ],
+    "folder_ids": [
+      "folder-4",
+      "folder-reading"
+    ],
+    "suggested_folder_name": "Academic Writing (Task 2)",
+    "review": {
+      "interval_days": 1,
+      "ease_factor": 2.5,
+      "due_date": "2026-09-02",
+      "repetition_count": 0,
+      "last_result": null
+    },
+    "stats": {
+      "encounters": 0,
+      "correct": 0,
+      "incorrect": 0
+    },
+    "is_learned": false
+  },
+  {
+    "id": "entry-infuriate",
+    "word": "infuriate",
+    "vietnamese_meaning": "làm phát điên, làm cho ai tức giận tột cùng, chọc giận",
+    "ipa_uk": "/ɪnˈfjʊə.ri.eɪt/",
+    "ipa_us": "/ɪnˈfjʊr.i.eɪt/",
+    "grammar_note": "verb [T]",
+    "cefr_level": "C1",
+    "register": "neutral",
+    "connotation": "negative",
+    "formality_score": 3,
+    "entry_type": "word",
+    "definition": "to make someone extremely angry, furious, or enraged.",
+    "example": "The airline's refusal to offer refunds or accommodations infuriated stranded passengers.",
+    "definitions": [
+      {
+        "definition": "to make someone extremely angry, furious, or enraged.",
+        "vietnamese_meaning": "làm tức điên lên, chọc giận tột cùng",
+        "example": "The airline's refusal to offer refunds or accommodations infuriated stranded passengers.",
+        "cefr_level": "C1",
+        "grammar_note": "transitive verb"
+      }
+    ],
+    "collocations": [
+      {
+        "collocation": "infuriate someone",
+        "example": "What infuriated citizens most was the complete lack of government transparency."
+      },
+      {
+        "collocation": "utterly / completely infuriate",
+        "example": "His constant interruptions and condescending tone utterly infuriated the panel."
+      },
+      {
+        "collocation": "it infuriates someone that / to see",
+        "example": "It infuriates local residents that public funds are squandered on vanity projects."
+      }
+    ],
+    "word_family": {
+      "verb": [
+        "infuriate"
+      ],
+      "noun": [
+        "fury"
+      ],
+      "adjective": [
+        "infuriating",
+        "infuriated",
+        "furious"
+      ],
+      "adverb": [
+        "infuriatingly",
+        "furiously"
+      ]
+    },
+    "semantic_field_id": "emotional-response",
+    "semantic_field_label": "Emotions & Psychological Reactions",
+    "semantic_field_words": [
+      {
+        "word": "infuriate",
+        "cefr": "C1",
+        "register": "neutral"
+      },
+      {
+        "word": "exasperate",
+        "cefr": "C2",
+        "register": "formal"
+      },
+      {
+        "word": "provoke",
+        "cefr": "B2",
+        "register": "neutral"
+      }
+    ],
+    "register_synonyms": [
+      {
+        "word": "enrage",
+        "vietnamese_meaning": "chọc giận lôi đình",
+        "register": "formal",
+        "cefr": "C1"
+      },
+      {
+        "word": "exasperate",
+        "vietnamese_meaning": "làm bực mình phát cáu",
+        "register": "formal",
+        "cefr": "C2"
+      },
+      {
+        "word": "incense",
+        "vietnamese_meaning": "làm nổi giận đùng đùng",
+        "register": "literary",
+        "cefr": "C2"
+      },
+      {
+        "word": "provoke",
+        "vietnamese_meaning": "khiêu khích, chọc tức",
+        "register": "neutral",
+        "cefr": "B2"
+      }
+    ],
+    "antonyms": [
+      {
+        "word": "placate",
+        "vietnamese_meaning": "xoa dịu cơn giận"
+      },
+      {
+        "word": "appease",
+        "vietnamese_meaning": "nhượng bộ xoa dịu"
+      },
+      {
+        "word": "soothe",
+        "vietnamese_meaning": "làm êm dịu, vỗ về"
+      },
+      {
+        "word": "pacify",
+        "vietnamese_meaning": "bình định, làm nguôi giận"
+      }
+    ],
+    "extra_examples": [
+      "It infuriates commuters when scheduled train services are canceled without warning.",
+      "The politician's evasive answers infuriated journalists questioning her during the press conference."
+    ],
+    "folder_ids": [
+      "folder-4",
+      "folder-reading"
+    ],
+    "suggested_folder_name": "Academic Writing (Task 2)",
+    "review": {
+      "interval_days": 1,
+      "ease_factor": 2.5,
+      "due_date": "2026-09-02",
+      "repetition_count": 0,
+      "last_result": null
+    },
+    "stats": {
+      "encounters": 0,
+      "correct": 0,
+      "incorrect": 0
+    },
+    "is_learned": false
   }
 ];
 
@@ -34841,6 +35408,573 @@ const EXTENDED_DICTIONARY_DB = [
     "extra_examples": [
       "Animal testing remains one of the most contentious topics in biomedical research.",
       "The committee reached a compromise after bypassing the more contentious clauses of the treaty."
+    ],
+    "folder_ids": [
+      "folder-4",
+      "folder-reading"
+    ],
+    "suggested_folder_name": "Academic Writing (Task 2)",
+    "review": {
+      "interval_days": 1,
+      "ease_factor": 2.5,
+      "due_date": "2026-09-02",
+      "repetition_count": 0,
+      "last_result": null
+    },
+    "stats": {
+      "encounters": 0,
+      "correct": 0,
+      "incorrect": 0
+    },
+    "is_learned": false
+  },
+  {
+    "id": "entry-sensational",
+    "word": "sensational",
+    "vietnamese_meaning": "gây chấn động, giật gân (báo chí), tuyệt vời ngoạn mục",
+    "ipa_uk": "/senˈseɪ.ʃən.əl/",
+    "ipa_us": "/senˈseɪ.ʃən.əl/",
+    "grammar_note": "adjective",
+    "cefr_level": "C1",
+    "register": "journalism",
+    "connotation": "neutral",
+    "formality_score": 3,
+    "entry_type": "word",
+    "definition": "causing great public excitement, interest, or shock (often through exaggerated reporting).",
+    "example": "The tabloid newspaper ran sensational headlines about the celebrity's private life.",
+    "definitions": [
+      {
+        "definition": "causing great public excitement, interest, or shock (often through exaggerated reporting).",
+        "vietnamese_meaning": "giật gân, gây chấn động dư luận (báo chí)",
+        "example": "The tabloid newspaper ran sensational headlines about the celebrity's private life.",
+        "cefr_level": "C1",
+        "grammar_note": "adjective"
+      },
+      {
+        "definition": "extraordinarily good, wonderful, or attractive.",
+        "vietnamese_meaning": "tuyệt vời, ngoạn mục, xuất sắc lạ thường",
+        "example": "She gave a sensational performance that earned a standing ovation from the entire audience.",
+        "cefr_level": "B2",
+        "grammar_note": "adjective"
+      }
+    ],
+    "collocations": [
+      {
+        "collocation": "sensational headline / story",
+        "example": "Sensational news headlines often distort scientific facts to attract clicks."
+      },
+      {
+        "collocation": "sensational claims / allegations",
+        "example": "The author made sensational claims without providing any verifiable evidence."
+      },
+      {
+        "collocation": "sensational success / victory",
+        "example": "The startup scored a sensational success in its first year of launch."
+      }
+    ],
+    "word_family": {
+      "verb": [
+        "sensationalize"
+      ],
+      "noun": [
+        "sensation",
+        "sensationalism",
+        "sensationalist"
+      ],
+      "adjective": [
+        "sensational",
+        "sensationalistic",
+        "sensory",
+        "sensible"
+      ],
+      "adverb": [
+        "sensationally"
+      ]
+    },
+    "semantic_field_id": "media-and-journalism",
+    "semantic_field_label": "Media & Journalism",
+    "semantic_field_words": [
+      {
+        "word": "sensational",
+        "cefr": "C1",
+        "register": "journalism"
+      },
+      {
+        "word": "spectacular",
+        "cefr": "B2",
+        "register": "formal"
+      },
+      {
+        "word": "shocking",
+        "cefr": "B2",
+        "register": "neutral"
+      }
+    ],
+    "register_synonyms": [
+      {
+        "word": "shocking",
+        "vietnamese_meaning": "gây sốc",
+        "register": "neutral",
+        "cefr": "B2"
+      },
+      {
+        "word": "spectacular",
+        "vietnamese_meaning": "ngoạn mục hoành tráng",
+        "register": "formal",
+        "cefr": "B2"
+      },
+      {
+        "word": "lurid",
+        "vietnamese_meaning": "ghê rợn, giật gân quá đà",
+        "register": "journalism",
+        "cefr": "C2"
+      },
+      {
+        "word": "sensationalized",
+        "vietnamese_meaning": "bị giật gân hóa",
+        "register": "academic",
+        "cefr": "C1"
+      }
+    ],
+    "antonyms": [
+      {
+        "word": "understated",
+        "vietnamese_meaning": "khiêm tốn, nhẹ nhàng"
+      },
+      {
+        "word": "ordinary",
+        "vietnamese_meaning": "bình thường"
+      },
+      {
+        "word": "unremarkable",
+        "vietnamese_meaning": "không có gì nổi bật"
+      }
+    ],
+    "extra_examples": [
+      "Critics argued that the documentary favored sensational speculation over rigorous scientific facts.",
+      "The young pianist scored a sensational triumph at the international music competition."
+    ],
+    "folder_ids": [
+      "folder-4",
+      "folder-reading"
+    ],
+    "suggested_folder_name": "Academic Writing (Task 2)",
+    "review": {
+      "interval_days": 1,
+      "ease_factor": 2.5,
+      "due_date": "2026-09-02",
+      "repetition_count": 0,
+      "last_result": null
+    },
+    "stats": {
+      "encounters": 0,
+      "correct": 0,
+      "incorrect": 0
+    },
+    "is_learned": false
+  },
+  {
+    "id": "entry-skeptic",
+    "word": "skeptic",
+    "vietnamese_meaning": "người hoài nghi, người hay ngờ vực các quan điểm/tuyên bố",
+    "ipa_uk": "/ˈskep.tɪk/",
+    "ipa_us": "/ˈskep.tɪk/",
+    "grammar_note": "noun [C]",
+    "cefr_level": "C1",
+    "register": "academic",
+    "connotation": "neutral",
+    "formality_score": 4,
+    "entry_type": "word",
+    "definition": "a person who doubts the truth or value of an idea, claim, or widely accepted belief.",
+    "example": "Climate skeptics continue to dispute the consensus of the international scientific community.",
+    "definitions": [
+      {
+        "definition": "a person who doubts the truth or value of an idea, claim, or widely accepted belief.",
+        "vietnamese_meaning": "người hoài nghi, người luôn đặt dấu hỏi về tính xác thực",
+        "example": "Climate skeptics continue to dispute the consensus of the international scientific community.",
+        "cefr_level": "C1",
+        "grammar_note": "noun [C]"
+      },
+      {
+        "definition": "a philosopher or thinker who maintains that certain knowledge is impossible.",
+        "vietnamese_meaning": "nhà triết học theo chủ nghĩa hoài nghi",
+        "example": "Ancient skeptics argued that human perception is too flawed to attain absolute certainty.",
+        "cefr_level": "C2",
+        "grammar_note": "noun [C]"
+      }
+    ],
+    "collocations": [
+      {
+        "collocation": "skeptic about / regarding",
+        "example": "Economists remain skeptic about the government's overly ambitious growth projections."
+      },
+      {
+        "collocation": "vocal / confirmed skeptic",
+        "example": "He has long been a confirmed skeptic regarding unproven alternative therapies."
+      },
+      {
+        "collocation": "confound / silence the skeptics",
+        "example": "The breakthrough clinical trial results managed to silence the skeptics."
+      }
+    ],
+    "word_family": {
+      "verb": [],
+      "noun": [
+        "skeptic",
+        "skepticism",
+        "sceptic",
+        "scepticism"
+      ],
+      "adjective": [
+        "skeptical",
+        "sceptical"
+      ],
+      "adverb": [
+        "skeptically",
+        "sceptically"
+      ]
+    },
+    "semantic_field_id": "scientific-method",
+    "semantic_field_label": "Scientific Method & Inquiry",
+    "semantic_field_words": [
+      {
+        "word": "skeptic",
+        "cefr": "C1",
+        "register": "academic"
+      },
+      {
+        "word": "empirical",
+        "cefr": "C1",
+        "register": "academic"
+      },
+      {
+        "word": "scrutinize",
+        "cefr": "C1",
+        "register": "formal"
+      }
+    ],
+    "register_synonyms": [
+      {
+        "word": "doubter",
+        "vietnamese_meaning": "người nghi ngờ",
+        "register": "neutral",
+        "cefr": "B2"
+      },
+      {
+        "word": "cynic",
+        "vietnamese_meaning": "người yếm thế bất tín",
+        "register": "academic",
+        "cefr": "C1"
+      },
+      {
+        "word": "disbeliever",
+        "vietnamese_meaning": "người không tin",
+        "register": "formal",
+        "cefr": "C1"
+      }
+    ],
+    "antonyms": [
+      {
+        "word": "believer",
+        "vietnamese_meaning": "người có lòng tin"
+      },
+      {
+        "word": "supporter",
+        "vietnamese_meaning": "người ủng hộ"
+      },
+      {
+        "word": "advocate",
+        "vietnamese_meaning": "người bênh vực tán thành"
+      }
+    ],
+    "extra_examples": [
+      "Initially regarded as a skeptic, the professor changed her stance after reviewing the empirical data.",
+      "Tech skeptics warned that mass automation could lead to structural unemployment."
+    ],
+    "folder_ids": [
+      "folder-4",
+      "folder-reading"
+    ],
+    "suggested_folder_name": "Academic Writing (Task 2)",
+    "review": {
+      "interval_days": 1,
+      "ease_factor": 2.5,
+      "due_date": "2026-09-02",
+      "repetition_count": 0,
+      "last_result": null
+    },
+    "stats": {
+      "encounters": 0,
+      "correct": 0,
+      "incorrect": 0
+    },
+    "is_learned": false
+  },
+  {
+    "id": "entry-implication",
+    "word": "implication",
+    "vietnamese_meaning": "hệ quả tiềm tàng, tác động gián tiếp, hàm ý ngụ ý, sự dính líu can dự",
+    "ipa_uk": "/ˌɪm.plɪˈkeɪ.ʃən/",
+    "ipa_us": "/ˌɪm.pləˈkeɪ.ʃən/",
+    "grammar_note": "noun [C/U]",
+    "cefr_level": "C1",
+    "register": "academic",
+    "connotation": "neutral",
+    "formality_score": 4,
+    "entry_type": "word",
+    "definition": "an effect, consequence, or result that an action, decision, or event will have on something in the future.",
+    "example": "The rapid development of artificial intelligence carries profound ethical and economic implications.",
+    "definitions": [
+      {
+        "definition": "an effect, consequence, or result that an action, decision, or event will have on something in the future.",
+        "vietnamese_meaning": "hệ quả tiềm tàng, tác động sâu xa trong tương lai",
+        "example": "The rapid development of artificial intelligence carries profound ethical and economic implications.",
+        "cefr_level": "C1",
+        "grammar_note": "noun [C]"
+      },
+      {
+        "definition": "an occasion when something is suggested, hinted at, or indirect rather than stated directly.",
+        "vietnamese_meaning": "hàm ý, ý tứ gián tiếp, lời nói bóng gió",
+        "example": "The clear implication of the report was that management had failed to enforce safety protocols.",
+        "cefr_level": "C1",
+        "grammar_note": "noun [C/U]"
+      },
+      {
+        "definition": "the fact of being involved in or connected to a crime or wrongdoing.",
+        "vietnamese_meaning": "sự dính líu, dính chấp vào hành vi sai trái",
+        "example": "The executive vigorously denied any implication in the bribery scandal.",
+        "cefr_level": "C2",
+        "grammar_note": "noun [U]"
+      }
+    ],
+    "collocations": [
+      {
+        "collocation": "profound / far-reaching implications",
+        "example": "The discovery of room-temperature superconductors would have far-reaching implications for global technology."
+      },
+      {
+        "collocation": "policy / financial implications",
+        "example": "Researchers evaluated the environmental and financial implications of offshore wind farms."
+      },
+      {
+        "collocation": "by implication",
+        "example": "By praising the successor, the chairman by implication criticized the former director."
+      }
+    ],
+    "word_family": {
+      "verb": [
+        "imply",
+        "implicate"
+      ],
+      "noun": [
+        "implication"
+      ],
+      "adjective": [
+        "implicit",
+        "implicated"
+      ],
+      "adverb": [
+        "implicitly"
+      ]
+    },
+    "semantic_field_id": "academic-discourse",
+    "semantic_field_label": "Academic Discourse & Analysis",
+    "semantic_field_words": [
+      {
+        "word": "implication",
+        "cefr": "C1",
+        "register": "academic"
+      },
+      {
+        "word": "consequence",
+        "cefr": "B2",
+        "register": "neutral"
+      },
+      {
+        "word": "significance",
+        "cefr": "B2",
+        "register": "formal"
+      }
+    ],
+    "register_synonyms": [
+      {
+        "word": "consequence",
+        "vietnamese_meaning": "hệ quả, hậu quả",
+        "register": "neutral",
+        "cefr": "B2"
+      },
+      {
+        "word": "ramification",
+        "vietnamese_meaning": "hệ quả phức tạp lan rộng",
+        "register": "academic",
+        "cefr": "C2"
+      },
+      {
+        "word": "connotation",
+        "vietnamese_meaning": "nghĩa bóng, hàm ý",
+        "register": "academic",
+        "cefr": "C1"
+      },
+      {
+        "word": "significance",
+        "vietnamese_meaning": "tầm quan trọng, ý nghĩa sâu xa",
+        "register": "formal",
+        "cefr": "B2"
+      }
+    ],
+    "antonyms": [
+      {
+        "word": "explicitness",
+        "vietnamese_meaning": "sự rõ ràng tường minh"
+      },
+      {
+        "word": "directness",
+        "vietnamese_meaning": "tính trực tiếp không vòng vo"
+      }
+    ],
+    "extra_examples": [
+      "Policymakers must carefully weigh the long-term implications of increasing national debt.",
+      "The implication that low test scores stem solely from poor teaching is overly simplistic."
+    ],
+    "folder_ids": [
+      "folder-4",
+      "folder-reading"
+    ],
+    "suggested_folder_name": "Academic Writing (Task 2)",
+    "review": {
+      "interval_days": 1,
+      "ease_factor": 2.5,
+      "due_date": "2026-09-02",
+      "repetition_count": 0,
+      "last_result": null
+    },
+    "stats": {
+      "encounters": 0,
+      "correct": 0,
+      "incorrect": 0
+    },
+    "is_learned": false
+  },
+  {
+    "id": "entry-infuriate",
+    "word": "infuriate",
+    "vietnamese_meaning": "làm phát điên, làm cho ai tức giận tột cùng, chọc giận",
+    "ipa_uk": "/ɪnˈfjʊə.ri.eɪt/",
+    "ipa_us": "/ɪnˈfjʊr.i.eɪt/",
+    "grammar_note": "verb [T]",
+    "cefr_level": "C1",
+    "register": "neutral",
+    "connotation": "negative",
+    "formality_score": 3,
+    "entry_type": "word",
+    "definition": "to make someone extremely angry, furious, or enraged.",
+    "example": "The airline's refusal to offer refunds or accommodations infuriated stranded passengers.",
+    "definitions": [
+      {
+        "definition": "to make someone extremely angry, furious, or enraged.",
+        "vietnamese_meaning": "làm tức điên lên, chọc giận tột cùng",
+        "example": "The airline's refusal to offer refunds or accommodations infuriated stranded passengers.",
+        "cefr_level": "C1",
+        "grammar_note": "transitive verb"
+      }
+    ],
+    "collocations": [
+      {
+        "collocation": "infuriate someone",
+        "example": "What infuriated citizens most was the complete lack of government transparency."
+      },
+      {
+        "collocation": "utterly / completely infuriate",
+        "example": "His constant interruptions and condescending tone utterly infuriated the panel."
+      },
+      {
+        "collocation": "it infuriates someone that / to see",
+        "example": "It infuriates local residents that public funds are squandered on vanity projects."
+      }
+    ],
+    "word_family": {
+      "verb": [
+        "infuriate"
+      ],
+      "noun": [
+        "fury"
+      ],
+      "adjective": [
+        "infuriating",
+        "infuriated",
+        "furious"
+      ],
+      "adverb": [
+        "infuriatingly",
+        "furiously"
+      ]
+    },
+    "semantic_field_id": "emotional-response",
+    "semantic_field_label": "Emotions & Psychological Reactions",
+    "semantic_field_words": [
+      {
+        "word": "infuriate",
+        "cefr": "C1",
+        "register": "neutral"
+      },
+      {
+        "word": "exasperate",
+        "cefr": "C2",
+        "register": "formal"
+      },
+      {
+        "word": "provoke",
+        "cefr": "B2",
+        "register": "neutral"
+      }
+    ],
+    "register_synonyms": [
+      {
+        "word": "enrage",
+        "vietnamese_meaning": "chọc giận lôi đình",
+        "register": "formal",
+        "cefr": "C1"
+      },
+      {
+        "word": "exasperate",
+        "vietnamese_meaning": "làm bực mình phát cáu",
+        "register": "formal",
+        "cefr": "C2"
+      },
+      {
+        "word": "incense",
+        "vietnamese_meaning": "làm nổi giận đùng đùng",
+        "register": "literary",
+        "cefr": "C2"
+      },
+      {
+        "word": "provoke",
+        "vietnamese_meaning": "khiêu khích, chọc tức",
+        "register": "neutral",
+        "cefr": "B2"
+      }
+    ],
+    "antonyms": [
+      {
+        "word": "placate",
+        "vietnamese_meaning": "xoa dịu cơn giận"
+      },
+      {
+        "word": "appease",
+        "vietnamese_meaning": "nhượng bộ xoa dịu"
+      },
+      {
+        "word": "soothe",
+        "vietnamese_meaning": "làm êm dịu, vỗ về"
+      },
+      {
+        "word": "pacify",
+        "vietnamese_meaning": "bình định, làm nguôi giận"
+      }
+    ],
+    "extra_examples": [
+      "It infuriates commuters when scheduled train services are canceled without warning.",
+      "The politician's evasive answers infuriated journalists questioning her during the press conference."
     ],
     "folder_ids": [
       "folder-4",
