@@ -487,25 +487,37 @@
           try {
             const parsed = JSON.parse(saved);
             let modified = false;
-            const updated = parsed.map(entry => {
+            let updated = parsed.map(entry => {
               if (!entry || typeof entry !== 'object') return entry;
-              if (!entry.collocations) {
-                const entryWord = (entry.word || '').toLowerCase();
-                if (!entryWord) {
-                  modified = true;
-                  return { ...entry, collocations: [] };
-                }
-                const match = INITIAL_ENTRIES.find(e => e.word.toLowerCase() === entryWord) ||
-                              EXTENDED_DICTIONARY_DB.find(e => e.word.toLowerCase() === entryWord);
-                if (match && match.collocations) {
-                  modified = true;
-                  return { ...entry, collocations: match.collocations };
-                } else {
-                  modified = true;
-                  return { ...entry, collocations: [] };
-                }
+              let item = { ...entry };
+              const entryWord = (item.word || '').toLowerCase();
+              const match = INITIAL_ENTRIES.find(e => e.word.toLowerCase() === entryWord) ||
+                            EXTENDED_DICTIONARY_DB.find(e => e.word.toLowerCase() === entryWord);
+
+              if (!item.collocations) {
+                item.collocations = (match && match.collocations) ? match.collocations : [];
+                modified = true;
               }
-              return entry;
+              if (!item.vietnamese_meaning && match && match.vietnamese_meaning) {
+                item.vietnamese_meaning = match.vietnamese_meaning;
+                if (item.definitions && Array.isArray(item.definitions)) {
+                  item.definitions = item.definitions.map(d => ({
+                    ...d,
+                    vietnamese_meaning: d.vietnamese_meaning || match.vietnamese_meaning
+                  }));
+                }
+                modified = true;
+              }
+              return item;
+            });
+
+            // Ensure any new INITIAL_ENTRIES are merged into localStorage state
+            const existingIds = new Set(updated.map(e => e.id));
+            INITIAL_ENTRIES.forEach(initE => {
+              if (!existingIds.has(initE.id)) {
+                updated.push(initE);
+                modified = true;
+              }
             });
             if (modified) {
               localStorage.setItem('lexicon_entries', JSON.stringify(updated));
@@ -1025,6 +1037,7 @@
       const [lookupError, setLookupError] = useState('');
 
       // Manual entry overrides in Add Modal
+      const [customVietnameseMeaning, setCustomVietnameseMeaning] = useState('');
       const [customDefinitions, setCustomDefinitions] = useState([]);
       const [customDefinition, setCustomDefinition] = useState('');
       const [customExample, setCustomExample] = useState('');
@@ -1614,14 +1627,16 @@
           if (matched) {
             const folderSuggestion = matched.suggested_folder_name || 'Academic Writing (Task 2)';
             setLookupResults(matched);
-            setCustomDefinitions(matched.definitions || [
+            setCustomVietnameseMeaning(matched.vietnamese_meaning || '');
+            setCustomDefinitions((matched.definitions || [
               {
                 definition: matched.definition,
+                vietnamese_meaning: matched.vietnamese_meaning || '',
                 example: matched.example,
                 cefr_level: matched.cefr_level,
                 grammar_note: matched.grammar_note
               }
-            ]);
+            ]).map(d => ({ ...d, vietnamese_meaning: d.vietnamese_meaning || matched.vietnamese_meaning || '' })));
             setCustomDefinition(matched.definition);
             setCustomExample(matched.example);
             setCustomCefr(matched.cefr_level);
@@ -2231,6 +2246,7 @@ IMPORTANT: If the Free Dictionary context contains a valid IPA pronunciation (ip
         const newEntry = {
           ...lookupResults,
           id: `entry-${Date.now()}`,
+          vietnamese_meaning: customVietnameseMeaning || (defs[0] && defs[0].vietnamese_meaning) || lookupResults.vietnamese_meaning || '',
           definitions: defs,
           definition: defs[0].definition,
           example: defs[0].example,
@@ -2503,9 +2519,11 @@ IMPORTANT: If the Free Dictionary context contains a valid IPA pronunciation (ip
           if (searchQuery.trim()) {
             const query = searchQuery.toLowerCase().trim();
             const matchesWord = entry.word.toLowerCase().includes(query);
-            const matchesDef = entry.definition.toLowerCase().includes(query);
-            const matchesField = entry.semantic_field_label.toLowerCase().includes(query);
-            if (!matchesWord && !matchesDef && !matchesField) return false;
+            const matchesDef = entry.definition && entry.definition.toLowerCase().includes(query);
+            const matchesField = entry.semantic_field_label && entry.semantic_field_label.toLowerCase().includes(query);
+            const matchesVI = entry.vietnamese_meaning && entry.vietnamese_meaning.toLowerCase().includes(query);
+            const matchesDefsVI = entry.definitions && entry.definitions.some(d => (d.vietnamese_meaning && d.vietnamese_meaning.toLowerCase().includes(query)) || (d.definition && d.definition.toLowerCase().includes(query)));
+            if (!matchesWord && !matchesDef && !matchesField && !matchesVI && !matchesDefsVI) return false;
           }
           if (filterCefr !== 'ALL' && entry.cefr_level !== filterCefr) {
             return false;
@@ -3490,6 +3508,11 @@ IMPORTANT: If the Free Dictionary context contains a valid IPA pronunciation (ip
                                           {currentEntry.cefr_level} • {currentEntry.grammar_note}
                                         </span>
                                       </div>
+                                      {currentEntry.vietnamese_meaning && (
+                                        <div style={{ fontWeight: '600', color: '#92400E', marginBottom: '4px' }}>
+                                          🇻🇳 Nghĩa: {currentEntry.vietnamese_meaning}
+                                        </div>
+                                      )}
                                       <div>{currentEntry.definition}</div>
                                     </div>
                                   ) : (
@@ -3584,6 +3607,25 @@ IMPORTANT: If the Free Dictionary context contains a valid IPA pronunciation (ip
                                 F{reviewQueue[currentReviewIndex].formality_score}/5
                               </span>
                             </div>
+
+                            {reviewQueue[currentReviewIndex].vietnamese_meaning && (
+                              <div style={{
+                                fontSize: '14px',
+                                fontWeight: '600',
+                                color: 'var(--accent)',
+                                backgroundColor: 'var(--accent-light)',
+                                padding: '8px 12px',
+                                borderRadius: '6px',
+                                marginBottom: '10px',
+                                textAlign: 'left',
+                                display: 'flex',
+                                alignItems: 'center',
+                                gap: '6px'
+                              }}>
+                                <span>🇻🇳</span>
+                                <span>{reviewQueue[currentReviewIndex].vietnamese_meaning}</span>
+                              </div>
+                            )}
 
                             <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginBottom: '12px', textAlign: 'left' }}>
                               {(() => {
@@ -4516,6 +4558,17 @@ service cloud.firestore {
                       </div>
                     </div>
 
+                    <div className="form-group">
+                      <label className="form-label">Vietnamese Meaning (Nghĩa tiếng Việt)</label>
+                      <input 
+                        type="text" 
+                        className="form-input" 
+                        placeholder="e.g. vô lý, phi lý, ngớ ngẩn"
+                        value={customVietnameseMeaning} 
+                        onChange={(e) => setCustomVietnameseMeaning(e.target.value)} 
+                      />
+                    </div>
+
                     <div className="form-row">
                       <div className="form-group">
                         <label className="form-label">Grammar Note</label>
@@ -4637,6 +4690,21 @@ service cloud.firestore {
                                   }}
                                 />
                               </div>
+                            </div>
+                            <div className="form-group">
+                              <label className="form-label" style={{ fontSize: '11px' }}>Vietnamese Meaning (Sense)</label>
+                              <input
+                                type="text"
+                                className="form-input"
+                                style={{ padding: '4px 8px', fontSize: '12px' }}
+                                placeholder="Nghĩa tiếng Việt cho nét nghĩa này..."
+                                value={d.vietnamese_meaning || ''}
+                                onChange={(e) => {
+                                    const next = [...customDefinitions];
+                                    next[index].vietnamese_meaning = e.target.value;
+                                    setCustomDefinitions(next);
+                                }}
+                              />
                             </div>
                             <div className="form-group">
                               <label className="form-label" style={{ fontSize: '11px' }}>Definition</label>
@@ -5440,6 +5508,25 @@ service cloud.firestore {
             </span>
           </div>
 
+          {entry.vietnamese_meaning && (
+            <div className="card-vietnamese-meaning" style={{
+              fontSize: '13.5px',
+              fontWeight: '600',
+              color: 'var(--accent)',
+              backgroundColor: 'var(--accent-light)',
+              padding: '6px 10px',
+              borderRadius: '6px',
+              margin: '6px 0 8px 0',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '6px',
+              textAlign: 'left'
+            }}>
+              <span style={{ fontSize: '13px' }}>🇻🇳</span>
+              <span>{entry.vietnamese_meaning}</span>
+            </div>
+          )}
+
           {entry.entry_type === 'phrasal_verb' && entry.conjugations && (
             <div className="conjugations-block" style={{ marginTop: '10px', marginBottom: '10px' }}>
               <div style={{ fontWeight: 'bold', fontSize: '11px', color: 'var(--text-muted)', marginBottom: '6px', textTransform: 'uppercase', letterSpacing: '0.5px' }}>Conjugations</div>
@@ -5947,6 +6034,25 @@ service cloud.firestore {
             </span>
           </div>
 
+          {activeEntry.vietnamese_meaning && (
+            <div className="detail-vietnamese-meaning" style={{
+              fontSize: '14.5px',
+              fontWeight: '600',
+              color: 'var(--accent)',
+              backgroundColor: 'var(--accent-light)',
+              padding: '8px 12px',
+              borderRadius: '8px',
+              margin: '8px 0 12px 0',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '8px',
+              textAlign: 'left'
+            }}>
+              <span style={{ fontSize: '15px' }}>🇻🇳</span>
+              <span>{activeEntry.vietnamese_meaning}</span>
+            </div>
+          )}
+
           {activeEntry.entry_type === 'phrasal_verb' && activeEntry.conjugations && (
             <div className="conjugations-block" style={{ marginTop: '10px', marginBottom: '10px' }}>
               <div style={{ fontWeight: 'bold', fontSize: '11px', color: 'var(--text-muted)', marginBottom: '6px', textTransform: 'uppercase', letterSpacing: '0.5px' }}>Conjugations</div>
@@ -6233,9 +6339,11 @@ service cloud.firestore {
     // ----------------------------------------------------
     function EditEntryModal({ entry, folders, onClose, onSave }) {
       const [word, setWord] = useState(entry.word);
+      const [vietnameseMeaning, setVietnameseMeaning] = useState(entry.vietnamese_meaning || '');
       const [definitions, setDefinitions] = useState(entry.definitions && entry.definitions.length > 0 ? entry.definitions : [
         {
           definition: entry.definition || '',
+          vietnamese_meaning: entry.vietnamese_meaning || '',
           example: entry.example || '',
           cefr_level: entry.cefr_level || 'B2',
           grammar_note: entry.grammar_note || ''
@@ -6302,6 +6410,7 @@ service cloud.firestore {
         const updated = {
           ...entry,
           word,
+          vietnamese_meaning: vietnameseMeaning || (defs[0] && defs[0].vietnamese_meaning) || '',
           definitions: defs,
           definition: defs[0].definition,
           example: defs[0].example,
@@ -6352,6 +6461,17 @@ service cloud.firestore {
                     <option value="collocation">Collocation</option>
                   </select>
                 </div>
+              </div>
+
+              <div className="form-group">
+                <label className="form-label">Vietnamese Meaning (Nghĩa tiếng Việt)</label>
+                <input
+                  type="text"
+                  className="form-input"
+                  placeholder="e.g. vô lý, phi lý, ngớ ngẩn"
+                  value={vietnameseMeaning}
+                  onChange={(e) => setVietnameseMeaning(e.target.value)}
+                />
               </div>
 
               <div className="form-row">
@@ -6501,6 +6621,21 @@ service cloud.firestore {
                             }}
                           />
                         </div>
+                      </div>
+                      <div className="form-group">
+                        <label className="form-label" style={{ fontSize: '11px' }}>Vietnamese Meaning (Sense)</label>
+                        <input
+                          type="text"
+                          className="form-input"
+                          style={{ padding: '4px 8px', fontSize: '12px' }}
+                          placeholder="Nghĩa tiếng Việt cho nét nghĩa này..."
+                          value={d.vietnamese_meaning || ''}
+                          onChange={(e) => {
+                            const next = [...definitions];
+                            next[index].vietnamese_meaning = e.target.value;
+                            setDefinitions(next);
+                          }}
+                        />
                       </div>
                       <div className="form-group">
                         <label className="form-label" style={{ fontSize: '11px' }}>Definition</label>

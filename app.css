@@ -2879,3 +2879,37 @@ body {
 .sidebar.collapsed .folder-badge-count {
   display: none !important;
 }
+
+/* Vietnamese Meaning Styling */
+.card-vietnamese-meaning {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--accent);
+  background-color: var(--accent-light);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  padding: 6px 10px;
+  border-radius: 6px;
+  margin: 6px 0 8px 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-align: left;
+  line-height: 1.4;
+}
+
+.detail-vietnamese-meaning {
+  font-size: 14.5px;
+  font-weight: 600;
+  color: var(--accent);
+  background-color: var(--accent-light);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  padding: 8px 12px;
+  border-radius: 8px;
+  margin: 8px 0 12px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-align: left;
+  line-height: 1.45;
+}
+
