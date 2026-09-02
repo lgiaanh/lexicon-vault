@@ -1012,6 +1012,9 @@
       const [clozeFeedback, setClozeFeedback] = useState(null); // null, 'correct', or 'incorrect'
       const [showClozeHint, setShowClozeHint] = useState(false);
       const [isCardRevealed, setIsCardRevealed] = useState(false);
+      const [reviewQuizQuestion, setReviewQuizQuestion] = useState(null);
+      const [reviewQuizSelected, setReviewQuizSelected] = useState(null);
+      const [reviewQuizFeedback, setReviewQuizFeedback] = useState(null);
       const [forecastDayIdx, setForecastDayIdx] = useState(0);
       const [speechActiveWord, setSpeechActiveWord] = useState(null); // Tracks active pronunciation
 
@@ -1419,6 +1422,9 @@
         setClozeInput('');
         setClozeFeedback(null);
         setShowClozeHint(false);
+        setReviewQuizQuestion(null);
+        setReviewQuizSelected(null);
+        setReviewQuizFeedback(null);
         if (reviewQueue && reviewQueue.length > 0 && currentReviewIndex < reviewQueue.length) {
           const currentEntry = reviewQueue[currentReviewIndex];
           if (currentEntry) {
@@ -1497,23 +1503,69 @@
         return alternatives[rotIdx] || defaultEx || '';
       };
 
-      // SM-2 Spaced Repetition calculations
+      // Generate interactive multiple-choice synonym/antonym quiz upon card reveal
+      const generateReviewQuiz = (entry, allEntries) => {
+        if (!entry) return null;
+        
+        const hasSyns = entry.register_synonyms && entry.register_synonyms.length > 0;
+        const hasAnts = entry.antonyms && entry.antonyms.length > 0;
+
+        let quizType = 'synonym';
+        let targetList = [];
+        if (hasAnts && (!hasSyns || Math.random() < 0.4)) {
+          quizType = 'antonym';
+          targetList = entry.antonyms;
+        } else if (hasSyns) {
+          quizType = 'synonym';
+          targetList = entry.register_synonyms;
+        }
+
+        if (!targetList || targetList.length === 0) {
+          if (entry.semantic_field_words && entry.semantic_field_words.length > 0) {
+            quizType = 'synonym';
+            targetList = entry.semantic_field_words.filter(w => (typeof w === 'string' ? w : w.word).toLowerCase() !== entry.word.toLowerCase());
+          }
+        }
+
+        if (!targetList || targetList.length === 0) return null;
+
+        const rawTarget = targetList[Math.floor(Math.random() * targetList.length)];
+        const correctWord = typeof rawTarget === 'string' ? rawTarget : rawTarget.word;
+        const correctMeaning = typeof rawTarget === 'object' && rawTarget.vietnamese_meaning ? rawTarget.vietnamese_meaning : '';
+
+        const otherEntries = (allEntries || []).filter(e => e.word.toLowerCase() !== entry.word.toLowerCase() && e.word.toLowerCase() !== correctWord.toLowerCase());
+        const shuffledOthers = [...otherEntries].sort(() => Math.random() - 0.5).slice(0, 3);
+        
+        const options = [
+          { word: correctWord, vietnamese_meaning: correctMeaning, isCorrect: true },
+          ...shuffledOthers.map(e => ({ word: e.word, vietnamese_meaning: e.vietnamese_meaning || '', isCorrect: false }))
+        ].sort(() => Math.random() - 0.5);
+
+        return {
+          type: quizType,
+          questionText: quizType === 'synonym' ? `Chọn từ đồng nghĩa (synonym) với "${entry.word}":` : `Chọn từ trái nghĩa (antonym) với "${entry.word}":`,
+          correctWord: correctWord,
+          options: options
+        };
+      };
+
+      // Refined Spaced Repetition calculations: 1 ngày, 2 ngày, 4 ngày, 7 ngày...
       const calculateSM2 = (quality, currentReview) => {
-        let count = currentReview.repetition_count || 0;
+        let count = (currentReview && currentReview.repetition_count) || 0;
         let interval = 1;
-        let ease = currentReview.ease_factor || 2.5;
+        let ease = (currentReview && currentReview.ease_factor) || 2.5;
 
         if (quality === 'again') {
           interval = 1;
           count = 0;
         } else if (quality === 'hard') {
-          interval = count + 2;
+          interval = count === 0 ? 1 : Math.max(1, count + 1);
           count += 1;
         } else if (quality === 'good') {
-          interval = count + 3;
+          interval = count === 0 ? 2 : Math.max(2, Math.round((count + 1) * 2));
           count += 1;
         } else if (quality === 'easy') {
-          interval = count + 4;
+          interval = count === 0 ? 4 : Math.max(4, Math.round((count + 1) * 3.5));
           count += 1;
         }
 
@@ -2569,6 +2621,10 @@ IMPORTANT: If the Free Dictionary context contains a valid IPA pronunciation (ip
           
           setClozeFeedback(isCorrect ? 'correct' : 'incorrect');
           setIsCardRevealed(true);
+          const curr = reviewQueue[currentReviewIndex];
+          setReviewQuizQuestion(generateReviewQuiz(curr, entries));
+          setReviewQuizSelected(null);
+          setReviewQuizFeedback(null);
         }
       };
 
@@ -3564,7 +3620,17 @@ IMPORTANT: If the Free Dictionary context contains a valid IPA pronunciation (ip
                         {!isCardRevealed ? (
                           <button 
                             className="btn btn-primary review-reveal-btn" 
-                            onClick={cardMode === 'cloze' ? handleCheckCloze : () => setIsCardRevealed(true)}
+                            onClick={() => {
+                              if (cardMode === 'cloze') {
+                                handleCheckCloze();
+                              } else {
+                                setIsCardRevealed(true);
+                                const curr = reviewQueue[currentReviewIndex];
+                                setReviewQuizQuestion(generateReviewQuiz(curr, entries));
+                                setReviewQuizSelected(null);
+                                setReviewQuizFeedback(null);
+                              }
+                            }}
                           >
                             {cardMode === 'cloze' ? 'Check Answer' : 'Reveal Definition'}
                           </button>
@@ -3703,35 +3769,198 @@ IMPORTANT: If the Free Dictionary context contains a valid IPA pronunciation (ip
                               </div>
                             )}
 
+                            {/* PARAPHRASE / SYNONYMS & ANTONYMS TABLE */}
+                            <div className="review-paraphrase-box" style={{
+                              backgroundColor: 'var(--bg-app)',
+                              border: '1px solid var(--border-muted)',
+                              borderRadius: '8px',
+                              padding: '12px 14px',
+                              marginBottom: '14px',
+                              textAlign: 'left'
+                            }}>
+                              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '12px' }}>
+                                <div>
+                                  <strong style={{ fontSize: '12px', color: '#2563EB', textTransform: 'uppercase', letterSpacing: '0.5px', display: 'flex', alignItems: 'center', gap: '4px', marginBottom: '6px' }}>
+                                    <span>🔄</span> Paraphrase / Synonyms:
+                                  </strong>
+                                  {reviewQueue[currentReviewIndex].register_synonyms && reviewQueue[currentReviewIndex].register_synonyms.length > 0 ? (
+                                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
+                                      {reviewQueue[currentReviewIndex].register_synonyms.map((s, idx) => (
+                                        <span key={idx} style={{
+                                          fontSize: '12.5px',
+                                          backgroundColor: '#EFF6FF',
+                                          color: '#1E40AF',
+                                          border: '1px solid #BFDBFE',
+                                          padding: '3px 8px',
+                                          borderRadius: '4px',
+                                          lineHeight: '1.4'
+                                        }}>
+                                          <strong>{typeof s === 'string' ? s : s.word}</strong>
+                                          {(s.vietnamese_meaning ? ` (${s.vietnamese_meaning})` : '')}
+                                        </span>
+                                      ))}
+                                    </div>
+                                  ) : (
+                                    <span style={{ fontSize: '12px', color: 'var(--text-muted)', fontStyle: 'italic' }}>None listed</span>
+                                  )}
+                                </div>
+
+                                <div>
+                                  <strong style={{ fontSize: '12px', color: '#DC2626', textTransform: 'uppercase', letterSpacing: '0.5px', display: 'flex', alignItems: 'center', gap: '4px', marginBottom: '6px' }}>
+                                    <span>⚡</span> Antonyms (Trái nghĩa):
+                                  </strong>
+                                  {reviewQueue[currentReviewIndex].antonyms && reviewQueue[currentReviewIndex].antonyms.length > 0 ? (
+                                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
+                                      {reviewQueue[currentReviewIndex].antonyms.map((a, idx) => (
+                                        <span key={idx} style={{
+                                          fontSize: '12.5px',
+                                          backgroundColor: '#FEF2F2',
+                                          color: '#991B1B',
+                                          border: '1px solid #FECACA',
+                                          padding: '3px 8px',
+                                          borderRadius: '4px',
+                                          lineHeight: '1.4'
+                                        }}>
+                                          <strong>{typeof a === 'string' ? a : a.word}</strong>
+                                          {(a.vietnamese_meaning ? ` (${a.vietnamese_meaning})` : '')}
+                                        </span>
+                                      ))}
+                                    </div>
+                                  ) : (
+                                    <span style={{ fontSize: '12px', color: 'var(--text-muted)', fontStyle: 'italic' }}>None listed</span>
+                                  )}
+                                </div>
+                              </div>
+                            </div>
+
+                            {/* MULTIPLE CHOICE QUICK CHECK QUIZ ON REVEAL */}
+                            {reviewQuizQuestion && (
+                              <div className="review-quiz-box" style={{
+                                backgroundColor: '#FFFBEB',
+                                border: '1.5px solid #F59E0B',
+                                borderRadius: '8px',
+                                padding: '14px 16px',
+                                marginBottom: '14px',
+                                textAlign: 'left'
+                              }}>
+                                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '8px', flexWrap: 'wrap', gap: '6px' }}>
+                                  <strong style={{ fontSize: '13px', color: '#B45309', display: 'flex', alignItems: 'center', gap: '6px' }}>
+                                    <span>🎯</span> Quick Quiz: {reviewQuizQuestion.questionText}
+                                  </strong>
+                                  <span style={{ fontSize: '10.5px', fontWeight: 'bold', textTransform: 'uppercase', backgroundColor: '#FEF3C7', color: '#92400E', padding: '2px 6px', borderRadius: '4px' }}>
+                                    {reviewQuizQuestion.type === 'synonym' ? 'Từ đồng nghĩa' : 'Từ trái nghĩa'}
+                                  </span>
+                                </div>
+
+                                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '8px', marginTop: '10px' }}>
+                                  {reviewQuizQuestion.options.map((opt, optIdx) => {
+                                    const isSelected = reviewQuizSelected === optIdx;
+                                    const hasAnswered = reviewQuizSelected !== null;
+                                    let btnStyle = {
+                                      display: 'flex',
+                                      alignItems: 'center',
+                                      justifyContent: 'space-between',
+                                      padding: '8px 12px',
+                                      borderRadius: '6px',
+                                      border: '1px solid #CBD5E1',
+                                      backgroundColor: 'white',
+                                      color: 'var(--text-main)',
+                                      cursor: hasAnswered ? 'default' : 'pointer',
+                                      fontSize: '13px',
+                                      transition: 'all 0.15s ease',
+                                      textAlign: 'left',
+                                      boxSizing: 'border-box'
+                                    };
+
+                                    if (hasAnswered) {
+                                      if (opt.isCorrect) {
+                                        btnStyle.backgroundColor = '#ECFDF5';
+                                        btnStyle.borderColor = '#10B981';
+                                        btnStyle.color = '#065F46';
+                                        btnStyle.fontWeight = 'bold';
+                                      } else if (isSelected && !opt.isCorrect) {
+                                        btnStyle.backgroundColor = '#FEF2F2';
+                                        btnStyle.borderColor = '#EF4444';
+                                        btnStyle.color = '#991B1B';
+                                      }
+                                    }
+
+                                    return (
+                                      <button
+                                        key={optIdx}
+                                        type="button"
+                                        style={btnStyle}
+                                        disabled={hasAnswered}
+                                        onClick={() => {
+                                          setReviewQuizSelected(optIdx);
+                                          setReviewQuizFeedback(opt.isCorrect);
+                                        }}
+                                      >
+                                        <span>
+                                          <strong style={{ marginRight: '4px' }}>{['A', 'B', 'C', 'D'][optIdx]}.</strong>
+                                          <span>{opt.word}</span>
+                                          {opt.vietnamese_meaning && (
+                                            <span style={{ color: 'var(--text-muted)', fontSize: '11.5px', marginLeft: '4px', fontStyle: 'italic' }}>
+                                              ({opt.vietnamese_meaning})
+                                            </span>
+                                          )}
+                                        </span>
+                                        {hasAnswered && opt.isCorrect && <span style={{ marginLeft: '6px' }}>✅</span>}
+                                        {hasAnswered && isSelected && !opt.isCorrect && <span style={{ marginLeft: '6px' }}>❌</span>}
+                                      </button>
+                                    );
+                                  })}
+                                </div>
+
+                                {reviewQuizFeedback !== null && (
+                                  <div style={{
+                                    marginTop: '10px',
+                                    fontSize: '12.5px',
+                                    fontWeight: '600',
+                                    color: reviewQuizFeedback ? '#047857' : '#B91C1C',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    gap: '6px'
+                                  }}>
+                                    {reviewQuizFeedback ? (
+                                      <span>✨ Chính xác! Bạn đã chọn đúng đáp án.</span>
+                                    ) : (
+                                      <span>❌ Chưa chính xác! Đáp án đúng là: <strong>{reviewQuizQuestion.correctWord}</strong></span>
+                                    )}
+                                  </div>
+                                )}
+                              </div>
+                            )}
+
                             {/* RATING OPTIONS */}
                             <div className="review-ratings-row">
-                              <button className="rating-btn rating-btn-again" onClick={() => handleRateCard('again')}>
-                                <span className="rating-btn-name">Again</span>
+                              <button className="rating-btn rating-btn-again" onClick={() => handleRateCard('again')} title="Ôn lại sau 1 ngày">
+                                <span className="rating-btn-name">Again (Học lại)</span>
                                 <span className="rating-btn-interval">
-                                  {calculateSM2('again', reviewQueue[currentReviewIndex].review).interval_days}d
+                                  {calculateSM2('again', reviewQueue[currentReviewIndex].review).interval_days} ngày
                                 </span>
                               </button>
-                              <button className="rating-btn rating-btn-hard" onClick={() => handleRateCard('hard')}>
-                                <span className="rating-btn-name">Hard</span>
+                              <button className="rating-btn rating-btn-hard" onClick={() => handleRateCard('hard')} title="Ôn lại sau 1-2 ngày">
+                                <span className="rating-btn-name">Hard (Khó)</span>
                                 <span className="rating-btn-interval">
-                                  {calculateSM2('hard', reviewQueue[currentReviewIndex].review).interval_days}d
+                                  {calculateSM2('hard', reviewQueue[currentReviewIndex].review).interval_days} ngày
                                 </span>
                               </button>
-                              <button className="rating-btn rating-btn-good" onClick={() => handleRateCard('good')}>
-                                <span className="rating-btn-name">Good</span>
+                              <button className="rating-btn rating-btn-good" onClick={() => handleRateCard('good')} title="Ôn lại sau 2-3 ngày">
+                                <span className="rating-btn-name">Good (Tốt)</span>
                                 <span className="rating-btn-interval">
-                                  {calculateSM2('good', reviewQueue[currentReviewIndex].review).interval_days}d
+                                  {calculateSM2('good', reviewQueue[currentReviewIndex].review).interval_days} ngày
                                 </span>
                               </button>
-                              <button className="rating-btn rating-btn-easy" onClick={() => handleRateCard('easy')}>
-                                <span className="rating-btn-name">Easy</span>
+                              <button className="rating-btn rating-btn-easy" onClick={() => handleRateCard('easy')} title="Ôn lại sau 4-7 ngày">
+                                <span className="rating-btn-name">Easy (Dễ)</span>
                                 <span className="rating-btn-interval">
-                                  {calculateSM2('easy', reviewQueue[currentReviewIndex].review).interval_days}d
+                                  {calculateSM2('easy', reviewQueue[currentReviewIndex].review).interval_days} ngày
                                 </span>
                               </button>
-                              <button className="rating-btn rating-btn-done" onClick={() => handleRateCard('done')}>
-                                <span className="rating-btn-name">Done</span>
-                                <span className="rating-btn-interval">Archive</span>
+                              <button className="rating-btn rating-btn-done" onClick={() => handleRateCard('done')} title="Đã thuộc hoàn toàn">
+                                <span className="rating-btn-name">Done (Thuộc)</span>
+                                <span className="rating-btn-interval">Hoàn thành</span>
                               </button>
                             </div>
                           </div>

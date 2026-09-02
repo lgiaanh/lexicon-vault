@@ -1,5 +1,5 @@
 // Lexicon Vault - Core Data & Local Storage Initializer
-// Standardized Cambridge & Oxford Advanced Learner Lexicon DB with Vietnamese Meanings
+// Standardized Cambridge & Oxford Advanced Learner Lexicon DB with Vietnamese Meanings, Synonyms & Antonyms
 
 const INITIAL_FOLDERS = [
   {
@@ -184,12 +184,14 @@ const INITIAL_ENTRIES = [
       {
         "word": "ridiculous",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "lố bịch, nực cười"
       },
       {
         "word": "preposterous",
         "register": "formal",
-        "cefr": "C2"
+        "cefr": "C2",
+        "vietnamese_meaning": "phi lý, ngớ ngẩn"
       }
     ],
     "folder_ids": [
@@ -205,7 +207,17 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.878Z",
     "source_context": "Added default database entry.",
-    "vietnamese_meaning": "vô lý, phi lý, ngớ ngẩn"
+    "vietnamese_meaning": "vô lý, phi lý, ngớ ngẩn",
+    "antonyms": [
+      {
+        "word": "logical",
+        "vietnamese_meaning": "hợp lý, logic"
+      },
+      {
+        "word": "reasonable",
+        "vietnamese_meaning": "hợp tình hợp lý"
+      }
+    ]
   },
   {
     "id": "entry-accommodate-population",
@@ -262,7 +274,8 @@ const INITIAL_ENTRIES = [
       {
         "word": "house the population",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "đáp ứng nhu cầu chỗ ở/sinh sống cho dân số thế giới"
       }
     ],
     "folder_ids": [
@@ -278,7 +291,8 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.878Z",
     "source_context": "Added default database entry.",
-    "vietnamese_meaning": "đáp ứng nhu cầu chỗ ở/sinh sống cho dân số thế giới"
+    "vietnamese_meaning": "đáp ứng nhu cầu chỗ ở/sinh sống cho dân số thế giới",
+    "antonyms": []
   },
   {
     "id": "entry-maintain-natural-balance",
@@ -340,7 +354,8 @@ const INITIAL_ENTRIES = [
       {
         "word": "keep ecosystems stable",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "duy trì sự cân bằng tự nhiên/sinh thái"
       }
     ],
     "folder_ids": [
@@ -357,7 +372,8 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.878Z",
     "source_context": "Added default database entry.",
-    "vietnamese_meaning": "duy trì sự cân bằng tự nhiên/sinh thái"
+    "vietnamese_meaning": "duy trì sự cân bằng tự nhiên/sinh thái",
+    "antonyms": []
   },
   {
     "id": "entry-plummet",
@@ -426,17 +442,20 @@ const INITIAL_ENTRIES = [
       {
         "word": "drop",
         "register": "neutral",
-        "cefr": "A2"
+        "cefr": "A2",
+        "vietnamese_meaning": "giảm xuống, hạ xuống"
       },
       {
         "word": "fall",
         "register": "neutral",
-        "cefr": "A1"
+        "cefr": "A1",
+        "vietnamese_meaning": "rơi xuống, sụt giảm"
       },
       {
         "word": "plunge",
         "register": "formal",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "lao dốc mạnh"
       }
     ],
     "folder_ids": [
@@ -452,7 +471,17 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.878Z",
     "source_context": "Added default database entry.",
-    "vietnamese_meaning": "lao dốc không phanh, giảm mạnh đột ngột"
+    "vietnamese_meaning": "lao dốc không phanh, giảm mạnh đột ngột",
+    "antonyms": [
+      {
+        "word": "soar",
+        "vietnamese_meaning": "bay vút lên, tăng vọt"
+      },
+      {
+        "word": "skyrocket",
+        "vietnamese_meaning": "tăng chóng mặt"
+      }
+    ]
   },
   {
     "id": "entry-inscription",
@@ -523,12 +552,14 @@ const INITIAL_ENTRIES = [
       {
         "word": "carving",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "chữ khắc, câu văn khắc (trên đá, bia)"
       },
       {
         "word": "writing",
         "register": "neutral",
-        "cefr": "A1"
+        "cefr": "A1",
+        "vietnamese_meaning": "chữ viết, tác phẩm viết"
       }
     ],
     "folder_ids": [
@@ -543,7 +574,8 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.878Z",
     "source_context": "Added default database entry.",
-    "vietnamese_meaning": "chữ khắc, câu văn khắc (trên đá, bia)"
+    "vietnamese_meaning": "chữ khắc, câu văn khắc (trên đá, bia)",
+    "antonyms": []
   },
   {
     "id": "entry-stamp",
@@ -622,12 +654,14 @@ const INITIAL_ENTRIES = [
       {
         "word": "mark",
         "register": "neutral",
-        "cefr": "A2"
+        "cefr": "A2",
+        "vietnamese_meaning": "con dấu, dấu mộc, tem; đóng dấu"
       },
       {
         "word": "seal",
         "register": "formal",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "con dấu niêm phong"
       }
     ],
     "folder_ids": [
@@ -642,7 +676,8 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.878Z",
     "source_context": "Added default database entry.",
-    "vietnamese_meaning": "con dấu, dấu mộc, tem; đóng dấu"
+    "vietnamese_meaning": "con dấu, dấu mộc, tem; đóng dấu",
+    "antonyms": []
   },
   {
     "id": "entry-cuneiform",
@@ -713,7 +748,8 @@ const INITIAL_ENTRIES = [
       {
         "word": "hieroglyphics",
         "register": "formal",
-        "cefr": "C2"
+        "cefr": "C2",
+        "vietnamese_meaning": "chữ hình nêm (chữ viết cổ Lưỡng Hà)"
       }
     ],
     "folder_ids": [
@@ -728,7 +764,8 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.878Z",
     "source_context": "Added default database entry.",
-    "vietnamese_meaning": "chữ hình nêm (chữ viết cổ Lưỡng Hà)"
+    "vietnamese_meaning": "chữ hình nêm (chữ viết cổ Lưỡng Hà)",
+    "antonyms": []
   },
   {
     "id": "entry-excavate",
@@ -800,12 +837,14 @@ const INITIAL_ENTRIES = [
       {
         "word": "dig up",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "đào lên, bới ra"
       },
       {
         "word": "unearth",
         "register": "formal",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "khai quật, phát hiện ra"
       }
     ],
     "folder_ids": [
@@ -820,7 +859,8 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.878Z",
     "source_context": "Added default database entry.",
-    "vietnamese_meaning": "khai quật, đào bới (khảo cổ)"
+    "vietnamese_meaning": "khai quật, đào bới (khảo cổ)",
+    "antonyms": []
   },
   {
     "id": "entry-die-out",
@@ -889,17 +929,20 @@ const INITIAL_ENTRIES = [
       {
         "word": "disappear",
         "register": "neutral",
-        "cefr": "A2"
+        "cefr": "A2",
+        "vietnamese_meaning": "biến mất hoàn toàn"
       },
       {
         "word": "become extinct",
         "register": "formal",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "tuyệt chủng, biến mất hoàn toàn"
       },
       {
         "word": "go extinct",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "tuyệt chủng, biến mất hoàn toàn"
       }
     ],
     "folder_ids": [
@@ -915,7 +958,17 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.878Z",
     "source_context": "Added default database entry.",
-    "vietnamese_meaning": "tuyệt chủng, biến mất hoàn toàn"
+    "vietnamese_meaning": "tuyệt chủng, biến mất hoàn toàn",
+    "antonyms": [
+      {
+        "word": "thrive",
+        "vietnamese_meaning": "phát triển mạnh mẽ"
+      },
+      {
+        "word": "survive",
+        "vietnamese_meaning": "sống sót"
+      }
+    ]
   },
   {
     "id": "entry-unintelligible",
@@ -989,12 +1042,14 @@ const INITIAL_ENTRIES = [
       {
         "word": "unclear",
         "register": "neutral",
-        "cefr": "A2"
+        "cefr": "A2",
+        "vietnamese_meaning": "không thể hiểu được, lí nhí khó nghe"
       },
       {
         "word": "incomprehensible",
         "register": "formal",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "không thể hiểu nổi"
       }
     ],
     "folder_ids": [
@@ -1009,7 +1064,17 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.878Z",
     "source_context": "Added default database entry.",
-    "vietnamese_meaning": "không thể hiểu được, lí nhí khó nghe"
+    "vietnamese_meaning": "không thể hiểu được, lí nhí khó nghe",
+    "antonyms": [
+      {
+        "word": "comprehensible",
+        "vietnamese_meaning": "dễ hiểu"
+      },
+      {
+        "word": "clear",
+        "vietnamese_meaning": "rõ ràng"
+      }
+    ]
   },
   {
     "id": "entry-inscribe",
@@ -1080,17 +1145,20 @@ const INITIAL_ENTRIES = [
       {
         "word": "carve",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "chạm khắc, đục đẽo"
       },
       {
         "word": "write",
         "register": "neutral",
-        "cefr": "A1"
+        "cefr": "A1",
+        "vietnamese_meaning": "khắc chữ, ghi tên, đề tặng"
       },
       {
         "word": "engrave",
         "register": "formal",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "khắc chữ, chạm trổ"
       }
     ],
     "folder_ids": [
@@ -1105,7 +1173,8 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.878Z",
     "source_context": "Added default database entry.",
-    "vietnamese_meaning": "khắc chữ, ghi tên, đề tặng"
+    "vietnamese_meaning": "khắc chữ, ghi tên, đề tặng",
+    "antonyms": []
   },
   {
     "id": "entry-cylinder",
@@ -1176,7 +1245,8 @@ const INITIAL_ENTRIES = [
       {
         "word": "tube",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "ống hình trụ"
       }
     ],
     "folder_ids": [
@@ -1191,7 +1261,8 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.878Z",
     "source_context": "Added default database entry.",
-    "vietnamese_meaning": "hình trụ, ống hình trụ"
+    "vietnamese_meaning": "hình trụ, ống hình trụ",
+    "antonyms": []
   },
   {
     "id": "entry-prolific",
@@ -1264,12 +1335,14 @@ const INITIAL_ENTRIES = [
       {
         "word": "productive",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "năng suất cao, sinh lợi nhiều"
       },
       {
         "word": "fruitful",
         "register": "formal",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "sai quả, gặt hái nhiều kết quả"
       }
     ],
     "folder_ids": [
@@ -1284,7 +1357,17 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.878Z",
     "source_context": "Added default database entry.",
-    "vietnamese_meaning": "sinh sôi nảy nở nhiều, sáng tác nhiều tác phẩm"
+    "vietnamese_meaning": "sinh sôi nảy nở nhiều, sáng tác nhiều tác phẩm",
+    "antonyms": [
+      {
+        "word": "unproductive",
+        "vietnamese_meaning": "không năng suất"
+      },
+      {
+        "word": "barren",
+        "vietnamese_meaning": "cằn cỗi"
+      }
+    ]
   },
   {
     "id": "entry-breed",
@@ -1367,12 +1450,14 @@ const INITIAL_ENTRIES = [
       {
         "word": "cause",
         "register": "neutral",
-        "cefr": "A2"
+        "cefr": "A2",
+        "vietnamese_meaning": "gây giống, nhân giống; nòi giống"
       },
       {
         "word": "generate",
         "register": "formal",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "gây giống, nhân giống; nòi giống"
       }
     ],
     "folder_ids": [
@@ -1387,7 +1472,8 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.878Z",
     "source_context": "Added default database entry.",
-    "vietnamese_meaning": "gây giống, nhân giống; nòi giống"
+    "vietnamese_meaning": "gây giống, nhân giống; nòi giống",
+    "antonyms": []
   },
   {
     "id": "entry-susceptible",
@@ -1460,12 +1546,14 @@ const INITIAL_ENTRIES = [
       {
         "word": "vulnerable",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "dễ bị tổn thương"
       },
       {
         "word": "prone to",
         "register": "formal",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "dễ bị ảnh hưởng, dễ mắc bệnh, nhạy cảm"
       }
     ],
     "folder_ids": [
@@ -1480,7 +1568,17 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.878Z",
     "source_context": "Added default database entry.",
-    "vietnamese_meaning": "dễ bị ảnh hưởng, dễ mắc bệnh, nhạy cảm"
+    "vietnamese_meaning": "dễ bị ảnh hưởng, dễ mắc bệnh, nhạy cảm",
+    "antonyms": [
+      {
+        "word": "immune",
+        "vietnamese_meaning": "miễn dịch"
+      },
+      {
+        "word": "resistant",
+        "vietnamese_meaning": "có sức kháng cự"
+      }
+    ]
   },
   {
     "id": "entry-adolescent",
@@ -1559,12 +1657,14 @@ const INITIAL_ENTRIES = [
       {
         "word": "teenager",
         "register": "neutral",
-        "cefr": "A2"
+        "cefr": "A2",
+        "vietnamese_meaning": "thanh thiếu niên (13-19 tuổi)"
       },
       {
         "word": "youth",
         "register": "formal",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "tuổi trẻ, thanh niên"
       }
     ],
     "folder_ids": [
@@ -1579,7 +1679,8 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.878Z",
     "source_context": "Added default database entry.",
-    "vietnamese_meaning": "thanh thiếu niên, tuổi dậy thì"
+    "vietnamese_meaning": "thanh thiếu niên, tuổi dậy thì",
+    "antonyms": []
   },
   {
     "id": "entry-youngster",
@@ -1650,12 +1751,14 @@ const INITIAL_ENTRIES = [
       {
         "word": "child",
         "register": "neutral",
-        "cefr": "A1"
+        "cefr": "A1",
+        "vietnamese_meaning": "người trẻ tuổi, thanh thiếu niên"
       },
       {
         "word": "youth",
         "register": "formal",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "tuổi trẻ, thanh niên"
       }
     ],
     "folder_ids": [
@@ -1670,7 +1773,8 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.878Z",
     "source_context": "Added default database entry.",
-    "vietnamese_meaning": "người trẻ tuổi, thanh thiếu niên"
+    "vietnamese_meaning": "người trẻ tuổi, thanh thiếu niên",
+    "antonyms": []
   },
   {
     "id": "entry-worsen",
@@ -1742,17 +1846,20 @@ const INITIAL_ENTRIES = [
       {
         "word": "get worse",
         "register": "neutral",
-        "cefr": "A2"
+        "cefr": "A2",
+        "vietnamese_meaning": "làm tồi tệ hơn, trở nên xấu đi"
       },
       {
         "word": "deteriorate",
         "register": "formal",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "xuống cấp, xấu đi"
       },
       {
         "word": "go downhill",
         "register": "informal",
-        "cefr": "C2"
+        "cefr": "C2",
+        "vietnamese_meaning": "làm tồi tệ hơn, trở nên xấu đi"
       }
     ],
     "folder_ids": [
@@ -1767,7 +1874,17 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.878Z",
     "source_context": "Added default database entry.",
-    "vietnamese_meaning": "làm tồi tệ hơn, trở nên xấu đi"
+    "vietnamese_meaning": "làm tồi tệ hơn, trở nên xấu đi",
+    "antonyms": [
+      {
+        "word": "improve",
+        "vietnamese_meaning": "cải thiện"
+      },
+      {
+        "word": "ameliorate",
+        "vietnamese_meaning": "làm tốt lên"
+      }
+    ]
   },
   {
     "id": "entry-obesity",
@@ -1838,7 +1955,8 @@ const INITIAL_ENTRIES = [
       {
         "word": "overweightness",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "bệnh béo phì"
       }
     ],
     "folder_ids": [
@@ -1853,7 +1971,8 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.878Z",
     "source_context": "Added default database entry.",
-    "vietnamese_meaning": "bệnh béo phì"
+    "vietnamese_meaning": "bệnh béo phì",
+    "antonyms": []
   },
   {
     "id": "entry-adversity",
@@ -1927,17 +2046,20 @@ const INITIAL_ENTRIES = [
       {
         "word": "difficulty",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "sự khó khăn"
       },
       {
         "word": "hardship",
         "register": "formal",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "sự gian khổ, thử thách"
       },
       {
         "word": "trouble",
         "register": "informal",
-        "cefr": "A2"
+        "cefr": "A2",
+        "vietnamese_meaning": "nghịch cảnh, sự khó khăn gian nan"
       }
     ],
     "folder_ids": [
@@ -1952,7 +2074,17 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.878Z",
     "source_context": "Added default database entry.",
-    "vietnamese_meaning": "nghịch cảnh, sự khó khăn gian nan"
+    "vietnamese_meaning": "nghịch cảnh, sự khó khăn gian nan",
+    "antonyms": [
+      {
+        "word": "prosperity",
+        "vietnamese_meaning": "sự thịnh vượng"
+      },
+      {
+        "word": "fortune",
+        "vietnamese_meaning": "may mắn"
+      }
+    ]
   },
   {
     "id": "entry-persevere",
@@ -2025,17 +2157,20 @@ const INITIAL_ENTRIES = [
       {
         "word": "persist",
         "register": "formal",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "kiên trì, cố chấp"
       },
       {
         "word": "keep going",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "kiên trì, bền chí vượt qua thử thách"
       },
       {
         "word": "hang in there",
         "register": "informal",
-        "cefr": "C2"
+        "cefr": "C2",
+        "vietnamese_meaning": "kiên trì, bền chí vượt qua thử thách"
       }
     ],
     "folder_ids": [
@@ -2051,7 +2186,17 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.878Z",
     "source_context": "Added default database entry.",
-    "vietnamese_meaning": "kiên trì, bền chí vượt qua thử thách"
+    "vietnamese_meaning": "kiên trì, bền chí vượt qua thử thách",
+    "antonyms": [
+      {
+        "word": "give up",
+        "vietnamese_meaning": "từ bỏ"
+      },
+      {
+        "word": "surrender",
+        "vietnamese_meaning": "đầu hàng"
+      }
+    ]
   },
   {
     "id": "entry-revolve-around",
@@ -2120,12 +2265,14 @@ const INITIAL_ENTRIES = [
       {
         "word": "focus on",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "tập trung vào"
       },
       {
         "word": "center on",
         "register": "formal",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "xoay quanh tâm điểm"
       }
     ],
     "folder_ids": [
@@ -2140,7 +2287,8 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.878Z",
     "source_context": "Added default database entry.",
-    "vietnamese_meaning": "xoay quanh, tập trung chủ yếu vào"
+    "vietnamese_meaning": "xoay quanh, tập trung chủ yếu vào",
+    "antonyms": []
   },
   {
     "id": "entry-civilize",
@@ -2226,17 +2374,20 @@ const INITIAL_ENTRIES = [
       {
         "word": "cultivate",
         "register": "formal",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "khai hóa, làm cho văn minh"
       },
       {
         "word": "educate",
         "register": "neutral",
-        "cefr": "A2"
+        "cefr": "A2",
+        "vietnamese_meaning": "giáo dục, rèn luyện"
       },
       {
         "word": "socialize",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "khai hóa, làm cho văn minh"
       }
     ],
     "folder_ids": [
@@ -2261,7 +2412,8 @@ const INITIAL_ENTRIES = [
         "example": "Cultural exchange programs help civilize societal interactions."
       }
     ],
-    "vietnamese_meaning": "khai hóa, làm cho văn minh"
+    "vietnamese_meaning": "khai hóa, làm cho văn minh",
+    "antonyms": []
   },
   {
     "id": "entry-carry-out",
@@ -2344,17 +2496,20 @@ const INITIAL_ENTRIES = [
       {
         "word": "perform",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "biểu diễn, tiến hành"
       },
       {
         "word": "execute",
         "register": "formal",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "thực hiện, thi hành"
       },
       {
         "word": "do",
         "register": "informal",
-        "cefr": "A1"
+        "cefr": "A1",
+        "vietnamese_meaning": "tiến hành, thực hiện (nghiên cứu, nhiệm vụ)"
       }
     ],
     "folder_ids": [
@@ -2380,7 +2535,8 @@ const INITIAL_ENTRIES = [
         "example": "Soldiers are expected to carry out orders without hesitation."
       }
     ],
-    "vietnamese_meaning": "tiến hành, thực hiện (nghiên cứu, nhiệm vụ)"
+    "vietnamese_meaning": "tiến hành, thực hiện (nghiên cứu, nhiệm vụ)",
+    "antonyms": []
   },
   {
     "id": "entry-look-into",
@@ -2463,17 +2619,20 @@ const INITIAL_ENTRIES = [
       {
         "word": "investigate",
         "register": "formal",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "điều tra, nghiên cứu"
       },
       {
         "word": "check out",
         "register": "informal",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "nghiên cứu, điều tra, xem xét kỹ"
       },
       {
         "word": "examine",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "kiểm tra, xem xét"
       }
     ],
     "folder_ids": [
@@ -2499,7 +2658,8 @@ const INITIAL_ENTRIES = [
         "example": "You should carefully look into the instructions before starting."
       }
     ],
-    "vietnamese_meaning": "nghiên cứu, điều tra, xem xét kỹ"
+    "vietnamese_meaning": "nghiên cứu, điều tra, xem xét kỹ",
+    "antonyms": []
   },
   {
     "id": "entry-cope-with",
@@ -2582,17 +2742,20 @@ const INITIAL_ENTRIES = [
       {
         "word": "deal with",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "đối phó, đương đầu với khó khăn"
       },
       {
         "word": "tackle",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "đối phó, đương đầu với khó khăn"
       },
       {
         "word": "get by",
         "register": "informal",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "đối phó, đương đầu với khó khăn"
       }
     ],
     "folder_ids": [
@@ -2618,7 +2781,8 @@ const INITIAL_ENTRIES = [
         "example": "The healthcare system struggled to cope with the demands of the pandemic."
       }
     ],
-    "vietnamese_meaning": "đối phó, đương đầu với khó khăn"
+    "vietnamese_meaning": "đối phó, đương đầu với khó khăn",
+    "antonyms": []
   },
   {
     "id": "entry-contaminate",
@@ -2699,17 +2863,20 @@ const INITIAL_ENTRIES = [
       {
         "word": "pollute",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "làm ô nhiễm"
       },
       {
         "word": "taint",
         "register": "formal",
-        "cefr": "C2"
+        "cefr": "C2",
+        "vietnamese_meaning": "làm nhơ bẩn, làm hỏng"
       },
       {
         "word": "dirty",
         "register": "informal",
-        "cefr": "A2"
+        "cefr": "A2",
+        "vietnamese_meaning": "làm ô nhiễm, làm nhiễm độc"
       }
     ],
     "folder_ids": [
@@ -2735,7 +2902,17 @@ const INITIAL_ENTRIES = [
         "example": "The soil near the old chemical plant was found to be heavily contaminated."
       }
     ],
-    "vietnamese_meaning": "làm ô nhiễm, làm nhiễm độc"
+    "vietnamese_meaning": "làm ô nhiễm, làm nhiễm độc",
+    "antonyms": [
+      {
+        "word": "purify",
+        "vietnamese_meaning": "làm tinh khiết"
+      },
+      {
+        "word": "decontaminate",
+        "vietnamese_meaning": "khử trùng"
+      }
+    ]
   },
   {
     "id": "entry-deforestation",
@@ -2808,12 +2985,14 @@ const INITIAL_ENTRIES = [
       {
         "word": "forest clearing",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "sự tàn phá rừng, nạn phá rừng"
       },
       {
         "word": "logging",
         "register": "neutral",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "việc đốn hạ cây rừng"
       }
     ],
     "folder_ids": [
@@ -2839,7 +3018,8 @@ const INITIAL_ENTRIES = [
         "example": "Widespread deforestation has led to severe soil erosion and flooding."
       }
     ],
-    "vietnamese_meaning": "sự tàn phá rừng, nạn phá rừng"
+    "vietnamese_meaning": "sự tàn phá rừng, nạn phá rừng",
+    "antonyms": []
   },
   {
     "id": "entry-disposable",
@@ -2919,12 +3099,14 @@ const INITIAL_ENTRIES = [
       {
         "word": "single-use",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "dùng một lần"
       },
       {
         "word": "throwaway",
         "register": "informal",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "dùng một lần rồi vứt"
       }
     ],
     "folder_ids": [
@@ -2950,7 +3132,13 @@ const INITIAL_ENTRIES = [
         "example": "The government is proposing a ban on single-use disposable packaging."
       }
     ],
-    "vietnamese_meaning": "dùng một lần; sẵn sàng để sử dụng"
+    "vietnamese_meaning": "dùng một lần; sẵn sàng để sử dụng",
+    "antonyms": [
+      {
+        "word": "reusable",
+        "vietnamese_meaning": "tái sử dụng được"
+      }
+    ]
   },
   {
     "id": "entry-offset",
@@ -3028,12 +3216,14 @@ const INITIAL_ENTRIES = [
       {
         "word": "compensate for",
         "register": "formal",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "bù đắp, đền bù, bù trừ lại"
       },
       {
         "word": "make up for",
         "register": "informal",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "bù đắp, đền bù, bù trừ lại"
       }
     ],
     "folder_ids": [
@@ -3059,7 +3249,13 @@ const INITIAL_ENTRIES = [
         "example": "The savings in fuel consumption will quickly offset the cost of the hybrid car."
       }
     ],
-    "vietnamese_meaning": "bù đắp, đền bù, bù trừ lại"
+    "vietnamese_meaning": "bù đắp, đền bù, bù trừ lại",
+    "antonyms": [
+      {
+        "word": "aggravate",
+        "vietnamese_meaning": "làm trầm trọng hơn"
+      }
+    ]
   },
   {
     "id": "entry-emigrate",
@@ -3138,17 +3334,20 @@ const INITIAL_ENTRIES = [
       {
         "word": "migrate",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "di cư, di trú"
       },
       {
         "word": "relocate",
         "register": "formal",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "chuyển địa điểm"
       },
       {
         "word": "move abroad",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "di cư, xuất cảnh định cư"
       }
     ],
     "folder_ids": [
@@ -3173,7 +3372,8 @@ const INITIAL_ENTRIES = [
         "example": "His grandparents emigrated in search of political stability and safety."
       }
     ],
-    "vietnamese_meaning": "di cư, xuất cảnh định cư"
+    "vietnamese_meaning": "di cư, xuất cảnh định cư",
+    "antonyms": []
   },
   {
     "id": "entry-escalate",
@@ -3258,17 +3458,20 @@ const INITIAL_ENTRIES = [
       {
         "word": "increase",
         "register": "neutral",
-        "cefr": "A2"
+        "cefr": "A2",
+        "vietnamese_meaning": "tăng lên, gia tăng"
       },
       {
         "word": "intensify",
         "register": "formal",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "tăng cường, làm sâu sắc thêm"
       },
       {
         "word": "grow rapidly",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "leo thang, gia tăng mức độ nghiêm trọng"
       }
     ],
     "folder_ids": [
@@ -3293,7 +3496,17 @@ const INITIAL_ENTRIES = [
         "example": "What began as a minor dispute escalated rapidly into a major conflict."
       }
     ],
-    "vietnamese_meaning": "leo thang, gia tăng mức độ nghiêm trọng"
+    "vietnamese_meaning": "leo thang, gia tăng mức độ nghiêm trọng",
+    "antonyms": [
+      {
+        "word": "de-escalate",
+        "vietnamese_meaning": "hạ nhiệt căng thẳng"
+      },
+      {
+        "word": "diminish",
+        "vietnamese_meaning": "giảm bớt"
+      }
+    ]
   },
   {
     "id": "entry-disturbing",
@@ -3387,17 +3600,20 @@ const INITIAL_ENTRIES = [
       {
         "word": "worrying",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "đáng lo ngại"
       },
       {
         "word": "troubling",
         "register": "formal",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "đáng lo ngại, gây băn khoăn trăn trở"
       },
       {
         "word": "upsetting",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "gây lo lắng, làm phiền lòng"
       }
     ],
     "folder_ids": [
@@ -3422,7 +3638,8 @@ const INITIAL_ENTRIES = [
         "example": "There is a disturbing trend of increasing mental stress among teenagers."
       }
     ],
-    "vietnamese_meaning": "đáng lo ngại, gây băn khoăn trăn trở"
+    "vietnamese_meaning": "đáng lo ngại, gây băn khoăn trăn trở",
+    "antonyms": []
   },
   {
     "id": "entry-innate",
@@ -3517,17 +3734,20 @@ const INITIAL_ENTRIES = [
       {
         "word": "inborn",
         "register": "neutral",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "bẩm sinh"
       },
       {
         "word": "inherent",
         "register": "formal",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "bẩm sinh, có sẵn từ nhỏ"
       },
       {
         "word": "natural",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "bẩm sinh, có sẵn từ nhỏ"
       }
     ],
     "folder_ids": [
@@ -3552,7 +3772,17 @@ const INITIAL_ENTRIES = [
         "example": "We must identify the underlying innate of this phenomenon."
       }
     ],
-    "vietnamese_meaning": "bẩm sinh, có sẵn từ nhỏ"
+    "vietnamese_meaning": "bẩm sinh, có sẵn từ nhỏ",
+    "antonyms": [
+      {
+        "word": "acquired",
+        "vietnamese_meaning": "do rèn luyện mà có"
+      },
+      {
+        "word": "learned",
+        "vietnamese_meaning": "học được"
+      }
+    ]
   },
   {
     "id": "entry-humiliate",
@@ -3652,17 +3882,20 @@ const INITIAL_ENTRIES = [
       {
         "word": "embarrass",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "làm ngượng ngùng, lúng túng"
       },
       {
         "word": "degrade",
         "register": "formal",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "làm nhục, làm bẽ mặt"
       },
       {
         "word": "put down",
         "register": "informal",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "làm nhục, làm bẽ mặt"
       }
     ],
     "folder_ids": [
@@ -3687,7 +3920,8 @@ const INITIAL_ENTRIES = [
         "example": "Implementing this policy will help humiliate the current situation."
       }
     ],
-    "vietnamese_meaning": "làm nhục, làm bẽ mặt"
+    "vietnamese_meaning": "làm nhục, làm bẽ mặt",
+    "antonyms": []
   },
   {
     "id": "entry-affair",
@@ -3787,17 +4021,20 @@ const INITIAL_ENTRIES = [
       {
         "word": "thing",
         "register": "informal",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "vấn đề, chuyện, sự vụ, công việc"
       },
       {
         "word": "matter",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "vấn đề, chuyện"
       },
       {
         "word": "concern",
         "register": "formal",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "vấn đề, chuyện, sự vụ, công việc"
       }
     ],
     "folder_ids": [
@@ -3822,7 +4059,8 @@ const INITIAL_ENTRIES = [
         "example": "We must identify the underlying affair of this phenomenon."
       }
     ],
-    "vietnamese_meaning": "vấn đề, chuyện, sự vụ, công việc"
+    "vietnamese_meaning": "vấn đề, chuyện, sự vụ, công việc",
+    "antonyms": []
   },
   {
     "id": "entry-adequate",
@@ -3920,17 +4158,20 @@ const INITIAL_ENTRIES = [
       {
         "word": "enough",
         "register": "informal",
-        "cefr": "A2"
+        "cefr": "A2",
+        "vietnamese_meaning": "đủ để dùng"
       },
       {
         "word": "sufficient",
         "register": "formal",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "đầy đủ, vừa đủ"
       },
       {
         "word": "satisfactory",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "đầy đủ, thỏa đáng, tương xứng"
       }
     ],
     "folder_ids": [
@@ -3955,7 +4196,13 @@ const INITIAL_ENTRIES = [
         "example": "The case study was particularly adequate to our research question."
       }
     ],
-    "vietnamese_meaning": "đầy đủ, thỏa đáng, tương xứng"
+    "vietnamese_meaning": "đầy đủ, thỏa đáng, tương xứng",
+    "antonyms": [
+      {
+        "word": "inadequate",
+        "vietnamese_meaning": "thiếu thốn, không thỏa đáng"
+      }
+    ]
   },
   {
     "id": "entry-amend",
@@ -4050,17 +4297,20 @@ const INITIAL_ENTRIES = [
       {
         "word": "modify",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "chỉnh sửa, sửa đổi"
       },
       {
         "word": "alter",
         "register": "academic",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "thay đổi"
       },
       {
         "word": "mod",
         "register": "informal",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "sửa đổi, bổ sung (luật, văn bản)"
       }
     ],
     "folder_ids": [
@@ -4086,7 +4336,13 @@ const INITIAL_ENTRIES = [
         "example": "Implementing this policy will help amend the current situation."
       }
     ],
-    "vietnamese_meaning": "sửa đổi, bổ sung (luật, văn bản)"
+    "vietnamese_meaning": "sửa đổi, bổ sung (luật, văn bản)",
+    "antonyms": [
+      {
+        "word": "preserve",
+        "vietnamese_meaning": "giữ nguyên"
+      }
+    ]
   },
   {
     "id": "entry-repeal",
@@ -4153,17 +4409,20 @@ const INITIAL_ENTRIES = [
       {
         "word": "cancel",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "hủy bỏ"
       },
       {
         "word": "abolish",
         "register": "formal",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "bãi bỏ hoàn toàn"
       },
       {
         "word": "scrap",
         "register": "informal",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "bãi bỏ, hủy bỏ (đạo luật chính thức)"
       }
     ],
     "folder_ids": [
@@ -4188,7 +4447,17 @@ const INITIAL_ENTRIES = [
         "example": "Implementing this policy will help repeal the current situation."
       }
     ],
-    "vietnamese_meaning": "bãi bỏ, hủy bỏ (đạo luật chính thức)"
+    "vietnamese_meaning": "bãi bỏ, hủy bỏ (đạo luật chính thức)",
+    "antonyms": [
+      {
+        "word": "enact",
+        "vietnamese_meaning": "ban hành luật"
+      },
+      {
+        "word": "reinstate",
+        "vietnamese_meaning": "khôi phục hiệu lực"
+      }
+    ]
   },
   {
     "id": "entry-legislate",
@@ -4256,7 +4525,8 @@ const INITIAL_ENTRIES = [
       {
         "word": "make laws",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "làm luật, lập pháp"
       }
     ],
     "folder_ids": [
@@ -4282,7 +4552,8 @@ const INITIAL_ENTRIES = [
         "example": "Implementing this policy will help legislate the current situation."
       }
     ],
-    "vietnamese_meaning": "lập pháp, ban hành pháp luật"
+    "vietnamese_meaning": "lập pháp, ban hành pháp luật",
+    "antonyms": []
   },
   {
     "id": "entry-enact",
@@ -4344,12 +4615,14 @@ const INITIAL_ENTRIES = [
       {
         "word": "pass",
         "register": "neutral",
-        "cefr": "A2"
+        "cefr": "A2",
+        "vietnamese_meaning": "thông qua (luật)"
       },
       {
         "word": "approve",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "tán thành, phê duyệt"
       }
     ],
     "folder_ids": [
@@ -4374,7 +4647,13 @@ const INITIAL_ENTRIES = [
         "example": "We studied the direct impact of enact on the ecosystem."
       }
     ],
-    "vietnamese_meaning": "ban hành (đạo luật), ban bố"
+    "vietnamese_meaning": "ban hành (đạo luật), ban bố",
+    "antonyms": [
+      {
+        "word": "repeal",
+        "vietnamese_meaning": "bãi bỏ luật"
+      }
+    ]
   },
   {
     "id": "entry-ratify",
@@ -4436,12 +4715,14 @@ const INITIAL_ENTRIES = [
       {
         "word": "approve",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "tán thành, phê duyệt"
       },
       {
         "word": "confirm",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "xác nhận, chuẩn y"
       }
     ],
     "folder_ids": [
@@ -4466,7 +4747,8 @@ const INITIAL_ENTRIES = [
         "example": "Implementing this policy will help ratify the current situation."
       }
     ],
-    "vietnamese_meaning": "phê chuẩn, thông qua hiệp ước/hiến pháp"
+    "vietnamese_meaning": "phê chuẩn, thông qua hiệp ước/hiến pháp",
+    "antonyms": []
   },
   {
     "id": "entry-revoke",
@@ -4528,12 +4810,14 @@ const INITIAL_ENTRIES = [
       {
         "word": "cancel",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "hủy bỏ"
       },
       {
         "word": "withdraw",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "rút lại, thu hồi"
       }
     ],
     "folder_ids": [
@@ -4558,7 +4842,8 @@ const INITIAL_ENTRIES = [
         "example": "Implementing this policy will help revoke the current situation."
       }
     ],
-    "vietnamese_meaning": "thu hồi, hủy bỏ hiệu lực (giấy phép, quyền hạn)"
+    "vietnamese_meaning": "thu hồi, hủy bỏ hiệu lực (giấy phép, quyền hạn)",
+    "antonyms": []
   },
   {
     "id": "entry-clause",
@@ -4613,12 +4898,14 @@ const INITIAL_ENTRIES = [
       {
         "word": "section",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "phần, đoạn"
       },
       {
         "word": "part",
         "register": "neutral",
-        "cefr": "A1"
+        "cefr": "A1",
+        "vietnamese_meaning": "điều khoản (hợp đồng, luật); mệnh đề"
       }
     ],
     "folder_ids": [
@@ -4643,7 +4930,8 @@ const INITIAL_ENTRIES = [
         "example": "We must identify the underlying clause of this phenomenon."
       }
     ],
-    "vietnamese_meaning": "điều khoản (hợp đồng, luật); mệnh đề"
+    "vietnamese_meaning": "điều khoản (hợp đồng, luật); mệnh đề",
+    "antonyms": []
   },
   {
     "id": "entry-provision",
@@ -4704,12 +4992,14 @@ const INITIAL_ENTRIES = [
       {
         "word": "rule",
         "register": "neutral",
-        "cefr": "A2"
+        "cefr": "A2",
+        "vietnamese_meaning": "điều khoản quy định; sự chu cấp dự phòng"
       },
       {
         "word": "condition",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "điều kiện, tình trạng"
       }
     ],
     "folder_ids": [
@@ -4735,7 +5025,8 @@ const INITIAL_ENTRIES = [
         "example": "We must identify the underlying provision of this phenomenon."
       }
     ],
-    "vietnamese_meaning": "điều khoản quy định; sự chu cấp dự phòng"
+    "vietnamese_meaning": "điều khoản quy định; sự chu cấp dự phòng",
+    "antonyms": []
   },
   {
     "id": "entry-abundance",
@@ -4831,27 +5122,32 @@ const INITIAL_ENTRIES = [
       {
         "word": "a lot of",
         "register": "neutral",
-        "cefr": "A1"
+        "cefr": "A1",
+        "vietnamese_meaning": "sự phong phú, sự dồi dào, sự dư dật"
       },
       {
         "word": "a bunch of",
         "register": "informal",
-        "cefr": "A2"
+        "cefr": "A2",
+        "vietnamese_meaning": "sự phong phú, sự dồi dào, sự dư dật"
       },
       {
         "word": "a great deal of",
         "register": "academic",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "sự phong phú, sự dồi dào, sự dư dật"
       },
       {
         "word": "plethora",
         "register": "formal",
-        "cefr": "C2"
+        "cefr": "C2",
+        "vietnamese_meaning": "sự phong phú, sự dồi dào, sự dư dật"
       },
       {
         "word": "myriad",
         "register": "literary",
-        "cefr": "C2"
+        "cefr": "C2",
+        "vietnamese_meaning": "sự phong phú, sự dồi dào, sự dư dật"
       }
     ],
     "folder_ids": [
@@ -4877,7 +5173,17 @@ const INITIAL_ENTRIES = [
         "example": "We must identify the underlying abundance of this phenomenon."
       }
     ],
-    "vietnamese_meaning": "sự phong phú, sự dồi dào, sự dư dật"
+    "vietnamese_meaning": "sự phong phú, sự dồi dào, sự dư dật",
+    "antonyms": [
+      {
+        "word": "scarcity",
+        "vietnamese_meaning": "sự khan hiếm"
+      },
+      {
+        "word": "dearth",
+        "vietnamese_meaning": "sự thiếu hụt"
+      }
+    ]
   },
   {
     "id": "entry-abundant",
@@ -4938,12 +5244,14 @@ const INITIAL_ENTRIES = [
       {
         "word": "plentiful",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "phong phú, dồi dào"
       },
       {
         "word": "lots of",
         "register": "informal",
-        "cefr": "A1"
+        "cefr": "A1",
+        "vietnamese_meaning": "phong phú, dồi dào, nhiều"
       }
     ],
     "folder_ids": [
@@ -4969,7 +5277,17 @@ const INITIAL_ENTRIES = [
         "example": "The case study was particularly abundant to our research question."
       }
     ],
-    "vietnamese_meaning": "phong phú, dồi dào, nhiều"
+    "vietnamese_meaning": "phong phú, dồi dào, nhiều",
+    "antonyms": [
+      {
+        "word": "scarce",
+        "vietnamese_meaning": "khan hiếm"
+      },
+      {
+        "word": "sparse",
+        "vietnamese_meaning": "thưa thớt"
+      }
+    ]
   },
   {
     "id": "entry-abound",
@@ -5030,12 +5348,14 @@ const INITIAL_ENTRIES = [
       {
         "word": "be full of",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "có rất nhiều, nhan nhản, dồi dào"
       },
       {
         "word": "be teeming with",
         "register": "literary",
-        "cefr": "C2"
+        "cefr": "C2",
+        "vietnamese_meaning": "có rất nhiều, nhan nhản, dồi dào"
       }
     ],
     "folder_ids": [
@@ -5060,7 +5380,8 @@ const INITIAL_ENTRIES = [
         "example": "Implementing this policy will help abound the current situation."
       }
     ],
-    "vietnamese_meaning": "có rất nhiều, nhan nhản, dồi dào"
+    "vietnamese_meaning": "có rất nhiều, nhan nhản, dồi dào",
+    "antonyms": []
   },
   {
     "id": "entry-abundantly",
@@ -5116,12 +5437,14 @@ const INITIAL_ENTRIES = [
       {
         "word": "extremely",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "một cách dồi dào, vô cùng rõ ràng/phong phú"
       },
       {
         "word": "very",
         "register": "neutral",
-        "cefr": "A1"
+        "cefr": "A1",
+        "vietnamese_meaning": "một cách dồi dào, vô cùng rõ ràng/phong phú"
       }
     ],
     "folder_ids": [
@@ -5146,7 +5469,8 @@ const INITIAL_ENTRIES = [
         "example": "Implementing this policy will help abundantly the current situation."
       }
     ],
-    "vietnamese_meaning": "một cách dồi dào, vô cùng rõ ràng/phong phú"
+    "vietnamese_meaning": "một cách dồi dào, vô cùng rõ ràng/phong phú",
+    "antonyms": []
   },
   {
     "id": "entry-dearth",
@@ -5201,12 +5525,14 @@ const INITIAL_ENTRIES = [
       {
         "word": "lack",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "sự thiếu sót"
       },
       {
         "word": "shortage",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "sự thiếu hụt"
       }
     ],
     "folder_ids": [
@@ -5232,7 +5558,17 @@ const INITIAL_ENTRIES = [
         "example": "We must identify the underlying dearth of this phenomenon."
       }
     ],
-    "vietnamese_meaning": "sự khan hiếm, sự thiếu hụt nghiêm trọng"
+    "vietnamese_meaning": "sự khan hiếm, sự thiếu hụt nghiêm trọng",
+    "antonyms": [
+      {
+        "word": "abundance",
+        "vietnamese_meaning": "sự dồi dào"
+      },
+      {
+        "word": "surplus",
+        "vietnamese_meaning": "sự thặng dư"
+      }
+    ]
   },
   {
     "id": "entry-scarcity",
@@ -5292,12 +5628,14 @@ const INITIAL_ENTRIES = [
       {
         "word": "shortage",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "sự thiếu hụt"
       },
       {
         "word": "undersupply",
         "register": "business",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "sự khan hiếm, sự thiếu hụt tài nguyên"
       }
     ],
     "folder_ids": [
@@ -5323,7 +5661,17 @@ const INITIAL_ENTRIES = [
         "example": "We must identify the underlying scarcity of this phenomenon."
       }
     ],
-    "vietnamese_meaning": "sự khan hiếm, sự thiếu hụt tài nguyên"
+    "vietnamese_meaning": "sự khan hiếm, sự thiếu hụt tài nguyên",
+    "antonyms": [
+      {
+        "word": "abundance",
+        "vietnamese_meaning": "sự phong phú"
+      },
+      {
+        "word": "plenty",
+        "vietnamese_meaning": "sự dồi dào"
+      }
+    ]
   },
   {
     "id": "entry-surplus",
@@ -5378,12 +5726,14 @@ const INITIAL_ENTRIES = [
       {
         "word": "extra",
         "register": "neutral",
-        "cefr": "A2"
+        "cefr": "A2",
+        "vietnamese_meaning": "phần dư thừa, thêm vào"
       },
       {
         "word": "leftover",
         "register": "informal",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "phần sót lại"
       }
     ],
     "folder_ids": [
@@ -5408,7 +5758,17 @@ const INITIAL_ENTRIES = [
         "example": "We must identify the underlying surplus of this phenomenon."
       }
     ],
-    "vietnamese_meaning": "sự thặng dư, số lượng dư thừa"
+    "vietnamese_meaning": "sự thặng dư, số lượng dư thừa",
+    "antonyms": [
+      {
+        "word": "deficit",
+        "vietnamese_meaning": "thâm hụt"
+      },
+      {
+        "word": "shortage",
+        "vietnamese_meaning": "sự thiếu thốn"
+      }
+    ]
   },
   {
     "id": "entry-deficit",
@@ -5467,12 +5827,14 @@ const INITIAL_ENTRIES = [
       {
         "word": "shortfall",
         "register": "neutral",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "sự thâm hụt số lượng"
       },
       {
         "word": "loss",
         "register": "neutral",
-        "cefr": "A2"
+        "cefr": "A2",
+        "vietnamese_meaning": "khoản lỗ, mất mát"
       }
     ],
     "folder_ids": [
@@ -5497,7 +5859,13 @@ const INITIAL_ENTRIES = [
         "example": "We must identify the underlying deficit of this phenomenon."
       }
     ],
-    "vietnamese_meaning": "thâm hụt, số tiền thiếu hụt"
+    "vietnamese_meaning": "thâm hụt, số tiền thiếu hụt",
+    "antonyms": [
+      {
+        "word": "surplus",
+        "vietnamese_meaning": "thặng dư"
+      }
+    ]
   },
   {
     "id": "entry-sufficiency",
@@ -5553,12 +5921,14 @@ const INITIAL_ENTRIES = [
       {
         "word": "adequacy",
         "register": "neutral",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "sự vừa đủ, thỏa đáng"
       },
       {
         "word": "enough",
         "register": "neutral",
-        "cefr": "A1"
+        "cefr": "A1",
+        "vietnamese_meaning": "đủ để dùng"
       }
     ],
     "folder_ids": [
@@ -5583,7 +5953,8 @@ const INITIAL_ENTRIES = [
         "example": "We must identify the underlying sufficiency of this phenomenon."
       }
     ],
-    "vietnamese_meaning": "sự đầy đủ, mức độ vừa đủ"
+    "vietnamese_meaning": "sự đầy đủ, mức độ vừa đủ",
+    "antonyms": []
   },
   {
     "id": "entry-excess",
@@ -5639,12 +6010,14 @@ const INITIAL_ENTRIES = [
       {
         "word": "too much",
         "register": "neutral",
-        "cefr": "A1"
+        "cefr": "A1",
+        "vietnamese_meaning": "sự vượt quá, sự dư thừa"
       },
       {
         "word": "overkill",
         "register": "informal",
-        "cefr": "C2"
+        "cefr": "C2",
+        "vietnamese_meaning": "sự vượt quá, sự dư thừa"
       }
     ],
     "folder_ids": [
@@ -5669,7 +6042,8 @@ const INITIAL_ENTRIES = [
         "example": "We must identify the underlying excess of this phenomenon."
       }
     ],
-    "vietnamese_meaning": "sự vượt quá, sự dư thừa"
+    "vietnamese_meaning": "sự vượt quá, sự dư thừa",
+    "antonyms": []
   },
   {
     "id": "entry-profusion",
@@ -5723,12 +6097,14 @@ const INITIAL_ENTRIES = [
       {
         "word": "abundance",
         "register": "formal",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "sự dồi dào, sự phong phú vô kể"
       },
       {
         "word": "wealth",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "sự giàu có, phong phú"
       }
     ],
     "folder_ids": [
@@ -5753,7 +6129,8 @@ const INITIAL_ENTRIES = [
         "example": "We must identify the underlying profusion of this phenomenon."
       }
     ],
-    "vietnamese_meaning": "sự dồi dào, sự phong phú vô kể"
+    "vietnamese_meaning": "sự dồi dào, sự phong phú vô kể",
+    "antonyms": []
   },
   {
     "id": "entry-plethora",
@@ -5805,12 +6182,14 @@ const INITIAL_ENTRIES = [
       {
         "word": "a lot of",
         "register": "neutral",
-        "cefr": "A1"
+        "cefr": "A1",
+        "vietnamese_meaning": "sự thừa thãi quá mức, vô vàn"
       },
       {
         "word": "glut",
         "register": "business",
-        "cefr": "C2"
+        "cefr": "C2",
+        "vietnamese_meaning": "sự thừa thãi quá mức, vô vàn"
       }
     ],
     "folder_ids": [
@@ -5836,7 +6215,8 @@ const INITIAL_ENTRIES = [
         "example": "We must identify the underlying plethora of this phenomenon."
       }
     ],
-    "vietnamese_meaning": "sự thừa thãi quá mức, vô vàn"
+    "vietnamese_meaning": "sự thừa thãi quá mức, vô vàn",
+    "antonyms": []
   },
   {
     "id": "entry-myriad",
@@ -5888,12 +6268,14 @@ const INITIAL_ENTRIES = [
       {
         "word": "thousands",
         "register": "neutral",
-        "cefr": "A2"
+        "cefr": "A2",
+        "vietnamese_meaning": "vô số, hằng hà sa số"
       },
       {
         "word": "countless",
         "register": "neutral",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "vô số, không đếm xuể"
       }
     ],
     "folder_ids": [
@@ -5919,7 +6301,8 @@ const INITIAL_ENTRIES = [
         "example": "We must identify the underlying myriad of this phenomenon."
       }
     ],
-    "vietnamese_meaning": "vô số, hằng hà sa số"
+    "vietnamese_meaning": "vô số, hằng hà sa số",
+    "antonyms": []
   },
   {
     "id": "entry-alter",
@@ -5981,17 +6364,20 @@ const INITIAL_ENTRIES = [
       {
         "word": "change",
         "register": "neutral",
-        "cefr": "A2"
+        "cefr": "A2",
+        "vietnamese_meaning": "thay đổi"
       },
       {
         "word": "amend",
         "register": "legal",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "thay đổi, biến đổi, sửa đổi"
       },
       {
         "word": "mod",
         "register": "informal",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "thay đổi, biến đổi, sửa đổi"
       }
     ],
     "folder_ids": [
@@ -6017,7 +6403,13 @@ const INITIAL_ENTRIES = [
         "example": "Implementing this policy will help alter the current situation."
       }
     ],
-    "vietnamese_meaning": "thay đổi, biến đổi, sửa đổi"
+    "vietnamese_meaning": "thay đổi, biến đổi, sửa đổi",
+    "antonyms": [
+      {
+        "word": "maintain",
+        "vietnamese_meaning": "duy trì không đổi"
+      }
+    ]
   },
   {
     "id": "entry-modify",
@@ -6077,17 +6469,20 @@ const INITIAL_ENTRIES = [
       {
         "word": "change",
         "register": "neutral",
-        "cefr": "A2"
+        "cefr": "A2",
+        "vietnamese_meaning": "thay đổi"
       },
       {
         "word": "amend",
         "register": "legal",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "chỉnh sửa, sửa đổi nhẹ để cải thiện"
       },
       {
         "word": "mod",
         "register": "informal",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "chỉnh sửa, sửa đổi nhẹ để cải thiện"
       }
     ],
     "folder_ids": [
@@ -6113,7 +6508,8 @@ const INITIAL_ENTRIES = [
         "example": "Implementing this policy will help modify the current situation."
       }
     ],
-    "vietnamese_meaning": "chỉnh sửa, sửa đổi nhẹ để cải thiện"
+    "vietnamese_meaning": "chỉnh sửa, sửa đổi nhẹ để cải thiện",
+    "antonyms": []
   },
   {
     "id": "entry-modulate",
@@ -6173,12 +6569,14 @@ const INITIAL_ENTRIES = [
       {
         "word": "adjust",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "điều chỉnh nhẹ"
       },
       {
         "word": "regulate",
         "register": "academic",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "điều tiết, quy định"
       }
     ],
     "folder_ids": [
@@ -6203,7 +6601,8 @@ const INITIAL_ENTRIES = [
         "example": "Implementing this policy will help modulate the current situation."
       }
     ],
-    "vietnamese_meaning": "điều chỉnh, biến đổi nhịp nhàng"
+    "vietnamese_meaning": "điều chỉnh, biến đổi nhịp nhàng",
+    "antonyms": []
   },
   {
     "id": "entry-reform",
@@ -6259,12 +6658,14 @@ const INITIAL_ENTRIES = [
       {
         "word": "improve",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "cải thiện, nâng cao"
       },
       {
         "word": "restructure",
         "register": "business",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "cải cách, đổi mới hệ thống"
       }
     ],
     "folder_ids": [
@@ -6290,7 +6691,8 @@ const INITIAL_ENTRIES = [
         "example": "Implementing this policy will help reform the current situation."
       }
     ],
-    "vietnamese_meaning": "cải cách, đổi mới hệ thống"
+    "vietnamese_meaning": "cải cách, đổi mới hệ thống",
+    "antonyms": []
   },
   {
     "id": "entry-mitigate",
@@ -6350,17 +6752,20 @@ const INITIAL_ENTRIES = [
       {
         "word": "ease",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "làm dịu bớt, giảm nhẹ"
       },
       {
         "word": "alleviate",
         "register": "formal",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "làm dịu bớt, giảm thiểu tác hại"
       },
       {
         "word": "dampen",
         "register": "informal",
-        "cefr": "C2"
+        "cefr": "C2",
+        "vietnamese_meaning": "làm dịu bớt, giảm thiểu tác hại"
       }
     ],
     "folder_ids": [
@@ -6386,7 +6791,17 @@ const INITIAL_ENTRIES = [
         "example": "Implementing this policy will help mitigate the current situation."
       }
     ],
-    "vietnamese_meaning": "làm dịu bớt, giảm thiểu tác hại"
+    "vietnamese_meaning": "làm dịu bớt, giảm thiểu tác hại",
+    "antonyms": [
+      {
+        "word": "exacerbate",
+        "vietnamese_meaning": "làm trầm trọng thêm"
+      },
+      {
+        "word": "intensify",
+        "vietnamese_meaning": "làm gia tăng"
+      }
+    ]
   },
   {
     "id": "entry-degradation",
@@ -6446,12 +6861,14 @@ const INITIAL_ENTRIES = [
       {
         "word": "spoilage",
         "register": "neutral",
-        "cefr": "C2"
+        "cefr": "C2",
+        "vietnamese_meaning": "sự suy thoái, sự xuống cấp (môi trường, chất lượng)"
       },
       {
         "word": "ruin",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "sự sụp đổ, tàn phá"
       }
     ],
     "folder_ids": [
@@ -6477,7 +6894,17 @@ const INITIAL_ENTRIES = [
         "example": "We must identify the underlying degradation of this phenomenon."
       }
     ],
-    "vietnamese_meaning": "sự suy thoái, sự xuống cấp (môi trường, chất lượng)"
+    "vietnamese_meaning": "sự suy thoái, sự xuống cấp (môi trường, chất lượng)",
+    "antonyms": [
+      {
+        "word": "restoration",
+        "vietnamese_meaning": "sự phục hồi"
+      },
+      {
+        "word": "improvement",
+        "vietnamese_meaning": "sự cải thiện"
+      }
+    ]
   },
   {
     "id": "entry-sustainability",
@@ -6538,7 +6965,8 @@ const INITIAL_ENTRIES = [
       {
         "word": "durability",
         "register": "neutral",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "độ bền lâu dài"
       }
     ],
     "folder_ids": [
@@ -6564,7 +6992,8 @@ const INITIAL_ENTRIES = [
         "example": "We must identify the underlying sustainability of this phenomenon."
       }
     ],
-    "vietnamese_meaning": "sự bền vững, tính bền vững môi trường"
+    "vietnamese_meaning": "sự bền vững, tính bền vững môi trường",
+    "antonyms": []
   },
   {
     "id": "entry-deplete",
@@ -6623,12 +7052,14 @@ const INITIAL_ENTRIES = [
       {
         "word": "drain",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "hút cạn, làm rỗng"
       },
       {
         "word": "run down",
         "register": "informal",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "làm cạn kiệt, suy giảm nguồn lực"
       }
     ],
     "folder_ids": [
@@ -6653,7 +7084,17 @@ const INITIAL_ENTRIES = [
         "example": "Implementing this policy will help deplete the current situation."
       }
     ],
-    "vietnamese_meaning": "làm cạn kiệt, suy giảm nguồn lực"
+    "vietnamese_meaning": "làm cạn kiệt, suy giảm nguồn lực",
+    "antonyms": [
+      {
+        "word": "replenish",
+        "vietnamese_meaning": "bổ sung lại đầy đủ"
+      },
+      {
+        "word": "restore",
+        "vietnamese_meaning": "khôi phục"
+      }
+    ]
   },
   {
     "id": "entry-put-something-down-to",
@@ -6695,12 +7136,14 @@ const INITIAL_ENTRIES = [
       {
         "word": "attribute to",
         "register": "academic",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "gán cho, quy cho là do"
       },
       {
         "word": "blame on",
         "register": "informal",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "quy cái gì là do nguyên nhân nào đó"
       }
     ],
     "folder_ids": [
@@ -6725,7 +7168,8 @@ const INITIAL_ENTRIES = [
         "example": "You should carefully put something down to the instructions before starting."
       }
     ],
-    "vietnamese_meaning": "quy cái gì là do nguyên nhân nào đó"
+    "vietnamese_meaning": "quy cái gì là do nguyên nhân nào đó",
+    "antonyms": []
   },
   {
     "id": "entry-put-off",
@@ -6767,17 +7211,20 @@ const INITIAL_ENTRIES = [
       {
         "word": "postpone",
         "register": "formal",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "hoãn lại ngày khác"
       },
       {
         "word": "delay",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "trì hoãn"
       },
       {
         "word": "procrastinate",
         "register": "academic",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "trì hoãn, hoãn lại; làm nản lòng"
       }
     ],
     "folder_ids": [
@@ -6802,7 +7249,13 @@ const INITIAL_ENTRIES = [
         "example": "You should carefully put off the instructions before starting."
       }
     ],
-    "vietnamese_meaning": "trì hoãn, hoãn lại; làm nản lòng"
+    "vietnamese_meaning": "trì hoãn, hoãn lại; làm nản lòng",
+    "antonyms": [
+      {
+        "word": "advance",
+        "vietnamese_meaning": "đẩy nhanh tiến độ"
+      }
+    ]
   },
   {
     "id": "entry-put-up",
@@ -6844,12 +7297,14 @@ const INITIAL_ENTRIES = [
       {
         "word": "construct",
         "register": "formal",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "dựng lên, cho ở nhờ, đăng tải"
       },
       {
         "word": "increase",
         "register": "neutral",
-        "cefr": "A2"
+        "cefr": "A2",
+        "vietnamese_meaning": "tăng lên, gia tăng"
       }
     ],
     "folder_ids": [
@@ -6874,7 +7329,8 @@ const INITIAL_ENTRIES = [
         "example": "You should carefully put up the instructions before starting."
       }
     ],
-    "vietnamese_meaning": "dựng lên, cho ở nhờ, đăng tải"
+    "vietnamese_meaning": "dựng lên, cho ở nhờ, đăng tải",
+    "antonyms": []
   },
   {
     "id": "entry-put-through",
@@ -6916,7 +7372,8 @@ const INITIAL_ENTRIES = [
       {
         "word": "connect",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "kết nối thông suốt"
       }
     ],
     "folder_ids": [
@@ -6941,7 +7398,8 @@ const INITIAL_ENTRIES = [
         "example": "You should carefully put through the instructions before starting."
       }
     ],
-    "vietnamese_meaning": "nối máy điện thoại; bắt ai phải trải qua chuyện gì"
+    "vietnamese_meaning": "nối máy điện thoại; bắt ai phải trải qua chuyện gì",
+    "antonyms": []
   },
   {
     "id": "entry-put-away",
@@ -6983,12 +7441,14 @@ const INITIAL_ENTRIES = [
       {
         "word": "store",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "lưu trữ, cất giữ"
       },
       {
         "word": "tidy up",
         "register": "informal",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "cất dọn đồ đạc vào đúng chỗ"
       }
     ],
     "folder_ids": [
@@ -7013,7 +7473,8 @@ const INITIAL_ENTRIES = [
         "example": "You should carefully put away the instructions before starting."
       }
     ],
-    "vietnamese_meaning": "cất dọn đồ đạc vào đúng chỗ"
+    "vietnamese_meaning": "cất dọn đồ đạc vào đúng chỗ",
+    "antonyms": []
   },
   {
     "id": "entry-put-forward",
@@ -7055,17 +7516,20 @@ const INITIAL_ENTRIES = [
       {
         "word": "propose",
         "register": "formal",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "đề xuất, kiến nghị"
       },
       {
         "word": "suggest",
         "register": "neutral",
-        "cefr": "A2"
+        "cefr": "A2",
+        "vietnamese_meaning": "gợi ý"
       },
       {
         "word": "posit",
         "register": "academic",
-        "cefr": "C2"
+        "cefr": "C2",
+        "vietnamese_meaning": "đề xuất, đưa ra ý kiến/kế hoạch"
       }
     ],
     "folder_ids": [
@@ -7091,7 +7555,8 @@ const INITIAL_ENTRIES = [
         "example": "You should carefully put forward the instructions before starting."
       }
     ],
-    "vietnamese_meaning": "đề xuất, đưa ra ý kiến/kế hoạch"
+    "vietnamese_meaning": "đề xuất, đưa ra ý kiến/kế hoạch",
+    "antonyms": []
   },
   {
     "id": "entry-burn-the-midnight-oil",
@@ -7129,12 +7594,14 @@ const INITIAL_ENTRIES = [
       {
         "word": "work late",
         "register": "neutral",
-        "cefr": "A2"
+        "cefr": "A2",
+        "vietnamese_meaning": "làm việc muộn ban đêm"
       },
       {
         "word": "study overnight",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "thức khuya làm việc/học bài"
       }
     ],
     "folder_ids": [
@@ -7160,7 +7627,8 @@ const INITIAL_ENTRIES = [
         "example": "You should carefully burn the midnight oil the instructions before starting."
       }
     ],
-    "vietnamese_meaning": "thức khuya làm việc/học bài"
+    "vietnamese_meaning": "thức khuya làm việc/học bài",
+    "antonyms": []
   },
   {
     "id": "entry-hit-the-nail-on-the-head",
@@ -7192,12 +7660,14 @@ const INITIAL_ENTRIES = [
       {
         "word": "be accurate",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "hoàn toàn chuẩn xác"
       },
       {
         "word": "be precise",
         "register": "formal",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "nói trúng phóc, chỉ đúng trọng tâm"
       }
     ],
     "folder_ids": [
@@ -7222,7 +7692,8 @@ const INITIAL_ENTRIES = [
         "example": "You should carefully hit the nail on the head the instructions before starting."
       }
     ],
-    "vietnamese_meaning": "nói trúng phóc, chỉ đúng trọng tâm"
+    "vietnamese_meaning": "nói trúng phóc, chỉ đúng trọng tâm",
+    "antonyms": []
   },
   {
     "id": "entry-make-a-decision",
@@ -7254,17 +7725,20 @@ const INITIAL_ENTRIES = [
       {
         "word": "decide",
         "register": "neutral",
-        "cefr": "A2"
+        "cefr": "A2",
+        "vietnamese_meaning": "đưa ra phán quyết, quyết định"
       },
       {
         "word": "resolve",
         "register": "formal",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "đưa ra quyết định"
       },
       {
         "word": "make up mind",
         "register": "informal",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "đưa ra quyết định"
       }
     ],
     "folder_ids": [
@@ -7289,7 +7763,8 @@ const INITIAL_ENTRIES = [
         "example": "You should carefully make a decision the instructions before starting."
       }
     ],
-    "vietnamese_meaning": "đưa ra quyết định"
+    "vietnamese_meaning": "đưa ra quyết định",
+    "antonyms": []
   },
   {
     "id": "entry-strong-argument",
@@ -7327,7 +7802,8 @@ const INITIAL_ENTRIES = [
       {
         "word": "compelling argument",
         "register": "academic",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "lập luận đanh thép, luận điểm thuyết phục"
       }
     ],
     "folder_ids": [
@@ -7352,7 +7828,8 @@ const INITIAL_ENTRIES = [
         "example": "You should carefully strong argument the instructions before starting."
       }
     ],
-    "vietnamese_meaning": "lập luận đanh thép, luận điểm thuyết phục"
+    "vietnamese_meaning": "lập luận đanh thép, luận điểm thuyết phục",
+    "antonyms": []
   },
   {
     "id": "entry-pay-attention",
@@ -7390,12 +7867,14 @@ const INITIAL_ENTRIES = [
       {
         "word": "focus on",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "tập trung vào"
       },
       {
         "word": "heed",
         "register": "literary",
-        "cefr": "C2"
+        "cefr": "C2",
+        "vietnamese_meaning": "chú ý, tập trung để tâm"
       }
     ],
     "folder_ids": [
@@ -7420,7 +7899,8 @@ const INITIAL_ENTRIES = [
         "example": "You should carefully pay attention the instructions before starting."
       }
     ],
-    "vietnamese_meaning": "chú ý, tập trung để tâm"
+    "vietnamese_meaning": "chú ý, tập trung để tâm",
+    "antonyms": []
   },
   {
     "id": "entry-draw-a-conclusion",
@@ -7458,7 +7938,8 @@ const INITIAL_ENTRIES = [
       {
         "word": "conclude",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "đi đến kết luận"
       }
     ],
     "folder_ids": [
@@ -7483,7 +7964,8 @@ const INITIAL_ENTRIES = [
         "example": "You should carefully draw a conclusion the instructions before starting."
       }
     ],
-    "vietnamese_meaning": "rút ra kết luận"
+    "vietnamese_meaning": "rút ra kết luận",
+    "antonyms": []
   },
   {
     "id": "entry-alleviate",
@@ -7533,17 +8015,20 @@ const INITIAL_ENTRIES = [
       {
         "word": "ease",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "làm dịu bớt, giảm nhẹ"
       },
       {
         "word": "lessen",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "làm dịu đi, thu nhỏ"
       },
       {
         "word": "reduce",
         "register": "neutral",
-        "cefr": "A2"
+        "cefr": "A2",
+        "vietnamese_meaning": "giảm bớt"
       }
     ],
     "folder_ids": [
@@ -7569,7 +8054,13 @@ const INITIAL_ENTRIES = [
         "example": "Implementing this policy will help alleviate the current situation."
       }
     ],
-    "vietnamese_meaning": "làm giảm bớt, xoa dịu (nỗi đau, gánh nặng)"
+    "vietnamese_meaning": "làm giảm bớt, xoa dịu (nỗi đau, gánh nặng)",
+    "antonyms": [
+      {
+        "word": "aggravate",
+        "vietnamese_meaning": "làm nặng thêm"
+      }
+    ]
   },
   {
     "id": "entry-conundrum",
@@ -7608,17 +8099,20 @@ const INITIAL_ENTRIES = [
       {
         "word": "puzzle",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "câu đố nan giải"
       },
       {
         "word": "dilemma",
         "register": "academic",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "câu hỏi hóc búa, vấn đề nan giải"
       },
       {
         "word": "tough spot",
         "register": "informal",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "câu hỏi hóc búa, vấn đề nan giải"
       }
     ],
     "folder_ids": [
@@ -7643,7 +8137,8 @@ const INITIAL_ENTRIES = [
         "example": "We must identify the underlying conundrum of this phenomenon."
       }
     ],
-    "vietnamese_meaning": "câu hỏi hóc búa, vấn đề nan giải"
+    "vietnamese_meaning": "câu hỏi hóc búa, vấn đề nan giải",
+    "antonyms": []
   },
   {
     "id": "entry-ubiquitous",
@@ -7687,17 +8182,20 @@ const INITIAL_ENTRIES = [
       {
         "word": "everywhere",
         "register": "neutral",
-        "cefr": "A2"
+        "cefr": "A2",
+        "vietnamese_meaning": "phổ biến khắp nơi, ở đâu cũng có"
       },
       {
         "word": "widespread",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "phổ biến khắp nơi, ở đâu cũng có"
       },
       {
         "word": "all over the place",
         "register": "informal",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "phổ biến khắp nơi, ở đâu cũng có"
       }
     ],
     "folder_ids": [
@@ -7722,7 +8220,17 @@ const INITIAL_ENTRIES = [
         "example": "The case study was particularly ubiquitous to our research question."
       }
     ],
-    "vietnamese_meaning": "phổ biến khắp nơi, ở đâu cũng có"
+    "vietnamese_meaning": "phổ biến khắp nơi, ở đâu cũng có",
+    "antonyms": [
+      {
+        "word": "rare",
+        "vietnamese_meaning": "hiếm thấy"
+      },
+      {
+        "word": "scarce",
+        "vietnamese_meaning": "ít gặp"
+      }
+    ]
   },
   {
     "id": "entry-pick-up",
@@ -7789,12 +8297,14 @@ const INITIAL_ENTRIES = [
       {
         "word": "learn",
         "register": "neutral",
-        "cefr": "A1"
+        "cefr": "A1",
+        "vietnamese_meaning": "học được, tiếp thu"
       },
       {
         "word": "acquire",
         "register": "formal",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "học lỏm được, nhặt lên, đón ai"
       }
     ],
     "folder_ids": [
@@ -7820,7 +8330,8 @@ const INITIAL_ENTRIES = [
         "example": "You should carefully pick up the instructions before starting."
       }
     ],
-    "vietnamese_meaning": "học lỏm được, nhặt lên, đón ai"
+    "vietnamese_meaning": "học lỏm được, nhặt lên, đón ai",
+    "antonyms": []
   },
   {
     "id": "entry-look-back-on",
@@ -7880,17 +8391,20 @@ const INITIAL_ENTRIES = [
       {
         "word": "remember",
         "register": "neutral",
-        "cefr": "A1"
+        "cefr": "A1",
+        "vietnamese_meaning": "nhìn lại, hồi tưởng về quá khứ"
       },
       {
         "word": "recollect",
         "register": "formal",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "nhìn lại, hồi tưởng về quá khứ"
       },
       {
         "word": "reminisce",
         "register": "literary",
-        "cefr": "C2"
+        "cefr": "C2",
+        "vietnamese_meaning": "hồi tưởng, nhớ lại kỷ niệm"
       }
     ],
     "folder_ids": [
@@ -7915,7 +8429,8 @@ const INITIAL_ENTRIES = [
         "example": "You should carefully look back on the instructions before starting."
       }
     ],
-    "vietnamese_meaning": "nhìn lại, hồi tưởng về quá khứ"
+    "vietnamese_meaning": "nhìn lại, hồi tưởng về quá khứ",
+    "antonyms": []
   },
   {
     "id": "entry-wind-down",
@@ -7973,17 +8488,20 @@ const INITIAL_ENTRIES = [
       {
         "word": "relax",
         "register": "neutral",
-        "cefr": "A1"
+        "cefr": "A1",
+        "vietnamese_meaning": "thư giãn, thả lỏng"
       },
       {
         "word": "unwind",
         "register": "neutral",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "thư giãn dần, nghỉ ngơi sau thời gian căng thẳng"
       },
       {
         "word": "chill out",
         "register": "informal",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "thư giãn dần, nghỉ ngơi sau thời gian căng thẳng"
       }
     ],
     "folder_ids": [
@@ -8008,7 +8526,8 @@ const INITIAL_ENTRIES = [
         "example": "You should carefully wind down the instructions before starting."
       }
     ],
-    "vietnamese_meaning": "thư giãn dần, nghỉ ngơi sau thời gian căng thẳng"
+    "vietnamese_meaning": "thư giãn dần, nghỉ ngơi sau thời gian căng thẳng",
+    "antonyms": []
   },
   {
     "id": "entry-get-along-with",
@@ -8068,12 +8587,14 @@ const INITIAL_ENTRIES = [
       {
         "word": "get on with",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "hòa thuận với, có mối quan hệ tốt với ai"
       },
       {
         "word": "cooperate",
         "register": "formal",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "hòa thuận với, có mối quan hệ tốt với ai"
       }
     ],
     "folder_ids": [
@@ -8098,7 +8619,8 @@ const INITIAL_ENTRIES = [
         "example": "You should carefully get along with the instructions before starting."
       }
     ],
-    "vietnamese_meaning": "hòa thuận với, có mối quan hệ tốt với ai"
+    "vietnamese_meaning": "hòa thuận với, có mối quan hệ tốt với ai",
+    "antonyms": []
   },
   {
     "id": "entry-carry-on",
@@ -8157,17 +8679,20 @@ const INITIAL_ENTRIES = [
       {
         "word": "continue",
         "register": "neutral",
-        "cefr": "A2"
+        "cefr": "A2",
+        "vietnamese_meaning": "tiếp tục duy trì"
       },
       {
         "word": "persist",
         "register": "formal",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "kiên trì, cố chấp"
       },
       {
         "word": "keep on",
         "register": "informal",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "tiếp tục làm gì đó"
       }
     ],
     "folder_ids": [
@@ -8192,7 +8717,8 @@ const INITIAL_ENTRIES = [
         "example": "You should carefully carry on the instructions before starting."
       }
     ],
-    "vietnamese_meaning": "tiếp tục làm gì đó"
+    "vietnamese_meaning": "tiếp tục làm gì đó",
+    "antonyms": []
   },
   {
     "id": "entry-keen-on",
@@ -8255,12 +8781,14 @@ const INITIAL_ENTRIES = [
       {
         "word": "fond of",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "yêu thích, chuộng"
       },
       {
         "word": "interested in",
         "register": "neutral",
-        "cefr": "A1"
+        "cefr": "A1",
+        "vietnamese_meaning": "say mê, rất thích thú với"
       }
     ],
     "folder_ids": [
@@ -8285,7 +8813,8 @@ const INITIAL_ENTRIES = [
         "example": "You should carefully keen on the instructions before starting."
       }
     ],
-    "vietnamese_meaning": "say mê, rất thích thú với"
+    "vietnamese_meaning": "say mê, rất thích thú với",
+    "antonyms": []
   },
   {
     "id": "entry-wear-out",
@@ -8351,12 +8880,14 @@ const INITIAL_ENTRIES = [
       {
         "word": "tire",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "làm mệt mỏi"
       },
       {
         "word": "exhaust",
         "register": "formal",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "làm kiệt quệ, cạn kiệt"
       }
     ],
     "folder_ids": [
@@ -8381,7 +8912,8 @@ const INITIAL_ENTRIES = [
         "example": "You should carefully wear out the instructions before starting."
       }
     ],
-    "vietnamese_meaning": "làm kiệt sức, làm mòn rách"
+    "vietnamese_meaning": "làm kiệt sức, làm mòn rách",
+    "antonyms": []
   },
   {
     "id": "entry-hypothesis",
@@ -8446,12 +8978,14 @@ const INITIAL_ENTRIES = [
       {
         "word": "theory",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "lý thuyết, giả thuyết"
       },
       {
         "word": "assumption",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "giả thuyết (khoa học)"
       }
     ],
     "folder_ids": [
@@ -8477,7 +9011,8 @@ const INITIAL_ENTRIES = [
         "example": "We must identify the underlying hypothesis of this phenomenon."
       }
     ],
-    "vietnamese_meaning": "giả thuyết (khoa học)"
+    "vietnamese_meaning": "giả thuyết (khoa học)",
+    "antonyms": []
   },
   {
     "id": "entry-paradigm",
@@ -8540,12 +9075,14 @@ const INITIAL_ENTRIES = [
       {
         "word": "model",
         "register": "neutral",
-        "cefr": "A2"
+        "cefr": "A2",
+        "vietnamese_meaning": "mô hình kiểu mẫu"
       },
       {
         "word": "pattern",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "mô hình mẫu, hệ hình tư duy"
       }
     ],
     "folder_ids": [
@@ -8571,7 +9108,8 @@ const INITIAL_ENTRIES = [
         "example": "We must identify the underlying paradigm of this phenomenon."
       }
     ],
-    "vietnamese_meaning": "mô hình mẫu, hệ hình tư duy"
+    "vietnamese_meaning": "mô hình mẫu, hệ hình tư duy",
+    "antonyms": []
   },
   {
     "id": "entry-refute",
@@ -8636,12 +9174,14 @@ const INITIAL_ENTRIES = [
       {
         "word": "disprove",
         "register": "formal",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "bác bỏ, chứng minh là sai"
       },
       {
         "word": "deny",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "bác bỏ, phản bác (lập luận, cáo buộc)"
       }
     ],
     "folder_ids": [
@@ -8667,7 +9207,17 @@ const INITIAL_ENTRIES = [
         "example": "Implementing this policy will help refute the current situation."
       }
     ],
-    "vietnamese_meaning": "bác bỏ, phản bác (lập luận, cáo buộc)"
+    "vietnamese_meaning": "bác bỏ, phản bác (lập luận, cáo buộc)",
+    "antonyms": [
+      {
+        "word": "corroborate",
+        "vietnamese_meaning": "chứng thực"
+      },
+      {
+        "word": "confirm",
+        "vietnamese_meaning": "xác nhận"
+      }
+    ]
   },
   {
     "id": "entry-corroborate",
@@ -8730,12 +9280,14 @@ const INITIAL_ENTRIES = [
       {
         "word": "confirm",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "xác nhận, chuẩn y"
       },
       {
         "word": "back up",
         "register": "informal",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "chứng thực, củng cố (bằng chứng, lời khai)"
       }
     ],
     "folder_ids": [
@@ -8761,7 +9313,17 @@ const INITIAL_ENTRIES = [
         "example": "Implementing this policy will help corroborate the current situation."
       }
     ],
-    "vietnamese_meaning": "chứng thực, củng cố (bằng chứng, lời khai)"
+    "vietnamese_meaning": "chứng thực, củng cố (bằng chứng, lời khai)",
+    "antonyms": [
+      {
+        "word": "refute",
+        "vietnamese_meaning": "bác bỏ"
+      },
+      {
+        "word": "disprove",
+        "vietnamese_meaning": "bác bỏ bằng chứng"
+      }
+    ]
   },
   {
     "id": "entry-scrutinize",
@@ -8823,12 +9385,14 @@ const INITIAL_ENTRIES = [
       {
         "word": "inspect",
         "register": "formal",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "thanh tra, soi xét"
       },
       {
         "word": "go over",
         "register": "informal",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "xem xét kỹ lưỡng, soi xét cẩn thận"
       }
     ],
     "folder_ids": [
@@ -8854,7 +9418,17 @@ const INITIAL_ENTRIES = [
         "example": "Implementing this policy will help scrutinize the current situation."
       }
     ],
-    "vietnamese_meaning": "xem xét kỹ lưỡng, soi xét cẩn thận"
+    "vietnamese_meaning": "xem xét kỹ lưỡng, soi xét cẩn thận",
+    "antonyms": [
+      {
+        "word": "glance at",
+        "vietnamese_meaning": "nhìn lướt qua"
+      },
+      {
+        "word": "overlook",
+        "vietnamese_meaning": "bỏ qua, xem nhẹ"
+      }
+    ]
   },
   {
     "id": "entry-doctrine",
@@ -8936,17 +9510,20 @@ const INITIAL_ENTRIES = [
       {
         "word": "dogma",
         "register": "formal",
-        "cefr": "C2"
+        "cefr": "C2",
+        "vietnamese_meaning": "học thuyết, giáo lý, chủ thuyết"
       },
       {
         "word": "ideology",
         "register": "neutral",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "học thuyết, giáo lý, chủ thuyết"
       },
       {
         "word": "principle",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "học thuyết, giáo lý, chủ thuyết"
       }
     ],
     "folder_ids": [
@@ -8971,7 +9548,8 @@ const INITIAL_ENTRIES = [
         "example": "We must identify the underlying doctrine of this phenomenon."
       }
     ],
-    "vietnamese_meaning": "học thuyết, giáo lý, chủ thuyết"
+    "vietnamese_meaning": "học thuyết, giáo lý, chủ thuyết",
+    "antonyms": []
   },
   {
     "id": "entry-formidable",
@@ -9051,17 +9629,20 @@ const INITIAL_ENTRIES = [
       {
         "word": "intimidating",
         "register": "neutral",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "đáng sợ, hăm dọa"
       },
       {
         "word": "daunting",
         "register": "neutral",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "làm nản lòng, đáng gờm"
       },
       {
         "word": "challenging",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "ghê gớm, đáng gờm, dữ dội"
       }
     ],
     "folder_ids": [
@@ -9086,7 +9667,8 @@ const INITIAL_ENTRIES = [
         "example": "The case study was particularly formidable to our research question."
       }
     ],
-    "vietnamese_meaning": "ghê gớm, đáng gờm, dữ dội"
+    "vietnamese_meaning": "ghê gớm, đáng gờm, dữ dội",
+    "antonyms": []
   },
   {
     "id": "entry-prominence",
@@ -9167,17 +9749,20 @@ const INITIAL_ENTRIES = [
       {
         "word": "distinction",
         "register": "formal",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "sự ưu tú, lỗi lạc"
       },
       {
         "word": "importance",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "sự nổi bật, địa vị lỗi lạc quan trọng"
       },
       {
         "word": "visibility",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "sự nổi bật, địa vị lỗi lạc quan trọng"
       }
     ],
     "folder_ids": [
@@ -9202,7 +9787,8 @@ const INITIAL_ENTRIES = [
         "example": "We must identify the underlying prominence of this phenomenon."
       }
     ],
-    "vietnamese_meaning": "sự nổi bật, địa vị lỗi lạc quan trọng"
+    "vietnamese_meaning": "sự nổi bật, địa vị lỗi lạc quan trọng",
+    "antonyms": []
   },
   {
     "id": "entry-leftism",
@@ -9283,17 +9869,20 @@ const INITIAL_ENTRIES = [
       {
         "word": "socialism",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "chủ nghĩa xã hội"
       },
       {
         "word": "progressivism",
         "register": "formal",
-        "cefr": "C2"
+        "cefr": "C2",
+        "vietnamese_meaning": "chủ nghĩa tiến bộ"
       },
       {
         "word": "left-wing politics",
         "register": "formal",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "chủ nghĩa cánh tả (chính trị)"
       }
     ],
     "folder_ids": [
@@ -9318,7 +9907,8 @@ const INITIAL_ENTRIES = [
         "example": "We must identify the underlying leftism of this phenomenon."
       }
     ],
-    "vietnamese_meaning": "chủ nghĩa cánh tả (chính trị)"
+    "vietnamese_meaning": "chủ nghĩa cánh tả (chính trị)",
+    "antonyms": []
   },
   {
     "id": "entry-upbeat",
@@ -9396,17 +9986,20 @@ const INITIAL_ENTRIES = [
       {
         "word": "optimistic",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "lạc quan, vui vẻ, phấn khởi"
       },
       {
         "word": "sanguine",
         "register": "formal",
-        "cefr": "C2"
+        "cefr": "C2",
+        "vietnamese_meaning": "lạc quan, vui vẻ, phấn khởi"
       },
       {
         "word": "cheerful",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "vui tươi, rạng rỡ"
       }
     ],
     "folder_ids": [
@@ -9431,7 +10024,17 @@ const INITIAL_ENTRIES = [
         "example": "The case study was particularly upbeat to our research question."
       }
     ],
-    "vietnamese_meaning": "lạc quan, vui vẻ, phấn khởi"
+    "vietnamese_meaning": "lạc quan, vui vẻ, phấn khởi",
+    "antonyms": [
+      {
+        "word": "pessimistic",
+        "vietnamese_meaning": "bi quan"
+      },
+      {
+        "word": "gloomy",
+        "vietnamese_meaning": "ảm đạm u sầu"
+      }
+    ]
   },
   {
     "id": "entry-optimistic",
@@ -9512,17 +10115,20 @@ const INITIAL_ENTRIES = [
       {
         "word": "hopeful",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "đầy hy vọng"
       },
       {
         "word": "upbeat",
         "register": "neutral",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "lạc quan, đầy hy vọng"
       },
       {
         "word": "sanguine",
         "register": "formal",
-        "cefr": "C2"
+        "cefr": "C2",
+        "vietnamese_meaning": "lạc quan, đầy hy vọng"
       }
     ],
     "folder_ids": [
@@ -9547,7 +10153,13 @@ const INITIAL_ENTRIES = [
         "example": "The case study was particularly optimistic to our research question."
       }
     ],
-    "vietnamese_meaning": "lạc quan, đầy hy vọng"
+    "vietnamese_meaning": "lạc quan, đầy hy vọng",
+    "antonyms": [
+      {
+        "word": "pessimistic",
+        "vietnamese_meaning": "bi quan"
+      }
+    ]
   },
   {
     "id": "entry-territorial",
@@ -9628,17 +10240,20 @@ const INITIAL_ENTRIES = [
       {
         "word": "regional",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "thuộc về lãnh thổ, có tính bảo vệ lãnh thổ"
       },
       {
         "word": "sovereign",
         "register": "formal",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "thuộc về lãnh thổ, có tính bảo vệ lãnh thổ"
       },
       {
         "word": "provincial",
         "register": "neutral",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "thuộc về lãnh thổ, có tính bảo vệ lãnh thổ"
       }
     ],
     "folder_ids": [
@@ -9663,7 +10278,8 @@ const INITIAL_ENTRIES = [
         "example": "The case study was particularly territorial to our research question."
       }
     ],
-    "vietnamese_meaning": "thuộc về lãnh thổ, có tính bảo vệ lãnh thổ"
+    "vietnamese_meaning": "thuộc về lãnh thổ, có tính bảo vệ lãnh thổ",
+    "antonyms": []
   },
   {
     "id": "entry-inference",
@@ -9745,17 +10361,20 @@ const INITIAL_ENTRIES = [
       {
         "word": "deduction",
         "register": "formal",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "sự diễn dịch, suy diễn"
       },
       {
         "word": "conclusion",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "kết luận cuối cùng"
       },
       {
         "word": "conjecture",
         "register": "formal",
-        "cefr": "C2"
+        "cefr": "C2",
+        "vietnamese_meaning": "suy đoán phỏng chừng"
       }
     ],
     "folder_ids": [
@@ -9780,7 +10399,8 @@ const INITIAL_ENTRIES = [
         "example": "We must identify the underlying inference of this phenomenon."
       }
     ],
-    "vietnamese_meaning": "sự suy luận, kết luận rút ra"
+    "vietnamese_meaning": "sự suy luận, kết luận rút ra",
+    "antonyms": []
   },
   {
     "id": "entry-repulsive",
@@ -9863,17 +10483,20 @@ const INITIAL_ENTRIES = [
       {
         "word": "abhorrent",
         "register": "formal",
-        "cefr": "C2"
+        "cefr": "C2",
+        "vietnamese_meaning": "kinh tởm, đáng ghét, đẩy lùi"
       },
       {
         "word": "loathsome",
         "register": "formal",
-        "cefr": "C2"
+        "cefr": "C2",
+        "vietnamese_meaning": "đáng ghét, ghê tởm"
       },
       {
         "word": "disgusting",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "kinh tởm, buồn nôn"
       }
     ],
     "folder_ids": [
@@ -9898,7 +10521,17 @@ const INITIAL_ENTRIES = [
         "example": "The case study was particularly repulsive to our research question."
       }
     ],
-    "vietnamese_meaning": "kinh tởm, đáng ghét, đẩy lùi"
+    "vietnamese_meaning": "kinh tởm, đáng ghét, đẩy lùi",
+    "antonyms": [
+      {
+        "word": "attractive",
+        "vietnamese_meaning": "hấp dẫn quyến rũ"
+      },
+      {
+        "word": "alluring",
+        "vietnamese_meaning": "lôi cuốn"
+      }
+    ]
   },
   {
     "id": "entry-play-out",
@@ -9980,17 +10613,20 @@ const INITIAL_ENTRIES = [
       {
         "word": "unfold",
         "register": "neutral",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "mở ra, diễn tiến"
       },
       {
         "word": "transpire",
         "register": "formal",
-        "cefr": "C2"
+        "cefr": "C2",
+        "vietnamese_meaning": "diễn ra, phát triển theo kịch bản"
       },
       {
         "word": "happen",
         "register": "neutral",
-        "cefr": "A1"
+        "cefr": "A1",
+        "vietnamese_meaning": "diễn ra, phát triển theo kịch bản"
       }
     ],
     "folder_ids": [
@@ -10015,7 +10651,8 @@ const INITIAL_ENTRIES = [
         "example": "You should carefully play out the instructions before starting."
       }
     ],
-    "vietnamese_meaning": "diễn ra, phát triển theo kịch bản"
+    "vietnamese_meaning": "diễn ra, phát triển theo kịch bản",
+    "antonyms": []
   },
   {
     "id": "entry-elasticity",
@@ -10097,17 +10734,20 @@ const INITIAL_ENTRIES = [
       {
         "word": "flexibility",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "tính linh hoạt, co giãn"
       },
       {
         "word": "adaptability",
         "register": "neutral",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "tính co giãn, độ đàn hồi"
       },
       {
         "word": "resilience",
         "register": "academic",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "khả năng phục hồi kiên cường"
       }
     ],
     "folder_ids": [
@@ -10133,7 +10773,8 @@ const INITIAL_ENTRIES = [
         "example": "We must identify the underlying elasticity of this phenomenon."
       }
     ],
-    "vietnamese_meaning": "tính co giãn, độ đàn hồi"
+    "vietnamese_meaning": "tính co giãn, độ đàn hồi",
+    "antonyms": []
   },
   {
     "id": "entry-predispose",
@@ -10208,12 +10849,14 @@ const INITIAL_ENTRIES = [
       {
         "word": "incline",
         "register": "formal",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "khiến cho có thiên hướng"
       },
       {
         "word": "bias",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "dẫn đến, khiến cho dễ mắc phải (bệnh, xu hướng)"
       }
     ],
     "folder_ids": [
@@ -10239,7 +10882,8 @@ const INITIAL_ENTRIES = [
         "example": "Certain mutations genetically predispose individuals to specific conditions."
       }
     ],
-    "vietnamese_meaning": "dẫn đến, khiến cho dễ mắc phải (bệnh, xu hướng)"
+    "vietnamese_meaning": "dẫn đến, khiến cho dễ mắc phải (bệnh, xu hướng)",
+    "antonyms": []
   },
   {
     "id": "entry-outlook",
@@ -10310,17 +10954,20 @@ const INITIAL_ENTRIES = [
       {
         "word": "perspective",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "quan điểm, góc nhìn"
       },
       {
         "word": "prospect",
         "register": "formal",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "góc nhìn, triển vọng tương lai, quan điểm sống"
       },
       {
         "word": "forecast",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "góc nhìn, triển vọng tương lai, quan điểm sống"
       }
     ],
     "folder_ids": [
@@ -10346,7 +10993,8 @@ const INITIAL_ENTRIES = [
         "example": "The country's economic outlook has improved due to increased exports."
       }
     ],
-    "vietnamese_meaning": "góc nhìn, triển vọng tương lai, quan điểm sống"
+    "vietnamese_meaning": "góc nhìn, triển vọng tương lai, quan điểm sống",
+    "antonyms": []
   },
   {
     "id": "entry-assertion",
@@ -10424,17 +11072,20 @@ const INITIAL_ENTRIES = [
       {
         "word": "statement",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "phát biểu, tuyên bố"
       },
       {
         "word": "claim",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "khẳng định, yêu sách"
       },
       {
         "word": "declaration",
         "register": "formal",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "sự khẳng định, tuyên bố quả quyết"
       }
     ],
     "folder_ids": [
@@ -10459,7 +11110,8 @@ const INITIAL_ENTRIES = [
         "example": "The researcher gathered substantial statistical data to support his assertion."
       }
     ],
-    "vietnamese_meaning": "sự khẳng định, tuyên bố quả quyết"
+    "vietnamese_meaning": "sự khẳng định, tuyên bố quả quyết",
+    "antonyms": []
   },
   {
     "id": "entry-stringent-rules",
@@ -10526,7 +11178,8 @@ const INITIAL_ENTRIES = [
       {
         "word": "strict rules",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "áp đặt các quy tắc/quy định nghiêm ngặt"
       }
     ],
     "folder_ids": [
@@ -10542,7 +11195,8 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.879Z",
     "source_context": "Suggested by AI for Writing Task 2 rules/discipline topic.",
-    "vietnamese_meaning": "áp đặt các quy tắc/quy định nghiêm ngặt"
+    "vietnamese_meaning": "áp đặt các quy tắc/quy định nghiêm ngặt",
+    "antonyms": []
   },
   {
     "id": "entry-enforce-compliance",
@@ -10609,7 +11263,8 @@ const INITIAL_ENTRIES = [
       {
         "word": "make people obey",
         "register": "informal",
-        "cefr": "A2"
+        "cefr": "A2",
+        "vietnamese_meaning": "thực thi sự tuân thủ (quy định/pháp luật)"
       }
     ],
     "folder_ids": [
@@ -10625,7 +11280,8 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.879Z",
     "source_context": "Suggested by AI for Writing Task 2 rules/discipline topic.",
-    "vietnamese_meaning": "thực thi sự tuân thủ (quy định/pháp luật)"
+    "vietnamese_meaning": "thực thi sự tuân thủ (quy định/pháp luật)",
+    "antonyms": []
   },
   {
     "id": "entry-restrict-autonomy",
@@ -10693,7 +11349,8 @@ const INITIAL_ENTRIES = [
       {
         "word": "limit freedom",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "giới hạn sự tự do"
       }
     ],
     "folder_ids": [
@@ -10709,7 +11366,8 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.879Z",
     "source_context": "Suggested by AI for Writing Task 2 rules/discipline topic.",
-    "vietnamese_meaning": "hạn chế quyền tự chủ cá nhân"
+    "vietnamese_meaning": "hạn chế quyền tự chủ cá nhân",
+    "antonyms": []
   },
   {
     "id": "entry-conform-norms",
@@ -10775,7 +11433,8 @@ const INITIAL_ENTRIES = [
       {
         "word": "follow society",
         "register": "informal",
-        "cefr": "A2"
+        "cefr": "A2",
+        "vietnamese_meaning": "tuân theo các chuẩn mực xã hội"
       }
     ],
     "folder_ids": [
@@ -10791,7 +11450,8 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.879Z",
     "source_context": "Suggested by AI for Writing Task 2 rules/discipline topic.",
-    "vietnamese_meaning": "tuân theo các chuẩn mực xã hội"
+    "vietnamese_meaning": "tuân theo các chuẩn mực xã hội",
+    "antonyms": []
   },
   {
     "id": "entry-tertiary-education",
@@ -10861,12 +11521,14 @@ const INITIAL_ENTRIES = [
       {
         "word": "higher education",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "giáo dục bậc đại học"
       },
       {
         "word": "university education",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "giáo dục bậc đại học/cao đẳng"
       }
     ],
     "folder_ids": [
@@ -10882,7 +11544,8 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.879Z",
     "source_context": "Suggested by AI for Writing Task 2 university topic.",
-    "vietnamese_meaning": "giáo dục bậc đại học/cao đẳng"
+    "vietnamese_meaning": "giáo dục bậc đại học/cao đẳng",
+    "antonyms": []
   },
   {
     "id": "entry-cultivate-critical-thinking",
@@ -10952,7 +11615,8 @@ const INITIAL_ENTRIES = [
       {
         "word": "teach logical thinking",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "trau dồi tư duy phản biện"
       }
     ],
     "folder_ids": [
@@ -10968,7 +11632,8 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.879Z",
     "source_context": "Suggested by AI for Writing Task 2 university topic.",
-    "vietnamese_meaning": "trau dồi tư duy phản biện"
+    "vietnamese_meaning": "trau dồi tư duy phản biện",
+    "antonyms": []
   },
   {
     "id": "entry-specialized-knowledge",
@@ -11040,7 +11705,8 @@ const INITIAL_ENTRIES = [
       {
         "word": "specific knowledge",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "kiến thức chuyên môn sâu"
       }
     ],
     "folder_ids": [
@@ -11056,7 +11722,8 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.879Z",
     "source_context": "Suggested by AI for Writing Task 2 university topic.",
-    "vietnamese_meaning": "kiến thức chuyên môn sâu"
+    "vietnamese_meaning": "kiến thức chuyên môn sâu",
+    "antonyms": []
   },
   {
     "id": "entry-academic-curriculum",
@@ -11126,12 +11793,14 @@ const INITIAL_ENTRIES = [
       {
         "word": "syllabus",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "chương trình giảng dạy học thuật"
       },
       {
         "word": "study program",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "chương trình học tập"
       }
     ],
     "folder_ids": [
@@ -11147,7 +11816,8 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.879Z",
     "source_context": "Suggested by AI for Writing Task 2 university topic.",
-    "vietnamese_meaning": "chương trình giảng dạy học thuật"
+    "vietnamese_meaning": "chương trình giảng dạy học thuật",
+    "antonyms": []
   },
   {
     "id": "entry-transferable-skills",
@@ -11213,7 +11883,8 @@ const INITIAL_ENTRIES = [
       {
         "word": "soft skills",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "kỹ năng có thể chuyển giao/áp dụng linh hoạt"
       }
     ],
     "folder_ids": [
@@ -11229,7 +11900,8 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.880Z",
     "source_context": "Suggested by AI for Writing Task 2 work skills topic.",
-    "vietnamese_meaning": "kỹ năng có thể chuyển giao/áp dụng linh hoạt"
+    "vietnamese_meaning": "kỹ năng có thể chuyển giao/áp dụng linh hoạt",
+    "antonyms": []
   },
   {
     "id": "entry-vocational-training",
@@ -11292,12 +11964,14 @@ const INITIAL_ENTRIES = [
       {
         "word": "practical training",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "đào tạo nghề, học nghề"
       },
       {
         "word": "job training",
         "register": "informal",
-        "cefr": "A2"
+        "cefr": "A2",
+        "vietnamese_meaning": "đào tạo tay nghề thực tế"
       }
     ],
     "folder_ids": [
@@ -11313,7 +11987,8 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.880Z",
     "source_context": "Suggested by AI for Writing Task 2 work skills topic.",
-    "vietnamese_meaning": "đào tạo nghề, học nghề"
+    "vietnamese_meaning": "đào tạo nghề, học nghề",
+    "antonyms": []
   },
   {
     "id": "entry-competitive-job-market",
@@ -11381,7 +12056,8 @@ const INITIAL_ENTRIES = [
       {
         "word": "find a job",
         "register": "informal",
-        "cefr": "A1"
+        "cefr": "A1",
+        "vietnamese_meaning": "thích nghi với thị trường việc làm cạnh tranh"
       }
     ],
     "folder_ids": [
@@ -11397,7 +12073,8 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.880Z",
     "source_context": "Suggested by AI for Writing Task 2 work skills topic.",
-    "vietnamese_meaning": "thích nghi với thị trường việc làm cạnh tranh"
+    "vietnamese_meaning": "thích nghi với thị trường việc làm cạnh tranh",
+    "antonyms": []
   },
   {
     "id": "entry-interpersonal-skills",
@@ -11463,7 +12140,8 @@ const INITIAL_ENTRIES = [
       {
         "word": "communication skills",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "kỹ năng giao tiếp ứng xử, kỹ năng mềm"
       }
     ],
     "folder_ids": [
@@ -11479,7 +12157,8 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.880Z",
     "source_context": "Suggested by AI for Writing Task 2 work skills topic.",
-    "vietnamese_meaning": "kỹ năng giao tiếp ứng xử, kỹ năng mềm"
+    "vietnamese_meaning": "kỹ năng giao tiếp ứng xử, kỹ năng mềm",
+    "antonyms": []
   },
   {
     "id": "entry-durable",
@@ -11552,7 +12231,8 @@ const INITIAL_ENTRIES = [
       {
         "word": "long-lasting",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "lâu dài, trường tồn"
       }
     ],
     "folder_ids": [
@@ -11567,7 +12247,17 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.880Z",
     "source_context": "Discussing materials, economic goods, or long-lasting agreements.",
-    "vietnamese_meaning": "bền bỉ, lâu bền"
+    "vietnamese_meaning": "bền bỉ, lâu bền",
+    "antonyms": [
+      {
+        "word": "fragile",
+        "vietnamese_meaning": "mong manh dễ vỡ"
+      },
+      {
+        "word": "perishable",
+        "vietnamese_meaning": "dễ hư hỏng"
+      }
+    ]
   },
   {
     "id": "entry-sustainable",
@@ -11643,7 +12333,8 @@ const INITIAL_ENTRIES = [
       {
         "word": "viable",
         "register": "academic",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "bền vững, thân thiện với môi trường lâu dài"
       }
     ],
     "folder_ids": [
@@ -11659,7 +12350,8 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.880Z",
     "source_context": "Discussing ecology, environmental policies, or long-term financial viability.",
-    "vietnamese_meaning": "bền vững, thân thiện với môi trường lâu dài"
+    "vietnamese_meaning": "bền vững, thân thiện với môi trường lâu dài",
+    "antonyms": []
   },
   {
     "id": "entry-concrete",
@@ -11739,12 +12431,14 @@ const INITIAL_ENTRIES = [
       {
         "word": "tangible",
         "register": "academic",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "bê tông; cụ thể, rõ ràng"
       },
       {
         "word": "cement",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "bê tông; cụ thể, rõ ràng"
       }
     ],
     "folder_ids": [
@@ -11760,7 +12454,8 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.880Z",
     "source_context": "Describing construction components, modern architecture, or logical reasoning.",
-    "vietnamese_meaning": "bê tông; cụ thể, rõ ràng"
+    "vietnamese_meaning": "bê tông; cụ thể, rõ ràng",
+    "antonyms": []
   },
   {
     "id": "entry-breakwater",
@@ -11834,7 +12529,8 @@ const INITIAL_ENTRIES = [
       {
         "word": "groyne",
         "register": "technical",
-        "cefr": "C2"
+        "cefr": "C2",
+        "vietnamese_meaning": "đê cản sóng cát"
       }
     ],
     "folder_ids": [
@@ -11849,7 +12545,8 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.880Z",
     "source_context": "IELTS Writing Task 1 - describing maps, coastal developments, or structural processes.",
-    "vietnamese_meaning": "đê chắn sóng, kè chắn sóng"
+    "vietnamese_meaning": "đê chắn sóng, kè chắn sóng",
+    "antonyms": []
   },
   {
     "id": "entry-binding",
@@ -11923,7 +12620,8 @@ const INITIAL_ENTRIES = [
       {
         "word": "mandatory",
         "register": "formal",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "có tính ràng buộc (pháp lý), sự liên kết"
       }
     ],
     "folder_ids": [
@@ -11939,7 +12637,8 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.880Z",
     "source_context": "Describing agreements, laws, administrative rules, or physical cohesion.",
-    "vietnamese_meaning": "có tính ràng buộc (pháp lý), sự liên kết"
+    "vietnamese_meaning": "có tính ràng buộc (pháp lý), sự liên kết",
+    "antonyms": []
   },
   {
     "id": "entry-composition",
@@ -12020,12 +12719,14 @@ const INITIAL_ENTRIES = [
       {
         "word": "makeup",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "thành phần cấu tạo"
       },
       {
         "word": "structure",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "cấu trúc, kết cấu"
       }
     ],
     "folder_ids": [
@@ -12041,7 +12742,8 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.880Z",
     "source_context": "Describing materials, scientific structures, essays, or artistic layouts.",
-    "vietnamese_meaning": "thành phần cấu tạo; tác phẩm, bài luận"
+    "vietnamese_meaning": "thành phần cấu tạo; tác phẩm, bài luận",
+    "antonyms": []
   },
   {
     "id": "entry-punctual",
@@ -12113,7 +12815,8 @@ const INITIAL_ENTRIES = [
       {
         "word": "on-time",
         "register": "informal",
-        "cefr": "A2"
+        "cefr": "A2",
+        "vietnamese_meaning": "đúng giờ, không bao giờ trễ hẹn"
       }
     ],
     "folder_ids": [
@@ -12129,7 +12832,17 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.880Z",
     "source_context": "Describing work habits, transportation schedules, or daily routines.",
-    "vietnamese_meaning": "đúng giờ, không bao giờ trễ hẹn"
+    "vietnamese_meaning": "đúng giờ, không bao giờ trễ hẹn",
+    "antonyms": [
+      {
+        "word": "tardy",
+        "vietnamese_meaning": "chậm trễ, muộn màng"
+      },
+      {
+        "word": "late",
+        "vietnamese_meaning": "trễ giờ"
+      }
+    ]
   },
   {
     "id": "entry-livestock",
@@ -12196,7 +12909,8 @@ const INITIAL_ENTRIES = [
       {
         "word": "farm animals",
         "register": "informal",
-        "cefr": "A2"
+        "cefr": "A2",
+        "vietnamese_meaning": "vật nuôi trang trại"
       }
     ],
     "folder_ids": [
@@ -12212,7 +12926,8 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.880Z",
     "source_context": "Discussing agricultural economics, food production, or ecology.",
-    "vietnamese_meaning": "vật nuôi, gia súc, thú nuôi nông nghiệp"
+    "vietnamese_meaning": "vật nuôi, gia súc, thú nuôi nông nghiệp",
+    "antonyms": []
   },
   {
     "id": "entry-tractor",
@@ -12279,7 +12994,8 @@ const INITIAL_ENTRIES = [
       {
         "word": "farm vehicle",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "phương tiện nông trại"
       }
     ],
     "folder_ids": [
@@ -12295,7 +13011,8 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.880Z",
     "source_context": "Describing farming technology, maps/diagrams of farm environments, or trade machinery.",
-    "vietnamese_meaning": "máy kéo nông nghiệp"
+    "vietnamese_meaning": "máy kéo nông nghiệp",
+    "antonyms": []
   },
   {
     "id": "entry-impassive",
@@ -12368,7 +13085,8 @@ const INITIAL_ENTRIES = [
       {
         "word": "emotionless",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "điềm tĩnh, không để lộ cảm xúc, trơ trơ"
       }
     ],
     "folder_ids": [
@@ -12383,7 +13101,8 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.880Z",
     "source_context": "Sea Change for Salinity passage - describing the calm Australian terrain.",
-    "vietnamese_meaning": "điềm tĩnh, không để lộ cảm xúc, trơ trơ"
+    "vietnamese_meaning": "điềm tĩnh, không để lộ cảm xúc, trơ trơ",
+    "antonyms": []
   },
   {
     "id": "entry-stealthily",
@@ -12456,7 +13175,8 @@ const INITIAL_ENTRIES = [
       {
         "word": "secretly",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "một cách bí mật"
       }
     ],
     "folder_ids": [
@@ -12471,7 +13191,17 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.880Z",
     "source_context": "Sea Change for Salinity passage - describing the quiet destruction by salt.",
-    "vietnamese_meaning": "một cách lén lút, rón rén"
+    "vietnamese_meaning": "một cách lén lút, rón rén",
+    "antonyms": [
+      {
+        "word": "openly",
+        "vietnamese_meaning": "công khai, không giấu giếm"
+      },
+      {
+        "word": "overtly",
+        "vietnamese_meaning": "rõ ràng công khai"
+      }
+    ]
   },
   {
     "id": "entry-pinpoint",
@@ -12543,7 +13273,8 @@ const INITIAL_ENTRIES = [
       {
         "word": "identify",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "nhận diện, chỉ ra"
       }
     ],
     "folder_ids": [
@@ -12559,7 +13290,8 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.880Z",
     "source_context": "Sea Change for Salinity passage - prospecting for subterranean salt.",
-    "vietnamese_meaning": "xác định chính xác vị trí/nguyên nhân"
+    "vietnamese_meaning": "xác định chính xác vị trí/nguyên nhân",
+    "antonyms": []
   },
   {
     "id": "entry-render",
@@ -12636,7 +13368,8 @@ const INITIAL_ENTRIES = [
       {
         "word": "make",
         "register": "neutral",
-        "cefr": "A1"
+        "cefr": "A1",
+        "vietnamese_meaning": "làm cho, chế tạo"
       }
     ],
     "folder_ids": [
@@ -12652,7 +13385,8 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.880Z",
     "source_context": "Sea Change for Salinity passage - tree-planting rendered ineffective.",
-    "vietnamese_meaning": "khiến cho, làm cho trở nên; kết xuất/kết xuất hình ảnh"
+    "vietnamese_meaning": "khiến cho, làm cho trở nên; kết xuất/kết xuất hình ảnh",
+    "antonyms": []
   },
   {
     "id": "entry-ensuing",
@@ -12721,12 +13455,14 @@ const INITIAL_ENTRIES = [
       {
         "word": "following",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "tiếp theo sau"
       },
       {
         "word": "subsequent",
         "register": "academic",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "xảy ra kế tiếp"
       }
     ],
     "folder_ids": [
@@ -12742,7 +13478,8 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.880Z",
     "source_context": "Sea Change for Salinity passage - patches multiplying over the ensuing decades.",
-    "vietnamese_meaning": "xảy ra sau đó, theo sau"
+    "vietnamese_meaning": "xảy ra sau đó, theo sau",
+    "antonyms": []
   },
   {
     "id": "entry-encroach",
@@ -12818,7 +13555,8 @@ const INITIAL_ENTRIES = [
       {
         "word": "intrude",
         "register": "neutral",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "xâm phạm, can thiệp bất hợp pháp"
       }
     ],
     "folder_ids": [
@@ -12835,7 +13573,8 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.880Z",
     "source_context": "Sea Change for Salinity passage - 'white death' encroaching on farmland.",
-    "vietnamese_meaning": "xâm lấn, xâm phạm (lãnh thổ, quyền lợi)"
+    "vietnamese_meaning": "xâm lấn, xâm phạm (lãnh thổ, quyền lợi)",
+    "antonyms": []
   },
   {
     "id": "entry-eclipse",
@@ -12911,7 +13650,8 @@ const INITIAL_ENTRIES = [
       {
         "word": "overshadow",
         "register": "neutral",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "che bóng, làm lu mờ"
       }
     ],
     "folder_ids": [
@@ -12927,7 +13667,8 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.880Z",
     "source_context": "Sea Change for Salinity passage - successes eclipsed by larger defeats.",
-    "vietnamese_meaning": "che khuất, làm lu mờ; nhật thực/nguyệt thực"
+    "vietnamese_meaning": "che khuất, làm lu mờ; nhật thực/nguyệt thực",
+    "antonyms": []
   },
   {
     "id": "entry-intercept",
@@ -12997,7 +13738,8 @@ const INITIAL_ENTRIES = [
       {
         "word": "block",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "chặn đường, cản trở"
       }
     ],
     "folder_ids": [
@@ -13012,7 +13754,8 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.880Z",
     "source_context": "Sea Change for Salinity passage - salt beating plans to intercept it.",
-    "vietnamese_meaning": "chặn đứng, đánh chặn (thông điệp, mục tiêu)"
+    "vietnamese_meaning": "chặn đứng, đánh chặn (thông điệp, mục tiêu)",
+    "antonyms": []
   },
   {
     "id": "entry-subterranean",
@@ -13081,7 +13824,8 @@ const INITIAL_ENTRIES = [
       {
         "word": "underground",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "dưới mặt đất, ngầm"
       }
     ],
     "folder_ids": [
@@ -13097,7 +13841,8 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.880Z",
     "source_context": "Sea Change for Salinity passage - secret subterranean stores and passages.",
-    "vietnamese_meaning": "dưới lòng đất, ngầm"
+    "vietnamese_meaning": "dưới lòng đất, ngầm",
+    "antonyms": []
   },
   {
     "id": "entry-delineate",
@@ -13166,12 +13911,14 @@ const INITIAL_ENTRIES = [
       {
         "word": "outline",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "phác thảo đường nét"
       },
       {
         "word": "define",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "vạch ra, mô tả chi tiết, phác họa"
       }
     ],
     "folder_ids": [
@@ -13186,7 +13933,8 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.880Z",
     "source_context": "Sea Change for Salinity passage - delineation of subterranean landforms.",
-    "vietnamese_meaning": "vạch ra, mô tả chi tiết, phác họa"
+    "vietnamese_meaning": "vạch ra, mô tả chi tiết, phác họa",
+    "antonyms": []
   },
   {
     "id": "entry-curb",
@@ -13262,12 +14010,14 @@ const INITIAL_ENTRIES = [
       {
         "word": "restrain",
         "register": "formal",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "kiềm chế, giữ lại"
       },
       {
         "word": "limit",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "hạn chế mức độ"
       }
     ],
     "folder_ids": [
@@ -13283,7 +14033,8 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.880Z",
     "source_context": "Sea Change for Salinity passage - curbing the salt menace.",
-    "vietnamese_meaning": "kiềm chế, kìm hãm, nén lại"
+    "vietnamese_meaning": "kiềm chế, kìm hãm, nén lại",
+    "antonyms": []
   },
   {
     "id": "entry-menace",
@@ -13365,7 +14116,8 @@ const INITIAL_ENTRIES = [
       {
         "word": "threat",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "mối đe dọa"
       }
     ],
     "folder_ids": [
@@ -13380,7 +14132,8 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.880Z",
     "source_context": "Sea Change for Salinity passage - curbing the salt menace.",
-    "vietnamese_meaning": "mối đe dọa, hiểm họa"
+    "vietnamese_meaning": "mối đe dọa, hiểm họa",
+    "antonyms": []
   },
   {
     "id": "entry-salinity",
@@ -13451,7 +14204,8 @@ const INITIAL_ENTRIES = [
       {
         "word": "saltiness",
         "register": "informal",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "vị mặn, nồng độ muối"
       }
     ],
     "folder_ids": [
@@ -13467,7 +14221,8 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.880Z",
     "source_context": "Sea Change for Salinity passage - title subject describing salt contents.",
-    "vietnamese_meaning": "độ mặn, nồng độ muối"
+    "vietnamese_meaning": "độ mặn, nồng độ muối",
+    "antonyms": []
   },
   {
     "id": "entry-broadacre",
@@ -13534,7 +14289,8 @@ const INITIAL_ENTRIES = [
       {
         "word": "large-scale farming",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "canh tác diện rộng"
       }
     ],
     "folder_ids": [
@@ -13550,7 +14306,8 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.880Z",
     "source_context": "Sea Change for Salinity passage - discussing broadacre salinity.",
-    "vietnamese_meaning": "vùng đất canh tác quy mô lớn/diện rộng"
+    "vietnamese_meaning": "vùng đất canh tác quy mô lớn/diện rộng",
+    "antonyms": []
   },
   {
     "id": "entry-mounting",
@@ -13619,12 +14376,14 @@ const INITIAL_ENTRIES = [
       {
         "word": "growing",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "ngày càng tăng trưởng"
       },
       {
         "word": "escalating",
         "register": "formal",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "ngày càng gia tăng, chồng chất"
       }
     ],
     "folder_ids": [
@@ -13640,7 +14399,8 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.880Z",
     "source_context": "Sea Change for Salinity passage - mounting effort by scientists and governments.",
-    "vietnamese_meaning": "ngày càng gia tăng, chồng chất"
+    "vietnamese_meaning": "ngày càng gia tăng, chồng chất",
+    "antonyms": []
   },
   {
     "id": "entry-ambush",
@@ -13716,7 +14476,8 @@ const INITIAL_ENTRIES = [
       {
         "word": "surprise attack",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "cuộc tập kích bất ngờ"
       }
     ],
     "folder_ids": [
@@ -13731,7 +14492,8 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.880Z",
     "source_context": "Sea Change for Salinity passage - salt's ability to mount ambushes.",
-    "vietnamese_meaning": "cuộc phục kích, mai phục, tấn công bất ngờ"
+    "vietnamese_meaning": "cuộc phục kích, mai phục, tấn công bất ngờ",
+    "antonyms": []
   },
   {
     "id": "entry-conductivity",
@@ -13805,7 +14567,8 @@ const INITIAL_ENTRIES = [
       {
         "word": "transmission",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "tính dẫn (điện, nhiệt)"
       }
     ],
     "folder_ids": [
@@ -13821,7 +14584,8 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.880Z",
     "source_context": "Sea Change for Salinity passage - measuring electrical conductivity of soil.",
-    "vietnamese_meaning": "tính dẫn (điện, nhiệt)"
+    "vietnamese_meaning": "tính dẫn (điện, nhiệt)",
+    "antonyms": []
   },
   {
     "id": "entry-drainage",
@@ -13891,7 +14655,8 @@ const INITIAL_ENTRIES = [
       {
         "word": "outflow",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "hệ thống thoát nước, sự thoát nước"
       }
     ],
     "folder_ids": [
@@ -13907,7 +14672,8 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.880Z",
     "source_context": "Sea Change for Salinity passage - network of ancient drainage channels buried.",
-    "vietnamese_meaning": "hệ thống thoát nước, sự thoát nước"
+    "vietnamese_meaning": "hệ thống thoát nước, sự thoát nước",
+    "antonyms": []
   },
   {
     "id": "entry-irritable",
@@ -13984,7 +14750,8 @@ const INITIAL_ENTRIES = [
       {
         "word": "bad-tempered",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "dễ cáu kỉnh, dễ nổi nóng, dễ bị kích ứng"
       }
     ],
     "folder_ids": [
@@ -14000,7 +14767,8 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.880Z",
     "source_context": "Describing personality, mood patterns, and social relationships.",
-    "vietnamese_meaning": "dễ cáu kỉnh, dễ nổi nóng, dễ bị kích ứng"
+    "vietnamese_meaning": "dễ cáu kỉnh, dễ nổi nóng, dễ bị kích ứng",
+    "antonyms": []
   },
   {
     "id": "entry-imperial",
@@ -14076,7 +14844,8 @@ const INITIAL_ENTRIES = [
       {
         "word": "royal",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "thuộc hoàng gia"
       }
     ],
     "folder_ids": [
@@ -14092,7 +14861,8 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.880Z",
     "source_context": "Describing historical political systems, empires, or authoritative decrees.",
-    "vietnamese_meaning": "thuộc về hoàng gia/đế quốc; oai nghiêm"
+    "vietnamese_meaning": "thuộc về hoàng gia/đế quốc; oai nghiêm",
+    "antonyms": []
   },
   {
     "id": "entry-smuggling",
@@ -14162,7 +14932,8 @@ const INITIAL_ENTRIES = [
       {
         "word": "illegal trade",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "nạn buôn lậu, hành vi vận chuyển trái phép"
       }
     ],
     "folder_ids": [
@@ -14178,7 +14949,8 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.880Z",
     "source_context": "Discussing black markets, legal restrictions, or historical trade disputes.",
-    "vietnamese_meaning": "nạn buôn lậu, hành vi vận chuyển trái phép"
+    "vietnamese_meaning": "nạn buôn lậu, hành vi vận chuyển trái phép",
+    "antonyms": []
   },
   {
     "id": "entry-adulteration",
@@ -14251,7 +15023,8 @@ const INITIAL_ENTRIES = [
       {
         "word": "contamination",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "sự nhiễm bẩn, pha tạp"
       }
     ],
     "folder_ids": [
@@ -14267,7 +15040,8 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.880Z",
     "source_context": "Discussing food safety, chemical quality control, or trade regulations.",
-    "vietnamese_meaning": "sự pha tạp, sự làm giả chất lượng"
+    "vietnamese_meaning": "sự pha tạp, sự làm giả chất lượng",
+    "antonyms": []
   },
   {
     "id": "entry-monopoly",
@@ -14340,7 +15114,8 @@ const INITIAL_ENTRIES = [
       {
         "word": "exclusive control",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "sự kiểm soát độc quyền"
       }
     ],
     "folder_ids": [
@@ -14356,7 +15131,8 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.880Z",
     "source_context": "Discussing market competition, trade regulations, or economic history.",
-    "vietnamese_meaning": "sự độc quyền (thương mại, thị trường)"
+    "vietnamese_meaning": "sự độc quyền (thương mại, thị trường)",
+    "antonyms": []
   },
   {
     "id": "entry-punitive",
@@ -14438,7 +15214,8 @@ const INITIAL_ENTRIES = [
       {
         "word": "disciplinary",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "có tính kỷ luật, trừng phạt"
       }
     ],
     "folder_ids": [
@@ -14454,7 +15231,8 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.880Z",
     "source_context": "Discussing legal penalties, high taxes, or international sanctions.",
-    "vietnamese_meaning": "có tính trừng phạt, mang tính phạt"
+    "vietnamese_meaning": "có tính trừng phạt, mang tính phạt",
+    "antonyms": []
   },
   {
     "id": "entry-stimulate",
@@ -14528,12 +15306,14 @@ const INITIAL_ENTRIES = [
       {
         "word": "encourage",
         "register": "neutral",
-        "cefr": "A2"
+        "cefr": "A2",
+        "vietnamese_meaning": "khuyến khích, động viên"
       },
       {
         "word": "boost",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "thúc đẩy tăng trưởng"
       }
     ],
     "folder_ids": [
@@ -14549,7 +15329,8 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.880Z",
     "source_context": "Discussing economic growth policies, scientific activation, or educational motivation.",
-    "vietnamese_meaning": "kích thích, khuyến khích sự phát triển"
+    "vietnamese_meaning": "kích thích, khuyến khích sự phát triển",
+    "antonyms": []
   },
   {
     "id": "entry-infusion",
@@ -14625,7 +15406,8 @@ const INITIAL_ENTRIES = [
       {
         "word": "injection",
         "register": "neutral",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "sự tiêm vào, rót vốn"
       }
     ],
     "folder_ids": [
@@ -14641,7 +15423,8 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.880Z",
     "source_context": "Describing monetary injections, herb extraction, or introducing new ideas/talent.",
-    "vietnamese_meaning": "sự truyền vào, sự ngấm vào, sự rót thêm (vốn, ý tưởng)"
+    "vietnamese_meaning": "sự truyền vào, sự ngấm vào, sự rót thêm (vốn, ý tưởng)",
+    "antonyms": []
   },
   {
     "id": "entry-reverence",
@@ -14716,7 +15499,8 @@ const INITIAL_ENTRIES = [
       {
         "word": "respect",
         "register": "neutral",
-        "cefr": "A2"
+        "cefr": "A2",
+        "vietnamese_meaning": "sự tôn trọng"
       }
     ],
     "folder_ids": [
@@ -14732,7 +15516,8 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.880Z",
     "source_context": "Drawing Lessons from History passage - standing in reverence before ancient ruins.",
-    "vietnamese_meaning": "sự tôn kính sâu sắc, lòng kính trọng"
+    "vietnamese_meaning": "sự tôn kính sâu sắc, lòng kính trọng",
+    "antonyms": []
   },
   {
     "id": "entry-remnant",
@@ -14799,7 +15584,8 @@ const INITIAL_ENTRIES = [
       {
         "word": "remains",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "tàn dư, mảnh vụn còn sót lại"
       }
     ],
     "folder_ids": [
@@ -14814,7 +15600,8 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.880Z",
     "source_context": "Drawing Lessons from History passage - remnants of a world that once thrived.",
-    "vietnamese_meaning": "tàn dư, mảnh vụn còn sót lại"
+    "vietnamese_meaning": "tàn dư, mảnh vụn còn sót lại",
+    "antonyms": []
   },
   {
     "id": "entry-grandeur",
@@ -14887,7 +15674,8 @@ const INITIAL_ENTRIES = [
       {
         "word": "magnificence",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "sự nguy nga lộng lẫy"
       }
     ],
     "folder_ids": [
@@ -14902,7 +15690,8 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.880Z",
     "source_context": "Drawing Lessons from History passage - grandeur of these ruins attesting to wealth.",
-    "vietnamese_meaning": "sự hùng vĩ, sự vĩ đại tráng lệ"
+    "vietnamese_meaning": "sự hùng vĩ, sự vĩ đại tráng lệ",
+    "antonyms": []
   },
   {
     "id": "entry-attest",
@@ -14971,12 +15760,14 @@ const INITIAL_ENTRIES = [
       {
         "word": "prove",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "chứng minh"
       },
       {
         "word": "confirm",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "xác nhận, chuẩn y"
       }
     ],
     "folder_ids": [
@@ -14991,7 +15782,8 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.880Z",
     "source_context": "Drawing Lessons from History passage - grandeur attesting to wealth and power.",
-    "vietnamese_meaning": "chứng thực, minh chứng cho"
+    "vietnamese_meaning": "chứng thực, minh chứng cho",
+    "antonyms": []
   },
   {
     "id": "entry-painstakingly",
@@ -15063,7 +15855,8 @@ const INITIAL_ENTRIES = [
       {
         "word": "meticulously",
         "register": "academic",
-        "cefr": "C2"
+        "cefr": "C2",
+        "vietnamese_meaning": "một cách tỉ mỉ"
       }
     ],
     "folder_ids": [
@@ -15078,7 +15871,8 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.880Z",
     "source_context": "Drawing Lessons from History passage - structures they had painstakingly constructed.",
-    "vietnamese_meaning": "một cách tỉ mỉ, cẩn thận từng li từng tí"
+    "vietnamese_meaning": "một cách tỉ mỉ, cẩn thận từng li từng tí",
+    "antonyms": []
   },
   {
     "id": "entry-substantiate",
@@ -15151,12 +15945,14 @@ const INITIAL_ENTRIES = [
       {
         "word": "back up",
         "register": "informal",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "chứng minh, đưa ra bằng chứng xác thực"
       },
       {
         "word": "corroborate",
         "register": "formal",
-        "cefr": "C2"
+        "cefr": "C2",
+        "vietnamese_meaning": "củng cố bằng chứng"
       }
     ],
     "folder_ids": [
@@ -15172,7 +15968,8 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.880Z",
     "source_context": "Drawing Lessons from History passage - suspicion of ecocide substantiated by discoveries.",
-    "vietnamese_meaning": "chứng minh, đưa ra bằng chứng xác thực"
+    "vietnamese_meaning": "chứng minh, đưa ra bằng chứng xác thực",
+    "antonyms": []
   },
   {
     "id": "entry-undermine",
@@ -15242,7 +16039,8 @@ const INITIAL_ENTRIES = [
       {
         "word": "weaken",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "làm suy yếu"
       }
     ],
     "folder_ids": [
@@ -15258,7 +16056,17 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.880Z",
     "source_context": "Drawing Lessons from History passage - past societies undermined themselves.",
-    "vietnamese_meaning": "làm suy yếu dần, hủy hoại ngấm ngầm"
+    "vietnamese_meaning": "làm suy yếu dần, hủy hoại ngấm ngầm",
+    "antonyms": [
+      {
+        "word": "strengthen",
+        "vietnamese_meaning": "củng cố, làm mạnh thêm"
+      },
+      {
+        "word": "bolster",
+        "vietnamese_meaning": "nâng đỡ, trợ lực"
+      }
+    ]
   },
   {
     "id": "entry-depletion",
@@ -15330,7 +16138,8 @@ const INITIAL_ENTRIES = [
       {
         "word": "reduction",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "sự cạn kiệt, sự suy giảm"
       }
     ],
     "folder_ids": [
@@ -15347,7 +16156,8 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.880Z",
     "source_context": "Drawing Lessons from History passage - patterns often include resource depletion.",
-    "vietnamese_meaning": "sự cạn kiệt, sự suy giảm"
+    "vietnamese_meaning": "sự cạn kiệt, sự suy giảm",
+    "antonyms": []
   },
   {
     "id": "entry-demise",
@@ -15413,7 +16223,8 @@ const INITIAL_ENTRIES = [
       {
         "word": "downfall",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "sự suy vong"
       }
     ],
     "folder_ids": [
@@ -15429,7 +16240,17 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.880Z",
     "source_context": "Drawing Lessons from History passage - speaking of a society's birth and eventual demise.",
-    "vietnamese_meaning": "sự sụp đổ, sự biến mất, cái chết"
+    "vietnamese_meaning": "sự sụp đổ, sự biến mất, cái chết",
+    "antonyms": [
+      {
+        "word": "birth",
+        "vietnamese_meaning": "sự ra đời"
+      },
+      {
+        "word": "rise",
+        "vietnamese_meaning": "sự trỗi dậy"
+      }
+    ]
   },
   {
     "id": "entry-contingent",
@@ -15506,7 +16327,8 @@ const INITIAL_ENTRIES = [
       {
         "word": "dependent",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "phụ thuộc vào"
       }
     ],
     "folder_ids": [
@@ -15522,7 +16344,8 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.880Z",
     "source_context": "Drawing Lessons from History passage - expression is deeply contingent on local conditions.",
-    "vietnamese_meaning": "tùy thuộc vào; nhóm đại biểu"
+    "vietnamese_meaning": "tùy thuộc vào; nhóm đại biểu",
+    "antonyms": []
   },
   {
     "id": "entry-contemplate",
@@ -15597,7 +16420,8 @@ const INITIAL_ENTRIES = [
       {
         "word": "consider",
         "register": "neutral",
-        "cefr": "A2"
+        "cefr": "A2",
+        "vietnamese_meaning": "cân nhắc"
       }
     ],
     "folder_ids": [
@@ -15613,7 +16437,8 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.880Z",
     "source_context": "Drawing Lessons from History passage - only if we carefully contemplate its lessons.",
-    "vietnamese_meaning": "suy ngẫm, cân nhắc kỹ lưỡng"
+    "vietnamese_meaning": "suy ngẫm, cân nhắc kỹ lưỡng",
+    "antonyms": []
   },
   {
     "id": "entry-collapse",
@@ -15692,7 +16517,8 @@ const INITIAL_ENTRIES = [
       {
         "word": "downfall",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "sự suy vong"
       }
     ],
     "folder_ids": [
@@ -15708,7 +16534,8 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.880Z",
     "source_context": "Drawing Lessons from History passage - term 'collapse' refers to reduction in complexity.",
-    "vietnamese_meaning": "sụp đổ, đổ sập, suy sụp"
+    "vietnamese_meaning": "sụp đổ, đổ sập, suy sụp",
+    "antonyms": []
   },
   {
     "id": "entry-awe-inspiring",
@@ -15778,7 +16605,8 @@ const INITIAL_ENTRIES = [
       {
         "word": "breathtaking",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "ngoạn mục đến nghẹt thở"
       }
     ],
     "folder_ids": [
@@ -15793,7 +16621,8 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.880Z",
     "source_context": "Drawing Lessons from History passage - awe-inspiring ruins left behind by past societies.",
-    "vietnamese_meaning": "gây kinh ngạc, đáng kính phục, uy nghiêm tráng lệ"
+    "vietnamese_meaning": "gây kinh ngạc, đáng kính phục, uy nghiêm tráng lệ",
+    "antonyms": []
   },
   {
     "id": "entry-naive",
@@ -15865,7 +16694,8 @@ const INITIAL_ENTRIES = [
       {
         "word": "gullible",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "dễ bị lừa, cả tin"
       }
     ],
     "folder_ids": [
@@ -15881,7 +16711,17 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.880Z",
     "source_context": "Drawing Lessons from History passage - naive to assume past yields straightforward answers.",
-    "vietnamese_meaning": "ngây thơ, cả tin, thiếu kinh nghiệm"
+    "vietnamese_meaning": "ngây thơ, cả tin, thiếu kinh nghiệm",
+    "antonyms": [
+      {
+        "word": "sophisticated",
+        "vietnamese_meaning": "tinh tế, sành sỏi"
+      },
+      {
+        "word": "worldly",
+        "vietnamese_meaning": "từng trải"
+      }
+    ]
   },
   {
     "id": "entry-remedy",
@@ -15960,12 +16800,14 @@ const INITIAL_ENTRIES = [
       {
         "word": "rectify",
         "register": "formal",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "biện pháp khắc phục, phương thuốc chữa trị"
       },
       {
         "word": "solve",
         "register": "neutral",
-        "cefr": "A2"
+        "cefr": "A2",
+        "vietnamese_meaning": "biện pháp khắc phục, phương thuốc chữa trị"
       }
     ],
     "folder_ids": [
@@ -15981,7 +16823,8 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.880Z",
     "source_context": "Drawing Lessons from History passage - producing challenges faster than it can remedy old ones.",
-    "vietnamese_meaning": "biện pháp khắc phục, phương thuốc chữa trị"
+    "vietnamese_meaning": "biện pháp khắc phục, phương thuốc chữa trị",
+    "antonyms": []
   },
   {
     "id": "entry-overstate",
@@ -16053,7 +16896,8 @@ const INITIAL_ENTRIES = [
       {
         "word": "exaggerate",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "thổi phồng, cường điệu"
       }
     ],
     "folder_ids": [
@@ -16069,7 +16913,17 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.880Z",
     "source_context": "Drawing Lessons from History passage - debate whether environmental risks are overstated.",
-    "vietnamese_meaning": "nói quá, phóng đại mức độ"
+    "vietnamese_meaning": "nói quá, phóng đại mức độ",
+    "antonyms": [
+      {
+        "word": "understate",
+        "vietnamese_meaning": "nói giảm, nói nhẹ"
+      },
+      {
+        "word": "minimize",
+        "vietnamese_meaning": "thu nhỏ mức độ"
+      }
+    ]
   },
   {
     "id": "entry-undervalue",
@@ -16141,7 +16995,8 @@ const INITIAL_ENTRIES = [
       {
         "word": "underestimate",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "đánh giá quá thấp"
       }
     ],
     "folder_ids": [
@@ -16157,7 +17012,13 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.880Z",
     "source_context": "Drawing Lessons from History passage - debate whether environmental risks are undervalued.",
-    "vietnamese_meaning": "đánh giá thấp, coi thường giá trị thực"
+    "vietnamese_meaning": "đánh giá thấp, coi thường giá trị thực",
+    "antonyms": [
+      {
+        "word": "overestimate",
+        "vietnamese_meaning": "đánh giá quá cao"
+      }
+    ]
   },
   {
     "id": "entry-hazard",
@@ -16229,7 +17090,8 @@ const INITIAL_ENTRIES = [
       {
         "word": "danger",
         "register": "neutral",
-        "cefr": "A2"
+        "cefr": "A2",
+        "vietnamese_meaning": "sự nguy hiểm"
       }
     ],
     "folder_ids": [
@@ -16245,7 +17107,8 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.880Z",
     "source_context": "Drawing Lessons from History passage - environmental hazards and global threats.",
-    "vietnamese_meaning": "mối nguy hiểm, rủi ro"
+    "vietnamese_meaning": "mối nguy hiểm, rủi ro",
+    "antonyms": []
   },
   {
     "id": "entry-rigour",
@@ -16318,7 +17181,8 @@ const INITIAL_ENTRIES = [
       {
         "word": "precision",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "độ chính xác tuyệt đối"
       }
     ],
     "folder_ids": [
@@ -16334,7 +17198,8 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.880Z",
     "source_context": "Describing careful scientific experiments, academic analyses, or strict regulations.",
-    "vietnamese_meaning": "sự nghiêm ngặt, tính khắt khe chuẩn xác"
+    "vietnamese_meaning": "sự nghiêm ngặt, tính khắt khe chuẩn xác",
+    "antonyms": []
   },
   {
     "id": "entry-upend",
@@ -16404,7 +17269,8 @@ const INITIAL_ENTRIES = [
       {
         "word": "overturn",
         "register": "neutral",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "lật úp, đảo ngược"
       }
     ],
     "folder_ids": [
@@ -16420,7 +17286,8 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.880Z",
     "source_context": "Describing severe economic disruptions, major political changes, or turning objects upside down.",
-    "vietnamese_meaning": "đảo lộn hoàn toàn, lật ngược tình thế"
+    "vietnamese_meaning": "đảo lộn hoàn toàn, lật ngược tình thế",
+    "antonyms": []
   },
   {
     "id": "entry-emerge",
@@ -16499,7 +17366,8 @@ const INITIAL_ENTRIES = [
       {
         "word": "appear",
         "register": "neutral",
-        "cefr": "A1"
+        "cefr": "A1",
+        "vietnamese_meaning": "xuất hiện"
       }
     ],
     "folder_ids": [
@@ -16515,7 +17383,8 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.880Z",
     "source_context": "Drawing Lessons from History passage - trust that new alternatives will emerge.",
-    "vietnamese_meaning": "nổi lên, xuất hiện, lộ ra"
+    "vietnamese_meaning": "nổi lên, xuất hiện, lộ ra",
+    "antonyms": []
   },
   {
     "id": "entry-resemblance",
@@ -16584,7 +17453,8 @@ const INITIAL_ENTRIES = [
       {
         "word": "similarity",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "sự tương đồng"
       }
     ],
     "folder_ids": [
@@ -16600,7 +17470,8 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.880Z",
     "source_context": "Describing family similarities, similarities in structures, or architectural patterns.",
-    "vietnamese_meaning": "sự giống nhau, sự tương đồng ngoại hình/bản chất"
+    "vietnamese_meaning": "sự giống nhau, sự tương đồng ngoại hình/bản chất",
+    "antonyms": []
   },
   {
     "id": "entry-relic",
@@ -16667,7 +17538,8 @@ const INITIAL_ENTRIES = [
       {
         "word": "remnant",
         "register": "academic",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "di tích, di vật, tàn tích sót lại"
       }
     ],
     "folder_ids": [
@@ -16682,7 +17554,8 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.880Z",
     "source_context": "Describing historical ruins, museums, or old cultural practices.",
-    "vietnamese_meaning": "di tích, di vật, tàn tích sót lại"
+    "vietnamese_meaning": "di tích, di vật, tàn tích sót lại",
+    "antonyms": []
   },
   {
     "id": "entry-ecological",
@@ -16755,7 +17628,8 @@ const INITIAL_ENTRIES = [
       {
         "word": "environmental",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "thuộc về môi trường"
       }
     ],
     "folder_ids": [
@@ -16771,7 +17645,8 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.880Z",
     "source_context": "Drawing Lessons from History passage - mysterious disappearance triggered by ecological issues.",
-    "vietnamese_meaning": "thuộc về sinh thái học"
+    "vietnamese_meaning": "thuộc về sinh thái học",
+    "antonyms": []
   },
   {
     "id": "entry-analogy",
@@ -16844,12 +17719,14 @@ const INITIAL_ENTRIES = [
       {
         "word": "comparison",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "sự so sánh đối chiếu"
       },
       {
         "word": "parallel",
         "register": "academic",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "sự tương đồng song song"
       }
     ],
     "folder_ids": [
@@ -16865,7 +17742,8 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.880Z",
     "source_context": "Drawing Lessons from History passage - writers tempted to draw analogies between society and life.",
-    "vietnamese_meaning": "sự tương tự, phép loại suy, so sánh đối chiếu"
+    "vietnamese_meaning": "sự tương tự, phép loại suy, so sánh đối chiếu",
+    "antonyms": []
   },
   {
     "id": "entry-human-induced",
@@ -16927,7 +17805,8 @@ const INITIAL_ENTRIES = [
       {
         "word": "man-made",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "do nhân tạo làm ra"
       }
     ],
     "folder_ids": [
@@ -16944,7 +17823,8 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.880Z",
     "source_context": "Drawing Lessons from History passage - human-induced climate change and downfalls.",
-    "vietnamese_meaning": "do con người gây ra/tác động"
+    "vietnamese_meaning": "do con người gây ra/tác động",
+    "antonyms": []
   },
   {
     "id": "entry-contemporary",
@@ -17018,7 +17898,8 @@ const INITIAL_ENTRIES = [
       {
         "word": "modern",
         "register": "neutral",
-        "cefr": "A2"
+        "cefr": "A2",
+        "vietnamese_meaning": "hiện đại"
       }
     ],
     "folder_ids": [
@@ -17034,7 +17915,8 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.880Z",
     "source_context": "Drawing Lessons from History passage - whether contemporary technology will resolve issues.",
-    "vietnamese_meaning": "đương đại, hiện đại; người cùng thời"
+    "vietnamese_meaning": "đương đại, hiện đại; người cùng thời",
+    "antonyms": []
   },
   {
     "id": "entry-reliance",
@@ -17111,7 +17993,8 @@ const INITIAL_ENTRIES = [
       {
         "word": "dependence",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "sự phụ thuộc"
       }
     ],
     "folder_ids": [
@@ -17127,7 +18010,8 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.880Z",
     "source_context": "Drawing Lessons from History passage - reliance of millions on modern health care.",
-    "vietnamese_meaning": "sự phụ thuộc, sự tin cậy dựa dẫm vào"
+    "vietnamese_meaning": "sự phụ thuộc, sự tin cậy dựa dẫm vào",
+    "antonyms": []
   },
   {
     "id": "entry-reminiscent",
@@ -17199,7 +18083,8 @@ const INITIAL_ENTRIES = [
       {
         "word": "suggestive",
         "register": "neutral",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "gợi nhớ đến, làm nhớ lại"
       }
     ],
     "folder_ids": [
@@ -17215,7 +18100,8 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.880Z",
     "source_context": "Drawing Lessons from History passage - ruins reminiscent of what poet Shelley described.",
-    "vietnamese_meaning": "gợi nhớ đến, làm nhớ lại"
+    "vietnamese_meaning": "gợi nhớ đến, làm nhớ lại",
+    "antonyms": []
   },
   {
     "id": "entry-negligible",
@@ -17278,12 +18164,14 @@ const INITIAL_ENTRIES = [
       {
         "word": "insignificant",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "không đáng kể"
       },
       {
         "word": "trivial",
         "register": "formal",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "tầm thường, vặt vãnh"
       }
     ],
     "folder_ids": [
@@ -17299,7 +18187,17 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.880Z",
     "source_context": "Vitamins – To supplement or not? reading passage - negligible impact on major indicators of health.",
-    "vietnamese_meaning": "không đáng kể, không quan trọng, rất nhỏ"
+    "vietnamese_meaning": "không đáng kể, không quan trọng, rất nhỏ",
+    "antonyms": [
+      {
+        "word": "significant",
+        "vietnamese_meaning": "đáng kể, quan trọng"
+      },
+      {
+        "word": "substantial",
+        "vietnamese_meaning": "lớn lao, trọng yếu"
+      }
+    ]
   },
   {
     "id": "entry-fortify",
@@ -17362,12 +18260,14 @@ const INITIAL_ENTRIES = [
       {
         "word": "strengthen",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "tăng cường độ mạnh"
       },
       {
         "word": "enrich",
         "register": "formal",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "làm giàu thêm dinh dưỡng"
       }
     ],
     "folder_ids": [
@@ -17383,7 +18283,8 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.880Z",
     "source_context": "Vitamins – To supplement or not? reading passage - decision to require white flour to be fortified.",
-    "vietnamese_meaning": "bổ sung dinh dưỡng (cho thức ăn); củng cố, tăng cường"
+    "vietnamese_meaning": "bổ sung dinh dưỡng (cho thức ăn); củng cố, tăng cường",
+    "antonyms": []
   },
   {
     "id": "entry-plummet",
@@ -17442,12 +18343,14 @@ const INITIAL_ENTRIES = [
       {
         "word": "plunge",
         "register": "neutral",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "lao dốc mạnh"
       },
       {
         "word": "fall",
         "register": "neutral",
-        "cefr": "A1"
+        "cefr": "A1",
+        "vietnamese_meaning": "rơi xuống, sụt giảm"
       }
     ],
     "folder_ids": [
@@ -17463,7 +18366,17 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.880Z",
     "source_context": "Vitamins – To supplement or not? reading passage - spinal birth defects plummeted by 75%.",
-    "vietnamese_meaning": "lao dốc không phanh, giảm mạnh đột ngột"
+    "vietnamese_meaning": "lao dốc không phanh, giảm mạnh đột ngột",
+    "antonyms": [
+      {
+        "word": "soar",
+        "vietnamese_meaning": "bay vút lên, tăng vọt"
+      },
+      {
+        "word": "skyrocket",
+        "vietnamese_meaning": "tăng chóng mặt"
+      }
+    ]
   },
   {
     "id": "entry-affliction",
@@ -17526,12 +18439,14 @@ const INITIAL_ENTRIES = [
       {
         "word": "disease",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "bệnh tật"
       },
       {
         "word": "ailment",
         "register": "formal",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "bệnh tật nhẹ, ốm vặt"
       }
     ],
     "folder_ids": [
@@ -17547,7 +18462,8 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.880Z",
     "source_context": "Vitamins – To supplement or not? reading passage - macular degeneration in people likely to develop this affliction.",
-    "vietnamese_meaning": "nỗi đau đớn, bệnh tật, sự khổ sở"
+    "vietnamese_meaning": "nỗi đau đớn, bệnh tật, sự khổ sở",
+    "antonyms": []
   },
   {
     "id": "entry-undermine",
@@ -17606,12 +18522,14 @@ const INITIAL_ENTRIES = [
       {
         "word": "weaken",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "làm suy yếu"
       },
       {
         "word": "compromise",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "thỏa hiệp, làm nguy hại"
       }
     ],
     "folder_ids": [
@@ -17627,7 +18545,17 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.880Z",
     "source_context": "Vitamins – To supplement or not? reading passage - we risk undermining that message and upsetting the balance.",
-    "vietnamese_meaning": "làm suy yếu dần, hủy hoại ngấm ngầm"
+    "vietnamese_meaning": "làm suy yếu dần, hủy hoại ngấm ngầm",
+    "antonyms": [
+      {
+        "word": "strengthen",
+        "vietnamese_meaning": "củng cố, làm mạnh thêm"
+      },
+      {
+        "word": "bolster",
+        "vietnamese_meaning": "nâng đỡ, trợ lực"
+      }
+    ]
   },
   {
     "id": "entry-counteract",
@@ -17690,12 +18618,14 @@ const INITIAL_ENTRIES = [
       {
         "word": "neutralize",
         "register": "formal",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "vô hiệu hóa, trung hòa"
       },
       {
         "word": "offset",
         "register": "formal",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "bù trừ, triệt tiêu"
       }
     ],
     "folder_ids": [
@@ -17711,7 +18641,13 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.880Z",
     "source_context": "Vitamins – To supplement or not? reading passage - counteracting the destructive effect of free radicals.",
-    "vietnamese_meaning": "chống lại, vô hiệu hóa, làm giảm tác động tiêu cực"
+    "vietnamese_meaning": "chống lại, vô hiệu hóa, làm giảm tác động tiêu cực",
+    "antonyms": [
+      {
+        "word": "reinforce",
+        "vietnamese_meaning": "tăng viện, củng cố thêm"
+      }
+    ]
   },
   {
     "id": "entry-retrieve",
@@ -17769,7 +18705,8 @@ const INITIAL_ENTRIES = [
       {
         "word": "recover",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "hồi phục, lấy lại"
       }
     ],
     "folder_ids": [
@@ -17785,7 +18722,8 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.880Z",
     "source_context": "Vitamins – To supplement or not? reading passage - mineral pills are retrieved from the sewer filters.",
-    "vietnamese_meaning": "lấy lại, khôi phục, tìm lại được dữ liệu/vật phẩm"
+    "vietnamese_meaning": "lấy lại, khôi phục, tìm lại được dữ liệu/vật phẩm",
+    "antonyms": []
   },
   {
     "id": "entry-notion",
@@ -17848,12 +18786,14 @@ const INITIAL_ENTRIES = [
       {
         "word": "concept",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "ý niệm, khái niệm"
       },
       {
         "word": "idea",
         "register": "neutral",
-        "cefr": "A1"
+        "cefr": "A1",
+        "vietnamese_meaning": "ý tưởng"
       }
     ],
     "folder_ids": [
@@ -17869,7 +18809,8 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.880Z",
     "source_context": "Vitamins – To supplement or not? reading passage - the notion that they can lead people to fill in gaps.",
-    "vietnamese_meaning": "khái niệm, quan niệm, ý niệm"
+    "vietnamese_meaning": "khái niệm, quan niệm, ý niệm",
+    "antonyms": []
   },
   {
     "id": "entry-steerclear",
@@ -17926,7 +18867,8 @@ const INITIAL_ENTRIES = [
       {
         "word": "avoid",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "né tránh"
       }
     ],
     "folder_ids": [
@@ -17942,7 +18884,8 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.880Z",
     "source_context": "Vitamins – To supplement or not? reading passage - disturbing evidence to steer clear of multivitamins.",
-    "vietnamese_meaning": "tránh xa, né tránh ai/cái gì để không gặp rắc rối"
+    "vietnamese_meaning": "tránh xa, né tránh ai/cái gì để không gặp rắc rối",
+    "antonyms": []
   },
   {
     "id": "entry-mortality",
@@ -18014,12 +18957,14 @@ const INITIAL_ENTRIES = [
       {
         "word": "death",
         "register": "neutral",
-        "cefr": "A2"
+        "cefr": "A2",
+        "vietnamese_meaning": "cái chết, sự qua đời"
       },
       {
         "word": "fatality",
         "register": "formal",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "sự tử vong do tai nạn/chiến tranh"
       }
     ],
     "folder_ids": [
@@ -18035,7 +18980,13 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.880Z",
     "source_context": "Vitamins – To supplement or not? reading passage - negligible impact on mortality or other major indicators.",
-    "vietnamese_meaning": "sự tử vong, tỷ lệ tử vong, sự hữu hạn của đời người"
+    "vietnamese_meaning": "sự tử vong, tỷ lệ tử vong, sự hữu hạn của đời người",
+    "antonyms": [
+      {
+        "word": "immortality",
+        "vietnamese_meaning": "sự bất tử, trường sinh"
+      }
+    ]
   },
   {
     "id": "entry-prenatal",
@@ -18098,7 +19049,8 @@ const INITIAL_ENTRIES = [
       {
         "word": "pregnancy",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "sự mang thai"
       }
     ],
     "folder_ids": [
@@ -18114,7 +19066,13 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.880Z",
     "source_context": "Vitamins – To supplement or not? reading passage - folic acid has long been indicated as a prenatal supplement.",
-    "vietnamese_meaning": "trước khi sinh, thuộc thời kỳ thai nghén"
+    "vietnamese_meaning": "trước khi sinh, thuộc thời kỳ thai nghén",
+    "antonyms": [
+      {
+        "word": "postnatal",
+        "vietnamese_meaning": "sau khi sinh con"
+      }
+    ]
   },
   {
     "id": "entry-defect",
@@ -18189,12 +19147,14 @@ const INITIAL_ENTRIES = [
       {
         "word": "flaw",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "khiếm khuyết, vết nứt"
       },
       {
         "word": "imperfection",
         "register": "formal",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "điểm chưa hoàn hảo"
       }
     ],
     "folder_ids": [
@@ -18210,7 +19170,17 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.880Z",
     "source_context": "Vitamins – To supplement or not? reading passage - prevent neural tube birth defects.",
-    "vietnamese_meaning": "khuyết điểm, nhược điểm, dị tật bẩm sinh; đào ngũ/đào tẩu"
+    "vietnamese_meaning": "khuyết điểm, nhược điểm, dị tật bẩm sinh; đào ngũ/đào tẩu",
+    "antonyms": [
+      {
+        "word": "perfection",
+        "vietnamese_meaning": "sự hoàn hảo"
+      },
+      {
+        "word": "flawlessness",
+        "vietnamese_meaning": "không tì vết"
+      }
+    ]
   },
   {
     "id": "entry-deflect",
@@ -18282,12 +19252,14 @@ const INITIAL_ENTRIES = [
       {
         "word": "divert",
         "register": "neutral",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "chuyển hướng"
       },
       {
         "word": "distract",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "làm xao nhãng"
       }
     ],
     "folder_ids": [
@@ -18303,7 +19275,8 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.880Z",
     "source_context": "Vitamins – To supplement or not? reading passage - zinc and antioxidants can maintain vision while deflecting macular degeneration.",
-    "vietnamese_meaning": "làm chệch hướng, đánh trống lảng"
+    "vietnamese_meaning": "làm chệch hướng, đánh trống lảng",
+    "antonyms": []
   },
   {
     "id": "entry-fortification",
@@ -18374,12 +19347,14 @@ const INITIAL_ENTRIES = [
       {
         "word": "enrichment",
         "register": "formal",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "sự bổ sung làm phong phú"
       },
       {
         "word": "reinforcement",
         "register": "formal",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "sự củng cố gia cố"
       }
     ],
     "folder_ids": [
@@ -18395,7 +19370,8 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.880Z",
     "source_context": "Vitamins – To supplement or not? reading passage - In countries without such fortification.",
-    "vietnamese_meaning": "sự bổ sung vi chất dinh dưỡng; công sự phòng thủ"
+    "vietnamese_meaning": "sự bổ sung vi chất dinh dưỡng; công sự phòng thủ",
+    "antonyms": []
   },
   {
     "id": "entry-contraindicate",
@@ -18458,7 +19434,8 @@ const INITIAL_ENTRIES = [
       {
         "word": "prohibit",
         "register": "formal",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "nghiêm cấm bằng luật"
       }
     ],
     "folder_ids": [
@@ -18474,7 +19451,17 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.880Z",
     "source_context": "Vitamins – To supplement or not? reading passage - vitamin E was contraindicated in a study.",
-    "vietnamese_meaning": "chống chỉ định (y khoa), không nên dùng"
+    "vietnamese_meaning": "chống chỉ định (y khoa), không nên dùng",
+    "antonyms": [
+      {
+        "word": "indicate",
+        "vietnamese_meaning": "chỉ định, khuyên dùng"
+      },
+      {
+        "word": "prescribe",
+        "vietnamese_meaning": "kê đơn, chỉ định"
+      }
+    ]
   },
   {
     "id": "entry-upset",
@@ -18547,7 +19534,8 @@ const INITIAL_ENTRIES = [
       {
         "word": "disrupt",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "làm gián đoạn, phá vỡ"
       }
     ],
     "folder_ids": [
@@ -18563,7 +19551,17 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.880Z",
     "source_context": "Vitamins – To supplement or not? reading passage - risk undermining that message and upsetting the balance.",
-    "vietnamese_meaning": "làm đảo lộn, làm xáo trộn; làm khó chịu/buồn phiền"
+    "vietnamese_meaning": "làm đảo lộn, làm xáo trộn; làm khó chịu/buồn phiền",
+    "antonyms": [
+      {
+        "word": "stabilize",
+        "vietnamese_meaning": "làm ổn định"
+      },
+      {
+        "word": "soothe",
+        "vietnamese_meaning": "xoa dịu"
+      }
+    ]
   },
   {
     "id": "entry-empirical",
@@ -18627,12 +19625,14 @@ const INITIAL_ENTRIES = [
       {
         "word": "observational",
         "register": "formal",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "thuộc về quan sát thực địa"
       },
       {
         "word": "factual",
         "register": "neutral",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "dựa trên sự thật"
       }
     ],
     "folder_ids": [
@@ -18648,7 +19648,17 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.880Z",
     "source_context": "IELTS Reading & Writing - discussing research evidence, observation models, and scientific logic.",
-    "vietnamese_meaning": "dựa trên thực nghiệm/kinh nghiệm thực tế"
+    "vietnamese_meaning": "dựa trên thực nghiệm/kinh nghiệm thực tế",
+    "antonyms": [
+      {
+        "word": "theoretical",
+        "vietnamese_meaning": "thuộc lý thuyết thuần túy"
+      },
+      {
+        "word": "hypothetical",
+        "vietnamese_meaning": "mang tính giả thuyết"
+      }
+    ]
   },
   {
     "id": "entry-takeaccountof",
@@ -18710,12 +19720,14 @@ const INITIAL_ENTRIES = [
       {
         "word": "consider",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "cân nhắc"
       },
       {
         "word": "allow for",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "tính đến, dự trù"
       }
     ],
     "folder_ids": [
@@ -18731,7 +19743,8 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.880Z",
     "source_context": "IELTS Writing Task 2 - presenting balanced opinions, considering facts, and addressing arguments.",
-    "vietnamese_meaning": "tính đến, cân nhắc đến, xem xét đến yếu tố nào đó"
+    "vietnamese_meaning": "tính đến, cân nhắc đến, xem xét đến yếu tố nào đó",
+    "antonyms": []
   },
   {
     "id": "entry-stealth",
@@ -18789,7 +19802,8 @@ const INITIAL_ENTRIES = [
       {
         "word": "secrecy",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "sự bí mật"
       }
     ],
     "folder_ids": [
@@ -18805,7 +19819,8 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.880Z",
     "source_context": "IELTS Reading - discussing stealth transmission of viruses, medical anomalies, or tactical technology.",
-    "vietnamese_meaning": "sự lén lút, tính năng tàng hình bí mật"
+    "vietnamese_meaning": "sự lén lút, tính năng tàng hình bí mật",
+    "antonyms": []
   },
   {
     "id": "entry-covertly",
@@ -18868,12 +19883,14 @@ const INITIAL_ENTRIES = [
       {
         "word": "secretly",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "một cách bí mật"
       },
       {
         "word": "surreptitiously",
         "register": "formal",
-        "cefr": "C2"
+        "cefr": "C2",
+        "vietnamese_meaning": "một cách lén lút vụng trộm"
       }
     ],
     "folder_ids": [
@@ -18889,7 +19906,17 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.880Z",
     "source_context": "IELTS Reading - discussing covert operations, stealth biological processes, or tracking mechanisms.",
-    "vietnamese_meaning": "một cách lén lút, bí mật, ngấm ngầm"
+    "vietnamese_meaning": "một cách lén lút, bí mật, ngấm ngầm",
+    "antonyms": [
+      {
+        "word": "overtly",
+        "vietnamese_meaning": "công khai lộ liễu"
+      },
+      {
+        "word": "publicly",
+        "vietnamese_meaning": "trước công chúng"
+      }
+    ]
   },
   {
     "id": "entry-anecdotal",
@@ -18952,7 +19979,8 @@ const INITIAL_ENTRIES = [
       {
         "word": "unscientific",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "phi khoa học"
       }
     ],
     "folder_ids": [
@@ -18968,7 +19996,17 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.880Z",
     "source_context": "IELTS Reading & Writing - contrasting subjective personal stories with objective scientific data.",
-    "vietnamese_meaning": "dựa trên giai thoại/lời kể cá nhân (chưa kiểm chứng khoa học)"
+    "vietnamese_meaning": "dựa trên giai thoại/lời kể cá nhân (chưa kiểm chứng khoa học)",
+    "antonyms": [
+      {
+        "word": "empirical",
+        "vietnamese_meaning": "thực nghiệm khoa học"
+      },
+      {
+        "word": "scientific",
+        "vietnamese_meaning": "có căn cứ khoa học"
+      }
+    ]
   },
   {
     "id": "entry-propensity",
@@ -19032,17 +20070,20 @@ const INITIAL_ENTRIES = [
       {
         "word": "tendency",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "xu hướng"
       },
       {
         "word": "inclination",
         "register": "formal",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "thiên hướng, ý muốn"
       },
       {
         "word": "predisposition",
         "register": "academic",
-        "cefr": "C2"
+        "cefr": "C2",
+        "vietnamese_meaning": "tố chất bẩm sinh dễ mắc phải"
       }
     ],
     "folder_ids": [
@@ -19058,7 +20099,8 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.880Z",
     "source_context": "IELTS Writing Task 2 - presenting trends, inclinations, behavioral habits, or biological traits.",
-    "vietnamese_meaning": "thiên hướng, xu hướng tự nhiên"
+    "vietnamese_meaning": "thiên hướng, xu hướng tự nhiên",
+    "antonyms": []
   },
   {
     "id": "entry-dissemination",
@@ -19121,12 +20163,14 @@ const INITIAL_ENTRIES = [
       {
         "word": "distribution",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "sự phân phối, phân phát"
       },
       {
         "word": "circulation",
         "register": "formal",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "sự lưu hành, phát hành"
       }
     ],
     "folder_ids": [
@@ -19142,7 +20186,17 @@ const INITIAL_ENTRIES = [
     },
     "date_added": "2026-09-02T12:37:38.880Z",
     "source_context": "IELTS Writing Task 2 - spreading information, ideas, public policies, and communication networks.",
-    "vietnamese_meaning": "sự phổ biến, sự truyền bá, sự lan tỏa (thông tin, kiến thức)"
+    "vietnamese_meaning": "sự phổ biến, sự truyền bá, sự lan tỏa (thông tin, kiến thức)",
+    "antonyms": [
+      {
+        "word": "suppression",
+        "vietnamese_meaning": "sự kìm hãm, che giấu"
+      },
+      {
+        "word": "collection",
+        "vietnamese_meaning": "sự thu gom lại"
+      }
+    ]
   },
   {
     "id": "entry-primitive",
@@ -19215,7 +20269,8 @@ const INITIAL_ENTRIES = [
       {
         "word": "rudimentary",
         "register": "formal",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "sơ khai, thô sơ"
       }
     ],
     "folder_ids": [
@@ -19230,7 +20285,17 @@ const INITIAL_ENTRIES = [
       "last_result": null
     },
     "date_added": "2026-09-02T12:37:38.883Z",
-    "source_context": "IELTS Reading - analyzing archaeological sites, ancient human migrations, and early tools."
+    "source_context": "IELTS Reading - analyzing archaeological sites, ancient human migrations, and early tools.",
+    "antonyms": [
+      {
+        "word": "modern",
+        "vietnamese_meaning": "hiện đại"
+      },
+      {
+        "word": "advanced",
+        "vietnamese_meaning": "tiên tiến"
+      }
+    ]
   },
   {
     "id": "entry-reckon",
@@ -19304,12 +20369,14 @@ const INITIAL_ENTRIES = [
       {
         "word": "estimate",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "ước lượng"
       },
       {
         "word": "conjecture",
         "register": "formal",
-        "cefr": "C2"
+        "cefr": "C2",
+        "vietnamese_meaning": "suy đoán phỏng chừng"
       }
     ],
     "folder_ids": [
@@ -19324,7 +20391,8 @@ const INITIAL_ENTRIES = [
       "last_result": null
     },
     "date_added": "2026-09-02T12:37:38.883Z",
-    "source_context": "IELTS Speaking - expressing personal views and estimating timelines or statistics."
+    "source_context": "IELTS Speaking - expressing personal views and estimating timelines or statistics.",
+    "antonyms": []
   },
   {
     "id": "entry-reluctant",
@@ -19393,17 +20461,20 @@ const INITIAL_ENTRIES = [
       {
         "word": "unwilling",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "không sẵn lòng"
       },
       {
         "word": "hesitant",
         "register": "neutral",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "ngập ngừng do dự"
       },
       {
         "word": "loath",
         "register": "formal",
-        "cefr": "C2"
+        "cefr": "C2",
+        "vietnamese_meaning": "ghét, không thích làm"
       }
     ],
     "folder_ids": [
@@ -19418,7 +20489,17 @@ const INITIAL_ENTRIES = [
       "last_result": null
     },
     "date_added": "2026-09-02T12:37:38.883Z",
-    "source_context": "IELTS Writing Task 2 - describing public reluctance, resistance to policies, or psychological attitude."
+    "source_context": "IELTS Writing Task 2 - describing public reluctance, resistance to policies, or psychological attitude.",
+    "antonyms": [
+      {
+        "word": "willing",
+        "vietnamese_meaning": "sẵn lòng"
+      },
+      {
+        "word": "eager",
+        "vietnamese_meaning": "háo hức"
+      }
+    ]
   }
 ];
 
@@ -19486,12 +20567,14 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "get",
         "register": "neutral",
-        "cefr": "A1"
+        "cefr": "A1",
+        "vietnamese_meaning": "tiếp thu, đạt được, giành được"
       },
       {
         "word": "obtain",
         "register": "formal",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "thu được, giành được"
       }
     ],
     "suggested_folder_name": "Academic Writing (Task 2)",
@@ -19572,12 +20655,14 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "combine",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "kết hợp"
       },
       {
         "word": "mix",
         "register": "informal",
-        "cefr": "A2"
+        "cefr": "A2",
+        "vietnamese_meaning": "tổng hợp (thông tin, hóa chất)"
       }
     ],
     "suggested_folder_name": "Academic Writing (Task 2)",
@@ -19656,17 +20741,20 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "judge",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "đánh giá, định giá"
       },
       {
         "word": "assess",
         "register": "academic",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "thẩm định, đánh giá"
       },
       {
         "word": "weigh up",
         "register": "informal",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "đánh giá, định giá"
       }
     ],
     "suggested_folder_name": "Academic Writing (Task 2)",
@@ -19734,12 +20822,14 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "abandon",
         "register": "formal",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "từ bỏ, ruồng bỏ"
       },
       {
         "word": "quit",
         "register": "informal",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "từ bỏ, bỏ cuộc"
       }
     ],
     "suggested_folder_name": "Phrasal Verbs & Idioms",
@@ -19818,17 +20908,20 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "confirm",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "xác nhận, chuẩn y"
       },
       {
         "word": "support",
         "register": "neutral",
-        "cefr": "A2"
+        "cefr": "A2",
+        "vietnamese_meaning": "ủng hộ, củng cố"
       },
       {
         "word": "back up",
         "register": "informal",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "chứng thực, củng cố (bằng chứng, lời khai)"
       }
     ],
     "suggested_folder_name": "Law & Policy",
@@ -19842,7 +20935,17 @@ const EXTENDED_DICTIONARY_DB = [
         "example": "Implementing this policy will help corroborate the current situation."
       }
     ],
-    "vietnamese_meaning": "chứng thực, củng cố (bằng chứng, lời khai)"
+    "vietnamese_meaning": "chứng thực, củng cố (bằng chứng, lời khai)",
+    "antonyms": [
+      {
+        "word": "refute",
+        "vietnamese_meaning": "bác bỏ"
+      },
+      {
+        "word": "disprove",
+        "vietnamese_meaning": "bác bỏ bằng chứng"
+      }
+    ]
   },
   {
     "word": "ephemeral",
@@ -19902,12 +21005,14 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "temporary",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "phù du, chóng tàn, tồn tại trong thời gian ngắn"
       },
       {
         "word": "short-lived",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "phù du, chóng tàn, tồn tại trong thời gian ngắn"
       }
     ],
     "suggested_folder_name": "Academic Writing (Task 2)",
@@ -19921,7 +21026,17 @@ const EXTENDED_DICTIONARY_DB = [
         "example": "The case study was particularly ephemeral to our research question."
       }
     ],
-    "vietnamese_meaning": "phù du, chóng tàn, tồn tại trong thời gian ngắn"
+    "vietnamese_meaning": "phù du, chóng tàn, tồn tại trong thời gian ngắn",
+    "antonyms": [
+      {
+        "word": "eternal",
+        "vietnamese_meaning": "vĩnh cửu"
+      },
+      {
+        "word": "permanent",
+        "vietnamese_meaning": "lâu dài, cố định"
+      }
+    ]
   },
   {
     "word": "ameliorate",
@@ -19985,17 +21100,20 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "improve",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "cải thiện, nâng cao"
       },
       {
         "word": "help",
         "register": "neutral",
-        "cefr": "A1"
+        "cefr": "A1",
+        "vietnamese_meaning": "giúp đỡ"
       },
       {
         "word": "better",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "cải thiện, làm cho tốt hơn (tình hình, điều kiện)"
       }
     ],
     "suggested_folder_name": "Academic Writing (Task 2)",
@@ -20009,7 +21127,17 @@ const EXTENDED_DICTIONARY_DB = [
         "example": "Implementing this policy will help ameliorate the current situation."
       }
     ],
-    "vietnamese_meaning": "cải thiện, làm cho tốt hơn (tình hình, điều kiện)"
+    "vietnamese_meaning": "cải thiện, làm cho tốt hơn (tình hình, điều kiện)",
+    "antonyms": [
+      {
+        "word": "worsen",
+        "vietnamese_meaning": "làm xấu đi"
+      },
+      {
+        "word": "deteriorate",
+        "vietnamese_meaning": "suy thoái"
+      }
+    ]
   },
   {
     "word": "deteriorate",
@@ -20069,12 +21197,14 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "worsen",
         "register": "neutral",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "làm xấu đi"
       },
       {
         "word": "go downhill",
         "register": "informal",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "xấu đi, suy giảm chất lượng"
       }
     ],
     "suggested_folder_name": "Academic Writing (Task 2)",
@@ -20147,12 +21277,14 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "worsen",
         "register": "neutral",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "làm xấu đi"
       },
       {
         "word": "make worse",
         "register": "neutral",
-        "cefr": "A2"
+        "cefr": "A2",
+        "vietnamese_meaning": "làm trầm trọng thêm (vấn đề, căn bệnh)"
       }
     ],
     "suggested_folder_name": "Academic Writing (Task 2)",
@@ -20166,7 +21298,17 @@ const EXTENDED_DICTIONARY_DB = [
         "example": "Implementing this policy will help exacerbate the current situation."
       }
     ],
-    "vietnamese_meaning": "làm trầm trọng thêm (vấn đề, căn bệnh)"
+    "vietnamese_meaning": "làm trầm trọng thêm (vấn đề, căn bệnh)",
+    "antonyms": [
+      {
+        "word": "alleviate",
+        "vietnamese_meaning": "làm dịu bớt"
+      },
+      {
+        "word": "mitigate",
+        "vietnamese_meaning": "giảm nhẹ"
+      }
+    ]
   },
   {
     "word": "eradicate",
@@ -20225,12 +21367,14 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "wipe out",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "diệt trừ tận gốc, triệt tiêu"
       },
       {
         "word": "destroy",
         "register": "neutral",
-        "cefr": "A2"
+        "cefr": "A2",
+        "vietnamese_meaning": "phá hủy hoàn toàn"
       }
     ],
     "suggested_folder_name": "Academic Writing (Task 2)",
@@ -20244,7 +21388,13 @@ const EXTENDED_DICTIONARY_DB = [
         "example": "Implementing this policy will help eradicate the current situation."
       }
     ],
-    "vietnamese_meaning": "diệt trừ tận gốc, triệt tiêu"
+    "vietnamese_meaning": "diệt trừ tận gốc, triệt tiêu",
+    "antonyms": [
+      {
+        "word": "preserve",
+        "vietnamese_meaning": "gìn giữ, duy trì"
+      }
+    ]
   },
   {
     "word": "feasible",
@@ -20303,17 +21453,20 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "possible",
         "register": "neutral",
-        "cefr": "A2"
+        "cefr": "A2",
+        "vietnamese_meaning": "khả thi, có thể thực hiện được"
       },
       {
         "word": "doable",
         "register": "informal",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "khả thi, có thể thực hiện được"
       },
       {
         "word": "viable",
         "register": "business",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "khả thi, có thể thực hiện được"
       }
     ],
     "suggested_folder_name": "Academic Writing (Task 2)",
@@ -20327,7 +21480,17 @@ const EXTENDED_DICTIONARY_DB = [
         "example": "The case study was particularly feasible to our research question."
       }
     ],
-    "vietnamese_meaning": "khả thi, có thể thực hiện được"
+    "vietnamese_meaning": "khả thi, có thể thực hiện được",
+    "antonyms": [
+      {
+        "word": "impossible",
+        "vietnamese_meaning": "bất khả thi"
+      },
+      {
+        "word": "unworkable",
+        "vietnamese_meaning": "không thể thực hiện"
+      }
+    ]
   },
   {
     "word": "facilitate",
@@ -20387,12 +21550,14 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "help",
         "register": "neutral",
-        "cefr": "A1"
+        "cefr": "A1",
+        "vietnamese_meaning": "giúp đỡ"
       },
       {
         "word": "make easy",
         "register": "neutral",
-        "cefr": "A2"
+        "cefr": "A2",
+        "vietnamese_meaning": "tạo điều kiện thuận lợi, thúc đẩy"
       }
     ],
     "suggested_folder_name": "Academic Writing (Task 2)",
@@ -20471,12 +21636,14 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "experimental",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "dựa trên thực nghiệm/kinh nghiệm thực tế"
       },
       {
         "word": "real-world",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "dựa trên thực nghiệm/kinh nghiệm thực tế"
       }
     ],
     "suggested_folder_name": "Academic Writing (Task 2)",
@@ -20490,7 +21657,17 @@ const EXTENDED_DICTIONARY_DB = [
         "example": "The case study was particularly empirical to our research question."
       }
     ],
-    "vietnamese_meaning": "dựa trên thực nghiệm/kinh nghiệm thực tế"
+    "vietnamese_meaning": "dựa trên thực nghiệm/kinh nghiệm thực tế",
+    "antonyms": [
+      {
+        "word": "theoretical",
+        "vietnamese_meaning": "thuộc lý thuyết thuần túy"
+      },
+      {
+        "word": "hypothetical",
+        "vietnamese_meaning": "mang tính giả thuyết"
+      }
+    ]
   },
   {
     "word": "equivocal",
@@ -20551,17 +21728,20 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "unclear",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "mập mờ, nước đôi, không rõ ràng"
       },
       {
         "word": "ambiguous",
         "register": "academic",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "đa nghĩa, nhập nhằng"
       },
       {
         "word": "vague",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "mơ hồ, không rõ"
       }
     ],
     "suggested_folder_name": "Academic Writing (Task 2)",
@@ -20634,12 +21814,14 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "independent",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "tự chủ, độc lập"
       },
       {
         "word": "self-governing",
         "register": "formal",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "tự trị, tự lập"
       }
     ],
     "suggested_folder_name": "Academic Writing (Task 2)",
@@ -20653,7 +21835,13 @@ const EXTENDED_DICTIONARY_DB = [
         "example": "The case study was particularly autonomous to our research question."
       }
     ],
-    "vietnamese_meaning": "tự chủ, độc lập"
+    "vietnamese_meaning": "tự chủ, độc lập",
+    "antonyms": [
+      {
+        "word": "dependent",
+        "vietnamese_meaning": "phụ thuộc lệ thuộc"
+      }
+    ]
   },
   {
     "word": "cognitive",
@@ -20717,7 +21905,8 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "mental",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "thuộc về trí tuệ"
       }
     ],
     "suggested_folder_name": "Academic Writing (Task 2)",
@@ -20784,12 +21973,14 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "agreement",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "sự thỏa thuận"
       },
       {
         "word": "unity",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "sự đồng thuận, sự nhất trí"
       }
     ],
     "suggested_folder_name": "Academic Writing (Task 2)",
@@ -20867,17 +22058,20 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "increase",
         "register": "neutral",
-        "cefr": "A2"
+        "cefr": "A2",
+        "vietnamese_meaning": "tăng lên, gia tăng"
       },
       {
         "word": "boost",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "thúc đẩy tăng trưởng"
       },
       {
         "word": "beef up",
         "register": "informal",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "làm tăng lên, gia tăng (kích thước, giá trị)"
       }
     ],
     "suggested_folder_name": "Economics & Statistics",
@@ -20958,12 +22152,14 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "stimulus",
         "register": "academic",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "chất xúc tác, tác nhân thúc đẩy thay đổi"
       },
       {
         "word": "spark",
         "register": "informal",
-        "cefr": "C2"
+        "cefr": "C2",
+        "vietnamese_meaning": "chất xúc tác, tác nhân thúc đẩy thay đổi"
       }
     ],
     "suggested_folder_name": "Academic Writing (Task 2)",
@@ -21065,17 +22261,20 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "worrying",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "đáng lo ngại"
       },
       {
         "word": "troubling",
         "register": "formal",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "đáng lo ngại, gây băn khoăn trăn trở"
       },
       {
         "word": "upsetting",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "gây lo lắng, làm phiền lòng"
       }
     ],
     "suggested_folder_name": "Academic Writing (Task 2)",
@@ -21168,17 +22367,20 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "increase",
         "register": "neutral",
-        "cefr": "A2"
+        "cefr": "A2",
+        "vietnamese_meaning": "tăng lên, gia tăng"
       },
       {
         "word": "intensify",
         "register": "formal",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "tăng cường, làm sâu sắc thêm"
       },
       {
         "word": "grow rapidly",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "leo thang, gia tăng mức độ nghiêm trọng"
       }
     ],
     "suggested_folder_name": "Academic Writing (Task 2)",
@@ -21192,7 +22394,17 @@ const EXTENDED_DICTIONARY_DB = [
         "example": "What began as a minor dispute escalated rapidly into a major conflict."
       }
     ],
-    "vietnamese_meaning": "leo thang, gia tăng mức độ nghiêm trọng"
+    "vietnamese_meaning": "leo thang, gia tăng mức độ nghiêm trọng",
+    "antonyms": [
+      {
+        "word": "de-escalate",
+        "vietnamese_meaning": "hạ nhiệt căng thẳng"
+      },
+      {
+        "word": "diminish",
+        "vietnamese_meaning": "giảm bớt"
+      }
+    ]
   },
   {
     "word": "emigrate",
@@ -21265,17 +22477,20 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "migrate",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "di cư, di trú"
       },
       {
         "word": "relocate",
         "register": "formal",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "chuyển địa điểm"
       },
       {
         "word": "move abroad",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "di cư, xuất cảnh định cư"
       }
     ],
     "suggested_folder_name": "Academic Writing (Task 2)",
@@ -21364,17 +22579,20 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "pollute",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "làm ô nhiễm"
       },
       {
         "word": "taint",
         "register": "formal",
-        "cefr": "C2"
+        "cefr": "C2",
+        "vietnamese_meaning": "làm nhơ bẩn, làm hỏng"
       },
       {
         "word": "dirty",
         "register": "informal",
-        "cefr": "A2"
+        "cefr": "A2",
+        "vietnamese_meaning": "làm ô nhiễm, làm nhiễm độc"
       }
     ],
     "suggested_folder_name": "Environment & Ecology",
@@ -21388,7 +22606,17 @@ const EXTENDED_DICTIONARY_DB = [
         "example": "The soil near the old chemical plant was found to be heavily contaminated."
       }
     ],
-    "vietnamese_meaning": "làm ô nhiễm, làm nhiễm độc"
+    "vietnamese_meaning": "làm ô nhiễm, làm nhiễm độc",
+    "antonyms": [
+      {
+        "word": "purify",
+        "vietnamese_meaning": "làm tinh khiết"
+      },
+      {
+        "word": "decontaminate",
+        "vietnamese_meaning": "khử trùng"
+      }
+    ]
   },
   {
     "word": "deforestation",
@@ -21455,12 +22683,14 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "forest clearing",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "sự tàn phá rừng, nạn phá rừng"
       },
       {
         "word": "logging",
         "register": "neutral",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "việc đốn hạ cây rừng"
       }
     ],
     "suggested_folder_name": "Environment & Ecology",
@@ -21548,12 +22778,14 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "single-use",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "dùng một lần"
       },
       {
         "word": "throwaway",
         "register": "informal",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "dùng một lần rồi vứt"
       }
     ],
     "suggested_folder_name": "Environment & Ecology",
@@ -21567,7 +22799,13 @@ const EXTENDED_DICTIONARY_DB = [
         "example": "The government is proposing a ban on single-use disposable packaging."
       }
     ],
-    "vietnamese_meaning": "dùng một lần; sẵn sàng để sử dụng"
+    "vietnamese_meaning": "dùng một lần; sẵn sàng để sử dụng",
+    "antonyms": [
+      {
+        "word": "reusable",
+        "vietnamese_meaning": "tái sử dụng được"
+      }
+    ]
   },
   {
     "word": "offset",
@@ -21639,12 +22877,14 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "compensate for",
         "register": "formal",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "bù đắp, đền bù, bù trừ lại"
       },
       {
         "word": "make up for",
         "register": "informal",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "bù đắp, đền bù, bù trừ lại"
       }
     ],
     "suggested_folder_name": "Environment & Ecology",
@@ -21658,7 +22898,13 @@ const EXTENDED_DICTIONARY_DB = [
         "example": "The savings in fuel consumption will quickly offset the cost of the hybrid car."
       }
     ],
-    "vietnamese_meaning": "bù đắp, đền bù, bù trừ lại"
+    "vietnamese_meaning": "bù đắp, đền bù, bù trừ lại",
+    "antonyms": [
+      {
+        "word": "aggravate",
+        "vietnamese_meaning": "làm trầm trọng hơn"
+      }
+    ]
   },
   {
     "word": "carry out",
@@ -21728,17 +22974,20 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "perform",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "biểu diễn, tiến hành"
       },
       {
         "word": "execute",
         "register": "formal",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "thực hiện, thi hành"
       },
       {
         "word": "do",
         "register": "informal",
-        "cefr": "A1"
+        "cefr": "A1",
+        "vietnamese_meaning": "tiến hành, thực hiện (nghiên cứu, nhiệm vụ)"
       }
     ],
     "suggested_folder_name": "Phrasal Verbs & Idioms",
@@ -21822,17 +23071,20 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "investigate",
         "register": "formal",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "điều tra, nghiên cứu"
       },
       {
         "word": "check out",
         "register": "informal",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "nghiên cứu, điều tra, xem xét kỹ"
       },
       {
         "word": "examine",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "kiểm tra, xem xét"
       }
     ],
     "suggested_folder_name": "Phrasal Verbs & Idioms",
@@ -21916,17 +23168,20 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "deal with",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "đối phó, đương đầu với khó khăn"
       },
       {
         "word": "tackle",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "đối phó, đương đầu với khó khăn"
       },
       {
         "word": "get by",
         "register": "informal",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "đối phó, đương đầu với khó khăn"
       }
     ],
     "suggested_folder_name": "Phrasal Verbs & Idioms",
@@ -22020,17 +23275,20 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "cultivate",
         "register": "formal",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "khai hóa, làm cho văn minh"
       },
       {
         "word": "educate",
         "register": "neutral",
-        "cefr": "A2"
+        "cefr": "A2",
+        "vietnamese_meaning": "giáo dục, rèn luyện"
       },
       {
         "word": "socialize",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "khai hóa, làm cho văn minh"
       }
     ],
     "suggested_folder_name": "Academic Writing (Task 2)",
@@ -22120,17 +23378,20 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "dogma",
         "register": "formal",
-        "cefr": "C2"
+        "cefr": "C2",
+        "vietnamese_meaning": "học thuyết, giáo lý, chủ thuyết"
       },
       {
         "word": "ideology",
         "register": "neutral",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "học thuyết, giáo lý, chủ thuyết"
       },
       {
         "word": "principle",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "học thuyết, giáo lý, chủ thuyết"
       }
     ],
     "suggested_folder_name": "Law & Policy",
@@ -22218,17 +23479,20 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "intimidating",
         "register": "neutral",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "đáng sợ, hăm dọa"
       },
       {
         "word": "daunting",
         "register": "neutral",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "làm nản lòng, đáng gờm"
       },
       {
         "word": "challenging",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "ghê gớm, đáng gờm, dữ dội"
       }
     ],
     "suggested_folder_name": "Academic Writing (Task 2)",
@@ -22317,17 +23581,20 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "distinction",
         "register": "formal",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "sự ưu tú, lỗi lạc"
       },
       {
         "word": "importance",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "sự nổi bật, địa vị lỗi lạc quan trọng"
       },
       {
         "word": "visibility",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "sự nổi bật, địa vị lỗi lạc quan trọng"
       }
     ],
     "suggested_folder_name": "Academic Writing (Task 2)",
@@ -22416,17 +23683,20 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "socialism",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "chủ nghĩa xã hội"
       },
       {
         "word": "progressivism",
         "register": "formal",
-        "cefr": "C2"
+        "cefr": "C2",
+        "vietnamese_meaning": "chủ nghĩa tiến bộ"
       },
       {
         "word": "left-wing politics",
         "register": "formal",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "chủ nghĩa cánh tả (chính trị)"
       }
     ],
     "suggested_folder_name": "Law & Policy",
@@ -22512,17 +23782,20 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "optimistic",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "lạc quan, vui vẻ, phấn khởi"
       },
       {
         "word": "sanguine",
         "register": "formal",
-        "cefr": "C2"
+        "cefr": "C2",
+        "vietnamese_meaning": "lạc quan, vui vẻ, phấn khởi"
       },
       {
         "word": "cheerful",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "vui tươi, rạng rỡ"
       }
     ],
     "suggested_folder_name": "Academic Writing (Task 2)",
@@ -22536,7 +23809,17 @@ const EXTENDED_DICTIONARY_DB = [
         "example": "The case study was particularly upbeat to our research question."
       }
     ],
-    "vietnamese_meaning": "lạc quan, vui vẻ, phấn khởi"
+    "vietnamese_meaning": "lạc quan, vui vẻ, phấn khởi",
+    "antonyms": [
+      {
+        "word": "pessimistic",
+        "vietnamese_meaning": "bi quan"
+      },
+      {
+        "word": "gloomy",
+        "vietnamese_meaning": "ảm đạm u sầu"
+      }
+    ]
   },
   {
     "word": "optimistic",
@@ -22611,17 +23894,20 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "hopeful",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "đầy hy vọng"
       },
       {
         "word": "upbeat",
         "register": "neutral",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "lạc quan, đầy hy vọng"
       },
       {
         "word": "sanguine",
         "register": "formal",
-        "cefr": "C2"
+        "cefr": "C2",
+        "vietnamese_meaning": "lạc quan, đầy hy vọng"
       }
     ],
     "suggested_folder_name": "Academic Writing (Task 2)",
@@ -22635,7 +23921,13 @@ const EXTENDED_DICTIONARY_DB = [
         "example": "The case study was particularly optimistic to our research question."
       }
     ],
-    "vietnamese_meaning": "lạc quan, đầy hy vọng"
+    "vietnamese_meaning": "lạc quan, đầy hy vọng",
+    "antonyms": [
+      {
+        "word": "pessimistic",
+        "vietnamese_meaning": "bi quan"
+      }
+    ]
   },
   {
     "word": "territorial",
@@ -22710,17 +24002,20 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "regional",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "thuộc về lãnh thổ, có tính bảo vệ lãnh thổ"
       },
       {
         "word": "sovereign",
         "register": "formal",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "thuộc về lãnh thổ, có tính bảo vệ lãnh thổ"
       },
       {
         "word": "provincial",
         "register": "neutral",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "thuộc về lãnh thổ, có tính bảo vệ lãnh thổ"
       }
     ],
     "suggested_folder_name": "Law & Policy",
@@ -22810,17 +24105,20 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "deduction",
         "register": "formal",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "sự diễn dịch, suy diễn"
       },
       {
         "word": "conclusion",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "kết luận cuối cùng"
       },
       {
         "word": "conjecture",
         "register": "formal",
-        "cefr": "C2"
+        "cefr": "C2",
+        "vietnamese_meaning": "suy đoán phỏng chừng"
       }
     ],
     "suggested_folder_name": "Academic Writing (Task 2)",
@@ -22911,17 +24209,20 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "abhorrent",
         "register": "formal",
-        "cefr": "C2"
+        "cefr": "C2",
+        "vietnamese_meaning": "kinh tởm, đáng ghét, đẩy lùi"
       },
       {
         "word": "loathsome",
         "register": "formal",
-        "cefr": "C2"
+        "cefr": "C2",
+        "vietnamese_meaning": "đáng ghét, ghê tởm"
       },
       {
         "word": "disgusting",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "kinh tởm, buồn nôn"
       }
     ],
     "suggested_folder_name": "Academic Writing (Task 2)",
@@ -22935,7 +24236,17 @@ const EXTENDED_DICTIONARY_DB = [
         "example": "The case study was particularly repulsive to our research question."
       }
     ],
-    "vietnamese_meaning": "kinh tởm, đáng ghét, đẩy lùi"
+    "vietnamese_meaning": "kinh tởm, đáng ghét, đẩy lùi",
+    "antonyms": [
+      {
+        "word": "attractive",
+        "vietnamese_meaning": "hấp dẫn quyến rũ"
+      },
+      {
+        "word": "alluring",
+        "vietnamese_meaning": "lôi cuốn"
+      }
+    ]
   },
   {
     "word": "play out",
@@ -23007,17 +24318,20 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "unfold",
         "register": "neutral",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "mở ra, diễn tiến"
       },
       {
         "word": "transpire",
         "register": "formal",
-        "cefr": "C2"
+        "cefr": "C2",
+        "vietnamese_meaning": "diễn ra, phát triển theo kịch bản"
       },
       {
         "word": "happen",
         "register": "neutral",
-        "cefr": "A1"
+        "cefr": "A1",
+        "vietnamese_meaning": "diễn ra, phát triển theo kịch bản"
       }
     ],
     "suggested_folder_name": "Phrasal Verbs & Idioms",
@@ -23107,17 +24421,20 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "flexibility",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "tính linh hoạt, co giãn"
       },
       {
         "word": "adaptability",
         "register": "neutral",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "tính co giãn, độ đàn hồi"
       },
       {
         "word": "resilience",
         "register": "academic",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "khả năng phục hồi kiên cường"
       }
     ],
     "suggested_folder_name": "Economics & Statistics",
@@ -23195,12 +24512,14 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "incline",
         "register": "formal",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "khiến cho có thiên hướng"
       },
       {
         "word": "bias",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "dẫn đến, khiến cho dễ mắc phải (bệnh, xu hướng)"
       }
     ],
     "suggested_folder_name": "Academic Writing (Task 2)",
@@ -23274,12 +24593,14 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "perspective",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "quan điểm, góc nhìn"
       },
       {
         "word": "prospect",
         "register": "formal",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "góc nhìn, triển vọng tương lai, quan điểm sống"
       }
     ],
     "suggested_folder_name": "Economics & Statistics",
@@ -23360,12 +24681,14 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "statement",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "phát biểu, tuyên bố"
       },
       {
         "word": "claim",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "khẳng định, yêu sách"
       }
     ],
     "suggested_folder_name": "Academic Writing (Task 2)",
@@ -23446,7 +24769,8 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "strict rules",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "áp đặt các quy tắc/quy định nghiêm ngặt"
       }
     ],
     "folder_ids": [
@@ -23529,7 +24853,8 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "make people obey",
         "register": "informal",
-        "cefr": "A2"
+        "cefr": "A2",
+        "vietnamese_meaning": "thực thi sự tuân thủ (quy định/pháp luật)"
       }
     ],
     "folder_ids": [
@@ -23613,7 +24938,8 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "limit freedom",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "giới hạn sự tự do"
       }
     ],
     "folder_ids": [
@@ -23695,7 +25021,8 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "follow society",
         "register": "informal",
-        "cefr": "A2"
+        "cefr": "A2",
+        "vietnamese_meaning": "tuân theo các chuẩn mực xã hội"
       }
     ],
     "folder_ids": [
@@ -23781,12 +25108,14 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "higher education",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "giáo dục bậc đại học"
       },
       {
         "word": "university education",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "giáo dục bậc đại học/cao đẳng"
       }
     ],
     "folder_ids": [
@@ -23872,7 +25201,8 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "teach logical thinking",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "trau dồi tư duy phản biện"
       }
     ],
     "folder_ids": [
@@ -23960,7 +25290,8 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "specific knowledge",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "kiến thức chuyên môn sâu"
       }
     ],
     "folder_ids": [
@@ -24046,12 +25377,14 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "syllabus",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "chương trình giảng dạy học thuật"
       },
       {
         "word": "study program",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "chương trình học tập"
       }
     ],
     "folder_ids": [
@@ -24133,7 +25466,8 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "soft skills",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "kỹ năng có thể chuyển giao/áp dụng linh hoạt"
       }
     ],
     "folder_ids": [
@@ -24212,12 +25546,14 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "practical training",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "đào tạo nghề, học nghề"
       },
       {
         "word": "job training",
         "register": "informal",
-        "cefr": "A2"
+        "cefr": "A2",
+        "vietnamese_meaning": "đào tạo tay nghề thực tế"
       }
     ],
     "folder_ids": [
@@ -24301,7 +25637,8 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "find a job",
         "register": "informal",
-        "cefr": "A1"
+        "cefr": "A1",
+        "vietnamese_meaning": "thích nghi với thị trường việc làm cạnh tranh"
       }
     ],
     "folder_ids": [
@@ -24383,7 +25720,8 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "communication skills",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "kỹ năng giao tiếp ứng xử, kỹ năng mềm"
       }
     ],
     "folder_ids": [
@@ -24472,7 +25810,8 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "long-lasting",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "lâu dài, trường tồn"
       }
     ],
     "folder_ids": [
@@ -24487,7 +25826,17 @@ const EXTENDED_DICTIONARY_DB = [
     },
     "date_added": "2026-09-02T12:37:38.881Z",
     "source_context": "Discussing materials, economic goods, or long-lasting agreements.",
-    "vietnamese_meaning": "bền bỉ, lâu bền"
+    "vietnamese_meaning": "bền bỉ, lâu bền",
+    "antonyms": [
+      {
+        "word": "fragile",
+        "vietnamese_meaning": "mong manh dễ vỡ"
+      },
+      {
+        "word": "perishable",
+        "vietnamese_meaning": "dễ hư hỏng"
+      }
+    ]
   },
   {
     "id": "entry-sustainable",
@@ -24563,7 +25912,8 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "viable",
         "register": "academic",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "bền vững, thân thiện với môi trường lâu dài"
       }
     ],
     "folder_ids": [
@@ -24659,12 +26009,14 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "tangible",
         "register": "academic",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "bê tông; cụ thể, rõ ràng"
       },
       {
         "word": "cement",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "bê tông; cụ thể, rõ ràng"
       }
     ],
     "folder_ids": [
@@ -24754,7 +26106,8 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "groyne",
         "register": "technical",
-        "cefr": "C2"
+        "cefr": "C2",
+        "vietnamese_meaning": "đê cản sóng cát"
       }
     ],
     "folder_ids": [
@@ -24843,7 +26196,8 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "mandatory",
         "register": "formal",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "có tính ràng buộc (pháp lý), sự liên kết"
       }
     ],
     "folder_ids": [
@@ -24940,12 +26294,14 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "makeup",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "thành phần cấu tạo"
       },
       {
         "word": "structure",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "cấu trúc, kết cấu"
       }
     ],
     "folder_ids": [
@@ -25033,7 +26389,8 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "on-time",
         "register": "informal",
-        "cefr": "A2"
+        "cefr": "A2",
+        "vietnamese_meaning": "đúng giờ, không bao giờ trễ hẹn"
       }
     ],
     "folder_ids": [
@@ -25049,7 +26406,17 @@ const EXTENDED_DICTIONARY_DB = [
     },
     "date_added": "2026-09-02T12:37:38.881Z",
     "source_context": "Describing work habits, transportation schedules, or daily routines.",
-    "vietnamese_meaning": "đúng giờ, không bao giờ trễ hẹn"
+    "vietnamese_meaning": "đúng giờ, không bao giờ trễ hẹn",
+    "antonyms": [
+      {
+        "word": "tardy",
+        "vietnamese_meaning": "chậm trễ, muộn màng"
+      },
+      {
+        "word": "late",
+        "vietnamese_meaning": "trễ giờ"
+      }
+    ]
   },
   {
     "id": "entry-livestock",
@@ -25116,7 +26483,8 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "farm animals",
         "register": "informal",
-        "cefr": "A2"
+        "cefr": "A2",
+        "vietnamese_meaning": "vật nuôi trang trại"
       }
     ],
     "folder_ids": [
@@ -25199,7 +26567,8 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "farm vehicle",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "phương tiện nông trại"
       }
     ],
     "folder_ids": [
@@ -25288,7 +26657,8 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "emotionless",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "điềm tĩnh, không để lộ cảm xúc, trơ trơ"
       }
     ],
     "folder_ids": [
@@ -25376,7 +26746,8 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "secretly",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "một cách bí mật"
       }
     ],
     "folder_ids": [
@@ -25391,7 +26762,17 @@ const EXTENDED_DICTIONARY_DB = [
     },
     "date_added": "2026-09-02T12:37:38.881Z",
     "source_context": "Sea Change for Salinity passage - describing the quiet destruction by salt.",
-    "vietnamese_meaning": "một cách lén lút, rón rén"
+    "vietnamese_meaning": "một cách lén lút, rón rén",
+    "antonyms": [
+      {
+        "word": "openly",
+        "vietnamese_meaning": "công khai, không giấu giếm"
+      },
+      {
+        "word": "overtly",
+        "vietnamese_meaning": "rõ ràng công khai"
+      }
+    ]
   },
   {
     "id": "entry-pinpoint",
@@ -25463,7 +26844,8 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "identify",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "nhận diện, chỉ ra"
       }
     ],
     "folder_ids": [
@@ -25556,7 +26938,8 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "make",
         "register": "neutral",
-        "cefr": "A1"
+        "cefr": "A1",
+        "vietnamese_meaning": "làm cho, chế tạo"
       }
     ],
     "folder_ids": [
@@ -25641,12 +27024,14 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "following",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "tiếp theo sau"
       },
       {
         "word": "subsequent",
         "register": "academic",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "xảy ra kế tiếp"
       }
     ],
     "folder_ids": [
@@ -25738,7 +27123,8 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "intrude",
         "register": "neutral",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "xâm phạm, can thiệp bất hợp pháp"
       }
     ],
     "folder_ids": [
@@ -25831,7 +27217,8 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "overshadow",
         "register": "neutral",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "che bóng, làm lu mờ"
       }
     ],
     "folder_ids": [
@@ -25917,7 +27304,8 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "block",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "chặn đường, cản trở"
       }
     ],
     "folder_ids": [
@@ -26001,7 +27389,8 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "underground",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "dưới mặt đất, ngầm"
       }
     ],
     "folder_ids": [
@@ -26086,12 +27475,14 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "outline",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "phác thảo đường nét"
       },
       {
         "word": "define",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "vạch ra, mô tả chi tiết, phác họa"
       }
     ],
     "folder_ids": [
@@ -26182,12 +27573,14 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "restrain",
         "register": "formal",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "kiềm chế, giữ lại"
       },
       {
         "word": "limit",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "hạn chế mức độ"
       }
     ],
     "folder_ids": [
@@ -26285,7 +27678,8 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "threat",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "mối đe dọa"
       }
     ],
     "folder_ids": [
@@ -26371,7 +27765,8 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "saltiness",
         "register": "informal",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "vị mặn, nồng độ muối"
       }
     ],
     "folder_ids": [
@@ -26454,7 +27849,8 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "large-scale farming",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "canh tác diện rộng"
       }
     ],
     "folder_ids": [
@@ -26539,12 +27935,14 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "growing",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "ngày càng tăng trưởng"
       },
       {
         "word": "escalating",
         "register": "formal",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "ngày càng gia tăng, chồng chất"
       }
     ],
     "folder_ids": [
@@ -26636,7 +28034,8 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "surprise attack",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "cuộc tập kích bất ngờ"
       }
     ],
     "folder_ids": [
@@ -26725,7 +28124,8 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "transmission",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "tính dẫn (điện, nhiệt)"
       }
     ],
     "folder_ids": [
@@ -26811,7 +28211,8 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "outflow",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "hệ thống thoát nước, sự thoát nước"
       }
     ],
     "folder_ids": [
@@ -26904,7 +28305,8 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "bad-tempered",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "dễ cáu kỉnh, dễ nổi nóng, dễ bị kích ứng"
       }
     ],
     "folder_ids": [
@@ -26996,7 +28398,8 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "royal",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "thuộc hoàng gia"
       }
     ],
     "folder_ids": [
@@ -27082,7 +28485,8 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "illegal trade",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "nạn buôn lậu, hành vi vận chuyển trái phép"
       }
     ],
     "folder_ids": [
@@ -27171,7 +28575,8 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "contamination",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "sự nhiễm bẩn, pha tạp"
       }
     ],
     "folder_ids": [
@@ -27260,7 +28665,8 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "exclusive control",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "sự kiểm soát độc quyền"
       }
     ],
     "folder_ids": [
@@ -27358,7 +28764,8 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "disciplinary",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "có tính kỷ luật, trừng phạt"
       }
     ],
     "folder_ids": [
@@ -27448,12 +28855,14 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "encourage",
         "register": "neutral",
-        "cefr": "A2"
+        "cefr": "A2",
+        "vietnamese_meaning": "khuyến khích, động viên"
       },
       {
         "word": "boost",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "thúc đẩy tăng trưởng"
       }
     ],
     "folder_ids": [
@@ -27545,7 +28954,8 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "injection",
         "register": "neutral",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "sự tiêm vào, rót vốn"
       }
     ],
     "folder_ids": [
@@ -27636,7 +29046,8 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "respect",
         "register": "neutral",
-        "cefr": "A2"
+        "cefr": "A2",
+        "vietnamese_meaning": "sự tôn trọng"
       }
     ],
     "folder_ids": [
@@ -27719,7 +29130,8 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "remains",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "tàn dư, mảnh vụn còn sót lại"
       }
     ],
     "folder_ids": [
@@ -27807,7 +29219,8 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "magnificence",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "sự nguy nga lộng lẫy"
       }
     ],
     "folder_ids": [
@@ -27891,12 +29304,14 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "prove",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "chứng minh"
       },
       {
         "word": "confirm",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "xác nhận, chuẩn y"
       }
     ],
     "folder_ids": [
@@ -27983,7 +29398,8 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "meticulously",
         "register": "academic",
-        "cefr": "C2"
+        "cefr": "C2",
+        "vietnamese_meaning": "một cách tỉ mỉ"
       }
     ],
     "folder_ids": [
@@ -28071,12 +29487,14 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "back up",
         "register": "informal",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "chứng minh, đưa ra bằng chứng xác thực"
       },
       {
         "word": "corroborate",
         "register": "formal",
-        "cefr": "C2"
+        "cefr": "C2",
+        "vietnamese_meaning": "củng cố bằng chứng"
       }
     ],
     "folder_ids": [
@@ -28162,7 +29580,8 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "weaken",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "làm suy yếu"
       }
     ],
     "folder_ids": [
@@ -28178,7 +29597,17 @@ const EXTENDED_DICTIONARY_DB = [
     },
     "date_added": "2026-09-02T12:37:38.881Z",
     "source_context": "Drawing Lessons from History passage - past societies undermined themselves.",
-    "vietnamese_meaning": "làm suy yếu dần, hủy hoại ngấm ngầm"
+    "vietnamese_meaning": "làm suy yếu dần, hủy hoại ngấm ngầm",
+    "antonyms": [
+      {
+        "word": "strengthen",
+        "vietnamese_meaning": "củng cố, làm mạnh thêm"
+      },
+      {
+        "word": "bolster",
+        "vietnamese_meaning": "nâng đỡ, trợ lực"
+      }
+    ]
   },
   {
     "id": "entry-depletion",
@@ -28250,7 +29679,8 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "reduction",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "sự cạn kiệt, sự suy giảm"
       }
     ],
     "folder_ids": [
@@ -28333,7 +29763,8 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "downfall",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "sự suy vong"
       }
     ],
     "folder_ids": [
@@ -28349,7 +29780,17 @@ const EXTENDED_DICTIONARY_DB = [
     },
     "date_added": "2026-09-02T12:37:38.881Z",
     "source_context": "Drawing Lessons from History passage - speaking of a society's birth and eventual demise.",
-    "vietnamese_meaning": "sự sụp đổ, sự biến mất, cái chết"
+    "vietnamese_meaning": "sự sụp đổ, sự biến mất, cái chết",
+    "antonyms": [
+      {
+        "word": "birth",
+        "vietnamese_meaning": "sự ra đời"
+      },
+      {
+        "word": "rise",
+        "vietnamese_meaning": "sự trỗi dậy"
+      }
+    ]
   },
   {
     "id": "entry-contingent",
@@ -28426,7 +29867,8 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "dependent",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "phụ thuộc vào"
       }
     ],
     "folder_ids": [
@@ -28517,7 +29959,8 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "consider",
         "register": "neutral",
-        "cefr": "A2"
+        "cefr": "A2",
+        "vietnamese_meaning": "cân nhắc"
       }
     ],
     "folder_ids": [
@@ -28612,7 +30055,8 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "downfall",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "sự suy vong"
       }
     ],
     "folder_ids": [
@@ -28698,7 +30142,8 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "breathtaking",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "ngoạn mục đến nghẹt thở"
       }
     ],
     "folder_ids": [
@@ -28785,7 +30230,8 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "gullible",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "dễ bị lừa, cả tin"
       }
     ],
     "folder_ids": [
@@ -28801,7 +30247,17 @@ const EXTENDED_DICTIONARY_DB = [
     },
     "date_added": "2026-09-02T12:37:38.881Z",
     "source_context": "Drawing Lessons from History passage - naive to assume past yields straightforward answers.",
-    "vietnamese_meaning": "ngây thơ, cả tin, thiếu kinh nghiệm"
+    "vietnamese_meaning": "ngây thơ, cả tin, thiếu kinh nghiệm",
+    "antonyms": [
+      {
+        "word": "sophisticated",
+        "vietnamese_meaning": "tinh tế, sành sỏi"
+      },
+      {
+        "word": "worldly",
+        "vietnamese_meaning": "từng trải"
+      }
+    ]
   },
   {
     "id": "entry-remedy",
@@ -28880,12 +30336,14 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "rectify",
         "register": "formal",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "biện pháp khắc phục, phương thuốc chữa trị"
       },
       {
         "word": "solve",
         "register": "neutral",
-        "cefr": "A2"
+        "cefr": "A2",
+        "vietnamese_meaning": "biện pháp khắc phục, phương thuốc chữa trị"
       }
     ],
     "folder_ids": [
@@ -28973,7 +30431,8 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "exaggerate",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "thổi phồng, cường điệu"
       }
     ],
     "folder_ids": [
@@ -28989,7 +30448,17 @@ const EXTENDED_DICTIONARY_DB = [
     },
     "date_added": "2026-09-02T12:37:38.881Z",
     "source_context": "Drawing Lessons from History passage - debate whether environmental risks are overstated.",
-    "vietnamese_meaning": "nói quá, phóng đại mức độ"
+    "vietnamese_meaning": "nói quá, phóng đại mức độ",
+    "antonyms": [
+      {
+        "word": "understate",
+        "vietnamese_meaning": "nói giảm, nói nhẹ"
+      },
+      {
+        "word": "minimize",
+        "vietnamese_meaning": "thu nhỏ mức độ"
+      }
+    ]
   },
   {
     "id": "entry-undervalue",
@@ -29061,7 +30530,8 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "underestimate",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "đánh giá quá thấp"
       }
     ],
     "folder_ids": [
@@ -29077,7 +30547,13 @@ const EXTENDED_DICTIONARY_DB = [
     },
     "date_added": "2026-09-02T12:37:38.881Z",
     "source_context": "Drawing Lessons from History passage - debate whether environmental risks are undervalued.",
-    "vietnamese_meaning": "đánh giá thấp, coi thường giá trị thực"
+    "vietnamese_meaning": "đánh giá thấp, coi thường giá trị thực",
+    "antonyms": [
+      {
+        "word": "overestimate",
+        "vietnamese_meaning": "đánh giá quá cao"
+      }
+    ]
   },
   {
     "id": "entry-hazard",
@@ -29149,7 +30625,8 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "danger",
         "register": "neutral",
-        "cefr": "A2"
+        "cefr": "A2",
+        "vietnamese_meaning": "sự nguy hiểm"
       }
     ],
     "folder_ids": [
@@ -29238,7 +30715,8 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "precision",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "độ chính xác tuyệt đối"
       }
     ],
     "folder_ids": [
@@ -29324,7 +30802,8 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "overturn",
         "register": "neutral",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "lật úp, đảo ngược"
       }
     ],
     "folder_ids": [
@@ -29419,7 +30898,8 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "appear",
         "register": "neutral",
-        "cefr": "A1"
+        "cefr": "A1",
+        "vietnamese_meaning": "xuất hiện"
       }
     ],
     "folder_ids": [
@@ -29504,7 +30984,8 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "similarity",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "sự tương đồng"
       }
     ],
     "folder_ids": [
@@ -29587,7 +31068,8 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "remnant",
         "register": "academic",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "di tích, di vật, tàn tích sót lại"
       }
     ],
     "folder_ids": [
@@ -29675,7 +31157,8 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "environmental",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "thuộc về môi trường"
       }
     ],
     "folder_ids": [
@@ -29764,12 +31247,14 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "comparison",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "sự so sánh đối chiếu"
       },
       {
         "word": "parallel",
         "register": "academic",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "sự tương đồng song song"
       }
     ],
     "folder_ids": [
@@ -29847,7 +31332,8 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "man-made",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "do nhân tạo làm ra"
       }
     ],
     "folder_ids": [
@@ -29938,7 +31424,8 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "modern",
         "register": "neutral",
-        "cefr": "A2"
+        "cefr": "A2",
+        "vietnamese_meaning": "hiện đại"
       }
     ],
     "folder_ids": [
@@ -30031,7 +31518,8 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "dependence",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "sự phụ thuộc"
       }
     ],
     "folder_ids": [
@@ -30119,7 +31607,8 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "suggestive",
         "register": "neutral",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "gợi nhớ đến, làm nhớ lại"
       }
     ],
     "folder_ids": [
@@ -30198,12 +31687,14 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "insignificant",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "không đáng kể"
       },
       {
         "word": "trivial",
         "register": "formal",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "tầm thường, vặt vãnh"
       }
     ],
     "folder_ids": [
@@ -30219,7 +31710,17 @@ const EXTENDED_DICTIONARY_DB = [
     },
     "date_added": "2026-09-02T12:37:38.882Z",
     "source_context": "Vitamins – To supplement or not? reading passage - negligible impact on major indicators of health.",
-    "vietnamese_meaning": "không đáng kể, không quan trọng, rất nhỏ"
+    "vietnamese_meaning": "không đáng kể, không quan trọng, rất nhỏ",
+    "antonyms": [
+      {
+        "word": "significant",
+        "vietnamese_meaning": "đáng kể, quan trọng"
+      },
+      {
+        "word": "substantial",
+        "vietnamese_meaning": "lớn lao, trọng yếu"
+      }
+    ]
   },
   {
     "id": "entry-fortify",
@@ -30282,12 +31783,14 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "strengthen",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "tăng cường độ mạnh"
       },
       {
         "word": "enrich",
         "register": "formal",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "làm giàu thêm dinh dưỡng"
       }
     ],
     "folder_ids": [
@@ -30362,12 +31865,14 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "plunge",
         "register": "neutral",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "lao dốc mạnh"
       },
       {
         "word": "fall",
         "register": "neutral",
-        "cefr": "A1"
+        "cefr": "A1",
+        "vietnamese_meaning": "rơi xuống, sụt giảm"
       }
     ],
     "folder_ids": [
@@ -30383,7 +31888,17 @@ const EXTENDED_DICTIONARY_DB = [
     },
     "date_added": "2026-09-02T12:37:38.882Z",
     "source_context": "Vitamins – To supplement or not? reading passage - spinal birth defects plummeted by 75%.",
-    "vietnamese_meaning": "lao dốc không phanh, giảm mạnh đột ngột"
+    "vietnamese_meaning": "lao dốc không phanh, giảm mạnh đột ngột",
+    "antonyms": [
+      {
+        "word": "soar",
+        "vietnamese_meaning": "bay vút lên, tăng vọt"
+      },
+      {
+        "word": "skyrocket",
+        "vietnamese_meaning": "tăng chóng mặt"
+      }
+    ]
   },
   {
     "id": "entry-affliction",
@@ -30446,12 +31961,14 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "disease",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "bệnh tật"
       },
       {
         "word": "ailment",
         "register": "formal",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "bệnh tật nhẹ, ốm vặt"
       }
     ],
     "folder_ids": [
@@ -30526,12 +32043,14 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "weaken",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "làm suy yếu"
       },
       {
         "word": "compromise",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "thỏa hiệp, làm nguy hại"
       }
     ],
     "folder_ids": [
@@ -30547,7 +32066,17 @@ const EXTENDED_DICTIONARY_DB = [
     },
     "date_added": "2026-09-02T12:37:38.882Z",
     "source_context": "Vitamins – To supplement or not? reading passage - we risk undermining that message and upsetting the balance.",
-    "vietnamese_meaning": "làm suy yếu dần, hủy hoại ngấm ngầm"
+    "vietnamese_meaning": "làm suy yếu dần, hủy hoại ngấm ngầm",
+    "antonyms": [
+      {
+        "word": "strengthen",
+        "vietnamese_meaning": "củng cố, làm mạnh thêm"
+      },
+      {
+        "word": "bolster",
+        "vietnamese_meaning": "nâng đỡ, trợ lực"
+      }
+    ]
   },
   {
     "id": "entry-counteract",
@@ -30610,12 +32139,14 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "neutralize",
         "register": "formal",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "vô hiệu hóa, trung hòa"
       },
       {
         "word": "offset",
         "register": "formal",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "bù trừ, triệt tiêu"
       }
     ],
     "folder_ids": [
@@ -30631,7 +32162,13 @@ const EXTENDED_DICTIONARY_DB = [
     },
     "date_added": "2026-09-02T12:37:38.882Z",
     "source_context": "Vitamins – To supplement or not? reading passage - counteracting the destructive effect of free radicals.",
-    "vietnamese_meaning": "chống lại, vô hiệu hóa, làm giảm tác động tiêu cực"
+    "vietnamese_meaning": "chống lại, vô hiệu hóa, làm giảm tác động tiêu cực",
+    "antonyms": [
+      {
+        "word": "reinforce",
+        "vietnamese_meaning": "tăng viện, củng cố thêm"
+      }
+    ]
   },
   {
     "id": "entry-retrieve",
@@ -30689,7 +32226,8 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "recover",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "hồi phục, lấy lại"
       }
     ],
     "folder_ids": [
@@ -30768,12 +32306,14 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "concept",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "ý niệm, khái niệm"
       },
       {
         "word": "idea",
         "register": "neutral",
-        "cefr": "A1"
+        "cefr": "A1",
+        "vietnamese_meaning": "ý tưởng"
       }
     ],
     "folder_ids": [
@@ -30846,7 +32386,8 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "avoid",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "né tránh"
       }
     ],
     "folder_ids": [
@@ -30919,16 +32460,28 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "insignificant",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "không đáng kể"
       },
       {
         "word": "trivial",
         "register": "formal",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "tầm thường, vặt vãnh"
       }
     ],
     "suggested_folder_name": "IELTS Reading",
-    "vietnamese_meaning": "không đáng kể, không quan trọng, rất nhỏ"
+    "vietnamese_meaning": "không đáng kể, không quan trọng, rất nhỏ",
+    "antonyms": [
+      {
+        "word": "significant",
+        "vietnamese_meaning": "đáng kể, quan trọng"
+      },
+      {
+        "word": "substantial",
+        "vietnamese_meaning": "lớn lao, trọng yếu"
+      }
+    ]
   },
   {
     "word": "fortify",
@@ -30985,12 +32538,14 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "strengthen",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "tăng cường độ mạnh"
       },
       {
         "word": "enrich",
         "register": "formal",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "làm giàu thêm dinh dưỡng"
       }
     ],
     "suggested_folder_name": "IELTS Reading",
@@ -31047,16 +32602,28 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "plunge",
         "register": "neutral",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "lao dốc mạnh"
       },
       {
         "word": "fall",
         "register": "neutral",
-        "cefr": "A1"
+        "cefr": "A1",
+        "vietnamese_meaning": "rơi xuống, sụt giảm"
       }
     ],
     "suggested_folder_name": "IELTS Reading",
-    "vietnamese_meaning": "lao dốc không phanh, giảm mạnh đột ngột"
+    "vietnamese_meaning": "lao dốc không phanh, giảm mạnh đột ngột",
+    "antonyms": [
+      {
+        "word": "soar",
+        "vietnamese_meaning": "bay vút lên, tăng vọt"
+      },
+      {
+        "word": "skyrocket",
+        "vietnamese_meaning": "tăng chóng mặt"
+      }
+    ]
   },
   {
     "word": "affliction",
@@ -31113,12 +32680,14 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "disease",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "bệnh tật"
       },
       {
         "word": "ailment",
         "register": "formal",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "bệnh tật nhẹ, ốm vặt"
       }
     ],
     "suggested_folder_name": "IELTS Reading",
@@ -31175,16 +32744,28 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "weaken",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "làm suy yếu"
       },
       {
         "word": "compromise",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "thỏa hiệp, làm nguy hại"
       }
     ],
     "suggested_folder_name": "IELTS Reading",
-    "vietnamese_meaning": "làm suy yếu dần, hủy hoại ngấm ngầm"
+    "vietnamese_meaning": "làm suy yếu dần, hủy hoại ngấm ngầm",
+    "antonyms": [
+      {
+        "word": "strengthen",
+        "vietnamese_meaning": "củng cố, làm mạnh thêm"
+      },
+      {
+        "word": "bolster",
+        "vietnamese_meaning": "nâng đỡ, trợ lực"
+      }
+    ]
   },
   {
     "word": "counteract",
@@ -31241,16 +32822,24 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "neutralize",
         "register": "formal",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "vô hiệu hóa, trung hòa"
       },
       {
         "word": "offset",
         "register": "formal",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "bù trừ, triệt tiêu"
       }
     ],
     "suggested_folder_name": "IELTS Reading",
-    "vietnamese_meaning": "chống lại, vô hiệu hóa, làm giảm tác động tiêu cực"
+    "vietnamese_meaning": "chống lại, vô hiệu hóa, làm giảm tác động tiêu cực",
+    "antonyms": [
+      {
+        "word": "reinforce",
+        "vietnamese_meaning": "tăng viện, củng cố thêm"
+      }
+    ]
   },
   {
     "word": "retrieve",
@@ -31302,7 +32891,8 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "recover",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "hồi phục, lấy lại"
       }
     ],
     "suggested_folder_name": "IELTS Reading",
@@ -31363,12 +32953,14 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "concept",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "ý niệm, khái niệm"
       },
       {
         "word": "idea",
         "register": "neutral",
-        "cefr": "A1"
+        "cefr": "A1",
+        "vietnamese_meaning": "ý tưởng"
       }
     ],
     "suggested_folder_name": "IELTS Reading",
@@ -31418,7 +33010,8 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "avoid",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "né tránh"
       }
     ],
     "suggested_folder_name": "Phrasal Verbs & Idioms",
@@ -31488,16 +33081,24 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "death",
         "register": "neutral",
-        "cefr": "A2"
+        "cefr": "A2",
+        "vietnamese_meaning": "cái chết, sự qua đời"
       },
       {
         "word": "fatality",
         "register": "formal",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "sự tử vong do tai nạn/chiến tranh"
       }
     ],
     "suggested_folder_name": "IELTS Reading",
-    "vietnamese_meaning": "sự tử vong, tỷ lệ tử vong, sự hữu hạn của đời người"
+    "vietnamese_meaning": "sự tử vong, tỷ lệ tử vong, sự hữu hạn của đời người",
+    "antonyms": [
+      {
+        "word": "immortality",
+        "vietnamese_meaning": "sự bất tử, trường sinh"
+      }
+    ]
   },
   {
     "word": "prenatal",
@@ -31554,11 +33155,18 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "pregnancy",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "sự mang thai"
       }
     ],
     "suggested_folder_name": "IELTS Reading",
-    "vietnamese_meaning": "trước khi sinh, thuộc thời kỳ thai nghén"
+    "vietnamese_meaning": "trước khi sinh, thuộc thời kỳ thai nghén",
+    "antonyms": [
+      {
+        "word": "postnatal",
+        "vietnamese_meaning": "sau khi sinh con"
+      }
+    ]
   },
   {
     "word": "defect",
@@ -31627,16 +33235,28 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "flaw",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "khiếm khuyết, vết nứt"
       },
       {
         "word": "imperfection",
         "register": "formal",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "điểm chưa hoàn hảo"
       }
     ],
     "suggested_folder_name": "IELTS Reading",
-    "vietnamese_meaning": "khuyết điểm, nhược điểm, dị tật bẩm sinh; đào ngũ/đào tẩu"
+    "vietnamese_meaning": "khuyết điểm, nhược điểm, dị tật bẩm sinh; đào ngũ/đào tẩu",
+    "antonyms": [
+      {
+        "word": "perfection",
+        "vietnamese_meaning": "sự hoàn hảo"
+      },
+      {
+        "word": "flawlessness",
+        "vietnamese_meaning": "không tì vết"
+      }
+    ]
   },
   {
     "word": "deflect",
@@ -31702,12 +33322,14 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "divert",
         "register": "neutral",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "chuyển hướng"
       },
       {
         "word": "distract",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "làm xao nhãng"
       }
     ],
     "suggested_folder_name": "IELTS Reading",
@@ -31776,12 +33398,14 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "enrichment",
         "register": "formal",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "sự bổ sung làm phong phú"
       },
       {
         "word": "reinforcement",
         "register": "formal",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "sự củng cố gia cố"
       }
     ],
     "suggested_folder_name": "IELTS Reading",
@@ -31842,11 +33466,22 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "prohibit",
         "register": "formal",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "nghiêm cấm bằng luật"
       }
     ],
     "suggested_folder_name": "IELTS Reading",
-    "vietnamese_meaning": "chống chỉ định (y khoa), không nên dùng"
+    "vietnamese_meaning": "chống chỉ định (y khoa), không nên dùng",
+    "antonyms": [
+      {
+        "word": "indicate",
+        "vietnamese_meaning": "chỉ định, khuyên dùng"
+      },
+      {
+        "word": "prescribe",
+        "vietnamese_meaning": "kê đơn, chỉ định"
+      }
+    ]
   },
   {
     "word": "upset",
@@ -31913,11 +33548,22 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "disrupt",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "làm gián đoạn, phá vỡ"
       }
     ],
     "suggested_folder_name": "IELTS Reading",
-    "vietnamese_meaning": "làm đảo lộn, làm xáo trộn; làm khó chịu/buồn phiền"
+    "vietnamese_meaning": "làm đảo lộn, làm xáo trộn; làm khó chịu/buồn phiền",
+    "antonyms": [
+      {
+        "word": "stabilize",
+        "vietnamese_meaning": "làm ổn định"
+      },
+      {
+        "word": "soothe",
+        "vietnamese_meaning": "xoa dịu"
+      }
+    ]
   },
   {
     "word": "empirical",
@@ -31975,16 +33621,28 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "observational",
         "register": "formal",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "thuộc về quan sát thực địa"
       },
       {
         "word": "factual",
         "register": "neutral",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "dựa trên sự thật"
       }
     ],
     "suggested_folder_name": "IELTS Reading",
-    "vietnamese_meaning": "dựa trên thực nghiệm/kinh nghiệm thực tế"
+    "vietnamese_meaning": "dựa trên thực nghiệm/kinh nghiệm thực tế",
+    "antonyms": [
+      {
+        "word": "theoretical",
+        "vietnamese_meaning": "thuộc lý thuyết thuần túy"
+      },
+      {
+        "word": "hypothetical",
+        "vietnamese_meaning": "mang tính giả thuyết"
+      }
+    ]
   },
   {
     "word": "take account of",
@@ -32035,12 +33693,14 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "consider",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "cân nhắc"
       },
       {
         "word": "allow for",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "tính đến, dự trù"
       }
     ],
     "suggested_folder_name": "IELTS Reading",
@@ -32096,7 +33756,8 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "secrecy",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "sự bí mật"
       }
     ],
     "suggested_folder_name": "IELTS Reading",
@@ -32157,16 +33818,28 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "secretly",
         "register": "neutral",
-        "cefr": "B1"
+        "cefr": "B1",
+        "vietnamese_meaning": "một cách bí mật"
       },
       {
         "word": "surreptitiously",
         "register": "formal",
-        "cefr": "C2"
+        "cefr": "C2",
+        "vietnamese_meaning": "một cách lén lút vụng trộm"
       }
     ],
     "suggested_folder_name": "IELTS Reading",
-    "vietnamese_meaning": "một cách lén lút, bí mật, ngấm ngầm"
+    "vietnamese_meaning": "một cách lén lút, bí mật, ngấm ngầm",
+    "antonyms": [
+      {
+        "word": "overtly",
+        "vietnamese_meaning": "công khai lộ liễu"
+      },
+      {
+        "word": "publicly",
+        "vietnamese_meaning": "trước công chúng"
+      }
+    ]
   },
   {
     "word": "anecdotal",
@@ -32218,11 +33891,22 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "unscientific",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "phi khoa học"
       }
     ],
     "suggested_folder_name": "IELTS Reading",
-    "vietnamese_meaning": "dựa trên giai thoại/lời kể cá nhân (chưa kiểm chứng khoa học)"
+    "vietnamese_meaning": "dựa trên giai thoại/lời kể cá nhân (chưa kiểm chứng khoa học)",
+    "antonyms": [
+      {
+        "word": "empirical",
+        "vietnamese_meaning": "thực nghiệm khoa học"
+      },
+      {
+        "word": "scientific",
+        "vietnamese_meaning": "có căn cứ khoa học"
+      }
+    ]
   },
   {
     "word": "propensity",
@@ -32280,17 +33964,20 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "tendency",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "xu hướng"
       },
       {
         "word": "inclination",
         "register": "formal",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "thiên hướng, ý muốn"
       },
       {
         "word": "predisposition",
         "register": "academic",
-        "cefr": "C2"
+        "cefr": "C2",
+        "vietnamese_meaning": "tố chất bẩm sinh dễ mắc phải"
       }
     ],
     "suggested_folder_name": "IELTS Reading",
@@ -32351,16 +34038,28 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "distribution",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "sự phân phối, phân phát"
       },
       {
         "word": "circulation",
         "register": "formal",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "sự lưu hành, phát hành"
       }
     ],
     "suggested_folder_name": "IELTS Reading",
-    "vietnamese_meaning": "sự phổ biến, sự truyền bá, sự lan tỏa (thông tin, kiến thức)"
+    "vietnamese_meaning": "sự phổ biến, sự truyền bá, sự lan tỏa (thông tin, kiến thức)",
+    "antonyms": [
+      {
+        "word": "suppression",
+        "vietnamese_meaning": "sự kìm hãm, che giấu"
+      },
+      {
+        "word": "collection",
+        "vietnamese_meaning": "sự thu gom lại"
+      }
+    ]
   },
   {
     "word": "primitive",
@@ -32427,10 +34126,21 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "rudimentary",
         "register": "formal",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "sơ khai, thô sơ"
       }
     ],
-    "suggested_folder_name": "IELTS Reading"
+    "suggested_folder_name": "IELTS Reading",
+    "antonyms": [
+      {
+        "word": "modern",
+        "vietnamese_meaning": "hiện đại"
+      },
+      {
+        "word": "advanced",
+        "vietnamese_meaning": "tiên tiến"
+      }
+    ]
   },
   {
     "word": "reckon",
@@ -32498,12 +34208,14 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "estimate",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "ước lượng"
       },
       {
         "word": "conjecture",
         "register": "formal",
-        "cefr": "C2"
+        "cefr": "C2",
+        "vietnamese_meaning": "suy đoán phỏng chừng"
       }
     ],
     "suggested_folder_name": "IELTS Reading"
@@ -32569,20 +34281,33 @@ const EXTENDED_DICTIONARY_DB = [
       {
         "word": "unwilling",
         "register": "neutral",
-        "cefr": "B2"
+        "cefr": "B2",
+        "vietnamese_meaning": "không sẵn lòng"
       },
       {
         "word": "hesitant",
         "register": "neutral",
-        "cefr": "C1"
+        "cefr": "C1",
+        "vietnamese_meaning": "ngập ngừng do dự"
       },
       {
         "word": "loath",
         "register": "formal",
-        "cefr": "C2"
+        "cefr": "C2",
+        "vietnamese_meaning": "ghét, không thích làm"
       }
     ],
-    "suggested_folder_name": "IELTS Reading"
+    "suggested_folder_name": "IELTS Reading",
+    "antonyms": [
+      {
+        "word": "willing",
+        "vietnamese_meaning": "sẵn lòng"
+      },
+      {
+        "word": "eager",
+        "vietnamese_meaning": "háo hức"
+      }
+    ]
   }
 ];
 
