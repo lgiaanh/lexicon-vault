@@ -36,7 +36,7 @@ const INITIAL_FOLDERS = [
     "emoji": "✍️",
     "description": "Sophisticated vocabulary and idioms tailored for high-scoring IELTS Writing Task 2 responses.",
     "created_at": "2026-09-02T12:37:38.878Z",
-    "word_count": 126
+    "word_count": 128
   },
   {
     "id": "folder-5",
@@ -108,7 +108,7 @@ const INITIAL_FOLDERS = [
     "emoji": "📖",
     "description": "High-yield vocabulary and scientific terms gathered from IELTS Reading passages.",
     "created_at": "2026-09-02T12:37:38.878Z",
-    "word_count": 73
+    "word_count": 75
   }
 ];
 
@@ -20500,6 +20500,282 @@ const INITIAL_ENTRIES = [
         "vietnamese_meaning": "háo hức"
       }
     ]
+  },
+  {
+    "id": "entry-disputed",
+    "word": "disputed",
+    "vietnamese_meaning": "bị tranh chấp, đang trong vòng tranh cãi, chưa ngã ngũ",
+    "ipa_uk": "/dɪˈspjuː.tɪd/",
+    "ipa_us": "/dɪˈspjuː.t̬ɪd/",
+    "grammar_note": "adjective",
+    "cefr_level": "C1",
+    "register": "formal",
+    "connotation": "neutral",
+    "formality_score": 4,
+    "entry_type": "word",
+    "definition": "used to describe something that is the subject of disagreement, debate, or a legal claim.",
+    "example": "The election results in several disputed territories sparked widespread demonstrations.",
+    "definitions": [
+      {
+        "definition": "used to describe something that is the subject of disagreement, debate, or a legal claim.",
+        "vietnamese_meaning": "bị tranh chấp, đang bị tranh cãi",
+        "example": "The election results in several disputed territories sparked widespread demonstrations.",
+        "cefr_level": "C1",
+        "grammar_note": "adjective"
+      },
+      {
+        "definition": "not definitively proven or accepted as true.",
+        "vietnamese_meaning": "chưa được chứng thực rõ ràng, còn bị nghi ngờ",
+        "example": "The historical date of the manuscript's creation remains widely disputed among scholars.",
+        "cefr_level": "C1",
+        "grammar_note": "adjective"
+      }
+    ],
+    "collocations": [
+      {
+        "collocation": "disputed territory / border",
+        "example": "Both nations claimed sovereignty over the disputed territory."
+      },
+      {
+        "collocation": "disputed claim / fact",
+        "example": "The defense lawyer questioned several disputed claims made by the witness."
+      },
+      {
+        "collocation": "hotly / bitterly disputed",
+        "example": "The controversial zoning law was hotly disputed during the council meeting."
+      }
+    ],
+    "word_family": {
+      "verb": [
+        "dispute"
+      ],
+      "noun": [
+        "dispute",
+        "disputation",
+        "disputant"
+      ],
+      "adjective": [
+        "disputed",
+        "undisputed",
+        "disputable",
+        "indisputable"
+      ],
+      "adverb": [
+        "indisputably"
+      ]
+    },
+    "semantic_field_id": "academic-controversy",
+    "semantic_field_label": "Academic Debate & Controversy",
+    "semantic_field_words": [
+      {
+        "word": "contentious",
+        "cefr": "C1",
+        "register": "academic"
+      },
+      {
+        "word": "controversial",
+        "cefr": "B2",
+        "register": "neutral"
+      },
+      {
+        "word": "debated",
+        "cefr": "B2",
+        "register": "neutral"
+      }
+    ],
+    "register_synonyms": [
+      {
+        "word": "contested",
+        "vietnamese_meaning": "bị tranh chấp, bị thách thức",
+        "register": "formal",
+        "cefr": "C1"
+      },
+      {
+        "word": "debated",
+        "vietnamese_meaning": "được đem ra tranh luận",
+        "register": "neutral",
+        "cefr": "B2"
+      },
+      {
+        "word": "contentious",
+        "vietnamese_meaning": "gây tranh cãi quyết liệt",
+        "register": "academic",
+        "cefr": "C1"
+      }
+    ],
+    "antonyms": [
+      {
+        "word": "undisputed",
+        "vietnamese_meaning": "không thể bàn cãi, được công nhận rộng rãi"
+      },
+      {
+        "word": "uncontroversial",
+        "vietnamese_meaning": "không gây tranh cãi"
+      },
+      {
+        "word": "accepted",
+        "vietnamese_meaning": "được thừa nhận"
+      }
+    ],
+    "extra_examples": [
+      "The ownership of the priceless artifact is still bitterly disputed between the two museums.",
+      "Whether the economic reforms contributed to long-term growth is a hotly disputed question."
+    ],
+    "folder_ids": [
+      "folder-4",
+      "folder-reading"
+    ],
+    "suggested_folder_name": "Academic Writing (Task 2)",
+    "review": {
+      "interval_days": 1,
+      "ease_factor": 2.5,
+      "due_date": "2026-09-02",
+      "repetition_count": 0,
+      "last_result": null
+    },
+    "stats": {
+      "encounters": 0,
+      "correct": 0,
+      "incorrect": 0
+    },
+    "is_learned": false
+  },
+  {
+    "id": "entry-contentious",
+    "word": "contentious",
+    "vietnamese_meaning": "gây tranh cãi nảy lửa, hay bất đồng quan điểm, dễ gây xung đột",
+    "ipa_uk": "/kənˈten.ʃəs/",
+    "ipa_us": "/kənˈten.ʃəs/",
+    "grammar_note": "adjective",
+    "cefr_level": "C1",
+    "register": "academic",
+    "connotation": "neutral",
+    "formality_score": 4,
+    "entry_type": "word",
+    "definition": "causing, involving, or likely to cause disagreement, heated debate, and strong controversy.",
+    "example": "Immigration and taxation policies remain deeply contentious issues in modern politics.",
+    "definitions": [
+      {
+        "definition": "causing, involving, or likely to cause disagreement, heated debate, and strong controversy.",
+        "vietnamese_meaning": "gây tranh cãi quyết liệt, dễ gây bất đồng",
+        "example": "Immigration and taxation policies remain deeply contentious issues in modern politics.",
+        "cefr_level": "C1",
+        "grammar_note": "adjective"
+      },
+      {
+        "definition": "describing a person who likes to argue or provoke disagreements.",
+        "vietnamese_meaning": "thích tranh cãi, hiếu chiến, hay gây gổ",
+        "example": "The debate turned acrimonious due to a few contentious members who refused to compromise.",
+        "cefr_level": "C2",
+        "grammar_note": "adjective"
+      }
+    ],
+    "collocations": [
+      {
+        "collocation": "contentious issue / topic",
+        "example": "Environmental regulation has become a contentious issue between industry leaders and policymakers."
+      },
+      {
+        "collocation": "highly / deeply contentious",
+        "example": "The proposed building project remains highly contentious among local residents."
+      },
+      {
+        "collocation": "contentious debate",
+        "example": "After months of contentious debate, parliament passed the amended budget."
+      }
+    ],
+    "word_family": {
+      "verb": [
+        "contend"
+      ],
+      "noun": [
+        "contention",
+        "contentiousness",
+        "contender"
+      ],
+      "adjective": [
+        "contentious",
+        "uncontentious"
+      ],
+      "adverb": [
+        "contentiously"
+      ]
+    },
+    "semantic_field_id": "academic-controversy",
+    "semantic_field_label": "Academic Debate & Controversy",
+    "semantic_field_words": [
+      {
+        "word": "disputed",
+        "cefr": "C1",
+        "register": "formal"
+      },
+      {
+        "word": "controversial",
+        "cefr": "B2",
+        "register": "neutral"
+      },
+      {
+        "word": "polemical",
+        "cefr": "C2",
+        "register": "academic"
+      }
+    ],
+    "register_synonyms": [
+      {
+        "word": "controversial",
+        "vietnamese_meaning": "gây tranh cãi",
+        "register": "neutral",
+        "cefr": "B2"
+      },
+      {
+        "word": "disputed",
+        "vietnamese_meaning": "bị tranh chấp, tranh cãi",
+        "register": "formal",
+        "cefr": "C1"
+      },
+      {
+        "word": "debatable",
+        "vietnamese_meaning": "có thể đem ra bàn cãi",
+        "register": "neutral",
+        "cefr": "B2"
+      }
+    ],
+    "antonyms": [
+      {
+        "word": "uncontroversial",
+        "vietnamese_meaning": "không gây tranh cãi"
+      },
+      {
+        "word": "harmonious",
+        "vietnamese_meaning": "hòa hợp, đồng thuận"
+      },
+      {
+        "word": "peaceable",
+        "vietnamese_meaning": "ôn hòa, chuộng hòa bình"
+      }
+    ],
+    "extra_examples": [
+      "Animal testing remains one of the most contentious topics in biomedical research.",
+      "The committee reached a compromise after bypassing the more contentious clauses of the treaty."
+    ],
+    "folder_ids": [
+      "folder-4",
+      "folder-reading"
+    ],
+    "suggested_folder_name": "Academic Writing (Task 2)",
+    "review": {
+      "interval_days": 1,
+      "ease_factor": 2.5,
+      "due_date": "2026-09-02",
+      "repetition_count": 0,
+      "last_result": null
+    },
+    "stats": {
+      "encounters": 0,
+      "correct": 0,
+      "incorrect": 0
+    },
+    "is_learned": false
   }
 ];
 
@@ -34308,6 +34584,282 @@ const EXTENDED_DICTIONARY_DB = [
         "vietnamese_meaning": "háo hức"
       }
     ]
+  },
+  {
+    "id": "entry-disputed",
+    "word": "disputed",
+    "vietnamese_meaning": "bị tranh chấp, đang trong vòng tranh cãi, chưa ngã ngũ",
+    "ipa_uk": "/dɪˈspjuː.tɪd/",
+    "ipa_us": "/dɪˈspjuː.t̬ɪd/",
+    "grammar_note": "adjective",
+    "cefr_level": "C1",
+    "register": "formal",
+    "connotation": "neutral",
+    "formality_score": 4,
+    "entry_type": "word",
+    "definition": "used to describe something that is the subject of disagreement, debate, or a legal claim.",
+    "example": "The election results in several disputed territories sparked widespread demonstrations.",
+    "definitions": [
+      {
+        "definition": "used to describe something that is the subject of disagreement, debate, or a legal claim.",
+        "vietnamese_meaning": "bị tranh chấp, đang bị tranh cãi",
+        "example": "The election results in several disputed territories sparked widespread demonstrations.",
+        "cefr_level": "C1",
+        "grammar_note": "adjective"
+      },
+      {
+        "definition": "not definitively proven or accepted as true.",
+        "vietnamese_meaning": "chưa được chứng thực rõ ràng, còn bị nghi ngờ",
+        "example": "The historical date of the manuscript's creation remains widely disputed among scholars.",
+        "cefr_level": "C1",
+        "grammar_note": "adjective"
+      }
+    ],
+    "collocations": [
+      {
+        "collocation": "disputed territory / border",
+        "example": "Both nations claimed sovereignty over the disputed territory."
+      },
+      {
+        "collocation": "disputed claim / fact",
+        "example": "The defense lawyer questioned several disputed claims made by the witness."
+      },
+      {
+        "collocation": "hotly / bitterly disputed",
+        "example": "The controversial zoning law was hotly disputed during the council meeting."
+      }
+    ],
+    "word_family": {
+      "verb": [
+        "dispute"
+      ],
+      "noun": [
+        "dispute",
+        "disputation",
+        "disputant"
+      ],
+      "adjective": [
+        "disputed",
+        "undisputed",
+        "disputable",
+        "indisputable"
+      ],
+      "adverb": [
+        "indisputably"
+      ]
+    },
+    "semantic_field_id": "academic-controversy",
+    "semantic_field_label": "Academic Debate & Controversy",
+    "semantic_field_words": [
+      {
+        "word": "contentious",
+        "cefr": "C1",
+        "register": "academic"
+      },
+      {
+        "word": "controversial",
+        "cefr": "B2",
+        "register": "neutral"
+      },
+      {
+        "word": "debated",
+        "cefr": "B2",
+        "register": "neutral"
+      }
+    ],
+    "register_synonyms": [
+      {
+        "word": "contested",
+        "vietnamese_meaning": "bị tranh chấp, bị thách thức",
+        "register": "formal",
+        "cefr": "C1"
+      },
+      {
+        "word": "debated",
+        "vietnamese_meaning": "được đem ra tranh luận",
+        "register": "neutral",
+        "cefr": "B2"
+      },
+      {
+        "word": "contentious",
+        "vietnamese_meaning": "gây tranh cãi quyết liệt",
+        "register": "academic",
+        "cefr": "C1"
+      }
+    ],
+    "antonyms": [
+      {
+        "word": "undisputed",
+        "vietnamese_meaning": "không thể bàn cãi, được công nhận rộng rãi"
+      },
+      {
+        "word": "uncontroversial",
+        "vietnamese_meaning": "không gây tranh cãi"
+      },
+      {
+        "word": "accepted",
+        "vietnamese_meaning": "được thừa nhận"
+      }
+    ],
+    "extra_examples": [
+      "The ownership of the priceless artifact is still bitterly disputed between the two museums.",
+      "Whether the economic reforms contributed to long-term growth is a hotly disputed question."
+    ],
+    "folder_ids": [
+      "folder-4",
+      "folder-reading"
+    ],
+    "suggested_folder_name": "Academic Writing (Task 2)",
+    "review": {
+      "interval_days": 1,
+      "ease_factor": 2.5,
+      "due_date": "2026-09-02",
+      "repetition_count": 0,
+      "last_result": null
+    },
+    "stats": {
+      "encounters": 0,
+      "correct": 0,
+      "incorrect": 0
+    },
+    "is_learned": false
+  },
+  {
+    "id": "entry-contentious",
+    "word": "contentious",
+    "vietnamese_meaning": "gây tranh cãi nảy lửa, hay bất đồng quan điểm, dễ gây xung đột",
+    "ipa_uk": "/kənˈten.ʃəs/",
+    "ipa_us": "/kənˈten.ʃəs/",
+    "grammar_note": "adjective",
+    "cefr_level": "C1",
+    "register": "academic",
+    "connotation": "neutral",
+    "formality_score": 4,
+    "entry_type": "word",
+    "definition": "causing, involving, or likely to cause disagreement, heated debate, and strong controversy.",
+    "example": "Immigration and taxation policies remain deeply contentious issues in modern politics.",
+    "definitions": [
+      {
+        "definition": "causing, involving, or likely to cause disagreement, heated debate, and strong controversy.",
+        "vietnamese_meaning": "gây tranh cãi quyết liệt, dễ gây bất đồng",
+        "example": "Immigration and taxation policies remain deeply contentious issues in modern politics.",
+        "cefr_level": "C1",
+        "grammar_note": "adjective"
+      },
+      {
+        "definition": "describing a person who likes to argue or provoke disagreements.",
+        "vietnamese_meaning": "thích tranh cãi, hiếu chiến, hay gây gổ",
+        "example": "The debate turned acrimonious due to a few contentious members who refused to compromise.",
+        "cefr_level": "C2",
+        "grammar_note": "adjective"
+      }
+    ],
+    "collocations": [
+      {
+        "collocation": "contentious issue / topic",
+        "example": "Environmental regulation has become a contentious issue between industry leaders and policymakers."
+      },
+      {
+        "collocation": "highly / deeply contentious",
+        "example": "The proposed building project remains highly contentious among local residents."
+      },
+      {
+        "collocation": "contentious debate",
+        "example": "After months of contentious debate, parliament passed the amended budget."
+      }
+    ],
+    "word_family": {
+      "verb": [
+        "contend"
+      ],
+      "noun": [
+        "contention",
+        "contentiousness",
+        "contender"
+      ],
+      "adjective": [
+        "contentious",
+        "uncontentious"
+      ],
+      "adverb": [
+        "contentiously"
+      ]
+    },
+    "semantic_field_id": "academic-controversy",
+    "semantic_field_label": "Academic Debate & Controversy",
+    "semantic_field_words": [
+      {
+        "word": "disputed",
+        "cefr": "C1",
+        "register": "formal"
+      },
+      {
+        "word": "controversial",
+        "cefr": "B2",
+        "register": "neutral"
+      },
+      {
+        "word": "polemical",
+        "cefr": "C2",
+        "register": "academic"
+      }
+    ],
+    "register_synonyms": [
+      {
+        "word": "controversial",
+        "vietnamese_meaning": "gây tranh cãi",
+        "register": "neutral",
+        "cefr": "B2"
+      },
+      {
+        "word": "disputed",
+        "vietnamese_meaning": "bị tranh chấp, tranh cãi",
+        "register": "formal",
+        "cefr": "C1"
+      },
+      {
+        "word": "debatable",
+        "vietnamese_meaning": "có thể đem ra bàn cãi",
+        "register": "neutral",
+        "cefr": "B2"
+      }
+    ],
+    "antonyms": [
+      {
+        "word": "uncontroversial",
+        "vietnamese_meaning": "không gây tranh cãi"
+      },
+      {
+        "word": "harmonious",
+        "vietnamese_meaning": "hòa hợp, đồng thuận"
+      },
+      {
+        "word": "peaceable",
+        "vietnamese_meaning": "ôn hòa, chuộng hòa bình"
+      }
+    ],
+    "extra_examples": [
+      "Animal testing remains one of the most contentious topics in biomedical research.",
+      "The committee reached a compromise after bypassing the more contentious clauses of the treaty."
+    ],
+    "folder_ids": [
+      "folder-4",
+      "folder-reading"
+    ],
+    "suggested_folder_name": "Academic Writing (Task 2)",
+    "review": {
+      "interval_days": 1,
+      "ease_factor": 2.5,
+      "due_date": "2026-09-02",
+      "repetition_count": 0,
+      "last_result": null
+    },
+    "stats": {
+      "encounters": 0,
+      "correct": 0,
+      "incorrect": 0
+    },
+    "is_learned": false
   }
 ];
 
